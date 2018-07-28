@@ -1,7 +1,7 @@
 ---
 layout: page
 
-title: How do I start, change, and stop contributions?
+title: How to start, change, and stop contributions
 
 styles:
 
@@ -9,14 +9,14 @@ sidenav: manage
 
 scripts:
 
-permalink: /making-contributions/
+permalink: /making-contributions/start-change-stop-contributions/
 ---
 
-## How do I start, change, and stop contributions?
+## How to start, change, and stop contributions
 
 Check with your agency’s or service’s payroll office on how to start, change, or stop your TSP contributions. You may be instructed to use your agency's or service's electronic payroll or benefits system (e.g., Employee Express, myPay, LiteBlue, EBIS, or NFC-EPP).
 
-If your agency or service accepts a paper form, you can download and complete the [TSP-1](#), _Election Form_ ([TSP-U-1](#) for uniformed services members), use the form, or call the ThriftLine at 1-877-968-3778 and choose option 3 to have it sent to you.
+Does your agency accept paper form? Download [Form TSP-1](#), _Election Form_ ([TSP-U-1](#) for uniformed services members), use the form, or call the ThriftLine at 1-877-968-3778 and choose option 3 to have it sent to you.
 
 
 <div class="usa-alert usa-alert-info" >

@@ -13,7 +13,7 @@ primary:
   - text: Manage your plan
     links:
     - text: Account basics
-      href: /manage/
+      href: /account-basics/
     - text: Making contributions
       href: /making-contributions/
     - text: Maximize your savings
@@ -35,7 +35,7 @@ primary:
   - text: Use your savings
     links:
     - text: Loan basics
-      href: /savings/
+      href: /loan-basics/
     - text: In-service withdrawal basics
       href: #
     - text: Retirement withdrawal basics
@@ -54,10 +54,25 @@ secondary:
 # SIDENAV MENUS
 manage:
   - text: Account basics
-    href: /manage/
+    href: /account-basics/
+    subnav:
+      - text: Defining my account
+        href: /account-basics/defining-my-account/
+      - text: Your account number
+        href: /account-basics/your-account-number/
+      - text: How the TSP fits into my retirement package
+        href: /account-basics/how-tsp-fits/
+      - text: Move money into the TSP
+        href: /account-basics/move-money-into-tsp/
+      - text: Protect your TSP account
+        href: /account-basics/protect-your-tsp-account/
+      - text: Update your personal information
+        href: /account-basics/update-your-information
   - text: Making contributions
     href: /making-contributions/
     subnav:
+      - text: How to start, change, and stop contributions
+        href: /making-contributions/start-change-stop-contributions/
       - text: What’s the difference between making Traditional vs. Roth Contributions?
         href: /making-contributions/traditional-and-roth/
       - text: What are the different types of contributions?
