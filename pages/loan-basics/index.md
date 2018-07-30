@@ -9,7 +9,7 @@ sidenav: savings
 
 scripts:
 
-permalink: /savings/
+permalink: /loan-basics/
 ---
 
 ## Cost benefit analysis
