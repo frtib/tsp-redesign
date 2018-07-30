@@ -118,7 +118,7 @@ funds:
 
 savings:
   - text: Loan basics
-    href: /savings/
+    href: /loan-basics/
   - text: In-service withdrawal basics
     href: #
   - text: Retirement withdrawal basics
