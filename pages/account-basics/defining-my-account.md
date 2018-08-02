@@ -13,6 +13,8 @@ permalink: /account-basics/defining-my-account/
 
 Get access any time to make sure you’re on track to meet your retirement goals:
 
+**New term:** This is my new term, and it's great!
+
 **[Account Overview](#):** View your recent transactions and activity summary.
 
 **[Statements](#)**: View or download past or current quarterly and annual participant statements.
