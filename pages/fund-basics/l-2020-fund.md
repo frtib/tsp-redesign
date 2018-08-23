@@ -33,7 +33,7 @@ The L 2020 Fund’s investment objective is to achieve a moderate level of growt
  
 **Summary:**
 	
-  **Details:**
+  Details:
 		
     Assets: Info already on mock up
 		
