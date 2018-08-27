@@ -34,9 +34,9 @@ The L 2030 Fund’s investment objective is to achieve a moderate to high level 
  
 **Summary:**
 
-	**Details:**
+    Details:
   
-		Assets: Info already on mock up
+    Assets: Info already on mock up
 		
     Net Admin Expense: 
 		
@@ -52,7 +52,7 @@ The L 2030 Fund’s investment objective is to achieve a moderate to high level 
 
 **Composition:**
 
-	**Portfolio Weight: Already in mock up**
+	Portfolio Weight: Already in mock up
   
 **Fees & More Info:**
 
