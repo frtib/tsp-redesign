@@ -7,7 +7,7 @@ scripts:
 permalink: /privacy-plan/overview/
 ---
 # Overview of FRTIB Privacy Program
-
+<!-- privacy -->
 FRTIB’s program is led by FRTIB’s Senior Agency Official for Privacy (SAOP), and is run by the Privacy Division within FRTIB’s Office of General Counsel (OGC). The mission of the Privacy Division is to preserve and enhance privacy protections for all individuals who entrust their personal information to the FRTIB by embedding and enforcing privacy protections throughout all of FRTIB’s activities. The Privacy Division implements requirements in the Privacy Act of 1974, as amended; E-Government Act of 2002; and the Federal Information Security Modernization Act (FISMA), as well as policy directives and best practices issued in furtherance of those Acts.  
 
 The Privacy Division adheres to the policy framework embodied in the Fair Information Practice Principle (FIPPs) to ensure that individual privacy is protected throughout the collection, maintenance, use, and dissemination of all personally identifiable information (PII) maintained by the FRTIB. The FIPPs consist of the following five core principles: (1) Notice/Awareness; (2) Choice/Consent; (3) Access/Participation; (4) Integrity/Security; and (5) Enforcement/Redress. The Privacy Division carries out the following core functions:
