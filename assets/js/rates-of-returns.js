@@ -98,7 +98,7 @@ function buildSideScrollTableRoR(chartName, data) {
       var id = "year_"+yearName;
       val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
       val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
-      col[0] = col[0] = Date.UTC(col[0].substr(0, 4), 0);
+      col[0] = Date.UTC(col[0].substr(0, 4), 0);
       annualData.unshift(col.join(","));
       row = sideScrollTH('', '', '', val, false);
       YTD = '';
