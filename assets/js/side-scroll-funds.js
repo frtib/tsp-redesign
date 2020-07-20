@@ -273,7 +273,7 @@ function fundHighchart(chartName, csvData, title, indexFundsFlag) {
       },
       title: { text: '' }
     },
-    // xAxis: { uniqueNames: false },
+    xAxis: { type: 'datetime' },
     tooltip: {
       formatter: function () {
         return fundTooltip(this, chartName);

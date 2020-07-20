@@ -90,15 +90,15 @@ function buildSideScrollTableRoR(chartName, data) {
     yearName = col[0].substr(0,4);
     if (lineType == 'm') {
       monthName = getMonthName(parseInt(col[0].substr(4, 2))-1);
-      val = monthName; //  + ' ' + yearName;
-      col[0] = monthName + ' ' + yearName;
+      val = monthName;
+      col[0] = Date.UTC(col[0].substr(0, 4), col[0].substr(4, 2)-1);
       monthlyData.unshift(col.join(","));
       row = sideScrollTH('', '', '', val, false);
     } else {
       var id = "year_"+yearName;
       val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
       val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
-      col[0] = yearName;
+      col[0] = col[0] = Date.UTC(col[0].substr(0, 4), 0);
       annualData.unshift(col.join(","));
       row = sideScrollTH('', '', '', val, false);
       YTD = '';
@@ -121,7 +121,7 @@ function buildSideScrollTableRoR(chartName, data) {
   // console.log(headerHTML+bodyHTML);
   // console.log(table);
   annualData.unshift(header);
-  monthlyData.unshift(header);
+  monthlyData.unshift(header.replace("Year","Month"));
   // console.log(annualData);
   fundHighchart(chartName+'-annual', annualData.join("\n"), '', true);
   fundHighchart(chartName+'-monthly', monthlyData.join("\n"), '', true);
@@ -190,17 +190,16 @@ function fundHighchartClickBuddy(chartName, idx, fundName, vis) {
 }
 
 function fundTooltip(me, chartName) {
-  // console.log(me);
   var rc = fundTooltipBody(me);
-  var tipTitle = getMonthYearName(me.x+1000000000);
-  // if (chartName.includes('-annual')) {
+  var tipTitle; 
   if (chartName.indexOf('-annual') > -1) {
-    tipTitle = 'Annual Returns ';
-    if ((me.x + 1) > me.points[0].series.xAxis.max) { tipTitle = 'YTD Returns '}
-    tipTitle += me.x;
+      tipTitle = 'Annual Returns ';
+      if ((me.x + 11098432000) > me.points[0].series.xAxis.max) { tipTitle = 'YTD Returns ' }
+      tipTitle += new Date(me.points[0].key).getUTCFullYear();
+  } else {
+      tipTitle = getMonthName(new Date(me.points[0].key).getUTCMonth()) + ' ' + new Date(me.points[0].key).getUTCFullYear();
   }
   rc = tooltipHeader(tipTitle)+rc;
   rc = tooltipDiv('rates-of-return'+'-tooltip', rc);
-  // console.log(rc);
   return rc;
 }
