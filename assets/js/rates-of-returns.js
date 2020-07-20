@@ -145,9 +145,6 @@ function fundYvalueFormat(value) {
 }
 
 function fundCheckboxClick(chartName, cbName) {
-  // console.log('fundCheckboxClick', chartName, cbName);
-  deleteEmptyPoints(chartName+'-annual');
-  deleteEmptyPoints(chartName+'-monthly');
   fundCheckboxClickAction(chartName+"-monthly", cbName);
   fundCheckboxClickAction(chartName+"-annual", cbName);
   return false;
@@ -160,8 +157,6 @@ function fundHighchartClick(chartName, idx, name, vis) {
   } else {
     otherChart = chartName.replace('-monthly', '-annual');
   }
-  deleteEmptyPoints(chartName);
-  deleteEmptyPoints(otherChart);
   fundHighchartClickBuddy(chartName, idx, name, vis);
   fundHighchartClickBuddy(otherChart, idx, name, vis);
   return false;
