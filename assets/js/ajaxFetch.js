@@ -71,6 +71,12 @@ function mapFundName (fund) {
   return fund.toLowerCase() + '-fund';
 }
 
+function getMonthNumber(val) {
+    var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    month = val.toLowerCase();
+    return months.indexOf(month);
+}
+
 function getMonthName (val) {
   var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
   return monthNames[val % 12];
