@@ -77,7 +77,7 @@ function buildSideScrollTableSH(chartName, data) {
   // loop on each row, body groups
   var bodyHTML = '';
   // highcharts likes low to high, we want table high to low
-  for (j = lines.length-1; j > 0; j--) {
+  for (j = lines.length-1; j >= 0; j--) {
     if (lines[j].trim() == '') { continue; }
     row = '';
     var col = lines[j].split(",");
