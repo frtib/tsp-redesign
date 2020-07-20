@@ -44,21 +44,22 @@ function getSharePricesRaw(chart) {
   return false;
 }
 
-// prep no longer needed, server sends in hc format
 function prepDataforHighchart(data) {
-  var lines = data.split("\n");
-  var header = lines.shift();
-  var col = header.split(",");
-  for (var i = 1; i < col.length; i++) { col[i] = mapServerFundName(col[i], false); }
-  lines.reverse();
-  lines[0] = col.join(",");
-  return lines.join("\n");
-  lines.shift();
-  lines.reverse();
-  lines.unshift(col.join(","));
-  // lines[0] = col.join(",");
-  data = lines.join("\n");
+    var lines = data.split("\n");
+    for (var i = 1; i < lines.length; i++) {
+        var line = lines[i].split(",");
+        if (line[0] !== "") {
+            var elements = line[0].split(/[ \.]/);
+            line[0] = Date.UTC(elements[3], getMonthNumber(elements[0]), elements[1]);
+            lines[i] = line.join(",");
+        } else {
+            lines.length = i;
+            break;
+        }
+    }
+    return lines.join("\n");
 }
+
 function buildSideScrollTableSH(chartName, data) {
   var i, j, colClass, row;
   var lines = data.split("\n");
@@ -77,7 +78,7 @@ function buildSideScrollTableSH(chartName, data) {
   // loop on each row, body groups
   var bodyHTML = '';
   // highcharts likes low to high, we want table high to low
-  for (j = lines.length-1; j > 0; j--) {
+  for (j = lines.length-1; j >= 0; j--) {
     if (lines[j].trim() == '') { continue; }
     row = '';
     var col = lines[j].split(",");
@@ -104,7 +105,8 @@ var doAjaxRetrieveRaw = function(divName, url) {
   var serverCall = $.get(url);
   serverCall.done(
     function (data) {
-      var chart = fundHighchart(divName, data, '', false);
+      var chartdata = prepDataforHighchart(data);
+      var chart = fundHighchart(divName, chartdata, '', false);
       $('#'+divName+'-table').html(buildSideScrollTableSH(divName, data));
       syncCheckboxes(divName);
       chartResize(divName);
