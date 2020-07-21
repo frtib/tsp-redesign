@@ -8,6 +8,19 @@ scripts:
 permalink: /tsp/
 redirect_from:
   - /tsp/login.html
+  - /accountbalance/
+  - /activitysummary/
+  - /recenttransactions/
+  - /beneficiaries/
+  - /requestca/
+  - /correspondence/
+  - /requestift/
+  - /requestloan/
+  - /login/
+  - /profilesettings/
+  - /statements/
+  - /messagecenter/
+  - /requestwithdrawal/
 ---
 
 # My Account has a new address

@@ -5,7 +5,7 @@ title: G fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_G.html
-  - /gfund
+  - /gfund/
 Fund_type: Individual
 Fund_name: G Fund
 Fund_order: 1

@@ -6,7 +6,7 @@ styles:
 scripts:
 permalink: /account-basics/access-your-account/
 redirect_from:
-  - /troubleshooting
+  - /troubleshooting/
 ---
 
 # Access your account

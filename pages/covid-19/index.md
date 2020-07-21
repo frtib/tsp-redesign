@@ -10,7 +10,7 @@ permalink: /covid-19/
 # Jekyll redirects https://github.com/jekyll/jekyll-redirect-from
 redirect_from:
   - /whatsnew/Content/coronavirus/index.html
-  - /covid19
+  - /covid19/
 ---
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>

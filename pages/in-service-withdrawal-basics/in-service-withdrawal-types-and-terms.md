@@ -6,8 +6,8 @@ sidenav: use-your-savings
 scripts:
 permalink: /in-service-withdrawal-basics/in-service-withdrawal-types-and-terms/
 redirect_from:
-  - /agebased
-  - /hardship
+  - /agebased/
+  - /hardship/
 ---
 
 # In-service withdrawal types and terms

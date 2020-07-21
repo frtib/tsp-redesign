@@ -5,7 +5,7 @@ title: I fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_I.html
-  - /ifund
+  - /ifund/
 Fund_type: Individual
 Fund_name: I Fund
 Fund_order: 5
