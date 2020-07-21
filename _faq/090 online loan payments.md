@@ -1,6 +1,6 @@
 ---
 title: Can I make loan payments online?
-permalink: /faq/online-loan-payments
+permalink: /faq/online-loan-payments/
 ---
 
 No, you cannot make loan payments online. When we pay out your loan, we will notify your payroll office immediately to begin deducting loan payments from your salary each pay period.

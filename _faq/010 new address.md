@@ -1,8 +1,8 @@
 ---
 title: How do I report my new address to TSP?
-permalink: /faq/new-address
+permalink: /faq/new-address/
 redirect_from:
-  - /addresschange
+  - /addresschange/
 ---
 
 How you change your address with us depends on whether or not you still work for the federal government.
