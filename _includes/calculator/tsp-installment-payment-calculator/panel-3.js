@@ -107,6 +107,7 @@ function setPaymentsLength(years, months) {
 function buildTable() {
   // build table header
   var choice = getFrequency();
+  if (choice[0] == 'Annually') { choice[0] = 'Annual'; }
   var headerHTML = sideScrollTH('', 'col', '', 'Year', false);
   headerHTML += sideScrollTH('', 'col', '', choice[0] + ' payment', false);
   headerHTML += sideScrollTH('', 'col', '', 'Year-end balance', false);
@@ -119,6 +120,7 @@ function buildTable() {
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(payments[year]), false);
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(balance[year]), false);
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+    if (balance[year] <= 0.0) { break; }
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
   var tableHTML = sideScrollTable('', 'installment-payment-table', '', headerHTML+bodyHTML, true, '');
@@ -129,17 +131,20 @@ function buildChart(divName, payments, balance) {
   var yearEndBalance = [];
   for (var i = 1; i <= numYears; i++) {
     yearEndBalance.push(balance[i]);
+    if (balance[i] <= 0.0) { break; }
   }
   var chart = Highcharts.chart(divName, {
       chart: {
           type: 'area'
       },
+      credits: { enabled: false },
+      legend: { enabled: false },
       accessibility: {
           description: 'Image description: Based on the user input, the year end balance for the account is shown.'
       },
       title: { text: null },
       xAxis: {
-          title: 'Payment Year',
+          title: { text: 'Payment year' },
           allowDecimals: false,
           crosshair: true,
           labels: { formatter: function () { return this.value; } },

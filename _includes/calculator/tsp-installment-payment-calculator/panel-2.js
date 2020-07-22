@@ -92,7 +92,7 @@ function rateOfReturnGood(submit) {
     return showError('rateOfReturn', "Rate of Return should be between 0% and 99%.");
   }
 
-  $('#rate-of-return').html(CurrencyFormatted(rateOfReturn, 'cent'));
+  $('#rate-of-return').html(rateOfReturn.toFixed(2) + '%');
   return clearError('rateOfReturn');
 }
 function amountToReceiveErrorString() {

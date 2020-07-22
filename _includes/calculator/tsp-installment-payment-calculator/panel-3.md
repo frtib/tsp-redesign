@@ -53,7 +53,7 @@ __If you are a beneficiary participant__, see the tax notice
 
 {% include calculator/button-block.html panelID=panelID revise=2 %}
 
-## Projected Year-End Balances
+## Projected year-end balances
 
 These results are based on requested installment payment amounts.
 
