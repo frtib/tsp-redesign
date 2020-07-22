@@ -7,8 +7,8 @@ This is the javascript specific to panel 2.
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
-  return accountAmountGood(forceValue) & frequencyGood(forceValue)
-    & rateOfReturnGood(forceValue) & amountToReceiveGood(forceValue);
+  return rateOfReturnGood(forceValue) & amountToReceiveGood(forceValue)
+     & frequencyGood(forceValue) & accountAmountGood(forceValue);
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
@@ -21,38 +21,40 @@ panelExit[{{ panelID }}] = function(panel) {
 
 // my functions
 function accountAmountGood(submit) {
-  if ((!submit) && $('#accountAmount').val() === '') return true;
-  var val = parseInt($('#accountAmount').val()) || 0;
-  if (val > 0) { $('#accountAmount').val(val); }
+  if (!submit) {
+    if ($("#accountAmount").val() == '') { return clearError('accountAmount'); }
+  }
+  var accountAmount = getPosInteger('accountAmount', -1);
+  if (accountAmount > 0) { $('#accountAmount').val(accountAmount); }
 
-  if (val <= 0.0) {
+  if (accountAmount <= 0) {
     return showError('accountAmount',
                      "Enter the amount from your account that will be used for TSP installment payments.");
   }
-  if (val < 200.0) {
+  if (accountAmount < 200) {
     return showError('accountAmount', "Enter a dollar amount that is at least $200.");
   }
-  if (val > 10000000.0) {
+  if (accountAmount > 10000000) {
     return showError('accountAmount', "Enter a dollar amount that is at most $10,000,000.");
   }
 
-  $('#account-amount').html(CurrencyFormatted(val, 'no_cent'));
+  $('#account-amount').html(CurrencyFormatted(accountAmount, 'no_cent'));
   return clearError('accountAmount');
 }
 
 function getFrequency() {
-  if ($('#Monthly').prop('checked')) { return 'Monthly'; }
-  if ($('#Quarterly').prop('checked')) { return 'Quarterly'; }
-  if ($('#Annually').prop('checked')) { return 'Annually'; }
+  if ($('#Monthly').prop('checked')) { return ['Monthly','month',12]; }
+  if ($('#Quarterly').prop('checked')) { return ['Quarterly','quarter',4]; }
+  if ($('#Annually').prop('checked')) { return ['Annually','year',1]; }
   // return 'Monthly';
-  return 'none';
+  return ['none', 'period'];
 }
 
 var lastSubmit = false;
 function frequencyGood(submit) {
   clearError('amountToReceive');
-  amountToReceiveGood(lastSubmit);
-  var choice = getFrequency();
+  amountToReceiveGood(submit);
+  var choice = getFrequency()[0];
   $('#monthly-payment').html(choice);
   if (choice == 'Monthly') {
     $('#frequency').html('Monthly');
@@ -83,38 +85,37 @@ function rateOfReturnGood(submit) {
     return showError('rateOfReturn', "Please enter your expected rate of return.");
   }
   $('#rateOfReturn').val(parseFloat($('#rateOfReturn').val()).toFixed(2));
-  var val = parseFloat($('#rateOfReturn').val());
-  if (isNaN(val)) { $("input#rateOfReturn").val(0.0); val = 0.0; }
+  var rateOfReturn = parseFloat($('#rateOfReturn').val());
+  if (isNaN(rateOfReturn)) { $("input#rateOfReturn").val(0.0); rateOfReturn = 0.0; }
 
-  if ((val < 0.0) || (val > 99.0)) {
+  if ((rateOfReturn < 0.0) || (rateOfReturn > 99.0)) {
     return showError('rateOfReturn', "Rate of Return should be between 0% and 99%.");
   }
 
-  $('#rate-of-return').html(CurrencyFormatted(val, 'cent'));
+  $('#rate-of-return').html(CurrencyFormatted(rateOfReturn, 'cent'));
   return clearError('rateOfReturn');
 }
 function amountToReceiveErrorString() {
   var choice = getFrequency();
-  var val = 'period';
-  if (choice == 'Monthly') { val = 'month'; }
-  if (choice == 'Quarterly') { val = 'quarter'; }
-  if (choice == 'Annually') { val = 'year'; }
-  return "Enter the amount that you would like to receive each " + val + '.';
+  return "Enter the amount that you would like to receive each " + choice[1] + '.';
 }
 function amountToReceiveGood(submit) {
   lastBlankOK = submit;
-  if ((!submit) && $('#amountToReceive').val() === '') return true;
-  var amountToReceive = parseFloat($('#amountToReceive').val()) || 0.0;
-  var accountAmount = parseFloat($('#accountAmount').val()) || 0.0;
-  if (amountToReceive > 0.0) {
-    amountToReceive = parseFloat(amountToReceive.toFixed(2));
-    $('#amountToReceive').val(amountToReceive);
+  //if ((!submit) && $('#amountToReceive').val() === '') return true;
+  if (!submit) {
+    if ($("#amountToReceive").val() == '') { return clearError('amountToReceive'); }
   }
+  var amountToReceive = getPosInteger('amountToReceive', -1);
+  if (amountToReceive > 0) { $('#amountToReceive').val(amountToReceive); }
+  //if (amountToReceive > 0.0) {
+  //  amountToReceive = parseFloat(amountToReceive.toFixed(2));
+  //  $('#amountToReceive').val(amountToReceive);
+  //}
 
-  if (amountToReceive <= 0.0) {
+  if (amountToReceive <= 0) {
     return showError('amountToReceive', amountToReceiveErrorString());
   }
-  if (amountToReceive < 25.0) {
+  if (amountToReceive < 25) {
     return showError('amountToReceive', "Enter a dollar amount that is at least $25.");
   }
   if (amountToReceive > accountAmount) {

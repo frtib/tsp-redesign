@@ -21,7 +21,7 @@ you stop or change your payments or your account balance reaches zero.
 {% include calculator/resultsRow.html rightID="rate-of-return" right=""
   left="At an assumed annual rate of return" %}
 {% include calculator/resultsRow.html rightID="account-depleted" right=""
-  left="Which will deplete your account in" %}
+  left="<span id='deplete-text'>Which will deplete your account in</span>" %}
 
 </div>
 
@@ -57,10 +57,8 @@ __If you are a beneficiary participant__, see the tax notice
 
 These results are based on requested installment payment amounts.
 
-PUT GRAPH ACCORDIION HERE
-
-PUT TABLE ACCORDION HERE
-
+{% include selectResult.html rsID='installment-payment' %}
+<span id='installment-payment-footnote'></span>
 </section>
 
 {% comment %}
