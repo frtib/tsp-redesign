@@ -14,7 +14,7 @@ redirect_from:
 
 Thank you for your interest in TSP education.
 
-TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
+TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
 
 _Unfortunately, we are unable to accommodate requests for in-person events at this time._
 
@@ -26,7 +26,6 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
 - After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
 - **All scheduled start times are listed in Eastern Time.**
 - All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
-
 <span id="tspWebinars"></span>
 <ul class="usa-accordion">
   <li>
