@@ -19,7 +19,7 @@ document-ready:
   - sideScrollControls('dynamic-share-price');
 redirect_from:
   - /InvestmentFunds/FundPerformance/
-  - /prices
+  - /prices/
 ---
 {% assign chartName = 'dynamic-share-price' %}
 <div class="usa-grid centered" markdown="1">

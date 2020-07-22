@@ -13,7 +13,7 @@ document-ready:
   - groupFundAnnualReturns('Index');
 redirect_from:
   - /InvestmentFunds/FundsOverview/expenses.html
-  - /expenses
+  - /expenses/
   - /PlanParticipation/BeneficiaryParticipants/administrativeExpenses.html
 ---
 

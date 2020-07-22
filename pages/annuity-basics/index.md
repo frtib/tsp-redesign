@@ -11,7 +11,7 @@ bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
   - getAnnuityRates('annuity-interest-rates');
 redirect_from:
-  - /annuity
+  - /annuity/
 ---
 
 # Annuity basics

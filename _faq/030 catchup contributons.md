@@ -1,6 +1,6 @@
 ---
 title: When can I begin making catch-up contributions?
-permalink: /faq/catch-up-contributions
+permalink: /faq/catch-up-contributions/
 ---
 
 Starting in the year you turn 50, you may be eligible to make catch-up contributions to your TSP account in addition to your regular employee contributions.

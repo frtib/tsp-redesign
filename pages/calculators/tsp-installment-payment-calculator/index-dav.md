@@ -10,5 +10,6 @@ progress-steps: [Introduction, Installment Payment Information, Installment Paym
 panel-names: [Introduction, Information, Estimate]
 redirect_from:
   - /PlanningTools/Calculators/installmentPayCalc.html
+  - /installmentpaycalc/
 published: false
 ---

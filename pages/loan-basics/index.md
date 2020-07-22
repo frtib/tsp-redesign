@@ -9,7 +9,7 @@ scripts:
   - /assets/js/news-and-resources.js
 permalink: /loan-basics/
 redirect_from:
-  - /loans
+  - /loans/
 document-ready:
   - getLoanAndAnnuityRate();
 ---

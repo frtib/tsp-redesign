@@ -1,6 +1,6 @@
 ---
 title: How do I protect my account against fraud?
-permalink: /faq/protect-against-fraud
+permalink: /faq/protect-against-fraud/
 ---
 
 Private parties offering assistance with your TSP account have not been approved, endorsed, sponsored, or authorized by the Federal Retirement Thrift Investment Board, the independent federal government agency that administers the TSP.

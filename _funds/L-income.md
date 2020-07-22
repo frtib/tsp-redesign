@@ -5,7 +5,7 @@ title: L Income
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_LIncome.html
-  - /lincome
+  - /lincome/
 Fund_type: L
 Fund_name: L Income
 Fund_order: 7

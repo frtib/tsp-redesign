@@ -7,8 +7,8 @@ scripts:
 permalink: /making-contributions/traditional-and-roth-contributions/
 redirect_from:
   - /PlanParticipation/EligibilityAndContributions/TaxTreatment/
-  - /contributioncomparison
-  - /roth
+  - /contributioncomparison/
+  - /roth/
 ---
 
 # Traditional and Roth contributions
@@ -19,7 +19,7 @@ You can choose between two tax treatments for your TSP contributions:
   <div class="usa-width-one-half">
   <div class="usa-alert">
   <div class="usa-alert-body" markdown="1">
-  
+
 ## Traditional contributions
 
 Traditional contributions
