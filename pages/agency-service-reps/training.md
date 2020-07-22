@@ -52,6 +52,17 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
 
   To learn more about TSP webinars or request to be on the distribution list, please contact us at webinars@tsp.gov.
 
+## Thrift Savings Plan - CARES Act Loans and Withdrawals
+
+Accessing Your TSP Money for those Impacted by COVID-19
+
+This webinar will cover Coronavirus Aid, Relief, and Economic Security (CARES) Act Loan and Withdrawal rules for TSP participants affected by COVID-19. We will discuss the eligibility for qualified individuals, the temporary maximum loan and withdrawal amounts, how to suspend loans and how to submit loans on tsp.gov, and submitting request for Loans and withdrawals.
+
+### July 28, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=170){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
+
 ## Intro to TSP
 
 This webinar provides an introduction to the Thrift Savings Plan for new employees and service members. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
