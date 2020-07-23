@@ -2,7 +2,7 @@
 function getRatesOfReturn(chart) {
   var funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
   var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
-  console.log(url);
+  // console.log(url);
   doAjaxRetrieveRoR(chart, url);
   return false;
 }
