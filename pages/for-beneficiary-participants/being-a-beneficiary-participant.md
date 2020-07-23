@@ -182,11 +182,11 @@ You are allowed to keep your beneficiary participant account as long as you like
 
 There are three basic methods of withdrawing money from your beneficiary participant account:
 
-+ TSP installment payments (a fixed dollar amount or one based on life expectancy)
+* TSP installment payments (a fixed dollar amount or one based on life expectancy)
 
-+ single withdrawals ($1,000 minimum)
+* single withdrawals ($1,000 minimum)
 
-+ annuities (purchased for you from our annuity vendor; $3,500 minimum)
+* annuities (purchased for you from our annuity vendor; $3,500 minimum)
 
 You can choose any of these options or any combination of them.
 
