@@ -178,26 +178,23 @@ Learn about withdrawal options
 
 ## You don't have to withdraw your money—you can keep it in the TSP until you need it (and until the IRS says you have to start withdrawing).
 
-There are two types of withdrawals you can make:
+You are allowed to keep your beneficiary participant account as long as you like. With the exception of [required minimum distributions](https://www.tsp.gov/for-beneficiary-participants/beneficiary-distributions/) you can keep your money invested in this account without making withdrawals. But if you do decide to take money out, you have a number of options.
 
-1. A partial withdrawal
-2. A full withdrawal
+There are three basic methods of withdrawing money from your beneficiary participant account:
 
-**With a partial withdrawal**, you can take out $1,000 or more and leave the rest in your account until you decide to withdraw it at a later date. You may only make one partial withdrawal from your account.
++ TSP installment payments (a fixed dollar amount or one based on life expectancy)
 
-**With a full withdrawal**, you can designate your entire account for immediate withdrawal using one, or any combination of these three withdrawal options available to you:
++ single withdrawals ($1,000 minimum)
 
-- A single payment
-- A series of monthly payments
-- A life annuity
++ annuities (purchased for you from our annuity vendor; $3,500 minimum)
 
-_**A single payment**_ allows you to withdraw your entire beneficiary participant account at one time in one payment. It’s sometimes referred to as a "lump sum."
+You can choose any of these options or any combination of them.
 
-_**Monthly payments**_ allow you to withdraw your account in a series of payments. You can ask for a specific dollar amount each month or you can have the TSP calculate a monthly payment based on your life expectancy. If you choose a specific dollar amount, it must be at least $25.
+In addition, if you have both Roth and traditional money in your account, you can choose to have your payment come from your traditional balance only, from your Roth balance only, or pro rata (proportionally) from both balances. Pro rata from both balances is the default option. Note that if you choose traditional only or Roth only for installments, your payments will continue after your chosen balance runs out. At that point your payments will begin coming from the balance you did not choose.
 
-_**An annuity**_ you (or your survivor) receive a payment every month for life.  We purchase the annuity on your behalf from a private insurance company with all or any portion of your account balance when you request a full withdrawal. You can purchase an annuity for $3,500 or more. Once you purchase one, it cannot be changed.
+For single withdrawals and fixed-dollar-amount TSP installment payments expected to last less than 10 years, you can also transfer payments to an IRA or eligible employer plan.
 
-You can also make _**a mixed withdrawal**_ which allows you to combine any or all of the three withdrawal options (single payment, monthly payments, or annuity). However, if you request a mixed withdrawal with an annuity, the portion of your account balance used to purchase the annuity cannot equal a dollar amount of less than $3,500.
+ 
 </div>
 </li>
 <!-- ROW 2, BOX 3, COMBINE YOUR TSP ACCOUNTS -->
