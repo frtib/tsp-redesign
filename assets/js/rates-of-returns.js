@@ -93,21 +93,20 @@ function buildSideScrollTableRoR(chartName, data) {
       val = monthName;
       col[0] = Date.UTC(col[0].substr(0, 4), col[0].substr(4, 2)-1);
       monthlyData.unshift(col.join(","));
-      row = sideScrollTH('', '', '', val, false);
-    } else {
+    }
+    if (lineType == 'y12') {
+      val = YTD;
+      YTD = ' YTD';
+    }
+    if (lineType == 'y') {
       var id = "year_"+yearName;
-      if (YTD == ' YTD') {
-        val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
-        val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
-        YTD = '';
-      } else {
-        val = YTD;
-        YTD = ' YTD';
-      }
+      val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
+      val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
       col[0] = Date.UTC(col[0].substr(0, 4), 0);
       annualData.unshift(col.join(","));
-      row = sideScrollTH('', '', '', val, false);
+      YTD = '';
     }
+    row = sideScrollTH('', '', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
       val = fundYvalueFormat(parseFloat(col[i].trim()));
