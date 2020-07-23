@@ -1,8 +1,8 @@
 
 function getRatesOfReturn(chart) {
   var funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
-  // console.log(url);
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
+  console.log(url);
   doAjaxRetrieveRoR(chart, url);
   return false;
 }
@@ -64,7 +64,7 @@ function buildSideScrollTableRoR(chartName, data) {
   var yearName = '';
   var tmpRows = "";
   var row;
-  var YTD = " YTD";
+  var YTD = "Last 12 mo";
   var val;
   // highcharts likes low to high, we want table high to low
   for (j = lines.length-1; j > 0; j--) {
@@ -96,12 +96,17 @@ function buildSideScrollTableRoR(chartName, data) {
       row = sideScrollTH('', '', '', val, false);
     } else {
       var id = "year_"+yearName;
-      val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
-      val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
+      if (YTD == ' YTD') {
+        val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
+        val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
+        YTD = '';
+      } else {
+        val = YTD;
+        YTD = ' YTD';
+      }
       col[0] = Date.UTC(col[0].substr(0, 4), 0);
       annualData.unshift(col.join(","));
       row = sideScrollTH('', '', '', val, false);
-      YTD = '';
     }
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
@@ -191,7 +196,7 @@ function fundHighchartClickBuddy(chartName, idx, fundName, vis) {
 
 function fundTooltip(me, chartName) {
   var rc = fundTooltipBody(me);
-  var tipTitle; 
+  var tipTitle;
   if (chartName.indexOf('-annual') > -1) {
       tipTitle = 'Annual Returns ';
       if ((me.x + 11098432000) > me.points[0].series.xAxis.max) { tipTitle = 'YTD Returns ' }
