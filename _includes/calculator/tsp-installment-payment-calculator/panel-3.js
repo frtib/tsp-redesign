@@ -46,13 +46,13 @@ function calculate() {
   // console.log(numYears, periodRate, rate);
 
   // number of payments in upper table
-  $('#deplete-text').html('Which will deplete your account in');
+  $('#deplete-text').html('Will deplete your account in');
   var fmonths = -1.0 * Math.log(1 - periodRate * accountAmount / (1.0 * amountToReceive));
   fmonths /= Math.log(1 + periodRate);
   fmonths = Math.trunc(fmonths) + 1;
   if (isNaN(fmonths)) {
     setPaymentsLength(1000, 1000);
-    $('#deplete-text').html('Will never deplete your account.  See your year-end account balances below.');
+    $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
     $('#account-depleted').html('--');
   } else {
     var fyears = Math.trunc(fmonths/periods);

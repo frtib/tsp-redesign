@@ -45,7 +45,7 @@ Name middle panels (2) for CALC.
   Indicate a rate of return (i.e., 5.25%) if you would like your calculation based on
   an assumed annual earnings rate (e.g., the rate you expect your TSP account to grow).
   Otherwise, your calculation will not include projected earnings. You can view the
-  [Rates of return]({{ site.baseurl }}/fund-performance/){:target="_blank"}
+  [Rates of return]({{ site.baseurl }}/fund-performance/){:target="\_blank"}
   page for more information, but remember that past performance is not a guarantee or
   a predictor of future returns.
 {% endcapture %}

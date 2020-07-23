@@ -19,35 +19,30 @@ you stop or change your payments or your account balance reaches zero.
 {% include calculator/resultsRow.html rightID="monthly-payment" right=""
   left="Paid in monthly installments of " %}
 {% include calculator/resultsRow.html rightID="rate-of-return" right=""
-  left="At an assumed annual rate of return" %}
+  left="At an assumed annual rate of return of" %}
 {% include calculator/resultsRow.html rightID="account-depleted" right=""
   left="<span id='deplete-text'>Which will deplete your account in</span>" %}
 
 </div>
 
-{% capture lengthNote %}
-Payments may be made for a longer or shorter period of time than expected, depending on the gains and
-losses in the value of your account while you are receiving installment payments.  If you are subject to the IRS [Required Minimum Distribution {RMD}]({{ site.baseurl }}/living-in-retirement/making-a-withdrawal/#required-minimum-distributions-rmds){:target="_blank"}
-rules and your installment payments do not satisfy your RMD, a supplemental payment will be made to you.
-{% endcapture %}
-{% include calculator/infoBox.html icon='info'
-    title="Note"
-    textBlock=lengthNote
-%}
+**Note**: Payments may be made for a longer or shorter period of time than expected, depending on the gains and
+losses in the value of your account while you are receiving installment payments.  If you are subject to the IRS [Required Minimum Distribution (RMD)]({{ site.baseurl }}/living-in-retirement/making-a-withdrawal/#required-minimum-distributions-rmds){:target="\_blank"} rules and your installment payments do not satisfy your RMD, a supplemental payment will be made to you.
+
 {% capture ParticipantNote %}
-See the tax notice
-[&#8220;Important Tax Information About Your TSP Withdrawal and Required Minimum Distributions.&#8221;](/forms/tsp-775.pdf).
+See the tax notice &#8220;[Important Tax Information About Your TSP Withdrawal and Required Minimum Distributions.]({{ site.baseurl }}/publications/tsp-775.pdf){:target="\_blank"}&#8221;
 {% endcapture %}
+
 {% include calculator/infoBox.html icon='info'
-    title="If you are a civilian or uniformed services participant"
+    title="Civilian or uniformed services participants"
     textBlock=ParticipantNote
 %}
+
 {% capture BPANote %}
-__If you are a beneficiary participant__, see the tax notice
-[&#8220;Tax Information About TSP Withdrawals and Required Minimum Distributions for Beneficiary Participants.&#8221;](/forms/tsp-776.pdf){:target="_blank"}.
+See the tax notice &#8220;[Tax Information About TSP Withdrawals and Required Minimum Distributions for Beneficiary Participants.]({{ site.baseurl }}/publications/tsp-776.pdf){:target="\_blank"}&#8221;
 {% endcapture %}
+
 {% include calculator/infoBox.html icon='info'
-    title="Note"
+    title="Beneficiary participants"
     textBlock=BPANote
 %}
 
