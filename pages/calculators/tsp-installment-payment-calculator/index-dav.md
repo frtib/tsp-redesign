@@ -18,5 +18,5 @@ panel-names: [Introduction, Information, Estimate]
 redirect_from:
   - /PlanningTools/Calculators/installmentPayCalc.html
   - /installmentpaycalc/
-published: true
+published: false
 ---
