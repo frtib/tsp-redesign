@@ -45,7 +45,7 @@ As a beneficiary participant, you’ll enjoy many of the same TSP benefits as em
 
 ## You'll need these items to manage your account
 
-<section class="quick-links">
+<section class="quick-links being-a-bpa">
   <div class="usa-grid">
   <div class="usa-width-one-fourth" markdown="1">
   <span data-term="Account number" class="js-glossary-toggle term term-end">Account number</span>
@@ -178,23 +178,19 @@ Learn about withdrawal options
 
 ## You don't have to withdraw your money—you can keep it in the TSP until you need it (and until the IRS says you have to start withdrawing).
 
-You are allowed to keep your beneficiary participant account as long as you like. With the exception of [required minimum distributions](https://www.tsp.gov/for-beneficiary-participants/beneficiary-distributions/) you can keep your money invested in this account without making withdrawals. But if you do decide to take money out, you have a number of options.
+You are allowed to keep your beneficiary participant account as long as you like. With the exception of [required minimum distributions]({{ site.baseurl }}/for-beneficiary-participants/beneficiary-distributions/) you can keep your money invested in this account without making withdrawals. But if you do decide to take money out, you have a number of options.
 
 There are three basic methods of withdrawing money from your beneficiary participant account:
 
-* TSP installment payments (a fixed dollar amount or one based on life expectancy)
-
-* single withdrawals ($1,000 minimum)
-
-* annuities (purchased for you from our annuity vendor; $3,500 minimum)
+- TSP installment payments (a fixed dollar amount or one based on life expectancy)
+- single withdrawals ($1,000 minimum)
+- annuities (purchased for you from our annuity vendor; $3,500 minimum)
 
 You can choose any of these options or any combination of them.
 
 In addition, if you have both Roth and traditional money in your account, you can choose to have your payment come from your traditional balance only, from your Roth balance only, or pro rata (proportionally) from both balances. Pro rata from both balances is the default option. Note that if you choose traditional only or Roth only for installments, your payments will continue after your chosen balance runs out. At that point your payments will begin coming from the balance you did not choose.
 
 For single withdrawals and fixed-dollar-amount TSP installment payments expected to last less than 10 years, you can also transfer payments to an IRA or eligible employer plan.
-
- 
 </div>
 </li>
 <!-- ROW 2, BOX 3, COMBINE YOUR TSP ACCOUNTS -->
@@ -235,7 +231,7 @@ Learn about Required Minimum Distributions</button>
 
 The Internal Revenue Code (IRC) requires that you begin receiving distributions from your beneficiary participant account based on your life expectancy. The rules for when you must take Required Minimum Distributions depend in part on the deceased participant’s age on the date of his or her death.
 
-Because the rules are complex, more specific information about the IRS required minimum distribution rules can be found in the tax notice _[Tax Information About TSP Withdrawals and Required Minimum Distributions for Beneficiary Participants]({{ site.baseurl }}/publications/tsp-776.pdf)._
+Because the rules are complex, more specific information about the IRS required minimum distribution rules can be found in the tax notice [_Tax Information About TSP Withdrawals and Required Minimum Distributions for Beneficiary Participants_]({{ site.baseurl }}/publications/tsp-776.pdf).
 
 For more detailed information about the rules associated with death benefit payments, read the TSP tax notice "[Important Tax Information About Thrift Savings Plan Death Benefit Payments]({{ site.baseurl }}/publications/tsp-583.pdf)." You may also want to consult a tax advisor.
 

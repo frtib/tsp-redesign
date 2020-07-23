@@ -2,22 +2,39 @@
 section.quick-links {
   margin: 0;
   padding: 0;
+  margin-bottom: none;
+  margin-bottom: 4rem;
+  background-color: #046b99;
+
+  .usa-width-one-fourth {
+    border-width: 0;
+    border-style: solid;
+    border-color: $color-white;
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    a {
+      padding: 3rem 0 ;
+      display:block;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }// end .usa-width-one-fourth
+
   &.homepage {
-    margin-bottom: none;
-    background-color: #046b99;
-    margin-bottom: 4rem;
 
     .usa-width-one-fourth {
-      border-right: 4px solid $color-white;
+      border-right-width: 4px;
       font-size: 2rem;
-      margin:0;
       padding: 2rem 0;
+      margin: 0;
 
-      p {
-        margin: 0;
-      }
-
-      &:first-child {
+      &:nth-child(1) {
         border-left: 4px solid $color-white; // homepage full-width
       }
 
@@ -31,7 +48,33 @@ section.quick-links {
       }
     }
   } // end &.homepage
+
+  &.being-a-bpa {
+    background-color: $color-primary-alt;
+
+    .usa-grid {
+      padding: 0;
+      margin: 0;
+
+      .usa-width-one-fourth {
+        padding: 2.2rem 0;
+        &:nth-child(-n+3) {
+          border-right-width: 2px;
+        }
+      }
+    }
+  } // end &.being-a-bpa
+
+  // GLOSSARY QUICK LINKS
+  .term, .term-end {
+    display: inline-block;
+    color: $color-white;
+    border-bottom-color: $color-white;
+  }
+
 } // end section.quick-links
+
+
 @media only screen and (max-width: $desktop-screen) {
   section.quick-links {
     &.homepage {
@@ -72,38 +115,19 @@ section.quick-links {
         &:last-child {
           border-bottom: none;
         }
-
-        // border-right: none;
-        // &:nth-child(odd) {
-        //   border-right: none;
-        // }
-        // &:last-child {
-        //   border-bottom: none; // homepage full-width
-        // }
       }
     }
-  }
-}
-// HOMEPAGE
-  // .quick-links.homepage {
-  //   margin-bottom: none;
-  //   .usa-width-one-fourth:first-child {
-  //     border-left: 4px solid $color-white; // homepage full-width
-  //     }
-  //   }
+    &.being-a-bpa {
 
-// GLOSSARY QUICK LINKS
+      .usa-grid {
 
-.quick-links {
-  p {
-    text-align: center;
-  }
-  .term, .term-end {
-    display: inline-block;
-    color: $color-white;
-    border-bottom: 1px dashed $color-white;
-    margin: 3rem auto;
-    background-image: url($baseurl + '/assets/img/icons/glossary-white.svg');
-    background-size: 1.6rem;
+        .usa-width-one-fourth {
+          &:nth-child(-n+3) {
+            border-right-width: 0;
+            border-bottom-width: 4px;
+          }
+        }
+      }
+    } // end &.being-a-bpa
   }
 }

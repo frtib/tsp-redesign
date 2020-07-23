@@ -76,6 +76,18 @@ section.bpa-accordion {
       p {
         max-width: 76ch;
       }
+      ol,
+      ul {
+        display: block;
+        list-style-type: disc;
+        li {
+          display: list-item;
+          text-align: left;
+        }
+      }
+      ol {
+        list-style-type: decimal;
+      }
     } //.usa-accordion-content END
   } // END &.being-a-bpa
 } // END section.bpa-accordion
