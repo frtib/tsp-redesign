@@ -14,7 +14,7 @@ redirect_from:
 
 Thank you for your interest in TSP education.
 
-TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
+TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
 
 _Unfortunately, we are unable to accommodate requests for in-person events at this time._
 
@@ -26,7 +26,6 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
 - After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
 - **All scheduled start times are listed in Eastern Time.**
 - All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
-
 <span id="tspWebinars"></span>
 <ul class="usa-accordion">
   <li>
@@ -51,6 +50,17 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
   Our education staff has created a distribution list of agency and service representatives that can assist in distributing TSP webinar information to participants. Individual participants should not request to be on the list.
 
   To learn more about TSP webinars or request to be on the distribution list, please contact us at webinars@tsp.gov.
+
+## Thrift Savings Plan - CARES Act Loans and Withdrawals
+
+Accessing Your TSP Money for those Impacted by COVID-19
+
+This webinar will cover Coronavirus Aid, Relief, and Economic Security (CARES) Act Loan and Withdrawal rules for TSP participants affected by COVID-19. We will discuss the eligibility for qualified individuals, the temporary maximum loan and withdrawal amounts, how to suspend loans and how to submit loans on tsp.gov, and submitting request for Loans and withdrawals.
+
+### July 28, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=170){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
 
 ## Intro to TSP
 
