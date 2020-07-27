@@ -6,6 +6,7 @@ Results NAME panel (3) for CALC.
 {% assign gridClass2 = include.gridClass2 | default: 'results' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
+<a name="result-top"></a>
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}" markdown="1">
 
 __A summary of your results is show below.__
@@ -17,7 +18,7 @@ you stop or change your payments or your account balance reaches zero.
 {% include calculator/resultsRow.html rightID="account-amount" right=""
   left="Amount from your account used for monthly payments:" %}
 {% include calculator/resultsRow.html rightID="monthly-payment" right=""
-  left="Paid in monthly installments of " %}
+  left="Paid in <span id='monthly-payment-choice'>periodic</span> installments of " %}
 {% include calculator/resultsRow.html rightID="rate-of-return" right=""
   left="At an assumed annual rate of return of" %}
 {% include calculator/resultsRow.html rightID="account-depleted" right=""

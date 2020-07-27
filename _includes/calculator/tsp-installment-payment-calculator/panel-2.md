@@ -11,7 +11,7 @@ Name middle panels (2) for CALC.
   fieldID="panel-2.1" id="accountAmount"
   inputClass=""  dataFormat="$" dataFormatClass="whole-number"
   min="200" value="" max="" maxLength=8 step="1"
-  placeholder="" onBlur="accountAmountGood(true);"
+  placeholder="" onBlur="accountAmountGood(false);"
   prompt="Enter the amount from your TSP account that will be used for installment payments:"
   explanation="
 
@@ -23,7 +23,7 @@ Name middle panels (2) for CALC.
   fieldID="panel-2.2" id="frequency"
   inputType="radio" radioIDs="Monthly, Quarterly, Annually" radioLabels="Monthly, Quarterly, Annually"
   inputClass="usa-unstyled-list"
-  onBlur="frequencyGood(true);"
+  onBlur="frequencyGood(false);"
   prompt="How often do you want to receive payments?"
   explanation=""
 %}
@@ -32,7 +32,7 @@ Name middle panels (2) for CALC.
   fieldID="panel-2.3" id="amountToReceive"
   inputClass=""  dataFormat="$"  dataFormatClass="whole-number"
   min="25" value="" max="" maxLength=8 step="1"
-  placeholder="" onBlur="amountToReceiveGood(true);"
+  placeholder="" onBlur="amountToReceiveGood(false);"
   prompt="What dollar amount would you like to receive in each payment?"
   explanation="
 
@@ -53,7 +53,7 @@ Name middle panels (2) for CALC.
   fieldID="panel-2.4" id="rateOfReturn"
   inputClass=""  dataFormat="%"
   min="0" value="" max="99" maxLength=8 step="1"
-  placeholder="" onBlur="rateOfReturnGood(true);"
+  placeholder="" onBlur="rateOfReturnGood(false);"
   prompt="Expected annual return rate:"
   explanation=explanation_1_4
 %}
