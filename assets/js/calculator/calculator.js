@@ -105,6 +105,7 @@ function showWarning(element, message) {
   // console.log('warning for ['+element+']: '+message);
   // document.getElementById(element).setAttribute("aria-describedby", element+'-warning-message');
   gotoAnchor(element+'-anchor');
+  // scrollSmooth(element+'-anchor');
   return false;
 }
 function clearWarning(element) {
@@ -120,6 +121,23 @@ function clearWarning(element) {
 
 
 function gotoAnchor(anchor) { location.replace("#" + anchor); }
+function scrollSmooth(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      block: 'start', behavior: 'smooth'
+    });
+  }
+}
+function scrollAuto(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      block: 'start', behavior: 'smooth'
+    });
+  }
+}
+
 function getPosFloat(id, def) {
   var val = parseFloat($('#'+id).val());
   if (isNaN(val)) { val = def; }

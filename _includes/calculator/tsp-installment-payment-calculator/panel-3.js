@@ -15,6 +15,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     calculate();
 
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
+    gotoAnchor('panel-3');
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
@@ -51,13 +52,13 @@ function calculate() {
   fmonths /= Math.log(1 + periodRate);
   fmonths = Math.trunc(fmonths) + 1;
   if (isNaN(fmonths)) {
-    setPaymentsLength(1000, 1000);
+    setPaymentsLength(1000, 1000, periods);
     $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
     $('#account-depleted').html('--');
   } else {
     var fyears = Math.trunc(fmonths/periods);
     fmonths = fmonths - fyears * periods;
-    setPaymentsLength(fyears, fmonths);
+    setPaymentsLength(fyears, fmonths, periods);
   }
 
   var curPayment = amountToReceive;
@@ -82,7 +83,7 @@ function calculate() {
   while (monthsRemainder >= 12) { monthsRemainder -= 12; yearsTilDepleted += 1; }
   lastPaymentYear = yearsTilDepleted;
   if (monthsRemainder > 0) { lastPaymentYear++; }
-  if (curBalance <= 0.0) { setPaymentsLength(yearsTilDepleted, monthsRemainder); }
+  if (curBalance <= 0.0) { setPaymentsLength(yearsTilDepleted, monthsRemainder, periods); }
 
   // console.log('last year ', lastPaymentYear, yearsTilDepleted, monthsRemainder);
   $('#resultSelector0-table').html(buildTable());
@@ -90,16 +91,20 @@ function calculate() {
   var chart = buildChart('resultSelector0-graph', payments, balance);
 }
 
-function setPaymentsLength(years, months) {
+function setPaymentsLength(years, months, periods) {
   var y = ' years';
+  var p = 'payments';
   var footnote = '';
+  var installments = months;
+  if (periods == 4) { installments /= 3; }
   if (years == 1) { y = ' year'; }
+  if (installments == 1) { p = 'payment'; }
   if (months <= 0) {
     $('#account-depleted').html(years + y);
-    footnote = 'The last year you will receive fixed dollar installment payments will be year ' + years + '.';
+    footnote = 'The last full year you will receive fixed dollar installment payments will be year ' + years + '.';
   } else {
     $('#account-depleted').html(years + y + ',<br>' + months + ' months');
-    footnote = 'The last year you will receive fixed dollar installment payments will be year ' + (years+1) + '.';
+    footnote = 'You will recieve your last ' + installments + ' installment '+p+' in year ' + (years+1) + '.';
   }
   if (years >= (numYears+10)) { $('#installment-payment-footnote').html(''); } else { $('#installment-payment-footnote').html(footnote); }
 }

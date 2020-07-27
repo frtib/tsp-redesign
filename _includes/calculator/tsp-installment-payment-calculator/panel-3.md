@@ -17,7 +17,7 @@ you stop or change your payments or your account balance reaches zero.
 {% include calculator/resultsRow.html rightID="account-amount" right=""
   left="Amount from your account used for monthly payments:" %}
 {% include calculator/resultsRow.html rightID="monthly-payment" right=""
-  left="Paid in monthly installments of " %}
+  left="Paid in <span id='monthly-payment-choice'>periodic</span> installments of " %}
 {% include calculator/resultsRow.html rightID="rate-of-return" right=""
   left="At an assumed annual rate of return of" %}
 {% include calculator/resultsRow.html rightID="account-depleted" right=""

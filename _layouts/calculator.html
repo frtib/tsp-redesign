@@ -32,7 +32,7 @@ scripts:
 
 <div class="{{ contentClass }} usa-layout-docs-main_content">
   {% assign altPageTitle = page.title-alternate | default: page.title %}
-  {% if altPageTitle %}<h1>{{ altPageTitle }}</h1>{% endif %}
+  {% if altPageTitle %}<h1 id="{{altPageTitle}}">{{ altPageTitle }}</h1>{% endif %}
   {% if page.progress-steps %}{% include calculator/progressBar.html progressSteps=page.progress-steps %}{% endif %}
   {{ content }}
 

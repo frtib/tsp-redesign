@@ -50,12 +50,11 @@ function getFrequency() {
   return ['none', 'period'];
 }
 
-var lastSubmit = false;
 function frequencyGood(submit) {
   clearError('amountToReceive');
   amountToReceiveGood(submit);
   var choice = getFrequency()[0];
-  $('#monthly-payment').html(choice);
+  $('#monthly-payment-choice').html(choice.toLowerCase());
   if (choice == 'Monthly') {
     $('#frequency').html('Monthly');
     // $('#lblAYRfrequency').html($('#frequency').html());
@@ -124,6 +123,7 @@ function amountToReceiveGood(submit) {
         + "   Either increase the amount you want to use for TSP installment payments, or decrease your payment amount.");
   }
 
+  $('#monthly-payment').html(CurrencyFormatted(amountToReceive, 'no_cent'));
   return clearError('amountToReceive');
 }
 -->
