@@ -1,83 +1,3 @@
-div#annuity-factors,
-div.annuity-factors {
-
-p {
-  line-height: 1.45;
-}
-
-#expand-close {
-  margin: 0.7em 0;
-}
-
-.table {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 20px;
-}
-
-.box,
-.box_top {
-  border-top: thin solid black;
-}
-
-.box,
-.box_bottom {
-  border-bottom: thin solid black;
-}
-
-.box,
-.box_left {
-  border-left: thin solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  /*font-size:11px;*/
-}
-
-.box,
-.box_right {
-  border-right: thin solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  /*font-size:11px;*/
-}
-
-.zebra {
-  background-color: #eeeeee;
-}
-
-.singleAnnuityFactor {
-  width: 15%;
-}
-
-.jointAnnuityFactor {
-  /*min-width: 4.5%;*/
-}
-
-.singleAnnuityTable {
-  font-size: 1em;
-  line-height: 1.45;
-}
-
-.jointAnnuityTable {
-  font-size: 0.55em;
-  line-height: 1.55;
-}
-
-.jointAnnuityTable td {
-  padding: 0 0.38em;
-}
-
-.singleOption1 {
-  background-color: #5a9dd5;
-  color: #fff;
-}
-
-.singleOption2 {
-  background-color: #a6ce39;
-  color: #fff;
-}
-
-.table-header {
-  font-weight: bold;
-}
-
 a.dropdownMain {
   display: block;
   width: 100%;
@@ -91,78 +11,170 @@ a.dropdownMain {
   text-decoration: none;
 }
 
-a.dropdownSec {
-  display: block;
-  width: 100%;
-  padding: 0.5em;
-  background: url("/resources/images/tableHeaderBgGray.gif") repeat-x;
-  border: 1px solid #999999;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #3181CB;
-  font-weight: bold;
-  text-decoration: none;
+div#expand-close {
+  margin: 0.7em 0;
+  /* BUTTON STYLE FOR EXPAND/COLLAPSE ALL BUTTONS */
+  .btn {
+    background: #A66D20;
+    background-image: -webkit-linear-gradient(top, #A66D20, #9B5C0F);
+    background-image: -moz-linear-gradient(top, #A66D20, #9B5C0F);
+    background-image: -ms-linear-gradient(top, #A66D20, #9B5C0F);
+    background-image: -o-linear-gradient(top, #A66D20, #9B5C0F);
+    background-image: linear-gradient(to bottom, #A66D20, #9B5C0F);
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #cc8322;
+    background-image: -webkit-linear-gradient(top, #cc8322, #d17a0f);
+    background-image: -moz-linear-gradient(top, #cc8322, #d17a0f);
+    background-image: -ms-linear-gradient(top, #cc8322, #d17a0f);
+    background-image: -o-linear-gradient(top, #cc8322, #d17a0f);
+    background-image: linear-gradient(to bottom, #cc8322, #d17a0f);
+    text-decoration: none;
+  }
 }
 
-a.dropdownTer {
-  display: block;
-  width: 100%;
-  padding: 0.5em;
-  background: none;
-  border: 1px solid #999999;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #5c5d5d;
-  font-weight: bold;
-  text-decoration: none;
-}
+div#jointOP,
+div#jointSP,
+div#single {
+  p {
+    line-height: 1.45;
+  }
 
-a.dropdownQua {
-  display: block;
-  width: 100%;
-  padding: 0.5em;
-  background: #fff;
-  border: 1px solid #999999;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #AB4B00;
-  font-weight: bold;
-  text-decoration: none;
-}
+  table.table {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  font-weight: bold;
-  padding: 0 0 0 0.5em;
-}
+    tr.zebra {
+      background-color: #eeeeee;
+    }
+  }
 
-p.title {
-  color: #AB4B00;
-  text-transform: uppercase;
-}
-/* BUTTON STYLE FOR EXPAND/COLLAPSE ALL BUTTONS */
-.btn {
-  background: #A66D20;
-  background-image: -webkit-linear-gradient(top, #A66D20, #9B5C0F);
-  background-image: -moz-linear-gradient(top, #A66D20, #9B5C0F);
-  background-image: -ms-linear-gradient(top, #A66D20, #9B5C0F);
-  background-image: -o-linear-gradient(top, #A66D20, #9B5C0F);
-  background-image: linear-gradient(to bottom, #A66D20, #9B5C0F);
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px;
-  text-decoration: none;
-}
+  .box,
+  .box_top {
+    border-top: thin solid black;
+  }
 
-.btn:hover {
-  background: #cc8322;
-  background-image: -webkit-linear-gradient(top, #cc8322, #d17a0f);
-  background-image: -moz-linear-gradient(top, #cc8322, #d17a0f);
-  background-image: -ms-linear-gradient(top, #cc8322, #d17a0f);
-  background-image: -o-linear-gradient(top, #cc8322, #d17a0f);
-  background-image: linear-gradient(to bottom, #cc8322, #d17a0f);
-  text-decoration: none;
+  .box,
+  .box_bottom {
+    border-bottom: thin solid black;
+  }
+
+  .box,
+  .box_left {
+    border-left: thin solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size:11px;*/
+  }
+
+  .box,
+  .box_right {
+    border-right: thin solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size:11px;*/
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      td {
+        background-color: #eee;
+      }
+    }
+  }
+
+  .singleAnnuityFactor {
+    width: 15%;
+  }
+
+  .jointAnnuityFactor {
+    /*min-width: 4.5%;*/
+  }
+
+  .singleAnnuityTable {
+    font-size: 1em;
+    line-height: 1.45;
+  }
+
+  .jointAnnuityTable {
+    font-size: 0.55em;
+    line-height: 1.55;
+  }
+
+  .jointAnnuityTable td {
+    padding: 0 0.38em;
+  }
+
+  .singleOption1 {
+    background-color: #5a9dd5;
+    color: #fff;
+  }
+
+  .singleOption2 {
+    background-color: #a6ce39;
+    color: #fff;
+  }
+
+  .table-header {
+    font-weight: bold;
+  }
+
+  a.dropdownSec {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    background-color: $color-gray-lighter;
+    border: 1px solid #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3181CB;
+    font-weight: bold;
+    text-decoration: none;
+    text-indent: 1.5rem;
+  }
+
+  a.dropdownTer {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    background: none;
+    border: 1px solid #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5c5d5d;
+    font-weight: bold;
+    text-decoration: none;
+    text-indent: 3rem;
+  }
+
+  a.dropdownQua {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    background: #fff;
+    border: 1px solid #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #AB4B00;
+    font-weight: bold;
+    text-decoration: none;
+    text-indent: 4.5rem;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 0 0 0.5em;
+  }
+
+  p.title {
+    color: #AB4B00;
+    text-transform: uppercase;
+  }
 }
-} // end div#annuity-factors
+// end div#jointOP, div#jointSP, div#single

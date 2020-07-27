@@ -1,0 +1,27 @@
+#resultSelector0-table,
+#resultSelector0-graph {
+  margin-top: 3.5rem;
+}
+
+table {
+  &.installment-payment-table {
+    margin: 0 auto; // center table in div
+
+    thead {
+      th {
+        text-align: right;
+        &:nth-child(1) {
+          text-align: center;
+        }
+      }
+    }
+
+    tbody {
+      text-align: right;
+
+      th {
+        text-align: center;
+      }
+    }
+  }
+}
