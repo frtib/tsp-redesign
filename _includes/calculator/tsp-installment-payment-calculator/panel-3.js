@@ -16,6 +16,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     calculate();
 
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
+    gotoAnchor('panel-3');
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
