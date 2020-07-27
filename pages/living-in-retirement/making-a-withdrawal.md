@@ -11,7 +11,7 @@ permalink: /living-in-retirement/making-a-withdrawal/
 
 ## Requesting a withdrawal
 
-Before you request a withdrawal from your TSP savings, be sure to read the booklet [Withdrawing Your TSP Account After Leaving Federal Service]({{ site.baseurl }}/publications/tspbk02.pdf).
+Before you request a withdrawal from your TSP savings, be sure to read the booklet [Withdrawing from Your Acccount for Separated and Beneficiary Participants]({{ site.baseurl }}/publications/tspbk02.pdf).
 
 To request a withdrawal, log into My Account and click on the “Withdrawals and Changes to Installment Payments” link on the menu. From there you’ll have access to an online tool with which to start your withdrawal.
 
