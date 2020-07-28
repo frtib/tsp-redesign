@@ -9,7 +9,7 @@ Results NAME panel (3) for CALC.
 <a name="result-top"></a>
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}" markdown="1">
 
-__A summary of your results is show below.__
+__A summary of your results is shown below.__
 
 Keep in mind that installment payments for a specific dollar amount are paid until
 you stop or change your payments or your account balance reaches zero.
