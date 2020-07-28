@@ -6,6 +6,7 @@ Results NAME panel (3) for CALC.
 {% assign gridClass2 = include.gridClass2 | default: 'results' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
+<a name="result-top"></a>
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}" markdown="1">
 
 __A summary of your results is show below.__

@@ -12,6 +12,7 @@ panelGood[{{ panelID }}] = function(forceValue) {
 
 panelEnter[{{ panelID }}] = function(panel) {
     // calculate and set values here
+    // window.location = '#result-top';
     calculate();
 
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
