@@ -18,10 +18,18 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
   overflow-x: auto;
   padding: 20px;
   background-color: rgba(0,0,0,.25);
-  height: 100%;
+
+  .usa-error-message {
+    color: $color-secondary-dark;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    display: block;
+    font-weight: bold;
+  }
 
   #fba-modal-dialog {
     max-width: 500px;
@@ -30,21 +38,19 @@
     position: relative;
     margin: 0 auto;
   }
-  // #fba-overlay.is-active {
-  //   position: fixed;
-  //   bottom: 0;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   background-color: rgba(0,0,0,.25);
-  //   z-index: 10000;
-  // }
+
   h3#fba-modal-title {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 2.5rem;
     font-family: $serif;
     line-height: 1.3;
+  }
+
+  .usa-alert {
+    h3 {
+      margin: 0;
+    }
   }
 
   #fba-modal-close {
@@ -67,17 +73,8 @@
   }
 
   #touchpoints-form {
-    // fieldset {
-    //   margin: 1rem 0;
-    // }
-    //
-    // p {
-    //   margin: 1rem 0;
-    // }
 
     label.usa-label {
-      // display: block;
-      // margin-top: 1rem;
       background-color: transparent;
       border-radius: 2px;
       color: $color-base;
@@ -86,17 +83,9 @@
       padding: 0.1rem 0.7rem;
       text-transform: uppercase;
     }
-
-    // input {
-    //   margin-bottom: 1.5rem;
-    //   width: 75%;
-    // }
-    //
-    // #fba-submit {
-    //   width: auto;
-    // }
   }
   // end #touchpoints-form
+
   .usa-banner {
     display: none;
   }
