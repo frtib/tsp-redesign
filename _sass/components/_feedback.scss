@@ -1,4 +1,5 @@
 // Styles for feedback modal and tab
+
 #fba-button {
   position: fixed;
   bottom: 0;
@@ -11,16 +12,6 @@
   z-index: 999999999;
 }
 
-#fba-overlay.is-active {
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,.25);
-  z-index: 10000;
-}
-
 #fba-modal {
   z-index: 11000;
   position: fixed;
@@ -29,60 +20,85 @@
   right: 0;
   overflow-x: auto;
   padding: 20px;
-}
+  background-color: rgba(0,0,0,.25);
+  height: 100%;
 
-#fba-modal-dialog {
-  max-width: 500px;
-  background: #fff;
-  padding: 20px;
-  position: relative;
-  margin: 0 auto;
-}
+  #fba-modal-dialog {
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
+  // #fba-overlay.is-active {
+  //   position: fixed;
+  //   bottom: 0;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background-color: rgba(0,0,0,.25);
+  //   z-index: 10000;
+  // }
+  h3#fba-modal-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: $serif;
+    line-height: 1.3;
+  }
 
-#fba-modal-title {
-  margin-top: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-}
+  #fba-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #5b616b;
+    background: none;
+    line-height: 1;
+    text-decoration: none;
+    width: auto;
+  }
 
-#fba-text-email,
-#fba-text-name {
-  max-width: 100%!important;
-  font-size: 100%;
-}
+  #fba-text-email,
+  #fba-text-name {
+    max-width: 100%!important;
+    font-size: 100%;
+  }
 
-#fba-modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  font-size: 24px;
-  color: #5b616b;
-  background: none;
-  line-height: 1;
-  text-decoration: none;
-  width: auto;
-}
+  #touchpoints-form {
+    // fieldset {
+    //   margin: 1rem 0;
+    // }
+    //
+    // p {
+    //   margin: 1rem 0;
+    // }
 
-#feedback-form fieldset {
-  margin: 1rem 0;
-}
+    label.usa-label {
+      // display: block;
+      // margin-top: 1rem;
+      background-color: transparent;
+      border-radius: 2px;
+      color: $color-base;
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      padding: 0.1rem 0.7rem;
+      text-transform: uppercase;
+    }
 
-#feedback-form p {
-  margin: 1rem 0;
+    // input {
+    //   margin-bottom: 1.5rem;
+    //   width: 75%;
+    // }
+    //
+    // #fba-submit {
+    //   width: auto;
+    // }
+  }
+  // end #touchpoints-form
+  .usa-banner {
+    display: none;
+  }
 }
-
-#feedback-form label {
-  display: block;
-  margin-top: 1rem;
-}
-
-#feedback-form input {
-  margin-bottom: 1.5rem;
-  width: 75%;
-}
-
-#feedback-form #fba-submit {
-  width: auto;
-}
+// end #fba-modal
