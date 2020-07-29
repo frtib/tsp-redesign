@@ -40,9 +40,14 @@ $( "ul.table-header-buttons" ).on( "click", "li", function() {
   // Function to do react to the media query
   function fundComparison(mediaQuery) {
     if (mediaQuery.matches) {
-      $('.sep').attr('colspan',6);
+      $('.sep').attr('colspan',11);
     } else {
       $('.sep').attr('colspan',2);
+    }
+    if (mediaQuery.matches) {
+      $('.sep-individual').attr('colspan',6);
+    } else {
+      $('.sep-individual').attr('colspan',2);
     }
   }
 
