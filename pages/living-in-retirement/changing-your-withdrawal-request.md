@@ -32,6 +32,6 @@ If your signature or your spouse’s signature is required, or you’re making c
 
 **Note:** We are changing the rule that prevents you from electing installment payments based on life expectancy if you have previously started and then stopped installment payments. Please disregard any TSP materials that state the old rule, including instructions you may see when using the online tool to stop payments. We will update them as soon as possible.
 
-Be sure to carefully read the TSP tax notice, [_Tax Information for TSP Participants Receiving Installment Payments_]({{ site.baseurl }}/publications/tsp-780.pdf)." It outlines the rules for changing your installment payments and details the tax implications associated with each payment option.
+Be sure to carefully read the TSP tax notice, [_Tax Information for TSP Participants Receiving Installment Payments_]({{ site.baseurl }}/publications/tsp-780.pdf). It outlines the rules for changing your installment payments and details the tax implications associated with each payment option.
 
 If you're currently receiving installment payments and want to choose a different amount, use our [TSP Installment Payment Calculator]({{ site.baseurl }}/calculators/tsp-installment-payment-calculator/) to estimate how many payments you will receive and how long they will last.
