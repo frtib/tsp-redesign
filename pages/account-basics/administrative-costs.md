@@ -56,8 +56,8 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
 <section class="comparison" markdown="1">
 
 ## Lifecycle funds
-{% include components/get_sorted_fund_list funds='lifecycle' reverse=true %}
-{% assign rowString = "YTD|Year-to-date, 1YR|1-year, 3YR|3-year, 5YR|5-year, 10YR|10-year, Life|Life" %}
+{% include components/get_sorted_fund_list funds='lifecycle' reverse=false %}
+{% assign rowString = "YTD|YTD, 1YR|1-year, 3YR|3-year, 5YR|5-year, 10YR|10-year, Life|Life" %}
 {% assign rows = rowString | split: ', ' %}
 
 <ul class="funds-lifecycle">
@@ -69,6 +69,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
 </ul>
 
 <table class="l">
+<col class="column-width">
   <thead>
     <tr>
       <th class="hide"></th>
@@ -137,6 +138,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
 </ul>
 
 <table class="i">
+<col class="column-width">
   <thead>
     <tr>
       <th class="hide"></th>
@@ -148,7 +150,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
   <tbody>
 
     <tr>
-      <td colspan="6" class="sep">Rates of Return <span id="index-as-of">as of M/D/YYYY</span></td>
+      <td colspan="6" class="sep-individual">Rates of Return <span id="index-as-of">as of M/D/YYYY</span></td>
     </tr>
     {% for r in rows %}
     {% assign c = r | split: '|' %}
@@ -160,7 +162,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
         </tr>
     {% endfor %}
     <tr>
-      <td colspan="6" class="sep">{{ sorted.first.summary_details.as_of_year }} Administrative Expenses<sup markdown="1">[1](#foot_1)</sup></td>
+      <td colspan="6" class="sep-individual">{{ sorted.first.summary_details.as_of_year }} Administrative Expenses<sup markdown="1">[1](#foot_1)</sup></td>
     </tr>
     <tr>
       <td>Gross</td>
@@ -179,7 +181,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       {% endfor %}
     </tr>
     <tr>
-      <td colspan="6" class="sep">{{ sorted.first.summary_details.as_of_year }} Other Expenses<sup markdown="1">[2](#foot_2)</sup></td>
+      <td colspan="6" class="sep-individual">{{ sorted.first.summary_details.as_of_year }} Other Expenses<sup markdown="1">[2](#foot_2)</sup></td>
     </tr>
     <tr>
       <td></td>
