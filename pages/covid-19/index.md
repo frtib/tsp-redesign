@@ -21,6 +21,7 @@ You can check this page for **up-to-date details about TSP operations and tempor
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
 - [Submitting loan and withdrawal forms online](#submitting-loan-and-withdrawal-forms-online)
 - [CARES Act temporary loan and withdrawal options](#cares-act-temporary-loan-and-withdrawal-options)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
@@ -30,6 +31,10 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## Restriction to be lifted on starting and restarting installment payments based on life expectancy
+{:#restriction}
+The FRTIB is permanently changing the rule that prevents you from starting installment payments based on life expectancy if you have previously received installment payments. Beginning in January 2021, all TSP participants who are eligible for installment payments may elect to receive payments based on life expectancy whether or not they previously started and then stopped installment payments. This means that if you are currently receiving life-expectancy payments, you may now stop them, knowing that you will be able to restart them next year. (You will not be able to restart them in 2020, but you can always use other withdrawal types for which you’re eligible.) This is a significant rule change, especially if you currently receive life-expectancy payments for the purpose of receiving required minimum distributions (RMDs) and want to temporarily suspend those payments while RMDs are waived in 2020. To do so, log in to [My Account]({{ site.statements }}) now and select **Withdrawals and Changes to Installment Payments** to stop your payments. To restart them in 2021, log in again and start a new transaction to request installment payments based on life expectancy. Please disregard any TSP materials that state the old rule, including instructions you may see when using the online tool to stop payments. We will update them as soon as possible.
 
 ## Submitting loan and withdrawal forms online
 You may now submit loan and withdrawal TSP forms online by logging in to My Account and uploading a PDF copy of the form. You’ll find an up-to-date list of forms we accept online when you log in to [My Account]({{ site.myaccount }}) and select **Upload Form** from the menu. That section provides detailed instructions on how to prepare your file for upload.
