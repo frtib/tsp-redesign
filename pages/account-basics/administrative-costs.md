@@ -81,7 +81,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
   <tbody>
 
     <tr>
-      <th class="sep" scope="colgroup">Rates of Return <span id="l-fund-as-of">as of M/D/YYYY</span></th>
+      <th class="sep" scope="colgroup">Rates of return <span id="l-fund-as-of">as of M/D/YYYY</span></th>
     </tr>
 {% for r in rows %}
 {% assign c = r | split: '|' %}
@@ -93,7 +93,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
     </tr>
 {% endfor %}
     <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative Expenses<sup markdown="1">[1](#foot_1)</sup></th>
+      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses<sup markdown="1">[1](#foot_1)</sup></th>
     </tr>
     <tr>
       <th scope="row">Gross</th>
@@ -112,7 +112,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       {% endfor %}
     </tr>
     <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other Expenses<sup markdown="1">[2](#foot_2)</sup></th>
+      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses<sup markdown="1">[2](#foot_2)</sup></th>
     </tr>
     <tr>
       <th scope="row"></th>
@@ -150,7 +150,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
 
   <tbody>
     <tr>
-      <th class="sep-individual" scope="colgroup">Rates of Return <span id="index-as-of">as of M/D/YYYY</span></th>
+      <th class="sep-individual" scope="colgroup">Rates of return <span id="index-as-of">as of M/D/YYYY</span></th>
     </tr>
     {% for r in rows %}
     {% assign c = r | split: '|' %}
@@ -162,7 +162,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
         </tr>
     {% endfor %}
     <tr>
-      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative Expenses<sup markdown="1">[1](#foot_1)</sup></th>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses<sup markdown="1">[1](#foot_1)</sup></th>
     </tr>
     <tr>
       <th scope="row">Gross</th>
@@ -181,7 +181,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       {% endfor %}
     </tr>
     <tr>
-      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other Expenses<sup markdown="1">[2](#foot_2)</sup></th>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses<sup markdown="1">[2](#foot_2)</sup></th>
     </tr>
     <tr>
       <th scope="row"></th>
