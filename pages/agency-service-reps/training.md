@@ -156,6 +156,14 @@ This webinar provides an overview of TSP death benefits. TSP webinars are hosted
 We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialists, human resources personnel, and
 payroll personnel. As an agency or service representative, you may request any training listed in our [Course Catalog](LINK) for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions.
 
+### Training requests 
+Agency or service representatives attempting to schedule a training event should follow these general instructions:
+1. Find a course – Review the [Course Catalog](LINK) to find the TSP course that meets your training needs.
+1. Complete the [Training Request Form](LINK) by providing as many details as possible to help the TSP Training and Liaison Specialist customize the presentation for your training event.
+1. Email the [Training Request Form](LINK) to our Training Support Specialist at candice.franze@frtib.gov or training@TSP.gov. Please call 202-942-1450 with any questions you may have about scheduling training.
+ 
+A TSP Training Support Specialist will confirm your request by email or phone. If travel is required outside of the DC area, our Support Specialist will confirm the travel arrangements have been approved as well as finalizing the details of the training event.  
+ 
 ### Who we train
 
 We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees' Retirement System (FERS), Civil Service Retirement System (CSRS), and members of the uniformed services, including the Ready Reserve. 
