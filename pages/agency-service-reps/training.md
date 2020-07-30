@@ -167,7 +167,7 @@ We never charge a training fee for live or virtual events. The training is free 
 ### Training methods
 
 We deliver training in three ways:
-* On Site: At the FRTIB Building located in Washington, DC
+* On Site: At the FRTIB offices located in Washington, DC
 * Remotely: At or near the location of the agency that requests the training.
 * Virtually: This includes live training through webinars and prerecorded videos and podcasts.
 
