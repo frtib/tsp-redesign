@@ -71,7 +71,7 @@ TSP bulletins provide guidance to TSP Agency and Service representatives for imp
 {% assign startAccordion = showTotal %}
 {% assign bulletin_list = site.bulletins | sort: 'path' | reverse %}
 
-<section id="popular-bulletins" markdown="1">
+<div id="bulletins-container" markdown="1">
 <div id="select-bulletins-0" class="select-bulletins-div" markdown="1">
 {% include bulletins/bulletin-list.html topic="" idx='a' %}<!-- # All Bulletins  -->
 </div>
@@ -83,6 +83,6 @@ TSP bulletins provide guidance to TSP Agency and Service representatives for imp
   {% include bulletins/bulletin-list.html topic=dropValue idx=forloop.index noAccordions=true %}<!-- # All {{topicID}} Bulletins  -->
   </div>
 {% endfor %}
-</section>
+</div>
 
 <!-- CONTENT END -->
