@@ -7,7 +7,6 @@
 }
 
 section.charts {
-
   table.chart {
     width: 100%;
     table-layout: fixed;
@@ -17,6 +16,7 @@ section.charts {
       colgroup {
         width: 50%;
       }
+
       .empty-cell {
         background-color: $color-gray-lightest;
       }
@@ -32,21 +32,22 @@ section.charts {
       colgroup {
         width: 12rem;
       }
+
       th {
         text-align: center;
       }
+
       td {
         text-align: right;
       }
     }
   }
 }
-
-
 // EXPAND/COLLAPSE TABLE button
 @media only screen and (max-width: #{$large-screen}) {
   .table-view {
     margin-top: 3rem;
+
     button {
       display: none;
     }
@@ -54,25 +55,27 @@ section.charts {
 }
 
 section {
-
-  .table-view { // LEFT-ALIGNS Scroll left / Scroll right buttons
+  .table-view {
+    // LEFT-ALIGNS Scroll left / Scroll right buttons
     padding: 0;
     margin: 0;
     // text-align: left;
     max-width: 100%;
   }
 
-  &.share-price-table,
-  &.rates-of-return-table { // Width for "sticky" left-column header
+  &.rates-of-return-table,
+  &.share-price-table {
+    // Width for "sticky" left-column header
     .column-width {
       width: 9em;
     }
   }
-
-} // end section
-
+}
+// end section
 // "STICKY" LEFT-COLUMN HEADER: Share price history & Rates of return
-.table-side-scroll { // parent container
+
+.table-side-scroll {
+  // parent container
   position: relative;
   width: 100%;
   z-index: 1;
@@ -85,14 +88,15 @@ section {
   }
 
   table {
-  table-layout: fixed;
-  width: auto;
-  // min-width: 1280px;
-  margin: auto;
-  border-collapse: separate;
-  border-spacing: 0;
+    table-layout: fixed;
+    width: auto;
+    // min-width: 1280px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
 
-    th, td {
+    td,
+    th {
       // padding: 5px 10px;
       border-top: none;
       border-right: 1px solid #ddd;
@@ -103,6 +107,7 @@ section {
       // width: 16rem;
       // max-width: 2rem;
     }
+
     td {
       text-align: right;
       background: #fff;
@@ -113,13 +118,14 @@ section {
       white-space: nowrap;
 
       &:first-child {
-      position: -webkit-sticky;
-      position: sticky;
-      left: 0;
-      z-index: 2;
-      padding: 1rem 1.5rem;
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        padding: 1rem 1.5rem;
       }
     }
+
     thead {
       // tr {
       // position: -webkit-sticky;
@@ -140,247 +146,283 @@ section {
           text-align: left;
           border-top: 3px solid #ddd;
         }
+
         &.border-g-fund {
           border-top: $border-g;
         }
+
         &.border-index-g {
           border-top: $border-index-g;
         }
+
         &.border-f-fund {
           border-top: $border-f;
         }
+
         &.border-index-f {
           border-top: $border-index-f;
         }
+
         &.border-c-fund {
           border-top: $border-c;
         }
+
         &.border-index-c {
           border-top: $border-index-c;
         }
+
         &.border-s-fund {
           border-top: $border-s;
         }
+
         &.border-index-s {
           border-top: $border-index-s;
         }
+
         &.border-i-fund {
           border-top: $border-i;
         }
+
         &.border-index-i {
           border-top: $border-index-i;
         }
+
         &.border-l-fund {
           border-top: $border-l;
         }
       }
-    } // end thead
+    }
+    // end thead
     tbody {
-     &.monthly-returns {
-       th {
-         // background-color: ;
-         text-indent: 1rem;
-       }
-     } // end .monthly-returns
-     &.annual-returns {
-       label {
-         display: block;
-         margin-top: 0;
-         &:after,
-         &.bounce:after {
-           font-family: $font-awesome;
-           font-weight: $light;
-           padding-left: 1em;
-           font-size: 0.9em;
-           content: "\f055";
-         }
-         &.bounce:after {
-           content: "\f056";
-         }
-       }
-     } // end .annual-returns
-   } // end tbody
+      &.monthly-returns {
+        th {
+          // background-color: ;
+          text-indent: 1rem;
+        }
+      }
+      // end .monthly-returns
+      &.annual-returns {
+        label {
+          display: block;
+          margin-top: 0;
 
-   [data-toggle="toggle"] {
-     display: none;
-   }
-  } // end table
-} // end div.table-side-scroll
+          &.bounce:after,
+          &:after {
+            font-family: $font-awesome;
+            font-weight: $light;
+            padding-left: 1em;
+            font-size: 0.9em;
+            content: "\f055";
+          }
+
+          &.bounce:after {
+            content: "\f056";
+          }
+        }
+      }
+      // end .annual-returns
+    }
+    // end tbody
+    [data-toggle="toggle"] {
+      display: none;
+    }
+  }
+  // end table
+}
+// end div.table-side-scroll
 
 // RESPONSIVE COMPARISON: Administrative costs
 // Dependencies: /assets/js/jquery.min.js, responsive-comparison-table.js
 section.comparison,
-section.comparison.paycheck,
-section.comparison.contribution-comparison-calculator {
+section.comparison.contribution-comparison-calculator,
+section.comparison.paycheck {
   ul {
-
-    &.table-header-buttons,
+    &.funds-individual,
     &.funds-lifecycle,
-    &.funds-individual
-    {
+    &.table-header-buttons {
       display: flex;
       flex-wrap: wrap;
-      top:0px;
-      z-index:10;
-      padding-bottom:14px;
+      justify-content: space-evenly;
+      top: 0;
+      z-index: 10;
+      padding-bottom: 14px;
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 0;
       max-width: 100% !important;
 
       li {
-        list-style:none;
+        list-style: none;
         flex: 0 1 20%;
         margin-bottom: 0;
-        &:last-child {
-          border-right:1px solid #DDD;
-        }
-      }
 
-      button {
-        &[type="button"] {
-          width:100%;
-          border: 1px solid #DDD;
-          border-right:0;
-          border-top:0;
-          padding: 10px;
-          margin: 0 0;
-          background:#FFF;
-          font-size:14px;
-          font-weight:bold;
-          height:60px;
-          color:#999;
-          border-radius: 0;
-        }
-
-      }
-
-      li {
-        button {
-          &[type="button"] {
-            background-color: inherit;
-            color: #999;
-            border-top:3px solid #0097CF;
+        &:nth-child(5n) { // select every 5th li
+          button { // add border-right to its button
+            &[type="button"] {
+              border-right: 1px solid #DDD;
+            }
           }
-        }
-      }
+        } // end &:nth-child(5n)
 
-      li.active {
-        button {
-          &[type="button"] {
-            background-color: #F5F5F5;
-            color: $color-base;
-            border-top:3px solid #A32362;
+          button {
+            &[type="button"] {
+              width: 100%;
+              background-color: inherit;
+              border: 1px solid #DDD;
+              border-top: 3px solid #0097CF;
+              border-right: 0;
+              // border-top:0;
+              padding: 10px 1px;
+              margin: 0;
+              font-size: 14px;
+              font-weight: bold;
+              height: 60px;
+              color: #999;
+              border-radius: 0;
+            }
           }
+          // end button
+          &.active {
+            button {
+              &[type="button"] {
+                background-color: #F5F5F5;
+                color: $color-base;
+                border-top: 3px solid #A32362;
+              }
+            }
+          }
+          // end &.active
         }
+        // end li
       }
-
-    } // END &.table-header-buttons, &.funds-lifecycle, &.funds-individual
-  } // END ul
-
-  table {
-    border-collapse:collapse;
-    table-layout:fixed;
-    // table-layout:auto;
-    width:100%;
-    margin-top: 0;
-
-    td, th {
-      height:53px;
-      border:1px solid #DDD;
-      padding:10px;
-      empty-cells:show;
-      text-align:left;
+      // END &.table-header-buttons, &.funds-lifecycle, &.funds-individual
     }
+    // END ul
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 100%;
+      margin-top: 0;
 
-    th {
-      // background:#F5F5F5;
-      // display:none;
-      border-top: 3px solid #0097CF;
-    }
-
-    td+td, th+th { // Omits the first <td> or <th> following a <tr>
-      text-align:center;
-      display:none;
-    }
-
-    td.default {
-      display:table-cell;
-    }
-
-    thead {
+      td,
       th {
-        padding: 10px 0;
+        height: 53px;
+        border: 1px solid #DDD;
+        padding: 10px;
+        empty-cells: show;
+        text-align: left;
       }
-    }
 
-    sup {
-      padding-left: .3rem;
-    }
-  } // END table
+      th {
+        // background:#F5F5F5;
+        // display:none;
+        // text-align: left;
+      }
 
-  .bg-purple {
-  border-top:3px solid #A32362;
-  }
-
-  .sep,
-  .sep-individual,
-  .compare-two {
-    background:#F5F5F5;
-    font-weight:bold;
-  }
-  .txt-l { font-size:28px; font-weight:bold; }
-  .txt-top { position:relative; top:-9px; left:-2px; }
-  .tick { font-size:18px; color:#2CA01C; }
-  .hide {
-    border:0;
-    background:none;
-  }
-
-  @media (min-width: $medium-screen) {
-    ul {
-      &.funds-individual,
-      &.funds-lifecycle,
-      &.table-header-buttons {
+      td,
+      th+th {
+        // th+th omits the first <th> following a <tr>
+        text-align: center;
         display: none;
       }
-    }
 
-    table {
-      width:110%;
-    }
+      td.default {
+        display: table-cell;
+      }
 
-    td,th {
-      display:table-cell !important;
-    }
-    
-    td+td, th+th {
-      width: auto;
-    }
-
-    col.column-width {
-      width: 9rem;
-    }
-  }
-
-  &.paycheck,
-  &.contribution-comparison-calculator {
-    table {
-
-      .w { width: 32rem;}
-
-      tr.emphasis {
-        td+td {
-          font-size: 3rem;
+      thead {
+        th {
+          border-top: 3px solid #0097CF;
+          padding: 10px 0;
         }
       }
 
-      td+td { // Omits the first <td> following a <tr>; every <td> that follows a <td>
-        text-align: right;
-        padding-right: 1rem;
-        // display:none;
+      sup {
+        padding-left: 0.3rem;
+      }
+    }
+    // END table
+    .bg-purple {
+      border-top: 3px solid #A32362;
+    }
+
+    .compare-two,
+    .sep,
+    .sep-individual {
+      background: #F5F5F5;
+      font-weight: bold;
+    }
+
+    .txt-l {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .txt-top {
+      position: relative;
+      top: -9px;
+      left: -2px;
+    }
+
+    .tick {
+      font-size: 18px;
+      color: #2CA01C;
+    }
+
+    .hide {
+      border: 0;
+      background: none;
+    }
+    @media (min-width: $medium-screen) {
+      ul {
+        &.funds-individual,
+        &.funds-lifecycle,
+        &.table-header-buttons {
+          display: none;
+        }
       }
 
-    } // end table
-  } // end &.paycheck, &.contribution-comparison-calculator
-} // end section.comparison
+      table {
+        width: 110%;
+      }
+
+      td,
+      th {
+        display: table-cell !important;
+      }
+
+      td+td,
+      th+th {
+        width: auto;
+      }
+
+      col.column-width {
+        width: 9rem;
+      }
+    }
+
+    &.contribution-comparison-calculator,
+    &.paycheck {
+      table {
+        .w {
+          width: 32rem;
+        }
+
+        tr.emphasis {
+          td+td {
+            font-size: 3rem;
+          }
+        }
+
+        td+td {
+          // Omits the first <td> following a <tr>; every <td> that follows a <td>
+          text-align: right;
+          padding-right: 1rem;
+          // display:none;
+        }
+      }
+      // end table
+    }
+    // end &.paycheck, &.contribution-comparison-calculator
+  }
+  // end section.comparison
