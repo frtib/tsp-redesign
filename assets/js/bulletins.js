@@ -3,7 +3,7 @@ function myPageChange() {
   return false;
 }
 function myPage(page) {
-  $('#popular-bulletins').addClass("hide");
+  $('#bulletins-container').addClass("hide");
   $('#select-bulletins-topic').val('-1');
   $('.select-bulletins-div').addClass('hide');
   gotoPage(page); // from search.js
@@ -60,7 +60,7 @@ function selectBulletinsTopic() {
   resetInline('bulletins');
   $('.select-bulletins-div').addClass('hide');
   $('#select-bulletins-'+val).removeClass("hide");
-  $('#popular-bulletins').removeClass("hide");
+  $('#bulletins-container').removeClass("hide");
 }
 
 function showMoreBulletins(type, bulletinNum) {
