@@ -16,14 +16,7 @@ Thank you for your interest in TSP education.
 
 TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions.
 
-- To attend, you must register via the links on this page.
-- You must have access to WebEx to register and attend TSP webinars. You do not need a WebEx account.
-- You can use any internet connected device to register and attend the TSP webinars.
-- If your agency/service does not allow access to WebEx please contact the appropriate office at your agency/service for assistance.
-- **The registration password for all TSP webinars in WebEx is TSPweb.**
-- After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
-- **All scheduled start times are listed in Eastern Time.**
-- All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
+
 <span id="tspWebinars"></span>
 <ul class="usa-accordion">
   <li>
