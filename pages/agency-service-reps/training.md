@@ -17,7 +17,14 @@ Thank you for your interest in TSP education.
 <!-- TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
 TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#intro-to-tsp) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
 
-
+- To attend, you must register via the links on this page.
+- You must have access to WebEx to register and attend TSP webinars. You do not need a WebEx account.
+- You can use any internet connected device to register and attend the TSP webinars.
+- If your agency/service does not allow access to WebEx please contact the appropriate office at your agency/service for assistance.
+- **The registration password for all TSP webinars in WebEx is TSPweb.**
+- After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
+- **All scheduled start times are listed in Eastern Time.**
+- All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
 <span id="tspWebinars"></span>
 <ul class="usa-accordion">
   <li>
@@ -158,14 +165,6 @@ Click on any course to learn more and get registered:
 <!-- We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialists, human resources personnel, and
 payroll personnel. As an agency or service representative, you may request any training listed in our [Course Catalog](LINK) for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
 
-### Training requests 
-Agency or service representatives attempting to schedule a training event should follow these general instructions:
-1. Find a course – Review the [Course Catalog](LINK) to find the TSP course that meets your training needs.
-1. Complete the [Training Request Form](LINK) by providing as many details as possible to help the TSP Training and Liaison Specialist customize the presentation for your training event.
-1. Email the [Training Request Form](LINK) to our Training Support Specialist at candice.franze@frtib.gov or training@TSP.gov. Please call 202-942-1450 with any questions you may have about scheduling training.
- 
-A TSP Training Support Specialist will confirm your request by email or phone. If travel is required outside of the DC area, our Support Specialist will confirm the travel arrangements have been approved as well as finalizing the details of the training event.  
- 
 ### Who we train
 
 We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees' Retirement System (FERS), Civil Service Retirement System (CSRS), and members of the uniformed services, including the Ready Reserve.
