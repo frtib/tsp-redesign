@@ -14,7 +14,8 @@ redirect_from:
 
 Thank you for your interest in TSP education.
 
-TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions.
+<!-- TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
+TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#intro-to-tsp) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
 
 - To attend, you must register via the links on this page.
 - You must have access to WebEx to register and attend TSP webinars. You do not need a WebEx account.
@@ -153,16 +154,24 @@ This webinar provides an overview of TSP death benefits. TSP webinars are hosted
 
 **Thank you for your understanding in these uncertain times.**
 
-We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialists, human resources personnel, and
-payroll personnel. As an agency or service representative, you may request any training listed in our [Course Catalog](LINK) for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions.
+The Federal Retirement Thrift Investment Board offers a variety of TSP training opportunities for agency benefits officers, payroll personnel, and financial counselors supporting the uniformed services.
+
+Click on any course to learn more and get registered:
+
+- [TSP 101: The TSP for Agency and Service Representatives]({{ site.baseurl }}/exit/?idx=70){:rel="nofollow"} (2-day class)
+- [2-Day Advanced TSP Training for Military Financial Educators]({{ site.baseurl }}/exit/?idx=71){:rel="nofollow"} (2-day class)
+- [TSP Payroll Operations and Error Correction]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"} (1-day class)
+
+<!-- We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialists, human resources personnel, and
+payroll personnel. As an agency or service representative, you may request any training listed in our [Course Catalog](LINK) for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
 
 ### Who we train
 
-We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees' Retirement System (FERS), Civil Service Retirement System (CSRS), and members of the uniformed services, including the Ready Reserve. 
+We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees' Retirement System (FERS), Civil Service Retirement System (CSRS), and members of the uniformed services, including the Ready Reserve.
 
 ### Training costs
 
-We never charge a training fee for live or virtual events. The training is free for those requesting training within 50 miles of the Washington, DC area. For those outside this area, we require the requestor pay the travel expenses of the presenter. 
+We never charge a training fee for live or virtual events. The training is free for those requesting training within 50 miles of the Washington, DC area. For those outside this area, we require the requestor pay the travel expenses of the presenter.
 
 ### Training methods
 
