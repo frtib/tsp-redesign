@@ -10,7 +10,7 @@
 {% assign left10 = value10_split[0] %}
 {% assign right10 = value10_split[1] | append: "0000" | truncate: 3, "" %}
 {% if percentOnly == true %}
-{{left}}.{{right}}%
+{% if include.value == '-'%}{{include.value}}{% else %}{{left}}.{{right}}%{% endif %}
 {% else %}
   {% if explain == true %}
   An expense ratio of {{left}}.{{right}}% translates to {{value100}} basis points or ${{left10}}.{{right10}} per $1,000 acount balance.
