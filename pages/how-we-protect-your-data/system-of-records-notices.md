@@ -157,7 +157,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     Subsections (c)(3); (d); (e)(1); (e)(4)(G), (H), (I); and (f) of 5 U.S.C. 552a
 
   **Federal Register**
-    [80 Fed. Reg. 43428, 43432 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53)
+    [85 FR 43654, 43655 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
   **SECURITY CLASSIFICATION:** Most personnel identity verification records are not classified. However, in some cases, records of certain individuals, or portions of some records may be classified in the interest of national security.
 
@@ -272,7 +272,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   None
 
   **Federal Register**
-  [80 Fed. Reg. 43428, 43433 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53)
+  [85 FR 43654, 43658 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
   **SECURITY CLASSIFICATION:** None.
 
@@ -380,7 +380,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   None
 
   **Federal Register**
-  [81 Fed. Reg. 7106, 7109 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144)
+  [85 FR 43654, 43660 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
   **SECURITY CLASSIFICATION:** None.
 
@@ -476,7 +476,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   None
 
   **Federal Register**
-  [80 Fed. Reg. 43428, 43434 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53)
+  [85 FR 43654, 43662 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
   **SECURITY CLASSIFICATION:** None.
 
@@ -546,7 +546,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** None.
 
-  **HISTORY:** 55 FR 18949 (May 7, 1990); 71 FR 64706 (Nov. 3, 2006); 77 FR 11534 (Feb. 27, 2012); 80 FR 43428 (July 22, 2015).
+  **HISTORY:** 55 FR 18949 (May 7, 1990); 71 FR 64706 (Nov. 3, 2006); 77 FR 11534 (Feb. 27, 2012); 80 FR 43428 (July 22, 2015); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-10 -->
@@ -577,6 +577,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-12  | Debt Collection Records
   </button>
   <div id="a12" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43664 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-12, Debt Collection Records.
 
@@ -650,7 +652,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** 62 FR 49011 (Sept. 18, 1997); 77 FR 11534 (Feb. 27, 2012); [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); 85 FR 43654 (July 17, 2020).
+  **HISTORY:** 62 FR 49011 (Sept. 18, 1997); 77 FR 11534 (Feb. 27, 2012); [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-13 -->
@@ -754,6 +756,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a14" class="usa-accordion-content" markdown="1">
 
+  **Federal Register** [85 FR 43654, 43666 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
+
   **SYSTEM NAME AND NUMBER:** FRTIB-14, Legal Case Files.
 
   **SECURITY CLASSIFICATION:** Unclassified.
@@ -837,6 +841,9 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-15  | Internal Investigations of Harassment and Hostile Work Environment Allegations
   </button>
   <div id="a15" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43669 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
+
   **SYSTEM NAME AND NUMBER:** FRTIB-15, Internal Investigations of Harassment and Hostile Work Environment Allegations.
 
   **SECURITY CLASSIFICATION:** Unclassified.
@@ -902,7 +909,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** Pursuant to 5 U.S.C. 552a(k)(2), records in this system are exempt from the requirements of subsections (c)(3); (d); (e)(1); (e)(4)(G), (H), (I); and (f) of 5 U.S.C. 552a, provided, however, that if any individual is denied any right, privilege, or benefit that he or she would otherwise be entitled to by Federal law, or for which he or she would otherwise be eligible, as a result of the maintenance of these records, such material shall be provided to the individual, except to the extent that the disclosure of the material would reveal the identity of a source who furnished information to the Government with an express promise that the identity of the source would be held in confidence.
 
-  **HISTORY:** [80 FR 43428 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53).
+  **HISTORY:** [80 FR 43428 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-16 -->
@@ -913,6 +920,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-16  | Congressional Correspondence Files
   </button>
   <div id="a16" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43671 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-16, Congressional Correspondence Files.
 
@@ -977,7 +986,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); 85 FR 43654 (July 17, 2020).
+  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-17 -->
@@ -988,6 +997,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-17  | Telework and Alternative Worksite Records
   </button>
   <div id="a17" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43673 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-17, Telework and Alternative Work Schedule Records.
 
@@ -1055,7 +1066,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144).
+  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-18 -->
@@ -1066,6 +1077,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-18  | Reasonable Accommodation Records
   </button>
   <div id="a18" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43675 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-18, Reasonable Accommodation Records.
 
@@ -1137,7 +1150,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); 85 FR 43654 (July 17, 2020).
+  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-19 -->
@@ -1148,6 +1161,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-19  | Freedom of Information Act (FOIA) Records
   </button>
   <div id="a19" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [85 FR 43654, 43677 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-19, Freedom of Information Act Records.
 
@@ -1217,7 +1232,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); 85 FR 43654 (July 17, 2020).
+  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
   </div>
 </li>
 <!-- FRTIB-20 -->
@@ -1312,6 +1327,8 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-21  | Identity, Credential and Access Management (ICAM)
   </button>
   <div id="a21" class="usa-accordion-content" markdown="1">
+
+  **Federal Register** [84 FR 43600 (Aug. 21, 2019))]({{ site.baseurl }}/exit/?idx=128).
 
   **SUMMARY**: Pursuant to the Privacy Act of 1974, the Federal Retirement Thrift Investment Board (FRTIB) proposes to establish a new system of records. Records contained in this system will be used to implement Identity, Credential, and Access Management (ICAM) capabilities at the Agency. ICAM manages digital identities, credentials, and access controls for FRTIB applications and systems.
 
