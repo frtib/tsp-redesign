@@ -1,11 +1,8 @@
-// share-price-history
-/*
-flatpickr(".date-range", {
-  mode: "range",
+// tsp-training-form
+flatpickr(".flatpickr", {
   altInput: true,
-  altFormat: "F j, Y",
+  enableTime: true,
+  // dateFormat: "Y-m-d H:i",
+  altFormat: "F j, Y \\at H:i K",
   dateFormat: "Y-m-d",
-  minDate: "06/02/2003",
-  maxDate: "today",
 });
-*/
