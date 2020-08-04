@@ -137,7 +137,7 @@ var groupFundAnnualReturns = function(setName) {
             $('#ret-1YR-'+fundName).html(values[2]+'%');
             $('#ret-3YR-'+fundName).html(values[3]+'%');
             $('#ret-5YR-'+fundName).html(values[4]+'%');
-            $('#ret-10YR-'+fundName).html(values[5]+'%');
+            if (values[5] != '-') { $('#ret-10YR-'+fundName).html(values[5]+'%'); }
             $('#ret-Life-'+fundName).html(values[6]+'%');
           }
           //console.log(rc[1], setName);
