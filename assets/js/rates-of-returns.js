@@ -67,7 +67,7 @@ function buildSideScrollTableRoR(chartName, data) {
   var YTD = "Last 12 months";
   var val;
   // highcharts likes low to high, we want table high to low
-  for (j = lines.length-1; j > 0; j--) {
+  for (j = lines.length-1; j >= 0; j--) {
     if (lines[j].trim() == '') { continue; }
     row = '';
     var col = lines[j].split(",");
