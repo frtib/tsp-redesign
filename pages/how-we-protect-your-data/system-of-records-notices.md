@@ -14,7 +14,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
 ## FRTIB has the following systems of records:
 
-<ul class="usa-accordion">
+<ul class="usa-accordion-bordered">
 <!-- FRTIB-1 -->
 <li id="frtib-1">
   <button class="usa-accordion-button"
