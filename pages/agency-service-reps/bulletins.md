@@ -4,7 +4,7 @@ title: Bulletins
 styles:
 sidenav: agency-service-reps
 scripts:
-  - /assets/js/ajaxFetch.js
+  - /assets/js/flatpickr/flatpickr.js
   - /assets/js/ajax-usa-search-gov.js
   - /assets/js/calculator/calculator.js
   - /assets/js/search.js
@@ -35,37 +35,15 @@ TSP bulletins provide guidance to TSP Agency and Service representatives for imp
 <section class="search-bulletins inline-search">
   <div class="usa-grid-full">
     <div class="usa-width-one-whole">
-        <div role="search" class="search-container">
-          <!-- Topic drop-down list -->
-          <div class="select">
-            <label class="usa-sr-only" for="select-bulletins-topic">Search by topic</label>
-            <select id="select-bulletins-topic" name="select-bulletins-topic" onchange="selectBulletinsTopic();">
-              <option disabled selected value='-1'>Choose topic</option>
-              {% for topic in site.data.bulletins_topics %}
-              {% assign dropValue = topic | downcase | replace: " ", "-" %}
-              <option value='{{ dropValue }}'>{{ topic }}</option>
-              {% endfor %}
-              <option value='0'>Show all</option>
-            </select>
-          </div>
-          <!-- SEARCH FIELD
-          <span class="or">or</span>
-          <input id="group" type="hidden" value="bulletins">
-          <form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-bulletins bulletins" method="get"
-            class="animated-search bulletins">
-              <label for="search-terms" class="usa-sr-only">Enter search term(s)</label>
-              <input type="text" name="search-terms" id="search-terms"
-                onChange="myPageChange();" onBlur="myPage(1);"
-                autocomplete="off" placeholder="Enter search term(s)">
-          </form> -->
-        </div>
+        {% include search/search-container.html topics=site.data.bulletins_topics
+          type='bulletin' onChange='selectBulletinsTopic();' %}
         <!-- checkbox to see USV bulletins only -->
-        <!-- DAV, when checked, only bulletins with "service: true" should be displayed -->
         <input id="usv-only" type="checkbox" name="usv-only" value="usv-only" onChange="usvOnlyGood();" onBlur="usvOnlyGood();"/>
         <label for="usv-only">Show only Uniformed Services bulletins</label>
     </div><!-- END div.usa-width-one-whole -->
   </div><!-- END div.usa-grid-full -->
 </section>
+{% include search/search-results-section.html type='bulletin' %}
 
 {% assign showTotal = 4 %}<!-- # Help me find bulletins about {#forms} -->
 {% assign startAccordion = showTotal %}

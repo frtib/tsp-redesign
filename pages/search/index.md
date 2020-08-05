@@ -46,9 +46,9 @@ redirect_from:
       </div>
     </section> <!-- END section.search-filters -->
 
-    {% include search-result-blocks.html %}
+    {% include search/search-result-blocks.html %}
 
-    {% include search-hit-blocks.html %}
+    {% include search/search-hit-blocks.html %}
 
     </div> <!-- END div.usa-width-one-whole -->
 </div> <!-- END div.usa-grid-full -->

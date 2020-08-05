@@ -1,0 +1,15 @@
+{% assign type = include.type | default: didnt_set_type %}
+<section id="{{type}}-search-results" class="{{type}}-search-results ">
+  {% comment %}inline  search results below{% endcomment %}
+  <h2 id="results-count-block" class="results hide">We found
+    <strong><span id="results-count"></span></strong>
+    <span id="{{type}}sResourcesSpan">this</span>
+      about <strong><span id="results-terms"></span></strong>
+  </h2>
+  <div class="usa-grid-full results">
+    <div class="usa-width-one-whole">
+      {% include search/search-result-blocks.html %}
+      {% include search/search-hit-blocks.html %}
+    </div><!-- END div.usa-width-one-whole -->
+  </div><!-- END div.usa-grid-full -->
+</section>

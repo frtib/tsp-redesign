@@ -20,7 +20,7 @@ Dav's file for search development.
 
 <section class="plan-news" markdown="1">
 
-{% include search-bar.html  onChange="doSearch2('s2');" searchName="s2" affiliatePlaceholder=1 %}
+{% include search/search-bar.html  onChange="doSearch2('s2');" searchName="s2" affiliatePlaceholder=1 %}
 
 </section>
 

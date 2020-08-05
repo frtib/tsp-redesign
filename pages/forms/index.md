@@ -38,49 +38,12 @@ redirect_from:
 <div class="usa-grid-full">
   <div class="usa-width-one-whole">
     <section class="inline-search">
-      <div role="search" class="search-container">
-        <!-- Topic drop-down list -->
-
-        <div class="select">
-          <label class="usa-sr-only" for="select-forms-topic">Search by topic</label>
-          <select id="select-forms-topic" name="select-forms-topic" onChange="selectFormsTopic();">
-          <option disabled selected value='-1'>Choose topic</option>
-              {% for topic in site.data.forms_topics %}
-              {% assign dropValue = topic | downcase | replace: " ", "-" %}
-              <option value='{{ dropValue }}'>{{ topic }}</option>
-              {% endfor %}
-              <option value='0'>Show all</option>
-            </select>
-        </div>
-        <span class="or">or</span>
-        <input id="group" type="hidden" value="forms">
-        <form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-forms" method="get"
-          class="animated-search">
-            <label for="search-terms" class="usa-sr-only">Enter search term(s)</label>
-            <input type="text" name="search-terms" id="search-terms"
-              onChange="myPageChange();" onBlur="myPage(1);"
-              autocomplete="off" placeholder="Enter search term(s)">
-        </form>
-      </div>
+      {% include search/search-container.html topics=site.data.forms_topics
+          type='form' onChange='selectFormsTopic();' %}
     </section><!-- // end section.inline-search -->
   </div><!-- END div.usa-width-one-whole -->
 </div><!-- END div.usa-grid-full -->
-<section id="form-search-results" class="form-search-results ">
-  {% comment %}inline form search results below{% endcomment %}
-  <h2 id="results-count-block" class="results hide">We found
-    <strong><span id="results-count"></span></strong>
-    <span id="formsResourcesSpan">forms and resources</span>
-      about <strong><span id="results-terms"></span></strong>
-  </h2>
-  <div class="usa-grid-full results">
-    <div class="usa-width-one-whole">
-
-      {% include search-result-blocks.html %}
-
-      {% include search-hit-blocks.html %}
-    </div><!-- END div.usa-width-one-whole -->
-  </div><!-- END div.usa-grid-full -->
-</section>
+{% include search/search-results-section.html type='form' %}
 
 {% assign showTotal = 4 %}
 {% assign startAccordion = showTotal %}

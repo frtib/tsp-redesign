@@ -164,7 +164,6 @@ function syntaxHighlight(json) {
 
 var doInlineUSAsearch = function(searchName, statusBox, url, callback, getAll, offset, prevResult) {
   $('#'+statusBox).html('Calling server for data...');
-  // console.log(url);
   var offsetURL = url + '&offset=' + offset;
   var serverCall = $.get(offsetURL);
   serverCall.done(

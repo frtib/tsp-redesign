@@ -21,7 +21,7 @@ redirect_from:
 {% include next-outage.html %}
 
 <section class="subscribe-or-search" markdown="1">
-{% include search-bar.html  onChange="searchInline('plan-news', planNewsCallback);" searchName="plan-news" %}
+{% include /search/search-bar.html  onChange="searchInline('plan-news', planNewsCallback);" searchName="plan-news" %}
 {% include explain-subscribe.html %}
 </section>
 

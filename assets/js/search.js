@@ -104,8 +104,10 @@ function setResultString(cnt, qs) {
   $('#results-terms').html(qs);
   if (cnt == 1) {
     $('#formsResourcesSpan').text('form/resource');
+    $('#bulletinsResourcesSpan').text('bulletin');
   } else {
     $('#formsResourcesSpan').text('forms and resources');
+    $('#bulletinsResourcesSpan').text('bulletins');
   }
 }
 function clearResultDivs() {
