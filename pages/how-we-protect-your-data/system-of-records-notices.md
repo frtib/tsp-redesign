@@ -652,7 +652,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** 62 FR 49011 (Sept. 18, 1997); 77 FR 11534 (Feb. 27, 2012); [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 62 FR 49011 (Sept. 18, 1997); 77 FR 11534 (Feb. 27, 2012); 81 FR 7106 (Feb. 10, 2016).
   </div>
 </li>
 <!-- FRTIB-13 -->
@@ -830,7 +830,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** Information from this system of records may be disclosed to a consumer reporting agency in accordance with 31 U.S.C. 3711(e).
 
-  **HISTORY:** [80 FR 43428 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53).
+  **HISTORY:** 80 FR 43428 (July 22, 2015).
   </div>
 </li>
 <!-- FRTIB-15 -->
@@ -909,7 +909,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** Pursuant to 5 U.S.C. 552a(k)(2), records in this system are exempt from the requirements of subsections (c)(3); (d); (e)(1); (e)(4)(G), (H), (I); and (f) of 5 U.S.C. 552a, provided, however, that if any individual is denied any right, privilege, or benefit that he or she would otherwise be entitled to by Federal law, or for which he or she would otherwise be eligible, as a result of the maintenance of these records, such material shall be provided to the individual, except to the extent that the disclosure of the material would reveal the identity of a source who furnished information to the Government with an express promise that the identity of the source would be held in confidence.
 
-  **HISTORY:** [80 FR 43428 (July 22, 2015)]({{ site.baseurl }}/exit/?idx=53); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 80 FR 43428 (July 22, 2015); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-16 -->
@@ -986,7 +986,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 81 FR 7106 (Feb. 10, 2016); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-17 -->
@@ -1066,7 +1066,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 81 FR 7106 (Feb. 10, 2016); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-18 -->
@@ -1150,7 +1150,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 81 FR 7106 (Feb. 10, 2016); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-19 -->
@@ -1232,7 +1232,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **DISCLOSURE TO CONSUMER REPORTING AGENCIES:** None.
 
-  **HISTORY:** [81 FR 7106 (Feb. 10, 2016)]({{ site.baseurl }}/exit/?idx=144); [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188).
+  **HISTORY:** 81 FR 7106 (Feb. 10, 2016); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-20 -->
