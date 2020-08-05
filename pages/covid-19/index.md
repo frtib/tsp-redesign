@@ -15,14 +15,15 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **July 10, 2020**.
+Updated **August 4, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
 - [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
-- [Submitting loan and withdrawal forms online](#submitting-loan-and-withdrawal-forms-online)
+- [Submitting certain forms online](#submitting-certain-forms-online)
 - [CARES Act temporary loan and withdrawal options](#cares-act-temporary-loan-and-withdrawal-options)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
 - [Rollover period extended to July 15](#rollover-period-extended-to-july-15)
@@ -31,6 +32,10 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## Temporary acceptance of PIV and CAC signatures on TSP forms
+{:#pivcac}
+We will temporarily accept certain digital signatures on TSP forms in order to support participants in physical distancing measures during the COVID-19 pandemic. To be eligible, you must use your unexpired U.S. federal personal identity verification (PIV) credentials or common access card (CAC) to sign your form before you submit it to us.
 
 ## Restriction to be lifted on starting and restarting installment payments based on life expectancy
 {:#restriction}
@@ -41,11 +46,12 @@ The FRTIB is permanently changing the rule that prevents you from starting insta
 1. you are under age 59½ now<br>
 **OR**
 2. it has been less than five years since your payments started,
+{:.alpha}
 
 then stopping your payments now could have tax consequences that are mandated by the Internal Revenue Code and are **not** eliminated by this FRTIB rule change. Visit irs.gov or consult a tax advisor for more information.
 
-## Submitting loan and withdrawal forms online
-You may now submit loan and withdrawal TSP forms online by logging in to My Account and uploading a PDF copy of the form. You’ll find an up-to-date list of forms we accept online when you log in to [My Account]({{ site.myaccount }}) and select **Upload Form** from the menu. That section provides detailed instructions on how to prepare your file for upload.
+## Submitting certain forms online
+You may now submit certain TSP forms online by logging in to My Account and uploading a PDF copy of the form. You’ll find an up-to-date list of forms we accept online when you log in to [My Account]({{ site.myaccount }}) and select **Upload Form** from the menu. That section provides detailed instructions on how to prepare your file for upload.
 
 You still have the option to mail or fax your completed form and supporting documentation to us. However, be sure to submit your form and documentation **one time only**. We will process the first submission we receive and cancel any subsequent forms of the same type.
 
@@ -64,7 +70,7 @@ Because of public health precautions being taken at our processing facilities, p
 If you received any withdrawal between February 1 and May 15 that is eligible for rollover, then the IRS has extended your 60-day rollover deadline to July 15th Use Form TSP 60. **You are eligible for this extended rollover period whether or not you have been affected by COVID-19**. (See [RMD changes]({{ site.baseurl }}/covid-19/rmd-changes/) for information about the rollover deadline for required minimum distributions you received before 2020 RMDs were suspended.)
 
 ## Temporary waiver of notary requirement
-We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten and submitted as directed in the form instructions, but you may leave the notary section blank.
+We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten (or made electronically with PIV or CAC credentials) and submitted as directed in the form instructions, but you may leave the notary section blank.
 
 ## Temporary changes to required minimum distributions
 The COVID-19 pandemic caused a steep and sudden decline in the stock markets and put a severe strain on many household budgets. As authorized by the recently enacted CARES Act, we’re making temporary changes related to required minimum distributions.
