@@ -49,6 +49,13 @@ At the end of each calendar quarter, we identify all loans with missed payments.
 ## Exceptions for missed payments
 <p markdown="1">Certain exceptions for missed payments are granted if you are in <span data-term="Nonpay Status" class="js-glossary-toggle term term-end">nonpay status</span>. For more information, visit [Your loan in a nonpay status]({{ site.baseurl }}/loan-basics/your-loan-in-nonpay-status/).</p>
 
+## Reamortizing your loan 
+Reamortizing means shortening or lengthening the term of your loan, which changes your payment amount. You may do this at any time as long as you do not exceed the 5-year maximum term for a general purpose loan or the 15-year maximum term for
+a residential loan. There are no restrictions on the number of reamortizations that you can have during the life of a loan. You can reamortize your
+loan by logging in to My Account and selecting "TSP Loans" or by calling the ThriftLine. You must ensure that your
+payroll office begins deducting the new amount from your pay. If the payment amount is not changed and you do not submit the additional
+amount, you may face serious tax consequences.
+
 ## Taxable distributions
 
 We will declare a taxable distribution to the IRS and you will owe income taxes on the entire unpaid balance of your loan plus accrued interest:

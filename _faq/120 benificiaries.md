@@ -1,6 +1,6 @@
 ---
 title: How do I designate or change my beneficiaries?
-permalink: /faq/beneficiaries
+permalink: /faq/beneficiaries/
 redirect_from:
   - /LifeEvents/personal/spouse/birth.html
 ---

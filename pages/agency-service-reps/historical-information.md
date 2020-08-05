@@ -5,6 +5,7 @@ styles:
 sidenav: agency-service-reps
 scripts:
 permalink: /agency-service-reps/historical-information/
+redirect_from: /representative/Content/TSPResources/
 ---
 
 # Historical information on contribution limits

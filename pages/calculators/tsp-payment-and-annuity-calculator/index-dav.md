@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: TSP payment and annuity calculator 
+title: TSP payment and annuity calculator
 styles:
 sidenav: calculators
 scripts:
@@ -12,5 +12,6 @@ progress-steps: [Introduction,Retirement income,Length of retirement,Monthly inc
 panel-names: [Introduction,Retirement,Length,Income,Annuity,Results]
 redirect_from:
   - /PlanningTools/Calculators/retirementCalculator.html
+  - /retirementcalc/
 published: false
 ---

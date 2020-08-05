@@ -5,7 +5,7 @@ title: C fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_C.html
-  - /cfund
+  - /cfund/
 Fund_type: Individual
 Fund_name: C Fund
 Fund_order: 3
@@ -26,6 +26,7 @@ avg_annual_returns:
     five_yr: "-"
     ten_yr: "-"
     lifetime: "-"
+inception_date: 1/29/1988
 summary_update: 12/31/2019
 summary_details:
     assets: $226.9 billion

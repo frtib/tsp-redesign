@@ -14,7 +14,6 @@
   form_name: Election Form
   form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
   form_date: 1/2018
-  form_pages: 4
   form_audience:
   -  Uniformed Services
   form_topics:
@@ -24,8 +23,7 @@
   form_url: tsp-1-c.pdf
   form_name: Catch-Up Contribution Election
   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
-  form_date: 1/2015
-  form_pages: 2
+  form_date: 1/2020
   form_audience:
   -  Civilian
   form_topics:
@@ -36,7 +34,6 @@
   form_name: Catch-Up Contribution Election
   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
   form_date: 1/2018
-  form_pages: 2
   form_audience:
   -  Uniformed Services
   form_topics:

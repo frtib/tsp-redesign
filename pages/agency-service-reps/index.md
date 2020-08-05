@@ -5,6 +5,8 @@ styles:
 sidenav: agency-service-reps
 scripts:
 permalink: /agency-service-reps/
+redirect_from:
+  - /representative/
 ---
 
 # Agency and Service Representative resources

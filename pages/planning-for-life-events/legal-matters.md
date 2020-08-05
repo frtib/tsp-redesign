@@ -6,7 +6,7 @@ styles:
 scripts:
 permalink: /planning-for-life-events/legal-matters/
 redirect_from:
-  - /poa
+  - /poa/
 ---
 
 # Legal matters

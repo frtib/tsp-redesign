@@ -49,10 +49,12 @@
     <lastmod>{{ item.path | date: '%A, %B %d, %Y (%I:%M %P)' }}</lastmod>
   </url>{% endunless %}{% endfor %}
   <!-- bulletins -->{% assign bulletins_list = site.bulletins | sort: 'path' %}{% for item in bulletins_list %}{% unless item.path contains '/_hidden/' %}
+  {% unless item.pdflink %}
   <url>
     <loc>{{ item.permalink | prepend: site_url }}</loc>
     <lastmod>{{ item.path | date: '%A, %B %d, %Y (%I:%M %P)' }}</lastmod>
-  </url>{% endunless %}{% endfor %}
+  </url>{% endunless %}
+  {% endunless %}{% endfor %}
   <!-- FAQs -->{% assign faq_list = site.faq | sort: 'path' %}{% for item in faq_list %}
   <url>
     <loc>{{ item.permalink | prepend: site_url }}</loc>

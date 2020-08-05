@@ -62,60 +62,70 @@
         <!-- Return 1-year -->
         <tr class="returns-by-year">
           <th scope="row">
-            <input type="checkbox" id="one-year-show" onClick="toggleRow(this, 'row1YR');" />
+            <input type="checkbox" id="one-year-show" onClick="toggleRow(this, 'row1YR');" checked/>
             <label for="one-year-show">1-year</label>
           </th>
         {% for fund in sorted %}
           <td class="fund-content hide col{{ forloop.index }}">
-            <p id='ret-1YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row1YR hide">{{ fund.avg_annual_returns.one_yr }}</p>
+            <p id='ret-1YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row1YR">{{ fund.avg_annual_returns.one_yr }}</p>
           </td>
         {% endfor %}
         </tr>
         <!-- Return 3-year -->
         <tr class="returns-by-year">
           <th scope="row">
-            <input type="checkbox" id="three-year-show" onClick="toggleRow(this, 'row3YR');" />
+            <input type="checkbox" id="three-year-show" onClick="toggleRow(this, 'row3YR');" checked/>
             <label for="three-year-show">3-year</label>
           </th>
         {% for fund in sorted %}
           <td class="fund-content hide col{{ forloop.index }}">
-            <p id='ret-3YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row3YR hide">{{ fund.avg_annual_returns.three_yr }}</p>
+            <p id='ret-3YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row3YR">{{ fund.avg_annual_returns.three_yr }}</p>
           </td>
         {% endfor %}
         </tr>
         <!-- Return 5-year -->
         <tr class="returns-by-year">
           <th scope="row">
-            <input type="checkbox" id="five-year-show" onClick="toggleRow(this, 'row5YR');" />
+            <input type="checkbox" id="five-year-show" onClick="toggleRow(this, 'row5YR');" checked/>
             <label for="five-year-show">5-year</label>
           </th>
         {% for fund in sorted %}
           <td class="fund-content hide col{{ forloop.index }}">
-            <p id='ret-5YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row5YR hide">{{ fund.avg_annual_returns.five_yr }}</p>
+            <p id='ret-5YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row5YR">{{ fund.avg_annual_returns.five_yr }}</p>
           </td>
         {% endfor %}
         </tr>
         <!-- Return 10-year -->
         <tr class="returns-by-year">
           <th scope="row">
-            <input type="checkbox" id="ten-year-show" onClick="toggleRow(this, 'row10YR');" />
+            <input type="checkbox" id="ten-year-show" onClick="toggleRow(this, 'row10YR');" checked/>
             <label for="ten-year-show">10-year</label>
           </th>
         {% for fund in sorted %}
           <td class="fund-content hide col{{ forloop.index }}">
-            <p id='ret-10YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row10YR hide">{{ fund.avg_annual_returns.ten_yr }}</p>
+            <p id='ret-10YR-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric row10YR">{{ fund.avg_annual_returns.ten_yr }}</p>
           </td>
         {% endfor %}
         </tr>
         <!-- Return Lifetime -->
         <tr class="returns-by-year">
           <th scope="row">
-            <input type="checkbox" id="life-show" onClick="toggleRow(this, 'rowLife');" />
+            <input type="checkbox" id="life-show" onClick="toggleRow(this, 'rowLife');" checked/>
             <label for="life-show">Lifetime</label>
           </th>
         {% for fund in sorted %}
           <td class="fund-content hide col{{ forloop.index }}">
-            <p id='ret-Life-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric rowLife hide">{{ fund.avg_annual_returns.lifetime }}</p>
+            <p id='ret-Life-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric rowLife">{{ fund.avg_annual_returns.lifetime }}</p>
+          </td>
+        {% endfor %}
+        </tr>
+        <!-- Inception date -->
+        <tr class="returns-by-year">
+          <th scope="row">Inception date</th>
+        {% for fund in sorted %}
+          <td class="fund-content hide col{{ forloop.index }}">
+            <!-- <p id='ret-Life-{{ fund.Fund_name | downcase | replace: " ", "-" }}' class="numeric rowLife hide">{{ fund.avg_annual_returns.lifetime }}</p> -->
+            <p class="numeric">{{ fund.inception_date }}</p>
           </td>
         {% endfor %}
         </tr>

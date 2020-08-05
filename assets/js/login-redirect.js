@@ -1,3 +1,3 @@
 setTimeout(function(){
-            window.location.href = 'https://www.secure.tsp.gov/';
+            window.location.href = 'https://secure.tsp.gov/';
          }, 10000);

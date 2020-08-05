@@ -20,7 +20,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   <button class="usa-accordion-button"
     aria-expanded="false"
     aria-controls="a1">
-    FRTIB-1  | Savings Plan
+    FRTIB-1  | Thrift Savings Plan Records
   </button>
   <div id="a1" class="usa-accordion-content" markdown="1">
   **Summary of purpose**  
@@ -58,13 +58,12 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   3. Court orders; or
   4. Spouses, former spouses, other family members, beneficiaries, legal guardians, and personal representatives (executors, administrators).
   {: .alpha}
-{{ site.baseurl }}/exit/?idx=58
 
   **Routine uses of records maintained in the system, including categories of users and purposes of such uses**
   These records and information in these records may be used:
-{{ site.baseurl }}/exit/?idx=62
-  1. To disclos{{ site.baseurl }}/exit/?idx=63 enforce applicable tax laws.
-  2. To disclose{{ site.baseurl }}/exit/?idx=64ity.
+
+  1. To disclose financial data and addresses to Federal, state, and local governmental tax enforcement agencies so that they may enforce applicable tax laws.
+  2. To disclose to the designated annuity vendor in order to provide TSP participants who have left Federal service with an annuity.
   3. To disclose to sponsors of eligible retirement plans for purposes of transferring the funds in the participant's account to an Individual Retirement Arrangement or into another eligible retirement plan.
   4. To disclose to current and former spouses and their attorneys in order to protect spousal rights under FERSA and to receive benefits to which they may be entitled.
   5. When a participant to whom a record pertains dies, to disclose the following types of information to any potential beneficiary: Information in the participant's record which could have been properly disclosed to the participant when living (unless doing so would constitute a clearly unwarranted invasion of privacy) and the name and relationship of any other person who claims the benefits or who is entitled to share the benefits payable.
@@ -1314,7 +1313,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a20" class="usa-accordion-content" markdown="1">
 
-  **SUMMARY**: Pursuant to the Privacy Act of 1974, [5 U.S.C. 552]({{ site.baseurl }}/exit/?idx=156) a, the Federal Retirement Thrift Investment Board (FRTIB) is proposing to establish a new system of records. Records contained in this system will be used to educate participants about various aspects of the TSP.
+  **SUMMARY**: Pursuant to the Privacy Act of 1974, [5 U.S.C. 552a]({{ site.baseurl }}/exit/?idx=156), the Federal Retirement Thrift Investment Board (FRTIB) is proposing to establish a new system of records. Records contained in this system will be used to educate participants about various aspects of the TSP.
 
   **DATES**: This system will become effective upon its publication in today’s **Federal Register**, with the exception of the routine uses, which are effective January 10, 2019. FRTIB invites written comments on the routine uses or other aspects of this system of records. Submit any comments by January 10, 2019.
 
@@ -1388,6 +1387,93 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **HISTORY:** None.
   </div>
+</li>
+<!-- FRTIB-21 -->
+<li id="frtib-21">
+  <button class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="a21">
+    FRTIB-21  | Identity, Credential and Access Management (ICAM)
+  </button>
+  <div id="a21" class="usa-accordion-content" markdown="1">
+
+  **SUMMARY**: Pursuant to the Privacy Act of 1974, the Federal Retirement Thrift Investment Board (FRTIB) proposes to establish a new system of records. Records contained in this system will be used to implement Identity, Credential, and Access Management (ICAM) capabilities at the Agency. ICAM manages digital identities, credentials, and access controls for FRTIB applications and systems.
+
+  **DATES**: This system will become effective upon its publication in today’s Federal Register, with the exception of the routine uses which will be effective on September 20, 2019. FRTIB invites written comments on the routine uses and other aspects of this system of records. Submit any comments by September 20, 2019.
+
+  **ADDRESSES**: You may submit written comments to FRTIB by any one of the following methods:
+
+  * _Federal eRulemaking Portal_: [https://www.regulations.gov]({{ site.baseurl }}/exit/?idx=145). Follow the website instructions for submitting comments.
+  * _Fax_: (202) 942-1676.
+  * _Mail or Hand Delivery_: Office of General Counsel, Federal Retirement Thrift Investment Board, 77 K Street NE, Suite 1000, Washington, DC 20002.
+
+  **FOR FURTHER INFORMATION CONTACT**: Marla Greenberg, Chief Privacy Officer, Federal Retirement Thrift Investment Board, Office of General Counsel, 77 K Street NE, Suite 1000, Washington, DC 20002, (202) 942-1600. For access to any of the FRTIB’s systems of records, contact Amanda Haas, FOIA Officer, Office of General Counsel, at the above address and phone number.
+
+  **SUPPLEMENTARY INFORMATION**: FRTIB proposes to establish a new system of records entitled, &#8220;FRTIB-21, Identity, Credential and Access Management (ICAM).&#8221; ICAM manages digital identities, credentials, and access controls for FRTIB applications and systems. ICAM is necessary to vet potential users; link employees and contractors to digital identity accounts; provision and de-provision accounts and access; and to monitor identity credentials, access to systems and data, and related risks. The proposed system of records implements ICAM capabilities across all FRTIB IT systems.
+
+  ICAM supports the following seven key functions of the ICAM Framework as defined by the Federal Chief Information Officer (CIO) Council: digital identity, credentialing, authentication, cryptography, auditing and reporting, authorization and access, and privilege management. FRTIB’s ICAM’s capabilities are also aligned with the Federal CIO Council’s Federal Identity, Credential, and Access Management (FICAM) procedures, available at, [https://www.idmanagement.gov/wp-content/uploads/sites/1171/uploads/FICAM_Roadmap_and_Implem_Guid.pdf]({{ site.baseurl }}/exit/?idx=169){:rel="nofollow"}.
+
+  FRTIB proposes to apply thirteen routine uses to FRTIB-21.
+
+  **Megan Grumbine**,  
+  _General Counsel and Senior Agency Official for Privacy_
+
+  **SYSTEM NAME AND NUMBER**: FRTIB-21, Identity, Credential and Access Management (ICAM).
+
+  **SECURITY CLASSIFICATION**: Unclassified.
+
+  **SYSTEM LOCATION**: Records are located at the Federal Retirement Thrift Investment Board, 77 K Street NE, Suite 1000, Washington, DC 20002. Records may also be maintained at additional locations for Business Continuity purposes.
+
+  **SYSTEM MANAGER**: Director, Office of Technology Services, Federal Retirement Thrift Investment Board, 77 K Street NE, Suite 1000, Washington, DC 20002, 202-942-1600.
+
+  **AUTHORITY FOR MAINTENANCE OF THE SYSTEM**: [5 U.S.C. 8474]({{ site.baseurl }}/exit/?idx=157); and 44 U.S.C. Chapter 35.
+
+  **PURPOSE(S) OF THE SYSTEM**: ICAM employs a comprehensive management approach for digital identities and associated attributes, credentials (including PKI, PIV, other authentication tokens), and access controls. It centralizes a consistent, integrated method for managing the identities of individuals and devices requiring logical access and for enforcing logical access privileges to FRTIB resources for all FRTIB employees and contractors.
+
+  ICAM protects FRTIB information and systems by ensuring that only the appropriate users have access to information systems, personally identifiable information (PII), and other sensitive data based on the principles of least privilege and need-to-know. ICAM manages the identities of individuals that access FRTIB logical resources, authorizes users’ permissions, enforces access controls for IT systems and information, and audits access to and the use of sensitive information and functions.
+
+  **CATEGORIES OF INDIVIDUALS COVERED BY THE SYSTEM**: FRTIB employees and contractors.
+
+  **CATEGORIES OF RECORDS IN THE SYSTEM**: Records in this system include: first name, middle name, last name, personal phone number, personal e-mail address, social security number, date of birth, place of birth, current address, business address, business e-mail address, business phone number, employment information (e.g., employment type, manager status, domain administrator status, hire date, contract end date), user name, user name creation date, IP address, background investigation data including Electronic Questionnaires for Investigations Processing (e-QIP) review and release date, fingerprint submission and completion date, OPM investigation type, investigation review and completion date, PIV card information, completion date for required training, and completion date for required documentation (e.g., rules of behavior, non-disclosure agreement).
+
+  **RECORD SOURCE CATEGORIES**: FRTIB obtains records within this system from FRTIB employees and contractors and from OPM through access to e-QIP.
+
+  **ROUTINE USES OF RECORDS MAINTAINED IN THE SYSTEM, INCLUDING CATEGORIES OF USERS AND PURPOSES OF SUCH USES**: Information about covered individuals may be disclosed without consent as permitted by the Privacy Act of 1974, as amended, 5 U.S.C. 552a(b); and:
+
+  1. Audit: A record from this system of records may be disclosed to an agency, organization, or individual for the purpose of performing an audit or oversight operations as authorized by law, but only such information as is necessary and relevant to such audit or oversight function when necessary to accomplish an agency function related to this system of records. Individuals provided information under this routine use are subject to the same Privacy Act requirements and limitations on disclosure as are applicable to FRTIB officers and employees.
+  2. Breach Mitigation and Notification: Response to Breach of FRTIB Records: A record from this system of records may be disclosed to appropriate agencies, entities, and persons when (1) FRTIB suspects or has confirmed that there has been a breach of the system of records; (2) FRTIB has determined that as a result of the suspected or confirmed breach there is a risk of harm to individuals, FRTIB (including its information systems, programs, and operations), the Federal Government, or national security; and (3) the disclosure made to such agencies, entities, and persons is reasonably necessary to assist in connection with FRTIB’s efforts to respond to the suspected or confirmed breach or to prevent, minimize, or remedy such harm.
+  3. Response to Breach of Other Records: A record from this system of records may be disclosed to another Federal agency or Federal entity, when FRTIB determines that information from this system of records is reasonably necessary to assist the recipient agency or entity in (1) responding to a suspected or confirmed breach or (2) preventing, minimizing, or remedying the risk of harm to individuals, the recipient agency or entity (including its information systems, programs, and operations), the Federal Government, or national security, resulting from a suspected or confirmed breach.
+  4.	Congressional Inquiries: A record from this system of records may be disclosed to a Congressional office from the record of an individual in response to an inquiry from that Congressional office made at the request of the individual to whom the record pertains.
+  5.	Contractors, et al.: A record from this system of records may be disclosed to contractors, grantees, experts, consultants, the agents thereof, and others performing or working on a contract, service, grant, cooperative agreement, or other assignment for FRTIB, when necessary to accomplish an agency function related to this system of records. Individuals provided information under this routine use are subject to the same Privacy Act requirements and limitations on disclosure as are applicable to FRTIB officers and employees.
+  6.	Investigations, Third Parties: A record from this system of records may be disclosed to third parties during the course of a law enforcement investigation to the extent necessary to obtain information pertinent to the investigation, provided disclosure is appropriate to the proper performance of the official duties of the third party officer making the disclosure.
+  7.	Investigations, Other Agencies: A record from this system of records may be disclosed to appropriate Federal, state, local, tribal, or foreign government agencies or multilateral governmental organizations for the purpose of investigating or prosecuting the violations of, or for enforcing or implementing, a statute, rule, regulation, order, license, or treaty where FRTIB determines that the information would assist in the enforcement of civil or criminal laws.
+  8.	Law Enforcement Intelligence: A record from this system of records may be disclosed to a Federal, state, tribal, local, or foreign government agency or organization, or international organization, lawfully engaged in collecting law enforcement intelligence information, whether civil or criminal, or charged with investigating, prosecuting, enforcing or implementing civil or criminal laws, related rules, regulations or orders, to enable these entities to carry out their law enforcement responsibilities, including the collection of law enforcement intelligence.
+  9.	Law Enforcement Referrals: A record from this system of records may be disclosed to an appropriate Federal, state, tribal, local, international, or foreign agency or other appropriate authority charged with investigating or prosecuting a violation or enforcing or implementing a law, rule, regulation, or order, where a record, either on its face or in conjunction with other information, indicates a violation or potential violation of law, which includes criminal, civil, or regulatory violations and such disclosure is proper and consistent with the official duties of the person making the disclosure.
+  10.	Litigation, DOJ or Outside Counsel: A record from this system of records may be disclosed to the Department of Justice, FRTIB’s outside counsel, other Federal agency conducting litigation or in proceedings before any court, adjudicative or administrative body, when: (1) FRTIB, or (2) any employee of FRTIB in his or her official capacity, or
+  (3) any employee of FRTIB in his or her individual capacity where DOJ or FRTIB has agreed to represent the employee, or (4) the United States or any agency thereof, is a party to the litigation or has an interest in such litigation, and FRTIB determines that the records are both relevant and necessary to the litigation and the use of such records is compatible with the purpose for which FRTIB collected the records.
+  11.	Litigation, Opposing Counsel: A record from this system of records may be disclosed to a court, magistrate, or administrative tribunal in the course of presenting evidence, including disclosures to opposing counsel or witnesses in the course of civil discovery, litigation, or settlement negotiations or in connection with criminal law proceedings or in response to a subpoena.
+  12.	NARA/Records Management: A record from this system of records may be disclosed to the National Archives and Records Administration (NARA) or other Federal Government agencies pursuant to the Federal Records Act.
+  13.	Security Threat: A record from this system of records may be disclosed to Federal and foreign government intelligence or counterterrorism agencies when FRTIB reasonably believes there to be a threat or potential threat to national or international security for which the information may be useful in countering the threat or potential threat, when FRTIB reasonably believes such use is to assist in anti-terrorism efforts, and disclosure is appropriate to the proper performance of the official duties of the person making the disclosure.
+
+  **POLICIES AND PRACTICES FOR STORAGE OF RECORDS**: Records are maintained in paper and electronic form, including on computer databases and cloud-based services, all of which are securely stored.
+
+  **POLICIES AND PRACTICES FOR RETRIEVAL OF RECORDS**: Records are retrieved by employee/contractor name or user ID.
+
+  **POLICIES AND PRACTICES FOR RETENTION AND DISPOSAL OF RECORDS**: These records are maintained in accordance with General Records Schedule 3.2 (Information Systems Security Records), Items 030 and 031, issued by the National Archives and Records Administration (NARA).
+
+  **ADMINISTRATIVE, TECHNICAL, AND PHYSICAL SAFEGUARDS**: FRTIB has adopted appropriate administrative, technical, and physical controls in accordance with FRTIB’s security program to protect the security, confidentiality, availability, and integrity of the information and to ensure that records are not disclosed to or accessed by unauthorized individuals.
+
+  **RECORD ACCESS PROCEDURES:** Individuals seeking to access records within this system must submit a request pursuant to [5 CFR part 1630]({{ site.baseurl }}/exit/?idx=158). Attorneys or other persons acting on behalf of an individual must provide written authorization from that individual, such as a Power of Attorney, in order for the representative to act on their behalf.
+
+  **CONTESTING RECORD PROCEDURES:** See Record Access Procedures above.
+
+  **NOTIFICATION PROCEDURES:** See Record Access Procedures above.
+
+  **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
+
+  **HISTORY:** None.
+</div>
+
 </li>
 </ul>
 

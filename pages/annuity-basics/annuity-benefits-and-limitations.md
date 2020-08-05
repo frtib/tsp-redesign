@@ -58,7 +58,7 @@ The factors that affect the amount of your monthly annuity payments include:
 + The amount used to purchase your annuity.
 + The "interest rate index" when your annuity is purchased.
 
-Use the [Retirement Income Calculator](#) to try out different combinations to get an annuity estimate.
+Use the [TSP payment and annuity calculator]({{ site.baseurl }}/calculators/tsp-payment-and-annuity-calculator/) to try out different combinations to get an annuity estimate.
 The exact amount of your monthly annuity payment cannot be determined until the date of actual purchase.
 
 ## Providing for beneficiaries

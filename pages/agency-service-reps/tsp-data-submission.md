@@ -5,6 +5,8 @@ styles:
 sidenav: agency-service-reps
 scripts:
 permalink: /agency-service-reps/tsp-data-submission/
+redirect_from:
+  - /representative/Content/payroll/webbasedDataSubmission.html
 ---
 
 # TSP Data Submission

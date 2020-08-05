@@ -65,7 +65,7 @@ section#fund-tabs {
 
   .avg-annual-returns {
     width: 100%;
-    border-bottom: 2px solid $color-gray-lightest;
+    border-bottom: 2px solid $color-gray-lighter;
 
     td,
     th {
@@ -84,11 +84,12 @@ section#fund-tabs {
     caption {
       font-family: $font-sans;
       text-align: center;
-      font-size: $h2-font-size;
+      font-size: 2.5rem;
       font-weight: $font-normal;
-      border-bottom: 1px solid $color-gray-lightest;
-      border-top: 1px solid $color-gray-lightest;
-      padding: 0.5rem 0;
+      border: 1px solid $color-gray-lighter;
+      border-right: none;
+      border-left: none;
+      padding: 1rem 0;
     }
   }
 }

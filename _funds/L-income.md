@@ -5,7 +5,7 @@ title: L Income
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_LIncome.html
-  - /lincome
+  - /lincome/
 Fund_type: L
 Fund_name: L Income
 Fund_order: 7
@@ -27,6 +27,7 @@ avg_annual_returns:
   five_yr: "-"
   ten_yr: "-"
   lifetime: "-"
+inception_date: 8/1/2005
 summary_update: 12/31/2019
 summary_details:
   assets: $136.5 billion
@@ -34,8 +35,8 @@ summary_details:
   gross_expense:  .053
   net_expense:    .042
   other_expense:  .001
-  benchmark_index: Dow Jones U.S. Completion TSM Index | www.djindexes.com
-  asset_manager: BlackRock Institutional Trust Company, N.A
+  benchmark_index: Not applicable
+  asset_manager: Not applicable
 top_ten_update:
 top_ten_holdings:
 additional_info: |

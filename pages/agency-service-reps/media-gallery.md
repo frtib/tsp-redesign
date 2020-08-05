@@ -5,6 +5,7 @@ styles:
 sidenav: agency-service-reps
 scripts:
 permalink: /agency-service-reps/media-gallery/
+redirect_from: /representative/Content/TSPResources/mediaGallery.html
 ---
 
 # Media gallery

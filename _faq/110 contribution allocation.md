@@ -1,6 +1,6 @@
 ---
 title: How do I change how my money is invested?
-permalink: /faq/contribution-allocation
+permalink: /faq/contribution-allocation/
 ---
 
 To change which fund(s) you invest in, there are two transactions you can make:

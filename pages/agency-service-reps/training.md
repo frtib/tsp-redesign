@@ -6,26 +6,26 @@ sidenav: agency-service-reps
 scripts:
 permalink: /agency-service-reps/training/
 redirect_from:
-  - /webinars
+  - /representative/Content/trainingInfo.html
+  - /webinars/
 ---
 
 # Training resources
 
 Thank you for your interest in TSP education.
 
+<!-- TSP trainers are available for webinars. See the [TSP Webinars](#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
 TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#intro-to-tsp) information for a list of webinars available for online registration. If you are an agency or service representative and would like to request a webinar for your employees, email **training@tsp.gov** with the text &#8220;webinar&#8221; in the subject line.
-
-_Unfortunately, we are unable to accommodate requests for in-person events at this time._
 
 - To attend, you must register via the links on this page.
 - You must have access to WebEx to register and attend TSP webinars. You do not need a WebEx account.
 - You can use any internet connected device to register and attend the TSP webinars.
 - If your agency/service does not allow access to WebEx please contact the appropriate office at your agency/service for assistance.
-- The registration password for all TSP webinars in WebEx is TSPweb.
+- **The registration password for all TSP webinars in WebEx is TSPweb.**
 - After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
 - **All scheduled start times are listed in Eastern Time.**
 - All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
-
+<span id="tspWebinars"></span>
 <ul class="usa-accordion">
   <li>
     <button
@@ -41,7 +41,7 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
   + You must have access to WebEx to register and attend TSP webinars. You do not need a WebEx account.
   + You can use any internet connected device to register and attend the TSP webinars.
   + If your agency/service does not allow access to WebEx please contact the appropriate office at your agency/service for assistance.
-  + The registration password for all TSP webinars in WebEx is TSPweb.
+  + **The registration password for all TSP webinars in WebEx is TSPweb.**
   + After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
   + **All scheduled start times are listed in Eastern Time.**
   + All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
@@ -49,6 +49,17 @@ _Unfortunately, we are unable to accommodate requests for in-person events at th
   Our education staff has created a distribution list of agency and service representatives that can assist in distributing TSP webinar information to participants. Individual participants should not request to be on the list.
 
   To learn more about TSP webinars or request to be on the distribution list, please contact us at webinars@tsp.gov.
+
+## Thrift Savings Plan - CARES Act loans and withdrawals
+
+Accessing your TSP money for those impacted by COVID-19
+
+This webinar will cover Coronavirus Aid, Relief, and Economic Security (CARES) Act Loan and Withdrawal rules for TSP participants affected by COVID-19. We will discuss the eligibility for qualified individuals, the temporary maximum loan and withdrawal amounts, how to suspend loans and how to submit loans on tsp.gov, and submitting request for Loans and withdrawals.
+
+### July 28, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=170){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
 
 ## Intro to TSP
 
@@ -131,7 +142,7 @@ This webinar provides an overview of TSP death benefits. TSP webinars are hosted
       class="usa-accordion-button"
       aria-expanded="false"
       aria-controls="training">
-      Benefits Specialists training
+      Benefits specialist and educator training
     </button>
 <div id="training" class="usa-accordion-content" markdown="1">
 
@@ -151,19 +162,23 @@ Click on any course to learn more and get registered:
 - [2-Day Advanced TSP Training for Military Financial Educators]({{ site.baseurl }}/exit/?idx=71){:rel="nofollow"} (2-day class)
 - [TSP Payroll Operations and Error Correction]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"} (1-day class)
 
-### Eligibility
+<!-- We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialists, human resources personnel, and
+payroll personnel. As an agency or service representative, you may request any training listed in our [Course Catalog](LINK) for your agency or service by completing the [Training Request Form](LINK) and submitting the form to training@tsp.gov or our Training Support Specialist at candice.franze@frtib.gov. Please call 202-942-1450 with any scheduling questions. -->
 
-Attendance is open to Federal employees responsible for administration of the TSP, and with prior approval, personnel representing non-profit or academic institutions with an interest in the TSP. Contract personnel who are providing TSP-related services to Federal agencies may also attend with the express written consent of their Contracting Officer Representative (COR).
+### Who we train
 
-### Cost
+We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees' Retirement System (FERS), Civil Service Retirement System (CSRS), and members of the uniformed services, including the Ready Reserve.
 
-The courses and course materials are free for the individuals and entities eligible to attend. Employing agencies must pay any associated transportation and per diem costs incurred by their attendees.
+### Training costs
 
-### Location
+We never charge a training fee for live or virtual events. The training is free for those requesting training within 50 miles of the Washington, DC area. For those outside this area, we require the requestor pay the travel expenses of the presenter.
 
-The courses are conducted at the FRTIB offices in Washington, D.C. Attendees must make their own arrangements for travel and lodging, but we can provide information on local hotels upon request.
+### Training methods
 
-Agencies located outside the Washington, D.C. area may request that any of these courses be taught on-site at their location. Please call (202) 942-1450 for more information.
+We deliver training in three ways:
+* On Site: At the FRTIB offices located in Washington, DC
+* Remotely: At or near the location of the agency that requests the training.
+* Virtually: This includes live training through webinars and prerecorded videos and podcasts.
 
 </div>
   </li>

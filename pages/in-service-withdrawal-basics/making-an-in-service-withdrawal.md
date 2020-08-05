@@ -6,7 +6,7 @@ sidenav: use-your-savings
 scripts:
 permalink: /in-service-withdrawal-basics/making-an-in-service-withdrawal/
 redirect_from:
-  - /apply
+  - /apply/
 ---
 
 # Making an in-service withdrawal

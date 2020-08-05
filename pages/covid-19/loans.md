@@ -45,7 +45,7 @@ To be eligible for the CARES Act loan options, you must be a **qualified individ
 
 
 ## Increased maximum loan amount
-The maximum loan amount on a general purpose loan is increased from $50,000 to $100,000, and the portion of your available balance you can borrow is raised from 50% to 100%. **All of the other rules on TSP loans apply, including that you may not have more than one general purpose loan at the same time. A loan with the increased maximum amount allowed under the CARES Act is still a general purpose loan**. To apply, [log in to My Account and use the online tool]({{ site.loans }}). The deadline for applying is September 18, 2020.
+The maximum loan amount on a general purpose loan is increased from $50,000 to $100,000, and the portion of your available balance you can borrow is raised from 50% to 100%. **All of the other rules on TSP loans apply, including that you may not have more than one general purpose loan at the same time. A loan with the increased maximum amount allowed under the CARES Act is still a general purpose loan**. To apply, [log in to My Account and use the online tool]({{ site.loans }}). The deadline for applying is September 22, 2020.
 
 ## Temporary suspension of loan payments
 You may suspend your obligation to make payments on your TSP loan or loans for the rest of calendar year 2020. This applies to existing loans and loans taken between now and November 30, 2020. To apply, complete and submit [Form TSP-46]({{ site.baseurl }}/forms/tsp-46.pdf), _CARES Act Loan Suspension Request_. Carefully read all of the instructions on the form before submitting.

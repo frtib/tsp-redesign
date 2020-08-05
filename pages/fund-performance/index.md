@@ -24,7 +24,7 @@ redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
   - /InvestmentFunds/FundPerformance/annualReturns.html
-  - /returns
+  - /returns/
 ---
 {% assign chartName = 'rates-of-return' %}
 <div class="usa-grid centered" markdown="1">

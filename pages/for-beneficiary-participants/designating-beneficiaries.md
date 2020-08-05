@@ -18,7 +18,7 @@ Upon your death, the money in your beneficiary participant account cannot stay w
 
 For most people, this is a good option because it accounts for changes like births, deaths, divorce, or marriage that may happen long after you open your account.
 
-If you'd like to make an exception, you may complete Form TSP-3, [_Designation of Beneficiary](#)_. Note: We will not honor a will or a prenuptual agreement. 
+If you'd like to make an exception, you may complete Form [TSP-3]({{ site.baseurl }}/forms/tsp-3.pdf), _Designation of Beneficiary_. Note: We will not honor a will or a prenuptual agreement. 
 
 If you don’t remember whether you’ve submitted a Form TSP-3 or you’re not sure who you named as your beneficiaries, look at your annual statement, check the online wizard, or call the ThriftLine at 1-877-968-3778. Even if you’re certain your designated beneficiaries are current, check them periodically.
 

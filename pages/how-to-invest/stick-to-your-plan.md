@@ -7,7 +7,7 @@ scripts:
 permalink: /how-to-invest/stick-to-your-plan/
 redirect_from:
   - /PlanningTools/InvestmentStrategy/sticktoyourplan/
-  - /sticktoyourplan
+  - /sticktoyourplan/
 ---
 
 # Stick to your plan

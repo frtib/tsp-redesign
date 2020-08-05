@@ -1,6 +1,6 @@
 ---
 title: How do I access my account if I lose or forget my password?
-permalink: /faq/lost-password
+permalink: /faq/lost-password/
 ---
 
 If you forget, lose, or want to change your TSP account password, you’ve got a few options.

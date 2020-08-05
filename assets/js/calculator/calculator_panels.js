@@ -142,7 +142,10 @@ function showPanel(num) {
     if (panelExit[lastPanel]) { panelExit[lastPanel](lastPanel); }
   }
   setProgress(num);
-  if (panelEnter[num]) { panelEnter[num](num); }
+  if (panelEnter[num]) {
+    gotoAnchor('top');
+    panelEnter[num](num);
+  }
   lastPanel = num;
   return false;
 }

@@ -22,15 +22,15 @@ However, you can still contribute to your uniformed services account. It is a go
 
 ### TSP uniformed services account
 
-Don’t have a uniformed services account yet? You may want to establish one by using your service’s electronic payroll system, for example, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or by submitting Form TSP-U-1, [*Election Form*]({{ site.baseurl }}/forms/tsp-u-1.pdf), to your service.
+Don’t have a uniformed services account yet? You may want to establish one by using your service’s electronic payroll system, for example, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or by submitting [Form TSP-U-1]({{ site.baseurl }}/forms/tsp-u-1.pdf), _Election Form_, to your service.
 
-Read *[TSP Benefits That Apply to Members of the Military Who Return to Federal Civilian Service]({{ site.baseurl }}/publications/tspfs08.pdf)* to learn more.
+Read [_TSP Benefits That Apply to Members of the Military Who Return to Federal Civilian Service_]({{ site.baseurl }}/publications/tspfs08.pdf) to learn more.
 
 ### TSP loans
 
-Loan payments for your civilian account will stop because they come from payroll deductions. Also, you cannot make payments on that loan from your uniformed services pay. However, you can continue to make loan payments by sending in a personal check or money order to the TSP along with Form TSP-26, [*Loan Payment Coupon*]({{ site.baseurl }}/forms/tsp-26/).
+Loan payments for your civilian account will stop because they come from payroll deductions. Also, you cannot make payments on that loan from your uniformed services pay. However, you can continue to make loan payments by sending in a personal check or money order to the TSP along with [Form TSP-26]({{ site.baseurl }}/forms/tsp-26/), _Loan Payment Coupon._
 
-Ask your federal civilian agency to submit [*Notification to TSP of Nonpay Status*]({{ site.baseurl }}/forms/tsp-41.pdf), Form TSP-41. Once we receive it, we will suspend your loan payments until you return to your federal civilian job. However, there are other acceptable forms of documentation to notify the TSP.
+Ask your federal civilian agency to submit [Form TSP-41]({{ site.baseurl }}/forms/tsp-41.pdf), _Notification to TSP of Nonpay Status_. Once we receive it, we will suspend your loan payments until you return to your federal civilian job. However, there are other acceptable forms of documentation to notify the TSP.
 
 ## Non-federal civilian employees
 
@@ -46,7 +46,7 @@ Confirm how much you have contributed to your employer's defined contribution pl
 
 ### Give a power of attorney
 
-Before you go on active duty, you can designate a power of attorney—an individual to serve as your agent in any business with the TSP. Your agent can be given very specific powers or unlimited power to act on your behalf. Use the *[Special Power of Attorney]({{ site.baseurl }}/publications/oc01-10.pdf)* form to designate a power of attorney.
+Before you go on active duty, you can designate a power of attorney—an individual to serve as your agent in any business with the TSP. Your agent can be given very specific powers or unlimited power to act on your behalf. Use the [_Special Power of Attorney_]({{ site.baseurl }}/publications/oc01-10.pdf) form to designate a power of attorney.
 
 ### Review beneficiaries
 

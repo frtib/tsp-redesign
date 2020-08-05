@@ -1,17 +1,12 @@
 ---
 layout: page
-
 title: Living in retirement
-
 styles:
-
 sidenav: use-your-savings
-
 scripts:
-
 permalink: /living-in-retirement/
 redirect_from:
-  - /withdrawalnow
+  - /withdrawalnow/
 ---
 
 # Living in retirement

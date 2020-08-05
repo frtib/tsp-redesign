@@ -5,7 +5,7 @@ title: G fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_G.html
-  - /gfund
+  - /gfund/
 Fund_type: Individual
 Fund_name: G Fund
 Fund_order: 1
@@ -26,6 +26,7 @@ avg_annual_returns:
     five_yr: "-"
     ten_yr: "-"
     lifetime: "-"
+inception_date: 4/1/1987
 summary_update: 12/31/2019
 summary_details:
     assets: $243.8 billion
@@ -54,9 +55,9 @@ additional_info: |
 
   The G Fund Yield Advantage—The G Fund rate calculation results in a long-term rate being earned on short-term securities. Because long-term interest rates are generally higher than short-term rates, G Fund securities usually earn a higher rate of return than do short-term marketable Treasury securities.
 risks: |
-  Your investment in the C Fund is subject to [market risk](#) because the prices of the stocks in the S&P 500 Index rise and fall.
+  Your investment in the C Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
-  By investing in the C Fund, you are also exposed to [inflation risk](#), meaning your C Fund investment may not grow enough to offset inflation.
+  By investing in the C Fund, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your C Fund investment may not grow enough to offset inflation.
 risk_level: low
 rewards: |
   While investment in the C Fund carries risk, it also offers the opportunity to experience gains from equity ownership of large and mid-sized U.S. company stocks.

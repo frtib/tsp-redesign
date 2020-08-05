@@ -62,20 +62,20 @@ scripts:
 </div>
 
 
-  <div class="fund-objective">
-    <div class="usa-grid usa-content">
-    <p>{{ page.Fund_objective }}</p>
+<div class="fund-objective">
+  <div class="usa-grid usa-content">
+  <p>{{ page.Fund_objective }}</p>
   </div>
-  </div>
+</div>
 
-<div class="usa-section">
+<div id="performance" class="performance">
 <h2>Performance</h2>
 <span id="no_data_yet_message"></span>
 <table class="usa-table-borderless avg-annual-returns">
   <caption id="aar_caption">Average annual returns</caption>
   <thead>
   <tr>
-    <th>YTD (Daily)</th>
+    <th>2020 YTD</th>
     <th>1 Yr</th>
     <th>3 Yrs</th>
     <th>5 Yrs</th>
@@ -104,7 +104,7 @@ scripts:
         <div id="a1" class="usa-accordion-content">
           <div class="usa-grid-full">
             <div class="usa-width-one-half fund-summary-details">
-              <h3>Details {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
+              <h3 id="details">Details {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
                 <p><b>Assets</b><br>
                 {{ page.summary_details.assets }}
               </p>
@@ -114,12 +114,17 @@ scripts:
               <p><b>Other expense</b><br>
                 {% include components/expense_string.html value=page.summary_details.other_expense %}
               </p>
+{% if page.Fund_type == 'Individual' %}
                 <p><b>Benchmark index</b><br>
                   {{ page.summary_details.benchmark_index }}
                 </p>
                 <p><b>Asset manager</b><br>
                 {{ page.summary_details.asset_manager }}
               </p>
+{% endif %}
+              <p><b>Inception date</b><br>
+              {{ page.inception_date }}
+            </p>
             </div>
             <div class="usa-width-one-half fund-summary-top-ten">
 {% if page.Fund_type == 'L' or page.Fund_type == 'Retired' %}

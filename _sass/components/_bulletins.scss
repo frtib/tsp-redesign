@@ -12,17 +12,6 @@ h1#bulletin {
     text-align: center;
     font-size: 2.25rem;
     font-weight: $normal;
-    // color: $color-green;
-
-    // &.usv {
-    //   color: $color-cool-blue;
-    //
-    //   i {
-    //     color: inherit;
-    //     font-size: inherit;
-    //     padding-left: .4rem;
-    //   }
-    // }
   }
 }
 
@@ -69,7 +58,7 @@ section {
         }
       }
     }
-  }
+  } // end section.bulletin
 
   &.bulletins-current {
     border-bottom: 1px solid #d6d7d9;
@@ -96,124 +85,7 @@ section {
         transform:rotate(180deg);
       }
     } // end .see-more
-  }
-
-  footer {
-    &.bulletin-footer {
-      border-top: 1px solid $color-gray-light;
-      margin-top: 2rem;
-      padding-top: 2rem;
-
-      .usa-grid {
-        padding-left: 0;
-        margin-bottom: 1.6rem;
-      }
-
-      .usa-width-one-sixth {
-        font-weight: $medium;
-      }
-
-      .usa-width-five-sixths {
-        p,
-        p:first-child,
-        p:last-child {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-      }
-
-      // ul {
-      //   list-style-type: none;
-      //   padding-left: 0;
-      // }
-    }
-  }
-}
-
-
-
-// CSS for Bulletins landing page
-
-.calculator-panel.subscribe {
-  margin-bottom: 4rem;
-  ul.usa-accordion {
-    // &.explain-this {
-    //   max-width: 46rem;
-    //   li {
-    //     background-color: transparent;
-    //     .usa-accordion-button {
-    //       // background-color: $color-primary;
-    //       background-image: none;
-    //       font-weight: 400;
-    //       // color: #fff;
-    //       position: relative;
-    //       line-height: 2rem;
-    //       padding: 1.5rem 2rem 1.5rem 0;
-    //       font-size: 2.4rem;
-    //       font-weight: $bold;
-    //
-    //         span {
-    //           background-color: $color-primary;
-    //           padding: .9rem 1.5rem;
-    //           // background-image: none;
-    //           // font-weight: 400;
-    //           color: #fff;
-    //           // position: relative;
-    //           // line-height: 2rem;
-    //           // padding: 1.5rem 2rem;
-    //           // font-size: 2.4rem;
-    //           // font-weight: $bold;
-    //         }
-    //       &:after {
-    //         font-family: $font-awesome;
-    //         font-weight: $light;
-    //         font-size: 2.5rem;
-    //         content: "\f056";
-    //         float: right;
-    //       }
-    //       &[aria-expanded="false"] {
-    //         &:after {
-    //           content: "\f055";
-    //         }
-    //       }
-    //       &:hover {
-    //         background-color: transparent;
-    //         color: $color-gray-darkest;
-    //         span {
-    //           background-color: $color-gray-dark;
-    //         }
-    //       }
-    //     } // end .usa-accordion-button
-    //     .usa-accordion-content {
-    //       background-color: transparent;
-    //     } // end .usa-accordion-content
-    //   }
-    // }
-  }
-} // end .calculator-panel
-
-div.select-bulletins-topic {
-  h2.results {
-    padding: 2rem 0 3rem 0;
-  }
-}
-
-section {
-
-  &.search-bulletins {
-    margin-top: 2rem;
-  }
-
-  &.inline-search {
-    form.animated-search {
-      &.bulletins {
-        input[type=text]:focus {
-          width: 100%;
-          border: 2px solid green;
-        }
-      }
-    }
-  }
+  } // end section.bulletins-current
 
   &.bulletins-current,
   &.bulletins-archive {
@@ -226,9 +98,9 @@ section {
         pointer-events: none;
       }
 
-      p {
-        display: none // Otherwise every <p> will appear, truncated to x lines
-      }
+      // p {
+      //   display: none // Otherwise every <p> will appear, truncated to x lines
+      // }
 
       p {
         &:first-of-type { // Display only the first <p> in div.bulletin
@@ -236,7 +108,6 @@ section {
           -webkit-line-clamp: 4; // If the <p> has less than three lines, all content is displayed
           -webkit-box-orient: vertical;
           overflow: hidden;
-          // border: 1px solid red;
         }
       }
       input:focus ~ label {
@@ -294,7 +165,7 @@ section {
 
       .tooltip > button,
       button:not(.usa-button-secondary) {
-        background-color: inherit;
+        background-color: transparent;
         border: none;
         // border: 1px solid pink;
         margin: 0;
@@ -304,6 +175,62 @@ section {
     }
     // end .post-and-share
   }
-  // end .bulletins-current
+  // end &.bulletins-current, &.bulletins-archive
+
+  &.search-bulletins {
+    margin-top: 2rem;
+
+    div.select-bulletins-topic {
+      h2.results {
+        padding: 2rem 0 3rem 0;
+      }
+    }
+  }
+
+  &.inline-search {
+    form.animated-search {
+      &.bulletins {
+        input[type=text]:focus {
+          width: 100%;
+          border: 2px solid green;
+        }
+      }
+    }
+  }
 }
-// end section
+ // end section
+
+footer {
+  &.bulletin-footer {
+    border-top: 1px solid $color-gray-light;
+    margin-top: 2rem;
+    padding-top: 2rem;
+
+    .usa-grid {
+      padding-left: 0;
+      margin-bottom: 1.6rem;
+    }
+
+    .usa-width-one-sixth {
+      font-weight: $medium;
+    }
+
+    .usa-width-five-sixths {
+      p,
+      p:first-child,
+      p:last-child {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+} // end footer
+
+
+
+// CSS for Bulletins landing page
+
+.calculator-panel.subscribe {
+  margin-bottom: 4rem;
+
+} // end .calculator-panel

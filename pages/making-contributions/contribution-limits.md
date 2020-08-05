@@ -7,7 +7,7 @@ scripts:
 permalink: /making-contributions/contribution-limits/
 redirect_from:
   - /PlanParticipation/EligibilityAndContributions/contributionLimits.html
-  - /limits
+  - /limits/
 ---
 
 # Know your limits
@@ -154,5 +154,5 @@ Even if you don't reach the annual addition limit, keep it in mind when deciding
 **Are you about to max out? Be careful not to exceed the contribution limits before December 31 if you're eligible for matching. If you do, we won't be able to process any more of your contributions for the remainder of the year, which means you'll miss out on matching contributions.**
 
 Grab your latest Leave and Earnings Statement and check
-out our [calculator](#), “How much should I contribute?”
+out our &#8220;[How much can I contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute/)&#8221; calculator.
 {: .usa-font-lead .text-center }

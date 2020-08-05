@@ -5,7 +5,7 @@ title: F fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_F.html
-  - /ffund
+  - /ffund/
 Fund_type: Individual
 Fund_name: F Fund
 Fund_order: 2
@@ -26,6 +26,7 @@ avg_annual_returns:
     five_yr: "-"
     ten_yr: "-"
     lifetime: "-"
+inception_date: 1/29/1988
 summary_update: 12/31/2019
 summary_details:
     assets: $33.5 billion
@@ -59,9 +60,9 @@ additional_info: |
 
   The F Fund is invested in a separate account that is managed by BlackRock Institutional Trust Company, N.A. BlackRock selects a large representative sample of the various types of asset-backed, U.S. government, corporate, and foreign government securities included in the overall index. The performance of the F Fund is evaluated on the basis of how closely its returns match those of the U.S. Aggregate Index.
 risks: |
-  Your investment in the C Fund is subject to [market risk](#) because the prices of the stocks in the S&P 500 Index rise and fall.
+  Your investment in the C Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
-  By investing in the C Fund, you are also exposed to [inflation risk](#), meaning your C Fund investment may not grow enough to offset inflation.
+  By investing in the C Fund, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your C Fund investment may not grow enough to offset inflation.
 risk_level: low-medium
 rewards: |
   While investment in the C Fund carries risk, it also offers the opportunity to experience gains from equity ownership of large and mid-sized U.S. company stocks.

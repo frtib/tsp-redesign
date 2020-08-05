@@ -33,7 +33,6 @@ main {
         max-width: 100%;
         width: 100%;
         text-align: center;
-        border: 1px solid red;
 
         div.usa-layout-docs-main_content {
 
@@ -41,7 +40,6 @@ main {
             &.centered {
               display: block;
               width: auto;
-              border: 1px solid blue;
               text-align: left;
             }
           }

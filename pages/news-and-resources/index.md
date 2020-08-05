@@ -16,7 +16,7 @@ document-ready:
   - getLoanAndAnnuityRate();
 redirect_from:
   - /whatsnew/
-  - /rates
+  - /rates/
 ---
 
 # News and resources

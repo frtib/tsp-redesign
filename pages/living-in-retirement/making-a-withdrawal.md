@@ -11,7 +11,7 @@ permalink: /living-in-retirement/making-a-withdrawal/
 
 ## Requesting a withdrawal
 
-Before you request a withdrawal from your TSP savings, be sure to read the booklet [Withdrawing Your TSP Account After Leaving Federal Service]({{ site.baseurl }}/publications/tspbk02.pdf).
+Before you request a withdrawal from your TSP savings, be sure to read the booklet [Withdrawing from Your Acccount for Separated and Beneficiary Participants]({{ site.baseurl }}/publications/tspbk02.pdf).
 
 To request a withdrawal, log into My Account and click on the “Withdrawals and Changes to Installment Payments” link on the menu. From there you’ll have access to an online tool with which to start your withdrawal.
 
@@ -46,7 +46,7 @@ Allow several weeks from the time you submit your completed withdrawal request a
 
 The Internal Revenue Code (IRC) requires that you receive a portion of your TSP account beginning in the calendar year when you become age 72* and are separated from service. The portion is called a Required Minimum Distribution (RMD).
 
-We calculate RMDs based on your account balance and your age using the IRS Uniform Lifetime Table. For detailed information and the tax rules regarding RMDs, see the TSP tax notice [Important Tax Information About Your TSP Withdrawal and Required Minimum Distributions]({{ site.baseurl }}/forms/tsp-775.pdf).
+We calculate RMDs based on your account balance and your age using the IRS Uniform Lifetime Table. For detailed information and the tax rules regarding RMDs, see the TSP tax notice [Important Tax Information About Your TSP Withdrawal and Required Minimum Distributions]({{ site.baseurl }}/publications/tsp-775.pdf).
 
 #### RMD requirements
 
@@ -82,6 +82,6 @@ If you have both a civilian account and a uniformed services account, you may on
 
 Once you’ve separated, you will have the option of combining your two accounts into one; however, you can only combine the account related to your separation into your other TSP account. Also, if you have a loan in the account you are moving, you must close it before you can combine your accounts.
 
-To combine your TSP accounts, use [Request to Combine Uniformed Services and Civilian TSP Accounts]({{ site.baseurl }}/publications/tsp-65.pdf), *Form TSP-65.* Money that you transfer will be deposited as employee contributions into the traditional or Roth balance of the combined account based on the way it was identified in the original account.
+To combine your TSP accounts, use [Form TSP-65]({{ site.baseurl }}/forms/tsp-65.pdf), Request to Combine Uniformed Services and Civilian TSP Accounts. Money that you transfer will be deposited as employee contributions into the traditional or Roth balance of the combined account based on the way it was identified in the original account.
 
 **Note:** If you have a uniformed services account that includes a tax-exempt balance, that money cannot be transferred to your civilian TSP account unless the tax-exempt contributions are part of your Roth balance. Any tax-exempt contributions that are a part of your traditional balance must remain in your uniformed services account. That account will continue to accrue tax-deferred earnings until you withdraw it.

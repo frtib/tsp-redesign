@@ -88,6 +88,13 @@
 
 }
 
+/* Titles - overrides */
+.highcharts-title {
+    font-family: $font-sans;
+    fill: $neutral-color-100;
+    font-size: 2.8rem;
+}
+
 .hc-note {
   font-size: 70%;
   color: gray;

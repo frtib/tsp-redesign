@@ -33,7 +33,7 @@ If you’re in nonpay status for reasons other than active military service:
 
 ## Notifying the TSP of your nonpay status
 When you begin your period of nonpay status, you or your agency or service must submit one of the following forms to us:
-+ Form TSP-41, [Notification to TSP of Nonpay Status]({{ site.baseurl }}/forms/tsp-41.pdf)
++ [Form TSP-41]({{ site.baseurl }}/forms/tsp-41.pdf), _Notification to TSP of Nonpay Status_
 + Form SF-50, Notification of Personnel Action
 + A letter on agency or service letterhead, signed by an appropriate agency official or your commander or adjutant, that contains your name, date of birth, and Social Security number; the beginning date of the nonpay status; and the signature and title of the agency or service representative providing the information
 + A copy of your military orders
@@ -55,4 +55,4 @@ If any part of your loan is associated with tax-exempt contributions or qualifie
 </div>
 
 If you’ve left federal service, you will not be able to withdraw your TSP account unless your loan is closed by either payment in full or taxable distribution.
-For more information about loan repayments after leaving federal service, refer to the Tax Notice, *[Important Tax Information about Payments from Your TSP Account]({{ site.baseurl }}/publications/tsp-536.pdf).*
+For more information about loan repayments after leaving federal service, refer to the Tax Notice, [_Important Tax Information about Payments from Your TSP Account_]({{ site.baseurl }}/publications/tsp-536.pdf).

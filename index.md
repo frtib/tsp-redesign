@@ -398,7 +398,7 @@ Being confident about your retirement plans makes it easier to deal with uncerta
 
 <div class="usa-width-one-third" markdown="1">
 
-### [Change in family status]({{ site.baseurl }}/planning-for-life-events/changes-in-your-family-status/)
+### [Change in family status]({{ site.baseurl }}/planning-for-life-events/)
 
 <img src="{{ site.baseurl }}/assets/img/icons/family_blue.svg" alt="">
 </div>

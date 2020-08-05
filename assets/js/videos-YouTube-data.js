@@ -1,11 +1,11 @@
 function setYouTubeVideoData() {
 
-$("#r6rRMcgBNCc-link-title").html("Your TSP Investment Options: The Lifecycle Funds");
-$("#r6rRMcgBNCc-title").html("Your TSP Investment Options: The Lifecycle Funds");
-$("#r6rRMcgBNCc-download-title").html("Your TSP Investment Options: The Lifecycle Funds");
-$("#r6rRMcgBNCc-pub-date").html("October 14, 2014");
-$("#r6rRMcgBNCc-description").html("In this video, we'll talk about the professionally designed Lifecycle Funds, also known as the L Funds.");
-$("#r6rRMcgBNCc-duration").html("1:53");
+$("#sppDf-oZm-o-link-title").html("Your TSP Investment Options: The Lifecycle Funds");
+$("#sppDf-oZm-o-title").html("Your TSP Investment Options: The Lifecycle Funds");
+$("#sppDf-oZm-o-download-title").html("Your TSP Investment Options: The Lifecycle Funds");
+$("#sppDf-oZm-o-pub-date").html("July 13, 2020");
+$("#sppDf-oZm-o-description").html("In this video, we'll talk about the professionally designed Lifecycle Funds, also known as the L Funds.");
+$("#sppDf-oZm-o-duration").html("2:03");
 
 $("#OHdIdwS33uA-link-title").html("Your TSP Investment Options: The G Fund");
 $("#OHdIdwS33uA-title").html("Your TSP Investment Options: The G Fund");

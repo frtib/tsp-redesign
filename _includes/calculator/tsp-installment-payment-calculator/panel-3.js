@@ -12,177 +12,171 @@ panelGood[{{ panelID }}] = function(forceValue) {
 
 panelEnter[{{ panelID }}] = function(panel) {
     // calculate and set values here
+    // window.location = '#result-top';
+    calculate();
+
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
+    gotoAnchor('panel-3');
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
 }
 
-var defdot = { symbol: 'circle', radius: 0.1 };
-var defcircle = { symbol: 'circle', radius: 2.4 };
-var defdiamond = { symbol: 'diamond', radius: 2.6 };
+var payments = [];
+var balance = [];
+var numYears = 40;
+var yearsTilDepleted = 0;
+var monthsRemainder = 1;
+var lastPaymentYear = 1000;
 
-// the color names below are not HTML defined names, just a close name to identify what is on the screen
-var colorSubBlue = '#4572A7';
-var colorSubRed = '#AA4643';
-var colorSubGreen = '#89A54E';
-var colorSubPurple = '#80699B';
-var colorSubCyan = '#3D96AE';
-var colorSubOrange = '#DB843D';
-var colorSubSkyBlue = '#92A8CD';
-var colorSubBrown = '#A47D7C';
+function calculate() {
+  yearsTilDepleted = 0;
+  monthsRemainder = 1;
+  lastPaymentYear = 1000;
+  var accountAmount = getPosInteger('accountAmount', 0);
+  var choice = getFrequency();
+  var frequency = choice[0];
+  var periods = choice[2];
+  var rateOfReturn = parseFloat($('#rateOfReturn').val());
+  var amountToReceive = getPosInteger('amountToReceive', 0);
+  // console.log('calculate ', accountAmount, periods, frequency, rateOfReturn, amountToReceive);
 
-function runCalc1(frequency) {
+  var rate = rateOfReturn / 100.0;
+  var periodRate = (Math.pow(1.0 + rate, 1.0 / periods) - 1.0); // annualize rate per period
+  var rate = periods * periodRate; //annualized rate for year
+  // console.log(numYears, periodRate, rate);
 
-  /* Calculate Coordinates */
-  var line1 = [];
-  var lineFDbal = [];
-
-  var tableRows = "";
-  var evenrow = false;
-  var RMDflag = '*';
-  var arr_length = rates_ages.length;
-  for (var i=0; i<arr_length; i++) {
-    if (i < payments_bal_FD.length) { lineFDbal.push([rates_ages[i], payments_bal_FD[i]]); }
-    if (i < payments_Amt.length) { line1.push([rates_ages[i], payments_Amt[i]]); }
-  }
-  var age = AgeDepleted;
-  if (monthsRemainder >= 12) { age++; }
-  var cit = '**';
-  var half = arr_length / 2;
-  for (var i=0; i<half; i++) {
-    if (evenrow) {
-      evenrow = false;
-      tableRows += '<tr class="evenRow">';
-    } else {
-      evenrow = true;
-      tableRows += '<tr class="oddRow">';
-    }
-
-    if (payments_RMD[i] > 0) {
-      // RMDflag = "<span width=15px title='RMD: " + CurrencyFormatted(payments_RMD[i]) + "'>*</span>";
-      RMDflag = "*";
-    } else {
-      // RMDflag = "<span width=15px " + CurrencyFormatted(payments_RMD[i]) + ">&nbsp;</span>";
-      RMDflag = "&nbsp;";
-    }
-    if (i < arr_length) {
-      if ((i+1) == age) { cit = '**'; } else { cit = ''; }
-      tableRows += '<td class="packed">' + rates_ages[i] + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_Amt[i]) + cit + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_bal_FD[i]) + RMDflag + '</td>';
-      if ((i+half+1) == age) { cit = '**'; } else { cit = ''; }
-      tableRows += '<td class="packed leftBorder">' + rates_ages[i+half] + '</td>'
-        + '<td class="packed">' + CurrencyFormatted(payments_Amt[i+half]) + cit + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_bal_FD[i+half]) + RMDflag + '</td>';
-    }
+  // number of payments in upper table
+  $('#deplete-text').html('Will deplete your account in');
+  var fmonths = -1.0 * Math.log(1 - periodRate * accountAmount / (1.0 * amountToReceive));
+  fmonths /= Math.log(1 + periodRate);
+  fmonths = Math.trunc(fmonths) + 1;
+  if (isNaN(fmonths)) {
+    setPaymentsLength(1000, 1000, periods);
+    $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
+    $('#account-depleted').html('--');
+  } else {
+    var fyears = Math.trunc(fmonths/periods);
+    fmonths = fmonths - fyears * periods;
+    setPaymentsLength(fyears, fmonths, periods);
   }
 
-  /* Chart Drawing */
-  chart = new Highcharts.Chart({
-//    chart: { renderTo: 'chartDiv', defaultSeriesType: 'line', marginTop: 30, marginRight: 230, marginBottom: 50 },
-    chart: { renderTo: 'chartDiv', defaultSeriesType: 'area', marginRight: 27 }, // , borderWidth: 2 },
-    title: { text: null },
-//    title: { text: 'Projected Year-End Balances', x: -20, y: 5, margin: 30 },
-//    subtitle: { text: 'Results Based on Requested Installment Payment Amounts', x: -20, y: 25 },
-    credits: { enabled: false },
-    xAxis: {
-      title: { text: 'Payment Year' },
-      labels: {
-      min: 0,
-      max: 40,
-        formatter: function() {
-          return this.value;
+  var curPayment = amountToReceive;
+  var curBalance = accountAmount;
+  for (var year = 1; year <= numYears+10; year++) {
+    payments[year] = curPayment;
+    for (var period = 1; period <= periods; period++) {
+      if (curBalance > 0.0) {
+        if (curBalance < curPayment) {
+          yearsTilDepleted = year-1;
+          monthsRemainder = period * 12 / periods;
+          curBalance = 0.0;
+          curPayment = 0.0;
+        } else {
+          curBalance -= curPayment;
+          curBalance = parseFloat((curBalance * (1.0 + periodRate)).toFixed(2));
         }
+      } else curPayment = 0;
+    }
+    balance[year] = curBalance;
+  }
+  while (monthsRemainder >= 12) { monthsRemainder -= 12; yearsTilDepleted += 1; }
+  lastPaymentYear = yearsTilDepleted;
+  if (monthsRemainder > 0) { lastPaymentYear++; }
+  if (curBalance <= 0.0) { setPaymentsLength(yearsTilDepleted, monthsRemainder, periods); }
+
+  // console.log('last year ', lastPaymentYear, yearsTilDepleted, monthsRemainder);
+  $('#resultSelector0-table').html(buildTable());
+
+  var chart = buildChart('resultSelector0-graph', payments, balance);
+}
+
+function setPaymentsLength(years, months, periods) {
+  var y = ' years';
+  var p = 'payments';
+  var footnote = '';
+  var installments = months;
+  if (periods == 4) { installments /= 3; }
+  if (years == 1) { y = ' year'; }
+  if (installments == 1) { p = 'payment'; }
+  if (months <= 0) {
+    $('#account-depleted').html(years + y);
+    footnote = 'The last full year you will receive fixed dollar installment payments will be year ' + years + '.';
+  } else {
+    $('#account-depleted').html(years + y + ',<br>' + months + ' months');
+    footnote = 'You will recieve your last ' + installments + ' installment '+p+' in year ' + (years+1) + '.';
+  }
+  if (years >= (numYears+10)) { $('#installment-payment-footnote').html(''); } else { $('#installment-payment-footnote').html(footnote); }
+}
+
+function buildTable() {
+  // build table header
+  var choice = getFrequency();
+  if (choice[0] == 'Annually') { choice[0] = 'Annual'; }
+  var headerHTML = sideScrollTH('', 'col', '', 'Year', false);
+  headerHTML += sideScrollTH('', 'col', '', choice[0] + ' payment', false);
+  headerHTML += sideScrollTH('', 'col', '', 'Year-end balance', false);
+  headerHTML = sideScrollWrapper('', 'tr', '', '', headerHTML, false);
+  headerHTML = sideScrollWrapper('  ', 'thead', '', '', headerHTML, true);
+
+  var bodyHTML = '';
+  for (var year = 1; year <= numYears; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(payments[year]), false);
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(balance[year]), false);
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+    if (balance[year] <= 0.0) { break; }
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'installment-payment-table', '', headerHTML+bodyHTML, true, '');
+  return tableHTML;
+}
+
+function buildChart(divName, payments, balance) {
+  var yearEndBalance = [];
+  for (var i = 1; i <= numYears; i++) {
+    yearEndBalance.push(balance[i]);
+    if (balance[i] <= 0.0) { break; }
+  }
+  var chart = Highcharts.chart(divName, {
+      chart: {
+          type: 'area'
       },
-      maxPadding: 0.05,
-      minRange: 0.01,
-      showLastLabel: true,
-      plotLines: [{value: 110, color: '#777777', width: 1, id: 'ageToLiveLine', label: { y:-5, text: '110', rotation: 0, style: { fontWeight: 'bold'} }}]
-    },
-    yAxis: {
-      title: { text: 'Year-End Balance' },
-      labels: {
-        formatter: function() {
-          return CurrencyFormatted(this.value, 'no_cent');
-        }
+      credits: { enabled: false },
+      legend: { enabled: false },
+      accessibility: {
+          description: 'Image description: Based on the user input, the year end balance for the account is shown.'
       },
-      minRange: 0.01,
-      min: 0,
-      plotLines: [{ value: 0, width: 1, color: '#808080' }]
-    },
-    tooltip: {
-      useHTML: true,
-      borderColor: '#aaaaaa',
-      shared: true,
-      followPointer: true,
-      crosshairs: true,
-      style: {
-        padding: 10,
-        borderRadius: 5,
-        borderWidth: 2,
-        shadow: true,
-        fontSize: '11px'
-      },
-      formatter: function() {
-        chart.xAxis[0].removePlotLine('tmpline');
-        var age = AgeDepleted;
-        if (monthsRemainder >= 12) { age++; }
-        var idx = this.x - rates_ages[0];
-        var output = '<table><tr><td><strong>Year ' + this.x + '</strong>:</td></tr>';
-        var installmentPayments = false;
-        var cit = '';
-        if (this.x <= age) { installmentPayments = true; }
-        if (this.x == age) { cit = '**'; }
-        if (installmentPayments) {
-          output += '<tr><td>With ' + frequency + ' payments of:</td><td align=right><strong>  '
-                        + CurrencyFormatted(payments_Amt[0]) + cit + '</strong></td></tr>';
-        }
-        var j = 0;
-        for (j=0; j<chart.series.length; j++) {
-          if ((chart.series[j].visible) && (chart.series[j].data.length > idx)) {
-            if (chart.series[j].data[idx]) {
-              output += '<tr align=right>';
-              output += '<td align=left>' + chart.series[j].name + ':</td><td align=right><strong>  ';
-              output += CurrencyFormatted(chart.series[j].data[idx].y) + '</strong></td>';
-              output += '</tr>';
-            }
+      title: { text: null },
+      xAxis: {
+          title: { text: 'Payment year' },
+          allowDecimals: false,
+          crosshair: true,
+          labels: { formatter: function () { return this.value; } },
+          accessibility: {
+              rangeDescription: 'Number of years making payments. '
           }
+      },
+      yAxis: {
+          title: { text: 'Year-end balance' },
+          labels: { formatter: function () { return CurrencyFormatted(this.value); } }
+      },
+      tooltip: {
+        formatter: function () {
+          return '<strong>Year</strong> ' + this.x + '<br>' + this.series.name + ': ' + CurrencyFormatted(this.y);
         }
-        output += '</table>';
-        chart.xAxis[0].addPlotLine({value: this.x, color: '#777777', width: 1, id: 'tmpline', label: { y:12, text: this.x, rotation: 0, style: { fontWeight: 'bold'}}});
-        return output;
-      }
-    },
-    legend: { enabled: false },
-//    legend: { layout: 'vertical', align: 'right', verticalAlign: 'top', x:5, y:26, borderWidth: 0 },
-    series: [{
-      name: 'Year-End Balance', marker: defcircle, color: colorSubGreen, data: lineFDbal, showInLegend: false, visible: true }, {
-      name: 'Installment Payment (Fixed Dollar)', marker: defcircle, color: colorSubGreen, data: line1, visible: false }]
+      },
+      plotOptions: {
+          area: {
+              pointStart: 1,
+              marker: { enabled: false, symbol: 'circle', radius: 2, states: { hover: { enabled: true } } }
+          }
+      },
+      series: [{ name: 'Year-end balance', data: yearEndBalance, color: '#89A54E' }]
   });
-
-  /* Table Writing */
-  var choice = frequency.charAt(0).toUpperCase() + frequency.slice(1);
-  if (choice == 'Annually') { choice = 'Annual'; }
-  var strHeader = '  <table class="tspStandard"><tr class="headingRow">'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">Year</th>'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">'+choice+' Payment</th>'
-        + '  <th class="packed normalWhiteSpace" style="white-space: normal;">Year-End Balance</th>'
-        + '  <th class="packed normalWhiteSpace leftBorder">Year</th>'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">'+choice+' Payment</th>'
-        + '  <th class="packed normalWhiteSpace" style="white-space: normal;">Year-End Balance</th>'
-
-        + tableRows + '</tr></table>';
-  $('#resultTableHolder').html(strHeader);
+  return chart;
 }
 
-function viewDetailReport(reportNum) {
-
-  var pageUrl = "retirementCalculatorReport.shtml?tabNumber=" + reportNum;
-  var qString = buildQueryString();
-  pageUrl += '&' + qString;
-  openWindow(pageUrl, 775, 600);
-}
 -->
 </script>

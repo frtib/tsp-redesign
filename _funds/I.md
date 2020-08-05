@@ -5,7 +5,7 @@ title: I fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_I.html
-  - /ifund
+  - /ifund/
 Fund_type: Individual
 Fund_name: I Fund
 Fund_order: 5
@@ -26,6 +26,7 @@ avg_annual_returns:
     five_yr: "-"
     ten_yr: "-"
     lifetime: "-"
+inception_date: 5/1/2001
 summary_update: 12/31/2019
 summary_details:
     assets: $54.3 billion
