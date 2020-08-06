@@ -31,7 +31,7 @@ function setValues(flag) {
   if (flag == 4) {
     setValues(3);
     $('#amountToReceive').val(500);
-    $('#rateOfReturn').val(3.235); 
+    $('#rateOfReturn').val(3.235);
     processPanel(4,0,5,0);
   }
   if (flag == 5) {
@@ -49,11 +49,11 @@ $(document).ready(function() {
   initValues(0);
 
   $('#resultSetOverview').click();
-  $('#resultSelectorOverviewTable').click();
-  $('#resultSelectorMonthlyTable').click();
-  $('#resultSelectorSingleTable').click();
-  $('#resultSelectorSpouseTable').click();
-  $('#resultSelectorOtherTable').click();
+  $('#resultSelectorOverviewCombined').click();
+  $('#resultSelectorMonthlyCombined').click();
+  $('#resultSelectorSingleCombined').click();
+  $('#resultSelectorSpouseCombined').click();
+  $('#resultSelectorOtherCombined').click();
 });
 -->
 </script>

@@ -1,0 +1,293 @@
+section {
+  &.overview,
+  &.monthly-payments,
+  &.single-life,
+  &.joint-life-other,
+  &.joint-life-spouse {
+    border-top: 1px dotted $color-gray;
+
+    ul.usa-unstyled-list {
+      &.visual {
+        max-width: none;
+        li {
+          padding: 2rem;
+        }
+      }
+    }
+
+    table {
+      border: 1px solid $color-gray-light;
+      thead,
+      tbody {
+        tr {
+          th {
+            text-align: center;
+          }
+        }
+      }
+
+      thead {
+        border-bottom: 2px solid $color-gray;
+
+        tr {
+          th,
+          td {
+            &:first-child {
+              border-top: none;
+              border-bottom: none;
+              background-color: $color-gray-lightest;
+            }
+            border: 1px solid $color-gray-light;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+
+          th,
+          td {
+            border: 1px dotted $color-gray-light;
+            text-align: right;
+          }
+
+          th {
+            text-align: center;
+            background-color: $color-gray-lightest;
+          }
+        }
+      }// end tbody
+    }// end table
+  }
+
+  &.overview {
+    thead {
+      tr {
+
+        &:nth-child(1) { // first header row
+          th {
+            &:nth-child(2) {
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(3) {
+              background-color: $color-gold-lightest;
+            }
+            &:nth-child(4) {
+              background-color: $color-green-lightest;
+            }
+          }
+        }
+
+        &:nth-child(2) { // second header row
+          th {
+            &:nth-child(n+2) {
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(4) {
+              background-color: $color-gold-lightest;
+            }
+            &:nth-child(n+5) {
+              background-color: $color-green-lightest;
+            }
+          }
+        }
+
+        &:nth-child(3) { // third header row
+          th {
+            &:nth-child(n+2) {
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(6) {
+              background-color: $color-gold-lightest;
+            }
+            &:nth-child(n+7) {
+              background-color: $color-green-lightest;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            &:nth-child(n+2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+6){ // Select all but the first five
+              background-color: $color-gold-lightest;
+            }
+            &:nth-child(n+7){ // Select all but the first six
+              background-color: $color-green-lightest;
+            }
+          }
+        }
+      }
+    }// end tbody
+  }
+
+  &.joint-life-spouse {
+
+    thead {
+      tr {
+        th {
+          &:nth-child(n+2) { // Select all but the first
+            background-color: $color-primary-alt-lightest;
+          }
+          &:nth-child(n+6) { // Select all but the first five
+            background-color: $color-gold-lightest;
+          }
+        }
+        &:first-child {
+          th {
+            &:nth-child(n+2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+3) { // Select all but the first two
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            &:nth-child(n+2) { // Select only the first two
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+6){ // Select only the fifth
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }// end tbody
+  } // end .joint-life-spouse
+
+  &.joint-life-other {
+
+    thead {
+      tr {
+        th {
+          &:nth-child(n+2) { // Select all but the first
+            background-color: $color-primary-alt-lightest;
+          }
+          &:nth-child(n+4) { // Select all but the first three
+            background-color: $color-gold-lightest;
+          }
+        }
+        &:first-child {
+          th {
+            background-color: $color-gray-lightest;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            &:nth-child(n+2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+4){ // Select all but the first three
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }// end tbody
+  } // end .joint-life-other
+
+  &.monthly-payments {
+
+    thead {
+      tr {
+        th {
+          &:nth-child(n+2) { // Select all but the first
+            background-color: $color-primary-alt-lightest;
+          }
+
+          &:nth-child(n+4) { // Select all but the first three
+            background-color: $color-gold-lightest;
+          }
+        }
+
+        &:first-child {
+          th {
+            &:nth-child(2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(3) { // Select all but the first two
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            &:nth-child(n+2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+4){ // Select all but the first three
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }// end tbody
+  } // end .monthly-payments
+
+  &.single-life {
+
+    thead {
+      tr {
+        th {
+          &:nth-child(n+2) { // Select all but the first
+            background-color: $color-primary-alt-lightest;
+          }
+          &:nth-child(n+5) { // Select all but the first four
+            background-color: $color-gold-lightest;
+          }
+        }
+
+        &:first-child {
+          th {
+            &:nth-child(n+2) { // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+3) { // Select all but the first two
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            &:nth-child(n+2) { // Select only the first two
+              background-color: $color-primary-alt-lightest;
+            }
+            &:nth-child(n+5){ // Select only the fifth
+              background-color: $color-gold-lightest;
+            }
+          }
+        }
+      }
+    }// end tbody
+  } // end .single-life
+
+}// end section

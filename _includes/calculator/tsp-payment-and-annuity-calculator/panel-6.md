@@ -10,7 +10,7 @@ Results NAME panel (3) for CALC.
 
 Based on the information that you provided, the following payment amounts have been calculated for you. Click on the following tabs to see all of the payment options and amounts available to you.
 
-Estimated monthly annuity payments are based on an **annuity interest rate index of: 1.209%.**
+Estimated monthly annuity payments are based on an <strong>annuity interest rate index of: <span id="annuity-interest-rate">-<</span>%.</strong>
 
 {% include calculator/div-panel-form-field.html
   fieldID="panel-5.2" id="resultSet"
@@ -25,11 +25,17 @@ Estimated monthly annuity payments are based on an **annuity interest rate index
 <section id="section-resultSetOverview" class="overview hide">
   <h2>Overview</h2>
   {% include selectResult.html selectorID='Overview' %}
+  <div id="RMDnote1" class="hide">** Your year-end balance was further reduced due to a
+  <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
+  </div>
 </section>
 
-<section id="section-resultSetMonthly" class="monthly-payments hide"> 
+<section id="section-resultSetMonthly" class="monthly-payments hide">
   <h2>TSP monthly payments</h2>
   {% include selectResult.html selectorID='Monthly' %}
+  <div id="RMDnote2" class="hide">** Your year-end balance was further reduced due to a
+  <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
+  </div>
 </section>
 
 <section id="section-resultSetSingle" class="single-life hide">
@@ -40,11 +46,13 @@ Estimated monthly annuity payments are based on an **annuity interest rate index
 <section id="section-resultSetSpouse" class="joint-life-spouse hide">
   <h2>Joint life with spouse annuity</h2>
   {% include selectResult.html selectorID='Spouse' %}
+  <span id="noSpouse"></span>
 </section>
 
 <section id="section-resultSetOther" class="joint-life-other hide">
   <h2>Joint life with other survivor annuity</h2>
   {% include selectResult.html selectorID='Other' %}
+  <span id="noOther"></span>
 </section>
 
 
