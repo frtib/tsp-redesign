@@ -6,9 +6,9 @@ Results NAME panel (3) for CALC.
 {% assign gridClass2 = include.gridClass2 | default: 'results' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
-<section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}" markdown="1">
+<section id="panel-{{ panelID }}" class="calculator-panel " style="{{ hide }}" markdown="1">
 
-Based on the information that you provided, the following payment amounts have been calculated for you. Click on the following tabs to see all of the payment options and amounts available to you.
+Based on the information that you provided, the following payment amounts have been calculated for you.
 
 Estimated monthly annuity payments are based on an <strong>annuity interest rate index of: <span id="annuity-interest-rate">-<</span>%.</strong>
 
@@ -22,41 +22,47 @@ Estimated monthly annuity payments are based on an <strong>annuity interest rate
   explanation=""
 %}
 
-<section id="section-resultSetOverview" class="overview hide">
+<section id="section-resultSetOverview" class="projection overview hide">
   <h2>Overview</h2>
   {% include selectResult.html selectorID='Overview' %}
-  <div id="RMDnote1" class="hide">** Your year-end balance was further reduced due to a
-  <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
+  <div id="RMDnote1" class="footnotes hide">
+  <ol>
+  <li>Your year-end balance was further reduced due to a <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.</li>
+  </ol>
   </div>
 </section>
 
-<section id="section-resultSetMonthly" class="monthly-payments hide">
+<section id="section-resultSetMonthly" class="projection monthly-payments hide">
   <h2>TSP monthly payments</h2>
   {% include selectResult.html selectorID='Monthly' %}
-  <div id="RMDnote2" class="hide">** Your year-end balance was further reduced due to a
+  <!-- <div id="RMDnote2" class="hide"><sup>1</sup> Your year-end balance was further reduced due to a
   <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
+  </div> -->
+  <div id="RMDnote2" class="footnotes hide">
+  <ol>
+  <li>Your year-end balance was further reduced due to a <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.</li>
+  </ol>
   </div>
 </section>
 
-<section id="section-resultSetSingle" class="single-life hide">
+<section id="section-resultSetSingle" class="projection single-life hide">
   <h2>Single life annuity</h2>
   {% include selectResult.html selectorID='Single' %}
 </section>
 
-<section id="section-resultSetSpouse" class="joint-life-spouse hide">
+<section id="section-resultSetSpouse" class="projection joint-life-spouse hide">
   <h2>Joint life with spouse annuity</h2>
   {% include selectResult.html selectorID='Spouse' %}
   <span id="noSpouse"></span>
 </section>
 
-<section id="section-resultSetOther" class="joint-life-other hide">
+<section id="section-resultSetOther" class="projection joint-life-other hide">
   <h2>Joint life with other survivor annuity</h2>
   {% include selectResult.html selectorID='Other' %}
   <span id="noOther"></span>
 </section>
 
-
-<ul class="usa-accordion icons">
+<ul class="usa-accordion icons adjust">
 <!-- ADJUST YOUR RESULTS -->
 {% include calculator/accordion-start.html expanded=false divID='adjust-results'
     icon='fal fa-sliders-v' title='Adjust your results' inList=true %}

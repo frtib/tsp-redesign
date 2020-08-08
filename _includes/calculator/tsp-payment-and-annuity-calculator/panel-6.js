@@ -122,6 +122,7 @@ function tableHeader (tableName) {
     headerHTML1 += sideScrollTH2('', 'col', '', '', 'Level payments', false);
     headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Level payments', false);
     headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    // (id, prefix, scope, xclass, txt, nl)
     var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
     headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
     headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
@@ -182,7 +183,7 @@ function onSuccessAnnuities(divName, data) {
     return true;
 }
 function onFailAnnuities(divName, textStatus, errorThrown) {
-    $('#'+divName).html('unavailable');
+    $('#'+divName).html('Ineligible');
 
     console.log(' dav, clear out old work')
     return true;
@@ -415,7 +416,7 @@ function buildOverview(values, uv) {
     fdPay.push( { x: year, y: fdPayments[year], z : fdBalance[year] });
     if (RMDpayment[year] > 0.0) {
       $('#RMDnote1').removeClass('hide');
-      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'**', false);
+      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'<sup>1</sup>', false);
     } else {
       row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdBalance[year]), false);
     }
@@ -461,7 +462,7 @@ function buildMonthly(values, uv) {
     fdPay.push( { x: year, y: fdPayments[year], z : fdBalance[year] });
     if (RMDpayment[year] > 0.0) {
       $('#RMDnote1').removeClass('hide');
-      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'**', false);
+      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'<sup>1</sup>', false);
     } else {
       row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdBalance[year]), false);
     }
@@ -541,7 +542,7 @@ function buildHighchart(divName, seriesData, desc, RMDflag) {
           var rc = '<strong>Age</strong> ' + year + '<br><br><br>';
           var pts = this.points.length;
           for (var i = 0; i < pts; i++) {
-            if (RMDflag && (i == 0)) { if (RMDpayment[year] > 0.0) { RMDnote = '**'; } } else { RMDnote = ''; }
+            if (RMDflag && (i == 0)) { if (RMDpayment[year] > 0.0) { RMDnote = '<sup>1</sup>'; } } else { RMDnote = ''; }
             var point = this.points[i];
             rc += point.series.name + ': <strong>' + CurrencyFormatted(point.y) + '</strong><br>';
             if (point.point.z) {
