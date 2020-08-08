@@ -114,13 +114,17 @@ function tableHeader (tableName) {
     var headerHTML0 = sideScrollTH2('', 'col', '', '', '', false);
     headerHTML0 += sideScrollTH2('', 'colgroup', '', 'colspan="4"', 'Monthly payment', false);
     headerHTML0 += sideScrollTH2('', 'col', '', '', 'Single annuity', false);
-    headerHTML0 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Joint annuity with '+getDependent().toLowerCase(), false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML0 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Joint annuity with '+getDependent().toLowerCase(), false);
+    }
     headerHTML0 = sideScrollWrapper('', 'tr', '', '', headerHTML0, false);
     var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
     headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Fixed dollar', false);
     headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Life Expectancy', false);
     headerHTML1 += sideScrollTH2('', 'col', '', '', 'Level payments', false);
-    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Level payments', false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Level payments', false);
+    }
     headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
     var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
     headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
@@ -128,8 +132,10 @@ function tableHeader (tableName) {
     headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
     headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
     headerHTML2 += sideScrollTH('', 'col', '', '(Basic)', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '(100% survivor)', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '(50% survivor)', false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML2 += sideScrollTH('', 'col', '', '(100% survivor)', false);
+      headerHTML2 += sideScrollTH('', 'col', '', '(50% survivor)', false);
+    }
     headerHTML2 = sideScrollWrapper('', 'tr', '', 'third-level', headerHTML2, false);
     return sideScrollWrapper('  ', 'thead', '', '', headerHTML0 + headerHTML1 + headerHTML2, true);
   }
@@ -276,7 +282,7 @@ function buildSingle(values, uv) {
     'Options for single annuities.', true);
 }
 function buildJointSpouse(values, uv) {
-  if (getDependent() != 'Spouse') {
+  if ((getDependent() != 'Spouse') || (getHaveDependent() != 'Yes'))  {
     var msg = "You did not select a joint life annuity with a spouse.";
     $('#resultSelectorSpouse-table').html('');
     $('#resultSelectorSpouse-graph').html('');
@@ -343,7 +349,7 @@ function buildJointSpouse(values, uv) {
     'Options for joint annuities w/ spouse.', true);
 }
 function buildJointOther(values, uv) {
-  if (getDependent() != 'Other') {
+  if ((getDependent() != 'Other') || (getHaveDependent() != 'Yes')) {
     var msg = "You did not select a joint life annuity with someone other than a spouse.";
     $('#resultSelectorOther-table').html('');
     $('#resultSelectorOther-graph').html('');
@@ -405,6 +411,7 @@ function buildOverview(values, uv) {
       level_100 = 'unavailable';
     }
   }
+  var haveDependent = getHaveDependent();
 
   var fdPay = [], lePay = [], slBasic = [], ja100 = [], ja50 = [];
 
@@ -425,22 +432,33 @@ function buildOverview(values, uv) {
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(leBalance[year]), false);
     row += sideScrollWrapper('', 'td', '', '', level_noadded, false);
     slBasic.push(parseFloat(values['level_noadded'].toFixed(0)));
-    row += sideScrollWrapper('', 'td', '', '', level_100, false);
-    if (level_100 != 'unavailable') { ja100.push(parseFloat(values['level_100'].toFixed(0))); }
-    row += sideScrollWrapper('', 'td', '', '', level_50, false);
-    ja50.push(parseFloat(values['level_50'].toFixed(0)));
+    if (getHaveDependent() == 'Yes') {
+      row += sideScrollWrapper('', 'td', '', '', level_100, false);
+      if (level_100 != 'unavailable') { ja100.push(parseFloat(values['level_100'].toFixed(0))); }
+      row += sideScrollWrapper('', 'td', '', '', level_50, false);
+      ja50.push(parseFloat(values['level_50'].toFixed(0)));
+    }
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
   var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
 
-  var seriesData = [
-    { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
-    { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
-    { name: 'Single Life Annuity (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
-    { name: 'Joint Annuity/Other (100% Survivor)', data: ja100, color: clJoint100, marker: { symbol: 'triangle' } },
-    { name: 'Joint Annuity/Other (50% Survivor)', data: ja50, color: clJoint50, marker: { symbol: 'triangle' } }
-  ];
+  var seriesData;
+  if (getHaveDependent() == 'Yes') {
+    seriesData = [
+      { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
+      { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
+      { name: 'Single Life Annuity (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
+      { name: 'Joint Annuity/Other (100% Survivor)', data: ja100, color: clJoint100, marker: { symbol: 'triangle' } },
+      { name: 'Joint Annuity/Other (50% Survivor)', data: ja50, color: clJoint50, marker: { symbol: 'triangle' } }
+    ];
+  } else {
+    seriesData = [
+      { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
+      { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
+      { name: 'Single Life Annuity (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } }
+    ];
+  }
 
   $('#resultSelectorOverview-table').html(tableHTML);
   buildHighchart('resultSelectorOverview-graph', seriesData,
