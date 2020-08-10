@@ -150,14 +150,10 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
     FRTIB-2  | Personnel Security Investigation Files
   </button>
   <div id="a2" class="usa-accordion-content" markdown="1">
-  **Summary of Purpose:**
-    Document and support decisions regarding clearance for access to sensitive FRTIB information and the suitability, eligibility, and fitness for service of applicants for federal employment and contract positions, including students, interns, or volunteers to the extent their duties require access to federal facilities, information systems, or applications. The records may also be used to help streamline and make more efficient the investigations and adjudications process generally. The records may also be used to document security violations and supervisory actions taken in response to such violations.
 
-  **Exemptions:**
-    Subsections (c)(3); (d); (e)(1); (e)(4)(G), (H), (I); and (f) of 5 U.S.C. 552a
+  **Federal Register** [85 FR 43654, 43655 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
-  **Federal Register**
-    [85 FR 43654, 43655 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
+  **SYSTEM NAME AND NUMBER:** FRTIB-2, Personnel Security Investigation Files.
 
   **SECURITY CLASSIFICATION:** Most personnel identity verification records are not classified. However, in some cases, records of certain individuals, or portions of some records may be classified in the interest of national security.
 
@@ -213,11 +209,11 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
 
   **RECORD ACCESS PROCEDURES:** Individuals seeking to determine whether this system of records contains information about themselves should submit a written request to the appropriate entity below, and include the following information:
 
-  1. Full name;
-  2. Any available information regarding the type of record involved;
-  3. The address to which the record information should be sent; and
-  4. You must sign your request
-  {: .alpha}
+  > 1. Full name;
+  > 2. Any available information regarding the type of record involved;
+  > 3. The address to which the record information should be sent; and
+  > 4. You must sign your request
+  > {:.alpha}
 
   1. For records maintained by FRTIB, submit a written request to the FOIA Officer, FRTIB, 77 K Street NE, Washington, DC 20002; or
   2. For records maintained by the Office of Personnel Management, submit a written request to the FOI/PA, Office of Personnel Management, Federal Investigative Services, P.O. Box 618, 1137 Branchton Road, Boyers, PA 16018-0618.
@@ -264,14 +260,9 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a5" class="usa-accordion-content" markdown="1">
 
-  **Summary of Purpose**  
-  Perform agency functions involving employee leave, attendance, and payments
+  **Federal Register** [85 FR 43654, 43658 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
-  **Exemptions**  
-  None
-
-  **Federal Register**
-  [85 FR 43654, 43658 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
+  **SYSTEM NAME AND NUMBER:** FRTIB-5, Employee Payroll, Leave, and Attendance Records.
 
   **SECURITY CLASSIFICATION:** Unclassified.
 
@@ -366,14 +357,9 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a7" class="usa-accordion-content" markdown="1">
 
-  **Summary of Purpose**
-  Collect and maintain records on FRTIB contractors and consultants
+  **Federal Register** [85 FR 43654, 43660 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
-  **Exemptions**  
-  None
-
-  **Federal Register**
-  [85 FR 43654, 43660 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
+  **SYSTEM NAME AND NUMBER:** FRTIB-7, Contractor and Consultant Records
 
   **SECURITY CLASSIFICATION:** Unclassified.
 
@@ -428,6 +414,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   2. Any available information regarding the type of record involved;
   3. The address to which the record information should be sent; and
   4. You must sign your request.
+  {:.alpha}
 
   Attorneys or other persons acting on behalf of an individual must provide written authorization from that individual, such as a Power of Attorney, in order for the representative to act on their behalf. Individuals requesting access must also comply with FRTIB’s Privacy Act regulations regarding verification of identity and access to such records, available at 5 CFR part 1630.
 
@@ -459,21 +446,15 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a9" class="usa-accordion-content" markdown="1">
 
-  **Summary of Purpose**  
-  Contact FRTIB personnel and other individuals in the event of an emergency or other event affecting FRTIB operations
+  **Federal Register** [85 FR 43654, 43662 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
 
-  **Exemptions**  
-  None
-
-  **Federal Register**
-  [85 FR 43654, 43662 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=188)
+  **SYSTEM NAME AND NUMBER:** FRTIB-9, Emergency Notification Files.
 
   **SECURITY CLASSIFICATION:** Unclassified.
 
   **SYSTEM LOCATION:** Records are located at the Federal Retirement Thrift Investment Board, 77 K Street NE, Suite 1000, Washington, DC 20002. Records may also be located in additional locations in connection with cloud-based services and kept at an additional location as backup for Business Continuity purposes.
 
-  **SYSTEM MANAGER(S):** Chief, Business Continuity and Security Services Division, 77 K
-Street NE., Suite 1000, Washington, DC 20002, (202) 942-1600.
+  **SYSTEM MANAGER(S):** Chief, Business Continuity and Security Services Division, 77 K Street NE., Suite 1000, Washington, DC 20002, (202) 942-1600.
 
   **AUTHORITY FOR MAINTENANCE OF THE SYSTEM:** 5 U.S.C. 8474; 44 U.S.C. 3101; E.O. 12656; and Presidential Decision Directive 67.
 
@@ -530,7 +511,7 @@ Street NE., Suite 1000, Washington, DC 20002, (202) 942-1600.
 
   **EXEMPTIONS PROMULGATED FOR THE SYSTEM:** None.
 
-  **HISTORY:** 55 FR 18949 (May 7, 1990); 71 FR 64706 (Nov. 3, 2006); 77 FR 11534 (Feb. 27, 2012); 80 FR 43428 (July 22, 2015); 85 FR 43654 (July 17, 2020). <!-- [85 FR 43654 (July 17, 2020)]({{ site.baseurl }}/exit/?idx=188). -->
+  **HISTORY:** 55 FR 18949 (May 7, 1990); 71 FR 64706 (Nov. 3, 2006); 77 FR 11534 (Feb. 27, 2012); 80 FR 43428 (July 22, 2015); 85 FR 43654 (July 17, 2020).
   </div>
 </li>
 <!-- FRTIB-10 -->
@@ -1142,7 +1123,7 @@ Street NE., Suite 1000, Washington, DC 20002, (202) 942-1600.
   <button class="usa-accordion-button"
     aria-expanded="false"
     aria-controls="a19">
-    FRTIB-19  | Freedom of Information Act (FOIA) Records
+    FRTIB-19 | Freedom of Information Act Records
   </button>
   <div id="a19" class="usa-accordion-content" markdown="1">
 
