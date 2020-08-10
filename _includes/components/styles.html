@@ -9,6 +9,12 @@ If page has style list, then use that.  If not, include the uswds style script.
 <link rel="stylesheet" href="{{ styleFile }}" media="screen">
 {% endfor %}
 {% else %}
+{% comment %}
+<!-- commented out 'include styles.html' in order to change media="screen" to media="all" -->
 {% include styles.html %}
+{% endcomment %}
+<link rel="stylesheet"
+  href="/assets/css/main.css"
+  media="all">
 {% endif %}
 <!-- components/styles -->
