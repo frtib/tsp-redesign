@@ -290,9 +290,10 @@ function onSuccess(divName, data) {
     $('#interest-rate').html(data);
     return true;
 }
+var backupIntRate = 2.00;
 function onFail(divName, textStatus, errorThrown) {
     $('#loan-rate').html('is unavailable');
-    $('#interest-rate').html('unavailable, 3% used');
+    $('#interest-rate').html('unavailable, '+ backupIntRate + '% used');
     return true;
 }
 

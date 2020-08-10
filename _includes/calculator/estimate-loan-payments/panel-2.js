@@ -69,6 +69,11 @@ function calculatePayments() {
   var errmsg = '';
   var num_mnths, num_pmts, pmt_amt;
 
+  // test for rate issue
+  if (isNaN(intRate)) {
+    intRate = backupIntRate / 100.0; // 0.02;
+  }
+
   if (payType == 'repayTime') {
     num_mnths = years * 12 + months;
     if (num_mnths < 1) { num_mnths = 1; }
