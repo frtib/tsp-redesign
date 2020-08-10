@@ -149,17 +149,16 @@ function calculate() {
   userValues['ageNow'] = getPosInteger('ageNow', -1);
   userValues['ageFrom'] = getPosInteger('ageFrom', -1);
   userValues['ageToLive'] = getPosInteger('ageToLive', -1);
-  userValues['birthMonth'] = getBirthMonth();
-  userValues['birthMonthIdx'] = getBirthMonthIdx(userValues['birthMonth']);
   userValues['amountToReceive'] = getPosInteger('amountToReceive', -1);
   userValues['rateOfReturn'] = getPosFloat('rateOfReturn', -1);
   userValues['monthlyRate'] = monthlyCompoundFactor(userValues['rateOfReturn'], 12.0);
   userValues['haveDependent'] = getHaveDependent();
   userValues['dependent'] = getDependent();
   userValues['dependentAge'] = getPosInteger('dependentAge', -1);
+  hideUnchoosenOptions();
   startCalculateAnnuities(userValues);
 
-  var le_factor = get_life_expectancy_factor(userValues['ageNow'], userValues['birthMonthIdx']);
+  var le_factor = get_life_expectancy_factor(userValues['ageNow']);
   calculateMonthlyPayments(userValues);
 }
 
@@ -189,7 +188,7 @@ function onSuccessAnnuities(divName, data) {
     return true;
 }
 function onFailAnnuities(divName, textStatus, errorThrown) {
-    $('#'+divName).html('Ineligible');
+    $('#'+divName).html('unavailable');
 
     var errorMsg = somethingNotWorking();
     $('#resultSelectorOverview-table').html(errorMsg);
@@ -379,8 +378,8 @@ function buildJointOther(values, uv) {
   var level_100_cash = CurrencyFormatted(values['level_100_cash'].toFixed(0));
   var level_50_cash = CurrencyFormatted(values['level_50_cash'].toFixed(0));
   if ((parseInt(uv['ageNow']) - parseInt(uv['dependentAge'])) > 10) {
-    level_100 = 'unavailable';
-    level_100_cash = 'unavailable';
+    level_100 = 'Ineligible';
+    level_100_cash = 'Ineligible';
   }
 
   var jl100 = [], jl50 = [], jl100cash = [], jl50cash = [];
@@ -389,11 +388,11 @@ function buildJointOther(values, uv) {
   for (var year = start; year <= end; year++) {
     row = sideScrollTH('', 'row', '', year, false);
     row += sideScrollWrapper('', 'td', '', '', level_100, false);
-    if (level_100 != 'unavailable') { jl100.push(parseFloat(values['level_100'].toFixed(0))); }
+    if (level_100 != 'Ineligible') { jl100.push(parseFloat(values['level_100'].toFixed(0))); }
     row += sideScrollWrapper('', 'td', '', '', level_50, false);
     jl50.push(parseFloat(values['level_50'].toFixed(0)));
     row += sideScrollWrapper('', 'td', '', '', level_100_cash, false);
-    if (level_100 != 'unavailable') { jl100cash.push(parseFloat(values['level_100_cash'].toFixed(0))); }
+    if (level_100 != 'Ineligible') { jl100cash.push(parseFloat(values['level_100_cash'].toFixed(0))); }
     row += sideScrollWrapper('', 'td', '', '', level_50_cash, false);
     jl50cash.push(parseFloat(values['level_50_cash'].toFixed(0)));
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
@@ -605,9 +604,7 @@ function calculateMonthlyPayments(uv) {
    var yr, mth;
    var RMD = 0.0;
    var RMDage = 72;
-   // if (uv['birthMonthIdx'] >= 7) { RMDage = 70; }
-   var leFactors = get_life_expectancy_factors(uv['birthMonthIdx']);
-   leFactors = get_life_expectancy_factors(9);
+   var leFactors = get_life_expectancy_factors();
    fdBalance[start-1] = parseFloat(uv['amountToUse']);
    leBalance[start-1] = parseFloat(uv['amountToUse']);
    fdPayments[start-1] = parseFloat(uv['amountToReceive']);
@@ -645,5 +642,17 @@ function calculateMonthlyPayments(uv) {
    buildMonthly([], uv);
 }
 
+function hideUnchoosenOptions() {
+  $('#resultSetSpouse-li').addClass('hide');
+  $('#resultSetOther-li').addClass('hide');
+  if (getHaveDependent() == 'Yes') {
+    if (getDependent() == 'Spouse') {
+      $('#resultSetSpouse-li').removeClass('hide');
+    }
+    if (getDependent() == 'Other') {
+      $('#resultSetOther-li').removeClass('hide');
+    }
+  }
+}
 -->
 </script>

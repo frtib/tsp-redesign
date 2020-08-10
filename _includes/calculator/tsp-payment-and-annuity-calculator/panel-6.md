@@ -18,7 +18,7 @@ Estimated monthly annuity payments are based on an <strong>annuity interest rate
   radioIDs="resultSetOverview,resultSetMonthly,resultSetSingle,resultSetSpouse,resultSetOther"
   radioLabels="Overview,TSP monthly payments, Single life annuity, Joint life with spouse annuity, Joint life with other survivor annuity"
   inputClass="usa-unstyled-list"   onBlur="resultSetSelect();"  dontOpenOuterDiv=true
-  prompt="Choose result set:"
+  prompt="Choose result set:" radioButtonNames=true
   explanation=""
 %}
 
@@ -73,8 +73,7 @@ Estimated monthly annuity payments are based on an <strong>annuity interest rate
 {% include calculator/AYR-table.html caption="Length of retirement planned" showPanel=3 gotoAnchor='panel3' %}
 {% include calculator/AYR-table-row.html prompt="Your current age:" rowID='ageNowAYR' %}
 {% include calculator/AYR-table-row.html prompt="Age you expect to begin receiving income:" rowID='ageFromAYR' %}
-{% include calculator/AYR-table-row.html prompt="Age to which to expect to live:" rowID='ageToLiveAYR' %}
-{% include calculator/AYR-table-row.html closeTable=true prompt="Month of your birth:" rowID='birthMonthAYR' %}
+{% include calculator/AYR-table-row.html closeTable=true prompt="Age to which to expect to live:" rowID='ageToLiveAYR' %}
 
 {% include calculator/AYR-table.html caption="Monthly income amount" showPanel=4 gotoAnchor='panel4' %}
 {% include calculator/AYR-table-row.html prompt="Income amount you would like to receive each month:" rowID='amountToReceiveAYR' %}

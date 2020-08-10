@@ -98,12 +98,12 @@ Results panel (4) for paycheck esitomator.
   </span>
 </div>
 <!-- DONALD:  This is the end of the zoom feature -->
-  <div id="chartResult">GRAPH</div>
+  <div id="chartResult"></div>
 </div>
 <!-- DONALD table HTML is here -->
 <div id="show-data-table" class="usa-width-one-whole" markdown="1">
   <section id="{{chartName}}-section" class="{{chartName}}-table">
-    <div id="{{chartName}}-table" class="table-side-scroll">TABLE</div>
+    <div id="{{chartName}}-table" class="table-side-scroll"></div>
   </section>
 </div> <!-- END div.usa-width-one-whole -->
 <div id="show-data-footnote" class="usa-width-one-whole"></div>

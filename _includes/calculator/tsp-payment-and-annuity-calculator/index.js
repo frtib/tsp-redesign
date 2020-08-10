@@ -25,7 +25,6 @@ function setValues(flag) {
     $('#ageNow').val(40);
     $('#ageFrom').val(65);
     $('#ageToLive').val(95);
-    $('#birthMonth').val('March');
     processPanel(3,0,4,0);
   }
   if (flag == 4) {

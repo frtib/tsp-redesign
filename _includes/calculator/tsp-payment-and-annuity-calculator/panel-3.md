@@ -1,7 +1,7 @@
 {% comment %}
 Name middle panels (2) for CALC.
 {% endcomment %}
-{% assign panelID = include.panelID | default: 2 %} 
+{% assign panelID = include.panelID | default: 2 %}
 {% assign hide = 'display: block;' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
@@ -30,16 +30,6 @@ Name middle panels (2) for CALC.
   placeholder="" onBlur="checkAges(false);"
   prompt="To what age do you expect to live?"
   explanation=explanation3_3  
-%}
-
-{% include calculator/div-panel-form-field.html
-  fieldID="panel-3.4" id="birthMonth"
-  inputType="selectList"
-  radioIDs="Choose month,January,February,March,April,May,June,July,August,September,October,November,December"
-  radioLabels="Choose month,January,February,March,April,May,June,July,August,September,October,November,December"
-  inputClass=""
-  onBlur="birthMonthGood(false);" prompt="Month in which you were born:"
-  explanation=""
 %}
 
 {% include calculator/button-block.html panelID=panelID prev=2 next=4 %}

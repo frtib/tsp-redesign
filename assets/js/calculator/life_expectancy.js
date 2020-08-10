@@ -1,4 +1,4 @@
-function get_life_expectancy_factors(month) {
+function get_life_expectancy_factors() {
   var lifeExpect = [];
   lifeExpect[0] = 82.4;
   lifeExpect[1] = 81.6;
@@ -130,9 +130,9 @@ function get_life_expectancy_factors(month) {
   return factors;
 }
 
-function get_life_expectancy_factor(age, month) {
+function get_life_expectancy_factor(age) {
   if (age < 0) { age = 0; }
   if (age > 115) { age = 115; }
-  var factors = get_life_expectancy_factors(month);
+  var factors = get_life_expectancy_factors();
   return factors[age];
 }

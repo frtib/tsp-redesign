@@ -7,7 +7,7 @@ This is the javascript specific to panel 2.
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
-  return birthMonthGood(forceValue) & checkAges(forceValue);
+  return checkAges(forceValue);
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
@@ -81,7 +81,7 @@ function ageToLiveGood(submit) {
     }
   }
 
-  $('#ageToLiveAYR').html(ageToLive); 
+  $('#ageToLiveAYR').html(ageToLive);
   return clearError('ageToLive');
 }
 

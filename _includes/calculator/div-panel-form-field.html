@@ -6,6 +6,7 @@ This script produces an input area for calculator panels.
 {% assign H2 = include.H2 | default: '' %}
 {% assign radioIDs = include.radioIDs | default: 'radioIDs' %}
 {% assign radioLabels = include.radioLabels | default: 'radioLabels' %}
+{% assign radioButtonNames = include.radioButtonNames | default: false %}
 {% assign ulID = include.ulID | default: '' %}
 {% assign name = include.name | default: id %}
 {% assign dataFormat = include.dataFormat | default: '' %}
@@ -95,10 +96,13 @@ This script produces an input area for calculator panels.
       {% assign ids = radioIDs | split: ',' %}
       {% assign labels = radioLabels | split: ',' %}
       {% assign loops = ids.size | minus: 1 %}
+      {% assign buttonRowName = '' %}
       {% for i in (0..loops) %}
-        <li>
-        <input id="{{ids[i] | strip}}" aria-labelledby="{{ids[i] | strip}}-label" type="radio" name="{{id}}" value="{{ids[i] | strip}}" {{onBlur}}>
-        <label id="{{ids[i] | strip}}-label" for="{{ids[i] | strip}}">{{labels[i] | strip}}</label>
+        {% assign idStrip = ids[i] | strip %}
+        {% if radioButtonNames %}{% assign buttonRowName = "id='" | append: idStrip | append: "-li'" %}{% endif %}
+        <li {{buttonRowName}}>
+        <input id="{{idStrip}}" aria-labelledby="{{idStrip}}-label" type="radio" name="{{id}}" value="{{idStrip}}" {{onBlur}}>
+        <label id="{{idStrip}}-label" for="{{idStrip}}">{{labels[i] | strip}}</label>
         </li>
       {% endfor %}
       </ul>
