@@ -12,12 +12,23 @@ panelGood[{{ panelID }}] = function(forceValue) {
 
 panelEnter[{{ panelID }}] = function(panel) {
     // calculate and set values here
+    hideUnchoosenOptions();
+    resultSetSelect();
     calculate();
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
+}
+
+function getResultSet() {
+  if ($('#resultSetOverview').prop('checked')) { return 'overview'; }
+  if ($('#resultSetMonthly').prop('checked')) { return 'monthly'; }
+  if ($('#resultSetSingle').prop('checked')) { return 'single'; }
+  if ($('#resultSetSpouse').prop('checked')) { return 'spouse'; }
+  if ($('#resultSetOther').prop('checked')) { return 'other'; }
+  return '';
 }
 
 function resultSetSelect() {
@@ -155,7 +166,6 @@ function calculate() {
   userValues['haveDependent'] = getHaveDependent();
   userValues['dependent'] = getDependent();
   userValues['dependentAge'] = getPosInteger('dependentAge', -1);
-  hideUnchoosenOptions();
   startCalculateAnnuities(userValues);
 
   var le_factor = get_life_expectancy_factor(userValues['ageNow']);
@@ -648,10 +658,15 @@ function hideUnchoosenOptions() {
   if (getHaveDependent() == 'Yes') {
     if (getDependent() == 'Spouse') {
       $('#resultSetSpouse-li').removeClass('hide');
+      if ($('#resultSetOther').prop('checked')) { $('#resultSetSpouse').prop('checked', true)}
     }
     if (getDependent() == 'Other') {
       $('#resultSetOther-li').removeClass('hide');
+      if ($('#resultSetSpouse').prop('checked')) { $('#resultSetOther').prop('checked', true)}
     }
+  } else {
+    if ($('#resultSetOther').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
+    if ($('#resultSetSpouse').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
   }
 }
 -->
