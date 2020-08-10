@@ -40,6 +40,9 @@ dap_agency: FRTIB&pua=ua-33523145-2
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
 
 scripts:
   - /assets/uswds/js/uswds.min.js
