@@ -191,7 +191,20 @@ function onSuccessAnnuities(divName, data) {
 function onFailAnnuities(divName, textStatus, errorThrown) {
     $('#'+divName).html('Ineligible');
 
-    console.log(' dav, clear out old work')
+    var errorMsg = somethingNotWorking();
+    $('#resultSelectorOverview-table').html(errorMsg);
+    $('#resultSelectorOverview-graph').html('');
+    $('#resultSelectorSingle-table').html(errorMsg);
+    $('#resultSelectorSingle-graph').html('');
+    $('#resultSelectorSpouse-table').html(errorMsg);
+    $('#resultSelectorSpouse-graph').html('');
+    $('#resultSelectorOther-table').html(errorMsg);
+    $('#resultSelectorOther-graph').html('');
+    // $('#resultSelectorMonthly-table').html(errorMsg);
+    // $('#resultSelectorMonthly-graph').html('');
+    $('RMDnote1').addClass('hide');
+    // $('RMDnote2').addClass('hide');
+
     return true;
 }
 function calculateAnnuities(uv) {
@@ -479,7 +492,7 @@ function buildMonthly(values, uv) {
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdPayments[year]), false);
     fdPay.push( { x: year, y: fdPayments[year], z : fdBalance[year] });
     if (RMDpayment[year] > 0.0) {
-      $('#RMDnote1').removeClass('hide');
+      $('#RMDnote2').removeClass('hide');
       row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'<sup>1</sup>', false);
     } else {
       row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdBalance[year]), false);
@@ -553,7 +566,7 @@ function buildHighchart(divName, seriesData, desc, RMDflag) {
       },
       tooltip: {
         shared: true,
-        usrHTML: true,
+        useHTML: true,
         formatter: function () {
           var year = this.x;
           var RMDnote = '';

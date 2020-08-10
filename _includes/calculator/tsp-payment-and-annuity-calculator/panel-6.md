@@ -35,7 +35,7 @@ Estimated monthly annuity payments are based on an <strong>annuity interest rate
 <section id="section-resultSetMonthly" class="projection monthly-payments hide">
   <h2>TSP monthly payments</h2>
   {% include selectResult.html selectorID='Monthly' %}
-  <!-- <div id="RMDnote2" class="hide"><sup>1</sup> Your year-end balance was further reduced due to a
+  <!-- <div id="RMDnote2x" class="hide"><sup>1</sup> Your year-end balance was further reduced due to a
   <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
   </div> -->
   <div id="RMDnote2" class="footnotes hide">
