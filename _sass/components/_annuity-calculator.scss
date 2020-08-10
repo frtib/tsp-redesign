@@ -59,23 +59,23 @@ section {
 
         tr {
           th {
-            position: -webkit-sticky;
-            position: sticky;
+            // position: -webkit-sticky;
+            // position: sticky;
             top: 0;
             z-index: 2;
             text-align: center;
 
             &[scope="row"] {
-              position: -webkit-sticky;
-              position: sticky;
+              // position: -webkit-sticky;
+              // position: sticky;
               left: 0;
               z-index: 1;
             }
 
             &:not([scope=row]) {
               &:first-child {
-                position: -webkit-sticky;
-                position: sticky;
+                // position: -webkit-sticky;
+                // position: sticky;
                 left: 0;
                 z-index: 3;
               }

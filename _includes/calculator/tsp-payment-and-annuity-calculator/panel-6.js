@@ -280,7 +280,7 @@ function buildSingle(values, uv) {
     // if (balance[year] <= 0.0) { break; }
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
@@ -345,7 +345,7 @@ function buildJointSpouse(values, uv) {
     // if (balance[year] <= 0.0) { break; }
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
@@ -399,7 +399,7 @@ function buildJointOther(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
@@ -455,7 +455,7 @@ function buildOverview(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
 
   var seriesData;
   if (getHaveDependent() == 'Yes') {
@@ -504,7 +504,7 @@ function buildMonthly(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },

@@ -112,6 +112,17 @@
       }
     }
   }
+
+  table {
+    &.sticky {
+      tr {
+        th {
+          position: initial; // unset any sticky header
+          top: auto;
+        }
+      }
+    }
+  }
   @page {
     margin: auto 0.25in;
   }
