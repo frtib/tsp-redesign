@@ -1,35 +1,52 @@
 section.usa-banner {
   background-color: #323943;
-  padding: 1rem 3rem 4rem 3rem;
+  padding: 1rem 3rem 4rem;
+
   .usa-banner-header {
     padding-bottom: inherit;
   }
+
   .usa-banner-content {
     color: #fff;
     padding: 0;
-      p:first-of-type, h2 {
+
+    h2 {
+      font-family: $sans;
+      margin-bottom: .25em;
+    }
+
+    h2,
+    p:first-of-type {
       margin-top: 0;
       margin-bottom: 0;
-      }
-      p {
-        font-size: 1.8rem;
-      }
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
   }
-  .usa-banner-button[aria-expanded=true], .usa-banner-button[aria-expanded=false] {
+
+  .usa-banner-button[aria-expanded=false],
+  .usa-banner-button[aria-expanded=true] {
     float: right;
   }
-  .usa-banner-button[aria-expanded=true]::after, .usa-banner-button[aria-expanded=true]:hover::after, .usa-banner-button[aria-expanded=false]::after, .usa-banner-button[aria-expanded=false]:hover::after {
-      background-image: url($baseurl + '/assets/img/icons/x-circle-white.svg');
-      background-size: 100%;
-      content: '';
-      display: inline-block;
-      height: 3rem;
-      width: 3rem;
-      margin-right: 0;
-      margin-top: 0;
-        .white {
-            stroke: #fff;
-            fill: #fff;
-        }
+
+  .usa-banner-button[aria-expanded=false]::after,
+  .usa-banner-button[aria-expanded=false]:hover::after,
+  .usa-banner-button[aria-expanded=true]::after,
+  .usa-banner-button[aria-expanded=true]:hover::after {
+    background-image: url($baseurl + '/assets/img/icons/x-circle-white.svg');
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 0;
+    margin-top: 0;
+
+    .white {
+      stroke: #fff;
+      fill: #fff;
     }
+  }
 }
