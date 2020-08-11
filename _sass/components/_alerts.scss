@@ -19,12 +19,18 @@ background-size: 4rem;
 }
 
 
-.usa-alert-success {
-  border-top-color: #2e8540;
+.usa-alert-success,
+.usa-alert--success
+ {
+  border-top-color: $color-green;
   background-image: url($baseurl + '/assets/img/icons/check-circle-green.svg');
   .usa-alert-body {
     padding-left: 5rem;
   }
+}
+.usa-alert--success { // for use with Feedback modal, which uses USWDS v.2
+  background-image: none;
+  background-color: $color-green-lightest;
 }
 .usa-alert-info {
   background-image: url($baseurl + '/assets/img/icons/info.svg');
