@@ -108,10 +108,10 @@ scripts:
                 <p><b>Assets</b><br>
                 {{ page.summary_details.assets }}
               </p>
-              <p><b>Net admin expense</b><br>
+              <p><b>Net administrative expenses</b><br>
                 {% include components/expense_string.html value=page.summary_details.net_expense %}
               </p>
-              <p><b>Other expense</b><br>
+              <p><b>Other expenses</b><br>
                 {% include components/expense_string.html value=page.summary_details.other_expense %}
               </p>
 {% if page.Fund_type == 'Individual' %}
@@ -182,10 +182,10 @@ scripts:
           <div class="usa-grid-full">
             <div class="usa-width-one-half">
               <h3>Fees {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
-              <p><b>Net admin expense<sup>*</sup></b><br>
+              <p><b>Net administrative expenses<sup>*</sup></b><br>
                 {% include components/expense_string.html value=page.summary_details.net_expense %}
               </p>
-              <p><b>Other expense<sup>**</sup></b><br>
+              <p><b>Other expenses<sup>**</sup></b><br>
                 {% include components/expense_string.html value=page.summary_details.other_expense %}
               </p>
               <p>

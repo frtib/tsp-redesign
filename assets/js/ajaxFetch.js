@@ -29,7 +29,7 @@ var singleFundData = function(fund) {
             // $('#aar_incep').html(values[6]); }
           }
           if (values.length == 2) {
-            if (values[0] != 'L2010') {
+            if ((values[0] != 'L2010') && (values[0] != 'L2020')) {
               var fund_name = values[0].replace('L', 'L ');
               $('#no_data_yet_message').html("The "+fund_name+" Fund was launched in July 2020. Historical returns will appear below as they become available.");
             }
