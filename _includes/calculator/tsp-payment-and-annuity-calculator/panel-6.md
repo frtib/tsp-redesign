@@ -6,11 +6,11 @@ Results NAME panel (3) for CALC.
 {% assign gridClass2 = include.gridClass2 | default: 'results' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
-<section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}" markdown="1">
+<section id="panel-{{ panelID }}" class="calculator-panel " style="{{ hide }}" markdown="1">
 
-Based on the information that you provided, the following payment amounts have been calculated for you. Click on the following tabs to see all of the payment options and amounts available to you.
+Based on the information that you provided, the following payment amounts have been calculated for you.
 
-Estimated monthly annuity payments are based on an **annuity interest rate index of: 1.209%.**
+Estimated monthly annuity payments are based on an <strong>annuity interest rate index of: <span id="annuity-interest-rate">-<</span>%.</strong>
 
 {% include calculator/div-panel-form-field.html
   fieldID="panel-5.2" id="resultSet"
@@ -18,37 +18,51 @@ Estimated monthly annuity payments are based on an **annuity interest rate index
   radioIDs="resultSetOverview,resultSetMonthly,resultSetSingle,resultSetSpouse,resultSetOther"
   radioLabels="Overview,TSP monthly payments, Single life annuity, Joint life with spouse annuity, Joint life with other survivor annuity"
   inputClass="usa-unstyled-list"   onBlur="resultSetSelect();"  dontOpenOuterDiv=true
-  prompt="Choose result set:"
+  prompt="Choose result set:" radioButtonNames=true
   explanation=""
 %}
 
-<section id="section-resultSetOverview" class="overview hide">
+<section id="section-resultSetOverview" class="projection overview hide">
   <h2>Overview</h2>
   {% include selectResult.html selectorID='Overview' %}
+  <div id="RMDnote1" class="footnotes hide">
+  <ol>
+  <li>Your year-end balance was further reduced due to a <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.</li>
+  </ol>
+  </div>
 </section>
 
-<section id="section-resultSetMonthly" class="monthly-payments hide"> 
+<section id="section-resultSetMonthly" class="projection monthly-payments hide">
   <h2>TSP monthly payments</h2>
   {% include selectResult.html selectorID='Monthly' %}
+  <!-- <div id="RMDnote2x" class="hide"><sup>1</sup> Your year-end balance was further reduced due to a
+  <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.
+  </div> -->
+  <div id="RMDnote2" class="footnotes hide">
+  <ol>
+  <li>Your year-end balance was further reduced due to a <span data-term="Required minimum distribution (RMD)" class="js-glossary-toggle term term-end" title="Click to define" tabindex="0">Required Minimum distribution (RMD)</span>.</li>
+  </ol>
+  </div>
 </section>
 
-<section id="section-resultSetSingle" class="single-life hide">
+<section id="section-resultSetSingle" class="projection single-life hide">
   <h2>Single life annuity</h2>
   {% include selectResult.html selectorID='Single' %}
 </section>
 
-<section id="section-resultSetSpouse" class="joint-life-spouse hide">
+<section id="section-resultSetSpouse" class="projection joint-life-spouse hide">
   <h2>Joint life with spouse annuity</h2>
   {% include selectResult.html selectorID='Spouse' %}
+  <span id="noSpouse"></span>
 </section>
 
-<section id="section-resultSetOther" class="joint-life-other hide">
+<section id="section-resultSetOther" class="projection joint-life-other hide">
   <h2>Joint life with other survivor annuity</h2>
   {% include selectResult.html selectorID='Other' %}
+  <span id="noOther"></span>
 </section>
 
-
-<ul class="usa-accordion icons">
+<ul class="usa-accordion icons adjust">
 <!-- ADJUST YOUR RESULTS -->
 {% include calculator/accordion-start.html expanded=false divID='adjust-results'
     icon='fal fa-sliders-v' title='Adjust your results' inList=true %}
@@ -59,8 +73,7 @@ Estimated monthly annuity payments are based on an **annuity interest rate index
 {% include calculator/AYR-table.html caption="Length of retirement planned" showPanel=3 gotoAnchor='panel3' %}
 {% include calculator/AYR-table-row.html prompt="Your current age:" rowID='ageNowAYR' %}
 {% include calculator/AYR-table-row.html prompt="Age you expect to begin receiving income:" rowID='ageFromAYR' %}
-{% include calculator/AYR-table-row.html prompt="Age to which to expect to live:" rowID='ageToLiveAYR' %}
-{% include calculator/AYR-table-row.html closeTable=true prompt="Month of your birth:" rowID='birthMonthAYR' %}
+{% include calculator/AYR-table-row.html closeTable=true prompt="Age to which to expect to live:" rowID='ageToLiveAYR' %}
 
 {% include calculator/AYR-table.html caption="Monthly income amount" showPanel=4 gotoAnchor='panel4' %}
 {% include calculator/AYR-table-row.html prompt="Income amount you would like to receive each month:" rowID='amountToReceiveAYR' %}

@@ -138,13 +138,6 @@ function scrollAuto(elementId) {
   }
 }
 
-function getPosFloat(id, def) {
-  var val = parseFloat($('#'+id).val());
-  if (isNaN(val)) { val = def; }
-
-  return val;
-}
-
 function getPosInteger(id, def) {
   var val = parseInt($('#'+id).val());
   if (isNaN(val)) { val = def; }

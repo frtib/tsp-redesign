@@ -12,12 +12,23 @@ panelGood[{{ panelID }}] = function(forceValue) {
 
 panelEnter[{{ panelID }}] = function(panel) {
     // calculate and set values here
+    hideUnchoosenOptions();
+    resultSetSelect();
     calculate();
     // $('#account-depleted').html(CurrencyFormatted(contributionLimit, 'no_cent'));
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
+}
+
+function getResultSet() {
+  if ($('#resultSetOverview').prop('checked')) { return 'overview'; }
+  if ($('#resultSetMonthly').prop('checked')) { return 'monthly'; }
+  if ($('#resultSetSingle').prop('checked')) { return 'single'; }
+  if ($('#resultSetSpouse').prop('checked')) { return 'spouse'; }
+  if ($('#resultSetOther').prop('checked')) { return 'other'; }
+  return '';
 }
 
 function resultSetSelect() {
@@ -34,73 +45,486 @@ function monthlyCompoundFactor(yearlyRate, periods) {
   return 1.0 + annualized / periods;
 }
 
+var userValues = {};
+var factors = {};
+
+var fdPayments = {};
+var fdBalance = {};
+var RMDpayment = {};
+var lePayments = {};
+var leBalance = {};
+var start = 20;
+var end = 60;
+var periods = 12;
+var increasingFactor = 1.02;
+
+function tableHeader (tableName) {
+  if (tableName == 'monthlyPayment') {
+    var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Fixed dollar', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Life Expectancy', false);
+    headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    var headerHTML2 = '';
+    var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
+    // if (RMDflag) { headerHTML2 += sideScrollTH('', 'col', '', 'RMD payment', false); }
+    headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
+    headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
+    return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
+  }
+  if (tableName == 'jointSpouse') {
+    var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="4"', 'Level payments', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="4"', 'Increasing payments', false);
+    headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    var headerHTML2 = '';
+    var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash refund', false);
+    headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
+    return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
+  }
+  if (tableName == 'jointOther') {
+    var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="4"', 'Level payments', false);
+    headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    var headerHTML2 = '';
+    var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor<br> with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor<br> with cash refund', false);
+    headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
+    return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
+  }
+  if (tableName == 'single') {
+    var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="3"', 'Level payments', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="3"', 'Increasing payments', false);
+    headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    var headerHTML2 = '';
+    var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Basic features', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'With cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'With 10 year certain', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Basic features', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'With cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'With 10 year certain', false);
+    headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
+    return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
+  }
+  if (tableName == 'overview') {
+    var headerHTML0 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML0 += sideScrollTH2('', 'colgroup', '', 'colspan="4"', 'Monthly payment', false);
+    headerHTML0 += sideScrollTH2('', 'col', '', '', 'Single annuity', false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML0 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Joint annuity with '+getDependent().toLowerCase(), false);
+    }
+    headerHTML0 = sideScrollWrapper('', 'tr', '', '', headerHTML0, false);
+    var headerHTML1 = sideScrollTH2('', 'col', '', '', '', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Fixed dollar', false);
+    headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Life Expectancy', false);
+    headerHTML1 += sideScrollTH2('', 'col', '', '', 'Level payments', false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML1 += sideScrollTH2('', 'colgroup', '', 'colspan="2"', 'Level payments', false);
+    }
+    headerHTML1 = sideScrollWrapper('', 'tr', '', '', headerHTML1, false);
+    // (id, prefix, scope, xclass, txt, nl)
+    var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Payment', false);
+    headerHTML2 += sideScrollTH('', 'col', '', 'Year-end balance', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '(Basic)', false);
+    if (getHaveDependent() == 'Yes') {
+      headerHTML2 += sideScrollTH('', 'col', '', '(100% survivor)', false);
+      headerHTML2 += sideScrollTH('', 'col', '', '(50% survivor)', false);
+    }
+    headerHTML2 = sideScrollWrapper('', 'tr', '', 'third-level', headerHTML2, false);
+    return sideScrollWrapper('  ', 'thead', '', '', headerHTML0 + headerHTML1 + headerHTML2, true);
+  }
+
+  return '';
+}
+
 function calculate() {
-  var userValues = {};
   userValues['amountToUse'] = getPosInteger('amountToUse', -1);
   userValues['ageNow'] = getPosInteger('ageNow', -1);
   userValues['ageFrom'] = getPosInteger('ageFrom', -1);
   userValues['ageToLive'] = getPosInteger('ageToLive', -1);
-  userValues['birthMonth'] = getBirthMonth();
-  userValues['birthMonthIdx'] = getBirthMonthIdx(userValues['birthMonth']);
   userValues['amountToReceive'] = getPosInteger('amountToReceive', -1);
   userValues['rateOfReturn'] = getPosFloat('rateOfReturn', -1);
   userValues['monthlyRate'] = monthlyCompoundFactor(userValues['rateOfReturn'], 12.0);
   userValues['haveDependent'] = getHaveDependent();
   userValues['dependent'] = getDependent();
   userValues['dependentAge'] = getPosInteger('dependentAge', -1);
-  console.log(userValues['amountToUse'],userValues['ageNow'],userValues['ageFrom'],userValues['ageToLive'],userValues['birthMonth'],userValues['birthMonthIdx'],userValues['amountToReceive'],userValues['rateOfReturn'],userValues['haveDependent'],userValues['dependent'],userValues['dependentAge']);
+  startCalculateAnnuities(userValues);
 
-  var le_factor = get_life_expectancy_factor(userValues['ageNow'], userValues['birthMonthIdx']);
-  console.log(le_factor, get_life_expectancy_factor(69, 1), get_life_expectancy_factor(70, 1), get_life_expectancy_factor(71, 1));
-  console.log(le_factor, get_life_expectancy_factor(69, 8), get_life_expectancy_factor(70, 8), get_life_expectancy_factor(71, 8));
-
+  var le_factor = get_life_expectancy_factor(userValues['ageNow']);
   calculateMonthlyPayments(userValues);
 }
 
-function calculateMonthlyPayments(uv) {
-   console.log(uv['ageNow'], uv['ageToLive'], uv['monthlyRate']);
-   var lePayment = 0.0;
-   var fdPayments = {};
-   var fdBalance = {};
-   var lePayments = {};
-   var leBalance = {};
-   var start = parseInt(uv['ageFrom']);
-   var end = parseInt(uv['ageToLive']);
 
-   var yr, mth;
-   var RMD = 0.0;
-   fdBalance[start-1] = parseFloat(uv['amountToUse']);
-   leBalance[start-1] = parseFloat(uv['amountToUse']);
-   fdPayments[start-1] = parseFloat(uv['amountToReceive']); 
-   lePayments[start-1] = 0.0;
-   for (yr = start; yr <= end; yr++) {
-     fdBalance[yr] = fdBalance[yr-1];
-     fdPayments[yr] = fdPayments[yr-1];
-     leBalance[yr] = leBalance[yr-1];
-     lePayments[yr] = 0.0;
-     for (mth = 1; mth <= 12; mth++) {
-       if (fdBalance[yr] > 0.0) {
-         if (fdBalance[yr] < fdPayments[yr]) { fdPayments[yr] = fdBalance[yr]; }
-         fdBalance[yr] = (fdBalance[yr]-fdPayments[yr])*uv['monthlyRate'];
-         fdBalance[yr] -= RMD;
-       } else fdPayments[yr] = 0.0;
-       fdBalance[yr] = parseFloat(fdBalance[yr].toFixed(2));
-       leBalance[yr] = parseFloat(leBalance[yr].toFixed(2));
-     }
-   }
+function startCalculateAnnuities(uv) {
+  start = parseInt(uv['ageFrom']);
+  end = parseInt(uv['ageToLive']);
+  var jointAge = uv['dependentAge'] + uv['ageFrom'] - uv['ageNow'];
 
-   for (yr = start; yr <= end; yr++) {
-     console.log(yr, fdPayments[yr].toFixed(2), fdBalance[yr].toFixed(2));
-   }
+  $('#annuity-interest-rate').html('...');
+  var url = getDownloadString('getAnnuityFactors.html', 'age='+start+'&jointage='+jointAge);
+  doAjaxRetrieveCallback('annuity-interest-rate', url, onSuccessAnnuities, onFailAnnuities);
+}
+function onSuccessAnnuities(divName, data) {
+    var line = data.split("\n");
+    var headers = line[0].split(',');
+    var values = line[1].split(',');
+    var cols = headers.length;
+    for (var i = 0; i < cols; i++) {
+      factors[headers[i]] = values[i];
+    }
+//console.log(headers, values, factors);
+//console.log('resetting interest rate to match dev');
+//factors['interest_rate'] = '2.200';
+    $('#'+divName).html(factors['interest_rate']+'%');
+    calculateAnnuities(userValues);
+    return true;
+}
+function onFailAnnuities(divName, textStatus, errorThrown) {
+    $('#'+divName).html('unavailable');
+
+    var errorMsg = somethingNotWorking();
+    $('#resultSelectorOverview-table').html(errorMsg);
+    $('#resultSelectorOverview-graph').html('');
+    $('#resultSelectorSingle-table').html(errorMsg);
+    $('#resultSelectorSingle-graph').html('');
+    $('#resultSelectorSpouse-table').html(errorMsg);
+    $('#resultSelectorSpouse-graph').html('');
+    $('#resultSelectorOther-table').html(errorMsg);
+    $('#resultSelectorOther-graph').html('');
+    // $('#resultSelectorMonthly-table').html(errorMsg);
+    // $('#resultSelectorMonthly-graph').html('');
+    $('RMDnote1').addClass('hide');
+    // $('RMDnote2').addClass('hide');
+
+    return true;
+}
+function calculateAnnuities(uv) {
+  var values = {};
+  var age = parseInt(uv['ageFrom']);
+  var jointage = parseInt(uv['dependentAge']);
+  var amountToUse = parseInt(uv['amountToUse']);
+  var aRate = parseFloat(factors['interest_rate']) - parseFloat(factors['interest_rate_index']);
+  var aFactor = parseFloat(factors['level_noadded']);
+  var adjFactor = parseFloat(factors['level_noadded_adj']);
+  values['level_noadded'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  aFactor = parseFloat(factors['level_cash']);
+  adjFactor = parseFloat(factors['level_cash_adj']);
+  values['level_cash'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  aFactor = parseFloat(factors['level_10year']);
+  adjFactor = parseFloat(factors['level_10year_adj']);
+  values['level_10year'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  aFactor = parseFloat(factors['increasing_noadded']);
+  adjFactor = parseFloat(factors['increasing_noadded_adj']);
+  values['increasing_noadded'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  aFactor = parseFloat(factors['increasing_cash']);
+  adjFactor = parseFloat(factors['increasing_cash_adj']);
+  values['increasing_cash'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  aFactor = parseFloat(factors['increasing_10year']);
+  adjFactor = parseFloat(factors['increasing_10year_adj']);
+  values['increasing_10year'] = (((amountToUse/1000.0) * aFactor) * (1.0 + (aRate*adjFactor)));
+  buildSingle(values, uv);
+
+  values['level_100'] = (((amountToUse/1000.0) * parseFloat(factors['A'])) * (1.0 + (aRate*parseFloat(factors['A_100_adj']))));
+  values['level_50'] = (((amountToUse/1000.0) * parseFloat(factors['B'])) * (1.0 + (aRate*parseFloat(factors['A_50_adj']))));
+  values['level_100_cash'] = (((amountToUse/1000.0) * parseFloat(factors['C'])) * (1.0 + (aRate*parseFloat(factors['A_100_adj']))));
+  values['level_50_cash'] = (((amountToUse/1000.0) * parseFloat(factors['D'])) * (1.0 + (aRate*parseFloat(factors['A_50_adj']))));
+  values['incr_100'] = (((amountToUse/1000.0) * parseFloat(factors['E'])) * (1.0 + (aRate*parseFloat(factors['B_100_adj']))));
+  values['incr_50'] = (((amountToUse/1000.0) * parseFloat(factors['F'])) * (1.0 + (aRate*parseFloat(factors['B_50_adj']))));
+  values['incr_100_cash'] = (((amountToUse/1000.0) * parseFloat(factors['G'])) * (1.0 + (aRate*parseFloat(factors['B_100_adj']))));
+  values['incr_50_cash'] = (((amountToUse/1000.0) * parseFloat(factors['H'])) * (1.0 + (aRate*parseFloat(factors['B_50_adj']))));
+
+  buildJointOther(values, uv);
+  buildJointSpouse(values, uv);
+  buildOverview(values, uv);
+}
+function buildSingle(values, uv) {
+  var headerHTML = tableHeader('single');
+  var row;
+  var level_noadded = CurrencyFormatted(values['level_noadded'].toFixed(0));
+  var level_cash = CurrencyFormatted(values['level_cash'].toFixed(0));
+  var level_10year = CurrencyFormatted(values['level_10year'].toFixed(0));
+  var increasing_noadded = values['increasing_noadded'];
+  var increasing_cash = values['increasing_cash'];
+  var increasing_10year = values['increasing_10year'];
+
+  var slBasic = [], slCash = [], sl10yr = [], siBasic = [], siCash = [], si10yr = [];
+
+  var bodyHTML = '';
+  for (var year = start; year <= end; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', level_noadded, false);
+    slBasic.push(parseFloat(values['level_noadded'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_cash, false);
+    slCash.push(parseFloat(values['level_cash'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_10year, false);
+    sl10yr.push(parseFloat(values['level_10year'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_noadded.toFixed(0)), false);
+    siBasic.push(parseFloat(values['increasing_noadded'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_cash.toFixed(0)), false);
+    siCash.push(parseFloat(values['increasing_cash'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_10year.toFixed(0)), false);
+    si10yr.push(parseFloat(values['increasing_10year'].toFixed(0)));
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+    increasing_noadded *= increasingFactor;
+    increasing_cash *= increasingFactor;
+    increasing_10year *= increasingFactor;
+    // if (balance[year] <= 0.0) { break; }
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
+
+  var seriesData = [
+    { name: 'Level payments (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
+    { name: 'Level payments (w/ Cash Refund)', data: slCash, color: clSingleCash, marker: { symbol: 'diamond' }, visible: false },
+    { name: 'Level payments (w/ 10 Year Certain)', data: sl10yr, color: clSingle10yr, marker: { symbol: 'diamond' }, visible: false },
+    { name: 'Increasing payments (Basic Features)', data: siBasic, color: ciSingleBasic, marker: { symbol: 'triangle' } },
+    { name: 'Increasing payments (w/ Cash Refund)', data: siCash, color: ciSingleCash, marker: { symbol: 'triangle' }, visible: false },
+    { name: 'Increasing payments (w/ 10 Year Certain)', data: si10yr, color: ciSingle10yr, marker: { symbol: 'triangle' }, visible: false }
+  ];
+
+  $('#resultSelectorSingle-table').html(tableHTML);
+  buildHighchart('resultSelectorSingle-graph', seriesData,
+    'Options for single annuities.', true);
+}
+function buildJointSpouse(values, uv) {
+  if ((getDependent() != 'Spouse') || (getHaveDependent() != 'Yes'))  {
+    var msg = "You did not select a joint life annuity with a spouse.";
+    $('#resultSelectorSpouse-table').html('');
+    $('#resultSelectorSpouse-graph').html('');
+    $('#noSpouse').html(msg);
+    return;
+  } else {
+    $('#noSpouse').html('');
+  }
+  var headerHTML = tableHeader('jointSpouse');
+  var row;
+  var level_100 = CurrencyFormatted(values['level_100'].toFixed(0));
+  var level_50 = CurrencyFormatted(values['level_50'].toFixed(0));
+  var level_100_cash = CurrencyFormatted(values['level_100_cash'].toFixed(0));
+  var level_50_cash = CurrencyFormatted(values['level_50_cash'].toFixed(0));
+  var incr_100 = values['incr_100'];
+  var incr_50 = values['incr_50'];
+  var incr_100_cash = values['incr_100_cash'];
+  var incr_50_cash = values['incr_50_cash'];
+
+  var jl100 = [], jl50 = [], jl100cash = [], jl50cash = [], ji100 = [], ji50 = [], ji100cash = [], ji50cash = [];
+
+  var bodyHTML = '';
+  for (var year = start; year <= end; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', level_100, false);
+    jl100.push(parseFloat(values['level_100'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_50, false);
+    jl50.push(parseFloat(values['level_50'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_100_cash, false);
+    jl100cash.push(parseFloat(values['level_100_cash'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_50_cash, false);
+    jl50cash.push(parseFloat(values['level_50_cash'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(incr_100.toFixed(0)), false);
+    ji100.push(parseFloat(incr_100.toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(incr_50.toFixed(0)), false);
+    ji50.push(parseFloat(incr_50.toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(incr_100_cash.toFixed(0)), false);
+    ji100cash.push(parseFloat(incr_100_cash.toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(incr_50_cash.toFixed(0)), false);
+    ji50cash.push(parseFloat(incr_50_cash.toFixed(0)));
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+    incr_100 *= increasingFactor;
+    incr_50 *= increasingFactor;
+    incr_100_cash *= increasingFactor;
+    incr_50_cash *= increasingFactor;
+    // if (balance[year] <= 0.0) { break; }
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
+
+  var seriesData = [
+    { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
+    { name: 'Level payments (50% survivor)', data: jl50, color: clJoint50, marker: { symbol: 'diamond' } },
+    { name: 'Level payments (100% survivor w/ cash)', data: jl100cash, color: clJoint100cash, marker: { symbol: 'diamond' }, visible: false },
+    { name: 'Level payments (50% survivor w/ cash)', data: jl50cash, color: clJoint50cash, marker: { symbol: 'diamond' }, visible: false },
+    { name: 'Increasing payments (100% survivor)', data: ji100, color: ciJoint100, marker: { symbol: 'triangle' } },
+    { name: 'Increasing payments (50% survivor)', data: ji50, color: ciJoint50, marker: { symbol: 'triangle' } },
+    { name: 'Increasing payments (100% survivor w/ cash)', data: ji100cash, color: ciJoint100cash, marker: { symbol: 'triangle' }, visible: false },
+    { name: 'Increasing payments (50% survivor w/ cash)', data: ji50cash, color: ciJoint50cash, marker: { symbol: 'triangle' }, visible: false }
+  ];
+
+  $('#resultSelectorSpouse-table').html(tableHTML);
+  buildHighchart('resultSelectorSpouse-graph', seriesData,
+    'Options for joint annuities w/ spouse.', true);
+}
+function buildJointOther(values, uv) {
+  if ((getDependent() != 'Other') || (getHaveDependent() != 'Yes')) {
+    var msg = "You did not select a joint life annuity with someone other than a spouse.";
+    $('#resultSelectorOther-table').html('');
+    $('#resultSelectorOther-graph').html('');
+    $('#noOther').html(msg);
+    return;
+  } else {
+    $('#noOther').html('');
+  }
+  var headerHTML = tableHeader('jointOther');
+  var row;
+  var level_100 = CurrencyFormatted(values['level_100'].toFixed(0));
+  var level_50 = CurrencyFormatted(values['level_50'].toFixed(0));
+  var level_100_cash = CurrencyFormatted(values['level_100_cash'].toFixed(0));
+  var level_50_cash = CurrencyFormatted(values['level_50_cash'].toFixed(0));
+  if ((parseInt(uv['ageNow']) - parseInt(uv['dependentAge'])) > 10) {
+    level_100 = 'Ineligible';
+    level_100_cash = 'Ineligible';
+  }
+
+  var jl100 = [], jl50 = [], jl100cash = [], jl50cash = [];
+
+  var bodyHTML = '';
+  for (var year = start; year <= end; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', level_100, false);
+    if (level_100 != 'Ineligible') { jl100.push(parseFloat(values['level_100'].toFixed(0))); }
+    row += sideScrollWrapper('', 'td', '', '', level_50, false);
+    jl50.push(parseFloat(values['level_50'].toFixed(0)));
+    row += sideScrollWrapper('', 'td', '', '', level_100_cash, false);
+    if (level_100 != 'Ineligible') { jl100cash.push(parseFloat(values['level_100_cash'].toFixed(0))); }
+    row += sideScrollWrapper('', 'td', '', '', level_50_cash, false);
+    jl50cash.push(parseFloat(values['level_50_cash'].toFixed(0)));
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
+
+  var seriesData = [
+    { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
+    { name: 'Level payments (50% survivor)', data: jl50, color: clJoint50, marker: { symbol: 'diamond' } },
+    { name: 'Level payments (100% survivor w/ cash)', data: jl100cash, color: clJoint100cash, marker: { symbol: 'diamond' }, visible: false },
+    { name: 'Level payments (50% survivor w/ cash)', data: jl50cash, color: clJoint50cash, marker: { symbol: 'diamond' }, visible: false },
+  ];
+
+  $('#resultSelectorOther-table').html(tableHTML);
+  buildHighchart('resultSelectorOther-graph', seriesData,
+    'Options for joint annuities w/ other.', true);
+}
+function buildOverview(values, uv) {
+  // build table header
+  $('#RMDnote1').addClass('hide');
+  var headerHTML = tableHeader('overview');
+  var row;
+  var level_noadded = CurrencyFormatted(values['level_noadded'].toFixed(0));
+  var level_100 = CurrencyFormatted(values['level_100'].toFixed(0));
+  var level_50 = CurrencyFormatted(values['level_50'].toFixed(0));
+  if (uv['dependent'] == 'Other') {
+    if ((parseInt(uv['ageNow']) - parseInt(uv['dependentAge'])) > 10) {
+      level_100 = 'unavailable';
+    }
+  }
+  var haveDependent = getHaveDependent();
+
+  var fdPay = [], lePay = [], slBasic = [], ja100 = [], ja50 = [];
+
+  var bodyHTML = '';
+  for (var year = start; year <= end; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdPayments[year]), false);
+    fdPay.push( { x: year, y: fdPayments[year], z : fdBalance[year] });
+    if (RMDpayment[year] > 0.0) {
+      $('#RMDnote1').removeClass('hide');
+      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'<sup>1</sup>', false);
+    } else {
+      row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdBalance[year]), false);
+    }
+    // if (RMDflag) { row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(RMDpayment[year]), false); }
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(lePayments[year]), false);
+    lePay.push( { x: year, y: lePayments[year], z : leBalance[year] });
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(leBalance[year]), false);
+    row += sideScrollWrapper('', 'td', '', '', level_noadded, false);
+    slBasic.push(parseFloat(values['level_noadded'].toFixed(0)));
+    if (getHaveDependent() == 'Yes') {
+      row += sideScrollWrapper('', 'td', '', '', level_100, false);
+      if (level_100 != 'unavailable') { ja100.push(parseFloat(values['level_100'].toFixed(0))); }
+      row += sideScrollWrapper('', 'td', '', '', level_50, false);
+      ja50.push(parseFloat(values['level_50'].toFixed(0)));
+    }
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
+
+  var seriesData;
+  if (getHaveDependent() == 'Yes') {
+    seriesData = [
+      { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
+      { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
+      { name: 'Single Life Annuity (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
+      { name: 'Joint Annuity/Other (100% Survivor)', data: ja100, color: clJoint100, marker: { symbol: 'triangle' } },
+      { name: 'Joint Annuity/Other (50% Survivor)', data: ja50, color: clJoint50, marker: { symbol: 'triangle' } }
+    ];
+  } else {
+    seriesData = [
+      { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
+      { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
+      { name: 'Single Life Annuity (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } }
+    ];
+  }
+
+  $('#resultSelectorOverview-table').html(tableHTML);
+  buildHighchart('resultSelectorOverview-graph', seriesData,
+    'Monthly payment results and level payments for single/joint annuities.', true);
+}
+function buildMonthly(values, uv) {
+  // build table header
+  $('#RMDnote2').addClass('hide');
+  var headerHTML = tableHeader('monthlyPayment');
+  var row;
+
+  var fdPay = [], lePay = [];
+
+  var bodyHTML = '';
+  for (var year = start; year <= end; year++) {
+    row = sideScrollTH('', 'row', '', year, false);
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdPayments[year]), false);
+    fdPay.push( { x: year, y: fdPayments[year], z : fdBalance[year] });
+    if (RMDpayment[year] > 0.0) {
+      $('#RMDnote2').removeClass('hide');
+      row += sideScrollWrapper('', 'td', '', 'rmd', CurrencyFormatted(fdBalance[year])+'<sup>1</sup>', false);
+    } else {
+      row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(fdBalance[year]), false);
+    }
+    // if (RMDflag) { row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(RMDpayment[year]), false); }
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(lePayments[year]), false);
+    lePay.push( { x: year, y: lePayments[year], z : leBalance[year] });
+    row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(leBalance[year]), false);
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
+
+  var seriesData = [
+    { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
+    { name: 'Monthly payment (life expectancy)', custom: {zname: 'Year-end balance (life expectancy)'}, data: lePay, color: cMonthlyLE, marker: { symbol: 'circle' } },
+  ];
+
+  $('#resultSelectorMonthly-table').html(tableHTML);
+  buildHighchart('resultSelectorMonthly-graph', seriesData,
+    'Monthly payment results.', true);
 }
 
-
-if (0) {
-var defdot = { symbol: 'circle', radius: 0.1 };
-var defcircle = { symbol: 'circle', radius: 2.4 };
-var defdiamond = { symbol: 'diamond', radius: 2.6 };
-
-// the color names below are not HTML defined names, just a close name to identify what is on the screen
 var colorSubBlue = '#4572A7';
 var colorSubRed = '#AA4643';
 var colorSubGreen = '#89A54E';
@@ -110,157 +534,140 @@ var colorSubOrange = '#DB843D';
 var colorSubSkyBlue = '#92A8CD';
 var colorSubBrown = '#A47D7C';
 
-function runCalc1(frequency) {
+var cMonthlyFD = colorSubGreen;
+var cMonthlyLE = colorSubBlue;
+var clSingleBasic = colorSubRed;
+var clSingleCash = colorSubBrown;
+var clSingle10yr = colorSubOrange;
+var ciSingleBasic = colorSubBlue;
+var ciSingleCash = colorSubPurple;
+var ciSingle10yr = colorSubSkyBlue;
+var clJoint100 = colorSubSkyBlue;
+var clJoint50 = colorSubBrown;
+var clJoint100cash = colorSubBlue;
+var clJoint50cash = colorSubRed;
+var ciJoint100 = colorSubPurple;
+var ciJoint50 = colorSubOrange;
+var ciJoint100cash = colorSubCyan;
+var ciJoint50cash = colorSubGreen;
 
-  /* Calculate Coordinates */
-  var line1 = [];
-  var lineFDbal = [];
-
-  var tableRows = "";
-  var evenrow = false;
-  var RMDflag = '*';
-  var arr_length = rates_ages.length;
-  for (var i=0; i<arr_length; i++) {
-    if (i < payments_bal_FD.length) { lineFDbal.push([rates_ages[i], payments_bal_FD[i]]); }
-    if (i < payments_Amt.length) { line1.push([rates_ages[i], payments_Amt[i]]); }
-  }
-  var age = AgeDepleted;
-  if (monthsRemainder >= 12) { age++; }
-  var cit = '**';
-  var half = arr_length / 2;
-  for (var i=0; i<half; i++) {
-    if (evenrow) {
-      evenrow = false;
-      tableRows += '<tr class="evenRow">';
-    } else {
-      evenrow = true;
-      tableRows += '<tr class="oddRow">';
-    }
-
-    if (payments_RMD[i] > 0) {
-      // RMDflag = "<span width=15px title='RMD: " + CurrencyFormatted(payments_RMD[i]) + "'>*</span>";
-      RMDflag = "*";
-    } else {
-      // RMDflag = "<span width=15px " + CurrencyFormatted(payments_RMD[i]) + ">&nbsp;</span>";
-      RMDflag = "&nbsp;";
-    }
-    if (i < arr_length) {
-      if ((i+1) == age) { cit = '**'; } else { cit = ''; }
-      tableRows += '<td class="packed">' + rates_ages[i] + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_Amt[i]) + cit + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_bal_FD[i]) + RMDflag + '</td>';
-      if ((i+half+1) == age) { cit = '**'; } else { cit = ''; }
-      tableRows += '<td class="packed leftBorder">' + rates_ages[i+half] + '</td>'
-        + '<td class="packed">' + CurrencyFormatted(payments_Amt[i+half]) + cit + '</td>'
-        + '<td class="packed ">' + CurrencyFormatted(payments_bal_FD[i+half]) + RMDflag + '</td>';
-    }
-  }
-
-  /* Chart Drawing */
-  chart = new Highcharts.Chart({
-//    chart: { renderTo: 'chartDiv', defaultSeriesType: 'line', marginTop: 30, marginRight: 230, marginBottom: 50 },
-    chart: { renderTo: 'chartDiv', defaultSeriesType: 'area', marginRight: 27 }, // , borderWidth: 2 },
-    title: { text: null },
-//    title: { text: 'Projected Year-End Balances', x: -20, y: 5, margin: 30 },
-//    subtitle: { text: 'Results Based on Requested Installment Payment Amounts', x: -20, y: 25 },
-    credits: { enabled: false },
-    xAxis: {
-      title: { text: 'Payment Year' },
-      labels: {
-      min: 0,
-      max: 40,
-        formatter: function() {
-          return this.value;
-        }
+function buildHighchart(divName, seriesData, desc, RMDflag) {
+  var chart = Highcharts.chart(divName, {
+      chart: {
+          type: 'line'
       },
-      maxPadding: 0.05,
-      minRange: 0.01,
-      showLastLabel: true,
-      plotLines: [{value: 110, color: '#777777', width: 1, id: 'ageToLiveLine', label: { y:-5, text: '110', rotation: 0, style: { fontWeight: 'bold'} }}]
-    },
-    yAxis: {
-      title: { text: 'Year-End Balance' },
-      labels: {
-        formatter: function() {
-          return CurrencyFormatted(this.value, 'no_cent');
-        }
+      credits: { enabled: false },
+      legend: { enabled: true },
+      accessibility: {
+          description: desc
       },
-      minRange: 0.01,
-      min: 0,
-      plotLines: [{ value: 0, width: 1, color: '#808080' }]
-    },
-    tooltip: {
-      useHTML: true,
-      borderColor: '#aaaaaa',
-      shared: true,
-      followPointer: true,
-      crosshairs: true,
-      style: {
-        padding: 10,
-        borderRadius: 5,
-        borderWidth: 2,
-        shadow: true,
-        fontSize: '11px'
+      title: { text: null },
+      xAxis: {
+          title: { text: 'Age' },
+          allowDecimals: false,
+          crosshair: true,
+          labels: { formatter: function () { return this.value; } },
+          accessibility: { rangeDescription: 'Age. ' }
       },
-      formatter: function() {
-        chart.xAxis[0].removePlotLine('tmpline');
-        var age = AgeDepleted;
-        if (monthsRemainder >= 12) { age++; }
-        var idx = this.x - rates_ages[0];
-        var output = '<table><tr><td><strong>Year ' + this.x + '</strong>:</td></tr>';
-        var installmentPayments = false;
-        var cit = '';
-        if (this.x <= age) { installmentPayments = true; }
-        if (this.x == age) { cit = '**'; }
-        if (installmentPayments) {
-          output += '<tr><td>With ' + frequency + ' payments of:</td><td align=right><strong>  '
-                        + CurrencyFormatted(payments_Amt[0]) + cit + '</strong></td></tr>';
-        }
-        var j = 0;
-        for (j=0; j<chart.series.length; j++) {
-          if ((chart.series[j].visible) && (chart.series[j].data.length > idx)) {
-            if (chart.series[j].data[idx]) {
-              output += '<tr align=right>';
-              output += '<td align=left>' + chart.series[j].name + ':</td><td align=right><strong>  ';
-              output += CurrencyFormatted(chart.series[j].data[idx].y) + '</strong></td>';
-              output += '</tr>';
+      yAxis: {
+          title: { text: 'Monthly income' },
+          labels: { formatter: function () { return CurrencyFormatted(this.value); } }
+      },
+      tooltip: {
+        shared: true,
+        useHTML: true,
+        formatter: function () {
+          var year = this.x;
+          var RMDnote = '';
+          var rc = '<strong>Age</strong> ' + year + '<br><br><br>';
+          var pts = this.points.length;
+          for (var i = 0; i < pts; i++) {
+            if (RMDflag && (i == 0)) { if (RMDpayment[year] > 0.0) { RMDnote = '<sup>1</sup>'; } } else { RMDnote = ''; }
+            var point = this.points[i];
+            rc += point.series.name + ': <strong>' + CurrencyFormatted(point.y) + '</strong><br>';
+            if (point.point.z) {
+              rc += point.series.userOptions.custom.zname + ': <strong>' + CurrencyFormatted(point.point.z) + RMDnote + '</strong><br>';
             }
           }
+          return rc;
         }
-        output += '</table>';
-        chart.xAxis[0].addPlotLine({value: this.x, color: '#777777', width: 1, id: 'tmpline', label: { y:12, text: this.x, rotation: 0, style: { fontWeight: 'bold'}}});
-        return output;
-      }
-    },
-    legend: { enabled: false },
-//    legend: { layout: 'vertical', align: 'right', verticalAlign: 'top', x:5, y:26, borderWidth: 0 },
-    series: [{
-      name: 'Year-End Balance', marker: defcircle, color: colorSubGreen, data: lineFDbal, showInLegend: false, visible: true }, {
-      name: 'Installment Payment (Fixed Dollar)', marker: defcircle, color: colorSubGreen, data: line1, visible: false }]
+      },
+      plotOptions: {
+          line: {
+              pointStart: start
+              // marker: { enabled: false, symbol: 'circle', radius: 2, states: { hover: { enabled: true } } }
+          }
+      },
+      series: seriesData
   });
-
-  /* Table Writing */
-  var choice = frequency.charAt(0).toUpperCase() + frequency.slice(1);
-  if (choice == 'Annually') { choice = 'Annual'; }
-  var strHeader = '  <table class="tspStandard"><tr class="headingRow">'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">Year</th>'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">'+choice+' Payment</th>'
-        + '  <th class="packed normalWhiteSpace" style="white-space: normal;">Year-End Balance</th>'
-        + '  <th class="packed normalWhiteSpace leftBorder">Year</th>'
-        + '  <th class="packed normalWhiteSpace " style="white-space: normal;">'+choice+' Payment</th>'
-        + '  <th class="packed normalWhiteSpace" style="white-space: normal;">Year-End Balance</th>'
-
-        + tableRows + '</tr></table>';
-  $('#resultTableHolder').html(strHeader);
+  return chart;
 }
 
-function viewDetailReport(reportNum) {
+function calculateMonthlyPayments(uv) {
+   fdPayments = {};
+   fdBalance = {};
+   lePayments = {};
+   leBalance = {};
+   start = parseInt(uv['ageFrom']);
+   end = parseInt(uv['ageToLive']);
 
-  var pageUrl = "retirementCalculatorReport.shtml?tabNumber=" + reportNum;
-  var qString = buildQueryString();
-  pageUrl += '&' + qString;
-  openWindow(pageUrl, 775, 600);
+   var yr, mth;
+   var RMD = 0.0;
+   var RMDage = 72;
+   var leFactors = get_life_expectancy_factors();
+   fdBalance[start-1] = parseFloat(uv['amountToUse']);
+   leBalance[start-1] = parseFloat(uv['amountToUse']);
+   fdPayments[start-1] = parseFloat(uv['amountToReceive']);
+   lePayments[start-1] = 0.0;
+   for (yr = start; yr <= end; yr++) {
+     fdBalance[yr] = fdBalance[yr-1];
+     fdPayments[yr] = fdPayments[yr-1];
+     leBalance[yr] = leBalance[yr-1];
+     lePayments[yr] = parseFloat((leBalance[yr] / leFactors[yr] / periods).toFixed(2));
+     RMDpayment[yr] = 0.0;
+     for (mth = 1; mth <= periods; mth++) {
+       if (leBalance[yr] > 0.0) {
+         if (leBalance[yr] < lePayments[yr]) { lePayments[yr] = leBalance[yr]; }
+         leBalance[yr] = (leBalance[yr]-lePayments[yr])*uv['monthlyRate'];
+       } else lePayments[yr] = 0.0;
+       if (fdBalance[yr] > 0.0) {
+         if (fdBalance[yr] < fdPayments[yr]) { fdPayments[yr] = fdBalance[yr]; }
+         fdBalance[yr] = (fdBalance[yr]-fdPayments[yr])*uv['monthlyRate'];
+       } else fdPayments[yr] = 0.0;
+       fdBalance[yr] = parseFloat(fdBalance[yr].toFixed(2));
+       leBalance[yr] = parseFloat(leBalance[yr].toFixed(2));
+     }
+     // Do we need to to do an RMD for fixed payment balance?
+     if (yr >= RMDage) {
+       RMD = fdBalance[yr] / leFactors[yr] - fdPayments[yr] * periods;
+       if (RMD > 0) {
+         RMD = parseFloat(RMD.toFixed(2));
+         RMDpayment[yr] = RMD;
+         fdBalance[yr] -= RMD;
+         // fdBalance[yr] = parseFloat(fdBalance[yr].toFixed(2));
+       }
+     }
+   }
+
+   buildMonthly([], uv);
 }
+
+function hideUnchoosenOptions() {
+  $('#resultSetSpouse-li').addClass('hide');
+  $('#resultSetOther-li').addClass('hide');
+  if (getHaveDependent() == 'Yes') {
+    if (getDependent() == 'Spouse') {
+      $('#resultSetSpouse-li').removeClass('hide');
+      if ($('#resultSetOther').prop('checked')) { $('#resultSetSpouse').prop('checked', true)}
+    }
+    if (getDependent() == 'Other') {
+      $('#resultSetOther-li').removeClass('hide');
+      if ($('#resultSetSpouse').prop('checked')) { $('#resultSetOther').prop('checked', true)}
+    }
+  } else {
+    if ($('#resultSetOther').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
+    if ($('#resultSetSpouse').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
+  }
 }
 -->
 </script>
