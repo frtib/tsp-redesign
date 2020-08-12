@@ -83,12 +83,12 @@ function tableHeader (tableName) {
     var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
     headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
     headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash refund', false);
     headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
     headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash refund', false);
     headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
     return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
   }
@@ -100,8 +100,8 @@ function tableHeader (tableName) {
     var headerHTML2 = sideScrollTH('', 'col', '', 'Age', false);
     headerHTML2 += sideScrollTH('', 'col', '', '100% survivor', false);
     headerHTML2 += sideScrollTH('', 'col', '', '50% survivor', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor with cash', false);
-    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor with cash', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '100% survivor<br> with cash refund', false);
+    headerHTML2 += sideScrollTH('', 'col', '', '50% survivor<br> with cash refund', false);
     headerHTML2 = sideScrollWrapper('', 'tr', '', 'second-level', headerHTML2, false);
     return sideScrollWrapper('  ', 'thead', '', '', headerHTML1 + headerHTML2, true);
   }
@@ -289,7 +289,7 @@ function buildSingle(values, uv) {
     // if (balance[year] <= 0.0) { break; }
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (Basic Features)', data: slBasic, color: clSingleBasic, marker: { symbol: 'diamond' } },
@@ -354,7 +354,7 @@ function buildJointSpouse(values, uv) {
     // if (balance[year] <= 0.0) { break; }
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
@@ -408,7 +408,7 @@ function buildJointOther(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Level payments (100% survivor)', data: jl100, color: clJoint100, marker: { symbol: 'diamond' } },
@@ -464,7 +464,7 @@ function buildOverview(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
 
   var seriesData;
   if (getHaveDependent() == 'Yes') {
@@ -513,7 +513,7 @@ function buildMonthly(values, uv) {
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
   }
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
-  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky', '', headerHTML+bodyHTML, true, '');
+  var tableHTML = sideScrollTable('', 'payment-annuity-table sticky-header', '', headerHTML+bodyHTML, true, '');
 
   var seriesData = [
     { name: 'Monthly payment (fixed dollar)', custom: {zname: 'Year-end balance (fixed dollar)'}, data: fdPay, color: cMonthlyFD, marker: { symbol: 'circle' } },
