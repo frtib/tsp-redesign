@@ -56,7 +56,7 @@ var leBalance = {};
 var start = 20;
 var end = 60;
 var periods = 12;
-var increasingFactor = 1.03;
+var increasingFactor = 1.02;
 
 function tableHeader (tableName) {
   if (tableName == 'monthlyPayment') {
