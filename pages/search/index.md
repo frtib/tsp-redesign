@@ -33,17 +33,19 @@ redirect_from:
         </ul>
       </div>
 
-      <input id="group" type="hidden" value="everything">
+      <form id="search_form_page" action="/search/">
+      <input id="group" type="hidden" value="everything" name="group">
       <div role="search" class="usa-search usa-search-small">
         <div class="usa-search usa-search-small">
-        <label class="usa-sr-only" for="search-terms">Search small</label>
+          <label class="usa-sr-only" for="search-terms">Search small</label>
           <input id="search-terms" type="search" name="search-terms"
-            onChange="gotoPage(1);" onBlur="" xonKeypress="inputKeypress();">
-          <button onClick="gotoPage(1);" type="submit">
+            onChange="submit();" xonChange="gotoPage(1);" onBlur="" xonKeypress="inputKeypress();">
+          <button xonClick="gotoPage(1);" type="submit">
             <span class="usa-sr-only">Search</span>
           </button>
         </div>
       </div>
+      </form>
     </section> <!-- END section.search-filters -->
 
     {% include search/search-result-blocks.html %}
