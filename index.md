@@ -11,7 +11,7 @@ alert:
   title: Scheduled Outage
   subtitle:
   body:
-  - Due to scheduled system maintenance, <strong>tsp.gov, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. Thank you for your patience.
+  - Due to scheduled system maintenance, <strong>My Account, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. You can still visit public pages on tsp.gov, but information that updates automatically, such as share prices, will be unavailable. Thank you for your patience.
 
 hero:
   image: /assets/img/hero.jpg
