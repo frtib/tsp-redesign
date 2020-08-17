@@ -1,6 +1,7 @@
 // Styles for feedback modal and tab
 
 #fba-button {
+
   position: fixed;
   bottom: 0;
   right: 50px;
@@ -10,6 +11,22 @@
   font-size: 1em;
   text-decoration: none;
   z-index: 999999999;
+
+  &.usa-button {
+
+    margin-bottom: 0;
+    border-radius: 0;
+    width: auto;
+
+  }
+
+  &.fixed-tab-button {
+    // bottom: 0;
+    // padding: 5px 10px;
+    // position: fixed;
+    // right: 12px;
+    // z-index: 9999;
+  }
 }
 
 #fba-modal {
@@ -73,7 +90,6 @@
   }
 
   #touchpoints-form {
-
     label.usa-label {
       background-color: transparent;
       border-radius: 2px;
@@ -85,7 +101,6 @@
     }
   }
   // end #touchpoints-form
-
   .usa-banner {
     display: none;
   }
