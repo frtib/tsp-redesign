@@ -5,6 +5,7 @@ layout: home
 class: homepage
 scripts:
 #  - /assets/js/sessionstorage-modal.js
+expand-alert: true
 alert:
   show-alert: true
   icon:
