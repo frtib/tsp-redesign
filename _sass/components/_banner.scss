@@ -1,52 +1,85 @@
-section.usa-banner {
-  background-color: #323943;
-  padding: 1rem 3rem 4rem;
+section {
 
-  .usa-banner-header {
-    padding-bottom: inherit;
-  }
+  &.site-banner {
+    background-color: #323943;
+    padding: 2rem 3rem 1rem 3rem;
 
-  .usa-banner-content {
-    color: #fff;
-    padding: 0;
-
-    h2 {
-      font-family: $sans;
-      margin-bottom: .25em;
+    .usa-grid {
+      padding: 0;
     }
 
-    h2,
-    p:first-of-type {
-      margin-top: 0;
-      margin-bottom: 0;
+    .usa-width-one-whole {
+      display: flex;
+      align-items: start;
     }
 
-    p {
-      font-size: 1.8rem;
+    ul.usa-accordion {
+
+      li,
+      .usa-accordion-button,
+      .usa-accordion-content {
+          background-color: transparent;
+          color: #fff;
+          font-size: 1.8rem;
+        }
+
+      .usa-accordion-button {
+        font-size: 3rem;
+        padding: 0.2rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &[aria-expanded="true"],
+        &[aria-expanded="false"]{
+          background-image: none;
+        }
+
+        &[aria-expanded="true"]:after,
+        &[aria-expanded="false"]:after {
+
+          padding-top: .6rem;
+          display: inline-block;
+          float: right;
+          font-family: $font-awesome;
+          content: "\f146";
+          font-size: 2rem;
+          font-weight: $light;
+        }
+
+        &[aria-expanded="false"]::after {
+          content: "\f0fe";
+        }
+      }
+
+      .usa-accordion-content {
+        padding-bottom: 3rem;
+        padding-left: 0;
+      }
     }
-  }
 
-  .usa-banner-button[aria-expanded=false],
-  .usa-banner-button[aria-expanded=true] {
-    float: right;
-  }
-
-  .usa-banner-button[aria-expanded=false]::after,
-  .usa-banner-button[aria-expanded=false]:hover::after,
-  .usa-banner-button[aria-expanded=true]::after,
-  .usa-banner-button[aria-expanded=true]:hover::after {
-    background-image: url($baseurl + '/assets/img/icons/x-circle-white.svg');
-    background-size: 100%;
-    content: '';
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    margin-right: 0;
-    margin-top: 0;
-
-    .white {
-      stroke: #fff;
-      fill: #fff;
+    .usa-banner-header {
+      padding-bottom: inherit;
     }
-  }
-}
+
+    .usa-banner-content {
+      color: #fff;
+      padding: 0;
+
+      h2 {
+        font-family: $sans;
+        margin-bottom: .25em;
+      }
+
+      h2,
+      p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  } // end &.site-banner
+} // end section
