@@ -1,4 +1,4 @@
-function get_life_expectancy_factor(month, age) {
+function get_life_expectancy_factors() {
   var lifeExpect = [];
   lifeExpect[0] = 82.4;
   lifeExpect[1] = 81.6;
@@ -71,6 +71,8 @@ function get_life_expectancy_factor(month, age) {
   lifeExpect[68] = 18.6;
   lifeExpect[69] = 17.8;
   lifeExpect[70] = 17;
+  lifeExpect[71] = 16.3;
+  lifeExpect[72] = 15.5;
   var uniformed = [];
   uniformed[70] = 27.4;
   uniformed[71] = 26.5;
@@ -119,10 +121,18 @@ function get_life_expectancy_factor(month, age) {
   uniformed[114] = 2.1;
   uniformed[115] = 1.9;
 
+  var factors = [];
+  var i;
+  for (i = 0; i <= 72; i++) { factors[i] = lifeExpect[i]; }
+  for (i = 73; i <= 115; i++) { factors[i] = uniformed[i]; }
+
+  //if (month >= 7) { factors[70] = uniformed[70]; }
+  return factors;
+}
+
+function get_life_expectancy_factor(age) {
   if (age < 0) { age = 0; }
   if (age > 115) { age = 115; }
-  var rc = -1;
-  if (age <= 70) { rc = lifeExpect[age]; } else { rc = uniformed[age]; }
-  if ((age == 70) && (month >= 7)) { rc = uniformed[70]; }
-  return rc;
+  var factors = get_life_expectancy_factors();
+  return factors[age];
 }

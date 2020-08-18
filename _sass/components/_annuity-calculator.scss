@@ -1,0 +1,481 @@
+section {
+  &.joint-life-other,
+  &.joint-life-spouse,
+  &.monthly-payments,
+  &.overview,
+  &.single-life {
+    border-top: 0.2rem dotted $color-gray-light;
+    // border-bottom: .2rem dotted $color-gray-light;
+    margin: 4rem 0;
+
+    &.projection {
+      div {
+        &.graph,
+        &.table,
+        &.view {
+          margin: 3rem 0 0;
+        }
+
+        // &[tabindex="0"] {
+        //   overflow: auto;
+        // }
+
+        &.table {
+          // position: relative;
+          // width: 100%;
+          // margin: 0 auto;
+          // overflow: visible; // for sticky top header on desktop
+          // scroll-behavior: smooth;
+        }
+
+        &.graph {
+          padding-top: 2rem;
+          border: 1px solid $color-gray-light;
+        }
+      }
+
+      fieldset {
+        ul.flex {
+          li {
+            flex-grow: 1;
+          }
+        }
+      }
+      // ul.usa-unstyled-list {
+      //   &.visual {
+      //     max-width: none;
+      //
+      //     li {
+      //       padding: 2rem;
+      //     }
+      //   }
+      // }
+      table {
+        table-layout: fixed;
+        border-collapse: separate;
+        border: 1px solid $color-gray-light;
+        margin: auto;
+        width: auto;
+
+        tr {
+          th {
+            // position: -webkit-sticky;
+            // position: sticky;
+            top: 0;
+            z-index: 2;
+            text-align: center;
+
+            &[scope="row"] {
+              // position: -webkit-sticky;
+              // position: sticky;
+              left: 0;
+              z-index: 1;
+            }
+
+            &:not([scope=row]) {
+              &:first-child {
+                // position: -webkit-sticky;
+                // position: sticky;
+                left: 0;
+                z-index: 3;
+              }
+            }
+          }
+        }
+        // end tr
+
+        thead {
+          // border-bottom: 2px solid $color-gray;
+          tr {
+            th {
+              border-top: none;
+              border-right: 1px solid $color-gray-light;
+              border-bottom: 1px solid $color-gray-light;
+              border-left: none;
+              height: 65px;
+
+              &:first-child {
+                // left: 0; mobile
+                // z-index: 110; mobile?
+                border-top: none;
+                border-bottom: none;
+                background-color: $color-gray-lightest;
+              }
+
+              &:last-child {
+                border-right: none;
+              }
+            } // end th
+
+            // &:nth-child(1) {
+            //   th {
+            //     // position: sticky;
+            //     top: 0;
+            //   }
+            // }
+
+            &:nth-child(2) {
+              th {
+                // position: sticky;
+                top: 65px;
+              }
+            }
+
+            &:nth-child(3) {
+              th {
+                // position: sticky;
+                top: 130px;
+              }
+            }
+
+            &:last-child {
+              th {
+                border-bottom: 2px solid $color-gray;
+              }
+            }
+          } // end tr
+        }
+        // end thead
+
+        tbody {
+          tr {
+            td,
+            th {
+              // border: 1px dotted $color-gray-light;
+              text-align: right;
+              border-top: none;
+              border-right: 1px dotted $color-gray-light;
+              border-bottom: 1px dotted $color-gray-light;
+              border-left: none;
+            }
+
+            th {
+              // z-index: 110;
+              text-align: center;
+              background-color: $color-gray-lightest;
+              // position: sticky;
+            }
+
+            td:last-child {
+              border-right: none;
+            }
+
+            &:last-child {
+              td,
+              th {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+        // end tbody
+      }
+      // end table
+    }
+    // end .projection
+    &.overview {
+      thead {
+        tr {
+          &:nth-child(1) {
+            // first header row
+            th {
+              &:nth-child(2) {
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(3) {
+                background-color: $color-gold-lightest;
+              }
+
+              &:nth-child(4) {
+                background-color: $color-green-lightest;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            // second header row
+            th {
+              &:nth-child(n+2) {
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(4) {
+                background-color: $color-gold-lightest;
+              }
+
+              &:nth-child(n+5) {
+                background-color: $color-green-lightest;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            // third header row
+            th {
+              &:nth-child(n+2) {
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(6) {
+                background-color: $color-gold-lightest;
+              }
+
+              &:nth-child(n+7) {
+                background-color: $color-green-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end th
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              &:nth-child(n+2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+6) {
+                // Select all but the first five
+                background-color: $color-gold-lightest;
+              }
+
+              &:nth-child(n+7) {
+                // Select all but the first six
+                background-color: $color-green-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end tbody
+    }
+    // end .overview
+    &.joint-life-spouse {
+      thead {
+        tr {
+          th {
+            &:nth-child(n+2) {
+              // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+
+            &:nth-child(n+6) {
+              // Select all but the first five
+              background-color: $color-gold-lightest;
+            }
+          }
+
+          &:first-child {
+            th {
+              &:nth-child(n+2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+3) {
+                // Select all but the first two
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              &:nth-child(n+2) {
+                // Select only the first two
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+6) {
+                // Select only the fifth
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end tbody
+    }
+    // end .joint-life-spouse
+    &.joint-life-other {
+      thead {
+        tr {
+          th {
+            &:nth-child(n+2) {
+              // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+
+            &:nth-child(n+4) {
+              // Select all but the first three
+              background-color: $color-gold-lightest;
+            }
+          }
+
+          &:first-child {
+            th {
+              background-color: $color-gray-lightest;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              &:nth-child(n+2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+4) {
+                // Select all but the first three
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end tbody
+    }
+    // end .joint-life-other
+    &.monthly-payments {
+      thead {
+        tr {
+          th {
+            &:nth-child(n+2) {
+              // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+
+            &:nth-child(n+4) {
+              // Select all but the first three
+              background-color: $color-gold-lightest;
+            }
+          }
+
+          &:first-child {
+            th {
+              &:nth-child(2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(3) {
+                // Select all but the first two
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              &:nth-child(n+2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+4) {
+                // Select all but the first three
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end tbody
+    }
+    // end .monthly-payments
+    &.single-life {
+      thead {
+        tr {
+          th {
+            &:nth-child(n+2) {
+              // Select all but the first
+              background-color: $color-primary-alt-lightest;
+            }
+
+            &:nth-child(n+5) {
+              // Select all but the first four
+              background-color: $color-gold-lightest;
+            }
+          }
+
+          &:first-child {
+            th {
+              &:nth-child(n+2) {
+                // Select all but the first
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+3) {
+                // Select all but the first two
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              &:nth-child(n+2) {
+                // Select only the first two
+                background-color: $color-primary-alt-lightest;
+              }
+
+              &:nth-child(n+5) {
+                // Select only the fifth
+                background-color: $color-gold-lightest;
+              }
+            }
+          }
+        }
+      }
+      // end tbody
+    }
+    // end .single-life
+  }
+  // end .&.joint-life-other...&.single-life
+}
+// end section
+
+ul.usa-accordion {
+  &.adjust {
+    border-top: 0.2rem dotted $color-gray-light;
+  }
+}
+@media screen and (max-width: $medium-screen) {
+  section {
+    &.joint-life-other,
+    &.joint-life-spouse,
+    &.monthly-payments,
+    &.overview,
+    &.single-life {
+      &.projection {
+        div {
+          &.table {
+            overflow: auto; // for side scroll in mobile
+          }
+        }
+      }
+    }
+  }
+  // end section
+}
+// end @media

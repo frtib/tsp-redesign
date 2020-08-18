@@ -4,7 +4,7 @@ HTML block for one faq item accordion.
 
 {% assign entry = include.entry %}
 {% assign faq_name = entry.permalink | split: '/' | last | default: 'anchor' %}
-{% assign entryHTML = entry.permalink | append: '.html' %}
+{% assign entryHTML = entry.permalink %}
 {% assign faq_id = include.faq_id | default: faq_name %}
 {% assign faq_question = include.faq_question | default: entry.title %}
 {% assign faq_body = include.faq_body | default: entry.content %}

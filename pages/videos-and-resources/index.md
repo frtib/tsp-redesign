@@ -32,8 +32,6 @@ Videos
 </button>
 <div id="videos" class="usa-accordion-content videos">
 <div class="video-wrapper">
-<!-- EMBED code for single video /embed/[video Id]&rel=0 -->
-<!-- <iframe src="https://www.youtube.com/embed/r6rRMcgBNCc&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 <span id="video-span">
   <iframe id="video-iframe"
     src=""
@@ -41,9 +39,6 @@ Videos
     allowfullscreen>
   </iframe>
 </span>
-<!-- EMBED code for playlist /embed/videoseries?list=[playlist ID]&rel=0 -->
-<!-- <iframe src="https://www.youtube.com/embed/videoseries?list=PLz_6hPnw1Qq5W5U3hZiD0c05gZKkFStT1&rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
 </div>
 <div class="usa-grid">
 <!-- Search videos -->
