@@ -56,7 +56,7 @@ TSP Training and Liaison Specialists from the FRTIB will field participant quest
 
 Disclaimer: Information in this webinar is not to be construed as legal, medical, tax, investment, or financial advice.
 
-### August 18, 2020
+### August 20, 2020
 
 - 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=170){:rel="nofollow"}
 - 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
