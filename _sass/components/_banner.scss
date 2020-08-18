@@ -81,5 +81,12 @@ section {
         font-size: 1.8rem;
       }
     }
+    &.outage {
+      i {
+        color: #fff;
+        font-size: 3.4rem;
+        margin-right: 1rem;
+      }
+    }
   } // end &.site-banner
 } // end section
