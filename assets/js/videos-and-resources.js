@@ -42,7 +42,7 @@ function initVideoFromURL(def, updateURL, resetScroll) {
 
 function initVideoList() {
   // showVideo('r6rRMcgBNCc', 0, 0);
-  initVideoFromURL('r6rRMcgBNCc', 0, 1);
+  initVideoFromURL('sppDf-oZm-o', 0, 1);
 
   // do a search to get all the video details
   // inlineUSAsearch('videos', 'search-status', 'beta.tsp', 'video', 'tsp', 1, 0, videoSearchCallback);

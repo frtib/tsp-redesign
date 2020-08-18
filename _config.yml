@@ -51,6 +51,7 @@ scripts:
   - /assets/js/bootstrap.min.js
   - /assets/js/copy-to-clipboard.js
   - /assets/js/form-modals.js
+  - /assets/js/pdf-file.js
   - /assets/js/glossary.js
   - /assets/js/dialog.js
   - /assets/js/usa-search.js
