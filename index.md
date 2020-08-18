@@ -5,9 +5,9 @@ layout: home
 class: homepage
 scripts:
 #  - /assets/js/sessionstorage-modal.js
-expand-alert: true
+expand-site-alert: true
 alert:
-  show-alert: true
+  show-alert: false
   icon:
   title: Scheduled Outage
   subtitle:

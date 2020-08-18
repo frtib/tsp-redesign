@@ -12,13 +12,7 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/rates-of-returns.js
-alert:
-  show-alert: true
-  icon:
-  title: Scheduled Outage
-  subtitle:
-  body:
-  - Due to scheduled system maintenance, <strong>tsp.gov, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. Thank you for your patience.
+expand-site-alert: true
 bottom-scripts:
 document-ready:
   - getRatesOfReturn('rates-of-return');

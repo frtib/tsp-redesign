@@ -1,7 +1,7 @@
 <!-- news banner -->
 
 {% if page.alert.show-alert == true %}
-<!-- <section onclick="myFunction()" id="hp-news" class="usa-banner" mardown="1">
+<section onclick="myFunction()" id="hp-news" class="usa-banner" mardown="1">
   <div class="usa-accordion">
     <header class="usa-banner-header">
       <div class="usa-grid usa-banner-inner">
@@ -12,9 +12,6 @@
       </button>
       <div class="usa-banner-guidance-gov usa-width-one-whole">
         <img class="usa-banner-icon usa-media_block-img" src="{% if page.alert.icon %}{{ site.baseurl }}{{ page.alert.icon }}{% else %}{{ site.baseurl }}/assets/img/icons/alert-circle-white.svg{% endif %}" alt="Alert">
-
-
-
         <div class="usa-media_block-body">
           <h2>{{ page.alert.title | default: 'No title specified' }}</h2>
           {% if page.alert.subtitle %}<strong>{{ page.alert.subtitle }}</strong><br>{% endif %}
@@ -23,27 +20,8 @@
       </div>
     </div>
   </div>
-</section> -->
-{% endif %}
-
-<section class="site-banner outage">
-  <div class="usa-grid">
-    <div class="usa-width-one-whole">
-      <img class="usa-banner-icon usa-media_block-img" src="{% if page.alert.icon %}{{ site.baseurl }}{{ page.alert.icon }}{% else %}{{ site.baseurl }}/assets/img/icons/alert-circle-white.svg{% endif %}" alt="Alert">
-      <ul class="usa-accordion usa-banner-content">
-      <header>
-        <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="outage-1">Scheduled outage</button>
-        <div id="outage-1" class="usa-accordion-content">
-          Due to scheduled system maintenance, <strong>My Account, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. You can still visit public pages on
-          tsp.gov, but information that updates automatically, such as share prices, will be unavailable. Thank you for your patience.
-        </div>
-      </li>
-    </header>
-    </ul></div>
-  </div>
 </section>
-
+{% endif %}
 {% if header %}
 <header class="usa-header usa-header-extended" role="banner">
   <div class="usa-navbar">
