@@ -58,8 +58,8 @@ Disclaimer: Information in this webinar is not to be construed as legal, medical
 
 ### August 20, 2020
 
-- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=170){:rel="nofollow"}
-- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=206){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=207){:rel="nofollow"}
 
 ## Thrift Savings Plan - CARES Act loans and withdrawals
 
@@ -130,7 +130,7 @@ This webinar provides an overview of the TSP loan program. TSP webinars are host
 
 ### September 1, 2020
 
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=188){:rel="nofollow"}
+- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=208){:rel="nofollow"}
 - 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=189){:rel="nofollow"}
 
 ### October 7, 2020
