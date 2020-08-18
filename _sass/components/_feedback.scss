@@ -7,25 +7,15 @@
   right: 5%;
   background: #02bfe7;
   color: #fff;
-  padding: 0.75rem 1.5rem
+  padding: 0.75rem 1.5rem;
   font-size: 1.6rem;
   text-decoration: none;
   z-index: 999999999;
 
   &.usa-button {
-
     margin-bottom: 0;
     border-radius: 0;
     width: auto;
-
-  }
-
-  &.fixed-tab-button {
-    // bottom: 0;
-    // padding: 5px 10px;
-    // position: fixed;
-    // right: 12px;
-    // z-index: 9999;
   }
 }
 
