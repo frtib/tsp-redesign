@@ -13,8 +13,17 @@
 {% if include.value == '-'%}{{include.value}}{% else %}{{left}}.{{right}}%{% endif %}
 {% else %}
   {% if explain == true %}
-  An expense ratio of {{left}}.{{right}}% translates to {{value100}} basis points or ${{left10}}.{{right10}} per $1,000 acount balance.
+    {% if include.value == '-' and include.alt_value %}
+    {{include.alt_value}}
+    {% else %}
+    An expense ratio of {{left}}.{{right}}% translates to {{value100}} basis points or ${{left10}}.{{right10}} per $1,000 acount balance.
+    {% endif %}
   {% else %}
-  ${{left10}}.{{right10}}/$1,000 account balance {{left}}.{{right}}% ({{ value100 }} basis points)
+    {% if include.value == '-'%}
+    {% assign as_of = include.as_of | default: 'the past' %}
+    This fund did not exist in {{as_of}}.
+    {% else %}
+    ${{left10}}.{{right10}}/$1,000 account balance {{left}}.{{right}}% ({{ value100 }} basis points)
+    {% endif %}
   {% endif %}
 {% endif %}

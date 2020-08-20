@@ -109,10 +109,10 @@ scripts:
                 {{ page.summary_details.assets }}
               </p>
               <p><b>Net administrative expenses</b><br>
-                {% include components/expense_string.html value=page.summary_details.net_expense %}
+                {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
               </p>
               <p><b>Other expenses</b><br>
-                {% include components/expense_string.html value=page.summary_details.other_expense %}
+                {% include components/expense_string.html value=page.summary_details.other_expense as_of=page.summary_details.as_of_year %}
               </p>
 {% if page.Fund_type == 'Individual' %}
                 <p><b>Benchmark index</b><br>
@@ -183,13 +183,13 @@ scripts:
             <div class="usa-width-one-half">
               <h3>Fees {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
               <p><b>Net administrative expenses<sup>*</sup></b><br>
-                {% include components/expense_string.html value=page.summary_details.net_expense %}
+                {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
               </p>
               <p><b>Other expenses<sup>**</sup></b><br>
-                {% include components/expense_string.html value=page.summary_details.other_expense %}
+                {% include components/expense_string.html value=page.summary_details.other_expense as_of=page.summary_details.as_of_year %}
               </p>
               <p>
-                <sup>*</sup>{% include components/expense_string.html value=page.summary_details.net_expense explain=true %}
+                <sup>*</sup>{% include components/expense_string.html value=page.summary_details.net_expense alt_value=page.summary_details.alt_net_expense explain=true %}
               </p>
               <p><sup>**</sup>Fees paid to the investment manager.</p>
             </div>
