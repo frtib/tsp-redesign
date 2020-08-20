@@ -7,7 +7,6 @@ scripts:
   - https://touchpoints.app.cloud.gov/touchpoints/8effcc3f/js
 permalink: /agency-service-reps/training-form/
 redirect_from:
-published: false
 ---
 
 # Training request form
