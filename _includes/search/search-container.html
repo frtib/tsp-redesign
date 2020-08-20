@@ -18,11 +18,12 @@
   </div>
   <span class="or">or</span>
   <input id="group" type="hidden" value="{{type}}">
-  <form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-{{type}}" method="get"
-    class="animated-search">
+  {% comment %}<form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-{{type}}" {% endcomment %}
+  <form accept-charset="UTF-8" id="search-form-{{type}}"
+    method="get" class="animated-search">
       <label for="search-terms" class="usa-sr-only">Enter search term(s)</label>
       <input type="text" name="search-terms" id="search-terms"
-        onChange="myPageChange();" onBlur="myPage(1);"
+        {% comment %}onChange="myPageChange();" onBlur="myPage(1);"{% endcomment %}
         autocomplete="off" placeholder="Enter search term(s)">
   </form>
 </div>

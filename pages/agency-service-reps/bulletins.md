@@ -15,6 +15,7 @@ redirect_from:
   - /representative/Content/bulletinsService.html
 document-ready:
   - setTopic('select-bulletins-topic');
+  - doSearch('search-terms');
 ---
 
 # Bulletins

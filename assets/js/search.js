@@ -32,6 +32,15 @@ function setQS(inputBox) {
   var group = getCleanParm('group', 150);
   setGroup(group);
 }
+// for search-container.html
+function doSearch(inputBox) {
+  qs = getCleanParm('search-terms', 150);
+  if (qs != '') {
+    $('#'+inputBox).val(qs);
+    myPage(1);
+  }
+}
+
 // only call this on page load!
 function initGroup() {
   var group = getQueryString('group');
@@ -43,6 +52,7 @@ function initGroup() {
   return false;
 }
 function setGroup(group) {
+  if (group == '') { return false; }
   if ($('#'+group).length) {
     $('.group-option').removeClass('active');
     $('#group').val(group);

@@ -14,6 +14,7 @@ permalink: /forms/
 document-ready:
   - addFormModals();
   - setTopic('select-forms-topic');
+  - doSearch('search-terms');
 redirect_from:
   - /forms/addressNameChange.html
   - /forms/allPublications.html

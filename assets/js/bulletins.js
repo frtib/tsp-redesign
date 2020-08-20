@@ -45,13 +45,18 @@ function inlineSearch(queryBox, resultDiv) {
 // only call this on page load!
 function setTopic(dropdown) {
   var topic = getCleanParm('topic', 30);
+  if (topic == '') { topic = getCleanParm('select-bulletins-topic', 30); }
   if (topic == '') { return false; }
   topic = topic.toLowerCase().replace(' ', '-');
-  console.log('set Topic ', dropdown, topic);
+  // console.log('set Topic ', dropdown, topic);
   $('#'+dropdown).val(topic);
   if (($('#'+dropdown).val()) == null) { $('#'+dropdown).val(-1); return false; };
   $('#'+dropdown).change();
   return true;
+}
+function setQS(inputBox) {
+  qs = getCleanParm('search-terms', 150);
+  $('#'+inputBox).val(qs);
 }
 
 function selectBulletinsTopic() {
