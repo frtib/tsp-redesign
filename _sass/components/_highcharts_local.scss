@@ -16,6 +16,12 @@
 .highcharts-color-blue { fill: blue; stroke: blue; stroke-width: 1px; }
 .highcharts-color-gray { fill: gray; stroke: gray; stroke-width: 1px; }
 
+// used by savings grow calc
+.highcharts-color-secondary { fill: $color-secondary; stroke: $color-secondary; stroke-width: 1px; }
+.highcharts-color-secondary-light { fill: $color-secondary-light; stroke: $color-secondary-light; stroke-width: 1px; }
+.highcharts-color-gold { fill: $color-gold; stroke: $color-gold; stroke-width: 1px; }
+.highcharts-color-gold-lighter { fill: $color-gold-lighter; stroke: $color-gold-lighter; stroke-width: 1px; }
+
 .hc-composition-pie {
   width: 100px;
   height: 35px;
