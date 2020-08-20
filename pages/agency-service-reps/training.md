@@ -14,7 +14,7 @@ redirect_from:
 
 Thank you for your interest in TSP education.
 
-TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form](javascript:void(0)) and submitting the form to **training@TSP.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
+TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx) and submitting the form to **training@TSP.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
 <span id="tspWebinars"></span>
 <ul class="usa-accordion">
@@ -156,7 +156,7 @@ Benefits specialist and educator training
 
 The Federal Retirement Thrift Investment Board offers a variety of TSP training opportunities for agency benefits officers, payroll personnel, and financial counselors supporting the uniformed services.
 
-We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialist, human resources personnel, and payroll personnel. As an agency or service representative, you may request training for your agency or service from our [Course Catalog](javascript:void(0)) by completing the [TSP Training Request Form](javascript:void(0)) and submitting the form to **training@TSP.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
+We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialist, human resources personnel, and payroll personnel. As an agency or service representative, you may request training for your agency or service from our [Course Catalog]({{ site.baseurl }}/bulletins/tsp-course-catalog.pdf) by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx)  and submitting the form to **training@TSP.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
 Click on any course to learn more and get registered:
 
@@ -168,8 +168,8 @@ Click on any course to learn more and get registered:
 
 Agency or service representatives attempting to schedule a training event should follow these general instructions:
 
-1. Find a course – Review the [Course Catalog](javascript:void(0)) to find the TSP course that meets your training needs.
-2. Complete the [TSP Training Request Form](javascript:void(0)) by providing as many details as possible to help the TSP Training and Liaison Specialist customize the presentation for your training event.
+1. Find a course – Review the [Course Catalog]({{ site.baseurl }}/bulletins/tsp-course-catalog.pdf) to find the TSP course that meets your training needs.
+2. Complete the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx) by providing as many details as possible to help the TSP Training and Liaison Specialist customize the presentation for your training event.
 3. Email the Training Request Form to our Training Support Specialist at training@TSP.gov. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
 A TSP Training Support Specialist will confirm your request by email or phone. If travel is required outside of the DC area, our Support Specialist will confirm the travel arrangements have been approved as well as finalizing the details of the training event.  
