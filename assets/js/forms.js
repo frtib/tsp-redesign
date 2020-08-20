@@ -33,7 +33,8 @@ function setTopic(dropdown) {
   if (topic == '') { return false; }
   $('#'+dropdown).val(topic);
   if (($('#'+dropdown).val()) == null) { $('#'+dropdown).val(-1); return false; };
-  $('#'+dropdown).change();
+  // $('#'+dropdown).change();
+  selectFormsTopic();
   return true;
 }
 

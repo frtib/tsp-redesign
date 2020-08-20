@@ -51,7 +51,8 @@ function setTopic(dropdown) {
   // console.log('set Topic ', dropdown, topic);
   $('#'+dropdown).val(topic);
   if (($('#'+dropdown).val()) == null) { $('#'+dropdown).val(-1); return false; };
-  $('#'+dropdown).change();
+  // $('#'+dropdown).change();
+  selectBulletinsTopic();
   return true;
 }
 function setQS(inputBox) {
