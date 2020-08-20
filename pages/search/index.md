@@ -33,7 +33,7 @@ redirect_from:
         </ul>
       </div>
 
-      <form id="search_form_page" action="/search/">
+      <form id="search_form_page" action="{{ site.baseurl }}/search/">
       <input id="group" type="hidden" value="everything" name="group">
       <div role="search" class="usa-search usa-search-small">
         <div class="usa-search usa-search-small">
