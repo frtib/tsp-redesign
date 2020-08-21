@@ -72,8 +72,8 @@
       {% if _secondary %}
       <div class="usa-nav-secondary">
         {% if site.search_site_handle %}
-        <form id="search_form" action="/search/" accept-charset="UTF-8" method="get" class="usa-search usa-search-small js-search-form usa-sr-only">
-          <input name="utf8" type="hidden" value="&#x2713;" />
+        <form id="search_form" action="{{ site.baseurl }}/search/" accept-charset="UTF-8" method="get" class="usa-search usa-search-small js-search-form usa-sr-only">
+            <input name="utf8" type="hidden" value="&#x2713;" />
           <div role="search">
             <label for="query" class="usa-sr-only">Enter Search Term(s):</label>
             <input type="search" name="qs" id="qs" autocomplete="off" class="usagov-search-autocomplete" />

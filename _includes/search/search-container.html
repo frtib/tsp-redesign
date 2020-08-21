@@ -6,23 +6,26 @@
   <!-- Topic drop-down list -->
 
   <div class="select">
-    <label class="usa-sr-only" for="select-forms-topic">Search by topic</label>
-    <select id="select-{{type}}-topic" name="select-forms-topic" onChange="{{onChange}}">
-    <option disabled selected value='-1'>Choose topic</option>
-        {% for topic in topics %}
-        {% assign dropValue = topic | downcase | replace: " ", "-" %}
-        <option value='{{ dropValue }}'>{{ topic }}</option>
-        {% endfor %}
+    <form accept-charset="UTF-8" id="search-form-topic" method="get">
+      <label class="usa-sr-only" for="select-forms-topic">Search by topic</label>
+      <select id="select-{{type}}-topic" name="select-{{type}}-topic" onChange="{{onChange}}">
+        <option disabled selected value='-1'>Choose topic</option>
+          {% for topic in topics %}
+          {% assign dropValue = topic | downcase | replace: " ", "-" %}
+          <option value='{{ dropValue }}'>{{ topic }}</option>
+          {% endfor %}
         <option value='0'>Show all</option>
       </select>
+    </form>
   </div>
   <span class="or">or</span>
   <input id="group" type="hidden" value="{{type}}">
-  <form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-{{type}}" method="get"
-    class="animated-search">
+  {% comment %}<form accept-charset="UTF-8" action="javascript:void(0);" id="search-form-{{type}}" {% endcomment %}
+  <form accept-charset="UTF-8" id="search-form-{{type}}"
+    method="get" class="animated-search">
       <label for="search-terms" class="usa-sr-only">Enter search term(s)</label>
       <input type="text" name="search-terms" id="search-terms"
-        onChange="myPageChange();" onBlur="myPage(1);"
+        {% comment %}onChange="myPageChange();" onBlur="myPage(1);"{% endcomment %}
         autocomplete="off" placeholder="Enter search term(s)">
   </form>
 </div>
