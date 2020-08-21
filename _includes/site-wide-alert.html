@@ -1,0 +1,28 @@
+{% comment %}
+This content will show at the top of every page.  It is intended for a site wide alert.
+To turn it off, move the endcomment to the bottom of this content.
+To activate it, move the endcomment just below this text and alter the content in the section
+to the alert you want.
+{% endcomment %}
+{% assign expand = false %}
+{% if page.expand-site-alert %}{% assign expand = true %}{% endif %}
+<section class="site-banner outage">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <i class="fas fa-power-off usa-banner-icon" alt="Alert"></i>
+      <ul class="usa-accordion usa-banner-content">
+      <header>
+        <li>
+        <button class="usa-accordion-button" aria-expanded="{{expand}}" aria-controls="outage-1">Scheduled outage</button>
+        <div id="outage-1" class="usa-accordion-content" aria-hidden="false">
+          Due to scheduled system maintenance, <strong>My Account, the ThriftLine, and frtib.gov</strong>
+          will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on
+          Monday, August 24. You can still visit public pages on tsp.gov, but information that
+          updates automatically, such as share prices, will be unavailable. Thank you for your patience.
+        </div>
+        </li>
+      </header>
+      </ul>
+    </div>
+  </div>
+</section>

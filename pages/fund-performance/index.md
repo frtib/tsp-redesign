@@ -12,6 +12,7 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/rates-of-returns.js
+expand-site-alert: true
 bottom-scripts:
 document-ready:
   - getRatesOfReturn('rates-of-return');
