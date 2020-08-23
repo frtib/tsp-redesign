@@ -34,6 +34,9 @@ var doAjaxRetrieveRoR = function(divName, url) {
         var errMsg = textStatus + ': ' + errorThrown;
         var userMsg = somethingNotWorking();
         $('#'+divName).html(userMsg);
+        $('#rates-of-return-table').html(userMsg);
+        $('#rates-of-return-annual').html('');
+        $('#rates-of-return-monthly').html('');
     }
   );
 }
