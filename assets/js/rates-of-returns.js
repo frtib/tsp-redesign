@@ -114,6 +114,9 @@ function buildSideScrollTableRoR(chartName, data) {
         colClass = "empty-table-cell "+colClass;
         val = '';
       }
+      if (col[i].trim() == '-') {
+        val = '-';
+      }
       row = row + sideScrollWrapper('', 'td', '', colClass, val, false);
     }
     tmpRows += sideScrollWrapper('    ', 'tr', '', '', row, true);
