@@ -1,7 +1,6 @@
 // Styles for feedback modal and tab
 
 #fba-button {
-
   position: fixed;
   bottom: 0;
   right: 5%;
@@ -19,7 +18,7 @@
   }
 }
 
-#fba-modal {
+.fba-modal {
   z-index: 11000;
   position: fixed;
   top: 0;
@@ -38,7 +37,7 @@
     font-weight: bold;
   }
 
-  #fba-modal-dialog {
+  .fba-modal-dialog {
     max-width: 500px;
     background: #fff;
     padding: 20px;
@@ -60,7 +59,7 @@
     }
   }
 
-  #fba-modal-close {
+  .fba-modal-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -72,14 +71,12 @@
     text-decoration: none;
     width: auto;
   }
-
-  #fba-text-email,
-  #fba-text-name {
-    max-width: 100%!important;
-    font-size: 100%;
-  }
-
-  #touchpoints-form {
+  // #fba-text-email,
+  // #fba-text-name {
+  //   max-width: 100%!important;
+  //   font-size: 100%;
+  // }
+  .touchpoints-form-body {
     label.usa-label {
       background-color: transparent;
       border-radius: 2px;
