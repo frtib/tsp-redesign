@@ -31,11 +31,13 @@ Two-step authentication helps you protect your account against fraud by promptin
 TSP web pages are best viewed with one of the following browsers:
 {:.usa-alert-text}
 
-- Microsoft Edge (current version with auto update enabled)
+- Microsoft Edge
+- Safari
+- Chrome
+- Firefox
 - Internet Explorer 11 (compatibility view disabled)
-- Safari (current version with auto update enabled)
-- Chrome (current version with auto update enabled)
-- Firefox (current version with auto update enabled)
+
+**Note**: For all browsers listed above, we recommend using the current version with auto update enabled.
 </div>
 </div>
 
