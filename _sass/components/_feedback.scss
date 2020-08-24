@@ -1,88 +1,95 @@
 // Styles for feedback modal and tab
+
 #fba-button {
   position: fixed;
   bottom: 0;
-  right: 50px;
+  right: 5%;
   background: #02bfe7;
   color: #fff;
-  padding: 5px 10px;
-  font-size: 1em;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.6rem;
   text-decoration: none;
   z-index: 999999999;
+
+  &.usa-button {
+    margin-bottom: 0;
+    border-radius: 0;
+    width: auto;
+  }
 }
 
-#fba-overlay.is-active {
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,.25);
-  z-index: 10000;
-}
-
-#fba-modal {
+.fba-modal {
   z-index: 11000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
   overflow-x: auto;
   padding: 20px;
-}
+  background-color: rgba(0,0,0,.25);
 
-#fba-modal-dialog {
-  max-width: 500px;
-  background: #fff;
-  padding: 20px;
-  position: relative;
-  margin: 0 auto;
-}
+  .usa-error-message {
+    color: $color-secondary-dark;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    display: block;
+    font-weight: bold;
+  }
 
-#fba-modal-title {
-  margin-top: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-}
+  .fba-modal-dialog {
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
 
-#fba-text-email,
-#fba-text-name {
-  max-width: 100%!important;
-  font-size: 100%;
-}
+  h3#fba-modal-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: $serif;
+    line-height: 1.3;
+  }
 
-#fba-modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  font-size: 24px;
-  color: #5b616b;
-  background: none;
-  line-height: 1;
-  text-decoration: none;
-  width: auto;
-}
+  .usa-alert {
+    h3 {
+      margin: 0;
+    }
+  }
 
-#feedback-form fieldset {
-  margin: 1rem 0;
+  .fba-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #5b616b;
+    background: none;
+    line-height: 1;
+    text-decoration: none;
+    width: auto;
+  }
+  // #fba-text-email,
+  // #fba-text-name {
+  //   max-width: 100%!important;
+  //   font-size: 100%;
+  // }
+  .touchpoints-form-body {
+    label.usa-label {
+      background-color: transparent;
+      border-radius: 2px;
+      color: $color-base;
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      padding: 0.1rem 0.7rem;
+      text-transform: uppercase;
+    }
+  }
+  // end #touchpoints-form
+  .usa-banner {
+    display: none;
+  }
 }
-
-#feedback-form p {
-  margin: 1rem 0;
-}
-
-#feedback-form label {
-  display: block;
-  margin-top: 1rem;
-}
-
-#feedback-form input {
-  margin-bottom: 1.5rem;
-  width: 75%;
-}
-
-#feedback-form #fba-submit {
-  width: auto;
-}
+// end #fba-modal

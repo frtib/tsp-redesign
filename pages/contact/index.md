@@ -3,7 +3,6 @@ layout: page
 title: Contact
 permalink: /contact/
 scripts:
-  - /assets/js/web-comments.js
 redirect_from:
   - /ParticipantSupport/Content/contact/
 ---
@@ -57,9 +56,7 @@ Birmingham, AL 35238
     <div class="usa-width-one-half" markdown="1">
 ![alt text]({{ site.baseurl }}/assets/img/icons/message-square.svg)
 ### Web feedback   
-Let us know how well tsp.gov meets your needs. We do not respond to feedback submitted through this page.
-**Do not leave personally identifiable information.**
-[Leave feedback](#){:#leave-feedback}{:.nobr}
+Use the Feedback button in the lower right corner of your screen to let us know how well tsp.gov meets your needs. We do not respond to feedback submitted through this page. **Do not leave personally identifiable information.**
 
 </div>
     <!-- MAIL & FAX -->

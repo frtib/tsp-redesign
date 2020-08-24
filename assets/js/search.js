@@ -20,14 +20,27 @@ function getCleanParm(parm, maxLength) {
   var qs = getQueryString(parm);
   if (typeof qs === 'undefined') { return ''; }
   qs = decodeURIComponent(qs);
-  qs = qs.replace(/[^A-Z0-9_-]+/ig,' ');
+  qs = qs.replace(/[^"A-Z0-9_-]+/ig,' ');
   qs = qs.substring(0,maxLength);
   return qs;
 }
 // only call this on page load!
 function setQS(inputBox) {
-  $('#'+inputBox).val(getCleanParm('qs', 150));
+  var qs = getCleanParm('qs', 150);
+  if (qs == '') { qs = getCleanParm('search-terms', 150); }
+  $('#'+inputBox).val(qs);
+  var group = getCleanParm('group', 150);
+  setGroup(group);
 }
+// for search-container.html
+function doSearch(inputBox) {
+  qs = getCleanParm('search-terms', 150);
+  if (qs != '') {
+    $('#'+inputBox).val(qs);
+    myPage(1);
+  }
+}
+
 // only call this on page load!
 function initGroup() {
   var group = getQueryString('group');
@@ -39,6 +52,7 @@ function initGroup() {
   return false;
 }
 function setGroup(group) {
+  if (group == '') { return false; }
   if ($('#'+group).length) {
     $('.group-option').removeClass('active');
     $('#group').val(group);
@@ -51,7 +65,8 @@ function getGroup() {
 }
 function selectSearchGroup(group, doSearch) {
   setGroup(group);
-  if (doSearch) { gotoPage(1); }
+  // if (doSearch) { gotoPage(1); }
+  if (doSearch) { $('#search_form_page').submit(); }
 }
 
 

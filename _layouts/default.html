@@ -12,7 +12,7 @@
   {% include analytics.html %}
   {% endif %}
   <!-- Google Tag Manager -->
-  <script>
+  <!-- <script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -27,15 +27,16 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MLDLTMR');
-  </script>
+  </script> -->
   <!-- End Google Tag Manager -->
 </head>
 
 <body class="{{ layout.class }} {{ page.class }}">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLDLTMR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLDLTMR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
   <!-- End Google Tag Manager (noscript) -->
   {% include skipnav.html %}
+  {% include site-wide-alert.html %}
   {% include header.html %}
 
   <main id="main-content" {% for _attr in layout.main %} {{ _attr[0] }}="{{ _attr[1] }}" {% endfor %}>
@@ -49,6 +50,7 @@
   {% include share-bar.html pageurl=entryHTML %}
   {% include scripts.html %}
   {% include bottom-scripts.html %}
+  <script src="https://touchpoints.app.cloud.gov/touchpoints/4f8d19c2/js" async></script>
 </body>
 
 </html>

@@ -15,6 +15,7 @@ redirect_from:
   - /representative/Content/bulletinsService.html
 document-ready:
   - setTopic('select-bulletins-topic');
+  - doSearch('search-terms');
 ---
 
 # Bulletins
@@ -35,11 +36,11 @@ TSP bulletins provide guidance to TSP Agency and Service representatives for imp
 <section class="search-bulletins inline-search">
   <div class="usa-grid-full">
     <div class="usa-width-one-whole">
-        {% include search/search-container.html topics=site.data.bulletins_topics
-          type='bulletin' onChange='selectBulletinsTopic();' %}
-        <!-- checkbox to see USV bulletins only -->
-        <input id="usv-only" type="checkbox" name="usv-only" value="usv-only" onChange="usvOnlyGood();" onBlur="usvOnlyGood();"/>
-        <label for="usv-only">Show only Uniformed Services bulletins</label>
+      {% comment %}{% include search/search-container.html topics=site.data.bulletins_topics type='bulletin' onChange='selectBulletinsTopic();' %}{% endcomment %}
+      {% include search/search-container.html topics=site.data.bulletins_topics type='bulletin' onChange='submit();' %}
+      <!-- checkbox to see USV bulletins only -->
+      <input id="usv-only" type="checkbox" name="usv-only" value="usv-only" onChange="usvOnlyGood();" onBlur="usvOnlyGood();"/>
+      <label for="usv-only">Show only Uniformed Services bulletins</label>
     </div><!-- END div.usa-width-one-whole -->
   </div><!-- END div.usa-grid-full -->
 </section>

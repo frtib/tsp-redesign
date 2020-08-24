@@ -1,0 +1,129 @@
+@media print {
+  a[href]:after {
+    content: " (https://www.tsp.gov" attr(href) ")";
+  }
+
+  a.usa-skipnav {
+    display: none;
+  }
+
+  header {
+    display: block;
+
+    .usa-navbar {
+      height: 6rem;
+    }
+
+    button.usa-menu-btn {
+      display: none;
+    }
+
+    .usa-logo {
+      .usa-logo-text {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: $normal;
+
+        a {
+          display: flex;
+          align-items: flex-end;
+        }
+
+        a:after {
+          padding-left: 1rem;
+          line-height: 1.4;
+        }
+      }
+
+      img {
+        height: 5rem;
+        width: auto;
+      }
+    }
+  }
+
+  main {
+    aside {
+      display: none;
+    }
+  }
+
+  div#glossary {
+    display: none;
+  }
+
+  footer {
+    &:not([role="contentinfo"]) {
+      border-top: 2px dotted #aeb0b5;
+    }
+
+    .footer-section {
+      background-color: #fff;
+      font-size: inherit;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      ul.usa-unstyled-list {
+        display: block;
+        margin-top: 1rem;
+
+        li {
+          display: list-item;
+
+          img {
+            height: 24px;
+            padding-right: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .usa-footer-primary-section {
+      display: none;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .usa-width-one-third { // Social media links in footer
+      a[href]:after {
+        content: "(" attr(href) ")";
+      }
+    }
+  }
+  // end footer
+  div#shareModal {
+    display: none;
+  }
+
+  a#fba-button {
+    display: none;
+  }
+  // LISTS and buttons
+  .usa-content {
+    ol,
+    ul {
+      &.adjust,
+      &.navigation-buttons {
+        display: none;
+      }
+    }
+  }
+
+  table {
+    &.sticky {
+      tr {
+        th {
+          position: initial; // unset any sticky header
+          top: auto;
+        }
+      }
+    }
+  }
+  @page {
+    margin: auto 0.25in;
+  }
+}

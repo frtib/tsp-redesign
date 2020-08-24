@@ -14,6 +14,7 @@ permalink: /forms/
 document-ready:
   - addFormModals();
   - setTopic('select-forms-topic');
+  - doSearch('search-terms');
 redirect_from:
   - /forms/addressNameChange.html
   - /forms/allPublications.html
@@ -38,8 +39,8 @@ redirect_from:
 <div class="usa-grid-full">
   <div class="usa-width-one-whole">
     <section class="inline-search">
-      {% include search/search-container.html topics=site.data.forms_topics
-          type='form' onChange='selectFormsTopic();' %}
+      {% comment %}{% include search/search-container.html topics=site.data.forms_topics type='form' onChange='selectFormsTopic();' %}{% endcomment %}
+      {% include search/search-container.html topics=site.data.forms_topics type='form' onChange='submit();' %}
     </section><!-- // end section.inline-search -->
   </div><!-- END div.usa-width-one-whole -->
 </div><!-- END div.usa-grid-full -->
