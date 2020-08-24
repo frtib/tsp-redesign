@@ -33,10 +33,10 @@ var doAjaxRetrieveRoR = function(divName, url) {
     function (jqXHR, textStatus, errorThrown) {
         var errMsg = textStatus + ': ' + errorThrown;
         var userMsg = somethingNotWorking();
-        $('#'+divName).html(userMsg);
+        // $('#'+divName).html(userMsg);
         $('#rates-of-return-table').html(userMsg);
-        $('#rates-of-return-annual').html('');
-        $('#rates-of-return-monthly').html('');
+        $('#rates-of-return-annual').html(userMsg);
+        $('#rates-of-return-monthly').html(userMsg);
     }
   );
 }
