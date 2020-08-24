@@ -201,9 +201,7 @@ Investment (F) Fund contains government, corporate, and asset-backed bonds; the 
 
 </section>
 
-<section id="footnotes" markdown="1">
-
 1. {: #foot_1} Net administrative expenses are the expenses charged to TSP participants per dollar invested in the respective funds after offsetting gross administrative expenses
 with account forfeitures and loan fees.
 2. {: #foot_2} Fees paid to investment manager
-</section>
+{:.footnotes}

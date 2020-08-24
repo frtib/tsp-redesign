@@ -1,5 +1,5 @@
 section#fund-tabs {
-  #footnotes {
+  .footnotes {
     border-top: none;
   }
 }
@@ -184,12 +184,6 @@ section#fund-tabs {
         }
         .sort-column-desc {
           background-image: url($baseurl +  "/assets/img/icons/arrow-up-circle.svg");
-        }
-        #footnotes {
-          padding-left: 1.5rem;
-          li {
-            display: list-item;
-          }
         }
       } // end section.fund-tab-composition
 
