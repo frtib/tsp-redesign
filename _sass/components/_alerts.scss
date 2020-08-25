@@ -1,74 +1,117 @@
 .usa-alert {
-border-top-style: solid;
-border-top-width: 16px;
-margin-bottom: 3rem;
-background-size: 4rem;
+  border-top-style: solid;
+  border-top-width: 16px;
+  margin-bottom: 3rem;
+  background-size: 4rem;
+
   &:before {
     width: 0;
   }
+
+  &.cc {
+    background-image: none;
+
+    &:before {
+      background-color: inherit;
+      font-family: $font-awesome;
+      content: "\f20a";
+      padding: 0.7rem 2rem;
+      font-size: 3.5rem;
+    }
+  }
+
   .usa-alert-body {
-    padding-left:0;
+    padding-left: 0;
+
     > :first-child {
       margin-top: 0;
       min-height: 6rem;
     }
   }
-  h2, h3, h4, h5 {
+
+  h2,
+  h3,
+  h4,
+  h5 {
     font-size: 2.5rem;
   }
 }
 
-
-.usa-alert-success,
-.usa-alert--success
- {
+.usa-alert--success,
+.usa-alert-success {
   border-top-color: $color-green;
   background-image: url($baseurl + '/assets/img/icons/check-circle-green.svg');
+
   .usa-alert-body {
     padding-left: 5rem;
   }
 }
-.usa-alert--success { // for use with Feedback modal, which uses USWDS v.2
+
+.usa-alert--success {
+  // for use with Feedback modal, which uses USWDS v.2
   background-image: none;
   background-color: $color-green-lightest;
 }
+
 .usa-alert-info {
   background-image: url($baseurl + '/assets/img/icons/info.svg');
   border-top-color: #323A45;
+
+  &.cc {
+    background-image: none;
+
+    &:before {
+      font-family: $font-awesome;
+      content: "\f20a";
+      padding: 0.7rem 2rem;
+      font-size: 3.5rem;
+    }
+  }
+
   .usa-alert-body {
     padding-left: 5rem;
   }
 }
+
 .usa-alert-warning {
   // background-image: url($baseurl + '/assets/img/icons/alert-circle.svg');
   border-top-color: #000000;
+
   .usa-alert-body {
     padding-left: 5rem;
   }
 }
+
 .usa-alert-error {
   border-top-color: #e31c3d;
   background-image: url($baseurl + '/assets/img/icons/x-circle-red.svg');
+
   .usa-alert-body {
     padding-left: 5rem;
   }
 }
+
 .usa-alert-solid {
   border-top-style: none;
   // border-top-width: 16px;
   background-color: #323a45;
-  padding: 3rem 3rem;
+  padding: 3rem;
+
   p {
     max-width: 100%;
     line-height: 1.7;
   }
-  a:link, a:visited {
+
+  a:link,
+  a:visited {
     color: #fff;
   }
+
   h3 {
     color: #dce4ef;
     font-weight: 400;
   }
+
   .usa-alert-body {
     color: #fff;
   }
