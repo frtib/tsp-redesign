@@ -10,12 +10,7 @@
   font-size: 1.6rem;
   text-decoration: none;
   z-index: 999999999;
-
-  &.usa-button {
-    margin-bottom: 0;
-    border-radius: 0;
-    width: auto;
-  }
+  margin-bottom: 0;
 }
 
 .fba-modal {
@@ -76,20 +71,20 @@
   //   max-width: 100%!important;
   //   font-size: 100%;
   // }
-  .touchpoints-form-body {
-    label.usa-label {
-      background-color: transparent;
-      border-radius: 2px;
-      color: $color-base;
-      font-size: 1.5rem;
-      margin-right: 0.5rem;
-      padding: 0.1rem 0.7rem;
-      text-transform: uppercase;
-    }
-  }
+  // .touchpoints-form-body {
+  //   label.usa-label {
+  //     background-color: transparent;
+  //     border-radius: 2px;
+  //     color: $color-base;
+  //     font-size: 1.5rem;
+  //     margin-right: 0.5rem;
+  //     padding: 0.1rem 0.7rem;
+  //     text-transform: uppercase;
+  //   }
+  // }
   // end #touchpoints-form
-  .usa-banner {
-    display: none;
-  }
+  // .usa-banner {
+  //   display: none;
+  // }
 }
 // end #fba-modal

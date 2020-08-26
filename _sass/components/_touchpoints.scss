@@ -1,0 +1,65 @@
+// TOUCHPOINTS USES USWDS v.2.x CSS :-(
+
+section.center-grid {
+  .usa-width-one-whole {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+.touchpoints-form-wrapper {
+  form {
+    div {
+      &.section {
+        display: none;
+        &.visible {
+          display: block;
+          visibility: visible;
+        }
+      }
+
+      label.usa-label {
+        background-color: transparent;
+        border-radius: 0;
+        color: $color-base;
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        padding: 0.1rem 0.7rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .usa-error-message {
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+      color: #b50909;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  } // end form
+  .usa-banner {
+    display: none;
+  }
+}
+
+  #fba-modal-dialog {
+    .usa-error-message {
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+      color: #b50909;
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+
+  // .touchpoints-form-body {
+  //   label.usa-label {
+  //     background-color: transparent;
+  //     border-radius: 2px;
+  //     color: $color-base;
+  //     font-size: 1.5rem;
+  //     margin-right: 0.5rem;
+  //     padding: 0.1rem 0.7rem;
+  //     text-transform: uppercase;
+  //   }
+  // }
