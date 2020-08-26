@@ -17,18 +17,15 @@ You can choose between two tax treatments for your TSP contributions:
 
 <div class="usa-grid-full flex-grid">
   <div class="usa-width-one-half">
-  <div class="usa-alert">
-  <div class="usa-alert-body" markdown="1">
+    <div class="usa-alert">
+    <div class="usa-alert-body" markdown="1">
 
 ## Traditional contributions
 
-Traditional contributions
-are made before taxes are
-taken out, which means you’ll
-pay taxes when you withdraw
+Traditional contributions are made before taxes are taken out, which means you’ll pay taxes when you withdraw
 your money.
-</div>
-</div>
+    </div>
+    </div>
   </div>
   <div class="usa-width-one-half">
   <div class="usa-alert">
