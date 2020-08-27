@@ -42,6 +42,12 @@ html {
   margin-bottom: 0.6rem;
   font-family: $font-sans;
 }
+
+button {
+  &.usa-accordion-button {
+    line-height: inherit;
+  }
+}
 @media (min-width: #{$medium-screen}) {
   .usa-hero-callout {
     max-width: 36rem;
