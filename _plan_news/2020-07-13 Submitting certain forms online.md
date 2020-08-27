@@ -1,7 +1,6 @@
 ---
 title: Submitting certain forms online
 permalink: /plan-news/submitting-certain-forms-online/
-latest: y
 ---
 
 **{{ page.title }}** &#8212; You may now submit certain TSP forms online by logging in to My Account and uploading a PDF copy of the form. You’ll find an up-to-date list of forms we accept online when you log in to My Account and select **Upload Form** from the menu. That section provides detailed instructions on how to prepare your file for upload.

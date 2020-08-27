@@ -116,7 +116,7 @@ Popular calculators
 
 - [How much should I save?]({{ site.baseurl }}/calculators/)
 - [How much will my savings grow?]({{ site.baseurl }}/calculators/how-much-will-my-savings-grow/)
-- [Retirement income calculator]({{ site.baseurl }}/calculators/retirement-income-calculator/)
+- [TSP payment and annuity calculator]({{ site.baseurl }}/calculators/tsp-payment-and-annuity-calculator/)
 {:.calculators-list}
 
   </div>
