@@ -4,18 +4,18 @@
     {% assign _href = link.href %}
     {% assign _current = false %}
     {% assign fake_current = include.fake | default: 'none' %}
-    {% if link.href == page.url or link.href == page.permalink %}
+    {% if link.href == page.url or link.href == page.permalink or link.href == page.navlink %}
       {% assign _current = true %}
     {% endif %}
     <li>
-      <a href="{% if link.external == true %}{{ link.href }}{% else %}{{ link.href | relative_url }}{% endif %}" class="{% if _current %}usa-current{% endif %} {% if page.url contains _href or page.permalink contains _href %}current-parent{% endif %}">
+      <a href="{% if link.external == true %}{{ link.href }}{% else %}{{ link.href | relative_url }}{% endif %}" class="{% if _current %}usa-current{% endif %} {% if page.url contains _href or page.permalink contains _href or page.navlink contains _href %}current-parent{% endif %}">
         {{ link.text }}
       </a>
-      {% if (_current or (page.url contains _href or page.permalink contains _href or fake_current contains _href)) and link.subnav %}
+      {% if (_current or (page.url contains _href or page.permalink contains _href or page.navlink contains _href or fake_current contains _href)) and link.subnav %}
         <ul class="usa-sidenav-sub_list">
           {% for sublink in link.subnav %}
             <li>
-              <a href="{% if sublink.external == true %}{{ sublink.href }}{% else %}{{ sublink.href | relative_url }}{% endif %}" {% if page.url == sublink.href or page.permalink == sublink.href or fake_current == sublink.href %}class="usa-current"{% endif %}>{{ sublink.text }}</a>
+              <a href="{% if sublink.external == true %}{{ sublink.href }}{% else %}{{ sublink.href | relative_url }}{% endif %}" {% if page.url == sublink.href or page.permalink == sublink.href or page.navlink == sublink.href or fake_current == sublink.href %}class="usa-current"{% endif %}>{{ sublink.text }}</a>
             </li>
           {% endfor %}
         </ul>
