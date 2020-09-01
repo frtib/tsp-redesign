@@ -91,5 +91,5 @@ document-ready:
   - getFundIndexAverageAnnualReturns('C');
   - getGrowthLifetime('C');
   - doCompositionPies();
-  - $('.sortableColumn').click(function(e) { toggleSort(this); });
+  - $('.sortableColumn').click(function(e) { toggleSort(this, 0, 1); });
 ---
