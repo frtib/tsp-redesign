@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/s-fund/
 layout: fund-details
-title: S fund
+title: S Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_S.html
@@ -72,38 +72,18 @@ top_ten_holdings:
   - name: Liberty Broadband Corp. Series C
     abbr: LBRDK
 additional_info: |
-  The S Fund is invested in a separate account
-  that is managed by BlackRock Institutional
-  Trust Company, N.A. The Fund is invested in
-  the Dow Jones U.S. Completion TSM Index,
-  which contains a large number of stocks,
-  including illiquid stocks with low trading
-  volume and stocks with prices lower than
-  $1.00 per share.
+  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
 
-  Therefore, it is not efficient for the Fund to
-  invest in every stock in the index. The S Fund
-  holds the stocks of most of the companies in
-  the index with market values greater than $1
-  billion. However, a mathematical sampling
-  technique is used to select among the smaller
-  stocks.
+  Therefore, it is not efficient for the Fund to invest in every stock in the index. The <span class="nobr">S Fund</span> holds the stocks of most of the companies in the index with market values greater than $1 billion. However, a mathematical sampling technique is used to select among the smaller stocks.
 
-  The performance of the S Fund is evaluated
-  on the basis of how closely its returns match
-  those of the Dow Jones U.S. Completion TSM
-  Index. A portion of S Fund assets is reserved
-  to meet the needs of daily client activity.
-  This liquidity reserve is invested in futures
-  contracts of the S&P 400 and Russell 2000
-  (other broad equity indexes).
+  The performance of the <span class="nobr">S Fund</span> is evaluated on the basis of how closely its returns match those of the Dow Jones U.S. Completion TSM Index. A portion of <span class="nobr">S Fund</span> assets is reserved to meet the needs of daily client activity. This liquidity reserve is invested in futures contracts of the S&P 400 and Russell 2000 (other broad equity indexes).
 risks: |
-  Your investment in the S Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the Dow Jones U.S. Completion Total Stock Market Index returns will move up and down in response to overall economic conditions.
+  Your investment in the <span class="nobr">S Fund</span> is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the Dow Jones U.S. Completion Total Stock Market Index returns will move up and down in response to overall economic conditions.
 
-  By investing in the S Fund, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your S Fund investment may not grow enough to offset the reduction in purchasing power that results from inflation.
+  By investing in the <span class="nobr">S Fund</span>, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your <span class="nobr">S Fund</span> investment may not grow enough to offset the reduction in purchasing power that results from inflation.
 risk_level: medium-high
 rewards: |
-  While investment in the S Fund carries risk, it also offers the opportunity to experience gains from equity ownership of small to mid-sized U.S. companies. It provides an excellent means of further diversifying your domestic equity holdings.
+  While investment in the <span class="nobr">S Fund</span> carries risk, it also offers the opportunity to experience gains from equity ownership of small to mid-sized U.S. companies. It provides an excellent means of further diversifying your domestic equity holdings.
 scripts:
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
