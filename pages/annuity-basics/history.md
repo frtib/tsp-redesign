@@ -12,6 +12,7 @@ document-ready:
   - getHistoricalAnnuityRates('current-rate', 'historical-rates');
 redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
+published: false
 ---
 
 # Historical annuity rates

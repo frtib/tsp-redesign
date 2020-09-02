@@ -7,19 +7,11 @@
 }
 // end @media
 
-p.current-rate,
-p#current-rate {
-  margin-bottom: 1rem;
-}
-
 table.annuity-history-table.sticky-header {
   border: none;
 }
 
-section.export {
-  text-align: left;
-}
-div.table-scroll-buttons {
-  display: flex;
-  justify-content: space-between;
-}
+// div.table-scroll-buttons {
+//   display: flex;
+//   justify-content: space-between;
+// }

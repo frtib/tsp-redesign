@@ -1,8 +1,9 @@
 table {
   &.sticky-header {
     table-layout: fixed;
+    border: none;
     border-collapse: separate;
-    border: 1px solid #aeb0b5;
+    border: 1px solid $color-gray-light;
     margin: auto;
     width: auto;
 
@@ -84,7 +85,8 @@ section.charts {
 }
 // EXPAND/COLLAPSE TABLE button
 @media only screen and (max-width: #{$large-screen}) {
-  .table-view {
+  .table-view,
+  .table-scroll-buttons {
     margin-top: 3rem;
 
     button {

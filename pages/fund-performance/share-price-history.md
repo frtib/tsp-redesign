@@ -55,10 +55,10 @@ To understand how the TSP calculates rates of return for any given period of tim
       </li>
     </ul>
 
-    <div class="table-view">
+    <div class="table-scroll-buttons">
       <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
       <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-    </div><!-- END div.table-view -->
+    </div><!-- END div.table-scroll-buttons -->
 
       <!-- <button id="{{chartName}}-button" class="usa-button-secondary"
         onClick="toggleTableWidth('{{chartName}}');">
