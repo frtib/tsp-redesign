@@ -1,4 +1,5 @@
 /* vendor/glossary.min.js must be included on page before this script */
+/* <span data-term="Vested Account Balance" class="js-glossary-toggle term term-end">vested account balance</span> */
 
 var glossaryTerms = [
   {
@@ -503,6 +504,11 @@ var glossaryTerms = [
     term: 'TSP Monthly Payments',
     definition:
       'Payments that the participant elects to receive each month from his or her TSP account after separating from service. Note: In this case, money remains in the TSP account and is paid out directly from the account.'
+  },
+  {
+    term: 'Two-step authentication',
+    definition:
+      'Security process in which participants provide two different authentication factors to verify themselves. Two-factor authentication methods rely on a user providing a password, as well as a second factor, such as a single-use verfication code. The code is delivered by text message to a smart phone previosuly registered by the participant.'
   },
   {
     term: 'Uniformed Services',
