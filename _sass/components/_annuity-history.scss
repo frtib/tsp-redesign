@@ -1,0 +1,25 @@
+
+@media screen and (min-width: $large-screen) {
+  // p.current-rate {
+  //   text-align: center;
+  //   max-width: 100%;
+  // }
+}
+// end @media
+
+p.current-rate,
+p#current-rate {
+  margin-bottom: 1rem;
+}
+
+table.annuity-history-table.sticky-header {
+  border: none;
+}
+
+section.export {
+  text-align: left;
+}
+div.table-scroll-buttons {
+  display: flex;
+  justify-content: space-between;
+}

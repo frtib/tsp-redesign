@@ -672,7 +672,7 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
           // console.log(lines);
           // skip line[0]
           var cols = lines[1].split(",");
-          var currentStr = 'Annuity interest rate for '+cols[2]+' '+cols[1]+' is '+cols[3]+'%.';
+          var currentStr = 'Annuity interest rate for '+cols[2]+' '+cols[1]+' is <strong>'+cols[3]+'%</strong>.';
           $('#'+currentSpan).html(currentStr);
           // $('#'+historicalDiv).html(data);
           var rates = {};

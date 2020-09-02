@@ -8,11 +8,22 @@
       ul {
         display: flex;
         flex-wrap: wrap;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 100%;
+          order: 1;
+        }
         &:not(.usa-accordion),
         &:not(.usa-accordion-bordered) {
           max-width: none;
           li {
             padding-right: 3rem;
+
+            &:nth-child(n + 7) {
+              order: 1;
+            }
             &:last-child {
               padding-right: 0;
             }
@@ -24,9 +35,9 @@
         padding-bottom: 1.2rem;
       }
     }
-    .break {
-      flex-basis: 100%;
-    }
+    // .break {
+    //   flex-basis: 100%;
+    // }
   }
   @media screen and (max-width: $medium-screen) {
     fieldset {

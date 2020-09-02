@@ -28,38 +28,44 @@ redirect_from:
   - /returns/
 ---
 {% assign chartName = 'rates-of-return' %}
-<div class="usa-grid centered" markdown="1">
+
+<div class="usa-grid">
+<div class="usa-width-one-whole" markdown="1">
 # Rates of return
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
-</div> <!-- end div.usa-grid centered -->
-<div id="{{chartName}}-div" class="usa-grid-full usa-layout-docs-main_content">
+</div>
+</div>
+
+<div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
 <div class="usa-width-one-whole">
 
-    <ul class="usa-accordion">
-      <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
-        <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-      </li>
-    </ul>
-    <ul class="usa-accordion">
-      <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
-        <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-      </li>
-    </ul>
+  <ul class="usa-accordion">
+    <li>
+      <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
+      <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+    </li>
+  </ul>
+  <ul class="usa-accordion">
+    <li>
+      <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
+      <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+    </li>
+  </ul>
 
-    <!-- <div class="table-view">
-      <button id="{{chartName}}-button" class="usa-button-secondary"
-        onClick="toggleTableWidth('{{chartName}}');">
-        Expand table <i class="fal fa-expand-wide"></i></button>
-    </div> -->
-    <section id="{{chartName}}-section" class="rates-of-return-table">
-    <div class="table-view">
-      <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-      <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-    </div><!-- END div.table-view -->
-    <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
-  </section>
+</div>
+</div> <!-- end div#{{chartName}}-div -->
 
-</div> <!-- END div.usa-width-one-whole -->
-</div> <!-- END div.usa-grid-full -->
+<section id="{{chartName}}-section" class="rates-of-return-table">
+
+<div class="table-view">
+  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+</div><!-- END div.table-view -->
+
+<div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
+</section>
+
+<!-- </div>  -->
+<!-- END div.usa-width-one-whole -->
+<!-- </div>  -->
+<!-- END div.usa-grid-full -->

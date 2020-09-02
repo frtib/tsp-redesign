@@ -1,13 +1,42 @@
 table {
   &.sticky-header {
+    table-layout: fixed;
+    border-collapse: separate;
+    border: 1px solid #aeb0b5;
+    margin: auto;
+    width: auto;
+
     tr {
       th {
         position: sticky;
         top: 0;
+        z-index: 2;
+        text-align: center;
+
+        &[scope="row"] {
+          left: 0;
+          z-index: 1;
+        }
+
+        &:not([scope=row]) {
+          &:first-child {
+            left: 0;
+            z-index: 3;
+          }
+        }
       }
     }
+    // end tr
   }
 }
+
+@media screen and (max-width: $large-screen) {
+  div.table {
+    overflow: auto; // for side scroll in mobile
+  }
+}
+// end @media
+
 .two-columns {
   tr {
     th:first-child {
@@ -84,13 +113,13 @@ section {
 // end section
 // "STICKY" LEFT-COLUMN HEADER: Share price history & Rates of return
 
-.table-side-scroll {
+.table-side-scroll,
+.table {
   // parent container
   position: relative;
   width: 100%;
   z-index: 1;
   margin: 0 auto;
-  overflow: auto;
   scroll-behavior: smooth;
 
   .empty-table-cell {
@@ -239,7 +268,11 @@ section {
   }
   // end table
 }
-// end div.table-side-scroll
+// end .table-side-scroll, .table
+.table-side-scroll {
+  overflow: auto;
+}
+// end .table-side-scroll
 
 // RESPONSIVE COMPARISON: Administrative costs
 // Dependencies: /assets/js/jquery.min.js, responsive-comparison-table.js
