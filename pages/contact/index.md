@@ -221,7 +221,7 @@ Birmingham, AL 35238-5200
 (205) 929-8445 (not toll free)  
 
 **Overnight Delivery**  
-Thrift Savings Plan 
+Thrift Savings Plan
 10 Inverness Center Parkway,  
 Suite 610  
 Birmingham, AL 35242  
