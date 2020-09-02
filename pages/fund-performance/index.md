@@ -29,7 +29,7 @@ redirect_from:
 ---
 {% assign chartName = 'rates-of-return' %}
 
-<div class="usa-grid">
+<div class="usa-grid centered">
 <div class="usa-width-one-whole" markdown="1">
 # Rates of return
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}

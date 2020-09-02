@@ -24,6 +24,7 @@ redirect_from:
 ---
 {% assign chartName = 'dynamic-share-price' %}
 <div class="usa-grid centered" markdown="1">
+<div class="usa-width-one-whole" markdown="1">
 # Share price history
 
 To understand how the TSP calculates rates of return for any given period of time and determines compound annual returns, read the Fact Sheet [_Calculating Periodic Returns and Compound Annual Returns_]({{ site.baseurl }}/publications/oc05-16w.pdf).
@@ -44,6 +45,7 @@ To understand how the TSP calculates rates of return for any given period of tim
 </form>
 </section>
 </div> <!-- end div.usa-grid centered -->
+</div>
 
 <div id="{{chartName}}-div" class="usa-grid-full usa-layout-docs-main_content">
 <div class="usa-width-one-whole" markdown="1">

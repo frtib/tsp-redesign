@@ -29,7 +29,7 @@ table {
     }
     // end tr
   }
-}
+} // end table
 
 @media screen and (max-width: $large-screen) {
   div.table {
@@ -83,26 +83,21 @@ section.charts {
     }
   }
 }
-// EXPAND/COLLAPSE TABLE button
-@media only screen and (max-width: #{$large-screen}) {
-  .table-view,
-  .table-scroll-buttons {
-    margin-top: 3rem;
 
-    button {
-      display: none;
-    }
+// SCROLL LEFT & RIGHT table buttons
+div.table-scroll-buttons {
+  margin-top: 3rem;
+  text-align: center;
+
+  @media only screen and (max-width: #{$large-screen}) {
+      button {
+        display: none;
+      }
   }
 }
 
+
 section {
-  .table-view {
-    // LEFT-ALIGNS Scroll left / Scroll right buttons
-    padding: 0;
-    margin: 0;
-    // text-align: left;
-    max-width: 100%;
-  }
 
   &.rates-of-return-table,
   &.share-price-table {
@@ -114,6 +109,10 @@ section {
 }
 // end section
 // "STICKY" LEFT-COLUMN HEADER: Share price history & Rates of return
+.table-side-scroll {
+  overflow: auto;
+}
+// end .table-side-scroll
 
 .table-side-scroll,
 .table {
@@ -271,10 +270,6 @@ section {
   // end table
 }
 // end .table-side-scroll, .table
-.table-side-scroll {
-  overflow: auto;
-}
-// end .table-side-scroll
 
 // RESPONSIVE COMPARISON: Administrative costs
 // Dependencies: /assets/js/jquery.min.js, responsive-comparison-table.js

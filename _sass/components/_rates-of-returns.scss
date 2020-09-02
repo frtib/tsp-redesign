@@ -8,7 +8,7 @@
       ul {
         display: flex;
         flex-wrap: wrap;
-
+        // to force line wrap in fund checkbox lists
         &::before,
         &::after {
           content: '';
@@ -19,9 +19,9 @@
         &:not(.usa-accordion-bordered) {
           max-width: none;
           li {
-            padding-right: 3rem;
+            min-width: 12rem;
 
-            &:nth-child(n + 7) {
+            &:nth-child(n + 7) { // children 7 and beyond
               order: 1;
             }
             &:last-child {
@@ -35,10 +35,29 @@
         padding-bottom: 1.2rem;
       }
     }
-    // .break {
-    //   flex-basis: 100%;
-    // }
   }
+  @media screen and (max-width: $large-screen) and (min-width: $medium-screen) {
+    fieldset {
+      &.lifecycle-funds,
+      &.individual-funds {
+
+        ul {
+          &:not(.usa-accordion),
+          &:not(.usa-accordion-bordered) {
+            li {
+              &:nth-child(n + 5) { // children 5-8
+                order: 1;
+              }
+              &:nth-child(n + 9) { // children 9 and beyond
+                order: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  } // end @media (max: $large-screen) and (min: $medium-screen)
+
   @media screen and (max-width: $medium-screen) {
     fieldset {
       &.lifecycle-funds,

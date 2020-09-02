@@ -15,9 +15,9 @@ redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
 ---
 
-<div class="usa-grid centered" markdown="1">
+<div class="usa-grid centered">
+<div class="usa-width-one-whole" markdown="1">
 # Historical annuity rates
-
 <form class="share-price-date-range" action="javascript:void(0);">
 <fieldset>
 <button class="usa-button" onClick='doDownloadAnnuityRates("CSV");'>
@@ -25,18 +25,13 @@ redirect_from:
 </fieldset>
 </form>
 </div>
-
-<!-- <div class="table-scroll-buttons">
-  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
 </div>
-</div> -->
-
+<!-- END div.usa-grid centered -->
 <div class="table-scroll-buttons">
   <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
   <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
 </div>
-<!-- END div.table-view -->
+<!-- END div.table-scroll-buttons -->
 <div id="historical-rates" class="table-side-scroll"></div>
-
+<!-- END div.table-side-scroll -->
 <!-- CONTENT END -->

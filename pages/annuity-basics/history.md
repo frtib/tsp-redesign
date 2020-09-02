@@ -31,7 +31,7 @@ published: false
 <div class="table-view">
   <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
   <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-</div><!-- END div.table-view -->
+</div><!-- END div.table-scroll-buttons -->
 <div id="historical-rates" class="table-side-scroll"></div>
 
 

@@ -57,7 +57,7 @@ redirect_from:
     <div class="table-view">
       <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
       <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-    </div><!-- END div.table-view -->
+    </div><!-- END div.table-scroll-buttons -->
     <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
   </section>
 
