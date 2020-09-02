@@ -732,6 +732,15 @@ function buildHistoricalAnnuityTable(rates) {
   var tableHTML = sideScrollTable('', 'usa-table-borderless annuity-history-table', 'annuity-history-table', headerHTML+bodyHTML, true, colgroup);
   return tableHTML;
 }
+// make call to get historical annuity rates
+function doDownloadAnnuityRates(format) {
+  var url = getDownloadString('getAnnuityRates.html', 'numRates=1000');
+  url += '&format='+format+'&download=1';
+  console.log(url);
+  window.location.href = url;
+  //window.open(url, '_blank');
+  return false;
+}
 
 
 function toggleSort(me, hl, tl) {
