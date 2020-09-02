@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/f-fund/
 layout: fund-details
-title: F fund
+title: F Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_F.html
@@ -54,11 +54,11 @@ top_ten_text: |
   Because the U.S. Aggregate contains such a large number of securities,
   it is not feasible for the F Fund to invest in each security in the index.
 additional_info: |
-  By law, the F Fund must be invested in fixed-income securities. The Federal Retirement Thrift Investment Board has chosen to invest the F Fund in an index fund that tracks the Bloomberg Barclays U.S. Aggregate Bond Index, a broadly diversified index of the U.S. bond market.
+  By law, the <span class="nobr">F Fund</span> must be invested in fixed-income securities. The Federal Retirement Thrift Investment Board has chosen to invest the <span class="nobr">F Fund</span> in an index fund that tracks the Bloomberg Barclays U.S. Aggregate Bond Index, a broadly diversified index of the U.S. bond market.
 
-  The U.S. Aggregate Index consists of high-quality fixed-income securities with maturities of more than one year. Because the U.S. Aggregate Index contains such a large number of securities, it is not feasible for the F Fund to invest in each security in the index.
+  The U.S. Aggregate Index consists of high-quality fixed-income securities with maturities of more than one year. Because the U.S. Aggregate Index contains such a large number of securities, it is not feasible for the <span class="nobr">F Fund</span> to invest in each security in the index.
 
-  The F Fund is invested in a separate account that is managed by BlackRock Institutional Trust Company, N.A. BlackRock selects a large representative sample of the various types of asset-backed, U.S. government, corporate, and foreign government securities included in the overall index. The performance of the F Fund is evaluated on the basis of how closely its returns match those of the U.S. Aggregate Index.
+  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">F Fund</span> to BlackRock Institutional Trust Company, N.A. BlackRock selects a large representative sample of the various types of asset-backed, U.S. government, corporate, and foreign government securities included in the overall index. The performance of the <span class="nobr">F Fund</span> is evaluated on the basis of how closely its returns match those of the U.S. Aggregate Index.
 risks: |
   Your investment in the C Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 

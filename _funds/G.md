@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/g-fund/
 layout: fund-details
-title: G fund
+title: G Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_G.html
