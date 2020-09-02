@@ -212,8 +212,7 @@ and General Correspondence” address above.</small>
 </div>
 <div class="usa-width-one-third" markdown="1">
 
-**TSP Rollover and Transfer**  
-Processing Unit  
+**TSP Rollover and Transfer**    
 P.O. Box 385200  
 Birmingham, AL 35238-5200  
 **Fax Number:**  
@@ -222,7 +221,7 @@ Birmingham, AL 35238-5200
 (205) 929-8445 (not toll free)  
 
 **Overnight Delivery**  
-IBS - TSP Processing Unit  
+Thrift Savings Plan 
 10 Inverness Center Parkway,  
 Suite 610  
 Birmingham, AL 35242  
