@@ -21,7 +21,7 @@ redirect_from:
 <section class="date-range">
 <form class="share-price-date-range" action="javascript:void(0);">
 <fieldset>
-<button class="usa-button-secondary" onClick='downloadSharePrices();'>
+<button class="usa-button-secondary" onClick='doDownloadAnnuityRates("CSV");'>
   Download share prices <i class="fal fa-arrow-alt-to-bottom"></i></button>
 </fieldset>
 </form>
