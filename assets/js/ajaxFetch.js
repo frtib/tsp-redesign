@@ -660,6 +660,7 @@ var getAnnuityRates = function(spanName) {
 
 var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
   // fund comparison data
+  console.log('hd ', historicalDiv);
   var scriptName = 'getAnnuityRates.html?numRates=1000';
   var fetchMsg = 'Fetching data, please wait ...';
   $('#'+currentSpan).html(fetchMsg);
@@ -693,7 +694,7 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
           }
           $('#'+historicalDiv).html(buildHistoricalAnnuityTable(rates));
           $('.sortableColumn').click(function(e) { toggleSort(this, 0, 0); });
-          sideScrollControls('annuity-history');
+          sideScrollControls('historical-rates');
       }
     );
     serverCall.fail(
@@ -729,13 +730,14 @@ function buildHistoricalAnnuityTable(rates) {
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
   // special colgroup because of 2-tier header
   var colgroup = '';
-  var tableHTML = sideScrollTable('', 'usa-table-borderless annuity-history-table', 'annuity-history-table', headerHTML+bodyHTML, true, colgroup);
+  var tableHTML = sideScrollTable('', 'usa-table-borderless historical-rates-table', 'historical-rates', headerHTML+bodyHTML, true, colgroup);
+console.log('table ', tableHTML);
   return tableHTML;
 }
 // make call to get historical annuity rates
 function doDownloadAnnuityRates(format) {
   var url = getDownloadString('getAnnuityRates.html', 'numRates=1000');
-  url += '&format='+format+'&download=1';
+  url += '&format='+format+'&download=1&table=1';
   console.log(url);
   window.location.href = url;
   //window.open(url, '_blank');

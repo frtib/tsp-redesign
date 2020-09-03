@@ -9,7 +9,7 @@ scripts:
 permalink: /annuity-basics/historical-annuity-rates/
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
-  - getHistoricalAnnuityRates('current-rate', 'historical-rates');
+  - getHistoricalAnnuityRates('current-rate', 'historical-rates-table');
   - sideScrollControls('rates-of-return');
 redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
@@ -18,6 +18,7 @@ redirect_from:
 <div class="usa-grid centered">
 <div class="usa-width-one-whole" markdown="1">
 # Historical annuity rates
+{% comment %}<span id='current-rate'></span>{% endcomment %}
 <form class="share-price-date-range" action="javascript:void(0);">
 <fieldset>
 <button class="usa-button" onClick='doDownloadAnnuityRates("CSV");'>
@@ -32,6 +33,6 @@ redirect_from:
   <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
 </div>
 <!-- END div.table-scroll-buttons -->
-<div id="historical-rates" class="table-side-scroll"></div>
+<div id="historical-rates-table" class="table-side-scroll"></div>
 <!-- END div.table-side-scroll -->
 <!-- CONTENT END -->
