@@ -201,18 +201,15 @@ Fairfax, VA 22033
 
 <div class="usa-grid-full">
 <div class="usa-width-two-thirds" markdown="1">
-Use this post office box if you are transferring or rolling over funds to the TSP. This
-includes Request for a Transfer Into the TSP, _Form TSP-60_, the associated
-check for the funds, and any additional documentation. Inquiries regarding these
-actions should also be sent to this address.
+Use this post office box if you are transferring or rolling over funds to the TSP. This includes Form TSP-60, _Request for a Transfer Into the TSP_, or Form TSP-60-R, _Request for a Roth Transfer Into the TSP_, the associated check for the funds, and any additional documentation. Inquiries regarding these actions should also be sent to this address.
 
-<small>NOTE: Do not submit any withdrawal forms to these addresses. Instead, use the “TSP Forms
+<small>**NOTE:** Do not submit any withdrawal forms to these addresses. Instead, use the “TSP Forms
 and General Correspondence” address above.</small>
 
 </div>
 <div class="usa-width-one-third" markdown="1">
 
-**TSP Rollover and Transfer**    
+**Thrift Savings Plan**    
 P.O. Box 385200  
 Birmingham, AL 35238-5200  
 **Fax Number:**  
