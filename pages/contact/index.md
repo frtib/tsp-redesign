@@ -201,7 +201,7 @@ Fairfax, VA 22033
 
 <div class="usa-grid-full">
 <div class="usa-width-two-thirds" markdown="1">
-Use this post office box if you are transferring or rolling over funds to the TSP. This includes Form TSP-60, _Request for a Transfer Into the TSP_, or Form TSP-60-R, _Request for a Roth Transfer Into the TSP_, the associated check for the funds, and any additional documentation. Inquiries regarding these actions should also be sent to this address.
+Use this post office box if you are transferring or rolling over funds to the TSP. This includes Form TSP-60, _Request for a Transfer Into the TSP_, or Form TSP&#8209;60&#8209;R, _Request for a Roth Transfer Into the TSP_, the associated check for the funds, and any additional documentation. Inquiries regarding these actions should also be sent to this address.
 
 <small>**NOTE:** Do not submit any withdrawal forms to these addresses. Instead, use the “TSP Forms
 and General Correspondence” address above.</small>
