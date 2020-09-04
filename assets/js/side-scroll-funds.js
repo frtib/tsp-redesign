@@ -352,7 +352,6 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
 }
 
 
-
 function sideScrollControls(chartName) {
   // Side scroll controls for table
   var container = document.getElementById(chartName+"-table");

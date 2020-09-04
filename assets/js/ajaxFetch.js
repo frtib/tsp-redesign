@@ -660,7 +660,6 @@ var getAnnuityRates = function(spanName) {
 
 var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
   // fund comparison data
-  console.log('hd ', historicalDiv);
   var scriptName = 'getAnnuityRates.html?numRates=1000';
   var fetchMsg = 'Fetching data, please wait ...';
   $('#'+currentSpan).html(fetchMsg);
@@ -685,7 +684,6 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
             cols = lines[i].split(",");
             if (cols[1]) {
               rates[cols[1]+'-'+cols[2]] = cols[3];
-              console.log(cols[1]+'-'+cols[2], cols[3]);
               if (cols[1] < minYear) { minYear = cols[1]; }
               if (cols[1] > maxYear) { maxYear = cols[1]; }
             }
@@ -730,15 +728,13 @@ function buildHistoricalAnnuityTable(rates) {
   bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
   // special colgroup because of 2-tier header
   var colgroup = '';
-  var tableHTML = sideScrollTable('', 'usa-table-borderless historical-rates-table', 'historical-rates', headerHTML+bodyHTML, true, colgroup);
-console.log('table ', tableHTML);
+  var tableHTML = sideScrollTable('', 'historical-rates-table', 'historical-rates', headerHTML+bodyHTML, true, colgroup);
   return tableHTML;
 }
 // make call to get historical annuity rates
 function doDownloadAnnuityRates(format) {
   var url = getDownloadString('getAnnuityRates.html', 'numRates=1000');
   url += '&format='+format+'&download=1&table=1';
-  console.log(url);
   window.location.href = url;
   //window.open(url, '_blank');
   return false;
@@ -746,9 +742,7 @@ function doDownloadAnnuityRates(format) {
 
 
 function toggleSort(me, hl, tl) {
-  console.log(me);
   var myId = me.id;
-  console.log(myId);
   var isSortedAsc = $('#'+myId).hasClass('sort-column-asc');
   $('.sortableColumn').removeClass('sort-column-asc');
   $('.sortableColumn').removeClass('sort-column-desc');
