@@ -657,3 +657,116 @@ var getAnnuityRates = function(spanName) {
       }
     );
 }
+
+var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
+  // fund comparison data
+  var scriptName = 'getAnnuityRates.html?numRates=1000';
+  var fetchMsg = 'Fetching data, please wait ...';
+  $('#'+currentSpan).html(fetchMsg);
+  $('#'+historicalDiv).html(fetchMsg);
+  var serverCall = $.get(siteName + '/' + scriptName);
+    serverCall.done(
+      function (data) {
+          // expecting header line and one row for each historical rate, sorted
+          var lines = data.split("\n"); // break into rows
+          // console.log(lines);
+          // skip line[0]
+          var cols = lines[1].split(",");
+          var currentStr = 'Annuity interest rate for '+cols[2]+' '+cols[1]+' is <strong>'+cols[3]+'%</strong>.';
+          $('#'+currentSpan).html(currentStr);
+          // $('#'+historicalDiv).html(data);
+          var rates = {};
+          var len = lines.length;
+          var i;
+          var minYear = 3000;
+          var maxYear = 0;
+          for (i = 1; i < len; i++) {
+            cols = lines[i].split(",");
+            if (cols[1]) {
+              rates[cols[1]+'-'+cols[2]] = cols[3];
+              if (cols[1] < minYear) { minYear = cols[1]; }
+              if (cols[1] > maxYear) { maxYear = cols[1]; }
+            }
+            rates['minYear'] = minYear;
+            rates['maxYear'] = maxYear;
+          }
+          $('#'+historicalDiv).html(buildHistoricalAnnuityTable(rates));
+          $('.sortableColumn').click(function(e) { toggleSort(this, 0, 0); });
+          sideScrollControls('historical-rates');
+      }
+    );
+    serverCall.fail(
+      function (jqXHR, textStatus, errorThrown) {
+          var errMsg = textStatus + ': ' + errorThrown;
+          errMsg = somethingNotWorking();
+          $('#'+currentSpan).html(errMsg);
+          $('#'+historicalDiv).html('');
+      }
+    );
+}
+function buildHistoricalAnnuityTable(rates) {
+  // build table header
+  var i, j, row, val;
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var headerHTML = sideScrollTH2('', 'col', 'sortableColumn sort-column-desc', 'id="sortYear"', 'Year', false);
+  for (i = 0; i < 12; i ++) {
+    headerHTML += sideScrollTH2('', 'colgroup', '', '', months[i], false);
+  }
+  headerHTML = sideScrollWrapper('', 'tr', '', '', headerHTML, false);
+  var headerHTML = sideScrollWrapper('  ', 'thead', '', '', headerHTML, true);
+
+  var bodyHTML = '';
+  for (j = rates['maxYear']; j >= rates['minYear']; j--) {
+    row = sideScrollTH('', 'row', 'sortYear', j.toString(), false);
+    for (i = 0; i < 12; i ++) {
+      val = rates[j.toString()+'-'+months[i]];
+      if (!val) { val = ''; } else { val += '%'; }
+      row += sideScrollWrapper('', 'td', '', '', val, false);
+    }
+    bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
+  }
+  bodyHTML = sideScrollWrapper('  ', 'tbody', '', '', bodyHTML, true);
+  // special colgroup because of 2-tier header
+  var colgroup = '';
+  var tableHTML = sideScrollTable('', 'historical-rates-table', 'historical-rates', headerHTML+bodyHTML, true, colgroup);
+  return tableHTML;
+}
+// make call to get historical annuity rates
+function doDownloadAnnuityRates(format) {
+  var url = getDownloadString('getAnnuityRates.html', 'numRates=1000');
+  url += '&format='+format+'&download=1&table=1';
+  window.location.href = url;
+  //window.open(url, '_blank');
+  return false;
+}
+
+
+function toggleSort(me, hl, tl) {
+  var myId = me.id;
+  var isSortedAsc = $('#'+myId).hasClass('sort-column-asc');
+  $('.sortableColumn').removeClass('sort-column-asc');
+  $('.sortableColumn').removeClass('sort-column-desc');
+  if (isSortedAsc) {
+    columnSort(false, myId, me.closest('table').id, hl, tl);
+    $('#'+myId).addClass('sort-column-desc');
+  } else {
+    columnSort(true, myId, me.closest('table').id, hl, tl);
+    $('#'+myId).addClass('sort-column-asc');
+  }
+  return false;
+}
+
+function toggleSort1(me) {  // first version, 2 states
+  var myId = me.id;
+  var tableId = 'sector-composition';
+  if ($('#'+myId).hasClass('sort-column-asc')) {
+    columnSort(true, myId, me.closest('table').id, 0, 1);
+    $('#'+myId).removeClass('sort-column-asc');
+    $('#'+myId).addClass('sort-column-desc');
+  } else {
+    columnSort(false, myId, me.closest('table').id, 0, 1);
+    $('#'+myId).removeClass('sort-column-desc');
+    $('#'+myId).addClass('sort-column-asc');
+  }
+  return false;
+}

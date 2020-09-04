@@ -103,5 +103,5 @@ document-ready:
   - getFundIndexAverageAnnualReturns('I');
   - getGrowthLifetime('I');
   - doCompositionPies();
-  - $('.sortableColumn').click(function(e) { toggleSort(this); });
+  - $('.sortableColumn').click(function(e) { toggleSort(this, 0, 1); });
 ---
