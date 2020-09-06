@@ -29,6 +29,9 @@
 
 .inflation-color { color: gray } // MSCI EAFE
 
+.white { color: $color-white } // S&P 500
+.black { color: $color-black } // Dow Jones
+
 .secondary { color: $color-secondary } // S&P 500
 .secondary-light { color: $color-secondary-light } // Dow Jones
 .gold { color: $color-gold } // MSCI EAFE
