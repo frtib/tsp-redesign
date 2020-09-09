@@ -106,13 +106,13 @@ function indexFundSync(chartName, doTableColumn, noredraw) {
   if (chart == null) { return false; }
   var series = chart.series;
   highchartsSeriesToggle(series, 12, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 12, '&', series[6].visible);
+  if (val) fundHighchartClickAction(chartName, 12, '&', series[11].visible);
   highchartsSeriesToggle(series, 14, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 14, '&', series[8].visible);
+  if (val) fundHighchartClickAction(chartName, 14, '&', series[13].visible);
   highchartsSeriesToggle(series, 16, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 16, '&', series[10].visible);
+  if (val) fundHighchartClickAction(chartName, 16, '&', series[15].visible);
   highchartsSeriesToggle(series, 18, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 18, '&', series[12].visible);
+  if (val) fundHighchartClickAction(chartName, 18, '&', series[17].visible);
   if (!noredraw) { chart.redraw() };
   return false;
 }
