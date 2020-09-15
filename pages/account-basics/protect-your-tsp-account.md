@@ -9,11 +9,20 @@ permalink: /account-basics/protect-your-tsp-account/
 
 
 # Protect your TSP account
+
+<div class="usa-alert usa-alert-info" markdown="1">
+{: .usa-alert-body}
+## Easier login and more security for <br />My Account this fall
+You may notice some changes to your My Account login in late October 2020. As a stronger layer of security against fraud, all TSP participants will need to log in with a user ID and use a phone number for two-step authentication and other online requests.
+
+If you already created a user ID and validated a personal phone number in My Account, you won’t need to make any changes. Otherwise, you’ll see prompts for the steps you need to take when you log in to My Account.
+</div>
+
 Protecting your TSP account is our top priority, and it’s a responsibility that we share with you as a TSP participant. While we create a secure connection to tsp.gov and give you control over your account settings, we strongly encourage you to take steps to protect your data when you’re online.
 
-You can learn more about how to protect yourself on the internet, how to recognize scams that attempt to steal your information, and more about online security from the Federal Trade Commission.
+You can learn more about how to protect yourself on the internet, how to recognize scams that attempt to steal your information, and more about [online security from the Federal Trade Commission]({{ site.baseurl }}/exit/?idx=210){:rel="nofollow"}.
 
-If you’re concerned that your personal information or TSP account has been compromised, contact us immediately.
+If you’re concerned that your personal information or TSP account has been compromised, [contact us]({{ site.baseurl }}/contact/) immediately.
 
 
 ## Learn to identify real TSP communications
@@ -21,7 +30,7 @@ If you’re concerned that your personal information or TSP account has been com
 
 + **By mail—** We will most often contact you by mail, so you should make sure we have your correct mailing address. Read any TSP mail promptly and carefully. Take caution if you receive an account notice you weren’t expecting or a letter that asks you to “verify your account number” or other account information. Notify us immediately if you receive a letter that seems suspicious.
 
-+ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send informational emails such as the Thrift Savings Planner newsletter to the email address you provide in your My Account profile settings.
++ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send informational emails such as the [_Thrift Savings Planner newsletter_]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings.
 
 We will never include your sensitive information in an email, and we will never ask you to send us sensitive information by email.
 
