@@ -15,12 +15,13 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **August 4, 2020**.
+Updated **September 15, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [September 22 deadline for temporary loan increase](#loan-increase)
 - [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
 - [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
 - [Submitting certain forms online](#submitting-certain-forms-online)
@@ -32,6 +33,10 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## September 22 deadline for temporary loan increase
+{:#loan-increase}
+The CARES Act allowed us to temporarily [increase the maximum loan amount]({{ site.baseurl }}/covid-19/loans/) on general purpose loans for qualified individuals. If you plan to apply for a loan with the increased maximum, **we must receive your completed application on or before September 22, 2020.** The online application tool in My Account will come down at noon that day. We can accept signed loan agreements until midnight that night.
 
 ## Temporary acceptance of PIV and CAC signatures on TSP forms
 {:#pivcac}
