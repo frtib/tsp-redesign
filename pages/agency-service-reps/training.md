@@ -57,28 +57,25 @@ To learn more about TSP webinars or request to be on the distribution list, plea
   </div>
 </div>
 
-## TSP Q & A
+## New to the TSP (or ready for a refresher)? Ask away.
 
-TSP Training and Liaison Specialists from the FRTIB will field participant questions during this webinar.
+Bring your questions about managing your account, changing your investments or contribution amounts, managing life changes, how our funds work, or how to use your savings.  In this webinar, our TSP Training and Liaison Specialists will focus solely on answering your individual questions.
 
 DISCLAIMER: Information in this webinar is not to be construed as legal, medical, tax, investment, or financial advice.
 {:.disclaimer}
 
-### August 20, 2020
+TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=206){:rel="nofollow"}
-- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=207){:rel="nofollow"}
+### October 9, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=215){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=216){:rel="nofollow"}
 
 ## Thrift Savings Plan - CARES Act loans and withdrawals
 
 Accessing your TSP money for those impacted by COVID-19
 
 This webinar will cover Coronavirus Aid, Relief, and Economic Security (CARES) Act Loan and Withdrawal rules for TSP participants affected by COVID-19. We will discuss the eligibility for qualified individuals, the temporary maximum loan and withdrawal amounts, how to suspend loans and how to submit loans on tsp.gov, and submitting request for Loans and withdrawals.
-
-### August 25, 2020
-
-- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=225){:rel="nofollow"}
-- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=226){:rel="nofollow"}
 
 ### September 24, 2020
 
@@ -108,11 +105,6 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
 
 This webinar provides an overview of the TSP contribution rules. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-### August 26, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=235){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=236){:rel="nofollow"}
-
 ### September 17, 2020
 
 - 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=237){:rel="nofollow"}
@@ -122,11 +114,6 @@ This webinar provides an overview of the TSP contribution rules. TSP webinars ar
 
 This webinar provides an overview of the TSP investment funds. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-### September 2, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=239){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=240){:rel="nofollow"}
-
 ### September 22, 2020
 
 - 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=241){:rel="nofollow"}
@@ -135,11 +122,6 @@ This webinar provides an overview of the TSP investment funds. TSP webinars are 
 ## TSP loans
 
 This webinar provides an overview of the TSP loan program. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
-
-### September 1, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=208){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=189){:rel="nofollow"}
 
 ### October 7, 2020
 
@@ -164,11 +146,6 @@ This webinar provides an overview of the TSP in-service withdrawal options. TSP 
 
 This webinar provides an overview of the TSP post-service withdrawal options. The information in this webinar is beneficial to TSP participants that are within 10 years or less of retirement and participants that have separated or retired. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-### September 3, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=196){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=197){:rel="nofollow"}
-
 ### October 6, 2020
 
 - 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=198){:rel="nofollow"}
@@ -182,11 +159,6 @@ This webinar provides an overview of the TSP post-service withdrawal options. Th
 ## TSP death benefits
 
 This webinar provides an overview of TSP death benefits. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
-
-### August 27, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=202){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=203){:rel="nofollow"}
 
 ### September 23, 2020
 
