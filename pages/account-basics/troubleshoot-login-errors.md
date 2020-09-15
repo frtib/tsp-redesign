@@ -12,6 +12,14 @@ permalink: /account-basics/troubleshoot-login-errors/
 - [Two-step authentication and validating contact information](#two-step-authentication-and-validating-contact-information)
 - [Tips for using two-step authentication](#tips-for-using-two-step-authentication)
 
+<div class="usa-alert usa-alert-info" markdown="1">
+{: .usa-alert-body}
+## Easier login and more security for <br />My Account this fall
+You may notice some changes to your My Account login in late October 2020. As a stronger layer of security against fraud, all TSP participants will need to log in with a user ID and use a phone number for two-step authentication and other online requests.
+
+If you already created a user ID and validated a personal phone number in My Account, you won’t need to make any changes. Otherwise, you’ll see prompts for the steps you need to take when you log in to My Account.
+</div>
+
 ## Troubleshooting your login
 
 ### Helpful terms to know
