@@ -30,7 +30,7 @@ If you’re concerned that your personal information or TSP account has been com
 
 + **By mail—** We will most often contact you by mail, so you should make sure we have your correct mailing address. Read any TSP mail promptly and carefully. Take caution if you receive an account notice you weren’t expecting or a letter that asks you to “verify your account number” or other account information. Notify us immediately if you receive a letter that seems suspicious.
 
-+ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send informational emails such as the [_Thrift Savings Planner newsletter_]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings.
++ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send informational emails such as the [_Thrift Savings Planner_ newsletter]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings.
 
 We will never include your sensitive information in an email, and we will never ask you to send us sensitive information by email.
 
