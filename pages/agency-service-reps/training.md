@@ -91,11 +91,6 @@ This webinar will cover Coronavirus Aid, Relief, and Economic Security (CARES) A
 
 This webinar provides an introduction to the Thrift Savings Plan for new employees and service members. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-### September 16, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=231){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=232){:rel="nofollow"}
-
 ### October 21, 2020
 
 - 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=233){:rel="nofollow"}
@@ -131,11 +126,6 @@ This webinar provides an overview of the TSP loan program. TSP webinars are host
 ## TSP in-service withdrawals
 
 This webinar provides an overview of the TSP in-service withdrawal options. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
-
-### September 15, 2020
-
-- 10:00 a.m. – [Register]({{ site.baseurl }}/exit/?idx=192){:rel="nofollow"}
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=193){:rel="nofollow"}
 
 ### October 8, 2020
 
