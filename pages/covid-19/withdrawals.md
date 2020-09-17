@@ -19,7 +19,7 @@ The information we’re providing here is current but subject to change as we re
 
 - [Eligibility](#eligibility)
 - [Favorable tax treatment for existing withdrawal types](#favorable-tax-treatment-for-existing-withdrawal-types)
-- [CARES Act withdrawal](cares-act-withdrawal)
+- [CARES Act withdrawal](#cares-act-withdrawal)
 
 The CARES Act creates special rules for most types of TSP withdrawals made by participants affected by COVID-19. It also allows us to create a new, temporary withdrawal option that waives the usual in-service withdrawal requirements and allows all COVID-affected participants to waive tax withholding. See below for details.
 

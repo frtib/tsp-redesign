@@ -27,7 +27,6 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Submitting certain forms online](#submitting-certain-forms-online)
 - [CARES Act temporary loan and withdrawal options](#cares-act-temporary-loan-and-withdrawal-options)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
-- [Rollover period extended to July 15](#rollover-period-extended-to-july-15)
 - [Temporary waiver of notary requirement](#temporary-waiver-of-notary-requirement)
 - [Temporary changes to required minimum distributions](#temporary-changes-to-required-minimum-distributions)
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
@@ -70,9 +69,6 @@ The temporary loan and withdrawal options for TSP participants affected by COVID
 
 ## Payments you make to the TSP by check may take longer to process
 Because of public health precautions being taken at our processing facilities, payments made by check will most likely take longer to appear in your TSP account. These include payments to make up missed loan payments, submit additional loan payments, or to roll over payments from IRAs or other employer plans. We appreciate your patience.
-
-## Rollover period extended to July 15
-If you received any withdrawal between February 1 and May 15 that is eligible for rollover, then the IRS has extended your 60-day rollover deadline to July 15th Use Form TSP 60. **You are eligible for this extended rollover period whether or not you have been affected by COVID-19**. (See [RMD changes]({{ site.baseurl }}/covid-19/rmd-changes/) for information about the rollover deadline for required minimum distributions you received before 2020 RMDs were suspended.)
 
 ## Temporary waiver of notary requirement
 We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten (or made electronically with PIV or CAC credentials) and submitted as directed in the form instructions, but you may leave the notary section blank.
