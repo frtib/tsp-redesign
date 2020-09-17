@@ -15,7 +15,7 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **September 15, 2020**.
+Updated **September 17, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
