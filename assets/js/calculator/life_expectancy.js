@@ -123,8 +123,8 @@ function get_life_expectancy_factors() {
 
   var factors = [];
   var i;
-  for (i = 0; i <= 72; i++) { factors[i] = lifeExpect[i]; }
-  for (i = 73; i <= 115; i++) { factors[i] = uniformed[i]; }
+  for (i = 0; i <= 71; i++) { factors[i] = lifeExpect[i]; }
+  for (i = 72; i <= 115; i++) { factors[i] = uniformed[i]; }
 
   //if (month >= 7) { factors[70] = uniformed[70]; }
   return factors;
