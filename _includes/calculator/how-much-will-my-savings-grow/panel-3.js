@@ -315,7 +315,12 @@ function calculateResults() {
   returnRate = Math.pow(1 + returnRate, 1.0 / periodLength) - 1.0;
   // console.log(periodLength, returnRate);
   var annualPayRate = annualPayPercent / 100.0;
-  if (rs == 'FERS') { annualPayRate = FERSmatch(annualPayRate); }
+  if (rs == 'FERS') {
+    var fixedPercent = annualPayFixed / annualPay;
+    fixedPercent = FERSmatch(fixedPercent);
+    annualPayFixed = annualPay * fixedPercent;
+    annualPayRate = FERSmatch(annualPayRate);
+  }
   if (rs == 'BP') { yearsToContribute = 0; }
   // annualPayRate = annualPayRate / periodLength;
   var annualPayAmt = 0.0;
