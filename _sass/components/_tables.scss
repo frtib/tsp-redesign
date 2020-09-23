@@ -28,6 +28,14 @@ table {
       }
     }
     // end tr
+  } // end &.sticky-header
+
+  &.dynamic-share-price-table { // This should be removed when table css is centralized
+    tbody {
+      th {
+        white-space: nowrap;
+      }
+    }
   }
 } // end table
 
@@ -137,15 +145,12 @@ section {
 
     td,
     th {
-      // padding: 5px 10px;
       border-top: none;
       border-right: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       border-left: none;
-      vertical-align: top;
-      padding: 1rem 3rem;
-      // width: 16rem;
-      // max-width: 2rem;
+      vertical-align: middle;
+      padding: 1rem 1.5rem;
     }
 
     td {
@@ -155,7 +160,6 @@ section {
 
     th {
       background: $color-gray-lightest;
-      white-space: nowrap;
 
       &:first-child {
         position: -webkit-sticky;
@@ -167,11 +171,7 @@ section {
     }
 
     thead {
-      // tr {
-      // position: -webkit-sticky;
-      // position: sticky;
-      // top: 0;
-      // }
+
       th {
         border-top: 3px solid #ddd;
         position: -webkit-sticky;
@@ -242,6 +242,9 @@ section {
       }
       // end .monthly-returns
       &.annual-returns {
+        th {
+          white-space: nowrap;
+        }
         label {
           display: block;
           margin-top: 0;
