@@ -28,6 +28,14 @@ table {
       }
     }
     // end tr
+  } // end &.sticky-header
+
+  &.dynamic-share-price-table { // This should be removed when table css is centralized
+    tbody {
+      th {
+        white-space: nowrap;
+      }
+    }
   }
 } // end table
 
