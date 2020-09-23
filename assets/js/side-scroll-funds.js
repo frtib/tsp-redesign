@@ -189,8 +189,9 @@ function getSeriesID(name, chartName) {
 }
 
 function borderClass(fund) {
-  if (fund.trim().substring(0,1).toLowerCase() == 'l') { return 'border-l-fund'; }
-  if (fund.slice(-4).toLowerCase() == 'fund') { return 'border-'+fund.trim().substring(0,1).toLowerCase()+'-fund'; }
+  // Added nobr class to Individual and L fund table headers <th>
+  if (fund.trim().substring(0,1).toLowerCase() == 'l') { return 'border-l-fund nobr'; }
+  if (fund.slice(-4).toLowerCase() == 'fund') { return 'border-'+fund.trim().substring(0,1).toLowerCase()+'-fund nobr'; }
   // its an index fund
   if (fund.substring(0,4) == 'U.S.') { return 'border-index-f'; }
   if (fund.substring(0,4) == 'S&P ') { return 'border-index-c'; }
