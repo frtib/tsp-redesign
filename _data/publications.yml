@@ -24,11 +24,18 @@
   publication_topics:
   - Withdrawals
 - publication_url: https://secure.tsp.gov/components/CORS/monthlyAnnuityFactors.html
-#- publication_url: monthly-annuity-factors.html
-  publication_name: Annuity Factors, Monthly
+  publication_name: Annuity factors (monthly)
   publication_info: Use these monthly annuity factors with the annuity worksheet to estimate your monthly annuity payment.
   publication_date: 7/2014
   publication_pages: 1 page
+  publication_type:
+  - Annuity
+  publication_topics:
+  - Withdrawals
+- publication_url: /annuity-basics/historical-annuity-rates/
+  publication_name: Annuity rates (historical)
+  publication_info: View monthly annuity rates from 2002 through the present. Also available for export.
+  publication_date: 9/2020
   publication_type:
   - Annuity
   publication_topics:
