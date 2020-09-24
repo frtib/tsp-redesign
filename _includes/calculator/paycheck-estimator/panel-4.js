@@ -498,7 +498,7 @@ function makeChart(chartMax, year) {
                         color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black',
                         formatter: function() {
 
-                            if (this.y < 0) { console.log('1', this.series.userOptions.stack); return this.series.userOptions.stack; }
+                            if (this.y < 0) { return this.series.userOptions.stack; }
                             if (this.y == 0.0) { return ''; };
                             return '<strong>' + CurrencyFormatted(this.y) + '</strong>'; }
                     },
