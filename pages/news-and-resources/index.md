@@ -24,7 +24,8 @@ redirect_from:
 {% include next-outage.html %}
 
 <section class="key-rates">
-  <div class="usa-grid">
+<div class="usa-grid">
+  <!-- Annual elective deferral -->
   <div class="usa-width-one-third">
     <div id="contribution-limit">Unavailable</div>
     <div id="tax-year" class="hide">Unavailable</div>
@@ -43,10 +44,14 @@ redirect_from:
     </li>
     </ul>
   </div>
-
+  <!-- Loan rate -->
   <div class="usa-width-one-third"><div id="loan-rate">--%</div>Loan rate</div>
-  <div class="usa-width-one-third"><div id="annuity-rate">--%</div>Annuity rate</div>
+  <!-- Annuity rate -->
+  <div class="usa-width-one-third">
+  <div id="annuity-rate">--%</div>
+  Annuity rate <span class="historical-annuity-rates" markdown="1">[Historical annuity rates]({{ site.baseurl }}/annuity-basics/historical-annuity-rates/)</span>
   </div>
+</div>
 </section>
 
 <section class="latest-news">
