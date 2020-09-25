@@ -294,14 +294,13 @@
   publication_topics:
   - Tax information
   - Withdrawals
-- publication_url: tsp-21-r-cl.pdf
-  publication_name: Residential Loan Checklist
-  publication_info: Complete this checklist and include it with your completed Form TSP-21-R, Loan Agreement, and residential loan documentation to ensure timely processing of your loan.
-  publication_date: 8/2017
-  publication_type:
-  - Booklet
-  publication_topics:
-  - Loans
+#- publication_url: tsp-21-r-cl.pdf  publication_name: Residential Loan Checklist
+#  publication_info: Complete this checklist and include it with your completed Form TSP-21-R, Loan Agreement, and residential loan documentation to ensure timely processing of your loan.
+#  publication_date: 8/2017
+#  publication_type:
+#  - Booklet
+#  publication_topics:
+#  - Loans
 - publication_url: tsplf37a.pdf
   publication_name: TSP Scorecard
   publication_info: Thinking about moving your TSP savings to another plan? Ask the provider these questions first.

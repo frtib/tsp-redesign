@@ -114,17 +114,17 @@
   -  Both
   form_topics:
   -  Loans
-- form_number: TSP-20-C
-  form_url: https://secure.tsp.gov/tsp/loan.do?subaction=menu&amp;_name=loan&_form=tsp20c
+#- form_number: TSP-20-C
+#  form_url: https://secure.tsp.gov/tsp/loan.do?subaction=menu&amp;_name=loan&_form=tsp20c
 #  form_url: "{{ site.loans }}&_form=tsp20c"
-  form_name: CARES Act Loan Application
-  form_info: Apply online for a TSP general purpose loan with an increased maximum loan amount. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136).
-  form_date:
-  form_pages:
-  form_audience:
-  -  Both
-  form_topics:
-  -  Loans
+#  form_name: CARES Act Loan Application
+#  form_info: Apply online for a TSP general purpose loan with an increased maximum loan amount. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136).
+#  form_date:
+#  form_pages:
+#  form_audience:
+#  -  Both
+#  form_topics:
+#  -  Loans
 - form_number: TSP-21-R-CL
   form_url: tsp-21-r-cl.pdf
   form_name: Residential Loan Checklist
