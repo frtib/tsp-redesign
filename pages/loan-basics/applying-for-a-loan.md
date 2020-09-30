@@ -40,18 +40,6 @@ By law, your spouse has certain rights to your TSP account. When requesting a lo
 
 Exceptions to the spousal rule may be approved under very limited circumstances. For more information, please refer to Form TSP-16, [*Exception to Spousal Requirements*]({{ site.baseurl }}/forms/tsp-16.pdf),  ([TSP-U-16]({{ site.baseurl }}/forms/tsp-u-16.pdf), for uniformed services members).
 
-<div class="usa-alert  usa-alert-info">
-  <div class="usa-alert-body">
-    <h3 class="usa-alert-heading">
-      Temporary waiver of notary requirement
-    </h3>
-    <p class="usa-alert-text">
-      We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten and submitted as directed in the form instructions, but you may leave the notary section blank.
-    </p>
-  </div>
-</div>
-
-
 ## Residential loan documentation
 When you request a residential loan, you must provide supporting documentation of the costs associated with the purchase or construction of your primary residence, before your loan can be approved.
 
@@ -64,28 +52,35 @@ All of your documentation must
 + show you or your spouse as the purchaser or builder;
 + show the purchase or construction price; and
 + show the full address of the primary residence.
+
 #### Special requirements
 In addition to the requirements listed above, some types of primary residences require you to show further documentation.
+
 #### Cooperative purchase
 Purchasing a cooperative requires you to show that you own shares in a cooperative housing corporation.
+
 #### New home construction purchase
 Constructing a new primary residence requires you to show evidence that a complete residence will be constructed, such as:
 + Building permits
 + Building receipts
 + Other third-party documents
+
 #### Mobile home or recreational vehicle purchase
 Purchasing a mobile home or recreational vehicle as a primary residence requires you to provide all of the following:
 + Serial number or other identifying number
 + Complete description of facilities and accommodations (RVs)
 + Signed statement that the RV will be your primary residence (RVs)
+
 #### Boat purchase
 Purchasing a boat as a primary residence requires you to provide all of the following:
 + Serial number or other identifying number
 + Letter from the marina or other location where your boat will be moored
 + Signed statement that the boat will be your primary residence
+
 ## Loan processing
 + If you successfully complete the entire loan process online, and are approved, you will receive your money in 8 to 13 business days. If you submit a paper loan agreement, it may take several weeks.
 + You may track the status of your loan by logging in to [My Account]({{ site.myaccount }}) or by [contacting us]({{ site.baseurl }}/contact/).
+
 ## Receiving your money
 
 + If your loan request was made and approved online, you will receive your money in the form of a check, mailed to the address we have on file for you. You will not have the option of receiving your funds by electronic funds transfer (EFT).

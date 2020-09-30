@@ -27,6 +27,4 @@ Download the Election Form, _[Form TSP-1]({{ site.baseurl }}/forms/tsp-1.pdf)_ (
 
 ## I was just hired. Am I already contributing?
 
-If you're a brand new employee of the federal government or uniformed services, you were automatically enrolled in the TSP at 3% of your salary. Many people who were automatically enrolled decide to increase their contributions to at least 5% of their salary to [get the full match]({{ site.baseurl }}/making-contributions/maximize-your-savings/) from their agency or service.
-
-<!--  full match should link to "How do I get the full match?" page -->
+If you were hired or rehired on or after October 1, 2020, you were automatically enrolled in the TSP at 5% of your salary. You are [getting the full match]({{ site.baseurl }}/making-contributions/maximize-your-savings/) from your agency or service. If you decrease your employee contribution amount below 5%, you will not receive the full amount of agency money. If you stop making regular employee contributions, your matching contributions will also stop.
