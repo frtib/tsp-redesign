@@ -198,6 +198,10 @@ money on the table. Are you contributing enough to get at least the full match f
 </section>
 <!-- // end #free-money -->
 
+Use our &#8220;[How Much Can I Contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute/)&#8221; calculator to determine the specific dollar amount to be deducted each pay period in order to maximize your contributions and to ensure that you do not miss out on Agency or Service Matching Contributions if you are entitled to them.
+
+Another way to maximize your savings is to increase your contribution amount each time you get a pay increase. Even a small amount can make a big difference! Check out our &#8220;[How Much Will My Savings Grow?]({{ site.baseurl }}/calculators/how-much-will-my-savings-grow/)&#8221; calculator.  
+
 ## Am I eligible for matching?
 
 Only employees covered by the <span data-term="Federal Employees' Retirement System (FERS)" class="js-glossary-toggle term term-end">Federal Employees Retirement System</span> (for civilians) and the <span data-term="Blended Retirement System (BRS)" class="js-glossary-toggle term term-end">Blended Retirement System </span> (for uniformed services) are eligible for matching. If you're brand new to federal or uniformed service, you are covered by one of these systems.

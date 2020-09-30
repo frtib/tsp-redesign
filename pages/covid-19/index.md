@@ -27,7 +27,6 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Submitting certain forms online](#submitting-certain-forms-online)
 - [CARES Act temporary loan and withdrawal options](#cares-act-temporary-loan-and-withdrawal-options)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
-- [Temporary waiver of notary requirement](#temporary-waiver-of-notary-requirement)
 - [Temporary changes to required minimum distributions](#temporary-changes-to-required-minimum-distributions)
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
@@ -69,9 +68,6 @@ The temporary loan and withdrawal options for TSP participants affected by COVID
 
 ## Payments you make to the TSP by check may take longer to process
 Because of public health precautions being taken at our processing facilities, payments made by check will most likely take longer to appear in your TSP account. These include payments to make up missed loan payments, submit additional loan payments, or to roll over payments from IRAs or other employer plans. We appreciate your patience.
-
-## Temporary waiver of notary requirement
-We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten (or made electronically with PIV or CAC credentials) and submitted as directed in the form instructions, but you may leave the notary section blank.
 
 ## Temporary changes to required minimum distributions
 The COVID-19 pandemic caused a steep and sudden decline in the stock markets and put a severe strain on many household budgets. As authorized by the recently enacted CARES Act, we’re making temporary changes related to required minimum distributions.

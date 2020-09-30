@@ -13,10 +13,9 @@ redirect_from:
 
 ## Regular employee contributions
 
-Each pay period, your agency or service will deduct your contribution from your basic pay in the amount or percentage that you chose when you started contributing (or at 3% of your pay if you were automatically enrolled and haven't made any changes).
+Each pay period, your agency or service will deduct your contribution from your basic salary in the amount or percentage that you chose when you started contributing. If you began or rejoined federal service on or after October 1, 2020, you were automatically enrolled at 5% of your basic salary. If you began or rejoined federal service between August 1, 2010, and September 30, 2020, you were automatically enrolled at 3%.
 
 Your agency or service will continue to deduct your contribution until you do the following:
-
 
 <div class="usa-grid-full contribution-type">
 <div class="usa-width-one-whole" markdown="1">
