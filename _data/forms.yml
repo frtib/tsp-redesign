@@ -2,7 +2,7 @@
   form_url: tsp-1.pdf
   form_name: Election Form
   form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
-  form_date: 9/2015
+  form_date: 10/2020
   form_pages: 2
   form_audience:
   -  Civilian
@@ -13,7 +13,7 @@
   form_url: tsp-u-1.pdf
   form_name: Election Form
   form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
-  form_date: 1/2018
+  form_date: 10/2020
   form_audience:
   -  Uniformed Services
   form_topics:
@@ -43,7 +43,7 @@
   form_url: tsp-3.pdf
   form_name: Designation of Beneficiary
   form_info: Name a person or persons to receive your account balance after your death. Civilians, uniformed service members, and beneficiary participants can use this form.
-  form_date: 10/2013
+  form_date: 9/2020
   form_pages: 8
   form_audience:
   -  Both
@@ -139,7 +139,7 @@
   form_url: tsp-25.pdf
   form_name: Automatic Enrollment Refund Request
   form_info: Request a refund of the contributions to your TSP account (and their earnings) that were deducted from your pay due to automatic enrollment. The TSP must receive this form no later than 90 days from the date of your first contribution.
-  form_date: 1/2018
+  form_date: 10/2020
   form_pages: 4
   form_audience:
   -  Civilian
