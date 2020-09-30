@@ -272,7 +272,6 @@ To help you with employee outreach, we&#8217;ve compiled a selection of educatio
                 href="{{ site.baseurl }}/assets/posters/new-hire.pdf"
                 target="\_blank"
                 title="View poster">
-
               <img
                 src="{{ site.baseurl }}/assets/posters/thumbnails/new-hire.jpg"
                 alt="Poster thumbnail"
@@ -287,8 +286,8 @@ To help you with employee outreach, we&#8217;ve compiled a selection of educatio
               download
               class="pdf"
               href="{{ site.baseurl }}/assets/posters/new-hire.pdf"
-              aria-describedby="id-4">
-                Download PDF</a></li>
+              aria-describedby="id-4">Download PDF</a>
+            </li>
           </ul>
           </div><!-- end div.usa-width-one-half -->
 
