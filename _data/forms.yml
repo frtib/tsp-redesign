@@ -206,8 +206,7 @@
   form_topics:
   -  General information
 - form_number: TSP-75
-  form_url: https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd&_form=tsp75
-#  form_url: "{{ site.loans }}&_form=tsp75"
+  form_url: "{{ site.withdrawals }}&_form=tsp75"
   form_name: Age-Based In-Service Withdrawal Request
   form_info: Request a withdrawal from your TSP account if you are age 59½ or older and still employed by the Federal Government.
   form_date: 2/2015
@@ -217,8 +216,7 @@
   form_topics:
   -  Withdrawals
 - form_number: TSP-76
-  form_url: https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd&_form=tsp76
-#  form_url: "{{ site.loans }}&_form=tsp76"
+  form_url: "{{ site.withdrawals }}&_form=tsp76"
   form_name: Financial Hardship In-Service Withdrawal Request
   form_info: Request a financial hardship withdrawal while still employed.
   form_date: 1/2018
@@ -258,8 +256,7 @@
   form_topics:
   -  Legal documents
 - form_number: TSP-95
-  form_url: https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd&_form=tsp95
-  #  form_url: "{{ site.loans }}&_form=tsp95"
+  form_url: "{{ site.withdrawals }}&_form=tsp95"
   form_name: Changes to Installment Payments
   form_info: Log in to [My Account]({{ site.withdrawals }}) and access the online tool to request changes to your existing TSP installment payments.
   form_date: Local reproduction
@@ -269,8 +266,7 @@
   form_topics:
   -  Withdrawals
 - form_number: TSP-96
-  form_url: https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd&_form=tsp96
-#  form_url: "{{ site.loans }}&_form=tsp96"
+  form_url: "{{ site.withdrawals }}&_form=tsp96"
   form_name: CARES Act Withdrawal Request
   form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
   form_date: Local reproduction
@@ -280,8 +276,7 @@
   form_topics:
   -  Withdrawals
 - form_number: TSP-99
-  form_url: https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd&_form=tsp99
-  #  form_url: "{{ site.loans }}&_form=tsp99"
+  form_url: "{{ site.withdrawals }}&_form=tsp99"
   form_name: Withdrawal Request for Separated and Beneficiary Participants
   form_info: Log in to [My Account]({{ site.withdrawals }}) and access the online tool to request a withdrawal if you are either separated from service or a beneficiary participant.
   form_date: Local reproduction

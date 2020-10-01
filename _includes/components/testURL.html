@@ -7,4 +7,7 @@ Calculate absolute URL for a collection item.
 {% assign prefixURL = rawURL | slice: 0 %}
 {% if prefixURL == '/' %}{% assign absURL = rawURL %}{% endif %}
 {% assign prefixURL = rawURL | slice: 0, 4 %}
-{% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
+{% if prefixURL == 'http' or form.form_url contains 'site' %}{% assign absURL = rawURL %}{% endif %}
+{% comment %}
+form.form_url contains 'site' prevents My Account links from being prepended with /forms/
+{% endcomment %}
