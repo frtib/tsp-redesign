@@ -1,7 +1,7 @@
 {% comment %}
 Calculate absolute URL for a collection item.
 {% endcomment %}
-{% assign curPath = include.curPath | default: '/forms/' %}
+{% assign curPath = include.curPath | default: '{{ site.baseurl }}/forms/' %}
 {% assign rawURL = include.rawURL | default: 'index.html' %}
 {% assign absURL = curPath | append: rawURL %}
 {% assign prefixURL = rawURL | slice: 0 %}
