@@ -22,7 +22,7 @@
       {% endif %}
     <p class="form-title">{{ form.form_name}}</p>
     <p class="form-number">
-      <a href="{{ formURL | liquify }}" xxx="{{ prefixURL }}" class="form-name">
+      <a href="{{ site.baseurl }}{{ formURL | liquify }}" xxx="{{ prefixURL }}" class="form-name">
         Form {{ form.form_number}}
       </a>
     </p>
