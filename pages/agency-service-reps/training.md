@@ -185,12 +185,11 @@ Benefits specialist and educator training
 The Federal Retirement Thrift Investment Board offers a variety of TSP training opportunities for agency benefits officers, payroll personnel, and financial counselors supporting the uniformed services.
 
 We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialist, human resources personnel, and payroll personnel. As an agency or service representative, you may request training for your agency or service from our [Course Catalog]({{ site.baseurl }}/bulletins/tsp-course-catalog.pdf) by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx)  and submitting the form to **training@frtib.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
-
-Click on any course to learn more and get registered:
+<!-- Click on any course to learn more and get registered:
 
 - [TSP 101: The TSP for Agency and Service Representatives]({{ site.baseurl }}/exit/?idx=70){:rel="nofollow"} (2-day class)
 - [2-Day Advanced TSP Training for Military Financial Educators]({{ site.baseurl }}/exit/?idx=71){:rel="nofollow"} (2-day class)
-- [TSP Payroll Operations and Error Correction]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"} (1-day class)
+- [TSP Payroll Operations and Error Correction]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"} (1-day class) -->
 
 ## Training requests
 
