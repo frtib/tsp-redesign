@@ -287,7 +287,7 @@
   -  Withdrawals
   -  Beneficiary participants
 - form_number: W-4P
-  form_url: /exit/?idx=26
+  form_url: "{{ site.baseurl }}/exit/?idx=26"
   form_name: Withholding Certificate for Pension or Annuity Payments
   form_info: Request a change to the default tax withholding for a withdrawal. W-4P is an IRS form.
   form_date: Local Reproduction
