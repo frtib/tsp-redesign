@@ -1,0 +1,11 @@
+<ul class="usa-accordion">
+{% assign defaultSize = site.pia | size %}
+{% assign maxpias = include.maxpias | default: defaultSize %}
+{% for pia in site.pia %}
+  {% if forloop.index > maxpias %}{% break %}{% endif %}
+  {% assign pia_id = 'pia' | append: forloop.index %}
+  <li>
+  {% include pia-item.html entry=pia expanded="false" %}
+  </li>
+{% endfor %}
+</ul>

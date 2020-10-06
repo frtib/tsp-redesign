@@ -1,0 +1,28 @@
+{% comment %}
+HTML block for one pia item accordion.
+{% endcomment %}
+
+{% assign entry = include.entry %}
+{% assign pia_name = entry.permalink | split: '/' | last | default: 'anchor' %}
+{% assign entryHTML = entry.permalink | append: '' %}
+{% assign pia_id = include.pia_id | default: pia_name %}
+{% assign pia_question = include.pia_question | default: entry.title %}
+{% assign pia_body = include.pia_body | default: entry.content %}
+{% assign expanded = include.expanded | default: "true" %}
+<!-- {{pia_name}} -->
+<a name="{{pia_name}}-start"></a>
+<button id="{{pia_name}}-button" class="usa-accordion-button" aria-expanded="{{ expanded }}" aria-controls="{{pia_id}}">
+{{pia_question}}
+</button>
+<div id="{{pia_id}}" class="usa-accordion-content" markdown="1">
+  <div id="{{pia_id}}-div">
+  {{pia_body}}
+  </div>
+  <div class="flex post-and-share">
+    <!-- Share Modal -->
+    {% include social-media-share.html modalID=pia_id %}
+    {% include copy-to-clipboard.html element=pia_id function='copyPlanNewsToClipboard' %}
+    {% comment %}{% if entry.permalink %}<a href="{{entryHTML}}">Entry</a>{% endif %}{% endcomment %}
+    {% include share-bar.html pageurl=entryHTML modalID=pia_id %}
+  </div>
+</div>

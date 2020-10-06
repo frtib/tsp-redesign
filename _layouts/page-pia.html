@@ -1,0 +1,38 @@
+---
+layout: default
+main:
+  class: usa-grid usa-section usa-content usa-layout-docs
+scripts:
+---
+{% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}
+{% assign xtra_class = '' %}
+{% if sidenav %}
+
+{% assign xtra_class = 'usa-width-three-fourths' %}
+<aside class="usa-width-one-fourth usa-layout-docs-sidenav sticky">
+  <ul class="usa-accordion">
+    <li>
+      <button class="usa-accordion-button"
+        aria-expanded="true"
+        aria-controls="sidenav-mobile">
+        More in this section
+      </button>
+      <div id="sidenav-mobile" class="usa-accordion-content">
+        {% include sidenav.html links=sidenav fake='/pia-fake/' %}
+      </div>
+    </li>
+  </ul>
+</aside>
+{% endif %}
+
+<div class="{{xtra_class}} usa-layout-docs-main_content" markdown="1">
+  {{ top_of_page | markdownify }}
+
+  <!-- DONALD style this -->
+  <span class="see-all"><a href="/pia/">See all</a></span>
+
+  <br><br>
+  <ul class="usa-accordion">
+    {% include pia-item.html entry=page %}
+  </ul>
+</div>
