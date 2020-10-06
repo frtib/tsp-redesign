@@ -5,6 +5,10 @@ Calculate absolute URL for a collection item.
 {% assign curPath = include.curPath | default: '/forms/' %}
 {% assign rawURL = include.rawURL | default: 'index.html' %}
 {% assign absURL = curPath | append: rawURL %}
+{% assign abzURL = '{{ site.baseurl }}' | append: rawURL %}
+
+{% assign prefixURL = rawURL | slice: 0 %}
+{% if prefixURL == '/' %}{% assign absURL = abzURL %}{% endif %}
 
 {% assign prefixURL = rawURL | slice: 0, 4 %}
 {% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
@@ -23,6 +27,8 @@ Calculate absolute URL for a collection item.
 {% assign curPath = include.curPath | default: '/forms/' %}
 {% assign rawURL = include.rawURL | default: 'index.html' %}
 {% assign absURL = curPath | append: rawURL %}
+{% assign prefixURL = rawURL | slice: 0 %}
+{% if prefixURL == '/' %}{% assign absURL = rawURL %}{% endif %}
 {% assign prefixURL = rawURL | slice: 0, 4 %}
 {% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
 
