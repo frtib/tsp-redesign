@@ -6,6 +6,7 @@ styles:
 scripts:
 permalink: /catch-up/
 redirect_from:
+  - /catchup
 ---
 
 <h1><div class="nav-header">Catch-up contributions</div>Latest information</h1>
