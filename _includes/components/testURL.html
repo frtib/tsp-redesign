@@ -5,10 +5,10 @@ Calculate absolute URL for a collection item.
 {% assign curPath = include.curPath | default: '/forms/' %}
 {% assign rawURL = include.rawURL | default: 'index.html' %}
 {% assign absURL = curPath | append: rawURL %}
-{% assign abzURL = '{{ site.baseurl }}' | append: rawURL %}
+{% assign relURL = '{{ site.baseurl }}' | append: rawURL %}
 
-{% assign prefixURL = rawURL | slice: 0 %}
-{% if prefixURL == '/' %}{% assign absURL = abzURL %}{% endif %}
+{% assign prefixURL = rawURL | slice: 0, 1 %}
+{% if prefixURL == '/' %}{% assign absURL = relURL %}{% endif %}
 
 {% assign prefixURL = rawURL | slice: 0, 4 %}
 {% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
@@ -17,7 +17,7 @@ Calculate absolute URL for a collection item.
 {% if resource.publication_url contains 'site' or form.form_url contains 'site' %}{% assign absURL = rawURL %}{% endif %}
 
 {% comment %}
-(form.form_url contains 'site') and (resource.publication_url contains 'site') prevent My Account links from being prepended with /forms/ or /publications/.
+[form.form_url contains 'site'] and [resource.publication_url contains 'site'] prevent My Account links from being prepended with curPath — either /forms/ or /publications/.
 {% endcomment %}
 
 {% comment %}
