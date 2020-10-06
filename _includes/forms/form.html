@@ -24,10 +24,10 @@
     <p class="form-number">
       {% if formURL == rawURL %}
       <!-- Omit site.baseurl for http links -->
-      <a href="{{ formURL | liquify }}" xxx="rawURL {{ prefixURL }}" class="form-name">
+      <a href="{{ formURL | liquify }}" xxx="rawURL" class="form-name">
         {% else %}
       <!-- Inclucde site.baseurl for internal links -->
-      <a href="{{ site.baseurl }}{{ formURL | liquify }}" xxx="{{ prefixURL }}" class="form-name">
+      <a href="{{ site.baseurl }}{{ formURL | liquify }}" xxx="absURL" class="form-name">
       {% endif %}
         Form {{ form.form_number}}
       </a>

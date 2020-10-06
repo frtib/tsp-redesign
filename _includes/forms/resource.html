@@ -28,7 +28,7 @@
         <a href="{{ pubURL | liquify }}" xxx="rawURL" class="">
           {% else %}
         <!-- Inclucde site.baseurl for internal links -->
-        <a href="{{site.baseurl }}{{ pubURL }}" class="">
+        <a href="{{site.baseurl }}{{ pubURL | liquify }}" xxx="absURL" class="">
         {% endif %}
         {{ resource.publication_name }}</a></p>
       <p><small>{{ resource.publication_type }}</small></p>
