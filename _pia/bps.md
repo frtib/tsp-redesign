@@ -90,13 +90,17 @@ BPS will only allow authorized users access to appropriate information and infor
 _FRTIB should be transparent about information policies and practices with respect to PII, and should provide clear and accessible notice regarding creation, collection, use, processing, storage, maintenance, dissemination, and disclosure of PII._
 
 1. Applicable SORN(s)  
-<p>FRTIB-1: Thrift Savings Plan (TSP) Records, available at 9 Fed. Reg. 21246 (April 15, 2014).</p>
-<p>FRTIB-12: Debt Collections Records, available at 81 Fed. Reg. 7106 (Feb. 10, 2016).</p>
-<p>FRTIB-13: Fraud and Forgery Records, available at 81 Fed. Reg. 7106 (Feb. 10, 2016).</p>
+
+   FRTIB-1: Thrift Savings Plan (TSP) Records, available at 9 Fed. Reg. 21246 (April 15, 2014).
+
+   FRTIB-12: Debt Collections Records, available at 81 Fed. Reg. 7106 (Feb. 10, 2016).
+
+   FRTIB-13: Fraud and Forgery Records, available at 81 Fed. Reg. 7106 (Feb. 10, 2016).
 
 2. Availability of Privacy Notices   
-Whenever possible, the FRTIB provides notice to individuals about its policies regarding the use and disclosure of PII at the time the FRTIB collects the information. The FRTIB forms that collect PII contain appropriate Privacy Act Notices. FRTIB provides additional notice to participants about how their information is used through its [System of Records Notices](/how-we-protect-your-data/system-of-records-notices/), and at [www.tsp.gov/privacy]({{ site.baseurl }}/privacy/).
-<p>When hired, and annually thereafter, all FRTIB federal employees and contractors are required to sign Rules of Behavior. The document explicitly notifies employees and contractors that they have no reasonable expectation of privacy while using FRTIB networks or devices and notifies employees and contractors that their activity is subject to monitoring. Users are also notified via a warning banner that their activity is monitored when logging into an FRTIB device.</p>
+   Whenever possible, the FRTIB provides notice to individuals about its policies regarding the use and disclosure of PII at the time the FRTIB collects the information. The FRTIB forms that collect PII contain appropriate Privacy Act Notices. FRTIB provides additional notice to participants about how their information is used through its [System of Records Notices](/how-we-protect-your-data/system-of-records-notices/), and at [www.tsp.gov/privacy]({{ site.baseurl }}/privacy/).
+
+   When hired, and annually thereafter, all FRTIB federal employees and contractors are required to sign Rules of Behavior. The document explicitly notifies employees and contractors that they have no reasonable expectation of privacy while using FRTIB networks or devices and notifies employees and contractors that their activity is subject to monitoring. Users are also notified via a warning banner that their activity is monitored when logging into an FRTIB device.
 {:.alpha}
 
 ## Accountability

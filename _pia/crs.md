@@ -55,9 +55,11 @@ _FRTIB should involve individuals in the process of using PII and, to the extent
 
 1. Notice and Opportunities for Consent   
    Federal employees in the FERS retirement system and members of the uniformed services who began serving on or after January 1, 2018 are automatically enrolled in the TSP. The participant’s employing agency or service provides participants with relevant information about the TSP.
-   <p>Federal employees in the CSRS retirement system and members of the uniformed services who began serving before January 1, 2018 are enrolled in the TSP after making a contribution election. The form used to make a contribution election contains a Privacy Act Notice.</p>
+
+   Federal employees in the CSRS retirement system and members of the uniformed services who began serving before January 1, 2018 are enrolled in the TSP after making a contribution election. The form used to make a contribution election contains a Privacy Act Notice.
+
 2. Inquiries & Redress   
-Participants and beneficiaries have several options to access information regarding their accounts and the TSP. Participants may access their account information via My Account in order to view or make changes to their account and to view their information. Participants may also call into FRTIB’s ThriftLine in order to speak with a PSR associate. Once the participant’s identity is authenticated, the PSR associate can assist with information about his or her account. Additionally, PSR associates can mail account specific information to participants.
+   Participants and beneficiaries have several options to access information regarding their accounts and the TSP. Participants may access their account information via My Account in order to view or make changes to their account and to view their information. Participants may also call into FRTIB’s ThriftLine in order to speak with a PSR associate. Once the participant’s identity is authenticated, the PSR associate can assist with information about his or her account. Additionally, PSR associates can mail account specific information to participants.
 {:.alpha}
 
 ## Data Quality & Integrity
@@ -65,7 +67,7 @@ Participants and beneficiaries have several options to access information regard
 _FRTIB should create, collect, use, process, store, maintain, disseminate, or disclose PII with the accuracy, relevance, timeliness, and completeness reasonably necessary to ensure fairness._
 
 1. Sources of PII   
-CRS pulls and uses information from multiple internal and external sources. CRS connects with the other FRTIB systems, Interfacing Services System (ISS) and Business Process Services (BPS), in order to process and confirm information, including PII. CRS also collects information from the Office of Personnel Management (OPM) in order to generate demographics reports.
+   CRS pulls and uses information from multiple internal and external sources. CRS connects with the other FRTIB systems, Interfacing Services System (ISS) and Business Process Services (BPS), in order to process and confirm information, including PII. CRS also collects information from the Office of Personnel Management (OPM) in order to generate demographics reports.
 {:.alpha}
 
 ## Security
@@ -84,12 +86,13 @@ CRS will only allow authorized users access to appropriate information and infor
 _FRTIB should be transparent about information policies and practices with respect to PII, and should provide clear and accessible notice regarding creation, collection, use, processing, storage, maintenance, dissemination, and disclosure of PII._
 
 1. Applicable SORN(s)  
-   <p>FRTIB-1: Thrift Savings Plan (TSP) Records, available at 9 Fed. Reg. 21246 (April 15, 2014).</p>
+
+   FRTIB-1: Thrift Savings Plan (TSP) Records, available at 9 Fed. Reg. 21246 (April 15, 2014).
 
 2. Availability of Privacy Notices   
    Whenever possible, the FRTIB provides notice to individuals about its policies regarding the use and disclosure of PII at the time the FRTIB collects the information. The FRTIB forms that collect PII contain appropriate Privacy Act Notices. FRTIB provides additional notice to participants about how their information is used through its [System of Records Notices](/how-we-protect-your-data/system-of-records-notices/), and at [www.tsp.gov/privacy]({{ site.baseurl }}/privacy/).
-   <p>When hired, and annually thereafter, all FRTIB federal employees and contractors are required to sign Rules of Behavior. The document explicitly notifies employees and contractors that they have no reasonable expectation of privacy while using FRTIB networks or devices and notifies employees and contractors that their activity is subject to monitoring. Users are also notified via a warning banner that their activity is monitored when logging into an FRTIB device.</p>
-   {:.alpha}
+
+   When hired, and annually thereafter, all FRTIB federal employees and contractors are required to sign Rules of Behavior. The document explicitly notifies employees and contractors that they have no reasonable expectation of privacy while using FRTIB networks or devices and notifies employees and contractors that their activity is subject to monitoring. Users are also notified via a warning banner that their activity is monitored when logging into an FRTIB device.
 
 ## Accountability
 
