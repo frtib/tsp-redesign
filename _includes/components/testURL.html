@@ -2,15 +2,15 @@
 {% comment %}
 Calculate absolute URL for a collection item.
 {% endcomment %}
-{% assign curPath = include.curPath | default: '/forms/' %}
-{% assign rawURL = include.rawURL | default: 'index.html' %}
-{% assign absURL = curPath | append: rawURL %}
+{% assign curPath = include.curPath | default: '/forms/' %}(curPath = {{ curPath }})
+{% assign rawURL = include.rawURL | default: 'index.html' %}(rawURL = {{ rawURL }})
+{% assign absURL = curPath | append: rawURL %}(absURL = {{ absURL }})
 
 {% assign prefixURL = rawURL | slice: 0, 4 %}
-{% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
+{% if prefixURL == 'http' %}{% assign absURL = rawURL %}(prefixURL = {{ prefixURL }}){% endif %}
 
 {% assign prefixURL = rawURL | slice: 0, 7 %}
-{% if prefixURL contains 'site' %}{% assign absURL = rawURL %}{% endif %}
+{% if prefixURL contains 'site' %}{% assign absURL = rawURL %}(prefixURL = {{ prefixURL }}){% endif %}
 
 
 {% comment %}
