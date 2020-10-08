@@ -113,7 +113,7 @@ _FRTIB should be transparent about information policies and practices with respe
    FRTIB-13: Fraud and Forgery Records, available at 80 Fed. Reg. 43428 (July 22, 2015).
 
 2. Availability of Privacy Notices  
-   Whenever possible, the FRTIB provides notice to individuals about its policies regarding the use and disclosure of PII at the time the FRTIB collects the information. The FRTIB forms that collect PII contain appropriate Privacy Act Notices. FRTIB provides additional notice to participants about how their information is used through its [System of Records Notices](/how-we-protect-your-data/system-of-records-notices/), and at [www.tsp.gov/privacy]({{ site.baseurl }}/privacy/).
+   Whenever possible, the FRTIB provides notice to individuals about its policies regarding the use and disclosure of PII at the time the FRTIB collects the information. The FRTIB forms that collect PII contain appropriate Privacy Act Notices. FRTIB provides additional notice to participants about how their information is used through its [System of Records Notices]({{ site.baseurl }}/how-we-protect-your-data/system-of-records-notices/), and at [www.tsp.gov/privacy]({{ site.baseurl }}/privacy/).
 
    When hired, all FRTIB federal employees and contractors are required to sign Rules of Behavior as a condition of employment. The document explicitly notifies employees and contractors that they have no reasonable expectation of privacy while using FRTIB networks or devices and notifies employees and contractors that their activity is subject to monitoring.
 {:.alpha}
