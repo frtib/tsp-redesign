@@ -7,41 +7,6 @@
   publication_topics:
   - Contributions
   - Investments
-- publication_url: https://secure.tsp.gov/components/CORS/monthlyAnnuityFactors.html
-  publication_name: Annuity factors (monthly)
-  publication_info: Use these monthly annuity factors with the annuity worksheet to estimate your monthly annuity payment.
-  publication_date: 7/2014
-  publication_pages: 1 page
-  publication_type:
-  - Annuity
-  publication_topics:
-  - Withdrawals
-- publication_url: /annuity-basics/historical-annuity-rates/
-  publication_name: Annuity rates (historical)
-  publication_info: View monthly annuity rates from 2002 through the present. Also available for export.
-  publication_date: 9/2020
-  publication_type:
-  - Annuity
-  publication_topics:
-  - Withdrawals
-- publication_url: "{{ site.myaccount }}"
-  publication_name: Annual Limit on Elective Deferrals
-  publication_info: Explains the annual IRS elective deferral limit. It also explains the effect of contributing to more than one plan if the IRS limit is exceeded.
-  publication_date: 12/2019
-  publication_type:
-  - Fact Sheet
-  publication_topics:
-  - Contributions
-##
-- publication_url: tspfs27.pdf
-  publication_name: Additional Lifecycle (L) Funds
-  publication_info: Beginning July 1, 2020, new Lifecycle (L) Funds will be available to TSP participants. This fact sheet explains the coming changes.
-  publication_date: 6/2020
-  publication_type:
-  - Fact Sheet
-  publication_topics:
-  - Contributions
-  - Investments
 - publication_url: tspfs07.pdf
   publication_name: Annual Limit on Elective Deferrals
   publication_info: Explains the annual IRS elective deferral limit. It also explains the effect of contributing to more than one plan if the IRS limit is exceeded.
@@ -67,7 +32,7 @@
   - Annuity
   publication_topics:
   - Withdrawals
-- publication_url: "{{ site.baseurl }}/annuity-basics/historical-annuity-rates/"
+- publication_url: /annuity-basics/historical-annuity-rates/
   publication_name: Annuity rates (historical)
   publication_info: View monthly annuity rates from 2002 through the present. Also available for export.
   publication_date: 9/2020

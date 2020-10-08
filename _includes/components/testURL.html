@@ -7,38 +7,20 @@ Calculate absolute URL for a collection item.
 {% assign relURL = include.rawURL | prepend: '{{ site.baseurl }}' %}
 {% assign absURL = curPath | append: rawURL %}
 
-{% assign prefixURL = rawURL | slice: 0, 7 %}
-{% if prefixURL contains 'http' or prefixURL contains 'site' %}{% assign absURL = rawURL %}{% endif %}
+{% assign externalURL = rawURL | slice: 0, 7 %}
+{% if externalURL contains 'http' or externalURL contains 'site' %}{% assign absURL = rawURL %}{% endif %}
 
+{% assign internalURL = rawURL | slice: 0, 1 %}
+{% if internalURL == '/' %}
+  {% assign absURL = relURL %}
+    {% comment %}
+    ^ This makes absURL = rawURL, because relURL = include.rawURL
+    {% endcomment %}
 
-{% assign prefixxxURL = rawURL | slice: 0, 1 %}
-{% if prefixxxURL == '/' %}
-{% assign absURL = relURL %}
-{% assign rawURL = relURL %}
+  {% assign rawURL = relURL %}
+    {% comment %}
+    ^ Then we set rawURL = relURL, which is {{ site.baseurl }} + rawURL
+      This is how we use the rawURL a=href on the calling page, which does not include site.baseurl
+      But we need site.baseurl for relURL, which is why it is prepended.
+    {% endcomment %}
 {% endif %}
-
-
-
-
-{% comment %}
-
-{% assign prefixURL = rawURL | slice: 0, 7 %}
-{% if prefixURL == 'site' %}{% assign absURL = rawURL %}{% endif %}
-
-{% if prefixURL | startswith: '/' %}{% assign absURL = rawURL %}{% endif %}
-
-{% endcomment %}
-
-{% comment %}
-ORIGINAL CODE
-Calculate absolute URL for a collection item.
-
-{% assign curPath = include.curPath | default: '/forms/' %}
-{% assign rawURL = include.rawURL | default: 'index.html' %}
-{% assign absURL = curPath | append: rawURL %}
-{% assign prefixURL = rawURL | slice: 0 %}
-{% if prefixURL == '/' %}{% assign absURL = rawURL %}{% endif %}
-{% assign prefixURL = rawURL | slice: 0, 4 %}
-{% if prefixURL == 'http' %}{% assign absURL = rawURL %}{% endif %}
-
-{% endcomment %}
