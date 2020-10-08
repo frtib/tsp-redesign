@@ -13,12 +13,13 @@
   {% assign divBlockID = "id='" | append: resource.publication_url | replace: '.', '-' | append: "-block'" %}
   {% assign divBlockClass = "div-block-class div-resource-class" %}
 {% endif %}
-{% include components/testURL.html curPath='/publications/' rawURL=resource.publication_url %}{% assign pubURL= absURL %}
+{% include components/testURL.html curPath='/publications/' rawURL=resource.publication_url %}{% assign pubURL = absURL %}
 
 <div class="usa-width-one-half {{divBlockClass}}" {{divBlockID}}>
   {% if nameDiv != 0 %}<br>{% endif %}
   <div>(curPath = {{ curPath }})</div>
   <div>(rawURL = {{ rawURL }})</div>
+  <div>(relURL = {{ relURL }})</div>
   <div>(absURL = {{ absURL }})</div>
   <div>(prefixURL = {{ prefixURL }})</div>
   <div>(prefixxxURL = {{ prefixxxURL }})</div>
