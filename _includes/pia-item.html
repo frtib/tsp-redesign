@@ -22,7 +22,7 @@ HTML block for one pia item accordion.
     <!-- Share Modal -->
     {% include social-media-share.html modalID=pia_id %}
     {% include copy-to-clipboard.html element=pia_id function='copyPlanNewsToClipboard' %}
-    {% comment %}{% if entry.permalink %}<a href="{{entryHTML}}">Entry</a>{% endif %}{% endcomment %}
+    {% comment %}{% if entry.permalink %}<a href="{{ site.baseurl }}{{entryHTML}}">Entry</a>{% endif %}{% endcomment %}
     {% include share-bar.html pageurl=entryHTML modalID=pia_id %}
   </div>
 </div>
