@@ -43,4 +43,14 @@ button {
       padding-left: 0.5rem;
     }
   }
+
+  
+  &.write-in {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f305";
+      font-weight: $light;
+      padding-left: 0.5rem;
+    }
+  }
 }
