@@ -10,20 +10,19 @@ Adds a magnifying glass icon which can be clicked and setups a search box with a
 {% assign searchAffiliate = 'search-affiliate-' | append: searchName %}
 {% assign affiliatePlaceholder = include.affiliatePlaceholder | default: 0 %}
 
-<div class="flex header-line">
-<button class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
-<!-- Animated search bar -->
-<form accept-charset="UTF-8" action="{{action}}" id="{{searchID}}" method="get" class="animated-search">
-<div>
-{% if affiliatePlaceholder > 0 %}
-<select id="{{searchAffiliate}}" onChange="{{onChange}}">
-  <option value="0">forgot to make list</option>
-</select>
-{% endif %}
-<label for="{{searchInput}}" class="usa-sr-only">Enter search term(s)</label>
-<input type="text" name="{{searchInput}}" id="{{searchInput}}"
-    onChange="{{onChange}}" autocomplete="off" placeholder="Enter search term(s)">
-</div>
-</form>
+<div id="subscribe" class="flex header-line">
+  <button class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
+  <!-- Animated search bar -->
+  <form accept-charset="UTF-8" action="{{action}}" id="{{searchID}}" method="get" class="animated-search">
+    <div>
+      {% if affiliatePlaceholder > 0 %}
+      <select id="{{searchAffiliate}}" onChange="{{onChange}}">
+        <option value="0">forgot to make list</option>
+      </select>
+      {% endif %}
+      <label for="{{searchInput}}" class="usa-sr-only">Enter search term(s)</label>
+      <input type="text" name="{{searchInput}}" id="{{searchInput}}" onChange="{{onChange}}" autocomplete="off" placeholder="Enter search term(s)">
+    </div>
+  </form>
 </div>
 <div id="{{searchMessage}}"></div>

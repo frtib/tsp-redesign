@@ -142,7 +142,7 @@ news-and-resources:
   - text: News and resources
     href: /news-and-resources/
     subnav:
-      - text: Plan News
+      - text: Plan news
         href: /news-and-resources/plan-news/
       - text: Newsletters
         href: /news-and-resources/newsletters/
