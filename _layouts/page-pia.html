@@ -18,7 +18,7 @@ scripts:
         More in this section
       </button>
       <div id="sidenav-mobile" class="usa-accordion-content">
-        {% include sidenav.html links=sidenav fake='/faq-fake/' %}
+        {% include sidenav.html links=sidenav fake='/pia-fake/' %}
       </div>
     </li>
   </ul>
@@ -29,10 +29,10 @@ scripts:
   {{ top_of_page | markdownify }}
 
   <!-- DONALD style this -->
-  <span class="see-all"><a href="{{ site.baseurl }}/faq/">See all</a></span>
+  <span class="see-all"><a href="{{ site.baseurl }}/how-we-protect-your-data/privacy-impact-assessments/">See all</a></span>
 
   <br><br>
   <ul class="usa-accordion">
-    {% include faq-item.html entry=page %}
+    {% include pia-item.html entry=page %}
   </ul>
 </div>

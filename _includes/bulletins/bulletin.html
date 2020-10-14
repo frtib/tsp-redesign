@@ -80,7 +80,7 @@
   {% assign str = supersede | replace_first: ',', '_,_' %}
   {% assign supersede_name = str | split: '_,_' | first %}
   {% assign supersede_title = str | split: '_,_' | last %}
-  <p><a href="/bulletins/{{supersede_name}}/">TSP Bulletin {{supersede_name}}</a>, {{supersede_title}}</p>
+  <p><a href="{{ site.baseurl }}/bulletins/{{supersede_name}}/">TSP Bulletin {{supersede_name}}</a>, {{supersede_title}}</p>
 {% endfor %}
 {% endif %}
 {% endcomment %}
