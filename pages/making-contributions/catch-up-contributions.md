@@ -24,7 +24,7 @@ Starting in January 2021, we’re making the process easier for participants. If
 ## Here’s how it will work
 
 <section class="bootstrap-image-modal">
-  <img id="myImg" class="thumbnail" src="{{ site.baseurl }}/assets/img/infographic-catchup-jug.png" alt="Starting January 2021 participants turning 50 or older will no longer need to make separate catch-up elections.">
+  <img id="myImg" class="thumbnail" src="{{ site.baseurl }}/assets/img/infographic-catchup-jug.png" alt="This infographic is an easy-to-understand overview of the changes coming to catch-up contributions. You may even share it with other TSP participants who may be interested.">
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
