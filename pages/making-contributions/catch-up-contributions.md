@@ -4,6 +4,7 @@ title: Catch-up contributions
 sidenav: manage-your-plan
 styles:
 scripts:
+  - /assets/js/gallery.js
 permalink: /making-contributions/catch-up-contributions/
 redirect_from:
   - /catchup
@@ -22,6 +23,22 @@ Starting in January 2021, we’re making the process easier for participants. If
 
 ## Here’s how it will work
 
+<section class="bootstrap-image-modal">
+  <img id="myImg" class="thumbnail" src="{{ site.baseurl }}/assets/img/infographic-catchup-jug.png" alt="Starting January 2021 participants turning 50 or older will no longer need to make separate catch-up elections.">
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <figure class="modal-content"><img id="img01"></figure>
+    <figcaption>
+      <p id="caption-text"></p>
+    </figcaption>
+    <div class="modal-view-buttons">
+      <a class="usa-button-secondary expand" type="button" href="{{ site.baseurl }}/publications/infographic-catchup-jug.pdf" target="_blank">View full size</a>
+      <a class="usa-button-secondary download" type="button" href="{{ site.baseurl }}/publications/infographic-catchup-jug.pdf" download>Download</a>
+    </div>
+  </div>
+</section>
 - Next year, if you’re turning 50 or older and exceed the IRS elective deferral (or annual addition) limit, then your contributions will automatically start counting toward the IRS catch-up limit.<sup>[1](#footnotes)</sup> Just add any contributions toward the catch-up limit in the same place as your other TSP contributions.
 
 - Your election will carry over each year unless you submit a new one. For instructions on submitting a new election, see [Start, change, or stop contributions]({{ site.baseurl }}/making-contributions/start-change-stop-contributions/).
