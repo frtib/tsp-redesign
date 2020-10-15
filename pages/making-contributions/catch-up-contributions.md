@@ -24,7 +24,13 @@ Starting in January 2021, we’re making the process easier for participants. If
 ## Here’s how it will work
 
 <section class="bootstrap-image-modal">
+<div class="thumbnail-container">
   <img id="myImg" class="thumbnail" src="{{ site.baseurl }}/assets/img/infographic-catchup-jug.png" alt="This infographic is an easy-to-understand overview of the changes coming to catch-up contributions. You may even share it with other TSP participants who may be interested.">
+
+  <div id="overlay" class="overlay">
+    <i class="far fa-search-plus" aria-hidden="true"></i>
+  </div>
+</div>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">

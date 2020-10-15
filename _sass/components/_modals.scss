@@ -1,6 +1,50 @@
 section.bootstrap-image-modal {
   float: right;
 
+  .thumbnail-container {
+    position: relative;
+    width: 100%;
+    // i {
+    //   position: absolute;
+    //   top: 90%;
+    //   left: 90%;
+    //   color: #fff;
+    // }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s ease;
+      background-color: none;
+
+      i {
+        color: $color-gray-warm-dark;
+        font-size: 18rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+
+      #myImg {
+        opacity: 0.7;
+      }
+    }
+  }
+
   #myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -37,16 +81,16 @@ section.bootstrap-image-modal {
   }
   /* Modal Content (image) */
   .modal-content,
-  figcaption,
-  .modal-view-buttons {
+  .modal-view-buttons,
+  figcaption {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
   }
   /* Caption of Modal Image */
-  figcaption,
-  .modal-view-buttons {
+  .modal-view-buttons,
+  figcaption {
     // margin: auto;
     // display: block;
     // width: 80%;
@@ -55,16 +99,18 @@ section.bootstrap-image-modal {
     color: #ccc;
     padding: 10px 0;
     height: auto;
+
     p {
-      width: 60ch;
+      width: auto;
+      max-width: 60ch;
       text-align: left;
       margin: 0 auto;
     }
   }
   /* Add Animation */
-  figure,
+  .modal-content,
   figcaption,
-  .modal-content {
+  figure {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -107,6 +153,9 @@ section.bootstrap-image-modal {
   }
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px) {
+    float: none;
+    text-align: center;
+
     .modal-content {
       width: 100%;
     }
@@ -168,7 +217,6 @@ section.bootstrap-modals-forms {
     }
   }
   // END .modal-body
-
   .modal-footer {
     .usa-button {
       background-color: transparent;
