@@ -19,12 +19,6 @@ Updated **October 19, 2020**.
 
 Starting in January 2021, we’re making the process easier for participants. If you’re turning 50 or older, you’ll no longer need to make separate catch-up elections to your TSP account each year.
 
-<code>Option 1: Note</code>
-
-**Note: For 2020 catch-up contributions, you do still need to [complete the current process]({{ site.baseurl }}/making-contributions/contribution-types/#catch-up-contributions) and make a separate election.** Check [current contribution limits]({{ site.baseurl }}/making-contributions/contribution-limits/) to make sure you’re on track this year.
-
-<code>Option 2: Alert</code>
-
 <div class="usa-alert  usa-alert-info usa-alert-paragraph">
   <div class="usa-alert-body">
   <h3 class="usa-alert-heading">2020 catch-up contributions</h3>
