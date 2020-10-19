@@ -159,6 +159,8 @@ urlList[239] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7c69aa0c5b
 urlList[240] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8d55a27286357fe23e76f19edfa5c783';
 urlList[241] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed7215f8617f81e83b6bceffe9bfaca3a';
 urlList[242] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eca7d033c9de17162e1fa95ae75649e9b';
+urlList[243] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/28721dd';
+urlList[244] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22';
 
 function getIdx() {
   var idx = getQueryString('idx');
