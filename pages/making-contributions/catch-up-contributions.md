@@ -7,8 +7,8 @@ scripts:
   - /assets/js/gallery.js
 permalink: /making-contributions/catch-up-contributions/
 redirect_from:
-  - /catchup
-  - /catch-up
+  - /catchup/
+  - /catch-up/
 ---
 
 <h1><div class="nav-header">Catch-up contributions</div>Latest information</h1>
