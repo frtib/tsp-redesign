@@ -4,6 +4,7 @@ section.bootstrap-image-modal {
   .thumbnail-container {
     position: relative;
     width: 100%;
+    margin-left: 1.5rem;
     // i {
     //   position: absolute;
     //   top: 90%;
@@ -155,6 +156,10 @@ section.bootstrap-image-modal {
   @media only screen and (max-width: 700px) {
     float: none;
     text-align: center;
+
+    .thumbnail-container {
+      margin-left: 0;
+    }
 
     .modal-content {
       width: 100%;
