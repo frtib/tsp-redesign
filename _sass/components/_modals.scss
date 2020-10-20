@@ -21,9 +21,10 @@ section.bootstrap-image-modal {
       width: 100%;
       opacity: 0;
       transition: 0.3s ease;
-      background-color: none;
-
-      i {
+      background-color: transparent;
+      &:before {
+        font-family: $font-awesome;
+        content: "\f00e";
         color: $color-gray-warm-dark;
         font-size: 18rem;
         position: absolute;
@@ -44,7 +45,21 @@ section.bootstrap-image-modal {
         opacity: 0.7;
       }
     }
-  }
+    figure {
+      margin: 0.75rem;
+    }
+    figcaption {
+      color: $color-gray-light;
+      padding: 0;
+      span {
+        &:before {
+          font-family: $font-awesome;
+          content: "\f00e";
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  } // end .thumbnail-container
 
   #myImg {
     border-radius: 5px;
