@@ -5,7 +5,7 @@
 {% assign title = include.title | default: 'Title' %}
 {% assign rowID = include.rowID | default: 'rowID' %}
 <tr {{trID}} {{trClass}}>
-  <td>{{title}}</td>
+  <th>{{title}}</th>
   <td class="default"><span id="{{rowID}}1">$x,xxx</span></td>
-  <td class="rightRow"><span id="{{rowID}}2">$y,yyy</span></td>
+  <td><span id="{{rowID}}2">$y,yyy</span></td>
 </tr>
