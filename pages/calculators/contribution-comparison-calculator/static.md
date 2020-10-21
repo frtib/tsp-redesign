@@ -20,6 +20,7 @@ redirect_from:
 published: false
 ---
 
+<!-- Flat file, responsive comparison table only, used for debugging CSS without stepping through calculator -->
 ## CCC table
 
 <section id="comparison-section" class="calculator-panel comparison contribution-comparison-calculator">
@@ -40,7 +41,7 @@ published: false
     <tr>
       <th class="hide w"></th>
       <th class="bg-blue default">Traditional</th>
-      <th class="bg-blue rightRow">Roth</th>
+      <th class="bg-blue">Roth</th>
     </tr>
   </thead>
   <tbody>
@@ -97,7 +98,7 @@ published: false
     <tr>
       <th class="hide w"></th>
       <th class="bg-blue default">Scenario 1</th>
-      <th class="bg-blue rightRow">Scenario 2</th>
+      <th class="bg-blue">Scenario 2</th>
     </tr>
   </thead>
   <tbody>

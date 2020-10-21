@@ -10,7 +10,6 @@ scripts:
   - /assets/js/highcharts/data.js
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
-  - /assets/js/responsive-comparison-table.js
 permalink: /calculators/tsp-installment-payment-calculator/
 calculator-name: tsp-installment-payment-calculator
 progress-steps: [Introduction, Installment Payment Information, Installment Payment Estimate]
