@@ -25,15 +25,15 @@ Results panel (4) for paycheck esitomator.
   <thead>
     <tr>
       <th class="hide w"></th>
-      <th class="bg-blue default">Scenario 1</th>
-      <th class="bg-blue rightRow">Scenario 2</th>
+      <th class="bg-blue default" scope="col">Scenario 1</th>
+      <th class="bg-blue" scope="col">Scenario 2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="3" class="compare-two">
+      <th colspan="3" class="compare-two" scope="colgroup">
         <div class="flex space-between"><span>Paycheck results</span> <a href="javascript:showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
-      </td>
+      </th>
     </tr>
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grosspay" %}
 {% include {{tableRow}} title="Your Traditional (Pre-Tax) Contribution" rowID="trad" %}
@@ -46,7 +46,7 @@ Results panel (4) for paycheck esitomator.
 {% include {{tableRow}} title="Total Amount Deducted From Your Pay" rowID="totalDeduct" %}
 {% include {{tableRow}} trClass="emphasis" title="Net Paycheck" rowID="netPay" %}
     <tr>
-      <td colspan="3" class="compare-two"><div class="flex space-between"><span>Contributions summary</span> <a href="javascript:showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></td>
+      <th colspan="3" class="compare-two" scope="colgroup"><div class="flex space-between"><span>Contributions summary</span> <a href="javascript:showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></th>
     </tr>
 {% include {{tableRow}} trID="partContrib" title="Total Amount of Your Contribution(s)" rowID="totalContributions" %}
 {% include {{tableRow}} trID="autoContrib" title="Agency Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}

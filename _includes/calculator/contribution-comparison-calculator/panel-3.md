@@ -25,15 +25,15 @@ Results panel (3) for Contribution Comparison Calculator.
   <thead>
     <tr>
       <th class="hide w"></th>
-      <th class="bg-blue default">Traditional</th>
-      <th class="bg-blue rightRow">Roth</th>
+      <th class="bg-blue default" scope="col">Traditional</th>
+      <th class="bg-blue" scope="col">Roth</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="3" class="compare-two">
+      <th colspan="3" class="compare-two" scope="colgroup">
         <div class="flex space-between"><span>Effect on your paycheck</span> <a href="javascript:showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
-      </td>
+      </th>
     </tr>
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grossPaycheck" %}
 {% include {{tableRow}} title="Gross pay per year" rowID="grossYear" %}

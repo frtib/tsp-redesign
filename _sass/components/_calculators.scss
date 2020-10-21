@@ -9,7 +9,16 @@ li.show-equal {
     margin-left: 3rem;
   }
 }
-
+// VIEW RADIO BUTTONS (Table, Chart, Combined)
+div.view {
+  ul {
+    &.flex {
+      li {
+        flex-grow: 1;
+      }
+    }
+  }
+}
 // CALCULATOR PANEL
 section {
   &.calculator-panel {
