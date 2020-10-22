@@ -220,19 +220,13 @@ Benefits specialist and educator training
 
 The Federal Retirement Thrift Investment Board offers a variety of TSP training opportunities for agency benefits officers, payroll personnel, and financial counselors supporting the uniformed services.
 
-We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialist, human resources personnel, and payroll personnel. As an agency or service representative, you may request training for your agency or service from our [Course Catalog]({{ site.baseurl }}/bulletins/tsp-course-catalog.pdf) by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx)  and submitting the form to **training@frtib.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
-
-<!-- Click on any course to learn more and get registered:
-
-- [TSP 101: The TSP for Agency and Service Representatives]({{ site.baseurl }}/exit/?idx=70){:rel="nofollow"} (2-day class)
-- [2-Day Advanced TSP Training for Military Financial Educators]({{ site.baseurl }}/exit/?idx=71){:rel="nofollow"} (2-day class)
-- [TSP Payroll Operations and Error Correction]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"} (1-day class) -->
+We offer training topics for TSP participants and beneficiaries as well as agency and service financial specialist, human resources personnel, and payroll personnel. As an agency or service representative, you may request training for your agency or service from our [Course Catalog]({{ site.baseurl }}/agency-service-reps/course-catalog/) by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx)  and submitting the form to **training@frtib.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
 ## Training requests
 
 Agency or service representatives attempting to schedule a training event should follow these general instructions:
 
-1. Review the [Course Catalog]({{ site.baseurl }}/bulletins/tsp-course-catalog.pdf) to find the TSP course that meets your training needs.
+1. Review the [Course Catalog]({{ site.baseurl }}/agency-service-reps/course-catalog/) to find the TSP course that meets your training needs.
 2. Complete the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx) by providing as many details as possible to help the TSP Training and Liaison Specialist customize the presentation for your training event.
 3. Email the Training Request Form to our Training Support Specialist at training@frtib.gov. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
@@ -253,7 +247,4 @@ We deliver training in three ways:
 -   On-site: At the FRTIB offices located in Washington, DC
 -   Remotely: At or near the location of the agency that requests the training.
 -   Virtually: This includes live training through webinars and prerecorded videos and podcasts.
-    </div>
-    </li>
-    </ul>
-    <!-- CONTENT END -->
+<!-- CONTENT END -->

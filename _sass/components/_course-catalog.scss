@@ -1,0 +1,82 @@
+section {
+  &.course-catalog {
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+      'course course course course course format'
+      'description x x x x x'
+      'time time time time time time'
+      'level level level level level level';
+      grid-gap: 10px;
+      border-top: 1px solid $color-gray-light;
+      padding: 1.6rem 0;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      div {
+        &.course {
+          grid-area: course;
+          font-weight: $bold;
+        }
+        &.description {
+          grid-area: description;
+          line-height: 1.5;
+        }
+        &.format {
+          grid-area: format;
+          text-align: right;
+          color: $color-green;
+        }
+        &.duration {
+          grid-area: time;
+          color: $color-gray;
+          line-height: 2;
+        }
+        &.level {
+          grid-area: level;
+          span {
+            // Basic style
+            border-radius: 4px;
+            padding: 0.4rem 0.8rem;
+            white-space: nowrap;
+            background-color: #d8572a;
+            color: #fff;
+            font-weight: $bold;
+            text-transform: uppercase;
+
+            &.advanced {
+              background-color: #420039;
+              background-color: #694873;
+            }
+          }
+        }
+        &.course,
+        &.format {
+          font-size: 2rem;
+        }
+      }
+      // END .grid-container > div
+    }
+    // END .grid-container
+    @media only screen and (max-width: $medium-screen) {
+      .grid-container {
+        grid-template-areas:
+        'course'
+        'format'
+        'description'
+        'time'
+        'level';
+
+        div {
+          &.format {
+            text-align: left;
+          }
+        }
+      }
+    } // END @media
+  }
+  // END &.course-catalog
+}
+// END section
