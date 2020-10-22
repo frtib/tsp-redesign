@@ -160,7 +160,8 @@ urlList[240] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8d55a27286
 urlList[241] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed7215f8617f81e83b6bceffe9bfaca3a';
 urlList[242] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eca7d033c9de17162e1fa95ae75649e9b';
 urlList[243] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/28721dd';
-urlList[244] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22';
+urlList[244] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22'; // July 2020 newsletter
+urlList[245] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2a73529'; // October 2020 newsletter
 
 function getIdx() {
   var idx = getQueryString('idx');
