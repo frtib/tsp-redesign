@@ -22,7 +22,7 @@ hero:
 
 document-ready:
   - addFormModals();
-published: false
+# published: false
 ---
 <section class="home-getting-started">
 <div class="usa-grid">
