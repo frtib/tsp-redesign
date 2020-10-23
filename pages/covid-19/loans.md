@@ -52,7 +52,5 @@ You may suspend your obligation to make payments on your TSP loan or loans for t
 
 If you are planning to apply for a loan now or in the near future, apply for the loan first and wait for it to be processed before submitting Form TSP-46. Do this whether or not you have an existing loan.<sup>1</sup> **Filing Form TSP-46 at the same time as you apply for loan or at any time before your loan application is processed may cause your loan application to be rejected**. If you have two loans when you file Form TSP-46, the payment suspension will apply to both of them.
 
-
-<ol id="footnotes">
-<li>Note that you may only have one residential loan and one general purpose loan from the same account at the same time.</li>
-</ol>
+1. Note that you may only have one residential loan and one general purpose loan from the same account at the same time.
+{:.footnotes}

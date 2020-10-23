@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/g-fund/
 layout: fund-details
-title: G fund
+title: G Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_G.html
@@ -68,5 +68,5 @@ document-ready:
   - getFundIndexAverageAnnualReturns('G');
   - getGrowthLifetime('G');
   - doCompositionPies();
-  - $('.sortableColumn').click(function(e) { toggleSort(this); });
+  - $('.sortableColumn').click(function(e) { toggleSort(this, 0, 1); });
 ---

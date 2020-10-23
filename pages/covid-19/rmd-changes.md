@@ -19,21 +19,14 @@ The information we’re providing here is current but subject to change as we re
 
 The changes to the required minimum distribution (RMD) rules described here apply to all TSP participants who are subject to RMDs. You do not have to certify that meet the criteria described in the CARES Act or elsewhere on our website.
 
-- [UPDATE: Rollover period extended](#update-all-rmds-received-in-2020-may-now-be-rolled-over-or-repaid-until-august-31-2020)
 - [Temporary changes to required minimum distributions](#temporary-changes-to-required-minimum-distributions)
 - [Questions and answers about RMD changes](#questions-and-answers-about-rmd-changes)
 
-## UPDATE: All RMDs received in 2020 may now be rolled over or repaid until August 31, 2020.
-If you received a required minimum distribution (or an installment payment that included an RMD) in 2020, then you can roll those amounts over—to an IRA or eligible employer plan or back into your TSP account—provided that you do so by August 31st. Use [Form TSP 60]({{ site.baseurl }}/forms/tsp-60.pdf), _Request for a Transfer Into the TSP_. **Note: We may have previously rejected your request for transfer for RMD amounts received in January 2020. Guidance provided by the IRS now allows us to accept such transfers. So if your application was rejected, you may now submit a new Form TSP-60. **
-
-UPDATE: If you received an RMD (or an installment payment that included an RMD) in 2020, then you can roll those amounts over—to an IRA or eligible employer plan or back into your TSP account—provided that you do so by August 31st. **Note: the IRS now allows any RMD received in 2020 to be rolled over. If you received an RMD between January 1, 2020 and February 1, 2020, you can now roll it over, even if your request to do so was previously denied**. Use [Form TSP 60]({{ site.baseurl }}/forms/tsp-60.pdf), _Request for a Transfer Into the TSP_. You are eligible for this extended rollover period whether or not you have been affected by COVID-19.
-
 ## Temporary changes to required minimum distributions
-The COVID-19 pandemic caused a steep and sudden decline in the stock markets and put a severe strain on many household budgets. As authorized by the CARES Act, we’re making the following temporary changes related to required minimum distributions (RMDs) to give your account balance time to recover:
+The COVID-19 pandemic caused a steep and sudden decline in the stock markets and put a severe strain on many household budgets. As authorized by the CARES Act, we made the following temporary changes related to required minimum distributions (RMDs) to give your account balance time to recover:
 
 - You do not need to make any withdrawals from your TSP account in 2020 to satisfy an RMD, regardless of your age or employment status.
 - We will not send any automatic RMD payments for 2020. We will continue to send installment payments you elected to receive even if you started them solely to receive your RMD amount. To stop them, log in to My Account and select **Withdrawals and Changes to Installment Payments**.
-- If you received an RMD or a portion of an RMD before they were suspended for the year, then you can roll those amounts over—to an IRA or eligible employer plan or back into your TSP account—provided that you do so by August 31st. (Use [Form TSP 60]({{ site.baseurl }}/forms/tsp-60.pdf), _Request for a Transfer Into the TSP_.)
 - If you make a withdrawal, we will withhold for federal taxes at the rate appropriate for the type of withdrawal you make, without regard to RMD rules that would otherwise apply. You can transfer or roll over to an IRA or eligible employer plan any otherwise eligible withdrawals you make. (See the TSP tax notice [_Important Tax Information About Payments From Your TSP Account_]({{ site.baseurl }}/publications/tsp-536.pdf) for more information about eligible rollover distributions.)
 
 ## Questions and answers about RMD changes
@@ -55,7 +48,7 @@ Answer: Yes, you can use the TSP-60 form to roll over that distribution back int
 
 **Q: What if I’ve already received a required minimum distribution in 2020 and it was more than 60 days ago? Can the TSP extend the 60-day deadline for rollovers?**
 
-Answer: If you received an RMD (or an installment payment that included an RMD) between January 1 and May 15, then you can roll those amounts over—to an IRA or eligible employer plan or back into your TSP account—provided that you do so by August 31. Use [Form TSP 60]({{ site.baseurl }}/forms/tsp-60.pdf), _Request for a Transfer Into the TSP_.
+Answer: If you received an RMD (or an installment payment that included an RMD) between January 1 and May 15, then you were allowed to roll those amounts over up until August 31, 2020. If you missed that deadline and were affected by COVID-19, see [Withdrawals for participants affected by COVID-19]({{ site.baseurl }}/covid-19/withdrawals/#withdrawals-for-participants-affected-by-covid-19/), for rollover options.
 
 **Q: What does the TSP intend to do with the automatic RMD payments that were scheduled to occur either before the end of December 2020 (for separated participants who reached the age of 70½ before the end of 2019) or before the end of March 2021 (for participants whose first RMD year is 2020)?**
 

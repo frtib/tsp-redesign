@@ -17,7 +17,7 @@ FRTIB has an obligation to protect the information TSP participants, beneficiari
 - To conduct an annual table-top exercise, which consists of a structured, readiness-testing activity that simulates an actual incident involving PII designed to prepare key stakeholders and decision-makers for an emergency situation involving a data breach.
 
 1. ITSMD maintains a separate Cyber Incident Response Policy and Procedures which details the Agency’s procedures for detecting, containing, responding to, and preventing incidents, in accordance with NIST SP 800-61, Rev. 2, Computer Security Incident Handling Guide. The Cyber Incident Response and Breach Response processes work together in the event of a cyber incident involving PII.
-{:#footnotes}
+{:.footnotes}
 
 
 <!-- CONTENT END -->

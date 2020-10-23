@@ -91,6 +91,8 @@ collections:
     output: true
   faq:
     output: true
+  pia:
+    output: true
 
 defaults:
   -
@@ -117,3 +119,9 @@ defaults:
     values:
       layout: page-faq
       sidenav: news-and-resources
+  -
+    scope:
+      path: "_pia"
+    values:
+      layout: page-pia
+      sidenav: privacy

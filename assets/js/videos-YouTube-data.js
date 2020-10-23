@@ -154,13 +154,6 @@ $("#HGz9YdnI3f0-pub-date").html("October 25, 2017");
 $("#HGz9YdnI3f0-description").html("Roth contributions explained.");
 $("#HGz9YdnI3f0-duration").html("2:22");
 
-$("#DqWi6lUtqBQ-link-title").html("Investing in Bonds");
-$("#DqWi6lUtqBQ-title").html("Investing in Bonds");
-$("#DqWi6lUtqBQ-download-title").html("Investing in Bonds");
-$("#DqWi6lUtqBQ-pub-date").html("February 18, 2014");
-$("#DqWi6lUtqBQ-description").html("Learn what bonds are and how you can invest in them through the TSP.");
-$("#DqWi6lUtqBQ-duration").html("2:30");
-
 $("#tfxC3moUEQ0-link-title").html("Combine and Save: Transfer Into the TSP");
 $("#tfxC3moUEQ0-title").html("Combine and Save: Transfer Into the TSP");
 $("#tfxC3moUEQ0-download-title").html("Combine and Save: Transfer Into the TSP");
@@ -182,12 +175,12 @@ $("#5z-KXHZAF-U-pub-date").html("July 8, 2014");
 $("#5z-KXHZAF-U-description").html("Find out the downsides of taking a loan from your TSP account.");
 $("#5z-KXHZAF-U-duration").html("3:01");
 
-$("#h7n-sWNrz1I-link-title").html("The TSP for BRS Members: What's It All About?");
-$("#h7n-sWNrz1I-title").html("The TSP for BRS Members: What's It All About?");
-$("#h7n-sWNrz1I-download-title").html("The TSP for BRS Members: What's It All About?");
-$("#h7n-sWNrz1I-pub-date").html("January 1, 2018");
-$("#h7n-sWNrz1I-description").html("Are you a uniformed services member and covered by the Blended Retirement System (BRS)? If you joined the uniformed services on or after January 1, 2018 or you began service before 2018 and opted into BRS, this video will help you understand how the Thrift Savings Plan works for you.");
-$("#h7n-sWNrz1I-duration").html("3:27");
+$("#tO1SLD8253E-link-title").html("The TSP for BRS Members: What's It All About?");
+$("#tO1SLD8253E-title").html("The TSP for BRS Members: What's It All About?");
+$("#tO1SLD8253E-download-title").html("The TSP for BRS Members: What's It All About?");
+$("#tO1SLD8253E-pub-date").html("October 1, 2020");
+$("#tO1SLD8253E-description").html("Are you a uniformed services member and covered by the Blended Retirement System (BRS)? If you joined the uniformed services on or after January 1, 2018 or you began service before 2018 and opted into BRS, this video will help you understand how the Thrift Savings Plan works for you.");
+$("#tO1SLD8253E-duration").html("3:17");
 
 $("#uPYDiMQo6Kg-link-title").html("The TSP for non-BRS Uniformed Services Members");
 $("#uPYDiMQo6Kg-title").html("The TSP for non-BRS Uniformed Services Members");
@@ -196,19 +189,12 @@ $("#uPYDiMQo6Kg-pub-date").html("January 1, 2018");
 $("#uPYDiMQo6Kg-description").html("Learn more about TSP benefits for uniformed services members who are not part of the Blended Retirement System (BRS).");
 $("#uPYDiMQo6Kg-duration").html("2:48");
 
-$("#jTA47cJhjFc-link-title").html("Welcome to the TSP! Here’s What You Need to Know");
-$("#jTA47cJhjFc-title").html("Welcome to the TSP! Here’s What You Need to Know");
-$("#jTA47cJhjFc-download-title").html("Welcome to the TSP! Here’s What You Need to Know");
-$("#jTA47cJhjFc-pub-date").html("December 14, 2017");
-$("#jTA47cJhjFc-description").html("If you are a new civilian federal employee, here’s what you should know about the Thrift Savings Plan.");
-$("#jTA47cJhjFc-duration").html("2:41");
-
-$("#Tw-Djekceeo-link-title").html("Don't Move! Reasons to Stay in the TSP.");
-$("#Tw-Djekceeo-title").html("Don't Move! Reasons to Stay in the TSP.");
-$("#Tw-Djekceeo-download-title").html("Don't Move! Reasons to Stay in the TSP.");
-$("#Tw-Djekceeo-pub-date").html("October 26, 2017");
-$("#Tw-Djekceeo-description").html("");
-$("#Tw-Djekceeo-duration").html("2:09");
+$("#7GuCvnCv1eg-link-title").html("Welcome to the TSP! Here’s What You Need to Know");
+$("#7GuCvnCv1eg-title").html("Welcome to the TSP! Here’s What You Need to Know");
+$("#7GuCvnCv1eg-download-title").html("Welcome to the TSP! Here’s What You Need to Know");
+$("#7GuCvnCv1eg-pub-date").html("October 1, 2020");
+$("#7GuCvnCv1eg-description").html("If you are a new civilian federal employee, here’s what you should know about the Thrift Savings Plan.");
+$("#7GuCvnCv1eg-duration").html("2:32");
 
 $("#HRl8TgYMlB4-link-title").html("Three Ways to Add $100,000 to Your TSP Account");
 $("#HRl8TgYMlB4-title").html("Three Ways to Add $100,000 to Your TSP Account");

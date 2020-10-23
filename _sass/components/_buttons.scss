@@ -1,44 +1,55 @@
-button,
-a {
-  &.usa-button,
-  &.usa-button-big,
-  &.usa-button-secondary {
-    border-radius: 0;
+.usa-btn-primary,
+.usa-button,
+.usa-button-big,
+.usa-button-secondary,
+[type="button"].usa-button-big,
+[type="button"],
+[type="submit"],
+button {
+  border-radius: 0;
 
-    &.print {
-      &:after {
-        font-family: $font-awesome;
-        content: "\f02f";
-        font-weight: $light;
-        padding-left: .5rem;
-      }
+  &.print {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f02f";
+      font-weight: $light;
+      padding-left: 0.5rem;
     }
+  }
 
-    &.calculate {
-      &:after {
-        font-family: $font-awesome;
-        content: "\f1ec";
-        font-weight: $light;
-        padding-left: .5rem;
-      }
+  &.calculate {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f1ec";
+      font-weight: $light;
+      padding-left: 0.5rem;
     }
+  }
 
-    &.clear {
-      &:after {
-        font-family: $font-awesome;
-        content: "\f55a";
-        font-weight: $light;
-        padding-left: .5rem;
-      }
+  &.clear {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f55a";
+      font-weight: $light;
+      padding-left: 0.5rem;
     }
+  }
 
-    &.save {
-      &:after {
-        font-family: $font-awesome;
-        content: "\f0c7";
-        font-weight: $light;
-        padding-left: .5rem;
-      }
+  &.save {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f0c7";
+      font-weight: $light;
+      padding-left: 0.5rem;
+    }
+  }
+
+  &.write-in {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f305";
+      font-weight: $light;
+      padding-left: 0.5rem;
     }
   }
 }

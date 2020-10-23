@@ -277,11 +277,11 @@ function buildSingle(values, uv) {
     row += sideScrollWrapper('', 'td', '', '', level_10year, false);
     sl10yr.push(parseFloat(values['level_10year'].toFixed(0)));
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_noadded.toFixed(0)), false);
-    siBasic.push(parseFloat(values['increasing_noadded'].toFixed(0)));
+    siBasic.push(parseFloat(increasing_noadded.toFixed(0)));
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_cash.toFixed(0)), false);
-    siCash.push(parseFloat(values['increasing_cash'].toFixed(0)));
+    siCash.push(parseFloat(increasing_cash.toFixed(0)));
     row += sideScrollWrapper('', 'td', '', '', CurrencyFormatted(increasing_10year.toFixed(0)), false);
-    si10yr.push(parseFloat(values['increasing_10year'].toFixed(0)));
+    si10yr.push(parseFloat(increasing_10year.toFixed(0)));
     bodyHTML += sideScrollWrapper('    ', 'tr', '', '', row, true);
     increasing_noadded *= increasingFactor;
     increasing_cash *= increasingFactor;

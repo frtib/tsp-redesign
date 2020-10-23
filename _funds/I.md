@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/i-fund/
 layout: fund-details
-title: I fund
+title: I Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_I.html
@@ -82,20 +82,20 @@ top_ten_holdings:
   - name: BP PLC
     abbr: BPAQF
 additional_info: |
-  By law, the I Fund must be invested in a portfolio designed to track the performance of an index of common stocks representing international stock markets outside of the United States. The Federal Retirement Thrift Investment Board has chosen as its benchmark the MSCI EAFE (Europe, Australasia, Far East) Index, which tracks the overall performance of the major companies and industries in the European, Australian, and Asian stock markets.
+  By law, the <span class="nobr">I Fund</span> must be invested in a portfolio designed to track the performance of an index of common stocks representing international stock markets outside of the United States. The Federal Retirement Thrift Investment Board has chosen as its benchmark the MSCI EAFE (Europe, Australasia, Far East) Index, which tracks the overall performance of the major companies and industries in the European, Australian, and Asian stock markets.
 
   The EAFE Index, published by MSCI, is an index of the equity markets of the developed world outside of the United States and Canada. It is the most widely used international stock index. As of December 31, 2017, the index covered the equity markets of 21 countries, as shown in the table.
 
-  The I Fund is invested in a separate account that is managed by BlackRock Institutional Trust Company, N.A. The I Fund holds common stocks of all the companies represented in the EAFE Index in virtually the same weights that they have in the index. The performance of the I Fund is evaluated on the basis of how closely its returns match those of the EAFE Index.
+  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">I Fund</span> to BlackRock Institutional Trust Company, N.A. The <span class="nobr">I Fund</span> holds common stocks of all the companies represented in the EAFE Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">I Fund</span> is evaluated on the basis of how closely its returns match those of the EAFE Index.
 risks: |
-  Your investment in the I Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the MSCI EAFE Index returns will move up and down in response to overall economic conditions.
+  Your investment in the <span class="nobr">I Fund</span> is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the MSCI EAFE Index returns will move up and down in response to overall economic conditions.
 
-  Because of its exposure to <span data-term="Currency Risk" class="js-glossary-toggle term term-end">currency risk</span>, the EAFE Index (and the I Fund returns) will rise or fall as the value of the U.S. dollar decreases or increases relative to the value of the currencies of the countries represented in the EAFE index.
+  Because of its exposure to <span data-term="Currency Risk" class="js-glossary-toggle term term-end">currency risk</span>, the EAFE Index (and the <span class="nobr">I Fund</span> returns) will rise or fall as the value of the U.S. dollar decreases or increases relative to the value of the currencies of the countries represented in the EAFE index.
 
-  By investing in the I Fund, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your I Fund investment may not grow enough to offset the reduction in purchasing power that results from inflation.
+  By investing in the <span class="nobr">I Fund</span>, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your <span class="nobr">I Fund</span> investment may not grow enough to offset the reduction in purchasing power that results from inflation.
 risk_level: high
 rewards: |
-  While investment in the I Fund carries risk, it also offers the opportunity to experience gains from equity ownership of non-U.S. companies. Because it represents the stocks of companies in many developed countries (excluding the U.S.), it is an excellent way to diversify the stock portion of your TSP allocation.
+  While investment in the <span class="nobr">I Fund</span> carries risk, it also offers the opportunity to experience gains from equity ownership of non-U.S. companies. Because it represents the stocks of companies in many developed countries (excluding the U.S.), it is an excellent way to diversify the stock portion of your TSP allocation.
 scripts:
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
@@ -103,5 +103,5 @@ document-ready:
   - getFundIndexAverageAnnualReturns('I');
   - getGrowthLifetime('I');
   - doCompositionPies();
-  - $('.sortableColumn').click(function(e) { toggleSort(this); });
+  - $('.sortableColumn').click(function(e) { toggleSort(this, 0, 1); });
 ---

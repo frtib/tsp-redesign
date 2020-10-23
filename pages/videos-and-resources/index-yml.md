@@ -26,7 +26,9 @@ published: false
 1. Click Build YML
 2. Click Copy YML
 3. Paste into: assets/js/videos-YouTube-data.js
-4. Rebuild project
+4. Manually update new video IDs in: _data/videos.yml
+5. If necessary, download new .mp4 to: assets/videos/
+6. Rebuild project
 
 <div class="usa-grid">
 <div class="usa-width-one-whole">

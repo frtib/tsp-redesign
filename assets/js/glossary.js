@@ -1,4 +1,5 @@
 /* vendor/glossary.min.js must be included on page before this script */
+/* <span data-term="Vested Account Balance" class="js-glossary-toggle term term-end">vested account balance</span> */
 
 var glossaryTerms = [
   {
@@ -455,6 +456,11 @@ var glossaryTerms = [
       'Equity securities issued as ownership in a publicly held corporation.'
   },
   {
+    term: 'system of records',
+    definition:
+      'A system of records contains information that is retrieved by an individual&#8217;s name or other unique identifier. The Privacy Act requires federal agencies to publish a notice in the Federal Register for each system of records that an agency maintains.'
+  },
+  {
     term: 'Tax Withholding',
     definition:
       'The requirement that we withhold a portion of payments from your TSP account for federal taxes. The default amount to be withheld depends on the type of payment. Increasing, decreasing, and/or waiving tax withholding are options for some payment types.'
@@ -503,6 +509,11 @@ var glossaryTerms = [
     term: 'TSP Monthly Payments',
     definition:
       'Payments that the participant elects to receive each month from his or her TSP account after separating from service. Note: In this case, money remains in the TSP account and is paid out directly from the account.'
+  },
+  {
+    term: 'Two-step authentication',
+    definition:
+      'Security process in which participants provide two different authentication factors to verify themselves. Two-factor authentication methods rely on a user providing a password, as well as a second factor, such as a single-use verfication code. The code is delivered by text message to a smart phone previosuly registered by the participant.'
   },
   {
     term: 'Uniformed Services',

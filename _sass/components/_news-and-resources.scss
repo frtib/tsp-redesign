@@ -231,9 +231,16 @@ ul.usa-accordion {
               }
             }
           }
-        }
-      }
-    }
+          span {
+            &.historical-annuity-rates {
+              display: block;
+              margin-top: 0.5rem;
+              font-size: 1.4rem;
+            }
+          }
+        } // end .usa-width-one-third
+      } // end .usa-grid
+    } // end &.key-rates
     // LATEST NEWS & POPULAR VIDEOS
     &.latest-news,
     &.plan-news,

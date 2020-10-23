@@ -514,7 +514,7 @@ The TSP provides agency and service representatives with historical information 
       </tbody>
     </table>
 
-    <ol id="footnotes">
+    <ol class="footnotes">
       <li>As a result of the Thrift Savings Plan Enhancement Act of 2009 that was signed into law on June 22, 2009, FERS employees who are newly hired or rehired on or after June 22, 2009, and FERS employees who are currently employed and waiting until the second election period to become eligible for agency contributions (i.e., employees hired on or after December 1, 2008) are immediately eligible to receive Agency contributions.</li>
       <li>The Federal Retirement Thrift Investment Board (FRTIB) Executive Director has given employing agencies until the first full pay period in August 2009 to implement this regulation pursuant to his authority to prescribe such regulations as may be necessary for the administration of the Thrift Savings Plan, (5 U.S.C. 8474(b)(5)), to include section 8432 (id.) and as may be necessary to carry out his responsibilities as Executive Director (5 U.S.C. 8474(b)(5)).</li>
       <li>As a result of the Thrift Savings Plan Enhancement Act of 2009, newly hired and rehired FERS and CSRS employees are immediately enrolled to automatically contribute 3% of basic pay. The employee has the option to opt out of employee contributions, stop contributing, or change the amount of his or her contributions.</li>

@@ -51,13 +51,13 @@
                 </tbody>
               </table>
 {% if page.Fund_name == 'G Fund' %}
-              <ol id="footnotes">
+              <ol class="footnotes">
                 <li>By law, the G Fund must be invested in nonmarketable U.S. Treasury securities specially issued to the TSP.
                   </li>
                 </ol>
 {% else %}
               {% if page.composition.size > 1 %}
-              <ol id="footnotes">
+              <ol class="footnotes">
                 <li>Due to rounding, numbers may not add up to exactly 100%.</li>
               </ol>
               {% endif %}
@@ -104,12 +104,12 @@
                   <sup>1</sup>
                 </th>
                 <th><b>{{totalPH}}%</b></th>
-                <th><!-- <div id="composition-pie-0-0" class="hc-composition-pie"><div> --></th>
+                <th><!-- <div id="composition-pie-0-0" class="hc-composition-pie"></div> --></th>
                 <th><b>{{totalNC}}</b></th>
               </tr>
             </tbody>
           </table>
-          <ol id="footnotes">
+          <ol class="footnotes">
             <li>Due to rounding, numbers may not add up to exactly 100%.</li>
           </ol>
         </div>
@@ -132,36 +132,5 @@ function doCompositionPies() {
   compositionPie('composition-pie-0-{{forloop.index}}', {{ item[1] }});
   {% endfor %}
   // compositionPie('composition-pie-0-0', {{ totalPH }});
-}
-
-function toggleSort(me) {
-  var myId = me.id;
-  var tableId = 'sector-composition';
-  var isSortedAsc = $('#'+myId).hasClass('sort-column-asc');
-  $('.sortableColumn').removeClass('sort-column-asc');
-  $('.sortableColumn').removeClass('sort-column-desc');
-  if (isSortedAsc) {
-    columnSort(false, myId, me.closest('table').id, 0, 1);
-    $('#'+myId).addClass('sort-column-desc');
-  } else {
-    columnSort(true, myId, me.closest('table').id, 0, 1);
-    $('#'+myId).addClass('sort-column-asc');
-  }
-  return false;
-}
-
-function toggleSort1(me) {  // first version, 2 states
-  var myId = me.id;
-  var tableId = 'sector-composition';
-  if ($('#'+myId).hasClass('sort-column-asc')) {
-    columnSort(true, myId, me.closest('table').id, 0, 1);
-    $('#'+myId).removeClass('sort-column-asc');
-    $('#'+myId).addClass('sort-column-desc');
-  } else {
-    columnSort(false, myId, me.closest('table').id, 0, 1);
-    $('#'+myId).removeClass('sort-column-desc');
-    $('#'+myId).addClass('sort-column-asc');
-  }
-  return false;
 }
 </script>

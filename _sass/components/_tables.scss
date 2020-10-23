@@ -1,13 +1,51 @@
 table {
   &.sticky-header {
+    table-layout: fixed;
+    border: none;
+    border-collapse: separate;
+    border: 1px solid $color-gray-light;
+    margin: auto;
+    width: auto;
+
     tr {
       th {
         position: sticky;
         top: 0;
+        z-index: 2;
+        text-align: center;
+
+        &[scope="row"] {
+          left: 0;
+          z-index: 1;
+        }
+
+        &:not([scope=row]) {
+          &:first-child {
+            left: 0;
+            z-index: 3;
+          }
+        }
+      }
+    }
+    // end tr
+  } // end &.sticky-header
+
+  &.dynamic-share-price-table { // This should be removed when table css is centralized
+    tbody {
+      th {
+        white-space: nowrap;
       }
     }
   }
+} // end table
+
+@media screen and (max-width: $large-screen) {
+  div.table {
+    overflow: auto; // for side scroll in mobile
+  }
 }
+// end @media
+
 .two-columns {
   tr {
     th:first-child {
@@ -53,25 +91,21 @@ section.charts {
     }
   }
 }
-// EXPAND/COLLAPSE TABLE button
-@media only screen and (max-width: #{$large-screen}) {
-  .table-view {
-    margin-top: 3rem;
 
-    button {
-      display: none;
-    }
+// SCROLL LEFT & RIGHT table buttons
+div.table-scroll-buttons {
+  margin-top: 3rem;
+  text-align: center;
+
+  @media only screen and (max-width: #{$large-screen}) {
+      button {
+        display: none;
+      }
   }
 }
 
+
 section {
-  .table-view {
-    // LEFT-ALIGNS Scroll left / Scroll right buttons
-    padding: 0;
-    margin: 0;
-    // text-align: left;
-    max-width: 100%;
-  }
 
   &.rates-of-return-table,
   &.share-price-table {
@@ -83,14 +117,18 @@ section {
 }
 // end section
 // "STICKY" LEFT-COLUMN HEADER: Share price history & Rates of return
-
 .table-side-scroll {
+  overflow: auto;
+}
+// end .table-side-scroll
+
+.table-side-scroll,
+.table {
   // parent container
   position: relative;
   width: 100%;
   z-index: 1;
   margin: 0 auto;
-  overflow: auto;
   scroll-behavior: smooth;
 
   .empty-table-cell {
@@ -107,15 +145,12 @@ section {
 
     td,
     th {
-      // padding: 5px 10px;
       border-top: none;
       border-right: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       border-left: none;
-      vertical-align: top;
-      padding: 1rem 3rem;
-      // width: 16rem;
-      // max-width: 2rem;
+      vertical-align: middle;
+      padding: 1rem 1.5rem;
     }
 
     td {
@@ -125,7 +160,6 @@ section {
 
     th {
       background: $color-gray-lightest;
-      white-space: nowrap;
 
       &:first-child {
         position: -webkit-sticky;
@@ -137,11 +171,7 @@ section {
     }
 
     thead {
-      // tr {
-      // position: -webkit-sticky;
-      // position: sticky;
-      // top: 0;
-      // }
+
       th {
         border-top: 3px solid #ddd;
         position: -webkit-sticky;
@@ -212,6 +242,9 @@ section {
       }
       // end .monthly-returns
       &.annual-returns {
+        th {
+          white-space: nowrap;
+        }
         label {
           display: block;
           margin-top: 0;
@@ -239,7 +272,7 @@ section {
   }
   // end table
 }
-// end div.table-side-scroll
+// end .table-side-scroll, .table
 
 // RESPONSIVE COMPARISON: Administrative costs
 // Dependencies: /assets/js/jquery.min.js, responsive-comparison-table.js
@@ -306,6 +339,12 @@ section.comparison.paycheck {
         // end li
       }
       // END &.table-header-buttons, &.funds-lifecycle, &.funds-individual
+      &.table-header-buttons {
+        li {
+          flex: 1;
+        }
+      }
+      // END &.table-header-buttons
     }
     // END ul
     table {
@@ -314,13 +353,13 @@ section.comparison.paycheck {
       width: 100%;
       margin-top: 0;
 
-      td,
-      th {
+      th,
+      td {
         height: 53px;
         border: 1px solid #DDD;
-        padding: 10px;
+        padding: 1rem;
         empty-cells: show;
-        text-align: left;
+        // text-align: left;
       }
 
       th {
@@ -332,12 +371,16 @@ section.comparison.paycheck {
       td,
       th+th {
         // th+th omits the first <th> following a <tr>
+        // targets the column headers in thead
         text-align: center;
         display: none;
       }
 
-      td.default {
-        display: table-cell;
+      td {
+        text-align: right;
+        &.default {
+          display: table-cell;
+        }
       }
 
       thead {
@@ -420,6 +463,9 @@ section.comparison.paycheck {
 
         tr.emphasis {
           td+td {
+            font-size: 3rem;
+          }
+          td {
             font-size: 3rem;
           }
         }

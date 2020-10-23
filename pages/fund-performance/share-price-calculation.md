@@ -21,7 +21,7 @@ aria-controls="a1">
 Dividends and Capital Gains
 </button>
 <div id="a1" class="usa-accordion-content" markdown="1">
-Your earnings (that is, the increase or decrease in the value of a fund) in the TSP and other similar defined contributions plans (e.g., 401(k) plans) are not considered taxable income (but rather, tax deferred) under the Internal Revenue Code. What’s more, interest, dividends, capital gains, and/or tax deferred contributions are not taxed even if you withdraw money from your plan. Therefore, there is no need for you to report dividends and capital gains separately for your tax-deferred accounts.
+Your earnings (that is, the increase or decrease in the value of a fund) in the TSP and other similar defined contributions plans (e.g., 401(k) plans) are not considered taxable income (but rather, tax deferred) under the Internal Revenue Code. Interest, dividends, capital gains, and/or tax deferred contributions are not taxed until you withdraw money from your plan. There is no need for you to report dividends and capital gains separately for your tax-deferred accounts.
 
 BlackRock Institutional Trust Company, N.A, manages the index funds in which the F, C, S, and I Funds are invested, and credits interest and dividend income each business day. This income is then reflected in your TSP’s share prices.
 

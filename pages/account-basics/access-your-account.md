@@ -11,7 +11,6 @@ redirect_from:
 
 # Access your account
 
-
 ## What you'll need to gain access to your TSP account
 
 When you become a TSP participant, you will receive:
@@ -24,6 +23,22 @@ When you log in to your TSP account for the first time, you will add and validat
 
 Two-step authentication helps you protect your account against fraud by prompting you for a one-time verification code each time you log in. This login process is more secure because it means that online access to your account requires something you know (your account number or user ID and password) and something you have (a one-time verification code you receive in your email or on your phone). Someone who tries to log in to your account fraudulently won’t be able to gain access without the code.
 
+<div class="usa-alert  usa-alert-info usa-alert-paragraph">
+<div class="usa-alert-body" markdown="1">
+### Supported browsers
+{:.usa-alert-heading}
+
+TSP web pages are best viewed with one of the following browsers:
+{:.usa-alert-text}
+
+- Chrome
+- Firefox
+- Safari
+- Internet Explorer 11 (compatibility view disabled)
+
+**Note**: For all browsers listed above, we recommend using the current version with auto update enabled.
+</div>
+</div>
 
 ## Keep your account information safe
 

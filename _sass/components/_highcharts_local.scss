@@ -10,8 +10,8 @@
 .highcharts-color-ii { fill: $color-index-i; stroke: $color-index-i; stroke-width: 1px; }
 .highcharts-color-lf { fill: $color-l-fund; stroke: $color-l-fund; stroke-width: 1px; }
 .highcharts-color-il { fill: $color-index-l; stroke: $color-index-l; stroke-width: 1px; }
-.highcharts-color-black { fill: black; stroke: black; stroke-width: 1px; }
-.highcharts-color-white { fill: white; stroke: white; stroke-width: 1px; }
+.highcharts-color-black { fill: $color-black; stroke: $color-black; stroke-width: 1px; }
+.highcharts-color-white { fill: $color-white; stroke: $color-white; stroke-width: 1px; }
 .highcharts-color-red { fill: red; stroke: red; stroke-width: 1px; }
 .highcharts-color-blue { fill: blue; stroke: blue; stroke-width: 1px; }
 .highcharts-color-gray { fill: gray; stroke: gray; stroke-width: 1px; }

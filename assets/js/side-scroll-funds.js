@@ -106,13 +106,13 @@ function indexFundSync(chartName, doTableColumn, noredraw) {
   if (chart == null) { return false; }
   var series = chart.series;
   highchartsSeriesToggle(series, 12, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 12, '&', series[6].visible);
+  if (val) fundHighchartClickAction(chartName, 12, '&', series[11].visible);
   highchartsSeriesToggle(series, 14, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 14, '&', series[8].visible);
+  if (val) fundHighchartClickAction(chartName, 14, '&', series[13].visible);
   highchartsSeriesToggle(series, 16, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 16, '&', series[10].visible);
+  if (val) fundHighchartClickAction(chartName, 16, '&', series[15].visible);
   highchartsSeriesToggle(series, 18, val, doTableColumn);
-  if (val) fundHighchartClickAction(chartName, 18, '&', series[12].visible);
+  if (val) fundHighchartClickAction(chartName, 18, '&', series[17].visible);
   if (!noredraw) { chart.redraw() };
   return false;
 }
@@ -189,8 +189,9 @@ function getSeriesID(name, chartName) {
 }
 
 function borderClass(fund) {
-  if (fund.trim().substring(0,1).toLowerCase() == 'l') { return 'border-l-fund'; }
-  if (fund.slice(-4).toLowerCase() == 'fund') { return 'border-'+fund.trim().substring(0,1).toLowerCase()+'-fund'; }
+  // Added nobr class to Individual and L fund table headers <th>
+  if (fund.trim().substring(0,1).toLowerCase() == 'l') { return 'border-l-fund nobr'; }
+  if (fund.slice(-4).toLowerCase() == 'fund') { return 'border-'+fund.trim().substring(0,1).toLowerCase()+'-fund nobr'; }
   // its an index fund
   if (fund.substring(0,4) == 'U.S.') { return 'border-index-f'; }
   if (fund.substring(0,4) == 'S&P ') { return 'border-index-c'; }
@@ -350,7 +351,6 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
           + content
           + prefix + '</'+tag+'>' + myNL;
 }
-
 
 
 function sideScrollControls(chartName) {

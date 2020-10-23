@@ -15,23 +15,26 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **August 4, 2020**.
+Updated **September 17, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [September 22 deadline for temporary loan increase](#loan-increase)
 - [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
 - [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
 - [Submitting certain forms online](#submitting-certain-forms-online)
 - [CARES Act temporary loan and withdrawal options](#cares-act-temporary-loan-and-withdrawal-options)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
-- [Rollover period extended to July 15](#rollover-period-extended-to-july-15)
-- [Temporary waiver of notary requirement](#temporary-waiver-of-notary-requirement)
 - [Temporary changes to required minimum distributions](#temporary-changes-to-required-minimum-distributions)
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## September 22 deadline for temporary loan increase
+{:#loan-increase}
+The CARES Act allowed us to temporarily [increase the maximum loan amount]({{ site.baseurl }}/covid-19/loans/) on general purpose loans for qualified individuals. If you plan to apply for a loan with the increased maximum, **we must receive your completed application on or before September 22, 2020.** The online application tool in My Account will come down at noon that day. We can accept signed loan agreements until midnight that night.
 
 ## Temporary acceptance of PIV and CAC signatures on TSP forms
 {:#pivcac}
@@ -65,12 +68,6 @@ The temporary loan and withdrawal options for TSP participants affected by COVID
 
 ## Payments you make to the TSP by check may take longer to process
 Because of public health precautions being taken at our processing facilities, payments made by check will most likely take longer to appear in your TSP account. These include payments to make up missed loan payments, submit additional loan payments, or to roll over payments from IRAs or other employer plans. We appreciate your patience.
-
-## Rollover period extended to July 15
-If you received any withdrawal between February 1 and May 15 that is eligible for rollover, then the IRS has extended your 60-day rollover deadline to July 15th Use Form TSP 60. **You are eligible for this extended rollover period whether or not you have been affected by COVID-19**. (See [RMD changes]({{ site.baseurl }}/covid-19/rmd-changes/) for information about the rollover deadline for required minimum distributions you received before 2020 RMDs were suspended.)
-
-## Temporary waiver of notary requirement
-We will temporarily accept and process certain TSP withdrawal and loan forms without requiring notarized signatures in order to support participants in physical distancing measures during the COVID-19 pandemic. All signatures must be handwritten (or made electronically with PIV or CAC credentials) and submitted as directed in the form instructions, but you may leave the notary section blank.
 
 ## Temporary changes to required minimum distributions
 The COVID-19 pandemic caused a steep and sudden decline in the stock markets and put a severe strain on many household budgets. As authorized by the recently enacted CARES Act, we’re making temporary changes related to required minimum distributions.

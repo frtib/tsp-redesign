@@ -142,7 +142,7 @@ news-and-resources:
   - text: News and resources
     href: /news-and-resources/
     subnav:
-      - text: Plan News
+      - text: Plan news
         href: /news-and-resources/plan-news/
       - text: Newsletters
         href: /news-and-resources/newsletters/
@@ -263,6 +263,8 @@ use-your-savings:
         href: /annuity-basics/annuity-benefits-and-limitations/
       - text: Purchase an annuity
         href: /annuity-basics/purchase-an-annuity/
+      - text: Historical annuity rates
+        href: /annuity-basics/historical-annuity-rates/
 
 fund-performance:
   - text: Rates of return

@@ -1,7 +1,7 @@
 ---
 permalink: /funds-individual/c-fund/
 layout: fund-details
-title: C fund
+title: C Fund
 sidenav: fund-options
 redirect_from:
   - /InvestmentFunds/FundOptions/fundPerformance_C.html
@@ -72,15 +72,15 @@ top_ten_holdings:
   - name: Visa, Inc. Class A
     abbr: V
 additional_info: |
-  By law, the C Fund must be invested in a portfolio designed to replicate the performance of an index of stocks representing the U.S. stock markets. The Federal Retirement Thrift Investment Board has chosen as its benchmark the Standard & Poor’s 500 Stock Index, which tracks the performance of major U.S. companies and industries.
+  By law, the <span class="nobr">C Fund</span> must be invested in a portfolio designed to replicate the performance of an index of stocks representing the U.S. stock markets. The Federal Retirement Thrift Investment Board has chosen as its benchmark the Standard & Poor’s 500 Stock Index, which tracks the performance of major U.S. companies and industries.
 
   The S&P 500 Index is an index of 500 large to medium-sized U.S. companies that are traded in the U.S. stock markets. The index was designed by Standard & Poor’s Corporation (S&P) to provide a representative measure of U.S. stock markets’ performance. The companies in the index represent 157 industries classified into the 11 major sector groups shown in the chart. The stocks in the S&P 500 Index represent approximately 82% of the market value of the U.S. stock markets.
 
-  The C Fund is invested in a separate account that is managed by BlackRock Institutional Trust Company, N.A. The C Fund holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the C Fund is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
+  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">C Fund</span> to BlackRock Institutional Trust Company, N.A. The <span class="nobr">C Fund</span> holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">C Fund</span> is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
 risks: |
-  Your investment in the C Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
+  Your investment in the <span class="nobr">C Fund</span> is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
-  By investing in the C Fund, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your C Fund investment may not grow enough to offset inflation.
+  By investing in the <span class="nobr">C Fund</span>, you are also exposed to <span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>, meaning your <span class="nobr">C Fund</span> investment may not grow enough to offset inflation.
 risk_level: medium
 rewards: |
   While investment in the C Fund carries risk, it also offers the opportunity to experience gains from equity ownership of large and mid-sized U.S. company stocks.
@@ -91,5 +91,5 @@ document-ready:
   - getFundIndexAverageAnnualReturns('C');
   - getGrowthLifetime('C');
   - doCompositionPies();
-  - $('.sortableColumn').click(function(e) { toggleSort(this); });
+  - $('.sortableColumn').click(function(e) { toggleSort(this, 0, 1); });
 ---

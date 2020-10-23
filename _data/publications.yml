@@ -24,11 +24,18 @@
   publication_topics:
   - Withdrawals
 - publication_url: https://secure.tsp.gov/components/CORS/monthlyAnnuityFactors.html
-#- publication_url: monthly-annuity-factors.html
-  publication_name: Annuity Factors, Monthly
+  publication_name: Annuity factors (monthly)
   publication_info: Use these monthly annuity factors with the annuity worksheet to estimate your monthly annuity payment.
   publication_date: 7/2014
   publication_pages: 1 page
+  publication_type:
+  - Annuity
+  publication_topics:
+  - Withdrawals
+- publication_url: /annuity-basics/historical-annuity-rates/
+  publication_name: Annuity rates (historical)
+  publication_info: View monthly annuity rates from 2002 through the present. Also available for export.
+  publication_date: 9/2020
   publication_type:
   - Annuity
   publication_topics:
@@ -65,7 +72,7 @@
 - publication_url: tspbk33.pdf
   publication_name: "Your TSP Account: A Guide for Beneficiary Participants"
   publication_info: Comprehensive booklet explaining the TSP benefits and features that are specific to beneficiary participants.
-  publication_date: 1/2018
+  publication_date: 10/2020
   publication_pages: 23 pages
   publication_type:
   - Booklet
@@ -83,7 +90,7 @@
 - publication_url: tspfs08.pdf
   publication_name: TSP Benefits that Apply to Military Members Who Return to Federal Civilian Service
   publication_info: Explains the legislation that allows members of the uniformed services to make up contributions when they return to Federal civilian service.
-  publication_date: 1/2018
+  publication_date: 10/2020
   publication_pages: 5 pages
   publication_type:
   - Fact Sheet
@@ -205,7 +212,7 @@
 - publication_url: tspbk32.pdf
   publication_name: Managing Your Account for Beneficiary Participants
   publication_info: A compact guide for beneficiary participants that provides information about the TSP and how to manage your account.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 18 pages
   publication_type:
   - Booklet
@@ -215,7 +222,7 @@
 - publication_url: tspbk30.pdf
   publication_name: Managing Your Account for Civilian Federal Employees
   publication_info: A compact guide for civilian and uniformed services members that provides information about the TSP and how to manage your account.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 26 pages
   publication_type:
   - Booklet
@@ -224,7 +231,7 @@
 - publication_url: tspbk34.pdf
   publication_name: Managing Your Account for Members of the Uniformed Services
   publication_info: Comprehensive booklet explaining the TSP benefits and features that are specific to beneficiary participants.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 28 pages
   publication_type:
   - Booklet
@@ -257,19 +264,10 @@
   - Booklet
   publication_topics:
   - Legal documents
-- publication_url: tspfs10.pdf
-  publication_name: Questions and Answers about Changes to TSP Withdrawal Options
-  publication_info: Outlines the steps we’re taking to implement the TSP Modernization Act and provide other withdrawal options.
-  publication_date: 9/2019
-  publication_pages: 2 pages
-  publication_type:
-  - Fact Sheet
-  publication_topics:
-  - Withdrawals
 - publication_url: tsp-776.pdf
   publication_name: Required Minimum Distribution for Beneficiary Participants
   publication_info: Explains in detail the Internal Revenue Code (IRC) required minimum distribution rules for beneficiary participants.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 8 pages
   publication_type:
   - Tax Notice
@@ -280,21 +278,20 @@
 - publication_url: tsp-775.pdf
   publication_name: Required Minimum Distributions
   publication_info: Explains in detail the TSP’s withdrawal deadline and the Internal Revenue Code (IRC) required minimum distribution rules for participants who are age 70½ or older and separated from service.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 8 pages
   publication_type:
   - Tax Notice
   publication_topics:
   - Tax information
   - Withdrawals
-- publication_url: tsp-21-r-cl.pdf
-  publication_name: Residential Loan Checklist
-  publication_info: Complete this checklist and include it with your completed Form TSP-21-R, Loan Agreement, and residential loan documentation to ensure timely processing of your loan.
-  publication_date: 8/2017
-  publication_type:
-  - Booklet
-  publication_topics:
-  - Loans
+#- publication_url: tsp-21-r-cl.pdf  publication_name: Residential Loan Checklist
+#  publication_info: Complete this checklist and include it with your completed Form TSP-21-R, Loan Agreement, and residential loan documentation to ensure timely processing of your loan.
+#  publication_date: 8/2017
+#  publication_type:
+#  - Booklet
+#  publication_topics:
+#  - Loans
 - publication_url: tsplf37a.pdf
   publication_name: TSP Scorecard
   publication_info: Thinking about moving your TSP savings to another plan? Ask the provider these questions first.
@@ -326,7 +323,7 @@
 - publication_url: tspbk08.pdf
   publication_name: Summary of the Thrift Savings Plan
   publication_info: Comprehensive booklet explaining the TSP, its features, benefits, and generally how it works.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 36 pages
   publication_type:
   - Booklet
@@ -352,10 +349,9 @@
   - Death benefits
   - Tax information
 - publication_url: tsp-780.pdf
-  publication_name: "Tax Information: Monthly Payments"
+  publication_name: "Tax Information: Installment Payments"
   publication_info: Tax information for participants who are withdrawing their account in a series of monthly payments.
-  publication_date: 10/2012
-  publication_pages: 2 pages
+  publication_date: 8/2020
   publication_type:
   - Tax Notice
   publication_topics:
@@ -364,7 +360,7 @@
 - publication_url: tsp-536.pdf
   publication_name: "Tax Information: Payments From Your TSP Account"
   publication_info: Provides tax information about the various disbursements civilian, uniformed services, and beneficiary participants can make from the TSP.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 8 pages
   publication_type:
   - Tax Notice
@@ -435,16 +431,16 @@
 - publication_url: tsplf15.pdf
   publication_name: Withdrawals
   publication_info: Brief overview of the TSP withdrawal options and what a participant needs to do to get a withdrawal after leaving Federal service.
-  publication_date: 9/2019
+  publication_date: 10/2020
   publication_pages: 3 pages
   publication_type:
   - Leaflet
   publication_topics:
   - Withdrawals
 - publication_url: tspbk02.pdf
-  publication_name: Withdrawing Your TSP Account After Leaving Federal Service
+  publication_name: Withdrawing from Your TSP Account for Separated and Beneficiary Participants
   publication_info: Booklet about participant's options for withdrawing his or her TSP account after leaving service.
-  publication_date: 1/2018
+  publication_date: 9/2019
   publication_pages: 22 pages
   publication_type:
   - Booklet

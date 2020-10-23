@@ -43,19 +43,17 @@ function getPaySchedule() {
   }
   return 'Monthly';
 }
-function payScheduleGood(submit) {
-  if (noFuture()) { return clearError('paySchedule'); }
-/*
-  var growthSelector = getGrowthSelector();
-  if ((growthSelector == 'balanceOnly') || (growthSelector == '')) { return clearError('paySchedule'); }
-*/
-  var paySchedule = getPaySchedule();
 
+function payScheduleGood(submit) {
+  var rs = getRetirementSystem();
+  if ((rs == 'USBRS') || (rs == 'US')) { return clearError('paySchedule'); }
+  setAnnualGrossPay();
+  var paySchedule = getPaySchedule();
+  $('#lastPaySchedule').val(paySchedule);
   if (paySchedule == 'Select') {
     if (submit) { return showError('paySchedule', "Select your pay schedule."); }
   }
 
-  $('#lblAYRpaySchedule').html(paySchedule);
   return clearError('paySchedule');
 }
 
@@ -143,17 +141,6 @@ function taxStatusGood(submit) {
   if (status == 'MS') { return clearError('taxStatus'); }
 
   return showError('taxStatus', "Select your tax status.");
-}
-
-function payScheduleGood(submit) {
-  $('#lastPaySchedule').val($('#paySchedule').val());
-  //$('#lblAYRpaySchedule').html($('#paySchedule').val());
-  setAnnualGrossPay();
-  if ($('#paySchedule').val() == 'Select') {
-    return showError('paySchedule', "Select your pay schedule.");
-  }
-
-  return clearError('paySchedule');
 }
 
 function fedAllowancesGood(submit) {

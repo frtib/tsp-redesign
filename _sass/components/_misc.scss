@@ -23,9 +23,11 @@ html {
 .nobr {
   white-space: nowrap;
 }
+
 .underline {
   text-decoration: underline;
 }
+
 .blue-medium {
   background-color: #116C97;
 }
@@ -33,10 +35,18 @@ html {
 .hide {
   display: none;
 }
-.nav-header { // Used in COVID-19 section
+
+.nav-header {
+  // Used in COVID-19 section
   font-size: 2.2rem;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   font-family: $font-sans;
+}
+
+button {
+  &.usa-accordion-button {
+    line-height: inherit;
+  }
 }
 @media (min-width: #{$medium-screen}) {
   .usa-hero-callout {
@@ -70,29 +80,33 @@ html {
   }
 }
 
-#footnotes,
-.footnotes {
 
-  ol, ul {
+ol {
+  &.footnotes {
     border-top: 1px solid silver;
+    margin-top: 5rem;
     padding: 1.5rem 0 0 2rem;
-    // padding-left: 20px;
-    // max-width: inherit;
+    font-size: 1.5rem;
 
-    &.fa-ul {
-      margin-left: 0;
-
-      .fa-li {
-        top: -0.25em;
-      }
-      i {
-        font-size: .8rem;
-      }
+    li {
+      display: list-item;
     }
   }
+}
 
-  margin-top: 5rem;
-  font-size: 1.5rem;
+ol,
+ul {
+  &.fa-ul {
+    margin-left: 0;
+
+    .fa-li {
+      top: -0.25em;
+    }
+
+    i {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 #main-content {

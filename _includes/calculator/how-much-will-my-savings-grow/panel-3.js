@@ -118,11 +118,15 @@ function savingsGrowTooltip(me) {
   rc = '';
   var points = me.points;
   // console.log(me);
-  for (var i = 0; i < points.length; i++) {
+  var total = 0.0;
+  for (var i = points.length-1; i >= 0; i--) {
     var lColor = points[i].series.colorIndex;
     var name = points[i].series.name;
+    total += points[i].y;
     rc += tooltipLegendRow(lColor, '', name, '', CurrencyFormatted(points[i].y, 'cent'));
   }
+  // rc += tooltipLegendRow('white', '', '--------------------', '', '------------');
+  // rc += tooltipLegendRow('white', '', 'Total Projected Balance', '', CurrencyFormatted(total, 'cent'));
   rc = tooltipRowGroup(rc);
   rc = tooltipHeader('Year '+me.x)+rc;
   rc = tooltipDiv('savings-grow-tooltip', rc);
@@ -311,7 +315,12 @@ function calculateResults() {
   returnRate = Math.pow(1 + returnRate, 1.0 / periodLength) - 1.0;
   // console.log(periodLength, returnRate);
   var annualPayRate = annualPayPercent / 100.0;
-  if (rs == 'FERS') { annualPayRate = FERSmatch(annualPayRate); }
+  if (rs == 'FERS') {
+    var fixedPercent = annualPayFixed / annualPay;
+    fixedPercent = FERSmatch(fixedPercent);
+    annualPayFixed = annualPay * fixedPercent;
+    annualPayRate = FERSmatch(annualPayRate);
+  }
   if (rs == 'BP') { yearsToContribute = 0; }
   // annualPayRate = annualPayRate / periodLength;
   var annualPayAmt = 0.0;

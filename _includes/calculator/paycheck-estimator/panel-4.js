@@ -376,9 +376,9 @@ var years = [];
 
 // $("#slider").slider();
 var growthbar12 = null;
-var stack1 = 'Scenario1';
+var stack1 = 'Scenario 1';
 // var stack2 = '2Roth';
-var stack2 = 'Scenario2';
+var stack2 = 'Scenario 2';
 
 
 // copy printable version of values to numerical data for chart
@@ -497,8 +497,8 @@ function makeChart(chartMax, year) {
                         enabled: true, padding: 0,
                         color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black',
                         formatter: function() {
-                            if (this.y == -0.00005) { return 'Scenario 1'; }
-                            if (this.y == -0.00006) { return 'Scenario 2'; }
+
+                            if (this.y < 0) { return this.series.userOptions.stack; }
                             if (this.y == 0.0) { return ''; };
                             return '<strong>' + CurrencyFormatted(this.y) + '</strong>'; }
                     },
@@ -530,14 +530,17 @@ function makeChart(chartMax, year) {
             }, {
                 name: 'Traditional**', stack: stack2, color: colorTrad, showInLegend: false,
                         data: [totalTrad2]
-            }, {
+            }
+/*            , {
               dataLabels: { verticalAlign: 'top', x: 0, y: 3, crop: false, color: '#666666', style: { fontWeight: 'bold', fontSize: '11pt' } },
                 name: 'S1', stack: stack1, showInLegend: false, color: '#666666', data: [-0.00005]
             }, {
               dataLabels: { verticalAlign: 'top', x: 0, y: 3, crop: false, color: '#666666', style: { fontWeight: 'bold', fontSize: '11pt' } },
                 name: 'S2', stack: stack2, showInLegend: false, color: '#666666', data: [-0.00006]
 
-            }]
+            }
+*/
+          ]
         });
 }
 
