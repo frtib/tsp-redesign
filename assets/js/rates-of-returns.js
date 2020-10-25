@@ -157,6 +157,24 @@ function fundYvalueFormat(value) {
 function fundCheckboxClick(chartName, cbName) {
   fundCheckboxClickAction(chartName+"-monthly", cbName);
   fundCheckboxClickAction(chartName+"-annual", cbName);
+  syncIndexByName(chartName+"-monthly", cbName);
+  syncIndexByName(chartName+"-annual", cbName);
+  return false;
+}
+
+// 2020-10-21 Lock Index fund visibility
+function syncIndexByName(chartName, cbName) {
+  var vis = $('#'+cbName).prop('checked');
+  var name = cbName.replace('_', ' ');
+  var idx = getSeriesID(name, chartName);
+  if (idx < 0) { return false; }  // skip if a group name
+  var idxG = getSeriesID('G Fund', chartName);
+  if (idx > idxG) {  // handle buddy
+    setTableCheckbox(cbName,idx+1,vis);
+    setSeriesVisibility(chartName, idx+1, vis);
+  }
+//  if (idxG == idx) { return false; } // skip if G (no buddy)
+//  if (idxG == (idx+1)) { return false; } // skip if right before G (last L)
   return false;
 }
 
@@ -181,6 +199,11 @@ function fundHighchartClickBuddy(chartName, idx, fundName, vis) {
   var name = series[idx].name;
   if ((name == 'F Fund') || (name == 'C Fund') || (name == 'S Fund') || (name == 'I Fund')) {
     // I clicked on an individual fund with an index
+    if (1) {  // 2020-10-21 Lock Index fund visibility
+      fundHighchartClickAction(chartName, idx, name, vis);
+      fundHighchartClickAction(chartName, idx+1, series[idx+1].name, vis);
+      return false;
+    }
     if ((series[idx].visible) && (series[idx+1].visible)) { fundHighchartClickAction(chartName, idx+1, series[idx+1].name, vis); }
     fundHighchartClickAction(chartName, idx, name, vis);
     return false;
@@ -189,6 +212,11 @@ function fundHighchartClickBuddy(chartName, idx, fundName, vis) {
   if (idx > 0) {
     var name = series[idx-1].name;
     if ((name == 'F Fund') || (name == 'C Fund') || (name == 'S Fund') || (name == 'I Fund')) {
+      if (1) {  // 2020-10-21 Lock Index fund visibility
+        // fundHighchartClickAction(chartName, idx-1, name, vis);
+        // fundHighchartClickAction(chartName, idx, series[idx].name, vis);
+        return false;
+      }
       // I clicked on an index fund
       if ((!series[idx].visible) && (!series[idx-1].visible)) { fundHighchartClickAction(chartName, idx-1, name, vis); }
       fundHighchartClickAction(chartName, idx, series[idx].name, vis);
