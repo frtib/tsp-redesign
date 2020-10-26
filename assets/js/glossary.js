@@ -456,6 +456,11 @@ var glossaryTerms = [
       'Equity securities issued as ownership in a publicly held corporation.'
   },
   {
+    term: 'system of records',
+    definition:
+      'A system of records contains information that is retrieved by an individual&#8217;s name or other unique identifier. The Privacy Act requires federal agencies to publish a notice in the Federal Register for each system of records that an agency maintains.'
+  },
+  {
     term: 'Tax Withholding',
     definition:
       'The requirement that we withhold a portion of payments from your TSP account for federal taxes. The default amount to be withheld depends on the type of payment. Increasing, decreasing, and/or waiving tax withholding are options for some payment types.'

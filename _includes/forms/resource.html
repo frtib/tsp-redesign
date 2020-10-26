@@ -13,10 +13,17 @@
   {% assign divBlockID = "id='" | append: resource.publication_url | replace: '.', '-' | append: "-block'" %}
   {% assign divBlockClass = "div-block-class div-resource-class" %}
 {% endif %}
-{% include components/testURL.html curPath='/publications/' rawURL=resource.publication_url %}{% assign pubURL= absURL %}
+{% include components/testURL.html curPath='/publications/' rawURL=resource.publication_url %}{% assign pubURL = absURL %}
 
 <div class="usa-width-one-half {{divBlockClass}}" {{divBlockID}}>
   {% if nameDiv != 0 %}<br>{% endif %}
+  <!-- <div>(curPath = {{ curPath }})</div>
+  <div>(rawURL = {{ rawURL }})</div>
+  <div>(relURL = {{ relURL }})</div>
+  <div>(absURL = {{ absURL }})</div>
+  <div>(prefixURL = {{ prefixURL }})</div>
+  <div>(prefixxxURL = {{ prefixxxURL }})</div>
+  <div>(<strong>pubURL</strong> = {{ pubURL }})</div> -->
   <div class="item-frame">
     <div class="top">
     <i class="{{ icon }}"></i>
@@ -24,8 +31,8 @@
     <div class="resource-title">
       <p>
         {% if pubURL == rawURL %}
-        <!-- Omit site.baseurl for http links -->
-        <a href="{{ pubURL | liquify }}" xxx="rawURL" class="">
+        <!-- Omit site.baseurl for http OR site. links -->
+        <a href="{{ pubURL | liquify }}" xxx="rawURL relURL" class="">
           {% else %}
         <!-- Inclucde site.baseurl for internal links -->
         <a href="{{site.baseurl }}{{ pubURL | liquify }}" xxx="absURL" class="">

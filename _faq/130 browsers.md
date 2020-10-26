@@ -8,10 +8,9 @@ redirect_from:
 
 TSP web pages and documents are best viewed with one of the following browsers:
 
-- Microsoft Edge
-- Safari
 - Chrome
 - Firefox
+- Safari
 - Internet Explorer 11 (compatibility view disabled)
 
 Older browsers often cannot support modern web standards and, in some cases, have been known to cause distortion of the information on the screen.

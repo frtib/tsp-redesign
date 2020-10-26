@@ -339,6 +339,12 @@ section.comparison.paycheck {
         // end li
       }
       // END &.table-header-buttons, &.funds-lifecycle, &.funds-individual
+      &.table-header-buttons {
+        li {
+          flex: 1;
+        }
+      }
+      // END &.table-header-buttons
     }
     // END ul
     table {
@@ -347,13 +353,13 @@ section.comparison.paycheck {
       width: 100%;
       margin-top: 0;
 
-      td,
-      th {
+      th,
+      td {
         height: 53px;
         border: 1px solid #DDD;
-        padding: 10px;
+        padding: 1rem;
         empty-cells: show;
-        text-align: left;
+        // text-align: left;
       }
 
       th {
@@ -365,12 +371,16 @@ section.comparison.paycheck {
       td,
       th+th {
         // th+th omits the first <th> following a <tr>
+        // targets the column headers in thead
         text-align: center;
         display: none;
       }
 
-      td.default {
-        display: table-cell;
+      td {
+        text-align: right;
+        &.default {
+          display: table-cell;
+        }
       }
 
       thead {
@@ -453,6 +463,9 @@ section.comparison.paycheck {
 
         tr.emphasis {
           td+td {
+            font-size: 3rem;
+          }
+          td {
             font-size: 3rem;
           }
         }

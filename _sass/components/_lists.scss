@@ -10,6 +10,9 @@
 .roman {
   list-style-type: lower-roman;
 }
+.decimal {
+  list-style: decimal;
+}
 ol.parens {
   counter-reset: list;
   li {
@@ -21,6 +24,11 @@ ol.parens {
       position: absolute;
       left: -2.4rem;
     }
+  }
+}
+span {
+  &.list-item-header {
+    display: block;
   }
 }
 

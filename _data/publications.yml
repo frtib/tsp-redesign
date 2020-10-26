@@ -32,7 +32,7 @@
   - Annuity
   publication_topics:
   - Withdrawals
-- publication_url: "{{ site.baseurl }}/annuity-basics/historical-annuity-rates/"
+- publication_url: /annuity-basics/historical-annuity-rates/
   publication_name: Annuity rates (historical)
   publication_info: View monthly annuity rates from 2002 through the present. Also available for export.
   publication_date: 9/2020
