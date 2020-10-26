@@ -32,16 +32,24 @@ To understand how the TSP calculates rates of return for any given period of tim
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=0 chartName=chartName %}
 
 <section class="date-range">
-<form class="share-price-date-range" action="javascript:void(0);">
+<form class="share-price-date-range duo" action="javascript:void(0);">
 <fieldset>
-<label>
-  <div>Show share price history between the following dates</div>
-  <input id="fundDates" placeholder="Start and end dates..." class="date-range" />
-</label>
+<legend>Share price history date range:</legend>
+<div id="dateRange-div" class="container">
+  <span class="" id="dateRange-error-message" role="alert"></span>
+  <label>
+    <div>Start date</div>
+    <input id="fundDateStart" placeholder="Start date.." class="date-range">
+  </label>
+  <label>
+    <div>End date</div>
+    <input id="fundDateEnd" placeholder="End date.." class="date-range">
+  </label>
+</div>
+</fieldset>
 <button class="usa-button" onClick="getSharePricesRaw('{{chartName}}');">Retrieve share prices</button>
 <button class="usa-button-secondary" onClick='downloadSharePrices();'>
   Download share prices <i class="fal fa-arrow-alt-to-bottom"></i></button>
-</fieldset>
 </form>
 </section>
 </div> <!-- end div.usa-grid centered -->

@@ -1,3 +1,4 @@
+/*
 var fundDates = flatpickr("#fundDates", {
   mode: "range",
   altInput: true,
@@ -7,6 +8,27 @@ var fundDates = flatpickr("#fundDates", {
   minDate: "06/02/2003",
   maxDate: "today",
 });
+*/
+var fundDateStart = flatpickr("#fundDateStart", {
+  // mode: "range",
+  altInput: true,
+  altFormat: "F j, Y",
+  dateFormat: "Y-m-d",
+  defaultDate: new Date().fp_incr(-30),
+  minDate: "06/02/2003",
+  maxDate: "today",
+  onChange: function(dObj, dStr) { clearError('dateRange'); }
+});
+var fundDateEnd = flatpickr("#fundDateEnd", {
+  // mode: "range",
+  altInput: true,
+  altFormat: "F j, Y",
+  dateFormat: "Y-m-d",
+  defaultDate: "today",
+  minDate: "06/02/2003",
+  maxDate: "today",
+  onChange: function(dObj, dStr) { clearError('dateRange'); }
+});
 
 function toYYYYMMDD(d) {
     var yyyy = d.getFullYear().toString();
@@ -15,29 +37,34 @@ function toYYYYMMDD(d) {
     return yyyy + mm + dd;
 }
 
+function getSharePriceDates() {
+  // var start = fundDates.selectedDates[0];
+  // var end = fundDates.selectedDates[1];
+  clearError('dateRange');
+  var startdate = fundDateStart.selectedDates[0];
+  var enddate = fundDateEnd.selectedDates[0];
+  if ((startdate == null) || (enddate == null)) { return [null, null]; }
+  var start = toYYYYMMDD(startdate);
+  var end = toYYYYMMDD(enddate);
+  if (end < start) { showError('dateRange', "Start date must be before end date."); return [null, null]; }
+  return [start, end];
+}
 function downloadSharePrices() {
   // var fundDates = document.querySelector("#fundDates")._flatpickr;
-  var sDate = fundDates.selectedDates[0];
-  var eDate = fundDates.selectedDates[1];
-  if ((sDate == null) || (eDate == null)) { console.log('ignore'); return false; }
-  var startdate = toYYYYMMDD(sDate);
-  var enddate = toYYYYMMDD(eDate);
+  var dateRange = getSharePriceDates();
+  if (dateRange[0] == null) { return false; }
   var format = 'CSV';
   var funds = ['Lfunds', 'InvFunds'];
-
-  doSharePriceDownload(startdate, enddate, format, funds);
+  doSharePriceDownload(dateRange[0], dateRange[1], format, funds);
   return false;
 }
 
 function getSharePricesRaw(chart) {
   // var fundDates = document.querySelector("#fundDates")._flatpickr;
-  var sDate = fundDates.selectedDates[0];
-  var eDate = fundDates.selectedDates[1];
-  if ((sDate == null) || (eDate == null)) { console.log('ignore'); return false; }
-  var startdate = toYYYYMMDD(sDate);
-  var enddate = toYYYYMMDD(eDate);
+  var dateRange = getSharePriceDates();
+  if (dateRange[0] == null) { return false; }
   var funds = ['Lfunds', 'InvFunds'];
-  var url = sharePriceDownloadString('getSharePricesRaw.html', startdate, enddate, funds);
+  var url = sharePriceDownloadString('getSharePricesRaw.html', dateRange[0], dateRange[1], funds);
   url += '&download=0';
   // console.log(url);
   doAjaxRetrieveRaw(chart, url);
