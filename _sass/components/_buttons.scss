@@ -8,13 +8,16 @@
 button {
   border-radius: 0;
 
-  &.print {
-    &:after {
-      font-family: $font-awesome;
-      content: "\f02f";
-      font-weight: $light;
-      padding-left: 0.5rem;
-    }
+  &:before,
+  &:after {
+    font-family: $font-awesome;
+    font-weight: $light;
+    margin-right: 0.7rem;
+    line-height: 1;
+  }
+
+  &:after {
+    // margin-left: : 0.7rem;
   }
 
   &.calculate {
@@ -35,6 +38,28 @@ button {
     }
   }
 
+  &.download {
+    &:before {
+      content: "\f33d";
+    }
+    &:after {
+      // Override a.download:after in _links.css
+      content: none;
+    }
+  }
+
+  &.expand {
+    &:before {
+      content: "\f065";
+    }
+  }
+
+  &.open {
+    &:before {
+      content: "\f14c";
+    }
+  }
+
   &.save {
     &:after {
       font-family: $font-awesome;
@@ -44,11 +69,10 @@ button {
     }
   }
 
-  
-  &.write-in {
+  &.print {
     &:after {
       font-family: $font-awesome;
-      content: "\f305";
+      content: "\f02f";
       font-weight: $light;
       padding-left: 0.5rem;
     }

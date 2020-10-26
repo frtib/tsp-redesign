@@ -20,6 +20,13 @@ html {
   top: 0;
 }
 
+.note {
+  background-color: $color-gold-lightest;
+  border-left-color: $color-gold;
+  border-left-width: 1rem;
+  padding: 2rem 2rem 1.4rem 3rem;
+}
+
 .nobr {
   white-space: nowrap;
 }
@@ -79,7 +86,6 @@ button {
     font-size: 2.5rem;
   }
 }
-
 
 ol {
   &.footnotes {

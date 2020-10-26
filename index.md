@@ -6,13 +6,14 @@ class: homepage
 scripts:
 #  - /assets/js/sessionstorage-modal.js
 expand-site-alert: true
+## alert: show-alert: are for a homepage-only alert. See code in header--extended that will execute if true.
 alert:
   show-alert: false
-  icon:
-  title: Scheduled Outage
-  subtitle:
-  body:
-  - Due to scheduled system maintenance, <strong>My Account, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. You can still visit public pages on tsp.gov, but information that updates automatically, such as share prices, will be unavailable. Thank you for your patience.
+#  icon:
+#  title: Scheduled Outage
+#  subtitle:
+#  body:
+#  - Due to scheduled system maintenance, <strong>My Account, the ThriftLine, and frtib.gov</strong> will be unavailable from 1:30 a.m. (ET) on Saturday, August 22, to 1:30 a.m. (ET) on Monday, August 24. You can still visit public pages on tsp.gov, but information that updates automatically, such as share prices, will be unavailable. Thank you for your patience.
 
 hero:
   image: /assets/img/hero.jpg

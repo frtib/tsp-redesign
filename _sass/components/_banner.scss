@@ -10,7 +10,7 @@ section {
 
     .usa-width-one-whole {
       display: flex;
-      align-items: start;
+      align-items: normal;
     }
 
     ul.usa-accordion {
@@ -28,7 +28,7 @@ section {
         padding: 0.2rem 0 0;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
 
         &[aria-expanded="true"],
         &[aria-expanded="false"]{
@@ -55,6 +55,17 @@ section {
       .usa-accordion-content {
         padding-bottom: 3rem;
         padding-left: 0;
+
+        a {
+          color: $color-primary-alt-light;
+          text-decoration: underline;
+          &:hover {
+            color: $color-primary-alt-dark;
+          }
+          &:visited {
+            color: $color-gray-cool-light;
+          }
+        }
       }
     }
 
@@ -86,6 +97,7 @@ section {
         color: #fff;
         font-size: 3.4rem;
         margin-right: 1rem;
+        padding-top: 0.6rem;
       }
     }
   } // end &.site-banner

@@ -131,6 +131,8 @@ manage-your-plan:
         href: /making-contributions/traditional-and-roth-contributions/
       - text: Contribution types
         href: /making-contributions/contribution-types/
+      - text: Catch-up contributions
+        href: /making-contributions/catch-up-contributions/
       - text: Maximize your savings
         href: /making-contributions/maximize-your-savings/
       - text: Contribution limits
@@ -165,6 +167,8 @@ news-and-resources:
         href: /covid-19/withdrawals/
       - text: Loans
         href: /covid-19/loans/
+  - text: Catch-up contributions
+    href: /catch-up/
 
 fund-options:
   - text: How to invest
