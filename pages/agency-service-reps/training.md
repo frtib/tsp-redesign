@@ -14,7 +14,7 @@ redirect_from:
 
 Thank you for your interest in TSP education.
 
-TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form]({{ site.baseurl }}/bulletins/training-request-form.docx) and submitting the form to **training@frtib.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
+TSP trainers are available for webinars. See the [TSP Webinars]({{ site.baseurl }}#tspWebinars) information for a list of webinars available for online registration. As an agency or service representative you may request webinars for your agency or service by completing the [Training Request Form]({{ site.baseurl }}/agency-service-reps/training-form/) and submitting the form to **training@frtib.gov**. Please call <span class="nobr">202-942-1450</span> with any questions you may have about scheduling training.
 
 <span id="tspWebinars"></span>
 
