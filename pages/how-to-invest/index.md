@@ -7,6 +7,8 @@ scripts:
 permalink: /how-to-invest/
 redirect_from:
   - /InvestmentFunds/
+  - /invest/
+  - /fundoptions/
 ---
 
 # How to invest

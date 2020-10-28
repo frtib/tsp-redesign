@@ -5,6 +5,7 @@ sidenav: manage-your-plan
 styles:
 scripts:
 permalink: /account-basics/troubleshoot-login-errors/
+redirect_from: /sitehelp/
 ---
 # Troubleshoot login errors
 

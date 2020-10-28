@@ -18,4 +18,5 @@ panel-names: [Introduction,Retirement,Length,Income,Annuity,Results]
 redirect_from:
   - /PlanningTools/Calculators/retirementCalculator.html
   - /retirementcalc/
+  - /monthlypaycalc/
 ---

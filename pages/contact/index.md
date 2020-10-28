@@ -5,6 +5,7 @@ permalink: /contact/
 scripts:
 redirect_from:
   - /ParticipantSupport/Content/contact/
+  - /contactus/
 ---
 # We're here to help.
 
