@@ -506,6 +506,11 @@ var glossaryTerms = [
       'Your ability under the law to transfer a payment from your TSP account directly to an IRA or eligible employer plan. Not all payments are eligible for transfer (e.g., installment payments expected to last 10 years or more).'
   },
   {
+    term: 'TSP Course',
+    definition:
+      'These instructor led courses, created for in-person training events, are currently being offered virtually.'
+  },
+  {
     term: 'TSP Monthly Payments',
     definition:
       'Payments that the participant elects to receive each month from his or her TSP account after separating from service. Note: In this case, money remains in the TSP account and is paid out directly from the account.'
@@ -544,6 +549,11 @@ var glossaryTerms = [
     term: 'Volatility',
     definition:
       "See &#8220;<a data-term='Risk (Volatility)'>Risk</a>&#8221;"
+  },
+  {
+    term: 'Webinar',
+    definition:
+      'Instructor led training which can be requested individually or as a part of a series.'
   },
   {
     term: 'Withdrawal',

@@ -1,0 +1,70 @@
+section {
+  &.course-catalog {
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+      'course'
+      'description'
+      'time'
+      'format';
+      grid-gap: 10px;
+      border-top: 1px solid $color-gray-light;
+      padding: 1.6rem 0;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      div {
+        &.course {
+          grid-area: course;
+          font-size: 2rem;
+          font-weight: $bold;
+        }
+        &.description {
+          grid-area: description;
+          line-height: 1.5;
+        }
+        &.duration {
+          grid-area: time;
+          color: $color-gray;
+          line-height: 2;
+        }
+        &.format {
+          grid-area: format;
+          span {
+            // Basic style
+            border-radius: 4px;
+            padding: 0.4rem 0.8rem;
+            white-space: nowrap;
+            background-color: #d8572a;
+            color: #fff;
+            font-weight: $bold;
+            text-transform: uppercase;
+
+            &.course {
+              background-color: #694873;
+            }
+            &.term,
+            &.term-end {
+              border-bottom: none;
+              &:hover {
+                // text-decoration-line: underline;
+                // text-decoration-style: dashed;
+                // text-decoration-color: #fff;
+                text-decoration: underline #fff dashed;
+              }
+              &::after {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+      // END .grid-container > div
+    }
+    // END .grid-container
+  }
+  // END &.course-catalog
+}
+// END section
