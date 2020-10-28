@@ -1,15 +1,12 @@
 ---
 layout: page
-
 title: Applying for a loan
-
 styles:
-
 sidenav: use-your-savings
-
 scripts:
-
 permalink: /loan-basics/applying-for-a-loan/
+redirect_from:
+  - /apply/
 ---
 
 # Applying for a loan
