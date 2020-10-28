@@ -3,11 +3,13 @@ function round_cents(num) {
   return parseFloat(num).toFixed(2);
 }
 
-var taxMinYear = 2018;
-var taxMaxYear = 2020;
+var taxMinYear = 2019;
+var taxMaxYear = 2021;
 var IRC_acting_year = taxMaxYear;
 
 var taxValues = {
+    2021: { contribution_limit: 19500.00, catchup_limit: 6500.00,
+      withholding_allowance: 4200.00, annual_addition: 58000 },
     2020: { contribution_limit: 19500.00, catchup_limit: 6500.00,
       withholding_allowance: 4200.00, annual_addition: 57000 },
     2019: { contribution_limit: 19000.00, catchup_limit: 6000.00,
@@ -20,6 +22,7 @@ var acting_year = constrainYear(determineActingYear());
 // console.log('acting year is ' + acting_year);
 
 // assume most recent tax table
+// DONALD:  still 2020 tax values, dont have 2021 tables yet
 // IRS Pub. 15-T, Page 6, LEFT, Single.  2020 Percentage Method Tables for Automated Payroll Systems
 var taxtableS = [ [3800.00, 0.00, 0.0], [13675.00, 0.10, 0.0], [43925.00, 0.12, 987.5],
                 [89325.00, 0.22, 4617.5], [167100.00, 0.24, 14605.5], [211150.00, 0.32, 33271.5],
@@ -28,6 +31,18 @@ var taxtableS = [ [3800.00, 0.00, 0.0], [13675.00, 0.10, 0.0], [43925.00, 0.12, 
 var taxtableM = [ [11900.00, 0.00, 0.0], [31650.00, 0.10, 0.0], [92150.00, 0.12, 1975.0],
                 [182950.00, 0.22, 9235.0], [338500.00, 0.24, 29211.0], [426600.00, 0.32, 66543.0],
                 [633950.0, 0.35, 94735.0], [-1, 0.37, 167307.50] ];
+
+if (acting_year == 2020) {
+  // 2020 tax values
+  // IRS Pub. 15-T, Page 6, LEFT, Single.  2020 Percentage Method Tables for Automated Payroll Systems
+  var taxtableS = [ [3800.00, 0.00, 0.0], [13675.00, 0.10, 0.0], [43925.00, 0.12, 987.5],
+                  [89325.00, 0.22, 4617.5], [167100.00, 0.24, 14605.5], [211150.00, 0.32, 33271.5],
+                  [522200.00, 0.35, 47367.5], [-1, 0.37, 156235.0] ];
+  // IRS Pub. 15-T, Page 6, LEFT, Married.  2020 Percentage Method Tables for Automated Payroll Systems
+  var taxtableM = [ [11900.00, 0.00, 0.0], [31650.00, 0.10, 0.0], [92150.00, 0.12, 1975.0],
+                  [182950.00, 0.22, 9235.0], [338500.00, 0.24, 29211.0], [426600.00, 0.32, 66543.0],
+                  [633950.0, 0.35, 94735.0], [-1, 0.37, 167307.50] ];
+}
 
 if (acting_year == 2019) {
   // 2019 tax values
