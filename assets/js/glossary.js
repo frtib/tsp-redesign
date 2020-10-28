@@ -553,7 +553,7 @@ var glossaryTerms = [
   {
     term: 'Webinar',
     definition:
-      'One-hour instructor led training which can be requested individually or as a part of a series.'
+      'Instructor led training which can be requested individually or as a part of a series.'
   },
   {
     term: 'Withdrawal',
