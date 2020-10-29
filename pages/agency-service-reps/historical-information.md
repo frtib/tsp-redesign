@@ -48,6 +48,12 @@ The TSP provides agency and service representatives with historical information 
         </tr>
       </thead>
       <tbody>
+      <tr>
+          <th scope="row">2021</th>
+          <td>$19,500</td>
+          <td>$58,000</td>
+          <td>$6,500</td>
+        </tr>
         <tr>
           <th scope="row">2020</th>
           <td>$19,500</td>

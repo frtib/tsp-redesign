@@ -12,7 +12,7 @@ redirect_from:
 
 # Know your limits
 
-Each year, the Internal Revenue Service (IRS) determines the limit of contributions, also called elective deferrals, you can make to your TSP account. Below are the **2020** IRS limits and additional information to keep you informed.
+Below are the **2021** IRS limits and additional information to keep you informed. The Elective Deferral and Catch-up limits are unchanged from 2020.
 
 **Select an option and take a look.**
 
@@ -111,7 +111,7 @@ Catch-up contributions are made on top of your regular employee contributions; h
 <button class="usa-accordion-button"
 aria-expanded="false"
 aria-controls="annual-addition">
-<span>$57,000</span>
+<span>$58,000</span>
 Annual<br>Addition
 </button>
 <div id="annual-addition" class="usa-accordion-content">
