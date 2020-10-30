@@ -16,7 +16,7 @@ redirect_from:
 When you become a TSP participant, you will receive:
 
 + A TSP account number - the primary means of identifying your account. You’ll create a user ID to use instead of your account number to log in to <span data-term="My Account" class="js-glossary-toggle term term-end">My Account</span>
-+ A customizable web password to access your online in My Account; and
++ A customizable web password to access your account online in My Account; and
 + A Personal Identification Number (PIN), which you can use to access your account on the [ThriftLine]({{ site.baseurl }}/contact/).
 
 When you log in to your TSP account for the first time, you will add and validate a phone number in order to use <span data-term="Two-step authentication" class="js-glossary-toggle term term-end">two-step authentication</span> and add other profile information for additional account security.

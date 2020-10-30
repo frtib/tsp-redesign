@@ -22,9 +22,9 @@ If you’re concerned that your personal information or TSP account has been com
 
 + **By mail—** We will most often contact you by mail, so you should make sure we have your correct mailing address. Read any TSP mail promptly and carefully. Take caution if you receive an account notice you weren’t expecting or a letter that asks you to “verify your account number” or other account information. Notify us immediately if you receive a letter that seems suspicious.
 
-+ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send informational emails such as the [_Thrift Savings Planner_ newsletter]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings.
++ **By email—** We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send educational outreach emails such as the [_Thrift Savings Planner_ newsletter]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings.
 
-We will never include your sensitive information in an email, and we will never ask you to send us sensitive information by email.
+    We will never include your sensitive information in an email, and we will never ask you to send us sensitive information by email.
 
 + **By phone—** A TSP Participant Service Representative or an official from the Federal Retirement Thrift Investment Board may call you on the telephone in response to communication that you initiated by completing a transaction or by contacting us.
 
@@ -41,11 +41,11 @@ Steps you should take to protect your TSP account include:
 + **Validate your phone number and email—** Keep your phone number and email address(es) up to date and validate them in your My Account profile settings. You must validate your phone number in order to use two-step authentication and log in securely to My Account.
 + **Keep your mailing address up to date—** Make sure we have your [correct mailing address]({{ site.baseurl }}/account-basics/update-your-address/) to ensure that your TSP information and transaction confirmations don’t go to the wrong place.
 + **Close your browser after you log out—** When you’re finished accessing your TSP account, clear your browser’s memory of your sensitive account information by closing the browser window.
-+ **Block access to your account—** — You have the option to block all online access, ThriftLine access, or both to your TSP account. Make this request online through your My Account profile settings, by calling the ThriftLine and speaking to a Participant Service Representative, or by submitting a written request.
++ **Block access to your account—** You have the option to block all online access, ThriftLine access, or both to your TSP account. Make this request online through your My Account profile settings, by calling the ThriftLine and speaking to a Participant Service Representative, or by submitting a written request.
 
-Your written request must include your name, account number (or Social Security number), date of birth, signature, and the date you signed the letter.
+    Your written request must include your name, account number (or Social Security number), date of birth, signature, and the date you signed the letter.
 
-Access to your account will remain blocked until you submit a written request to remove the block.
+    Access to your account will remain blocked until you submit a written request to remove the block.
 
 
 ## How we protect your TSP account
@@ -65,3 +65,15 @@ Account security features we give you include:
 ## Be cautious with software and mobile applications
 
 You may encounter software or mobile applications that reference the Thrift Savings Plan and prompt you for your TSP account credentials. **The TSP does not support these applications.** We cannot endorse any information or advice you may receive from third-party software or applications. Providing your TSP account credentials to third-party software or applications may jeopardize your account security.
+
+## Two-step authentication helps prevent fraud
+
+All TSP participants must use two-step authentication to log in to My Account. Two-step authentication helps you protect your account against fraud by prompting you for a one-time code each time you log in. This login process is more secure because it means that online access to your account requires something you know (your user ID and password) and something you have (a one-time code you receive by phone). Someone who tries to log in to your account fraudulently won’t be able to gain access without the code.
+
+### Tips for using two-step authentication
+
+**Validate at least one contact method that will stay with you through career transitions, such as a personal email or personal phone number.** If you need to log into your email to retrieve the validation code, open a new tab or window to do so.
+
+**Consider validating two email addresses and a phone number.** When you log into My Account, you will see a prompt to choose the contact method you want to use to receive your login verification code. By validating multiple contact methods, you have more flexibility in how to access your account.
+
+**Make sure your contact method is secure.** Your account is only as secure as your login credentials. Make sure you enable any additional security features, such as two-step authentication and passcodes, on your email accounts and devices.
