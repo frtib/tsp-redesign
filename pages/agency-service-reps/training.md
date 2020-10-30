@@ -57,6 +57,29 @@ To learn more about TSP webinars or request to be on the distribution list, plea
   </div>
 </div>
 
+## TSP to Retirement and Beyond (Part 1 and Part 2)
+
+This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives. Part 1 includes a discussion on estimating future income needs, assessing the impact of long-term risks, deciding when to retire, and prioritizing retirement savings goals. Part 2 consists of a discussion of the risks faced by new retirees. We will discuss the concept of a systematic strategy and how it is applied throughout retirement and cover scenarios that illustrate issues participants face during the drawdown process. These presentations may be requested together or individually. (75 minutes each)
+
+### December 8, 2020
+
+**TSP to Retirement and Beyond Part I**
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=246){:rel="nofollow"}
+
+**TSP to Retirement and Beyond Part II**
+
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=247){:rel="nofollow"}
+
+## 2020: What has changed at the TSP?      
+
+Drop in for this end of year webinar and find out about all the changes, big and small, to the TSP.  Areas covered will include the updates to tsp.gov, the addition of new Lifecycle Funds, information on TSP’s new catch-up contribution process, and more.
+
+### December 14, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=248){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=249){:rel="nofollow"}
+
 ## New to the TSP (or ready for a refresher)? Ask away.
 
 Bring your questions about managing your account, changing your investments or contribution amounts, managing life changes, how our funds work, or how to use your savings.  In this webinar, our TSP Training and Liaison Specialists will focus solely on answering your individual questions.
