@@ -9,18 +9,16 @@ redirect_from: /sitehelp/
 ---
 # Troubleshoot account access
 
-<div class="usa-alert usa-alert-info" markdown="1">
-{: .usa-alert-body}
 ## 3 most common TSP account problems and solutions
 
 ### 1. I didn’t receive my one-time code, or the code I received isn’t working.
 
 **If your one-time code doesn’t arrive until after the expiration period,** you won’t be able to use the code and will need to begin your request again to receive a new code.
 
-- **When using your phone, make sure you’re in a good service area.**  
+  - **When using your phone, make sure you’re in a good service area.**  
   Phone carrier network disruptions and a poor cellular connection are the most common reasons that a text message or phone call arrives late. If you continue to have trouble receiving codes, contact your carrier about any delivery issues. You may need to enable the ability to receive short code messages.
 
-- **When validating your email address, first check your junk or spam folder.** If you still can’t find the email, contact your email administrator or email service provider to find out about any delivery issues. Sometimes setting up automatic email forwarding from one address to another can cause delivery delays.
+  - **When validating your email address, first check your junk or spam folder.** If you still can’t find the email, contact your email administrator or email service provider to find out about any delivery issues. Sometimes setting up automatic email forwarding from one address to another can cause delivery delays.
 
 **Make sure you’re using the code from your most recent request,** whether you received it by text message or phone call. Only the most recent one-time code you request will work for each type of request you make, such as when logging in to My Account or recovering your user ID.
 
@@ -30,15 +28,15 @@ If you aren’t sure which code is the most recent, or your code has expired, yo
 
 You need your user ID and password to log in to My Account.
 
-**User ID**
+  **User ID**
 
-+ If you don’t have a user ID, you must create a user ID.
+  - If you don’t have a user ID, you must create a user ID.
 
-+ If you’ve forgotten your user ID, you may be able to recover your user ID online.
+  - If you’ve forgotten your user ID, you may be able to recover your user ID online.
 
-**Password**
+  **Password**
 
-  + You may be able to reset your password online.
+  - You may be able to reset your password online.
 
 You need your account number and personal identification number (PIN) to access your account information and perform certain transactions on the ThriftLine.
 
@@ -54,18 +52,17 @@ We will mail your account number to the address on your TSP account. You should 
 
 ### 3. I can’t access my validated phone number, or I don’t have a phone number that I can validate.
 
-**If you lose access to your validated phone number,** [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. After verifying your identity, the TSP representative will help you add and validate a new phone number.
+  **If you lose access to your validated phone number,** [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. After verifying your identity, the TSP representative will help you add and validate a new phone number.
 
-**If you have an international phone number,** you can validate it by text message or phone call. It’s important to include the correct country code for your international number. When you add your phone number in My Account, select the checkbox to indicate that this is an international phone number. A new field will appear to allow you to input the country code.
+  **If you have an international phone number,** you can validate it by text message or phone call. It’s important to include the correct country code for your international number. When you add your phone number in My Account, select the checkbox to indicate that this is an international phone number. A new field will appear to allow you to input the country code.
 
-**Keep in mind that you can validate any phone number that receives calls.**   
-When you choose to receive a one-time code by phone call, you’ll receive an automated call that voices your code aloud. Note: our system cannot validate phone numbers on the Defense Switched Network (DNS).
+  **Keep in mind that you can validate any phone number that receives calls.**   
+  When you choose to receive a one-time code by phone call, you’ll receive an automated call that voices your code aloud. Note: our system cannot validate phone numbers on the Defense Switched Network (DNS).
 
-**If you are unable or unwilling to provide your phone number,** you may be unable to log in to My Account because you will be unable to complete two-step authentication.
+  **If you are unable or unwilling to provide your phone number,** you may be unable to log in to My Account because you will be unable to complete two-step authentication.
 
-**You have options if you can’t access your account online.**
-You can access your account information and perform certain transactions, such as interfund transfers, when you call the ThriftLine and use the automated response system. To access your account through the ThriftLine, you’ll need your TSP account number and Personal Identification Number (PIN).
-</div>
+  **You have options if you can’t access your account online.**
+  You can access your account information and perform certain transactions, such as interfund transfers, when you call the ThriftLine and use the automated response system. To access your account through the ThriftLine, you’ll need your TSP account number and Personal Identification Number (PIN).
 
 ### Other reasons you may have trouble logging in
 
@@ -124,9 +121,9 @@ You can access your account information and perform certain transactions, such a
 
   **How to set up your login information for dual accounts:**
 
-  +	To connect your accounts so you can log in once to access both, set the same password for both accounts.
+  -	To connect your accounts so you can log in once to access both, set the same password for both accounts.
 
-  +	To separate your account logins, set a different password for each account.
+  -	To separate your account logins, set a different password for each account.
   </div>
 </li>
 
