@@ -275,7 +275,7 @@ var glossaryTerms = [
   {
     term: 'My Account',
     definition:
-      "The secure section of the TSP website, where you can log into your account to find out your account balance or perform certain transactions. See also &#8220;<a data-term='Customized User ID'>Customized User Id</a>.&#8221;"
+      "The secure section of the TSP website, where you can log in to your account to find out your account balance or perform certain transactions. The secure section of the TSP website, where you can log in to your account to find out your account balance or perform certain transactions."
   },
   {
     term: 'Non-BRS Uniformed Services',
@@ -286,6 +286,11 @@ var glossaryTerms = [
     term: 'Nonpay Status',
     definition:
       "Actively employed by the Federal government or uniformed services but not receiving regular pay because of furlough, suspension, leave without pay (including leave without pay to perform military service), or pending resolution of a grievance or appeal. (See also &#8220;<a data-term='Pay Status'>Pay Status</a>&#8221;.)"
+  },
+  {
+    term: 'One-time Code',
+    definition:
+      'Six-digit code you receive to verify your identity or validate your contact information. See Verification Code and Validation Code.'
   },
   {
     term: 'Partial Withdrawal',
@@ -310,7 +315,7 @@ var glossaryTerms = [
   {
     term: 'Password',
     definition:
-      'A code made up of letters, numbers, and special characters that  TSP participants use in conjunction with their TSP account number (or customized user ID) when accessing their account through the TSP website. For new participants, the initial password is computer generated and is sent shortly after the first contribution is received by the TSP. Participants will be prompted to customize their passwords when they log into their accounts for the first time.'
+      'A combination of letters, numbers, and special characters that you create to log in to My Account.'
   },
   {
     term: 'Pay Entry Basic Date',
@@ -518,7 +523,7 @@ var glossaryTerms = [
   {
     term: 'Two-step authentication',
     definition:
-      'Security process in which participants provide two different authentication factors to verify themselves. Two-factor authentication methods rely on a user providing a password, as well as a second factor, such as a single-use verfication code. The code is delivered by text message to a smart phone previosuly registered by the participant.'
+      'Security process in which you provide two different authentication factors to verify your identity, such as a password and verification code to log in to My Account.'
   },
   {
     term: 'Uniformed Services',
@@ -533,7 +538,17 @@ var glossaryTerms = [
   {
     term: 'User ID',
     definition:
-      "See &#8220;<a data-term='Customized User ID'>Customized User ID</a>.&#8221;"
+      'A combination of letters, numbers, and symbols that you create to log in to My Account'
+  },
+  {
+    term: 'Validation Code',
+    definition:
+      'Six-digit code you receive to validate an email address or phone number. You may validate your phone number by text message or by automated phone call. This code expires after one hour.'
+  },
+  {
+    term: 'Verification Code',
+    definition:
+      'Six-digit code you receive by phone to verify your identity as part of two-step authentication for logging in to My Account and completing certain account transactions. You may receive this code by text message or by automated phone call. This code expires after 10 minutes.'
   },
   {
     term: 'Vested Account Balance',

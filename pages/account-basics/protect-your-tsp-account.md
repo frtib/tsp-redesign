@@ -68,12 +68,12 @@ You may encounter software or mobile applications that reference the Thrift Savi
 
 ## Two-step authentication helps prevent fraud
 
-All TSP participants must use two-step authentication to log in to My Account. Two-step authentication helps you protect your account against fraud by prompting you for a one-time code each time you log in. This login process is more secure because it means that online access to your account requires something you know (your user ID and password) and something you have (a one-time code you receive by phone). Someone who tries to log in to your account fraudulently won’t be able to gain access without the code.
+All TSP participants must use <span data-term="Two-step authentication" class="js-glossary-toggle term term-end">two-step authentication</span> to log in to <span data-term="My Account" class="js-glossary-toggle term term-end">My Account</span>. Two-step authentication helps you protect your account against fraud by prompting you for a one-time code each time you log in. This login process is more secure because it means that online access to your account requires something you know (your <span data-term="User ID" class="js-glossary-toggle term term-end">user ID</span> and <span data-term="Password" class="js-glossary-toggle term term-end">password</span>) and something you have (a <span data-term="One-time Code" class="js-glossary-toggle term term-end">one-time code</span> that you receive by phone). Someone who tries to log in to your account fraudulently won’t be able to gain access without the code.
 
 ### Tips for using two-step authentication
 
-**Validate at least one contact method that will stay with you through career transitions, such as a personal email or personal phone number.** If you need to log into your email to retrieve the validation code, open a new tab or window to do so.
++ **Validate a personal phone number.**  
+  It’s important to use a phone number that will stay with you through career transitions.
 
-**Consider validating two email addresses and a phone number.** When you log into My Account, you will see a prompt to choose the contact method you want to use to receive your login verification code. By validating multiple contact methods, you have more flexibility in how to access your account.
-
-**Make sure your contact method is secure.** Your account is only as secure as your login credentials. Make sure you enable any additional security features, such as two-step authentication and passcodes, on your email accounts and devices.
++ **Make sure your contact methods are secure.**  
+  Your account is only as secure as your login credentials and contact methods. Make sure you enable any additional security features, such as passcodes and two-step authentication, on your devices and for all online accounts.
