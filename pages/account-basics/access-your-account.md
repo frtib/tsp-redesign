@@ -15,13 +15,13 @@ redirect_from:
 
 When you become a TSP participant, you will receive:
 
-+ A TSP account number - the primary means of identifying your account. Once you have logged in to your account on the website, you can create a customized user ID to use instead of your account number for web transactions;
-+ A password to access your account on the website; and
-+ A Personal Identification Number (PIN), which you will use to access your account on the ThriftLine (1-877-968-3778).
++ A TSP account number - the primary means of identifying your account. You’ll create a user ID to use instead of your account number to log in to <span data-term="My Account" class="js-glossary-toggle term term-end">My Account</span>
++ A customizable web password to access your account online in My Account; and
++ A Personal Identification Number (PIN), which you can use to access your account on the [ThriftLine]({{ site.baseurl }}/contact/).
 
-When you log in to your TSP account for the first time, you will add and validate an email or phone number in order to use two-step authentication for additional security.
+When you log in to your TSP account for the first time, you will add and validate a phone number in order to use <span data-term="Two-step authentication" class="js-glossary-toggle term term-end">two-step authentication</span> and add other profile information for additional account security.
 
-Two-step authentication helps you protect your account against fraud by prompting you for a one-time verification code each time you log in. This login process is more secure because it means that online access to your account requires something you know (your account number or user ID and password) and something you have (a one-time verification code you receive in your email or on your phone). Someone who tries to log in to your account fraudulently won’t be able to gain access without the code.
+Learn more about [protecting your TSP account]({{ site.baseurl }}/account-basics/protect-your-tsp-account/).
 
 <div class="usa-alert  usa-alert-info usa-alert-paragraph">
 <div class="usa-alert-body" markdown="1">
@@ -39,12 +39,3 @@ TSP web pages are best viewed with one of the following browsers:
 **Note**: For all browsers listed above, we recommend using the current version with auto update enabled.
 </div>
 </div>
-
-## Keep your account information safe
-
-The security of your account number (or user ID), password and ThriftLine PIN is critical to safeguarding the assets in your TSP account. You are responsible for any activity in your account transacted by someone who has access to these numbers. Remember to:
-+ Validate your contact information in your My Account [profile settings]({{ site.profile_settings }}){:target="\_blank"}.
-+ Use strong and unique passwords.
-+ Beware of phishing scams.
-+ Close your browser after you log out.
-+ Keep your contact information up to date.
