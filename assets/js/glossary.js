@@ -20,7 +20,7 @@ var glossaryTerms = [
   {
     term: 'Account Number',
     definition:
-      "The 13-digit number that the TSP assigns to a participant to identify his or her TSP account. The participant must use this TSP account number (or a <a data-term='Customized User ID'>customized user ID</a>) in conjunction with his or her Web password to log into the My Account section of the TSP website, and must use this number with his or her Personal Identification Number (PIN) to access his or her account on the ThriftLine."
+      "The 13-digit number that the TSP assigns to a participant to identify his or her TSP account."
   },
   {
     term: 'Active Investing',
