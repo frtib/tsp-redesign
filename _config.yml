@@ -21,6 +21,8 @@ message_center: "https://secure.tsp.gov/tsp/securemsg.do?_name=securemsg"
 profile_settings: "https://secure.tsp.gov/tsp/profileSettings.do?subaction=view&amp;_name=profile"
 recent_transactions: "https://secure.tsp.gov/tsp/activity.do?subaction=RecentTrans&_name=activity"
 statements: "https://secure.tsp.gov/tsp/quarterlyStmt.do?subaction=view&amp;_name=stmts"
+userid_create: "https://secure.tsp.gov/tsp/createUserID.html"
+userid_forgot: "https://secure.tsp.gov/tsp/forgottenUserid.html"
 withdrawals: "https://secure.tsp.gov/tsp/addlWithdrawals.do?subaction=wdMenu&_name=wd"
 
 # To enable search, uncomment the search section
