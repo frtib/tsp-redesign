@@ -1,7 +1,6 @@
 ---
 title: How your My Account login is changing
 permalink: /plan-news/login-changing-2020-10-06/
-latest: y
 ---
 
 **How your My Account login is changing** &#8212; Beginning late October 2020, you’ll need a user ID, password, and validated phone number to receive an authentication code and log in securely to My Account. We’re also adding new features to make this change as easy as possible for you.

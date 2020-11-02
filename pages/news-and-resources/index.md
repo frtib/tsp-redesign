@@ -39,7 +39,9 @@ redirect_from:
       <div id="a1" class="usa-accordion-content">
         <p><span id="catchup-limit">Unavailable</span> Catch-up contribution</p>
         <p class="hide"><span id="withholding-allowance">Unavailable</span> Withholding Allowance</p>
-        <p><span id="annual-addition">Unavailable</span> Annual addition</p>
+        <!-- Temporary manual edit -->
+        <p><strong>$58,000</strong> Annual addition</p>
+        <!-- <p><span id="annual-addition">Unavailable</span> Annual addition</p> -->
       </div>
     </li>
     </ul>
