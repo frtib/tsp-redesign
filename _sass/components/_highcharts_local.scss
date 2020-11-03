@@ -3,13 +3,13 @@
 .highcharts-color-c { fill: $color-c-fund; stroke: $color-c-fund; stroke-width: 1px; }
 .highcharts-color-s { fill: $color-s-fund; stroke: $color-s-fund; stroke-width: 1px; }
 .highcharts-color-i { fill: $color-i-fund; stroke: $color-i-fund; stroke-width: 1px; }
-.highcharts-color-ig { fill: $color-index-g; stroke: $color-index-g; stroke-width: 1px; }
-.highcharts-color-if { fill: $color-index-f; stroke: $color-index-f; stroke-width: 1px; }
-.highcharts-color-ic { fill: $color-index-c; stroke: $color-index-c; stroke-width: 1px; }
-.highcharts-color-is { fill: $color-index-s; stroke: $color-index-s; stroke-width: 1px; }
-.highcharts-color-ii { fill: $color-index-i; stroke: $color-index-i; stroke-width: 1px; }
+.highcharts-color-ig { fill: $color-index-g; stroke: $color-index-g; stroke-width: 1px; stroke-dasharray: 10 10; }
+.highcharts-color-if { fill: $color-index-f; stroke: $color-index-f; stroke-width: 1px; stroke-dasharray: 10 10; }
+.highcharts-color-ic { fill: $color-index-c; stroke: $color-index-c; stroke-width: 1px; stroke-dasharray: 10 10; }
+.highcharts-color-is { fill: $color-index-s; stroke: $color-index-s; stroke-width: 1px; stroke-dasharray: 10 10; }
+.highcharts-color-ii { fill: $color-index-i; stroke: $color-index-i; stroke-width: 1px; stroke-dasharray: 10 10; }
 .highcharts-color-lf { fill: $color-l-fund; stroke: $color-l-fund; stroke-width: 1px; }
-.highcharts-color-il { fill: $color-index-l; stroke: $color-index-l; stroke-width: 1px; }
+.highcharts-color-il { fill: $color-index-l; stroke: $color-index-l; stroke-width: 1px; stroke-dasharray: 10 10; }
 .highcharts-color-black { fill: $color-black; stroke: $color-black; stroke-width: 1px; }
 .highcharts-color-white { fill: $color-white; stroke: $color-white; stroke-width: 1px; }
 .highcharts-color-red { fill: red; stroke: red; stroke-width: 1px; }
