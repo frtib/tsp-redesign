@@ -3,6 +3,8 @@ layout: default
 main:
   class: usa-grid usa-section usa-content usa-layout-docs
 scripts:
+document-ready:
+  - addFormModals();
 ---
 {% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}
 {% assign xtra_class = '' %}

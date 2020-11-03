@@ -246,7 +246,7 @@ var glossaryTerms = [
   {
     term: 'Investment Allocation',
     definition:
-      "A participant's choice that tells the TSP (1) how money going into his or her account should be invested in the TSP funds (contribution allocation), and/or (2) how money already in the TSP account should be invested in the TSP funds (interfund transfer). An investment allocation can be made on the TSP website in My Account, or by calling the ThriftLine toll-free at <nobr>1-TSP-YOU-FRST</nobr> <nobr>(1-877-968-3778).</nobr> (See &#8220;<a data-term='Contribution Allocation'>Contribution Allocation'></a>&#8221; and &#8220;<a data-term='Interfund Transfer'>Interfund Transfer</a>.&#8221;)"
+      "A participant's choice that tells the TSP (1) how money going into his or her account should be invested in the TSP funds (contribution allocation), and/or (2) how money already in the TSP account should be invested in the TSP funds (interfund transfer). An investment allocation can be made on the TSP website in My Account, or by calling the ThriftLine toll-free at <span class='nobr'>1-TSP-YOU-FRST</span> <span class='nobr'>(1-877-968-3778).</span> (See &#8220;<a data-term='Contribution Allocation'>Contribution Allocation'></a>&#8221; and &#8220;<a data-term='Interfund Transfer'>Interfund Transfer</a>.&#8221;)"
   },
   {
     term: 'IRS Life Expectancy Tables',
