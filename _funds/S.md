@@ -16,7 +16,7 @@ questions:
   - question: Why should I invest in the S Fund?
     answer: While investment in the S Fund carries risk, it also offers the opportunity to experience gains from equity ownership of small-to-mid-sized U.S. companies. It provides and excellent means of further diversifying your domestic equity holdings.
   - question: Am I ok with market and inflation risk?
-    answer: There is a risk of loss if the Dow Jones U.S. Completion TSM Index declines in response to changes in overall economic conditions (<span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span>) or if the S Fund does not grow enough to offset the reduction in purchasing power (<span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>).
+    answer: There is a risk of loss if the Dow Jones U.S. Completion TSM Index declines in response to changes in overall economic conditions (<span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span>) or if <span class="nobr">S Fund</span> investments do not outpace or grow enough to offset the reduction in purchasing power (<span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>).
   - question: How can I use the S Fund in my TSP?
     answer: The S Fund can be useful in a portfolio that also contains stock funds that track other indexes. The C, S, and I Funds, for example, track different segments of the overall stock market without overlapping. By investing in all segments of the stock market (as opposed to just one), you reduce your exposure to market risk.
 avg_annual_returns:
@@ -72,7 +72,7 @@ top_ten_holdings:
   - name: Liberty Broadband Corp. Series C
     abbr: LBRDK
 additional_info: |
-  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
+  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
 
   Therefore, it is not efficient for the Fund to invest in every stock in the index. The <span class="nobr">S Fund</span> holds the stocks of most of the companies in the index with market values greater than $1 billion. However, a mathematical sampling technique is used to select among the smaller stocks.
 
