@@ -16,7 +16,7 @@ questions:
   - question: Why should I invest in the C Fund?
     answer: Investment in the C Fund offers the opportunity to experience gains from equity ownership of large and mid-sized U.S. company stocks.
   - question: Am I ok with market and inflation risk?
-    answer: C Fund returns move up and down with the prices of the stocks in the S&P 500 Index (<span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span>) or if C Fund investments do not grow enough to offset the reduction in purchasing power (<span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>).
+    answer: C Fund returns move up and down with the prices of the stocks in the S&P 500 Index (<span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span>) or if C Fund investments do not outpace or grow enough to offset the reduction in purchasing power (<span data-term="Inflation Risk" class="js-glossary-toggle term term-end">inflation risk</span>).
   - question: How can I use the C Fund in my TSP?
     answer: The C Fund can be useful in a portfolio that also contains stock funds that track other indexes such as the S Fund and the I Fund. By investing in all segments of the stock market (as opposed to just one), you reduce your exposure to market risk. The C Fund can also be useful in a portfolio that contains bonds. A retirement portfolio that contains a bond fund like the F Fund, along with other stock funds, like the S and I Funds, will tend to be less volatile than one that contains stock funds alone.
 avg_annual_returns:
@@ -76,7 +76,7 @@ additional_info: |
 
   The S&P 500 Index is an index of 500 large to medium-sized U.S. companies that are traded in the U.S. stock markets. The index was designed by Standard & Poor’s Corporation (S&P) to provide a representative measure of U.S. stock markets’ performance. The companies in the index represent 157 industries classified into the 11 major sector groups shown in the chart. The stocks in the S&P 500 Index represent approximately 82% of the market value of the U.S. stock markets.
 
-  The FRTIB Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">C Fund</span> to BlackRock Institutional Trust Company, N.A. The <span class="nobr">C Fund</span> holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">C Fund</span> is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
+  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">C Fund</span> to BlackRock Institutional Trust Company, N.A. The <span class="nobr">C Fund</span> holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">C Fund</span> is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
 risks: |
   Your investment in the <span class="nobr">C Fund</span> is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
