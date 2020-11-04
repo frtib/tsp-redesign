@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Account basics
+title: Troubleshoot account access
 sidenav: manage-your-plan
 styles:
 scripts:

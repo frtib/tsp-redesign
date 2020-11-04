@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Historical information on contribution limits
+title: Historical contribution limits
 styles:
 sidenav: agency-service-reps
 scripts:

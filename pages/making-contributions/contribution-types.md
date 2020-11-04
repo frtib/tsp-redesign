@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Making contributions
+title: Contribution types
 styles:
 sidenav: manage-your-plan
 scripts:

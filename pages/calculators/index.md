@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: How much should I save? (Federal Ballpark E$timate&#174;)
+title: How much should I save?
 title-alternate: How much should I save? <br>(Federal Ballpark E$timate<sup>&#174;</sup>)
 styles:
 sidenav: calculators
