@@ -133,8 +133,8 @@ function buildSideScrollTableRoR(chartName, data) {
   annualData.unshift(header);
   monthlyData.unshift(header.replace("Year","Month"));
   // console.log(annualData);
-  fundHighchart(chartName+'-annual', annualData.join("\n"), '', true);
-  fundHighchart(chartName+'-monthly', monthlyData.join("\n"), '', true);
+  fundHighchartBar(chartName+'-annual', annualData.join("\n"), '', true);
+  fundHighchartBar(chartName+'-monthly', monthlyData.join("\n"), '', true);
   return table;
 }
 

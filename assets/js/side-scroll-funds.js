@@ -223,17 +223,78 @@ function setTableCheckbox(name,idx,val) {
   if (val) { $('#'+name).prop('checked', true); } else { $('#'+name).prop('checked', false); }
 }
 
-function fundHighchart(chartName, csvData, title, indexFundsFlag) {
-  // monthData = [100, 200, 300, 400];
-  //console.log(monthData);
-  //console.log('in getMonthlyReturnsAll');
-  var series14 = [{ colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
-    { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
-    { colorIndex: 'g' }, { colorIndex: 'f' }, { colorIndex: 'if' }, { colorIndex: 'c' }, { colorIndex: 'ic' },
-    { colorIndex: 's' }, { colorIndex: 'is' }, { colorIndex: 'i' }, { colorIndex: 'ii' }];
-    var series10 = [{ colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
+function getSeriesArray(indexFlag) {
+  if (indexFlag) {
+    return [{ colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
+      { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
+      { colorIndex: 'g' }, { colorIndex: 'f' }, { colorIndex: 'if' }, { colorIndex: 'c' }, { colorIndex: 'ic' },
+      { colorIndex: 's' }, { colorIndex: 'is' }, { colorIndex: 'i' }, { colorIndex: 'ii' }];
+  } else {
+    return [{ colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
       { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' }, { colorIndex: 'lf' },
       { colorIndex: 'g' }, { colorIndex: 'f' }, { colorIndex: 'c' }, { colorIndex: 's' }, { colorIndex: 'i' }];
+  }
+}
+function fundHighchartBar(chartName, csvData, title, indexFundsFlag) {
+console.log('fundHighchartBar ', chartName);
+  return Highcharts.chart(chartName, {
+    credits: { enabled: false },
+    chart: {
+      type: 'column',
+      styledMode: true,
+      zoomType: 'xy'
+    },
+    title: {
+      align: 'left',
+      text: title
+    },
+    data: { csv: csvData, },
+    plotOptions: {
+      series: { events: {
+        legendItemClick: function(e) {
+          var i = e.target.index;
+          var vis = !this.visible;
+          fundHighchartClick(chartName, i, this.name, vis);
+          return false;
+        }
+      }}
+    },
+    responsive: {
+      rules: [{
+        condition: {
+          minWidth: 500
+        },
+        chartOptions: {
+          legend: {
+            align: 'right', verticalAlign: 'top',
+            layout: 'vertical', x: 0, y: 20
+          },
+        }
+      }]
+    },
+    series: getSeriesArray(indexFundsFlag),
+    // series: [{ data: monthData }],
+    exporting: { enabled: true },
+    //       chart.options.exporting.enabled = false;
+    yAxis: {
+      labels: {
+        formatter: function() {
+          return fundYaxisFormat(this.value);
+        }
+      },
+      title: { text: '' }
+    },
+    xAxis: { type: 'datetime' },
+    tooltip: {
+      formatter: function () {
+        return fundTooltip(this, chartName);
+      },
+      shared: true,
+      useHTML: true
+    }
+  });
+}
+function fundHighchart(chartName, csvData, title, indexFundsFlag) {
   return Highcharts.chart(chartName, {
     credits: { enabled: false },
     chart: {
@@ -268,7 +329,7 @@ function fundHighchart(chartName, csvData, title, indexFundsFlag) {
         }
       }]
     },
-    series: indexFundsFlag ? series14 : series10,
+    series: getSeriesArray(indexFundsFlag),
     // series: [{ data: monthData }],
     exporting: { enabled: true },
     //       chart.options.exporting.enabled = false;
