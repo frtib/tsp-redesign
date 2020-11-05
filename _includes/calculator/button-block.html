@@ -44,14 +44,13 @@ Generates a list of buttons.  The box around them and the ul should be done by t
 {% if bonusButton2 != 0 %}{{ bonusButton2}}{% endif %}
 
 {% if nextOK != 0 %}
-<span id="areYouSurebottomButtons{{ panelID }}" style="display:none">
-  {% capture click %}processPanel(-{{ panelID }}, 0, {{ next }}, 0); return false;{% endcapture %}
-  {% include calculator/button.html onClick=click xtraClass2='forward' inList=1
-     text='Add <img src="/resources/images/yield_icon_calculator.png" alt="Required field" height="12px"> to PDF later' %}
-</span>
 <span id="continue{{ panelID }}NotOK" style="display: none">
   {% capture click %}processPanel({{ panelID }}, 0, 0, 0); return false;{% endcapture %}
   {% include calculator/button.html text='Continue' onClick=click xtraClass2='primary forward' xtraClass1='disabled' inList=1 %}
+</span>
+<span id="areYouSurebottomButtons{{ panelID }}" style="display:none">
+  {% capture click %}processPanel(-{{ panelID }}, 0, {{ next }}, 0); return false;{% endcapture %}
+  {% include calculator/button.html onClick=click xtraClass1='attention write-in' xtraClass2='forward' inList=1 text='Continue and write-in later' %}
 </span>
 {% endif %}
 

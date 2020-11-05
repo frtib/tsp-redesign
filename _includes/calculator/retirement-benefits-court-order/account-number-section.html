@@ -1,0 +1,89 @@
+{% assign prefix = include.prefix | default: 'XXX' %}
+{% assign prefixAD = prefix | append: 'AccountTypeDiv' %}
+{% assign prefixAnchor = prefix | append: '-account-numbers-anchor' %}
+{% assign fieldID = prefix | append: 'account-type' %}
+
+{% capture explanation %}
+If you are not sure what type of Thrift Savings Plan account the participant has, please contact the ThriftLine
+at 1-TSP-YOU-FRST (1-877-968-3778).  Release of any information  by the ThriftLine is subject to the Privacy Act.
+An incorrect selection may lead to a delay, incorrect payment or the rejection of your court order.
+{% endcapture %}
+{% include calculator/div-panel-form-field.html
+  outerDivID=prefixAD outerDivClass=""
+  fieldID=fieldID inputType="none" H2="TSP Account Type" anchor=prefixAnchor
+  explanation=explanation  dontCloseOuterDiv=true
+%}
+
+<div id="{{prefix}}-account-numbers-div" class="">
+  <fieldset>
+    <legend class="usa-sr-only">Account types to be divided</legend>
+    <input type="hidden" id="{{prefix}}LastAcctChanged" value="{{prefix}}civacctNum">
+    <!-- Civilian -->
+    <ul class="usa-unstyled-list account-type">
+      <li>
+        <input type="checkbox" id="{{prefix}}civcb" name="accountType" value="{{prefix}}civcb"
+          onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
+        <label for="{{prefix}}civcb">Civilian <span class="nobr">(CSRS or FERS)</span></label>
+      </li>
+
+      <li>
+        <div id="{{prefix}}civacctNum-div" class="hide">
+          <label class="" id="{{prefix}}civacctNum-label" for="{{prefix}}civacctNum">Account number</label>
+          <span class="" id="{{prefix}}civacctNum-error-message" role="alert"></span>
+          <input id="{{prefix}}civacctNum" name="{{prefix}}civacctNum" class="format-left" value="" data-store="" placeholder=""
+            aria-labelledby="{{prefix}}civacctNum-label" type="text"
+            onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
+            onblur="lastAcctNumChange('{{prefix}}', 'civacctNum'); accountNumbersGood(0, '{{prefix}}');"
+            onchange="lastAcctNumChange('{{prefix}}', 'civacctNum'); accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+            <div id="{{prefix}}-dual-accounts1" class="dual-accounts flex hide"><i class="fas fa-info-circle"></i> If you have both a civilian and uniformed services account, the account numbers are the same.</div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- USV -->
+    <ul class="usa-unstyled-list account-type">
+    <li>
+      <input type="checkbox" id="{{prefix}}usvcb" name="accountType" value="{{prefix}}usvcb"
+        onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');">
+      <label for="{{prefix}}usvcb"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(Ready Reserve or Active Duty)</span></label>
+    </li>
+
+    <li class="none">
+      <div id="{{prefix}}usvacctNum-div" class="hide">
+        <label class="" id="{{prefix}}usvacctNum-label" for="{{prefix}}usvacctNum">Account number</label>
+        <span class="" id="{{prefix}}usvacctNum-error-message" role="alert"></span>
+        <input id="{{prefix}}usvacctNum" name="{{prefix}}usvacctNum" class="format-left" value="" data-store="" placeholder=""
+          aria-labelledby="{{prefix}}usvacctNum-label" type="text"  xdisabled xpattern="\d*"
+          onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
+          onblur="lastAcctNumChange('{{prefix}}', 'usvacctNum'); accountNumbersGood(0, '{{prefix}}');"
+          onchange="lastAcctNumChange('{{prefix}}', 'usvacctNum'); accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+        <div id="{{prefix}}-dual-accounts2" class="dual-accounts flex hide"><i class="fas fa-info-circle"></i> If you have both a civilian and uniformed services account, the account numbers are the same.</div>
+      </div>
+
+    </li>
+    </ul>
+
+    <!-- Beneficiary Participant -->
+    <ul class="usa-unstyled-list account-type">
+      <li>
+      <input type="checkbox" id="{{prefix}}BPAcb" name="accountType" value="{{prefix}}BPAcb"
+        onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
+      <label for="{{prefix}}BPAcb"><span data-term="Beneficiary Participant" class="js-glossary-toggle term term-end">Beneficiary Participant</span></label>
+    </li>
+
+    <li>
+      <div id="{{prefix}}BPAacctNum-div" class="hide">
+        <label class="" id="{{prefix}}BPAacctNum-label" for="{{prefix}}BPAacctNum">Account number</label>
+        <span class="" id="{{prefix}}BPAacctNum-error-message" role="alert"></span>
+        <input id="{{prefix}}BPAacctNum" name="{{prefix}}BPAacctNum" class="format-left" value="" data-store="" placeholder=""
+          aria-labelledby="{{prefix}}BPAacctNum-label" type="text"
+          onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
+          onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+      </div>
+      <!-- END div.usa-input-error -->
+    </li>
+    </ul>
+  </fieldset>
+  <span class="usa-input-error-message" id="{{prefix}}-account-numbers-error-message" role="alert"></span>
+</div>
+</div><!-- END div.panel-form-field -->{% comment %}closes div panel form field at top of this file{% endcomment %}

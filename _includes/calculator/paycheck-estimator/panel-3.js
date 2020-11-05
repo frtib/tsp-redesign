@@ -150,7 +150,7 @@ function option1Good(submit) {
   var catch_trad = getPosInteger('catch_option1Trad', -1);
   var catch_roth = getPosInteger('catch_option1Roth', -1);
   if ((trad_set + roth_set) <= -2) {
-    console.log(trad_set, roth_set);
+    // console.log(trad_set, roth_set);
     var msg = "Enter either a whole percentage or a fixed dollar amount for traditional and/or Roth contributions for Scenario 1.";
     if ((rs == 'USBRS') || (rs == 'US')) {
       msg = "Enter a whole percentage for traditional and/or Roth contributions for Scenario 1.";

@@ -11,7 +11,7 @@ permalink: /planning-for-life-events/retirement-benefits-court-order-dev/
 progress-steps: [Introduction,Scenario,Party 1,Party 2,Attorney,Case,Awards,Summary]
 redirect_from:
   - /LifeEvents/personal/spouse/courtOrder.html
-published: false
+published: true
 ---
 
 <ul class="usa-accordion rbco">
@@ -123,12 +123,12 @@ published: false
 
         <li><input
         type="radio"
-        id="relationshipDependant"
+        id="relationshipDependent"
         name="relationship"
         value="D"
         onblur="pickPath(0, 'D');"
         onchange="pickPath(0, 'D');">
-        <label for="relationshipDependant">Child or dependent</label></li>
+        <label for="relationshipDependent">Child or dependent</label></li>
 
         <li><input
         type="radio"
@@ -208,12 +208,12 @@ published: false
       <li>
       <input
         type="radio"
-        id="relationshipDependant"
+        id="relationshipDependent"
         name="relationship"
         value="D"
         onblur="pickPath(0, 'D');"
         onchange="pickPath(0, 'D');">
-      <label for="relationshipDependant">Child or dependent</label>
+      <label for="relationshipDependent">Child or dependent</label>
       </li>
       <li>
       <input
@@ -241,12 +241,12 @@ published: false
   <li>
   <input
   type="radio"
-  id="receiveTwo"
+  id="receiveBoth"
   name="receive"
   value="2"
   onblur="pickPath(0, 2);"
   onchange="pickPath(0, 2);">
-  <label for="receiveTwo">Yes</label>
+  <label for="receiveBoth">Yes</label>
   </li>
   <li>          
   <input
@@ -2119,8 +2119,8 @@ published: false
         type="text"
         maxlength="20"
         value=""
-        onchange="QDROlicenseGood(0, 'QDRO');"
-        onblur="QDROlicenseGood(0, 'QDRO');">
+        onchange="QDROlicenseGood(0, 0, 'QDRO');"
+        onblur="QDROlicenseGood(0, 0, 'QDRO');">
 
 
       </fieldset><!-- END attorney fieldset -->

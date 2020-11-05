@@ -21,6 +21,17 @@ div.view {
 }
 // CALCULATOR PANEL
 section {
+  input.attention {
+    background-color: #f9c642;
+  }
+  select.attention {
+    background-color: #f9c642;
+  }
+  span.attention { // warning label
+    background-color: #f9c642;
+    color: #222223;
+  }
+
   &.calculator-panel {
     border: none;
 

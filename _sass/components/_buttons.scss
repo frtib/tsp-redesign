@@ -77,4 +77,11 @@ button {
       padding-left: 0.5rem;
     }
   }
+  &.write-in {
+    background-color: #f9c642;
+  }
+  &.attention {
+    background-color: #f9c642;
+    color: #222223;
+  }
 }

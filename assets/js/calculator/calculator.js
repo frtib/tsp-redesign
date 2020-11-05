@@ -118,6 +118,24 @@ function clearWarning(element) {
   // document.getElementById(element).setAttribute("aria-describedby", '');
   return true;
 }
+var attentionClass = "attention";
+function isWriteIn(element) {
+  if ($('#'+element).hasClass(attentionClass)) { return true; }
+  return false;
+}
+function showWriteIn(element, message) {
+  $('#'+element+'-error-message').addClass("attention");
+  $('#'+element).addClass("attention");
+  $('#'+element+'-error-message').html(message);
+  gotoAnchor(element+'-anchor');
+  return false;
+}
+function clearWriteIn(element) {
+  $('#'+element+'-error-message').removeClass("attention");
+  $('#'+element).removeClass("attention");
+  $('#'+element+'-error-message').html('');
+  return true;
+}
 
 
 function gotoAnchor(anchor) { location.replace("#" + anchor); }
@@ -180,5 +198,97 @@ function hideBlock(hideFlag, block1, block2) {
   }
   $('#'+block1).removeClass('hide');
   $('#'+block2).removeClass('hide');
+  return false;
+}
+
+// generic string validation
+function stringGood(submit, writein, prefix, id, errorMsg) {
+  var myID = prefix + id;
+  // if (writein) { clearWriteIn(myID); }
+  clearWriteIn(myID);
+  if ($('#'+myID).length) {
+    var val = $.trim($('#'+myID).val());
+    $('#lblAYR'+myID).html(val);
+    if (val.length > 0) { return clearError(myID); }
+  }
+  if (submit) { return showError(myID, errorMsg); }
+  if (writein) { return showWriteIn(myID, errorMsg); }
+  return clearError(myID);
+}
+// generic string validation for RBCO
+function stringGood2(submit, writein, prefix, id, errorMsg) {
+  var myID = prefix + id;
+  // if (writein) { clearWriteIn(myID); }
+  clearWriteIn(myID);
+  if ($('#'+myID).length) {
+    var val = $.trim($('#'+myID).val());
+    $('#lblAYR'+myID).html(val);
+    if (val.length > 0) { return clearError(myID); }
+  }
+  if (submit) { return showError(myID, errorMsg); }
+  if (writein) { return showWriteIn(myID, ''); }
+  return clearError(myID);
+}
+
+// generic dropdown validation
+function ddGood(submit, writein, prefix, id, errorMsg) {
+  var myID = prefix + id;
+  var val = $('#'+myID).val();
+  $('#lblAYR'+myID).html(val);
+  if (writein) { if (val == 'Select') { return showWriteIn(myID, errorMsg); } }
+  clearWriteIn(myID);
+  if (submit == 0) { return clearError(myID); }
+  if (val == 'Select') { return showError(myID, errorMsg); }
+  return clearError(myID);
+}
+// generic dropdown validation RBCO
+function ddGood2(submit, writein, prefix, id, errorMsg) {
+  var myID = prefix + id;
+  var val = $('#'+myID).val();
+  $('#lblAYR'+myID).html(val);
+  if (writein) { if (val == 'Select') { return showWriteIn(myID, ''); } }
+  clearWriteIn(myID);
+  if (submit == 0) { return clearError(myID); }
+  if (val == 'Select') { return showError(myID, errorMsg); }
+  return clearError(myID);
+}
+
+// remove troublesome characters (MS WORD) from an input field, return the string.
+function launderString(string) {
+    // smart single quotes and apostrophe
+    string = string.replace(/[\u2018|\u2019|\u201A]/g, "\'");
+    // smart double quotes
+    string = string.replace(/[\u201C|\u201D|\u201E]/g, "\"");
+    // ellipsis
+    string = string.replace(/\u2026/g, "...");
+    // dashes
+    string = string.replace(/[\u2013|\u2014]/g, "-");
+    // circumflex
+    string = string.replace(/\u02C6/g, "^");
+    // open angle bracket
+    string = string.replace(/\u2039/g, "");
+    // spaces
+    string = string.replace(/[\u02DC|\u00A0]/g, " ");
+
+    string = string.replace('&', " ");
+
+    return string;
+}
+// fetch input field value, clean it, reset it, return it
+function launderInput(field) {
+  var val = launderString($.trim($('#'+field).val()));
+  $('#'+field).val(val);
+  return val;
+}
+
+function filterNumeric (event) {
+  var key = event.key;
+  var keyCode = ('which' in event) ? event.which : event.keyCode;
+  if (event.shiftKey) { return false; } // shift, disallow special chars over numbers
+  if (event.ctrlKey) { return false; } // control key
+  if (keyCode >= 48 && keyCode <= 57) { return true; }  // digit
+  if (keyCode >= 96 && keyCode <= 105) { return true; }  // keypad
+  if ((keyCode == 46) || (keyCode == 8)) { return true; }; // delete, bs
+  if (keyCode >= 35 && keyCode <= 40 ) { return true; }; // end, home, arrow keys
   return false;
 }

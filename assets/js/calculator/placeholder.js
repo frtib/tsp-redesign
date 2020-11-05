@@ -18,6 +18,25 @@ function submitTSP(form) {
   return true;
 }
 
+
+function setPlaceholder(input, width) {
+                // var val = input.attr('data-store').toString();
+                var val = $(input).attr('data-store').toString();
+                var len = val.length;
+                var x = "xxxxxxxxxxxxxxxxxxxxxx";
+                if (len > 4) {
+                   x = x.slice(4 - len);
+                } else {
+                   x = '';
+                }
+                var placeholder = x + val.slice(-4);
+                placeholder = placeholder.slice(-width);
+                $(input).attr('placeholder', placeholder);
+                // $(input).css('color','#BBBCBF');
+                // $(input).val('');
+                $(input).val(placeholder);
+}
+
 function setAccountPlaceholder(input) {
                 // var val = input.attr('data-store').toString();
                 var val = $(input).attr('data-store').toString();
@@ -61,8 +80,8 @@ function accountNumberTSP(id) {
                 var input = $(jQid);
                 var val = $(jQid).val();
                 $(jQid).attr('data-store', val);
-                // setAccountPlaceholder(input);
-                setAccountPlaceholder(jQid);
+                // setPlaceholder(input, 13);
+                setPlaceholder(jQid, 13);
   });
   storesTSP.push(jQid);
 }

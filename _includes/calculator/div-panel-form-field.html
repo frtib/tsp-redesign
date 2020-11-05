@@ -41,18 +41,20 @@ This script produces an input area for calculator panels.
 {% assign focusCommas = 'onFocus="removeCommas(' | append: element | append: ');" ' | append: focusOutCommas %}
 {% endif %}
 {% assign anchor = include.anchor | default: '' %}
+{% assign bonusLabel = include.bonusLabel | default: '' %}
 {% assign dontOpenOuterDiv = include.dontOpenOuterDiv | default: false %}
 {% assign dontCloseOuterDiv = include.dontCloseOuterDiv | default: false %}
 {% if dontOpenOuterDiv %}{% assign dontCloseOuterDiv = true %}{% endif %}
 <div>{% if id != 'myId' %}<a name="{{id}}-anchor"></a>{% endif %}
 {% if anchor != '' %}<a name="{{anchor}}"></a>{% endif %}</div>
 {% unless dontOpenOuterDiv %}<div {{outerDivID}} class="panel-form-field {{outerDivClass}}" >{% endunless %}
-  {% if H2 != '' %}<h2>{{H2}}</h2>{% endif %}
+  {% if H2 != '' %}<h2 id="{{id}}-H2">{{H2}}</h2>{% endif %}
   {% if inputType != 'none' %}
   {% capture commonValues %}id="{{id}}" name="{{name}}" class="{{inputClass}}"
     value="{{value}}" placeholder="{{placeholder}}" aria-labelledby="{{id}}-label"{% endcapture%}
   <div id="{{id}}-div" class="{{innerDivClass}}">
     {% if inputType != 'radio' %}
+    {% if bonusLabel != '' %}{{bonusLabel}}{% endif %}
     <label class="" id="{{id}}-label" for="{{id}}" aria-details="{{fieldID}}">{{prompt}}</label>
     <span class="usa-input-error-message" id="{{id}}-error-message" role="alert"></span>
     {% endif %}

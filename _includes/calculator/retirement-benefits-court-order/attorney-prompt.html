@@ -1,0 +1,21 @@
+{% assign prefix = include.prefix | default: 'XXX' %}
+{% assign legendStr = include.legendStr | default: "Attorney information for participant or party 1" %}
+<div class="">
+  <fieldset class="usa-fieldset-inputs usa-sans">
+    <legend class="usa-sr-only">{{legendStr}}</legend>
+    <label class="" for="{{prefix}}Lawyer" aria-details="" id="{{prefix}}LawyerPrompt">{{include.attyPrompt}}</label>
+    <span class="usa-input-error-message" id="{{prefix}}Lawyer-error-message" role="alert"></span>
+    <ul class="usa-unstyled-list">
+      <li>
+        <input type="radio" id="{{prefix}}LawyerYes" name="{{prefix}}Lawyer" value="Y"
+          onblur="pickLawyer(0, 'Y', '{{prefix}}');"  onchange="pickLawyer(0, 'Y', '{{prefix}}');">
+          <label for="{{prefix}}LawyerYes">Yes</label>
+      </li>
+      <li>
+        <input type="radio" id="{{prefix}}LawyerNo" name="{{prefix}}Lawyer" value="N"
+          onblur="pickLawyer(0, 'N', '{{prefix}}');" onchange="pickLawyer(0, 'N', '{{prefix}}');">
+          <label for="{{prefix}}LawyerNo">No</label>
+      </li>
+    </ul>
+  </fieldset>
+</div><!-- end div.usa-input-error -->
