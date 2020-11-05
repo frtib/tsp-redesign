@@ -15,8 +15,11 @@ For example, civilian payroll systems include [Employee Express]({{ site.baseurl
 
 Uniformed services can use [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"} (Army, Air Force, Navy, Marine Corps) or [Direct Access]({{ site.baseurl }}/exit/?idx=47){:rel="nofollow"} (Coast Guard and NOAA Corps).
 
+USPHS Commissioned Corps needs to fill out the paper forms and not the electronic payroll system.
+
 <div class="usa-alert usa-alert-info">
 <div class="usa-alert-body" markdown="1">
+
 ### Does your agency accept paper forms?
 {: .usa-alert-heading}
 
