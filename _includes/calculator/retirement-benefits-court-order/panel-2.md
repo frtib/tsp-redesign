@@ -7,6 +7,8 @@ Scenario panel (2) for RBCO.
 
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
 
+<h2>Case details</h2>
+
 {% include calculator/div-panel-form-field.html outerDivID="bothParticipants"
   fieldID="panel-2.1" id="payeePart"  anchor="panel2"
   inputType="radio" radioIDs="payeePartYes, payeePartNo" radioLabels="Yes, No"
