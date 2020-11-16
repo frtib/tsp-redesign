@@ -51,13 +51,13 @@ function calculate() {
   $('#deplete-text').html('Will deplete your account in');
   var fmonths = -1.0 * Math.log(1 - periodRate * accountAmount / (1.0 * amountToReceive));
   fmonths /= Math.log(1 + periodRate);
-  fmonths = Math.trunc(fmonths) + 1;
+  fmonths = mathTrunc(fmonths) + 1;
   if (isNaN(fmonths)) {
     setPaymentsLength(1000, 1000, periods);
     $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
     $('#account-depleted').html('--');
   } else {
-    var fyears = Math.trunc(fmonths/periods);
+    var fyears = mathTrunc(fmonths/periods);
     fmonths = fmonths - fyears * periods;
     setPaymentsLength(fyears, fmonths, periods);
   }
