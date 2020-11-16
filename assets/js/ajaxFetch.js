@@ -128,7 +128,7 @@ var groupFundAnnualReturns = function(setName) {
       function (data) {
           var rc = data.split("|"); // strip trailing Year
           var lines = rc[0].split("\n"); // break into rows
-          for (let i = 0; i < lines.length; i++) {
+          for (var i = 0; i < lines.length; i++) {
             if (lines[i].trim() == '') { continue; }
             var values = lines[i].split(', ');
             var fundName = mapFundName(values[0]);
