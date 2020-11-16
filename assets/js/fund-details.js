@@ -16,7 +16,7 @@ function fundTabClicked(tabObj) {
 	if (uri.indexOf("?") > 0) { uri = uri.substring(0, uri.indexOf("?")); }
   var new_uri = uri + '?tab='+tabObj.id;  // +'#performance';
   var title = document.title.split('|');
-  var newTitle = title[0].split('[')[0].trim() + ' [' + tabObj.id + '] | ' + title[1];
+  var newTitle = title[0].split(':')[0].trim() + ': ' + tabObj.id + ' | ' + title[1];
   window.history.replaceState({}, newTitle, new_uri);
   document.title = newTitle;
   // window.location.href = new_uri;
