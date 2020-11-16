@@ -292,3 +292,9 @@ function filterNumeric (event) {
   if (keyCode >= 35 && keyCode <= 40 ) { return true; }; // end, home, arrow keys
   return false;
 }
+
+// IE doesn't support Math.trunc().
+function mathTrunc(x) {
+  if (x > 0) { return Math.floor(x); }
+  return Math.ceil(x);
+}
