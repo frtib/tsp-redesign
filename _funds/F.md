@@ -35,7 +35,7 @@ summary_details:
     net_expense:    .042
     other_expense:  .004
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
-    asset_manager: BlackRock Institutional Trust Company, N.A
+    asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2018
 composition:
   - [Government/Government-Related, 41.5]

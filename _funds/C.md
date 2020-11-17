@@ -35,7 +35,7 @@ summary_details:
     net_expense:    .042
     other_expense:  .001
     benchmark_index: S&P 500 Index  | spglobal.com
-    asset_manager: BlackRock Institutional Trust Company, N.A
+    asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2018
 composition:
   - [Information Technology, 23.2]
