@@ -1,24 +1,29 @@
 @charset "utf-8";
 /* CSS Document */
 :root {
-  --progress-done-color: #02bfe7;
-  --progress-active-color: #046b99;
-  --progress-notready-color: #aeb0b5;
-  --progress-error-color: #FF2222;
-  --progress-border-color: #FFF;
+  $progress-done-color: #02bfe7;
+  $progress-active-color: #046b99;
+  $progress-notready-color: #aeb0b5;
+  $progress-error-color: #FF2222;
+  $progress-border-color: #FFF;
 }
 /*
 :root {
-  --progress-done-color: #E8C89D;
-  --progress-active-color: #AB4B00;
-  --progress-error-color: #FF2222;
-  --progress-border-color: #FFF;
+  $progress-done-color: #E8C89D;
+  $progress-active-color: #AB4B00;
+  $progress-error-color: #FF2222;
+  $progress-border-color: #FFF;
 }
 */
+$progress-done-color: #02bfe7;
+$progress-active-color: #046b99;
+$progress-notready-color: #aeb0b5;
+$progress-error-color: #FF2222;
+$progress-border-color: #FFF;
 
 /*progress tracker*/
 div#parent {
-    z-index:1;
+  z-index:1;
 	position:relative;
 	margin-left: 15px;
 	}
@@ -60,21 +65,21 @@ ol.progtrckr li {
 	text-transform: uppercase;
 	font-size: 12px;
 	//color: #999;
-  color: var(--progress-notready-color);
+  color: $progress-notready-color;
 	float: left;
 	border-top: 3px solid #CCC;
 }
 ol.progtrckr li.progtrckr-done {
-    color: var(--progress-done-color);
-    border-top: 3px solid var(--progress-done-color);
+    color: $progress-done-color;
+    border-top: 3px solid $progress-done-color;
 }
 ol.progtrckr li.progtrckr-active {
-    color: var(--progress-active-color);
-    border-top: 3px solid var(--progress-active-color);
+    color: $progress-active-color;
+    border-top: 3px solid $progress-active-color;
 }
 ol.progtrckr li.progtrckr-error {
-    color: var(--progress-error-color);
-    border-top: 3px solid var(--progress-active-color);
+    color: $progress-error-color;
+    border-top: 3px solid $progress-active-color;
 }
 ol.progtrckr li.progtrckr-disabled {
     opacity: 0.5;
@@ -104,28 +109,28 @@ ol.progstep li {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
-	color: var(--progress-border-color);
+	color: $progress-border-color;
 	float:left;
 	border: none;
 	border-radius: 0.2em;
   //background-color: #ccc;
-  background-color: var(--progress-notready-color);
+  background-color: $progress-notready-color;
 }
 ol.progstep li.progstep-done,
 ol.progstep li.progstep-active {
   cursor: pointer;
 }
 ol.progstep li.progstep-done {
-	color: var(--progress-border-color);
-	background-color: var(--progress-done-color);
+	color: $progress-border-color;
+	background-color: $progress-done-color;
 }
 ol.progstep li.progstep-active {
-	color: var(--progress-border-color);
-	background-color: var(--progress-active-color);
+	color: $progress-border-color;
+	background-color: $progress-active-color;
 }
 ol.progstep li.progstep-error {
-    color: var(--progress-border-color);
-    background-color: var(--progress-error-color);
+    color: $progress-border-color;
+    background-color: $progress-error-color;
 }
 ol.progtrckr li.progstep-disabled {
     opacity: 0.5;
