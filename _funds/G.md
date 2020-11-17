@@ -34,7 +34,7 @@ summary_details:
     gross_expense:  .053
     net_expense:    .043
     other_expense:  .000
-    benchmark_index: 90-day T-Bill Rate
+    benchmark_index: Not applicable
     asset_manager: Not applicable
 composition_update: December 31, 2018
 composition:

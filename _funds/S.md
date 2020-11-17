@@ -34,7 +34,7 @@ summary_details:
     gross_expense:  .052
     net_expense:    .042
     other_expense:  .018
-    benchmark_index: Dow Jones U.S. Completion TSM Index | www.djindexes.com
+    benchmark_index: Dow Jones U.S. Completion Total Stock Market Index | spglobal.com
     asset_manager: BlackRock Institutional Trust Company, N.A
 composition_update: December 31, 2019
 composition:

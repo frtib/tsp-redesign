@@ -34,7 +34,7 @@ summary_details:
     gross_expense:  .052
     net_expense:    .042
     other_expense:  .007
-    benchmark_index: MSCI EAFE Stock Index | www.msci.com
+    benchmark_index: MSCI EAFE Index | msci.com
     asset_manager: BlackRock Institutional Trust Company, N.A
 composition_update: December 31, 2019
 country_composition:
