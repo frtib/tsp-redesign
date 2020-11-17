@@ -182,3 +182,9 @@ function hideBlock(hideFlag, block1, block2) {
   $('#'+block2).removeClass('hide');
   return false;
 }
+
+// IE doesn't support Math.trunc().
+function mathTrunc(x) {
+  if (x > 0) { return Math.floor(x); }
+  return Math.ceil(x);
+}

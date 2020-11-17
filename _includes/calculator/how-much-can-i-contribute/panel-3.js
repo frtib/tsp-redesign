@@ -24,7 +24,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     var remainingPayments = $('#remaining-payments').val();
     $('#payments-remaining').html(remainingPayments);
     var amountPerPayment = amountAvailable / remainingPayments;
-    $('#new-contribution').html(CurrencyFormatted(Math.trunc(amountPerPayment), 'no_cent'));
+    $('#new-contribution').html(CurrencyFormatted(mathTrunc(amountPerPayment), 'no_cent'));
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
