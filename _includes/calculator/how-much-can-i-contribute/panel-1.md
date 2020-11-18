@@ -31,16 +31,9 @@ Each year the IRS determines the maximum amount you can contribute to tax-deferr
 
 {% capture myNote %}
 This calculator is especially important for FERS employees and members of the
-uniformed services covered by the Blended Retirement System (BRS). If you reach the
-<a href="javascript:openWindow('/PlanningTools/RetirementPlanningPhases/maximumAmount.html', 650, 650);">IRS elective deferral limit</a>
-before the end of the year, your contributions and Agency or Service Matching Contributions
-must stop for the remainder of the year. As a result, you will lose some of your Agency or
-Service Matching Contributions.
-For more detailed information, read the Fact Sheet [Annual Limit on Elective Deferrals]({{ site.baseurl }}/forms/tspfs07.pdf).
-<br><br>
-The dollar amount determined by using this calculator distributes your employee/member
-contributions over the entire year (or remainder of the year), and thus allows you to
-receive the maximum Agency or Service Matching Contributions.
+uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/forms/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
+The dollar amount determined by using this calculator distributes your employee/member contributions over the entire year (or remainder of the year), and thus allows you to receive the maximum Agency or Service Matching Contributions.
+
 {% endcapture %}
 {% include calculator/infoBox.html icon='info' title="Special Note for FERS and BRS Participants" textBlock=myNote %}
 </div> <!-- end div#panel -->
