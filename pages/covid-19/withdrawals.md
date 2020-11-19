@@ -13,7 +13,7 @@ redirect_from:
   - /whatsnew/Content/coronavirus/withdrawals.html
 ---
 
-<h1><div class="nav-header">COVID-19</div>Withdrawals</h1>
+<h1><div class="nav-header">COVID-19</div>Withdrawals and Repayments</h1>
 
 The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
