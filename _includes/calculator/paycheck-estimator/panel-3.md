@@ -9,8 +9,8 @@ Name middle panels (2) for CALC.
 {% capture roth_glossary %}<span data-term="Roth Contribution" class="js-glossary-toggle term term-end">Roth contributions</span>{% endcapture %}
 {% capture catch_glossary %}<span data-term="Catch-up Contributions" class="js-glossary-toggle term term-end">Catch-up contributions</span>{% endcapture %}
 
-{% capture trad_explain %}Traditional contributions come out of your pay **before** taxes are calculated; you pay taxes on these contributions and their earnings when you withdraw them.{% endcapture %}
-{% capture roth_explain %}Roth contributions come out of your pay **after** taxes are calculated;  you pay no taxes on these contributions when you withdraw them. Roth earnings are also tax-free when withdrawn, as long as you meet the IRS requirements to qualify.{% endcapture %}
+{% capture trad_explain %}Traditional contributions come out of your pay **before** taxes are calculated; you pay taxes on these contributions and their earnings when you withdraw them.<br /><br />If you're turning 50 or older this year, you can add any contributions (including tax-exempt) toward the catch-up limit here too. However, any tax-exempt contributions toward catch-up limit must be Roth.{% endcapture %}
+{% capture roth_explain %}Roth contributions come out of your pay **after** taxes are calculated;  you pay no taxes on these contributions when you withdraw them. Roth earnings are also tax-free when withdrawn, as long as you meet the IRS requirements to qualify.<br /><br />If you're turning 50 or older this year, you can add any contributions (including tax-exempt) toward the catch-up limit here too. However, any tax-exempt contributions toward catch-up limit must be Roth.{% endcapture %}
 {% capture catch_explain %}Only for participants who are age 50 or older. You must first exceed the elective deferral limit ($19,500.00 in 2020) to make catch-up contributions.{% endcapture %}
 {% capture catch_explain1 %}{{catch_explain}}
 <p>Your current traditional and Roth contributions total <span id="totalTR1">$0</span> annually.</p>{% endcapture %}
@@ -18,8 +18,14 @@ Name middle panels (2) for CALC.
 <p>Your current traditional and Roth contributions total <span id="totalTR2">$0</span> annually.</p>{% endcapture %}
 
 <section id="panel-{{ panelID }}" class="calculator-panel contribution-election" style="{{ hide }}"  markdown="1">
-<h2>TSP Contributions Per Paycheck</h2>
-  <div class="usa-grid">
+## TSP Contributions Per Paycheck
+
+Enter either a whole percentage of your basic pay or a whole dollar amount that you plan to contribute per paycheck for each type of
+contribution you elect. You may leave a section blank if you do not wish to make that type of contribution.
+
+You can enter different values into Scenario 2 if you want to see how other contribution amounts will affect your paycheck.
+
+<div class="usa-grid">
 
 {% assign tradroth = 'calculator/paycheck-estimator/panel-3-percent-fixed-block.html' %}
 {% assign catchup = 'calculator/paycheck-estimator/panel-3-catch-up-block.html' %}

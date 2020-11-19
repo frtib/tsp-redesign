@@ -17,7 +17,6 @@ progress-steps: [Introduction,Retirement profile,Results]
 panel-names: [Introduction,Retirement,Results]
 redirect_from:
   - /PlanningTools/Calculators/contributionComparison.html
-published: false
 ---
 
 <!-- Flat file, responsive comparison table only, used for debugging CSS without stepping through calculator -->
