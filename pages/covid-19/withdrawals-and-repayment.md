@@ -1,26 +1,26 @@
 ---
 layout: page
-title: Withdrawals and Repayments
+title: Withdrawals and repayments
 sidenav: news-and-resources
 styles:
 scripts:
   - /assets/js/forms.js
   - /assets/js/plan-news.js
   - /assets/js/ajax-usa-search-gov.js
-permalink: /covid-19/withdrawals/
+permalink: /covid-19/withdrawals-and-repayments/
 # Jekyll redirects https://github.com/jekyll/jekyll-redirect-from
 redirect_from:
   - /whatsnew/Content/coronavirus/withdrawals.html
 ---
 
-<h1><div class="nav-header">COVID-19</div>Withdrawals and Repayments</h1>
+<h1><div class="nav-header">COVID-19</div>Withdrawals and repayments</h1>
 
 The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
-- [Qualified individuals](#qualified)
+- [Qualified individuals](#qualified-individuals)
 - [CARES Act withdrawal](#cares-act-withdrawal)
 - [Favorable tax treatment for coronavirus-related withdrawals](#favorable-tax-treatment-for-coronavirus-related-withdrawals)
-- [Repaying a coronavirus-related distribution](#repaying)
+- [Repaying a coronavirus-related distribution](#repaying-a-coronavirus-related-distribution)
 
 The CARES Act creates special rules for most types of TSP withdrawals made by participants affected by COVID-19. It also allows us to create a new, temporary withdrawal option that waives the usual in-service withdrawal requirements and allows all COVID-affected participants to waive tax withholding. See below for details.
 

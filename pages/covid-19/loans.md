@@ -24,7 +24,7 @@ Temporary loan options made possible by the CARES Act for TSP participants affec
 <div class="usa-alert-body">
 <h3 class="usa-alert-heading">Withdrawal options</h3>
 <p class="usa-alert-text" markdown="1">
-The CARES Act also allows us to offer a temporary withdrawal option to participants affected by COVID-19. [Learn more]({{ site.baseurl }}/covid-19/withdrawals/).
+The CARES Act also allows us to offer a temporary withdrawal option to participants affected by COVID-19. [Learn more]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/).
 </p>
 </div>
 </div>

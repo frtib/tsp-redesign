@@ -48,7 +48,7 @@ Answer: Yes, you can use the TSP-60 form to roll over that distribution back int
 
 **Q: What if I’ve already received a required minimum distribution in 2020 and it was more than 60 days ago? Can the TSP extend the 60-day deadline for rollovers?**
 
-Answer: If you received an RMD (or an installment payment that included an RMD) between January 1 and May 15, then you were allowed to roll those amounts over up until August 31, 2020. If you missed that deadline and were affected by COVID-19, see [Withdrawals for participants affected by COVID-19]({{ site.baseurl }}/covid-19/withdrawals/#withdrawals-for-participants-affected-by-covid-19/), for rollover options.
+Answer: If you received an RMD (or an installment payment that included an RMD) between January 1 and May 15, then you were allowed to roll those amounts over up until August 31, 2020. If you missed that deadline and were affected by COVID-19, see [Withdrawals for participants affected by COVID-19]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/#withdrawals-for-participants-affected-by-covid-19/), for rollover options.
 
 **Q: What does the TSP intend to do with the automatic RMD payments that were scheduled to occur either before the end of December 2020 (for separated participants who reached the age of 70½ before the end of 2019) or before the end of March 2021 (for participants whose first RMD year is 2020)?**
 
