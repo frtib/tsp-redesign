@@ -178,7 +178,7 @@
 - form_number: TSP-60
   form_url: tsp-60.pdf
   form_name: Request for a Transfer Into the TSP
-  form_info: Request to have an amount transferred or rolled over into the traditional balance of your TSP account from an IRA or other eligible plan. Also use this form to repay a coronavirus-related distribution to your traditional balance under the CARES Act.
+  form_info: Request to have an amount transferred or rolled over into the traditional balance of your TSP account from an IRA or other eligible plan. Also use this form to [repay a coronavirus-related distribution to your traditional balance under the CARES Act]({{ site.baseurl }}/covid-19/withdrawals/#repaying).
   form_date: 11/2020
   form_pages: 4
   form_audience:
