@@ -59,7 +59,7 @@ progress-steps: [Retirement system,Paycheck information,Contribution election,Re
           <li>
             <button class="usa-accordion-button" aria-expanded="false" aria-controls="panel1.1">Explain this</button>
             <div id="panel1.1" class="usa-accordion-content" aria-hidden="false">
-            <p>Participants age 50 or older are elegible for catch-up contributions. We'll take that into account when calculating how much you can contribute.</p>
+            <p>Participants age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.</p>
             </div>
           </li>
         </ul>
