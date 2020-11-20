@@ -9,6 +9,9 @@ permalink: /calculators/paycheck-estimator/index-static/
 progress-steps: [Retirement system,Paycheck information,Contribution election,Results]
 # panel-names: [System,Information,Election,Results]
 ---
+- [STATIC How much can I contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute-static/)
+- [STATIC Paycheck estimator]({{ site.baseurl }}/calculators/paycheck-estimator/index-static/)
+- [STATIC CCC]({{ site.baseurl }}/calculators/contribution-comparison-calculator-static/)
 
 <code>PANEL 1: RETIREMENT SYSTEM</code>
 

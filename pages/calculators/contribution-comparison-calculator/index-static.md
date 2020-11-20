@@ -18,6 +18,9 @@ progress-steps: [Introduction,Retirement profile,Results]
 redirect_from:
   - /PlanningTools/Calculators/contributionComparison.html
 ---
+- [STATIC How much can I contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute-static/)
+- [STATIC Paycheck estimator]({{ site.baseurl }}/calculators/paycheck-estimator/index-static/)
+- [STATIC CCC]({{ site.baseurl }}/calculators/contribution-comparison-calculator-static/)
 
 # Contribution comparison calculator
 

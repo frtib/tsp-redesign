@@ -13,6 +13,9 @@ document-ready:
 redirect_from:
   - /PlanningTools/Calculators/electiveContributions.html
 ---
+- [STATIC How much can I contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute-static/)
+- [STATIC Paycheck estimator]({{ site.baseurl }}/calculators/paycheck-estimator/index-static/)
+- [STATIC CCC]({{ site.baseurl }}/calculators/contribution-comparison-calculator-static/)
 
 <code id="panel1">PANEL 1: INTRODUCTION</code>
 
