@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: How much can I contribute?
+title: STATIC How much can I contribute?
 styles:
 sidenav: calculators
 # scripts: /assets/js/calculator/javascriptTaxTable.js
@@ -13,6 +13,8 @@ document-ready:
 redirect_from:
   - /PlanningTools/Calculators/electiveContributions.html
 ---
+
+<code id="panel1">PANEL 1: INTRODUCTION</code>
 
 <div id="panel-1" class="calculator-panel" style="display: block;">
   <p>Each year the IRS determines the maximum amount you can contribute to tax-deferred savings plans like the TSP. This is known as the <a href="/making-contributions/contribution-limits/">IRS elective deferral limit</a>. Participants should use this calculator to determine the specific dollar amount to be deducted each pay period in order to maximize your contributions and to ensure that you do not miss out on Agency or Service Matching Contributions if you are entitled to them.</p>
@@ -29,12 +31,9 @@ redirect_from:
     <div class="panel-form-field ">
 
       <div id="review-year-div" class="">
-
-      <label class="" id="review-year-label" for="review-year" aria-details="panel-1.1">Choose the year you would like to review, then press Start.</label>
-      <span class="usa-input-error-message" id="review-year-error-message" role="alert"></span>
-
-      <select class="format-left" id="review-year" name="review-year"><option value="2019">2019</option><option selected="selected" value="2020">2020</option></select>
-
+        <label class="" id="review-year-label" for="review-year" aria-details="panel-1.1">Choose the year you would like to review, then press Start.</label>
+        <span class="usa-input-error-message" id="review-year-error-message" role="alert"></span>
+        <select class="format-left" id="review-year" name="review-year"><option value="2019">2019</option><option selected="selected" value="2020">2020</option></select>
       </div>
       <!-- DAV, Age 50 checkbox -->
       <ul class="usa-unstyled-list">
@@ -45,11 +44,22 @@ redirect_from:
           name="age50"
           value="age50"
           checked />
-        <label for="truth">I will be age 50 or older in { year }</label>
-      </li>
-    </ul>
+          <label for="truth">I will be age 50 or older in { year }</label>
+        </li>
+      </ul>
+      <!-- DAV, Explain this -->
+      <div>
+        <ul class="usa-accordion explain-this">
+          <li>
+            <button class="usa-accordion-button" aria-expanded="false" aria-controls="programmer-choice">Explain this</button>
+            <div id="programmer-choice" class="usa-accordion-content" aria-hidden="false">
+            <p>Participants age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    </div><!---->
+    </div><!-- END div.panel-form-field -->
 
   </fieldset>
 
@@ -60,22 +70,16 @@ redirect_from:
   <div class="usa-alert  usa-alert-info ">
     <div class="usa-alert-body">
       <h3 class="usa-alert-heading">Special Note for FERS and BRS Participants</h3>
-      <p class="usa-alert-text">
-      This calculator is especially important for FERS employees and members of the
-      uniformed services covered by the Blended Retirement System (BRS). If you reach the
-      <a href="javascript:openWindow('/PlanningTools/RetirementPlanningPhases/maximumAmount.html', 650, 650);">IRS elective deferral limit</a>
-      before the end of the year, your contributions and Agency or Service Matching Contributions
-      must stop for the remainder of the year. As a result, you will lose some of your Agency or
-      Service Matching Contributions.
-      For more detailed information, read the Fact Sheet <a href="/forms/tspfs07.pdf" class="pdf">Annual Limit on Elective Deferrals</a>.
-      <br><br>
-      The dollar amount determined by using this calculator distributes your employee/member
-      contributions over the entire year (or remainder of the year), and thus allows you to
-      receive the maximum Agency or Service Matching Contributions.
-      </p>
+<p class="usa-alert-text" markdown="1">
+This calculator is especially important for FERS employees and members of the
+uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/forms/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
+The dollar amount determined by using this calculator distributes your employee/member contributions over the entire year (or remainder of the year), and thus allows you to receive the maximum Agency or Service Matching Contributions.
+</p>
     </div>
   </div>
 </div><!-- END panel-1 -->
+
+<code id="panel3">PANEL 3: ELECTIVE DEFERRAL LIMITS</code>
 
 <div id="panel-3" class="calculator-panel" style="">
 
@@ -111,7 +115,7 @@ redirect_from:
 <!-- DAV, Catch-up contributions limit if age 50 = true -->
 <div class="usa-grid results ">
 
-<div class="usa-width-two-thirds ">IRS Catch-Up Limit for <span class="year-choosen">2020</span><br></div>
+<div class="usa-width-two-thirds ">IRS Catch-Up Limit for <span class="year-choosen">2020</span><br><span style="color: red"><em>Only display if age 50 = true</em></span></div>
 <div class="usa-width-one-third "><span id="deferral-limit">$6,000</span></div>
 </div>
 
@@ -123,8 +127,8 @@ redirect_from:
 
     <div class="usa-grid results ">
 <!-- DAV, IRC + Catch-up contributions limit if age 50 = true -->
-  <div class="usa-width-two-thirds ">Amount you can still contribute this year<br></div>
-  <div class="usa-width-one-third "><span id="amount-available">$25,500</span></div>
+  <div class="usa-width-two-thirds ">Amount you can still contribute this year<br><span style="color: red"><em>If age 50 = true, then this equals (IRC + Catch-up). Else, this equals IRC.</em></span></div>
+  <div class="usa-width-one-third "><span id="amount-available">$25,500</span> </div>
 </div>
 
     <div class="usa-grid results ">
