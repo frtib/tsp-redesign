@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: Paycheck estimator
+title: STATIC Paycheck estimator
 styles:
 sidenav: calculators
 scripts:
@@ -75,7 +75,7 @@ progress-steps: [Retirement system,Paycheck information,Contribution election,Re
   </nav>
 </section>
 
-<code>PANEL 3: CONTRIBUTION ELECTION</code>
+<code id="panel3">PANEL 3: CONTRIBUTION ELECTION</code>
 <section id="panel-3" class="calculator-panel contribution-election" style="" markdown="1">
   <h2>TSP Contributions Per Paycheck</h2>
 
@@ -342,7 +342,7 @@ progress-steps: [Retirement system,Paycheck information,Contribution election,Re
 
 </section>
 
-<code>PANEL 4: RESULTS</code>
+<code id="panel4">PANEL 4: RESULTS</code>
 <section id="comparison-section" class="calculator-panel comparison paycheck">
 
   <h2>TSP Contributions Per Paycheck</h2>
