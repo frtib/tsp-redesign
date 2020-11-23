@@ -1,14 +1,9 @@
 ---
 layout: page
-
 title: Returning from active duty or TDY
-
 sidenav: manage-life-changes
-
 styles:
-
 scripts:
-
 permalink: /changes-in-your-career/returning-from-active-duty-or-tdy/
 ---
 # Returning from active duty or TDY
