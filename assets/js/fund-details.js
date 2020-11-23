@@ -11,12 +11,12 @@ function initFundTab() {
   return false;
 }
 
-function fundTabClicked(tabObj) {
+// reset URL to include clicked Tab on fund pages
+function fundTabClicked(tabObj, siteTitle) {
   var uri = window.location.toString();
 	if (uri.indexOf("?") > 0) { uri = uri.substring(0, uri.indexOf("?")); }
   var new_uri = uri + '?tab='+tabObj.id;  // +'#performance';
-  var title = document.title.split('|');
-  var newTitle = title[0].split(':')[0].trim() + ': ' + tabObj.id + ' | ' + title[1];
+  var newTitle = $('#pageTitle').val().trim() + ' ' + tabObj.id + ' | ' + siteTitle;
   window.history.replaceState({}, newTitle, new_uri);
   document.title = newTitle;
   // window.location.href = new_uri;

@@ -102,7 +102,7 @@ document-ready:
 <section id="fund-tabs">
 <ul class="usa-accordion usa-tabs">
     <li>
-        <button id='summary' onClick="fundTabClicked(this);"
+        <button id='summary' onClick="fundTabClicked(this, '{{site.title}}');"
              class="usa-accordion-button" aria-expanded="true" aria-controls="a1">Summary</button>
         <div id="a1" class="usa-accordion-content">
           <div class="usa-grid-full">
@@ -156,7 +156,7 @@ document-ready:
         </div>
     </li>
     <li>
-        <button id="performance"  onClick="fundTabClicked(this);"
+        <button id="performance"  onClick="fundTabClicked(this, '{{site.title}}');"
             class="usa-accordion-button" aria-expanded="false" aria-controls="a2">Performance &amp; risks</button>
         <div id="a2" class="usa-accordion-content">
           <div class="usa-grid-full">
@@ -169,14 +169,14 @@ document-ready:
         </div>
     </li>
     <li>
-        <button id="composition" onClick="fundTabClicked(this);"
+        <button id="composition" onClick="fundTabClicked(this, '{{site.title}}');"
             class="usa-accordion-button" aria-expanded="false" aria-controls="a3">Composition</button>
         <div id="a3" class="usa-accordion-content">
 {% include components/fund-composition.html %}
         </div>
     </li>
     <li>
-        <button id="fees"  onClick="fundTabClicked(this);"
+        <button id="fees"  onClick="fundTabClicked(this, '{{site.title}}');"
              class="usa-accordion-button" aria-expanded="false" aria-controls="a4">Fees &amp; more info</button>
         <div id="a4" class="usa-accordion-content">
           <div class="usa-grid-full">
