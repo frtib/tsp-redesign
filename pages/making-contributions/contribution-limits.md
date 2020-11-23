@@ -32,7 +32,9 @@ Below are the **2021** IRS limits and additional information to keep you informe
 What it means
 </div>
 <div class="usa-width-two-thirds" markdown="1">
+
 ## All ages
+
 This limit applies to the **combined total of traditional and Roth contributions.** For uniformed services members, this does not apply to traditional contributions from combat-zone pay.
 </div>
 </div> <!-- end div.usa-grid-full -->
@@ -74,9 +76,10 @@ If you're not maxing out your contributions, consider increasing your contributi
   What it means
   </div>
   <div class="usa-width-two-thirds" markdown="1">
+
 ## Age 50 and over
 
-At any time beginning in the year you turn 50, you have the opportunity to **make additional contributions above the IRS' elective deferral limit.** These "catch-up contributions" provide a chance to put away extra money for retirement, even if you're not behind.
+At any time beginning in the year you turn 50, you have the opportunity to **make additional contributions above the IRS elective deferral limit.** These &#8220;contributions toward the catch-up limit&#8221; provide a chance to put away extra money for retirement, even if you're not behind.
   </div>
   </div> <!-- end div.usa-grid-full -->
 
@@ -86,7 +89,9 @@ At any time beginning in the year you turn 50, you have the opportunity to **mak
   What to know
   </div>
   <div class="usa-width-two-thirds" markdown="1">
-Catch-up contributions are made on top of your regular employee contributions; however, they do not receive any matching. To be eligible to make these special contributions, you must be on track to meet the IRS elective deferral limit. They are separate from the elective deferral and annual addition limits.
+  Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving. 
+
+  If you’re eligible for an agency or service match, all your contributions throughout the year will qualify for the match of up to 5% of your salary. Your election will carry over each year unless you submit a new one.
 
 <div class="usa-alert usa-alert-info">
 <div class="usa-alert-body">You must make a new catch-up contribution election each calendar year—they do not restart automatically.</div>

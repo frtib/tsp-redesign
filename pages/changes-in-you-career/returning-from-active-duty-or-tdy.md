@@ -26,18 +26,19 @@ If you’re returning to the federal government after a break in service, read R
 
 Ensure that your TSP contributions resume and are being deducted from your pay. This means that you may want to:
 
-Decide whether you want to make up contributions to your civilian TSP account for the period of time you missed as a result of your military service (including catch-up contributions if you are age 50 or older).
-Submit a written request to your agency within 60 days of the date of your reemployment or restoration to federal civilian service to make up your eligible missed TSP contributions. Contact your agency’s human resources office to request information on their procedures for processing USERRA claims.
+Decide whether you want to make up contributions to your civilian TSP account for the period of time you missed as a result of your military service (including contributions toward the catch-up limit if you are turning age 50 or older). Submit a written request to your agency within 60 days of the date of your reemployment or restoration to federal civilian service to make up your eligible missed TSP contributions. Contact your agency’s human resources office to request information on their procedures for processing USERRA claims.
 If you’re receiving tax-free pay, such as combat zone or hazardous duty pay, while on TDY, you may consider adjusting your contributions upon return to your regular pay. When you contribute that pay to Roth TSP (after-tax), the qualified earnings from your pay will also be tax-exempt when you withdraw them. However, you will still have to meet the current IRC maximum elective deferral limits.
 
-## Claiming your retroactive contributions*
+## Claiming your retroactive contributions<sup>[1](#footnotes)</sup>
 
 If you’re a FERS employee, you may be eligible to claim retroactive matching contributions to your civilian account. You must have made contributions from basic pay to your uniformed services account while you were on nonpay performing military service or elected to make employee contributions when you returned from military service.
 
 To receive retroactive contributions, make sure you:
 Keep your leave and earnings statements while you’re on active duty to make a claim. Bonus, special, and incentive pays are not eligible for retroactive matching contributions.
 Review your balance and transactions in your civilian TSP account while you were away. You can access your participant statements at My Account: Statements. If you’re covered by FERS, and your Agency Automatic (1%) Contributions and attributable earnings were removed from your account while you were in nonpay status, ask your agency to restore these funds.
-* BRS members: Service Automatic (1%) and Matching Contributions you received while serving in the military will be deducted from restored agency contributions.
+
+1. BRS members: Service Automatic (1%) and Matching Contributions you received while serving in the military will be deducted from restored agency contributions.
+{:.footnotes #footnotes}
 
 ## Your TSP loans
 Be sure that your agency submits [Form TSP-41]({{ site.baseurl }}/forms/tsp-41.pdf), _Notification to TSP of Nonpay Status_, so that your loan payments will resume, and we will be notified that you have returned to pay status.
@@ -51,5 +52,4 @@ If you do not have a Designation of Beneficiary form on file with the TSP, your 
 ## Returning to uniformed service
 
 If you’re returning to the uniformed services, read Returning to uniformed service about what you should do and consider regarding your TSP account.
-
 <!-- CONTENT END -->
