@@ -89,7 +89,7 @@ At any time beginning in the year you turn 50, you have the opportunity to **mak
   What to know
   </div>
   <div class="usa-width-two-thirds" markdown="1">
-  Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving. 
+  Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving.
 
   If you’re eligible for an agency or service match, all your contributions throughout the year will qualify for the match of up to 5% of your salary. Your election will carry over each year unless you submit a new one.
 
@@ -156,7 +156,7 @@ Even if you don't reach the annual addition limit, keep it in mind when deciding
 </li>
 </ul>
 
-**Are you about to max out? Be careful not to exceed the contribution limits before December 31 if you're eligible for matching. If you do, we won't be able to process any more of your contributions for the remainder of the year, which means you'll miss out on matching contributions.**
+**Are you about to max out? Be careful not to exceed the contribution limits before December 31 if you're eligible for matching. If you do (and you're younger than 50), we won't be able to process any more of your contributions for the remainder of the year, which means you'll miss out on matching contributions.**
 
 Grab your latest Leave and Earnings Statement and check
 out our &#8220;[How much can I contribute?]({{ site.baseurl }}/calculators/how-much-can-i-contribute/)&#8221; calculator.
