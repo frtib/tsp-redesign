@@ -79,7 +79,7 @@ Starting in the year you turn 50, you become eligible to save even more by contr
 
 **Here’s what you should know:**
 - Once you exceed the elective deferral or annual addition limit, your contributions will spill over and automatically start counting toward the catch-up limit.
-- Contributions spilling over toward the catch-up limit are eligible for matching on the first 5% of salary.
+- Contributions spilling over toward the catch-up limit will qualify for the match on up to 5% of your salary.
 - Separate catch-up elections are no longer required. Your election will carry over each year unless you submit a new election or leave federal service.
 - You may start, stop, or change your contributions at any time.
 
