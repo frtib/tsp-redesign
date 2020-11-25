@@ -67,7 +67,7 @@ If you're not maxing out your contributions, consider increasing your contributi
       aria-expanded="false"
       aria-controls="catch-up">
       <span>$6,500</span>
-      Contributions toward the catch-up limit
+      Contributions toward the <span class="nobr">catch-up</span> limit
     </button>
 <div id="catch-up" class="usa-accordion-content">
   <!-- WHAT IT MEANS  -->
