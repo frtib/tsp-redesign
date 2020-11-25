@@ -12,7 +12,7 @@ Whether you’re a uniformed services member returning from active duty or TDY, 
 
 ## Your rights under USERRA
 
-If you’re a uniformed services member returning from active duty or TDY, ensure you read the fact sheet TSP Benefits That Apply to Members of the Military Who Return to Federal Civilian Service to fully understand all of your rights under the Uniformed Services Employment and Reemployment Rights Act (USERRA).
+If you’re a uniformed services member returning from active duty or TDY, ensure you read the fact sheet [_TSP Benefits That Apply to Members of the Military Who Return to Federal Civilian Service_]({{ site.baseurl }}/publications/tspfs08.pdf) to fully understand all of your rights under the Uniformed Services Employment and Reemployment Rights Act (USERRA).
 
 ## Returning to the federal government after a break in service
 If you’re returning to the federal government after a break in service, read Returning to the federal government about what you should do and consider regarding your TSP account.
