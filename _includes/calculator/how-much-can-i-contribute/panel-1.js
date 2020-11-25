@@ -30,9 +30,14 @@ function buildDropdown(selectedValue) {
   // dd.val(selectedValue);
   return true;
 }
+function reviewYearChange() {
+  $('#age50year').html($('#review-year').val());
+  $('#age50').prop('checked', false);
+}
 function setDropdownDefault() {
   var defaultYear = constrainYear(determineActingYear());
   buildDropdown(defaultYear);
+  reviewYearChange();
 }
 
 // getContributionLimit moved to javascriptTaxTable.js

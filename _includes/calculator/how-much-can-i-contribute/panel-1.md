@@ -18,12 +18,22 @@ Each year the IRS determines the maximum amount you can contribute to tax-deferr
 
 <fieldset>
 {% include calculator/div-panel-form-field.html
-  fieldID="panel-1.1" id="review-year"
-  inputClass="" inputType="no-select"
-  value="2019" min="2018" max="2020"
+  fieldID="panel-1.1" id="review-year" inputClass="" inputType="no-select"
+  value="2019" min="2018" max="2020"  onBlur="reviewYearChange();"
   prompt="Choose the year you would like to review, then press Start."
-  explanation=""
+  explanation=""  dontCloseOuterDiv=true
 %}
+<ul class="usa-unstyled-list">
+  <li>
+    <input id="age50" type="checkbox" name="age50" value="age50" />
+    <label for="age50">I will be age 50 or older in <span id="age50year">year</span></label>
+  </li>
+</ul>
+{% capture explanation_1_2 %}
+Participants age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.
+{% endcapture %}
+{% include calculator/div-panel-form-field.html fieldID="panel-1.2" inputType="none" explanation=explanation_1_2 dontOpenOuterDiv=true %}
+</div><!-- END div.panel-form-field -->
 </fieldset>
 
 {% capture click %}processPanel({{ panelID }}, 0, {{ panelID | plus: 1}}, 0); return false;{% endcapture %}

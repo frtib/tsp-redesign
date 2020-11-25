@@ -68,7 +68,7 @@ This script produces an input area for calculator panels.
       <input {{commonValues}} type="text" {{onBlur}} maxLength="{{maxLength}}" />
     {% endif %}
     {% if inputType == 'no-select' or inputType == 'select' %}
-    <select class="{{inputClass}}" id="{{id}}" name="{{name}}">
+    <select class="{{inputClass}}" id="{{id}}" name="{{name}}" {{onBlur}}>
       {% assign value = value | plus: 0 %}
       {% if inputType == 'select' %}<option value="select">--- Select One ---</option>{% endif %}
       {% for i in (min..max) %}
