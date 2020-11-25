@@ -88,7 +88,7 @@ If you are a uniformed services member and enter a combat zone, your contributio
 
 If you are contributing to both a civilian and uniformed services account, the limits apply to the **total** you contribute to both accounts during the year.
 
-To contribute toward the catch-up limit, use [Form TSP-1]({{ site.baseurl }}/forms/tsp-1.pdf/), _Election Form_ (or [Form TSP-U-1]({{ site.baseurl }}/forms/tsp-u-1.pdf/) for uniformed services), or your agency’s or service’s electronic system (e,g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC Employee Personal Page]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}). You can add any contributions toward the catch-up limit in the same place as your other TSP contributions. Remember, separate catch-up elections are not required.
+To contribute toward the catch-up limit, use [Form TSP-1]({{ site.baseurl }}/forms/tsp-1.pdf), _Election Form_ (or [Form TSP-U-1]({{ site.baseurl }}/forms/tsp-u-1.pdf) for uniformed services), or your agency’s or service’s electronic system (e,g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC Employee Personal Page]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}). You can add any contributions toward the catch-up limit in the same place as your other TSP contributions. Remember, separate catch-up elections are not required.
 
 ## A note for members of the uniformed services
 
