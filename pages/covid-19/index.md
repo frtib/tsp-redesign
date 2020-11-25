@@ -15,12 +15,13 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **September 17, 2020**.
+Updated **November 25, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [November 30 deadline for suspending 2020 TSP loan payments](#nov-30-deadline)
 - [September 22 deadline for temporary loan increase](#loan-increase)
 - [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
 - [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
@@ -31,6 +32,10 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## November 30 deadline for suspending 2020 TSP loan payments
+{:#nov-30-deadline}
+The CARES Act allowed participants to suspend payments on TSP loans for the rest of calendar year 2020. If you plan to suspend your remaining 2020 loan payments, **we must receive your completed TSP-46 application on or before November 30, 2020.** We will not accept any applications received after 11:59 PM that day.
 
 ## September 22 deadline for temporary loan increase
 {:#loan-increase}
