@@ -32,7 +32,7 @@ Elective Contributions panel (2) for How Much Can I Contribute?.
   onBlur="totalContributionGood(false, true);"
 %}
 
-<div id="maxContributionMsg"></div>
+<div id="maxContributionMsg" class="how-much-contribute-limit-message"></div>
 
 <!-- C -->
 {% include calculator/div-panel-form-field.html

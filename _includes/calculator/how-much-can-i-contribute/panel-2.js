@@ -71,8 +71,8 @@ function updateMaxContributionMsg() {
   var catchupLimit = taxValues[2];
   var contributionLimit = deferralLimit;
   if (age50) { contributionLimit += catchupLimit; }
-  var msg = "<h2>You can contribute up to " + CurrencyFormatted(contributionLimit, 'no_cent') + " in "+ reviewYear + ".";
-  msg += "  (" + CurrencyFormatted(contributionLimit - ytdCont - estCont, 'no_cent') + " more.)</h2>";
+  var msg = "You can contribute up to " + CurrencyFormatted(contributionLimit, 'no_cent') + " in "+ reviewYear + ".";
+  msg += "  (" + CurrencyFormatted(contributionLimit - ytdCont - estCont, 'no_cent') + " more.)";
   $('#maxContributionMsg').html(msg);
 }
 
