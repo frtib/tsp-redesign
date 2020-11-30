@@ -67,7 +67,7 @@ If you're not maxing out your contributions, consider increasing your contributi
       aria-expanded="false"
       aria-controls="catch-up">
       <span>$6,500</span>
-      Contributions toward the <span class="nobr">catch-up</span> limit
+      Catch-up <br>limit
     </button>
 <div id="catch-up" class="usa-accordion-content">
   <!-- WHAT IT MEANS  -->
@@ -91,7 +91,7 @@ At any time beginning in the year you turn 50, you have the opportunity to **mak
   <div class="usa-width-two-thirds" markdown="1">
   Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving.
 
-  If you’re eligible for an agency or service match, all your contributions throughout the year will qualify for the match on up to 5% of your salary. Your election will carry over each year unless you submit a new one.
+  If you’re eligible for an agency or service match, contributions spilling over toward the catch-up limit will qualify for the match on up to 5% of your salary. Your election will carry over each year unless you submit a new one.
 
   </div>
   </div> <!-- end div.usa-grid-full -->
