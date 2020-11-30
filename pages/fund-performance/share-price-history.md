@@ -58,23 +58,19 @@ To understand how the TSP calculates rates of return for any given period of tim
 <div id="{{chartName}}-div" class="usa-grid-full usa-layout-docs-main_content">
 <div class="usa-width-one-whole" markdown="1">
   <section id="{{chartName}}-section" class="share-price-table">
-    <ul class="usa-accordion">
-      <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}">Share Prices</button>
-        <div id="{{ chartName }}" class="usa-accordion-content hc-share-price-chart" aria-hidden="false"></div>
-      </li>
-    </ul>
-
+<!-- TABLE SECTION -->
     <div class="table-scroll-buttons">
       <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
       <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
     </div><!-- END div.table-scroll-buttons -->
-
-      <!-- <button id="{{chartName}}-button" class="usa-button-secondary"
-        onClick="toggleTableWidth('{{chartName}}');">
-        Expand table <i class="fal fa-expand-wide"></i></button> -->
-    <div id="{{chartName}}-table" class="table-side-scroll">
-    </div>
+    <div id="{{chartName}}-table" class="table-side-scroll"></div>
+<!-- CHART -->
+  <ul class="usa-accordion">
+    <li>
+      <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}">Share Prices</button>
+      <div id="{{ chartName }}" class="usa-accordion-content hc-share-price-chart" aria-hidden="false"></div>
+    </li>
+  </ul>
   </section>
 
 </div> <!-- END div.usa-width-one-whole -->
