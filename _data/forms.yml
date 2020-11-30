@@ -166,15 +166,15 @@
   -  Both
   form_topics:
   -  Loans
-- form_number: TSP-46
-  form_url: tsp-46.pdf
-  form_name: CARES ACT Loan Suspension Request
-  form_info: Request a suspension of your TSP loan payments for the rest of calendar year 2020. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136). **Forms we receive after 11:59 PM on November 30 will not be accepted.**
-  form_date: Local Reproduction
-  form_audience:
-  -  Both
-  form_topics:
-  -  Loans
+# - form_number: TSP-46
+#   form_url: tsp-46.pdf
+#   form_name: CARES ACT Loan Suspension Request
+#   form_info: Request a suspension of your TSP loan payments for the rest of calendar year 2020. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136). **Forms we receive after 11:59 PM on November 30 will not be accepted.**
+#   form_date: Local Reproduction
+#   form_audience:
+#   -  Both
+#   form_topics:
+#   -  Loans
 - form_number: TSP-60
   form_url: tsp-60.pdf
   form_name: Request for a Transfer Into the TSP

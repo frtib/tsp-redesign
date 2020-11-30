@@ -15,7 +15,7 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Loans</h1>
 
-The information we’re providing here is current but subject to change as we receive additional guidance and information.
+**The deadlines for these loan options have passed.**
 
 ## Loan options for participants affected by COVID-19
 Temporary loan options made possible by the CARES Act for TSP participants affected by COVID-19 are now available. Read below for more information.
@@ -48,7 +48,7 @@ To be eligible for the CARES Act loan options, you must be a **qualified individ
 The maximum loan amount on a general purpose loan is increased from $50,000 to $100,000, and the portion of your available balance you can borrow is raised from 50% to 100%. **All of the other rules on TSP loans apply, including that you may not have more than one general purpose loan at the same time. A loan with the increased maximum amount allowed under the CARES Act is still a general purpose loan**. To apply, [log in to My Account and use the online tool]({{ site.loans }}). The deadline for applying is September 22, 2020.
 
 ## Temporary suspension of loan payments
-You may suspend your obligation to make payments on your TSP loan or loans for the rest of calendar year 2020. This applies to existing loans and loans taken between now and November 30, 2020. To apply, complete and submit [Form TSP-46]({{ site.baseurl }}/forms/tsp-46.pdf), _CARES Act Loan Suspension Request_. Carefully read all of the instructions on the form before submitting.
+You may suspend your obligation to make payments on your TSP loan or loans for the rest of calendar year 2020. This applies to existing loans and loans taken between now and November 30, 2020. To apply, complete and submit Form TSP-46, _CARES Act Loan Suspension Request_. Carefully read all of the instructions on the form before submitting.
 
 If you are planning to apply for a loan now or in the near future, apply for the loan first and wait for it to be processed before submitting Form TSP-46. Do this whether or not you have an existing loan.<sup>1</sup> **Filing Form TSP-46 at the same time as you apply for loan or at any time before your loan application is processed may cause your loan application to be rejected**. If you have two loans when you file Form TSP-46, the payment suspension will apply to both of them.
 
