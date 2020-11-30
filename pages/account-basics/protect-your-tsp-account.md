@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Account basics
+title: Protect your TSP account
 sidenav: manage-your-plan
 styles:
 scripts:
