@@ -32,6 +32,8 @@ Elective Contributions panel (2) for How Much Can I Contribute?.
   onBlur="totalContributionGood(false, true);"
 %}
 
+<div id="maxContributionMsg"></div>
+
 <!-- C -->
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.3" id="remaining-payments"
