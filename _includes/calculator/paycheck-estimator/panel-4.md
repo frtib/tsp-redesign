@@ -38,8 +38,6 @@ Results panel (4) for paycheck esitomator.
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grosspay" %}
 {% include {{tableRow}} title="Your Traditional (Pre-Tax) Contribution" rowID="trad" %}
 {% include {{tableRow}} title="Your Roth (After-Tax) Contribution" rowID="roth" %}
-{% include {{tableRow}} title="Your Traditional Catch-Up Contribution" rowID="tradCatchup" %}
-{% include {{tableRow}} title="Your Roth Catch-Up Contribution" rowID="rothCatchup" %}
 {% include {{tableRow}} title="Federal Income Taxes" rowID="federalTaxes" %}
 {% include {{tableRow}} title="Additional Federal Tax Withholding" rowID="addlFedTax" %}
 {% include {{tableRow}} title="Other Taxes and Payroll Deductions" rowID="otherTaxDeductions" %}

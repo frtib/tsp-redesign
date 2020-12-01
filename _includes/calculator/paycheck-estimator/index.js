@@ -40,8 +40,8 @@ function setValues(flag) {
     $('#trad_option2_f').click();
     $('#roth_option1_f').click();
     $('#roth_option2_f').click();
-    $('#trad_option1Amount').val(10000);
-    $('#trad_option2Amount').val(18000);
+    $('#trad_option1Amount').val(1000);
+    $('#trad_option2Amount').val(1800);
     $('#roth_option1Amount').val(1100)
     $('#trad_option1Percent').val(1);
     $('#roth_option1Percent').val(2);
