@@ -56,7 +56,10 @@ Outlines the procedures agencies must use to report Thrift Savings Plan (TSP) lo
 
 ## Earnings adjustments
 
-[Form TSP-2-F]({{ site.baseurl }}/bulletins/tsp-2-f.pdf), _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
+<!-- [Form TSP-2-F]({{ site.baseurl }}/bulletins/tsp-2-f.pdf), _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
+Use this form to submit amounts that represent an earnings adjustment. -->
+
+Form TSP-2-F, _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
 Use this form to submit amounts that represent an earnings adjustment.
 
 [Bulletin 5-12]({{ site.baseurl }}/bulletins/05-12.pdf), _Earnings Adjustments to Thrift Savings Plan Accounts Requested By Employing Agencies_   
@@ -116,7 +119,7 @@ This document provides information for those reports selected by the Board to be
 [Error Codes and Messages Keyed to Record Types]({{ site.baseurl }}/bulletins/Error-Codes-Messages.pdf)   
 Use this document to better understand the meaning of error codes and messages returned by the Electronic Transmission System.
 
-[Bulletin 17-U-2]({{ site.baseurl }}/bulletins/17-u-2.pdf), _2017 Thrift Savings Plan Payroll Office Reports for the Blended Retirement System_   
+[Bulletin 17-U-2]({{ site.baseurl }}/bulletins/17-u-2/), _2017 Thrift Savings Plan Payroll Office Reports for the Blended Retirement System_   
 This bulletin discusses the current reports that payroll offices receive and new reports upon implementation of the Blended Retirement System (BRS).
 </div>
 </li>
