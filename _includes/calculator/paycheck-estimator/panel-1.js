@@ -51,8 +51,39 @@ function rsShowHide(rs) {
   return;
 }
 
+function setPanel3text(rs) {
+  if (rs == 'FERS') {
+    $('#FERS-intro').removeClass('hide');
+    $('#USBRS-intro').addClass('hide');
+    $('#USV-intro').addClass('hide');
+    $('#USV-note').addClass('hide');
+    return;
+  }
+  // if (rs == 'CSRS') { return; }
+  if (rs == 'USBRS') {
+    $('#FERS-intro').addClass('hide');
+    $('#USBRS-intro').removeClass('hide');
+    $('#USV-intro').removeClass('hide');
+    $('#USV-note').removeClass('hide');
+    return;
+  }
+  if (rs == 'US') {
+    $('#FERS-intro').addClass('hide');
+    $('#USBRS-intro').addClass('hide');
+    $('#USV-intro').removeClass('hide');
+    $('#USV-note').removeClass('hide');
+    return;
+  }
+  $('#FERS-intro').addClass('hide');
+  $('#USBRS-intro').addClass('hide');
+  $('#USV-intro').addClass('hide');
+  $('#USV-note').addClass('hide');
+  return;
+}
+
 function rsExit() {
   var rs = getRetirementSystem();
+  setPanel3text(rs);
 
   if (rs == 'FERS') {
     rsShowHide('FERS');
