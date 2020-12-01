@@ -1,7 +1,7 @@
 ---
 title: Year-end transaction processing schedule
 permalink: /plan-news/2020-year-end-transaction-processing-schedule/
-latest: y
+latest: n
 ---
 **{{ page.title }}** &#8212; The TSP processing schedule for the end of 2020 is shown below and includes information about when transactions (including withdrawals and installment payments) will be processed, as well as when the TSP will be closed during the holiday season.
 
