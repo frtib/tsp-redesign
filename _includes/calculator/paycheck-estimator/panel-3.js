@@ -172,8 +172,13 @@ function test_limits(submit, amts, contribs) {
     // warn: exceed elective deferral limit
     msg = "Your regular employee contributions exceed the "
       + "Internal Revenue Code (IRC) elective deferral ";
-    if (age50) { msg += " and catch-up contribution limts"; } else { msg += "limit"; }
-    msg += " (" + CurrencyFormatted(limitTotal, 'no_cent') + " in " + IRC_limit_year + ").";
+    if (age50) {
+      msg += " and catch-up contribution limts" + " (" + CurrencyFormatted(limitRegular, 'no_cent') + " + "
+        + CurrencyFormatted(limitCatch, 'no_cent');
+    } else {
+      msg += "limit " + " (" + CurrencyFormatted(limitRegular, 'no_cent');
+    }
+    msg += " in " + IRC_limit_year + ").";
     var op1annualTR = pay_freq * contribs[0];  // option 1 annual Trad + Roth
     var op2annualTR = pay_freq * contribs[1];  // option 1 annual Trad + Roth
     $('#totalTR1').html(CurrencyFormatted(op1annualTR, 'no_cent'));
