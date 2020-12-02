@@ -115,7 +115,7 @@ Whether you're new to the federal government or preparing to retire, we're here 
 <!-- Lifecycle funds -->
 <li>
 <button class="usa-accordion-button" aria-expanded="true" aria-controls="lifecycle">
-Lifecycle funds
+<div>Lifecycle funds</div>
 </button>
 <div id="lifecycle" class="usa-accordion-content" markdown="1">
 
@@ -126,14 +126,13 @@ The [Lifecycle (L)]({{ site.baseurl }}/funds-lifecycle/) Funds are made of each 
 <button class="usa-accordion-button"
 aria-expanded="false"
 aria-controls="l2065" markdown="1">
-**L 2065 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
+<span class="fund-name">**L 2065 Lifecycle Fund**</span> <span>Is this fund for me?</span>
 </button>
 <div id="l2065" class="usa-accordion-content" markdown="1">
 
 Consider if you plan to begin withdrawing from your TSP account after 2062 or you were born after 1999.
 
 [Learn more]({{ site.baseurl }}/funds-lifecycle/l-2065/){:.learn-more}
-
 </div>
 </li>
 
@@ -275,7 +274,7 @@ Consider if you are already withdrawing money from your account or you were born
 <!-- Individual funds -->
 <li>
 <button class="usa-accordion-button" aria-expanded="false" aria-controls="a2">
-Individual funds
+<div>Individual funds</div>
 </button>
 <div id="a2" class="usa-accordion-content" markdown="1">
 
