@@ -177,19 +177,15 @@ function calculateResults() {
   // get values for scenario table
   if (true) {
    var contribs = sumContributions();
-   var amts = sumWithholding(contribs[2]+contribs[6], contribs[4]+contribs[8]);
+   var amts = sumWithholding(contribs[2], contribs[4]);
 
    var grossPay = amts[1];
    var trad1amt = contribs[2];
    var roth1amt = contribs[3];
-   var catchTrad1amt = contribs[6];
-   var catchRoth1amt = contribs[7];
-   totalTrad1 = trad1amt + catchTrad1amt;
+   totalTrad1 = trad1amt;
    var trad2amt = contribs[4];
    var roth2amt = contribs[5];
-   var catchTrad2amt = contribs[8];
-   var catchRoth2amt = contribs[9];
-   totalTrad2 = trad2amt + catchTrad2amt;
+   totalTrad2 = trad2amt;
    var monthTax1 = amts[5];
    var monthTax2 = amts[6];
    var additionalWithholding = amts[2];
@@ -197,8 +193,8 @@ function calculateResults() {
    var afterDeduction = amts[4];
    var match_contrib1 = (trad1amt + roth1amt);
    var match_contrib2 = (trad2amt + roth2amt);
-   var total_contrib1 = (trad1amt + catchTrad1amt + roth1amt + catchRoth1amt);
-   var total_contrib2 = (trad2amt + catchTrad2amt + roth2amt + catchRoth2amt);
+   var total_contrib1 = (trad1amt + roth1amt);
+   var total_contrib2 = (trad2amt + roth2amt);
    var totalDeducted1 = beforeDeduction + afterDeduction + additionalWithholding + monthTax1 + total_contrib1;
    var totalDeducted2 = beforeDeduction + afterDeduction + additionalWithholding + monthTax2 + total_contrib2;
    var netPay1 = grossPay - totalDeducted1;
@@ -226,10 +222,6 @@ function calculateResults() {
     $('#trad2').html('-' + CurrencyFormatted(trad2amt));
     $('#roth1').html('-' + CurrencyFormatted(roth1amt));
     $('#roth2').html('-' + CurrencyFormatted(roth2amt));
-    $('#tradCatchup1').html('-' + CurrencyFormatted(catchTrad1amt));
-    $('#tradCatchup2').html('-' + CurrencyFormatted(catchTrad2amt));
-    $('#rothCatchup1').html('-' + CurrencyFormatted(catchRoth1amt));
-    $('#rothCatchup2').html('-' + CurrencyFormatted(catchRoth2amt));
     $('#federalTaxes1').html('-' + CurrencyFormatted(monthTax1));
     $('#federalTaxes2').html('-' + CurrencyFormatted(monthTax2));
     $('#addlFedTax1').html('-' + CurrencyFormatted(additionalWithholding));
@@ -268,15 +260,15 @@ function calculateResults() {
     beforetaxes[year] = beforeDeduction;
     aftertaxes[year] = afterDeduction;
 
-    trad1Contribution[year] = trad1amt + catchTrad1amt + (EMPauto + EMPmatch1);
-    roth1Contribution[year] = roth1amt + catchRoth1amt;
-    trad1Growth[year] = parseFloat(trad1amt + catchTrad1amt + (EMPauto + EMPmatch1)).toFixed(2);
-    roth1Growth[year] = parseFloat(roth1amt + catchRoth1amt).toFixed(2);
+    trad1Contribution[year] = trad1amt + (EMPauto + EMPmatch1);
+    roth1Contribution[year] = roth1amt;
+    trad1Growth[year] = parseFloat(trad1amt + (EMPauto + EMPmatch1)).toFixed(2);
+    roth1Growth[year] = parseFloat(roth1amt).toFixed(2);
 
-    trad2Contribution[year] = trad2amt + catchTrad2amt + (EMPauto + EMPmatch2);
-    roth2Contribution[year] = roth2amt + catchRoth2amt;
-    trad2Growth[year] = parseFloat(trad2amt + catchTrad2amt + (EMPauto + EMPmatch2)).toFixed(2);
-    roth2Growth[year] = parseFloat(roth2amt + catchRoth2amt).toFixed(2);
+    trad2Contribution[year] = trad2amt + (EMPauto + EMPmatch2);
+    roth2Contribution[year] = roth2amt;
+    trad2Growth[year] = parseFloat(trad2amt + (EMPauto + EMPmatch2)).toFixed(2);
+    roth2Growth[year] = parseFloat(roth2amt).toFixed(2);
   }
 
   for (year = 1; year <= maxyear; year++) {
