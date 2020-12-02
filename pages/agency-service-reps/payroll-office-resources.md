@@ -108,7 +108,7 @@ Outlines the procedures agencies must use to report Thrift Savings Plan (TSP) lo
 
 ## Recharacterizations
 
-Form TSP-U-2-R, _Certification of Recharacterization of Records and Journal Voucher_
+Form TSP-U-2-R, _Certification of Recharacterization of Records and Journal Voucher_   
 Use this form to submit tax-deferred and tax-exempt records for recharacterization.
 
 ## Reports payroll offices receive
