@@ -26,7 +26,7 @@ Each year the IRS determines the maximum amount you can contribute to tax-deferr
 <ul class="usa-unstyled-list">
   <li>
     <input id="age50" type="checkbox" name="age50" value="age50" />
-    <label for="age50">I will be age 50 or older in <span id="age50year">year</span></label>
+    <label for="age50">I will be age 50 or older in <span id="age50year">year</span>.</label>
   </li>
 </ul>
 {% capture explanation_1_2 %}

@@ -9,7 +9,7 @@ Results panel (4) for paycheck esitomator.
 <section id="panel-{{ panelID }}" class="calculator-panel paycheck" style="{{ hide }}" markdown="1">
 <section id="comparison-section" class="calculator-panel comparison paycheck" markdown="1">
 
-<h2>TSP Contributions Per Paycheck</h2>
+<h2>TSP contributions per paycheck</h2>
 
 <ul class="table-header-buttons">
   <li class="bg-blue active">
@@ -36,20 +36,20 @@ Results panel (4) for paycheck esitomator.
       </th>
     </tr>
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grosspay" %}
-{% include {{tableRow}} title="Your Traditional (Pre-Tax) Contribution" rowID="trad" %}
-{% include {{tableRow}} title="Your Roth (After-Tax) Contribution" rowID="roth" %}
-{% include {{tableRow}} title="Federal Income Taxes" rowID="federalTaxes" %}
-{% include {{tableRow}} title="Additional Federal Tax Withholding" rowID="addlFedTax" %}
-{% include {{tableRow}} title="Other Taxes and Payroll Deductions" rowID="otherTaxDeductions" %}
-{% include {{tableRow}} title="Total Amount Deducted From Your Pay" rowID="totalDeduct" %}
-{% include {{tableRow}} trClass="emphasis" title="Net Paycheck" rowID="netPay" %}
+{% include {{tableRow}} title="Your traditional (pre-tax) contribution" rowID="trad" %}
+{% include {{tableRow}} title="Your Roth (after-tax) contribution" rowID="roth" %}
+{% include {{tableRow}} title="Federal income taxes" rowID="federalTaxes" %}
+{% include {{tableRow}} title="Additional federal tax withholding" rowID="addlFedTax" %}
+{% include {{tableRow}} title="Other taxes and payroll deductions" rowID="otherTaxDeductions" %}
+{% include {{tableRow}} title="Total amount deducted from your pay" rowID="totalDeduct" %}
+{% include {{tableRow}} trClass="emphasis" title="Net paycheck" rowID="netPay" %}
     <tr>
       <th colspan="3" class="compare-two" scope="colgroup"><div class="flex space-between"><span>Contributions summary</span> <a href="javascript:showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></th>
     </tr>
-{% include {{tableRow}} trID="partContrib" title="Total Amount of Your Contribution(s)" rowID="totalContributions" %}
+{% include {{tableRow}} trID="partContrib" title="Total amount of your contribution(s)" rowID="totalContributions" %}
 {% include {{tableRow}} trID="autoContrib" title="Agency Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}
 {% include {{tableRow}} trID="matchContrib" title="Agency Matching Contribution<sup>1</sup>" rowID="agencyMatchingContributions" %}
-{% include {{tableRow}} trClass="emphasis" title="Total Contributions Increase Your TSP Account By" rowID="TSPIncrease" %}
+{% include {{tableRow}} trClass="emphasis" title="Total contributions increase your TSP account by" rowID="TSPIncrease" %}
   </tbody>
 </table>
 </section> <!-- end of comparison-section -->
@@ -58,7 +58,7 @@ Results panel (4) for paycheck esitomator.
 <ul class="usa-accordion icons">
 <!-- PROJECTED GROWTH -->
 {% include calculator/accordion-start.html expanded=true divID='projected-growth'
-    icon='far fa-chart-line' title='Projected Growth of Your Account' inList=true %}
+    icon='far fa-chart-line' title='Projected growth of your account' inList=true %}
   <div id="resultSelectorDiv"><p>The results below show how much your account will grow over time based on an expected annual rate of return of <span id="annual-rate">--</span>.</p>
 <fieldset class="usa-fieldset-inputs projected-growth">
 <legend class="">Show growth as:</legend>
