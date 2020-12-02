@@ -294,7 +294,8 @@ section {
           }
 
           span.fund-name {
-            display: inline-block;
+            display: inline-flex;
+            line-height: 1.2;
             &:after {
               content: '';
               border-left: 3px solid $color-base;
