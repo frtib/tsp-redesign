@@ -89,7 +89,7 @@ function sumWithholding(op1TradTotal, op2TradTotal) {
   monthTax2 = parseFloat((monthTax2 / maxpay_freq).toFixed(2));
 
   val = parseFloat((val - afterHold).toFixed(2));
-  // console.log ['sumWithholding', val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2];
+  // console.log('sumWithholding', val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2);
   return [val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2];
 }
 
@@ -138,7 +138,6 @@ function option1Good(submit) {
   var roth_input = getInputID(rs, 'roth', 1);
   var roth_set = getPosInteger(roth_input, -1);
   if ((trad_set + roth_set) <= -2) {
-    console.log(trad_set, roth_set);
     var msg = "Enter either a whole percentage or a fixed dollar amount for traditional and/or Roth contributions for Scenario 1.";
     if ((rs == 'USBRS') || (rs == 'US')) {
       msg = "Enter a whole percentage for traditional and/or Roth contributions for Scenario 1.";
@@ -228,7 +227,7 @@ function check_amounts(submit) {
 
   // get totals
   var contribs = sumContributions();
-  var amts = sumWithholding(contribs[2]+contribs[6], contribs[4]+contribs[8]);
+  var amts = sumWithholding(contribs[2], contribs[4]);
 
   // test exceeding yearly IRC limits (warnings first so they can be overwritten by errors)
   // if (!test_limits(submit, amts, contribs)) { rc = false; }
