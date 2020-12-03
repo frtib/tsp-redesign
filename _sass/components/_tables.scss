@@ -109,13 +109,11 @@ section {
 
   &.rates-of-return-table,
   &.share-price-table {
+    margin-bottom: 4rem;
     // Width for "sticky" left-column header
     .column-width {
       width: 9em;
     }
-  }
-  &.rates-of-return-table {
-    margin-bottom: 4rem;
   }
 }
 // end section
