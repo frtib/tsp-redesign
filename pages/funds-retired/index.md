@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lifecycle funds
+title: Retired Lifecycle (L) Funds
 styles:
 sidenav: fund-options
 scripts:

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Making contributions
+title: Traditional and Roth contributions
 styles:
 sidenav: manage-your-plan
 scripts:

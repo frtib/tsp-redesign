@@ -24,15 +24,6 @@ The information we’re providing here is current but subject to change as we re
 
 The CARES Act creates special rules for most types of TSP withdrawals made by participants affected by COVID-19. It also allows us to create a new, temporary withdrawal option that waives the usual in-service withdrawal requirements and allows all COVID-affected participants to waive tax withholding. See below for details.
 
-<div class="usa-alert usa-alert-info usa-alert-paragraph">
-<div class="usa-alert-body">
-<h3 class="usa-alert-heading">Loan options</h3>
-<p class="usa-alert-text" markdown="1">
-The CARES Act also allows us to offer temporary loan options to participants affected by COVID-19. [Learn more]({{ site.baseurl }}/covid-19/loans/).
-</p>
-</div>
-</div>
-
 ## Qualified individuals
 
 To be eligible for the favorable tax treatment described below or to apply for a TSP CARES Act Withdrawal, you must be a **qualified individual**. You’re a qualified individual if you meet at least one of the following criteria:
