@@ -22,7 +22,7 @@ document-ready:
 
 TSP bulletins provide guidance to TSP Agency and Service representatives for implementing the provisions of law, regulations, and procedures relating to the TSP.
 
-<div><button class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=2';">Subscribe</button></div>
+<div><button type="button" class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=2';">Subscribe</button></div>
 <ul class="usa-accordion explain-this subscribe">
   <li>
     <button class="usa-accordion-button" aria-expanded="false" aria-controls="subscribe">Explain this</button>

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Government shutdown
+publish: false
 sidenav: news-and-resources
 styles:
 scripts:
