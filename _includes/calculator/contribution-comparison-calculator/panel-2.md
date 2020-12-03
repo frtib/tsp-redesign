@@ -53,13 +53,14 @@ Enter the annual rate of return you expect to earn on your contributions. View t
 <!-- 5. Contributions per year, as a percentage of your salary -->
 {% capture explanation2_5 %}
 The total of your regular employee contributions should not exceed the Internal Revenue Code (IRC)
-elective deferral limit (<span id='irc-contribution-limit'></span> for <span id='irc-limit-year'></span>).
+elective deferral and catch-up contribution limits
+<span class="nobr">(<span id='irc-contribution-limit'></span> for <span id='irc-limit-year'></span>)</span>.
 <p>Your current selections are <span id='current-annual'>--</span> annually.</p>
 {% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.5" id="cccContributions"
   inputClass=""  dataFormat="%"
-  min="0" value="" max="99" maxLength=7 step="0.01"
+  min="0" value="" max="99" maxLength=7 step="1"
   placeholder="" onBlur="checkContributionAmount(false);"
   prompt="Contributions per year, as a percentage of your salary:"
   explanation=explanation2_5

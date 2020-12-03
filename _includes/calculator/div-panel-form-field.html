@@ -41,6 +41,7 @@ This script produces an input area for calculator panels.
 {% assign focusCommas = 'onFocus="removeCommas(' | append: element | append: ');" ' | append: focusOutCommas %}
 {% endif %}
 {% assign anchor = include.anchor | default: '' %}
+{% assign nofieldset = include.nofieldset | default: false %}
 {% assign dontOpenOuterDiv = include.dontOpenOuterDiv | default: false %}
 {% assign dontCloseOuterDiv = include.dontCloseOuterDiv | default: false %}
 {% if dontOpenOuterDiv %}{% assign dontCloseOuterDiv = true %}{% endif %}
@@ -89,7 +90,7 @@ This script produces an input area for calculator panels.
       </select>
     {% endif %}
     {% if inputType == 'radio' %}
-      <fieldset class="usa-fieldset-inputs usa-sans">
+      {% unless nofieldset %}<fieldset class="usa-fieldset-inputs usa-sans">{% endunless %}
       <legend class="" id="{{id}}-label" for="{{id}}" aria-details="{{fieldID}}">{{prompt}}</legend>
       <span class="usa-input-error-message" id="{{id}}-error-message" role="alert"></span>
       <ul {{ulID}} class="usa-unstyled-list">
@@ -106,7 +107,7 @@ This script produces an input area for calculator panels.
         </li>
       {% endfor %}
       </ul>
-      </fieldset>
+      {% unless nofieldset %}</fieldset>{% endunless %}
     {% endif %}
     {% if dataFormat != '' %}</span>{%endif%}
   </div>

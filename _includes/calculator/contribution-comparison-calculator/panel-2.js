@@ -18,7 +18,9 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-  $('#irc-contribution-limit').html(CurrencyFormatted(IRC_contribution_limit, 'no_cent'));
+  var limit = CurrencyFormatted(IRC_contribution_limit, 'no_cent')
+    + " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'no_cent');
+  $('#irc-contribution-limit').html(limit);
   $('#irc-limit-year').html(IRC_limit_year);
   return true;
 }
@@ -107,7 +109,8 @@ function cccContributionsGood(submit) {
   if ((cccContributions < 0.0) || (cccContributions > 99.0)) {
     return showError('cccContributions', "Contribution percentage should be between 0% and 99%.");
   }
-  cccContributions = cccContributions.toFixed(2);
+  // cccContributions = cccContributions.toFixed(2);
+  cccContributions = cccContributions.toFixed(0);
   $("#cccContributions").val(cccContributions);
   $('#cccContributions-panel3').html(cccContributions + '%');
   return clearError('cccContributions');
@@ -123,11 +126,15 @@ function checkContributionAmount(submit) {
   var cccContributions = getPosFloat('cccContributions', 0.0);
   var contribution = (cccContributions/100.0) * cccSalary;
   $('#current-annual').html(CurrencyFormatted(contribution, 'cent'));
-  if (contribution > IRC_contribution_limit) {
-    var msg = "You are not allowed to contribute more than "
-            + CurrencyFormatted(IRC_contribution_limit, 'cent') + " per year.";
-    showError('cccSalary', msg);
+  if (contribution > (IRC_contribution_limit + IRC_catchup_contribution_limit)) {
+    var msg = "Your regular employee contributions exceed the Internal Revenue Code (IRC) elective deferral"
+      + " and catch-up contribution limts ("
+          + CurrencyFormatted(IRC_contribution_limit, 'cent')
+          + " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'cent')
+            + " in " + IRC_acting_year + ").";
     showError('cccContributions', msg);
+    // showError('cccSalary', msg);
+    return false;
   }
   return true;
 }
