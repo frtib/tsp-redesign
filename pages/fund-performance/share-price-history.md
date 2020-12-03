@@ -32,46 +32,48 @@ To understand how the TSP calculates rates of return for any given period of tim
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=0 chartName=chartName %}
 
 <section class="date-range">
-<form class="share-price-date-range duo" action="javascript:void(0);">
-<fieldset>
-<legend>Share price history date range:</legend>
-<div id="dateRange-div" class="container">
-  <span class="" id="dateRange-error-message" role="alert"></span>
-  <label>
-    <div>Start date</div>
-    <input id="fundDateStart" placeholder="Start date.." class="date-range">
-  </label>
-  <label>
-    <div>End date</div>
-    <input id="fundDateEnd" placeholder="End date.." class="date-range">
-  </label>
-</div>
-</fieldset>
-<button class="usa-button" onClick="getSharePricesRaw('{{chartName}}');">Retrieve share prices</button>
-<button class="usa-button-secondary" onClick='downloadSharePrices();'>
-  Download share prices <i class="fal fa-arrow-alt-to-bottom"></i></button>
-</form>
+  <form class="share-price-date-range duo" action="javascript:void(0);">
+  <fieldset>
+  <legend>Share price history date range:</legend>
+  <div id="dateRange-div" class="container">
+    <span class="" id="dateRange-error-message" role="alert"></span>
+    <label>
+      <div>Start date</div>
+      <input id="fundDateStart" placeholder="Start date.." class="date-range">
+    </label>
+    <label>
+      <div>End date</div>
+      <input id="fundDateEnd" placeholder="End date.." class="date-range">
+    </label>
+  </div>
+  <button class="usa-button" onClick="getSharePricesRaw('{{chartName}}');">Retrieve share prices</button>
+  <button class="usa-button-secondary" onClick='downloadSharePrices();'>
+    Download share prices <i class="fal fa-arrow-alt-to-bottom"></i></button>
+  </fieldset>
+  </form>
 </section>
 </div> <!-- end div.usa-grid centered -->
 </div>
 
 <div id="{{chartName}}-div" class="usa-grid-full usa-layout-docs-main_content">
 <div class="usa-width-one-whole" markdown="1">
-  <section id="{{chartName}}-section" class="share-price-table">
 <!-- TABLE SECTION -->
-    <div class="table-scroll-buttons">
-      <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-      <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-    </div><!-- END div.table-scroll-buttons -->
-    <div id="{{chartName}}-table" class="table-side-scroll"></div>
-<!-- CHART -->
+<section id="{{chartName}}-section" class="share-price-table">
+  <div class="table-scroll-buttons">
+    <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+    <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+  </div><!-- END div.table-scroll-buttons -->
+  <div id="{{chartName}}-table" class="table-side-scroll"></div>
+</section>
+<!-- CHART SECTION -->
+<section class="share-price-charts">
   <ul class="usa-accordion">
     <li>
       <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}">Share Prices</button>
       <div id="{{ chartName }}" class="usa-accordion-content hc-share-price-chart" aria-hidden="false"></div>
     </li>
   </ul>
-  </section>
+</section>
 
 </div> <!-- END div.usa-width-one-whole -->
 </div> <!-- END div.usa-grid-full -->

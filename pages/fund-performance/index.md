@@ -47,6 +47,7 @@ redirect_from:
   <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 <!-- CHARTS -->
+<section class="rates-of-return-charts">
 <div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
 <div class="usa-width-one-whole">
 
@@ -65,3 +66,4 @@ redirect_from:
 
 </div>
 </div> <!-- end div#{{chartName}}-div -->
+</section>
