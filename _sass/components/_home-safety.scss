@@ -116,7 +116,6 @@ section {
     }
   }
 }
-
 // SECTION: OUR FUNDS
 
 #home-our-funds {
@@ -140,13 +139,12 @@ section {
     // _accoridion-usa-tabs overrides
     margin-right: 0;
     margin-bottom: 0.5rem;
-    vertical-align: top;
 
-    .usa-accordion-button {
+    button.usa-accordion-button {
       width: 100%;
       display: block;
       text-align: center;
-      font-size: 2.3rem;
+      font-size: 2rem;
       background-color: transparent;
       margin-bottom: 0;
       background-image: none;
@@ -169,7 +167,7 @@ section {
           content: '';
           position: relative;
           left: 0;
-          top: 1.5rem;
+          top: 1.6rem;
           width: 0;
           height: 0;
           border-left: 20px solid transparent;
@@ -194,7 +192,6 @@ section {
         padding: 3rem 0;
       }
     }
-
     // LEVEL 2: L FUNDS
     .lifecycle-funds > li {
       display: block;
@@ -204,39 +201,47 @@ section {
         border-bottom: none;
       }
 
-      .usa-accordion-button {
-        text-align: center;
+      button.usa-accordion-button {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        background-color: transparent;
+        font-size: 2.3rem;
+        line-height: 2;
+        // padding-left: 0;
+        // padding: 1.5rem 2rem 1.5rem 0;
 
         div {
-          padding: 1.5rem 0;
-          background-color: transparent;
           color: $color-primary;
+          padding: 1.5rem 2rem 1.5rem 0;
+          border: 1px solid red;
         }
 
         span.fund-name {
-            display: block;
-            color: $color-base;
-            font-weight: $bold;
-          }
+          display: block;
+          color: $color-base;
+          // &:after {
+          //   content: '';
+          //   border-left: 3px solid $color-base;
+          //   margin-left: 1rem;
+          //   margin: 0 .2rem 0 1rem;
+          //
+          // }
+        }
+
+        // span {
+        //   color: $color-primary;
+        //   display: block;
+        // }
 
         &[aria-expanded="true"] {
-          &:after {
-            content: '';
-            text-align: center;
-            position: relative;
-            left: 0;
-            top: 1.6rem;
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: none;
-            border-top-width: 20px;
-            border-top-style: solid;
-            border-top-color: $color-primary;
-            clear: both;
-            margin: 0;
-          }
+          background-color: inherit;
+          color: inherit;
+          // line-height: 7rem;
+        }
+
+        &[aria-expanded="true"]::after {
+          content: none;
         }
       } // END .usa-accordion-button
       .usa-accordion-content {
@@ -246,7 +251,7 @@ section {
           font-size: 2.3rem;
           padding: 0;
           &:nth-child(2) {
-            line-height: 2.2;
+            line-height: 2;
           }
         }
       }
@@ -266,9 +271,9 @@ section {
         margin-right: 0;
         margin-bottom: 1rem;
 
-        .usa-accordion-button {
-          display: inline-block;
+        button.usa-accordion-button {
           width: 49%;
+          display: inline-block;
           border: none;
           margin-bottom: 1rem;
 
@@ -282,21 +287,13 @@ section {
 
       // LEVEL 2: L FUNDS
       .lifecycle-funds > li {
-        .usa-accordion-button {
-          text-align: left;
-          width: 100%;
+        button.usa-accordion-button {
           font-size: 3rem;
           line-height: 7rem;
 
-          &[aria-expanded="true"] {
-            &:after {
-              content: none;
-            }
-          }
-
           span.fund-name {
-            display: inline-flex;
-            line-height: 1.2;
+            display: inline-block;
+            // color: inherit;
             &:after {
               content: '';
               border-left: 3px solid $color-base;
@@ -305,12 +302,16 @@ section {
 
             }
           }
+
+          span {
+            display: inline;
+          }
         }
         .usa-accordion-content {
-          padding: 4.5rem 2rem 1.5rem 2rem;
+
+          padding: 1.5rem 2rem;
           p {
-            font-size: 3rem;
-            padding: 0;
+            font-size: 2.6rem;
           }
         }
       }

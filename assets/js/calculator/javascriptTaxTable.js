@@ -4,10 +4,12 @@ function round_cents(num) {
 }
 
 var taxMinYear = 2018;
-var taxMaxYear = 2020;
+var taxMaxYear = 2021;
 var IRC_acting_year = taxMaxYear;
 
 var taxValues = {
+    2021: { contribution_limit: 19500.00, catchup_limit: 6500.00,
+      withholding_allowance: 4300.00, annual_addition: 58000 },
     2020: { contribution_limit: 19500.00, catchup_limit: 6500.00,
       withholding_allowance: 4200.00, annual_addition: 57000 },
     2019: { contribution_limit: 19000.00, catchup_limit: 6000.00,
