@@ -370,7 +370,7 @@ progress-steps: [Retirement system,Paycheck information,Contribution election,Re
     <tbody>
       <tr>
         <th colspan="3" class="compare-two" scope="colgroup">
-          <div class="flex space-between"><span>Paycheck results</span> <a href="javascript:showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
+          <div class="flex space-between"><span>Paycheck results</span> <a href="#salary" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
         </th>
       </tr>
 
@@ -435,7 +435,7 @@ progress-steps: [Retirement system,Paycheck information,Contribution election,Re
     </tr>
 
     <tr>
-      <th colspan="3" class="compare-two" scope="colgroup"><div class="flex space-between"><span>Contributions summary</span> <a href="javascript:showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></th>
+      <th colspan="3" class="compare-two" scope="colgroup"><div class="flex space-between"><span>Contributions summary</span> <a href="#contributions" onClick="showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></th>
     </tr>
 
     <tr id="partContrib">

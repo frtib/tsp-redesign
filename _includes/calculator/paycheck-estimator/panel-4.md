@@ -32,7 +32,10 @@ Results panel (4) for paycheck esitomator.
   <tbody>
     <tr>
       <th colspan="3" class="compare-two" scope="colgroup">
-        <div class="flex space-between"><span>Paycheck results</span> <a href="javascript:showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
+        <div class="flex space-between">
+          <span>Paycheck results</span>
+          <a href="#salary" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a>
+        </div>
       </th>
     </tr>
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grosspay" %}
@@ -44,7 +47,12 @@ Results panel (4) for paycheck esitomator.
 {% include {{tableRow}} title="Total amount deducted from your pay" rowID="totalDeduct" %}
 {% include {{tableRow}} trClass="emphasis" title="Net paycheck" rowID="netPay" %}
     <tr>
-      <th colspan="3" class="compare-two" scope="colgroup"><div class="flex space-between"><span>Contributions summary</span> <a href="javascript:showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a></div></th>
+      <th colspan="3" class="compare-two" scope="colgroup">
+        <div class="flex space-between">
+          <span>Contributions summary</span>
+          <a href="#contributions" onClick="showPanel(3);">Adjust <i class="fal fa-sliders-v"></i></a>
+        </div>
+      </th>
     </tr>
 {% include {{tableRow}} trID="partContrib" title="Total amount of your contribution(s)" rowID="totalContributions" %}
 {% include {{tableRow}} trID="autoContrib" title="Agency Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}

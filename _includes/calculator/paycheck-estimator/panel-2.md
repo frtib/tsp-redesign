@@ -9,7 +9,7 @@ Paycheck infomation panels (2) for paycheck estimator.
 
 {% comment %}Start of multi-input block Salary information.  We must close <div> at end{% endcomment %}
 {% capture salary_info %}none{% endcapture %}
-{% include calculator/div-panel-form-field.html  
+{% include calculator/div-panel-form-field.html anchor="salary"
   outerDivID="salaryInformationDiv" outerDivClass=""
   fieldID="panel-2.1" inputType="none" H2="Salary information" anchor="salary"
   explanation=""  dontCloseOuterDiv=true

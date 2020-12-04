@@ -13,7 +13,7 @@ If you plan to retire before age 59&frac12;, be aware that any Roth earnings inc
 {% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.1" id="cccYearsUntilRetirement" inputClass=""  dataFormat=""
-  min="1" value="" max="70" maxLength=2 step="1"
+  min="1" value="" max="70" maxLength=2 step="1" anchor="profile"
   placeholder="" onBlur="cccYearsUntilRetirementGood(false);"
   prompt="How many years until you retire?"
   explanation=explanation_2_1

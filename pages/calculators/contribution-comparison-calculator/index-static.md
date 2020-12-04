@@ -268,7 +268,7 @@ for your income needs and protect your longevity risk.</p>
     <tbody>
     <tr>
     <th colspan="3" class="compare-two" scope="colgroup">
-    <div class="flex space-between"><span>Effect on your paycheck</span> <a href="javascript:showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
+    <div class="flex space-between"><span>Effect on your paycheck</span> <a href="#" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
     </th>
     </tr>
 
