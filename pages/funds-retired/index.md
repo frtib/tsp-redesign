@@ -110,7 +110,7 @@ In this section, you can view the average annual returns history of L Funds that
   </tbody>
       <!-- Monthly returns (2018)...would go here. You get the idea. -->
   <!-- Lifetime returns -->
-  <tbody>
+  <tbody class="lifetime-returns">
     <tr>
       <th scope="row">Lifetime</th>
       <td class="col1">15.00%</td>

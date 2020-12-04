@@ -262,8 +262,14 @@ section {
             content: "\f056";
           }
         }
-      }
-      // end .annual-returns
+      } // end .annual-returns
+      &.lifetime-returns {
+        th,
+        td {
+          border-top: 2px solid #ddd;
+        }
+      } // end .lifetime-returns
+
     }
     // end tbody
     [data-toggle="toggle"] {
