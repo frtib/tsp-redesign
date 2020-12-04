@@ -24,6 +24,7 @@ Name middle panels (2) for CALC.
 {% assign tradroth = 'calculator/paycheck-estimator/panel-3-percent-fixed-block.html' %}
 {% assign catchup = 'calculator/paycheck-estimator/panel-3-catch-up-block.html' %}
 
+<a name="contributions"></a>
 <!-- Scenario 1 -->
 <div class="usa-width-one-half scenario">
   <h3>Scenario 1 (required)</h3><!-- Scenario 1, Traditional contributions -->
