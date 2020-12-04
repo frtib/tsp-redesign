@@ -13,6 +13,6 @@ latest: y
 
 **December 30** &#8212; Withdrawals processed on December 30 will be reported to the IRS as income for 2021. The payments (checks and direct deposits) are expected to be issued on January 4, 2021.
 
-**December 31** &#8212; Withdrawals processed on December 31 will be reported to the IRS as income for 2021. The payments (checks and direct deposits) are expected to be issued on January 4, 2021.
+**December 31** &#8212; Withdrawals processed on December 31 will be reported to the IRS as income for 2021. The payments (checks and direct deposits) are expected to be issued on January 5, 2021.
 
 **January 1, 2021** &#8212; Because January 1 is a federal holiday, the TSP will be closed. Transactions that would have been processed Friday night (January 1) will be processed Monday night (January 4) at Monday’s closing share prices.
