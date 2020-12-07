@@ -26,7 +26,7 @@ Retirement System panel (1) for Paycheck Estimator.
   </li>
 </ul>
 {% capture explanation_1_2 %}
-Participants age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.
+Participants turning age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.
 {% endcapture %}
 {% include calculator/div-panel-form-field.html fieldID="panel-1.2" inputType="none" explanation=explanation_1_2 dontOpenOuterDiv=true %}
 </div><!-- END div.panel-form-field -->

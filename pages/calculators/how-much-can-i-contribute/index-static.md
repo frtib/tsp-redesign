@@ -27,60 +27,93 @@ redirect_from:
     <li>Your most recent Leave and Earnings statement or payslip.</li>
     <li>The number of salary payments you have left for the year.</li>
   </ul>
-
-  <div class="dotted-line"></div>
-  <fieldset>
+<section class="calculator-panel">
+  <!-- <div class="dotted-line"></div> -->
     <div><a name="review-year-anchor"></a></div>
-    <div class="panel-form-field ">
 
-      <div id="review-year-div" class="">
-        <label class="" id="review-year-label" for="review-year" aria-details="panel-1.1">Choose the year you would like to review, then press Start.</label>
-        <span class="usa-input-error-message" id="review-year-error-message" role="alert"></span>
-        <select class="format-left" id="review-year" name="review-year"><option value="2019">2019</option><option selected="selected" value="2020">2020</option></select>
+    <div class="panel-form-field">
+      <fieldset class="usa-fieldset-inputs">
+
+        <div id="review-year-div" class="">
+          <label class="" id="review-year-label" for="review-year" aria-details="panel-1.1">Choose the year you would like to review, then press Start.</label>
+          <span class="usa-input-error-message" id="review-year-error-message" role="alert"></span>
+          <select class="format-left" id="review-year" name="review-year" aria-labelledby="startButton">
+            <option value="2019">2019</option>
+            <option selected="selected" value="2020">2020</option>
+          </select>
+        </div>
+      </fieldset>
       </div>
-      <!-- DAV, Age 50 checkbox -->
-      <ul class="usa-unstyled-list">
-        <li>
-        <input
-          id="age50"
-          type="checkbox"
-          name="age50"
-          value="age50"
-          checked />
-          <label for="truth">I will be age 50 or older in { year }</label>
-        </li>
-      </ul>
-      <!-- DAV, Explain this -->
+        <!-- DAV, Age 50 checkbox -->
+        <!-- <ul class="usa-unstyled-list">
+          <li>
+          <input
+            id="age50"
+            type="checkbox"
+            name="age50"
+            value="age50"
+            checked />
+            <label for="truth">I will be age 50 or older in { year }</label>
+          </li>
+        </ul> -->
+      <!-- DAV, Age 50 radio buttons and fieldset replaces checkbox -->
+      <div class="panel-form-field">
+      <fieldset class="usa-fieldset-inputs">
+        <div class="usa-input-error">
+          <legend for="age50">Will your turn age 50 or older during <span id="age50year">year</span>?</legend>
+          <span class="usa-input-error-message" id="input-error-message" role="alert">Your response is required.</span>
+          <ul class="usa-unstyled-list">
+            <li>
+              <input
+                id="age50Yes"
+                type="radio"
+                name="age50"
+                value="age50Yes" />
+              <label for="age50Yes">Yes</label>
+            </li>
+            <li>
+              <input
+                id="age50No"
+                type="radio"
+                name="age50"
+                value="age50No" />
+              <label for="age50No">No</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+        <!-- DAV, Explain this -->
       <div>
         <ul class="usa-accordion explain-this">
           <li>
             <button class="usa-accordion-button" aria-expanded="false" aria-controls="programmer-choice">Explain this</button>
             <div id="programmer-choice" class="usa-accordion-content" aria-hidden="false">
-            <p>Participants age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.</p>
+            <p>Participants turning age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.</p>
             </div>
           </li>
         </ul>
       </div>
 
-    </div><!-- END div.panel-form-field -->
-
-  </fieldset>
-
+    </div>
+    <!-- END div.panel-form-field -->
+</section>
   <p>
-  <button class="usa-button " href="javascript:void(0);" title="" onclick="processPanel(1, 0, 2, 0); return false;">Start</button>
+  <button id="startButton" class="usa-button " href="javascript:void(0);" title="" onclick="processPanel(1, 0, 2, 0); return false;">Start</button>
   </p>
 
   <div class="usa-alert  usa-alert-info ">
-    <div class="usa-alert-body">
-      <h3 class="usa-alert-heading">Special Note for FERS and BRS Participants</h3>
-<p class="usa-alert-text" markdown="1">
-This calculator is especially important for FERS employees and members of the
-uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/forms/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
-The dollar amount determined by using this calculator distributes your employee/member contributions over the entire year (or remainder of the year), and thus allows you to receive the maximum Agency or Service Matching Contributions.
-</p>
-    </div>
+  <div class="usa-alert-body">
+  <h3 class="usa-alert-heading">Special Note for FERS and BRS Participants</h3>
+  <p class="usa-alert-text" markdown="1">
+  This calculator is especially important for FERS employees and members of the
+  uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/forms/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
+  The dollar amount determined by using this calculator distributes your employee/member contributions over the entire year (or remainder of the year), and thus allows you to receive the maximum Agency or Service Matching Contributions.
+  </p>
   </div>
-</div><!-- END panel-1 -->
+  </div>
+
+</div>
+<!-- END panel-1 -->
 
 <code id="panel3">PANEL 3: ELECTIVE DEFERRAL LIMITS</code>
 
