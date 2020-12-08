@@ -20,7 +20,7 @@ panelExit[{{ panelID }}] = function(panel) {
 }
 
 // my functions
-panelSure[5] = function(submit) {
+panelSure[{{ panelID }}] = function(submit) {
   return panelTest(submit, 1);
 };
 function panelTest(submit, warn) {

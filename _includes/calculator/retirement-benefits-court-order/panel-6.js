@@ -7,7 +7,9 @@ This is the javascript specific to panel 2.
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
-  return true;
+  return petitionerGood(forceValue) & courtNameGood(0, 0, '')
+      & jurisdictionGood(0, 0, '') & caseNumberGood(0, 0, '')
+      & judgeNameGood(0, 0, '');
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
@@ -16,44 +18,33 @@ panelEnter[{{ panelID }}] = function(panel) {
 panelExit[{{ panelID }}] = function(panel) {
     return true;
 }
+panelSure[{{ panelID }}] = function(forceValue) {
+  return petitionerGood(forceValue) & courtNameGood(0, forceValue, '')
+      & jurisdictionGood(0, forceValue, '') & caseNumberGood(0, forceValue, '')
+      & judgeNameGood(0, forceValue, '');
+};
+
 
 // my functions
-function amountToReceiveGood(submit) {
-  if (!submit) {
-    if ($("#amountToReceive").val() == '') { return clearError('amountToReceive'); }
-  }
-  var amountToReceive = getPosInteger('amountToReceive', -1);
-  var amountToUse = getPosInteger('amountToUse', 0);
-  if (amountToReceive > 0) { $('#amountToReceive').val(amountToReceive); }
-  if (amountToReceive > 999999) { $('#amountToReceive').val(999999); }
+function getpetitioner() { return $('#petitioner').val(); }
+function petitionerGood(submit) {
+  var petitioner = getpetitioner();
+console.log('petitionerGood |', petitioner, '|');
 
-  if (amountToReceive < 25.0) {
-    return showError('amountToReceive', "You must request to receive at least $25 a month.");
-  }
-  if (amountToReceive > amountToUse) {
-    return showError('amountToReceive', "You cannot request to receive more than the account balance.");
+  if (petitioner == 'Select') {
+    console.log('error petitionerGood |', petitioner, '|');
+    if (submit) { return showError('petitioner', "Select petitioner."); }
   }
 
-  $('#amountToReceiveAYR').html(CurrencyFormatted(amountToReceive));
-  return clearError('amountToReceive');
+  console.log('clear petitionerGood |', petitioner, '|');
+  $('#petitionerGood-panel3').html(petitioner);
+  return clearError('petitioner');
 }
 
-function rateOfReturnGood(submit) {
-  if (!submit) {
-    if ($("#rateOfReturn").val() == '') { return clearError('rateOfReturn'); }
-  }
-  var rateOfReturn = getPosFloat('rateOfReturn', -1.0);
-  if (rateOfReturn >= 0.0) { $('#rateOfReturn').val(rateOfReturn.toFixed(2)); }
-
-  if (rateOfReturn < 0.0) {
-    return showError('rateOfReturn', "Rate of return is required. Enter “0” for no rate of return.");
-  }
-  if ((rateOfReturn < 0.0) || (rateOfReturn > 99.0)) {
-    return showError('rateOfReturn', "Rate of return should be between 0% and 99%.");
-  }
-  $('#rateOfReturnAYR').html(rateOfReturn);
-  return clearError('rateOfReturn');
-}
+function courtNameGood(submit, writein, role) { launderInput('courtName'); return stringGood2(submit, writein, role, 'courtName', "Enter court name.");}
+function jurisdictionGood(submit, writein, role) { launderInput('jurisdiction'); return stringGood2(submit, writein, role, 'jurisdiction', "Enter jurisdiction.");}
+function caseNumberGood(submit, writein, role) { launderInput('caseNumber'); return stringGood2(submit, writein, role, 'caseNumber', "Enter case number.");}
+function judgeNameGood(submit, writein, role) { launderInput('judgeName'); return stringGood2(submit, writein, role, 'judgeName', "Enter judge name.");}
 
 -->
 </script>

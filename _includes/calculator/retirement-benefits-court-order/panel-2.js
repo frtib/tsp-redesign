@@ -167,8 +167,8 @@ function setPartyNames(flag) {
   $('#QDROPanel-H2').html('Retirement Benefits Specialist (RBS) Information');
   $('#QDROretainer option[value=Participant]').text(partName + ' retained RBS');
   $('#QDROretainer option[value=Payee]').text(payName + ' retained RBS');
-  $('#petitioner option[value=Participant]').text(partName + ' is Petitioner');
-  $('#petitioner option[value=Payee]').text(payName + ' is Petitioner');
+  $('#petitioner option[value=part]').text(partName + ' is Petitioner');
+  $('#petitioner option[value=pay]').text(payName + ' is Petitioner');
 
   $('#partfullname-label').addClass('hide');
   $('#partfullname-glabel').addClass('hide');
