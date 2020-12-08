@@ -163,15 +163,15 @@ function test_limits(submit, amts, contribs) {
     var limitRegular = IRC_contribution_limit;
     var limitCatch = IRC_catchup_contribution_limit;
     var limitTotal = limitRegular;
-    var age50 = $('#age50').prop('checked');
-    if (age50) { limitTotal += limitCatch; }
+    var age50 = getAge50();
+    if (age50 == 'age50Yes') { limitTotal += limitCatch; }
     var msg = '';
     var rs = getRetirementSystem();
 
     // warn: exceed elective deferral limit
     msg = "Your regular employee contributions exceed the "
       + "Internal Revenue Code (IRC) elective deferral ";
-    if (age50) {
+    if (age50 == 'age50Yes') {
       msg += " and catch-up contribution limts" + " (" + CurrencyFormatted(limitRegular, 'no_cent') + " + "
         + CurrencyFormatted(limitCatch, 'no_cent');
     } else {

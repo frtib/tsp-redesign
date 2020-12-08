@@ -59,7 +59,8 @@ function updateMaxContributionMsg() {
   var ytdCont = getPosInteger('ytd-cont', 0);
   var estCont = getPosInteger('est-cont', 0);
   var reviewYear = getPosInteger('review-year', 2019);
-  var age50 = $('#age50').prop('checked');
+  var age50 = false;
+  if (getAge50() == 'age50Yes') { age50 = true; }
   var taxValues = getTaxValues(reviewYear);
   var deferralLimit = taxValues[1];
   var catchupLimit = taxValues[2];
@@ -76,7 +77,8 @@ function totalContributionGood(forceTotal, forceAdditional) {
   var ytdCont = getPosInteger('ytd-cont', 0);
   var estCont = getPosInteger('est-cont', 0);
   var reviewYear = getPosInteger('review-year', 2019);
-  var age50 = $('#age50').prop('checked');
+  var age50 = false;
+  if (getAge50() == 'age50Yes') { age50 = true; }
   var taxValues = getTaxValues(reviewYear);
   var deferralLimit = taxValues[1];
   var catchupLimit = taxValues[2];
@@ -98,7 +100,7 @@ function totalContributionGood(forceTotal, forceAdditional) {
     if ((ytdCont + estCont) > contributionLimit) {
       var msg = "Your regular employee contributions exceed the Internal Revenue Code (IRC) elective deferral "
           + limitText + " (" + CurrencyFormatted(deferralLimit, 'no_cent');
-      if (age50) { msg += " + " + CurrencyFormatted(catchupLimit, 'no_cent'); } 
+      if (age50) { msg += " + " + CurrencyFormatted(catchupLimit, 'no_cent'); }
       msg += " in "+ reviewYear + ").";
       // showError('ytd-cont', msg);
       return showError('est-cont', msg);

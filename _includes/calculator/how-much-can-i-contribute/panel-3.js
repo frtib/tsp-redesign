@@ -13,7 +13,8 @@ panelGood[{{ panelID }}] = function(submit) {
 panelEnter[{{ panelID }}] = function(panel) {
     // contribution year
     var reviewYear = $('#review-year').val();
-    var age50 = $('#age50').prop('checked');
+    var age50 = false;
+    if (getAge50() == 'age50Yes') { age50 = true; }
     showCatchupRow(age50);
     var taxValues = getTaxValues(+reviewYear);
     var deferralLimit = taxValues[1];

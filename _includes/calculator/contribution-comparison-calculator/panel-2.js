@@ -8,20 +8,14 @@ This is the javascript specific to panel 2.
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
   return payScheduleGood(forceValue)
-    & cccTaxRateLaterGood(forceValue)
-    & cccTaxRateNowGood(forceValue)
-    & checkContributionAmount(forceValue)
-    & cccInterestRateGood(forceValue)
-    & cccSalaryGood(forceValue)
-    & cccYearsInRetirementGood(forceValue)
-    & cccYearsUntilRetirementGood(forceValue);
+    & cccTaxRateLaterGood(forceValue) & cccTaxRateNowGood(forceValue)
+    & checkContributionAmount(forceValue) & cccInterestRateGood(forceValue)
+    & cccSalaryGood(forceValue) & cccYearsInRetirementGood(forceValue)
+    & age50Good(forceValue) & cccYearsUntilRetirementGood(forceValue);
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-  var limit = CurrencyFormatted(IRC_contribution_limit, 'no_cent')
-    + " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'no_cent');
-  $('#irc-contribution-limit').html(limit);
-  $('#irc-limit-year').html(IRC_limit_year);
+  setLimitText();
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
@@ -115,23 +109,39 @@ function cccContributionsGood(submit) {
   $('#cccContributions-panel3').html(cccContributions + '%');
   return clearError('cccContributions');
 }
+function setLimitText() {
+  var limit = CurrencyFormatted(IRC_contribution_limit, 'no_cent');
+  if (getAge50() == 'age50Yes') {
+    limit += " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'no_cent');
+  }
+  $('#irc-contribution-limit').html(limit);
+  $('#irc-limit-year').html(IRC_limit_year);
+  return false;
+}
 // check salary, contribution %, then check combination.  i.e. bad input means dont check combination
 function checkContributionAmount(submit) {
   $('#current-annual').html("--");
   var rc = cccContributionsGood(submit);
   rc &= cccSalaryGood(submit);
   if (!rc) { return rc; }
+  var age50 = false;
+  var contributionLimit = IRC_contribution_limit;
+  if (getAge50() == 'age50Yes') {
+    age50 = true;
+    contributionLimit += IRC_catchup_contribution_limit;
+  }
+  setLimitText();
   // now check combination
   var cccSalary = getPosInteger('cccSalary', 0);
   var cccContributions = getPosFloat('cccContributions', 0.0);
   var contribution = (cccContributions/100.0) * cccSalary;
   $('#current-annual').html(CurrencyFormatted(contribution, 'cent'));
-  if (contribution > (IRC_contribution_limit + IRC_catchup_contribution_limit)) {
-    var msg = "Your regular employee contributions exceed the Internal Revenue Code (IRC) elective deferral"
-      + " and catch-up contribution limts ("
-          + CurrencyFormatted(IRC_contribution_limit, 'cent')
-          + " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'cent')
-            + " in " + IRC_acting_year + ").";
+  if (contribution > (contributionLimit)) {
+    var msg = "Your regular employee contributions exceed the Internal Revenue Code (IRC) elective deferral";
+    if (age50) { msg += " and catch-up contribution limits "; } else { msg += " limit "; }
+    msg += " (" + CurrencyFormatted(IRC_contribution_limit, 'cent');
+    if (age50) { msg += " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'); }
+    msg += " in " + IRC_acting_year + ").";
     showError('cccContributions', msg);
     // showError('cccSalary', msg);
     return false;
@@ -194,6 +204,20 @@ function cccEqualContributionChecked() {
 }
 function cccEqualContributionGood(submit) {
   return true;
+}
+
+function getAge50() {
+  if ($('#age50Yes').prop('checked')) { return 'age50Yes'; }
+  if ($('#age50No').prop('checked')) { return 'age50No'; }
+  return '';
+}
+function age50Good(submit) {
+  checkContributionAmount(submit);
+  var age50 = getAge50();
+  if (age50 == '') {
+    if (submit) { return showError('age50', "Your response is required."); }
+  }
+  return clearError('age50');
 }
 
 -->
