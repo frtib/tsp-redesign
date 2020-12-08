@@ -21,18 +21,21 @@ Elective Contributions panel (2) for How Much Can I Contribute?.
 
 <!-- B -->
 {% include calculator/div-panel-form-field.html
-  fieldID="panel-2.2" id="est-cont"
+  fieldID="panel-2.2a" id="est-cont"
   inputClass="format-left"  dataFormat="$"
   value="0" min="0" max="25000" step="1" maxLength=8 placeholder=""
   prompt="How much more will you contribute to the TSP before any changes take effect?"
+  explanation=""   dontCloseOuterDiv=true
+  onBlur="totalContributionGood(false, true);"
+%}
+<div id="maxContributionMsg" class="how-much-contribute-limit-message"></div>
+{% include calculator/div-panel-form-field.html
+  fieldID="panel-2.2c" inputType="none" dontOpenOuterDiv=true
   explanation="
   <p>People often use this calculator to figure out a new dollar amount they should contribute to reach the IRS limit without going over. But when you change how much you’re contributing, it can take 1-2 pay periods for your agency or service to process the new amount. During that time, the TSP will still receive the amount you’re contributing now.</p>
   <p>Enter an estimate of how much you’ll contribute before any changes take effect. If you are uncertain, check with your personnel or finance office.</p>"
-  onBlur="totalContributionGood(false, true);"
 %}
-
-<div id="maxContributionMsg" class="how-much-contribute-limit-message"></div>
-
+</div>
 <!-- C -->
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.3" id="remaining-payments"
