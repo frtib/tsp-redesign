@@ -33,8 +33,9 @@ Our Office of Communications and Education hosts TSP webinars to supplement TSP 
 <div class="usa-alert  usa-alert-info usa-alert-paragraph">
 <div class="usa-alert-body">
 <h3 class="usa-alert-heading" style="padding-top: .5rem;">
-Webinar password: TSPweb
+Registration password: TSPweb
 </h3>
+<p>Use this password on the WebEx event registration screen for the webinar of your choice.</p>
 </div>
 </div>
 
@@ -45,8 +46,6 @@ Webinar password: TSPweb
 -   After you register, you’ll receive an email with a link to join the webinar online and a phone number if you want to access the audio only.
 -   **All scheduled start times are listed in eastern time.**
 -   All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
-
-Our education staff has created a distribution list of agency and service representatives that can assist in distributing TSP webinar information to participants. Individual participants should not request to be on the list.
 
 To learn more about TSP webinars or request to be on the distribution list, please contact us at **webinars@frtib.gov**.
 
