@@ -172,7 +172,7 @@ function test_limits(submit, amts, contribs) {
     msg = "Your regular employee contributions exceed the "
       + "Internal Revenue Code (IRC) elective deferral ";
     if (age50 == 'age50Yes') {
-      msg += " and catch-up contribution limts" + " (" + CurrencyFormatted(limitRegular, 'no_cent') + " + "
+      msg += " and catch-up contribution limits" + " (" + CurrencyFormatted(limitRegular, 'no_cent') + " + "
         + CurrencyFormatted(limitCatch, 'no_cent');
     } else {
       msg += "limit " + " (" + CurrencyFormatted(limitRegular, 'no_cent');

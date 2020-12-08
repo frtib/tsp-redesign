@@ -26,7 +26,7 @@ Participants turning age 50 or older are eligible for catch-up contributions. We
   fieldID="panel-1.1b" id="age50"
   inputType="radio" radioIDs="age50Yes, age50No" radioLabels="Yes, No"
   inputClass="usa-unstyled-list"   onBlur="age50Good(false);"
-  prompt='Will you turn age 50 or older during <span id="age50year">this year</span>?'
+  prompt='Will you turn age 50 or older in <span id="age50year">this year</span>?'
   explanation=explanation_1_1b
 %}
 <!-- 2. How many years will you spend in retirement? -->

@@ -60,7 +60,7 @@ redirect_from:
       <div class="panel-form-field">
       <fieldset class="usa-fieldset-inputs">
         <div class="usa-input-error">
-          <legend for="age50">Will your turn age 50 or older during <span id="age50year">year</span>?</legend>
+          <legend for="age50">Will your turn age 50 or older in <span id="age50year">year</span>?</legend>
           <span class="usa-input-error-message" id="input-error-message" role="alert">Your response is required.</span>
           <ul class="usa-unstyled-list">
             <li>

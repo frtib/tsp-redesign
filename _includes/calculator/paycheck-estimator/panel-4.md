@@ -117,7 +117,7 @@ Results panel (4) for paycheck esitomator.
 </ul>
 
 <ol id="agencyFootnote" class="footnotes">
-  <li>All agency contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions. There are no <span data-term="Agency Matching Contributions" class="js-glossary-toggle term term-end">Agency Matching Contributions</span> of <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>.</li>
+  <li>All agency contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions.</li>
 </ol>
 <ol id="serviceFootnote" class="footnotes">
   <li>All service contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions. There are no <span data-term="Service Matching Contributions" class="js-glossary-toggle term term-end">Service Matching Contributions</span> of <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>. Most members are not eligible for matching contributions until they have served two years. All service contributions stop after a member has served 26 years. Check with your service regarding eligibility for service contributions.</li>
