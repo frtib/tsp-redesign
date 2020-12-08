@@ -5,9 +5,8 @@ Elective Contributions panel (2) for How Much Can I Contribute?.
 {% assign hide = 'display: block;' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
 
-<div id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
+<section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
 
-<fieldset>
 <!-- A -->
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.1" id="ytd-cont"
@@ -54,8 +53,7 @@ Elective Contributions panel (2) for How Much Can I Contribute?.
   </tbody></table>
   <p>* A biweekly frequency occasionally results in 27 salary payments for a year. Contact your personnel or payroll office if you do not know the number of salary payments you will receive for the remainder of the year.</p>"
 %}
-</fieldset>
 
 {% include calculator/button-block.html panelID=panelID prev=1 showResults=3 %}
 
-</div>
+</section>
