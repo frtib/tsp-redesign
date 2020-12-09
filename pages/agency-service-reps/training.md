@@ -287,6 +287,8 @@ This webinar provides an overview of the TSP in-service withdrawal options. TSP 
 
 ## TSP A to Z
 
+This course covers every aspect of TSP participation, and would be beneficial for a mixed group covering every stage of professional life. Topics include the benefits of savings, traditional vs. Roth contributions, investments, loans, and post-separation withdrawals.
+
 ### January 15, 2021
 
 - 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=251){:rel="nofollow"}
