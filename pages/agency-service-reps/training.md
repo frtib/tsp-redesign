@@ -411,6 +411,8 @@ TSP webinars are hosted by the FRTIB’s Office of Communications and Education.
 
 ## 2020: What has changed at the TSP?
 
+Drop in for this end of year webinar and find out about all the changes, big and small, to the TSP.  Areas covered will include the updates to tsp.gov, the addition of new Lifecycle Funds, information on TSP’s new catch-up contribution process, and more.
+
 ### December 14, 2020
 
 - 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=248){:rel="nofollow"}
