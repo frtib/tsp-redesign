@@ -116,7 +116,7 @@ function setLimitText() {
   }
   $('#irc-contribution-limit').html(limit);
   $('#irc-limit-year').html(IRC_limit_year);
-  $('#age50year').html(IRC_limit_year);
+  // $('#age50year').html(IRC_limit_year);
   return false;
 }
 // check salary, contribution %, then check combination.  i.e. bad input means dont check combination
