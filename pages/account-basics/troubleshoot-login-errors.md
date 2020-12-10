@@ -21,9 +21,9 @@ You need your <span data-term="User ID" class="js-glossary-toggle term term-end"
 
 You need your TSP <span data-term="Account Number" class="js-glossary-toggle term term-end">account number</span> and <span data-term="Personal Identification Number" class="js-glossary-toggle term term-end">personal identification number (PIN)</span> to access your account information and perform certain transactions on the <span data-term="ThriftLine" class="js-glossary-toggle term term-end">ThriftLine</span>.
 
-- **Account number** - You can request your account number online or [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. We will mail your account number to the address on your TSP account. You should receive it within 3 – 5 business days.
+- **Account number** — You can request your account number online or [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. We will mail your account number to the address on your TSP account. You should receive it within 3 – 5 business days.
 
-**Personal Identification Number (PIN)** - If you forget your PIN, you can request a new one when you [call the ThriftLine]({{ site.baseurl }}/contact/).
+- **Personal Identification Number (PIN)** — If you forget your PIN, you can request a new one when you [call the ThriftLine]({{ site.baseurl }}/contact/).
 
 ### 2. I didn’t receive my one-time code, or the code I received isn’t working.
 
