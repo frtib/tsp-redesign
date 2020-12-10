@@ -24,7 +24,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a1" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 53370]({{ site.baseurl }}/exit/?idx=213)
+  **Federal Register** [85 FR 53370]({{ site.baseurl }}/exit/?idx=306)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-1, Thrift Savings Plan Records.
 
@@ -1353,7 +1353,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a22" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 52132]({{ site.baseurl }}/exit/?idx=212)
+  **Federal Register** [85 FR 52132]({{ site.baseurl }}/exit/?idx=305)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-22, Cybersecurity Investigation Records.
 
