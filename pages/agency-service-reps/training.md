@@ -47,7 +47,7 @@ Registration password: TSPweb
 -   **All scheduled start times are listed in eastern time.**
 -   All dates and topics are subject to change and/or cancellation. Additional dates and topics may be added.
 
-To learn more about TSP webinars or request to be on the distribution list, please contact us at **webinars@frtib.gov**.
+To learn more about TSP webinars, please contact us at **webinars@frtib.gov.**
 
 <div class="usa-alert usa-alert-info cc usa-alert-paragraph">
   <div class="usa-alert-body">
