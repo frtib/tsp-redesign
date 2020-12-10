@@ -15,12 +15,13 @@ redirect_from:
 
 <h1><div class="nav-header">COVID-19</div>Latest information</h1>
 
-Updated **November 25, 2020**.
+Updated **December 10, 2020**.
 
 You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
+- [December 15 deadline for requesting a CARES Act withdrawal](#december-15-deadline-for-requesting-a-cares-act-withdrawal)
 - [November 30 deadline for suspending 2020 TSP loan payments](#nov-30-deadline)
 - [September 22 deadline for temporary loan increase](#loan-increase)
 - [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
@@ -32,6 +33,9 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [Online transactions and secure messaging in My Account](#online-transactions-and-secure-messaging-in-my-account)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
+
+## December 15 deadline for requesting a CARES Act withdrawal
+The CARES Act allows coronavirus-affected participants to make a one-time withdrawal of up to $100,000 from a civilian or uniformed services account. If you are eligible and plan to make this type of withdrawal, **we must receive your completed application on or before December 15, 2020.** We cannot accept any applications received after 11:59 PM that day.
 
 ## November 30 deadline for suspending 2020 TSP loan payments
 {:#nov-30-deadline}
