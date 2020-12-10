@@ -409,6 +409,13 @@ TSP webinars are hosted by the FRTIB’s Office of Communications and Education.
 
 - 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=288){:rel="nofollow"}
 
+## 2020: What has changed at the TSP?
+
+### December 14, 2020
+
+- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=248){:rel="nofollow"}
+- 1:00 p.m. - [Register]({{ site.baseurl }}/exit/?idx=249){:rel="nofollow"}
+
 #### TSP webinar privacy notice
 
 Federal Retirement Thrift Investment Board (FRTIB) hosted TSP webinars require participants to complete a registration form via WebEx.
