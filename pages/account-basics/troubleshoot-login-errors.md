@@ -15,9 +15,9 @@ redirect_from: /sitehelp/
 
 You need your <span data-term="User ID" class="js-glossary-toggle term term-end">user ID</span> and <span data-term="Password" class="js-glossary-toggle term term-end">password</span> to log in to My Account.
 
-- **User ID** — If you don’t have a user ID, you must create a user ID. If you’ve forgotten your user ID, you may be able to recover your user ID online.
+- **User ID** — If you don’t have a user ID, you must [create a user ID]({{ site.userid_create }}). If you’ve forgotten your user ID, you may be able to [recover your user ID]({{ site.userid_forgot }}) online.
 
-- **Password** — You may be able to reset your password online.
+- **Password** — You may be able to [reset your password]({{ site.myaccount }}) online.
 
 You need your TSP <span data-term="Account Number" class="js-glossary-toggle term term-end">account number</span> and <span data-term="Personal Identification Number" class="js-glossary-toggle term term-end">personal identification number (PIN)</span> to access your account information and perform certain transactions on the <span data-term="ThriftLine" class="js-glossary-toggle term term-end">ThriftLine</span>.
 
