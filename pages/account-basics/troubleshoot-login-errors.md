@@ -19,7 +19,7 @@ You need your <span data-term="User ID" class="js-glossary-toggle term term-end"
 
 - **Password** — You may be able to [reset your password]({{ site.myaccount }}) online.
 
-You need your TSP <span data-term="Account Number" class="js-glossary-toggle term term-end">account number</span> and <span data-term="Personal Identification Number" class="js-glossary-toggle term term-end">personal identification number (PIN)</span> to access your account information and perform certain transactions on the <span data-term="ThriftLine" class="js-glossary-toggle term term-end">ThriftLine</span>.
+You need your TSP <span data-term="Account Number" class="js-glossary-toggle term term-end">account number</span> and <span data-term="Personal Identification Number (PIN)" class="js-glossary-toggle term term-end">personal identification number (PIN)</span> to access your account information and perform certain transactions on the <span data-term="ThriftLine" class="js-glossary-toggle term term-end">ThriftLine</span>.
 
 - **Account number** — You can request your account number online or [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. We will mail your account number to the address on your TSP account. You should receive it within 3 – 5 business days.
 
