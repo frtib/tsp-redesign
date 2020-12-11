@@ -13,8 +13,16 @@ panelGood[{{ panelID }}] = function(submit) {
 panelEnter[{{ panelID }}] = function(panel) {
     // contribution year
     var reviewYear = $('#review-year').val();
-    var contributionLimit = getContributionLimit(+reviewYear);
-    $('#deferral-limit').html(CurrencyFormatted(contributionLimit, 'no_cent'));
+    var age50 = false;
+    if (getAge50() == 'age50Yes') { age50 = true; }
+    showCatchupRow(age50);
+    var taxValues = getTaxValues(+reviewYear);
+    var deferralLimit = taxValues[1];
+    var catchupLimit = taxValues[2];
+    var contributionLimit = deferralLimit;
+    if (age50) { contributionLimit += catchupLimit; }
+    $('#deferral-limit').html(CurrencyFormatted(deferralLimit, 'no_cent'));
+    $('#catchup-limit').html(CurrencyFormatted(catchupLimit, 'no_cent'));
     var ytdCont = getPosInteger('ytd-cont', 0);
     var estCont = getPosInteger('est-cont', 0);
     var amountSoFar = +ytdCont + +estCont;
@@ -29,6 +37,22 @@ panelEnter[{{ panelID }}] = function(panel) {
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
+}
+
+function showCatchupRow(flag) {
+  if (flag) {
+    $('#catchupLimitRow').show();
+    $('#extraRow').remove();
+//    $('#catchupLimitRow').addClass('usa-grid');
+//    $('#catchupLimitRow').addClass('results');
+    return true;
+  }
+  $('#catchupLimitRow').hide();
+  $('#catchupLimitRow').after('<div id="extraRow" class="usa-grid results"></div>');
+  $('#extraRow').hide();
+//  $('#catchupLimitRow').removeClass('usa-grid');
+//  $('#catchupLimitRow').removeClass('results');
+  return false;
 }
 -->
 </script>

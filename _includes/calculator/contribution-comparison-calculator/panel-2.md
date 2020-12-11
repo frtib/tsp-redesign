@@ -18,6 +18,17 @@ If you plan to retire before age 59&frac12;, be aware that any Roth earnings inc
   prompt="How many years until you retire?"
   explanation=explanation_2_1
 %}
+<!-- 1b. How many years will you spend in retirement? -->
+{% capture explanation_1_1b %}
+Participants turning age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.
+{% endcapture %}
+{% include calculator/div-panel-form-field.html
+  fieldID="panel-1.1b" id="age50"
+  inputType="radio" radioIDs="age50Yes, age50No" radioLabels="Yes, No"
+  inputClass="usa-unstyled-list"   onBlur="age50Good(false);"
+  prompt='Will you turn age 50 or older in <span id="age50year">this year</span>?'
+  explanation=explanation_1_1b
+%}
 <!-- 2. How many years will you spend in retirement? -->
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.2" id="cccYearsInRetirement" inputClass=""  dataFormat=""
@@ -53,13 +64,14 @@ Enter the annual rate of return you expect to earn on your contributions. View t
 <!-- 5. Contributions per year, as a percentage of your salary -->
 {% capture explanation2_5 %}
 The total of your regular employee contributions should not exceed the Internal Revenue Code (IRC)
-elective deferral limit (<span id='irc-contribution-limit'></span> for <span id='irc-limit-year'></span>).
+elective deferral and catch-up contribution limits
+<span class="nobr">(<span id='irc-contribution-limit'></span> for <span id='irc-limit-year'></span>)</span>.
 <p>Your current selections are <span id='current-annual'>--</span> annually.</p>
 {% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.5" id="cccContributions"
   inputClass=""  dataFormat="%"
-  min="0" value="" max="99" maxLength=7 step="0.01"
+  min="0" value="" max="99" maxLength=7 step="1"
   placeholder="" onBlur="checkContributionAmount(false);"
   prompt="Contributions per year, as a percentage of your salary:"
   explanation=explanation2_5
