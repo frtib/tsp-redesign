@@ -48,6 +48,7 @@ any notices related to this court order but will not update your address of reco
   inputClass="" onBlur="QDROretainerGood(0);" prompt="Which party retained the Retirement Benefits Specialist?"
   explanation=""  dontOpenOuterDiv=true
 %}
+{% include {{altFormFields}} prefix=prefix field='fullname' prompt="Retirement Benefits Specialist's Name:" maxLength=38 %}
 {% endif %}
 
 {% if isNotAtty == true %}
@@ -56,7 +57,7 @@ any notices related to this court order but will not update your address of reco
 {% endif %}
 
     <div id="{{prefix}}-address-domestic" class="">
-      {% include {{altFormFields}} prefix=prefix field='street1' prompt="Street address:" maxLength=38 class="attention" %}
+      {% include {{altFormFields}} prefix=prefix field='street1' prompt="Street address:" maxLength=38 %}
       {% include {{altFormFields}} prefix=prefix field='city' prompt="City:" maxLength=38 %}
 {% capture stateDropdown %}
       <select id="{{prefix}}state" name="{{prefix}}state" onchange="clearError('{{prefix}}state'); clearWarning('{{prefix}}state'); processWarnLastPanel();">

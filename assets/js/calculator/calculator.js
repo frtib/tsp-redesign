@@ -284,12 +284,13 @@ function launderInput(field) {
 function filterNumeric (event) {
   var key = event.key;
   var keyCode = ('which' in event) ? event.which : event.keyCode;
+  if ((event.shiftKey) && (keyCode == 9)) { return true; } // shift AND tab
   if (event.shiftKey) { return false; } // shift, disallow special chars over numbers
   if (event.ctrlKey) { return false; } // control key
-  if (keyCode >= 48 && keyCode <= 57) { return true; }  // digit
-  if (keyCode >= 96 && keyCode <= 105) { return true; }  // keypad
-  if ((keyCode == 46) || (keyCode == 8)) { return true; }; // delete, bs
-  if (keyCode >= 35 && keyCode <= 40 ) { return true; }; // end, home, arrow keys
+  if ((keyCode >= 48) && (keyCode <= 57)) { return true; }  // digit
+  if ((keyCode >= 96) && (keyCode <= 105)) { return true; }  // keypad
+  if ((keyCode == 46) || (keyCode == 8) || (keyCode == 9)) { return true; }; // delete, bs, tab
+  if ((keyCode >= 35) && (keyCode <= 40) ) { return true; }; // end, home, arrow keys
   return false;
 }
 

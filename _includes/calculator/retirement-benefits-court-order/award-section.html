@@ -1,0 +1,8 @@
+{% assign awardNum = include.awardNum | default: 0 %}
+{% assign maxAwards = include.maxAwards | default: 10 %}
+{% assign divID = awardNum | append: 'awardULheader' %}
+{% capture title %}Award ({{awardNum}} of {{maxAwards}}) <span id="{{awardNum}}AwardStatus">in progress</span>{% endcapture %}
+
+{% include calculator/accordion-start.html expanded=true divID=divID icon='' title=title inList=true %}
+My award is {{ awardNum }}
+{% include calculator/accordion-end.html inList=true %}

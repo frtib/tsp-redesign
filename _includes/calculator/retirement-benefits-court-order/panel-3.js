@@ -165,7 +165,9 @@ console.log('fa checked ', role, $('#'+role+'foreignAddress').prop('checked'));
    clearError(role+'state'); clearError(role+'zip');
    clearWriteIn(role+'street1'); clearWriteIn(role+'city');
    clearWriteIn(role+'state'); clearWriteIn(role+'zip');
-   return fcountrylistGood(submit, writein, role) & fcountryGood(submit, writein, role) & fcityGood(submit, writein, role) & fpostalGood(submit, writein, role) & fstreetGood(submit, writein, role);
+   // return fcountrylistGood(submit, writein, role) & fcountryGood(submit, writein, role) & fcityGood(submit, writein, role) & fpostalGood(submit, writein, role) & fstreetGood(submit, writein, role);
+   return fcountrylistGood(submit, writein, role) & fcityGood(submit, writein, role)
+          & fpostalGood(submit, writein, role) & fstreetGood(submit, writein, role);
   } else {
     clearError(role+'fstreet');
     clearError(role+'fpostal');
