@@ -25,14 +25,10 @@ Checklist and coupon for submitting payments from non SF-224 agencies.
 
 ## Employee data, contributions, and negative adjustments
 
-<!-- [Form TSP-2]({{ site.baseurl }}/bulletins/tsp-2.pdf), _Certification of Transfer of Funds and Journal Voucher_   
-Use this form to credit participant accounts. -->
-Form TSP-2, _Certification of Transfer of Funds and Journal Voucher_   
+[Form TSP-2]({{ site.baseurl }}/bulletins/tsp-2.pdf), _Certification of Transfer of Funds and Journal Voucher_   
 Use this form to credit participant accounts.
 
-<!-- [Form TSP-2-G]({{ site.baseurl }}/bulletins/tsp-2-g.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_    
-Use this form to credit participant accounts requiring G Fund breakage. -->
-Form TSP-2-G, _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_   
+[Form TSP-2-G]({{ site.baseurl }}/bulletins/tsp-2-g.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_    
 Use this form to credit participant accounts requiring G Fund breakage.
 
 [Form TSP-19]({{ site.baseurl }}/bulletins/tsp-19.pdf), _Transfer of Information Between Agencies_   
@@ -46,9 +42,7 @@ Describes the Catch-up contributions program, including eligibility requirements
 
 ## Loan payments
 
-<!-- [Form TSP-2-L]({{ site.baseurl }}/bulletins/tsp-2-l.pdf), _Certification of Transfer of Funds and Journal Voucher for Loan Payments_   
-Use this form to submit TSP loan payments. -->
-Form TSP-2-L, _Certification of Transfer of Funds and Journal Voucher for Loan Payments_   
+[Form TSP-2-L]({{ site.baseurl }}/bulletins/tsp-2-l.pdf), _Certification of Transfer of Funds and Journal Voucher for Loan Payments_   
 Use this form to submit TSP loan payments.
 
 [Bulletin 5-16]({{ site.baseurl }}/bulletins/05-16.pdf), _Processing Thrift Savings Plan Loan Payments in the TSP Record Keeping System_   
@@ -56,10 +50,7 @@ Outlines the procedures agencies must use to report Thrift Savings Plan (TSP) lo
 
 ## Earnings adjustments
 
-<!-- [Form TSP-2-F]({{ site.baseurl }}/bulletins/tsp-2-f.pdf), _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
-Use this form to submit amounts that represent an earnings adjustment. -->
-
-Form TSP-2-F, _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
+[Form TSP-2-F]({{ site.baseurl }}/bulletins/tsp-2-f.pdf), _Certification of Transfer of Funds and Journal Voucher for Earnings Adjustment_   
 Use this form to submit amounts that represent an earnings adjustment.
 
 [Bulletin 5-12]({{ site.baseurl }}/bulletins/05-12.pdf), _Earnings Adjustments to Thrift Savings Plan Accounts Requested By Employing Agencies_   
@@ -86,10 +77,10 @@ This bulletin discusses the current reports that payroll offices receive and new
 
 ## Employee data, contributions, and negative adjustments
 
-[Form TSP-U-2]({{ site.baseurl }}/bulletins/tsp-u-2_2018.Draft.pdf), _Certification of Transfer of Funds and Journal Voucher_   
+[Form TSP-U-2]({{ site.baseurl }}/bulletins/tsp-u-2.pdf), _Certification of Transfer of Funds and Journal Voucher_   
 Use this form to credit participant accounts.
 
-[Form TSP-U-2-G]({{ site.baseurl }}/bulletins/tsp-u-2-g_2018.Draft.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_   
+[Form TSP-U-2-G]({{ site.baseurl }}/bulletins/tsp-u-2-g.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_   
 Use this form to credit participant accounts requiring G Fund breakage.
 
 [Bulletin 6-U-2]({{ site.baseurl }}/bulletins/06-u-2.pdf), _Catch-up Contributions for TSP Participants Age 50 and Older_   
@@ -100,7 +91,7 @@ Explains how payroll office submissions of employee data and TSP contributions w
 
 ## Loan payments
 
-Form TSP-U-2-L, _Certification of Transfer of Funds and Journal Voucher for Loan Payments_   
+[Form TSP-U-2-L]({{ site.baseurl }}/bulletins/tsp-u-2-l.pdf), _Certification of Transfer of Funds and Journal Voucher for Loan Payments_   
 Use this form to submit TSP loan payments.
 
 [Bulletin 5-U-11]({{ site.baseurl }}/bulletins/05-u-11.pdf), _Processing Thrift Savings Plan Loan Payments in the TSP Record Keeping System_   
