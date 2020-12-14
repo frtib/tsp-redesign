@@ -6,6 +6,7 @@ styles:
 scripts:
   - /assets/js/calculator/javascriptTaxTable.js
   - /assets/js/rbco-address-toggle.js
+  - /assets/js/dual-accounts-demo.js
 # DAV, rbco-address-toggle.js ^^ can be deleted
 permalink: /planning-for-life-events/retirement-benefits-court-order-dev/
 progress-steps: [Introduction,Scenario,Party 1,Party 2,Attorney,Case,Awards,Summary]
@@ -15,346 +16,11 @@ published: true
 ---
 
 <ul class="usa-accordion rbco">
-<!-- PANEL 1: INTRODUCTION -->
-<li>
-  <button
-    class="usa-accordion-button"
-    aria-expanded="true"
-    aria-controls="panel-1">
-    Panel 1 – Introduction
-  </button>
-  <div id="panel-1" class="usa-accordion-content">
-
-
-  <section class="calculator-panel">
-  <div class="panel-field" markdown="1">
-  <h2>How to Divide a TSP Account in Divorce</h2>
-
-  The Thrift Savings Plan (TSP) is a defined contribution retirement savings and investment plan for federal civilian employees and members of the uniformed services. A TSP account can be divided by means of a court order in an action for divorce, annulment, or legal separation. This type of court order is called a &#8220;retirement benefits court order&#8221; (RBCO) by the TSP. This wizard was developed as a practical aid to help you or your attorney draft an RBCO for the TSP.
-
-  The online wizard cannot be used to draft an RBCO awarding funds to a child or dependent.
-
-  Certain TSP account information is available to spouses (and their attorneys) to assist in developing an RBCO. To request this information, please use the [_Request for Participant Account Information_]({{ site.baseurl }}/forms/tsp-92d.pdf).
-
-  Do not use this online court order wizard if you are drafting a court order related to Federal Employees' Retirement System (FERS) or Civilian Service Retirement System (CSRS) annuity benefits. Court orders related to the FERS and CSRS annuity programs, which are administered by the Office of Personnel Management (OPM), should be submitted to the Court Ordered Benefits branch of OPM at the following address: U.S. Office of Personnel Management, Court Ordered Benefits Branch, P.O. Box 17, Washington, DC 20044.
-
-  To be honored by the TSP as a qualifying retirement benefits court order (RBCO), a court order must meet the requirements found in 5 United States Code (U.S.C.) § 8435(c) and 5 Code of Federal Regulations (C.F.R.) part 1653, subpart A. The rules for qualified domestic relations orders (QDROs) that apply to private sector plans do not apply to the TSP. The provisions of the Federal Employees' Retirement System Act (FERSA), not the Employee Retirement Income Security Act (ERISA), govern court orders that divide a TSP account. The TSP cannot represent or warrant that this order will meet the requirements of your local jurisdiction. The parties' attorneys should review local court rules to ensure this court order is sufficient.
-
-  Before getting started, you should gather the following necessary information:
-
-  - Participant's name, current mailing address, and TSP account number
-  - Payee's name, current mailing address, and Social Security Number (SSN)
-  - Account details (e.g., balance, outstanding loan amounts, etc.) needed to calculate the award amount
-  - Necessary court information (e.g., case number, judge's name, etc.)
-
-  For more information, please read the TSP publication [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
-  </div>
-  </section><!-- END section.calculator-panel -->
-
-  <div class="button-stack">
-  <button type="button" class="usa-button-big" href="javascript:void(0);" onclick="processPanel(1,0,2,0); return false;">Get started</button>
-  <button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
-  </div>
-
-  </div><!-- END div.usa-accordion-content -->
-</li>
-<!-- PANEL 2: SCENARIO -->
-<li>
-  <button
-    class="usa-accordion-button"
-    aria-expanded="false"
-    aria-controls="panel-2">
-    Panel 2 – Scenario
-  </button>
-  <div id="panel-2" class="usa-accordion-content">
-
-  <section class="calculator-panel">
-  <h2>Case details</h2>
-  <div class="panel-form-field" >
-  <div class="usa-input-error">
-  <legend class="sr-only">Select scenario</legend>
-  <label class="usa-input-error-label" for="payeePart">Are both parties TSP participants?</label>
-  <span class="usa-input-error-message" id="payeePart-error-message" role="alert">This question is required.</span>
-
-  <ul class="usa-unstyled-list">
-    <li>
-      <input
-        type="radio"
-        id="payeePartYes"
-        name="payeePart"
-        value="Y"
-        onblur="pickPath(0, 'Y');"
-        onchange="pickPath(0, 'Y');">
-      <label for="payeePartYes">Yes</label>
-    </li>
-    <li>          
-      <input
-        type="radio"
-        id="payeePartNo"
-        name="payeePart"
-        value="N"
-        onblur="pickPath(0, 'N');"
-        onchange="pickPath(0, 'N');">
-      <label for="payeePartNo">No</label>        
-    </li>
-  </ul>
-  </div> <!-- end div.usa-input-error -->
-  </div> <!-- end div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > No</code>
-  <div class="panel-form-field" >
-    <fieldset>
-      <div class="usa-input-error">
-        <legend class="sr-only">Select scenario</legend>
-        <label class="usa-input-error-label" id="labelrelationship" for="relationship">What is the payee's relationship to the TSP participant?</label>
-        <span class="usa-input-error-message" id="relationship-error-message" role="alert">Indicate the payee&#8211;participant relationship.</span>
-
-      <ul class="usa-unstyled-list">
-        <li>
-        <input
-        type="radio"
-        id="relationshipSpouse"
-        name="relationship"
-        value="S"
-        onblur="pickPath(0, 'S');"
-        onchange="pickPath(0, 'S');">
-        <label for="relationshipSpouse">Current or former spouse</label>
-        </li>
-
-        <li><input
-        type="radio"
-        id="relationshipDependent"
-        name="relationship"
-        value="D"
-        onblur="pickPath(0, 'D');"
-        onchange="pickPath(0, 'D');">
-        <label for="relationshipDependent">Child or dependent</label></li>
-
-        <li><input
-        type="radio"
-        id="relationshipOther"
-        name="relationship"
-        value="O"
-        onblur="pickPath(0, 'O');"
-        onchange="pickPath(0, 'O');">
-        <label for="relationshipOther">Other</label></li>
-      </ul>
-      </div>
-    </fieldset>
-  </div>
-
-  <code>Are both parties TSP participants? > No > Current or former spouse</code>
-  <div class="panel-form-field" >
-    <div class="usa-input-error">
-    <label class="usa-input-error-label" for="partfullname"><span data-term="Participant" class="js-glossary-toggle term term-end">Participant&#8217;s name</span>:</label>
-    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
-    <input
-      type="text"
-      id="partfullname"
-      name="partfullname"
-      value=""
-      onpaste="partfullnameGood(0);"
-      onchange="partfullnameGood(0);"
-      onblur="partfullnameGood(0);"
-      maxlength="30"
-      size="30">
-    </div><!-- END div.usa-input-error -->
-
-    <div class="usa-input-error">
-    <label class="usa-input-error-label" for="payfullname"><span data-term="Payee" class="js-glossary-toggle term term-end">Payee&#8217;s name</span>:</label>
-    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
-    <input
-      type="text"
-      id="payfullname"
-      name="payfullname"
-      value=""
-      onchange="payfullnameGood(0);"
-      onblur="payfullnameGood(0);"
-      maxlength="30"
-      size="30">
-    </div><!-- END div.usa-input-error -->
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > No > Child or dependent</code>
-  <div class="panel-form-field" markdown="1">
-
-  The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > No > Other</code>
-  <div class="panel-form-field" markdown="1">
-
-  A court order can require a payment only to the participant's current or former spouse or to the participant's dependents. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > Yes</code>
-  <div class="panel-form-field">
-    <fieldset>
-      <div class="usa-input-error">
-        <legend class="sr-only">Select scenario</legend>
-        <label class="usa-input-error-label" id="labelrelationship" for="relationship">Select the parties&#8217; relationship to one another</label>
-        <span class="usa-input-error-message" id="relationship-error-message" role="alert">Indicate the payee&#8211;participant relationship.</span>
-      <ul class="usa-unstyled-list">
-      <li>
-      <input
-        type="radio"
-        id="relationshipSpouse"
-        name="relationship"
-        value="S"
-        onblur="pickPath(0, 'S');"
-        onchange="pickPath(0, 'S');">
-      <label for="relationshipSpouse">Current or former spouse</label>
-      </li>
-      <li>
-      <input
-        type="radio"
-        id="relationshipDependent"
-        name="relationship"
-        value="D"
-        onblur="pickPath(0, 'D');"
-        onchange="pickPath(0, 'D');">
-      <label for="relationshipDependent">Child or dependent</label>
-      </li>
-      <li>
-      <input
-        type="radio"
-        id="relationshipOther"
-        name="relationship"
-        value="O"
-        onblur="pickPath(0, 'O');"
-        onchange="pickPath(0, 'O');">
-      <label for="relationshipOther">Other</label>
-      </li>
-      </ul>
-      </div>
-    </fieldset>
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > Yes > Current or former spouse</code>
-  <div class="panel-form-field" markdown="1">
-  <fieldset>
-  <div class="usa-input-error">
-  <legend class="sr-only">Select scenario</legend>
-  <label class="usa-input-error-label" id="labelpayeePart" for="receive">Are both parties&#8217; accounts being divided as a result of this court order?</label>
-  <span class="usa-input-error-message" id="receive-error-message" role="alert">This question is required.</span>
-  <ul class="usa-unstyled-list">
-  <li>
-  <input
-  type="radio"
-  id="receiveBoth"
-  name="receive"
-  value="2"
-  onblur="pickPath(0, 2);"
-  onchange="pickPath(0, 2);">
-  <label for="receiveBoth">Yes</label>
-  </li>
-  <li>          
-  <input
-  type="radio"
-  id="receiveOne"
-  name="receive"
-  value="1"
-  onblur="pickPath(0, 1);"
-  onchange="pickPath(0, 1);">
-  <label for="receiveOne">No</label>        
-  </li>
-  </ul>
-  </div> <!-- end div.usa-input-error -->
-  </fieldset>
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > Yes > Current or former spouse > Are both parties' accounts being divided...? > Yes</code>
-  <div class="panel-form-field" markdown="1">
-
-  You have indicated that both parties are TSP participants and that **both will receive awards** pursuant to this court order. Please provide the following information:
-
-  <div class="usa-input-error">
-    <label class="usa-input-error-label" for="partfullname">Party 1 name:</label>
-    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
-    <input
-      type="text"
-      id="partfullname"
-      name="partfullname"
-      value=""
-      onpaste="partfullnameGood(0);"
-      onchange="partfullnameGood(0);"
-      onblur="partfullnameGood(0);"
-      maxlength="30"
-      size="30">
-    </div><!-- END div.usa-input-error -->
-
-  <div class="usa-input-error">
-    <label class="usa-input-error-label" for="payfullname">Party 2 name:</label>
-    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
-    <input
-      type="text"
-      id="payfullname"
-      name="payfullname"
-      value=""
-      onchange="payfullnameGood(0);"
-      onblur="payfullnameGood(0);"
-      maxlength="30"
-      size="30">
-  </div><!-- END div.usa-input-error -->
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > Yes > Current or former spouse > Are both parties' accounts being divided...? > No</code>
-  <div class="panel-form-field" markdown="1">
-
-  You have indicated that both parties are TSP participants but that **only one will receive an award** pursuant to this court order. Please provide the following information:
-
-  <div class="usa-input-error">
-    <label class="usa-input-error-label" for="partfullname"><span data-term="Participant" class="js-glossary-toggle term term-end">Participant&#8217;s name</span>:</label>
-    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
-    <input
-      type="text"
-      id="partfullname"
-      name="partfullname"
-      value=""
-      onpaste="partfullnameGood(0);"
-      onchange="partfullnameGood(0);"
-      onblur="partfullnameGood(0);"
-      maxlength="30"
-      size="30">
-  </div><!-- END div.usa-input-error -->
-
-  <div class="usa-input-error">
-    <label class="usa-input-error-label" for="payfullname"><span data-term="Payee" class="js-glossary-toggle term term-end">Payee&#8217;s name</span>:</label>
-    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
-    <input
-      type="text"
-      id="payfullname"
-      name="payfullname"
-      value=""
-      onchange="payfullnameGood(0);"
-      onblur="payfullnameGood(0);"
-      maxlength="30"
-      size="30">
-  </div><!-- END div.usa-input-error -->
-  </div><!-- END div.panel-form-field -->
-
-    <nav><ul class="navigation-buttons">
-      <li>
-      <button
-        class="usa-button-secondary"
-        href="javascript:void(0);"
-        onclick="showPanel(1); return false;">Previous</button>
-      </li>
-      <li>
-      <button
-        class="usa-button"
-        href="javascript:void(0);"
-        onclick="processPanel(2,0,0,0); return false;">Continue</button>
-      </li>
-    </ul></nav>
-  </section> <!-- end section.calculator-panel -->
-  </div><!-- END div.usa-accordion-content -->
-</li>
 <!-- PANEL 3: PARTICIPANT or PARTY 1 -->
 <li>
   <button
     class="usa-accordion-button"
-    aria-expanded="false"
+    aria-expanded="true"
     aria-controls="panel-3">
     Panel 3 – Participant or Party 1
   </button>
@@ -827,25 +493,133 @@ published: true
 
     <!-- TSP Account Type -->
     <div class="panel-form-field account-types" >
-      <h2 aria-details="account-type">TSP Account Type</h2>
+      <h2 aria-details="account-type" id="tsp-account-type">TSP Account Type</h2>
 
-
+      <!-- Explain this -->
       <ul class="usa-accordion explain-this">
-      <li>
-      <button class="usa-accordion-button"
-      aria-expanded="false"
-      aria-controls="account-type">
-      Explain this
-      </button>
-      <div id="account-type" class="usa-accordion-content">
-      If you are not sure what type of Thrift Savings Plan account the participant has, please contact the ThriftLine at 1-TSP-YOU-FRST (1-877-968-3778).  Release of any information  by the ThriftLine is subject to the Privacy Act.  An incorrect selection may lead to a delay, incorrect payment or the rejection of your court order.
-      </div>
-      </li>
+        <li>
+        <button class="usa-accordion-button"
+        aria-expanded="false"
+        aria-controls="account-type">
+        Explain this
+        </button>
+        <div id="account-type" class="usa-accordion-content">
+        If you are not sure what type of Thrift Savings Plan account the participant has, please contact the ThriftLine at 1-TSP-YOU-FRST (1-877-968-3778).  Release of any information  by the ThriftLine is subject to the Privacy Act.  An incorrect selection may lead to a delay, incorrect payment or the rejection of your court order.
+        </div>
+        </li>
       </ul>
 
-      <!-- DAV, I UPDATED ALL OF THIS -->
-    <div class="usa-input-error">
-      <fieldset>
+      <!-- New DESIGN -->
+    <fieldset class="usa-fieldset-inputs">
+      <legend class="usa-sr-only">Account types to be divided</legend>
+      <!-- Civilian CHECKBOX-->
+      <ul class="usa-unstyled-list account-type">
+        <li>
+          <input
+          type="checkbox"
+          id="partcivilian"
+          name="accountType"
+          value="partcivilian"
+          onclick="toggleInputLabels();"
+          onblur="accountTypeGood(0, 'part');">
+          <label for="partcivilian">Civilian <span class="nobr">(CSRS or FERS)</span></label>
+        </li>
+        <!-- USV CHECKBOX-->
+        <li>
+          <input
+          type="checkbox"
+          id="partuniformed"
+          name="accountType"
+          value="partuniformed"
+          onclick="accountTypeGood(0, 'part');"
+          onclick="toggleInputLabels();"
+          onblur="accountTypeGood(0, 'part');">
+          <label for="partuniformed"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(Ready Reserve or Active Duty)</span></label>
+        </li>
+        <!-- Beneficiary Participant CHECKBOX -->
+        <li>
+          <input
+          type="checkbox"
+          id="partBPA"
+          name="accountType"
+          value="partBPA"
+          onclick="accountTypeGood(0, 'part');"
+          onclick="toggleInputLabels();"
+          onblur="accountTypeGood(0, 'part');">
+          <label for="partBPA"><span data-term="Beneficiary Participant" class="js-glossary-toggle term term-end">Beneficiary Participant</span></label>
+        </li>
+        <!-- CIV input -->
+        <li id="civInput" style="display: none;">
+          <label class="" for="bpaAcctNum">Civilian account number</label>
+          <input
+            id="bpaAcctNum"
+            maxlength="13"
+            value="bpaAcctNum"
+            name="partacctNum"
+            onchange="acctNumGood(0, 'part');"
+            onblur="acctNumGood(0, 'part');"
+            type="number"
+            data-store=""
+            placeholder="">
+        </li>
+        <!-- USV input -->
+        <li id="usvInput" style="display: none;">
+          <label class="" for="bpaAcctNum">Uniformed Services account number</label>
+          <input
+            id="bpaAcctNum"
+            maxlength="13"
+            value="bpaAcctNum"
+            name="partacctNum"
+            onchange="acctNumGood(0, 'part');"
+            onblur="acctNumGood(0, 'part');"
+            type="number"
+            data-store=""
+            placeholder="">
+        </li>
+        <!-- CIV + USV input -->
+        <li id="dualInput" style="display: none;">
+          <label class="" for="bpaAcctNum">Civilian and Uniformed Services account number</label>
+          <input
+            id="bpaAcctNum"
+            maxlength="13"
+            value="bpaAcctNum"
+            name="partacctNum"
+            onchange="acctNumGood(0, 'part');"
+            onblur="acctNumGood(0, 'part');"
+            type="number"
+            data-store=""
+            placeholder="">
+          <div id="dual" class="usa-alert  usa-alert-info usa-alert-paragraph">
+            <div class="usa-alert-body">
+              <h3 class="usa-alert-heading">
+                Dual account holders
+              </h3>
+              <p class="usa-alert-text">
+                If you have both a civilian and uniformed services account, the account numbers are the same.
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- BPA input -->
+        <li id="bpaInput" style="display: none;">
+          <label for="partacctNum">Beneficiary Participant account number</label>
+          <input
+            id="civAcctNum"
+            maxlength="13"
+            value="civAcctNum"
+            name="partacctNum"
+            onchange="acctNumGood(0, 'part');"
+            onblur="acctNumGood(0, 'part');"
+            type="number"
+            data-store=""
+            placeholder="">
+          </li>
+      </ul>
+    </fieldset>
+
+    <!-- OG design -->
+    <div class="usa-input-error hide">
+    <fieldset>
         <legend class="usa-sr-only">Account types to be divided</legend>
         <!-- Civilian -->
         <ul class="usa-unstyled-list account-type">
@@ -970,6 +744,342 @@ published: true
 
   </div><!-- END div.usa-accordion-content -->
 </li>
+<!-- PANEL 1: INTRODUCTION -->
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="panel-1">
+    Panel 1 – Introduction
+  </button>
+  <div id="panel-1" class="usa-accordion-content">
+
+
+  <section class="calculator-panel">
+  <div class="panel-field" markdown="1">
+  <h2>How to Divide a TSP Account in Divorce</h2>
+
+  The Thrift Savings Plan (TSP) is a defined contribution retirement savings and investment plan for federal civilian employees and members of the uniformed services. A TSP account can be divided by means of a court order in an action for divorce, annulment, or legal separation. This type of court order is called a &#8220;retirement benefits court order&#8221; (RBCO) by the TSP. This wizard was developed as a practical aid to help you or your attorney draft an RBCO for the TSP.
+
+  The online wizard cannot be used to draft an RBCO awarding funds to a child or dependent.
+
+  Certain TSP account information is available to spouses (and their attorneys) to assist in developing an RBCO. To request this information, please use the [_Request for Participant Account Information_]({{ site.baseurl }}/forms/tsp-92d.pdf).
+
+  Do not use this online court order wizard if you are drafting a court order related to Federal Employees' Retirement System (FERS) or Civilian Service Retirement System (CSRS) annuity benefits. Court orders related to the FERS and CSRS annuity programs, which are administered by the Office of Personnel Management (OPM), should be submitted to the Court Ordered Benefits branch of OPM at the following address: U.S. Office of Personnel Management, Court Ordered Benefits Branch, P.O. Box 17, Washington, DC 20044.
+
+  To be honored by the TSP as a qualifying retirement benefits court order (RBCO), a court order must meet the requirements found in 5 United States Code (U.S.C.) § 8435(c) and 5 Code of Federal Regulations (C.F.R.) part 1653, subpart A. The rules for qualified domestic relations orders (QDROs) that apply to private sector plans do not apply to the TSP. The provisions of the Federal Employees' Retirement System Act (FERSA), not the Employee Retirement Income Security Act (ERISA), govern court orders that divide a TSP account. The TSP cannot represent or warrant that this order will meet the requirements of your local jurisdiction. The parties' attorneys should review local court rules to ensure this court order is sufficient.
+
+  Before getting started, you should gather the following necessary information:
+
+  - Participant's name, current mailing address, and TSP account number
+  - Payee's name, current mailing address, and Social Security Number (SSN)
+  - Account details (e.g., balance, outstanding loan amounts, etc.) needed to calculate the award amount
+  - Necessary court information (e.g., case number, judge's name, etc.)
+
+  For more information, please read the TSP publication [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+  </div>
+  </section><!-- END section.calculator-panel -->
+
+  <div class="button-stack">
+  <button type="button" class="usa-button-big" href="javascript:void(0);" onclick="processPanel(1,0,2,0); return false;">Get started</button>
+  <button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
+  </div>
+
+  </div><!-- END div.usa-accordion-content -->
+</li>
+<!-- PANEL 2: SCENARIO -->
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="panel-2">
+    Panel 2 – Scenario
+  </button>
+  <div id="panel-2" class="usa-accordion-content">
+
+  <section class="calculator-panel">
+  <h2>Case details</h2>
+  <div class="panel-form-field" >
+  <div class="usa-input-error">
+  <legend class="sr-only">Select scenario</legend>
+  <label class="usa-input-error-label" for="payeePart">Are both parties TSP participants?</label>
+  <span class="usa-input-error-message" id="payeePart-error-message" role="alert">This question is required.</span>
+
+  <ul class="usa-unstyled-list">
+    <li>
+      <input
+        type="radio"
+        id="payeePartYes"
+        name="payeePart"
+        value="Y"
+        onblur="pickPath(0, 'Y');"
+        onchange="pickPath(0, 'Y');">
+      <label for="payeePartYes">Yes</label>
+    </li>
+    <li>          
+      <input
+        type="radio"
+        id="payeePartNo"
+        name="payeePart"
+        value="N"
+        onblur="pickPath(0, 'N');"
+        onchange="pickPath(0, 'N');">
+      <label for="payeePartNo">No</label>        
+    </li>
+  </ul>
+  </div> <!-- end div.usa-input-error -->
+  </div> <!-- end div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > No</code>
+  <div class="panel-form-field" >
+    <fieldset>
+      <div class="usa-input-error">
+        <legend class="sr-only">Select scenario</legend>
+        <label class="usa-input-error-label" id="labelrelationship" for="relationship">What is the payee's relationship to the TSP participant?</label>
+        <span class="usa-input-error-message" id="relationship-error-message" role="alert">Indicate the payee&#8211;participant relationship.</span>
+
+      <ul class="usa-unstyled-list">
+        <li>
+        <input
+        type="radio"
+        id="relationshipSpouse"
+        name="relationship"
+        value="S"
+        onblur="pickPath(0, 'S');"
+        onchange="pickPath(0, 'S');">
+        <label for="relationshipSpouse">Current or former spouse</label>
+        </li>
+
+        <li><input
+        type="radio"
+        id="relationshipDependent"
+        name="relationship"
+        value="D"
+        onblur="pickPath(0, 'D');"
+        onchange="pickPath(0, 'D');">
+        <label for="relationshipDependent">Child or dependent</label></li>
+
+        <li><input
+        type="radio"
+        id="relationshipOther"
+        name="relationship"
+        value="O"
+        onblur="pickPath(0, 'O');"
+        onchange="pickPath(0, 'O');">
+        <label for="relationshipOther">Other</label></li>
+      </ul>
+      </div>
+    </fieldset>
+  </div>
+
+  <code>Are both parties TSP participants? > No > Current or former spouse</code>
+  <div class="panel-form-field" >
+    <div class="usa-input-error">
+    <label class="usa-input-error-label" for="partfullname"><span data-term="Participant" class="js-glossary-toggle term term-end">Participant&#8217;s name</span>:</label>
+    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
+    <input
+      type="text"
+      id="partfullname"
+      name="partfullname"
+      value=""
+      onpaste="partfullnameGood(0);"
+      onchange="partfullnameGood(0);"
+      onblur="partfullnameGood(0);"
+      maxlength="30"
+      size="30">
+    </div><!-- END div.usa-input-error -->
+
+    <div class="usa-input-error">
+    <label class="usa-input-error-label" for="payfullname"><span data-term="Payee" class="js-glossary-toggle term term-end">Payee&#8217;s name</span>:</label>
+    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
+    <input
+      type="text"
+      id="payfullname"
+      name="payfullname"
+      value=""
+      onchange="payfullnameGood(0);"
+      onblur="payfullnameGood(0);"
+      maxlength="30"
+      size="30">
+    </div><!-- END div.usa-input-error -->
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > No > Child or dependent</code>
+  <div class="panel-form-field" markdown="1">
+
+  The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > No > Other</code>
+  <div class="panel-form-field" markdown="1">
+
+  A court order can require a payment only to the participant's current or former spouse or to the participant's dependents. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > Yes</code>
+  <div class="panel-form-field">
+    <fieldset>
+      <div class="usa-input-error">
+        <legend class="sr-only">Select scenario</legend>
+        <label class="usa-input-error-label" id="labelrelationship" for="relationship">Select the parties&#8217; relationship to one another</label>
+        <span class="usa-input-error-message" id="relationship-error-message" role="alert">Indicate the payee&#8211;participant relationship.</span>
+      <ul class="usa-unstyled-list">
+      <li>
+      <input
+        type="radio"
+        id="relationshipSpouse"
+        name="relationship"
+        value="S"
+        onblur="pickPath(0, 'S');"
+        onchange="pickPath(0, 'S');">
+      <label for="relationshipSpouse">Current or former spouse</label>
+      </li>
+      <li>
+      <input
+        type="radio"
+        id="relationshipDependent"
+        name="relationship"
+        value="D"
+        onblur="pickPath(0, 'D');"
+        onchange="pickPath(0, 'D');">
+      <label for="relationshipDependent">Child or dependent</label>
+      </li>
+      <li>
+      <input
+        type="radio"
+        id="relationshipOther"
+        name="relationship"
+        value="O"
+        onblur="pickPath(0, 'O');"
+        onchange="pickPath(0, 'O');">
+      <label for="relationshipOther">Other</label>
+      </li>
+      </ul>
+      </div>
+    </fieldset>
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > Yes > Current or former spouse</code>
+  <div class="panel-form-field" markdown="1">
+  <fieldset>
+  <div class="usa-input-error">
+  <legend class="sr-only">Select scenario</legend>
+  <label class="usa-input-error-label" id="labelpayeePart" for="receive">Are both parties&#8217; accounts being divided as a result of this court order?</label>
+  <span class="usa-input-error-message" id="receive-error-message" role="alert">This question is required.</span>
+  <ul class="usa-unstyled-list">
+  <li>
+  <input
+  type="radio"
+  id="receiveBoth"
+  name="receive"
+  value="2"
+  onblur="pickPath(0, 2);"
+  onchange="pickPath(0, 2);">
+  <label for="receiveBoth">Yes</label>
+  </li>
+  <li>          
+  <input
+  type="radio"
+  id="receiveOne"
+  name="receive"
+  value="1"
+  onblur="pickPath(0, 1);"
+  onchange="pickPath(0, 1);">
+  <label for="receiveOne">No</label>        
+  </li>
+  </ul>
+  </div> <!-- end div.usa-input-error -->
+  </fieldset>
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > Yes > Current or former spouse > Are both parties' accounts being divided...? > Yes</code>
+  <div class="panel-form-field" markdown="1">
+
+  You have indicated that both parties are TSP participants and that **both will receive awards** pursuant to this court order. Please provide the following information:
+
+  <div class="usa-input-error">
+    <label class="usa-input-error-label" for="partfullname">Party 1 name:</label>
+    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
+    <input
+      type="text"
+      id="partfullname"
+      name="partfullname"
+      value=""
+      onpaste="partfullnameGood(0);"
+      onchange="partfullnameGood(0);"
+      onblur="partfullnameGood(0);"
+      maxlength="30"
+      size="30">
+    </div><!-- END div.usa-input-error -->
+
+  <div class="usa-input-error">
+    <label class="usa-input-error-label" for="payfullname">Party 2 name:</label>
+    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
+    <input
+      type="text"
+      id="payfullname"
+      name="payfullname"
+      value=""
+      onchange="payfullnameGood(0);"
+      onblur="payfullnameGood(0);"
+      maxlength="30"
+      size="30">
+  </div><!-- END div.usa-input-error -->
+  </div><!-- END div.panel-form-field -->
+
+  <code>Are both parties TSP participants? > Yes > Current or former spouse > Are both parties' accounts being divided...? > No</code>
+  <div class="panel-form-field" markdown="1">
+
+  You have indicated that both parties are TSP participants but that **only one will receive an award** pursuant to this court order. Please provide the following information:
+
+  <div class="usa-input-error">
+    <label class="usa-input-error-label" for="partfullname"><span data-term="Participant" class="js-glossary-toggle term term-end">Participant&#8217;s name</span>:</label>
+    <span class="usa-input-error-message" id="partfullname-message" role="alert">Enter the name of the person whose account will be divided pursuant to this court order.</span>
+    <input
+      type="text"
+      id="partfullname"
+      name="partfullname"
+      value=""
+      onpaste="partfullnameGood(0);"
+      onchange="partfullnameGood(0);"
+      onblur="partfullnameGood(0);"
+      maxlength="30"
+      size="30">
+  </div><!-- END div.usa-input-error -->
+
+  <div class="usa-input-error">
+    <label class="usa-input-error-label" for="payfullname"><span data-term="Payee" class="js-glossary-toggle term term-end">Payee&#8217;s name</span>:</label>
+    <span class="usa-input-error-message" id="payfullname-message" role="alert">Enter the name of the person who is the intended recipient of the court order award.</span>
+    <input
+      type="text"
+      id="payfullname"
+      name="payfullname"
+      value=""
+      onchange="payfullnameGood(0);"
+      onblur="payfullnameGood(0);"
+      maxlength="30"
+      size="30">
+  </div><!-- END div.usa-input-error -->
+  </div><!-- END div.panel-form-field -->
+
+    <nav><ul class="navigation-buttons">
+      <li>
+      <button
+        class="usa-button-secondary"
+        href="javascript:void(0);"
+        onclick="showPanel(1); return false;">Previous</button>
+      </li>
+      <li>
+      <button
+        class="usa-button"
+        href="javascript:void(0);"
+        onclick="processPanel(2,0,0,0); return false;">Continue</button>
+      </li>
+    </ul></nav>
+  </section> <!-- end section.calculator-panel -->
+  </div><!-- END div.usa-accordion-content -->
+</li>
+
 <!-- PANEL 4: PAYEE -->
 <li>
   <button
