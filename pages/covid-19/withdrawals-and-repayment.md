@@ -12,7 +12,6 @@ permalink: /covid-19/withdrawals-and-repayments/
 redirect_from:
   - /whatsnew/Content/coronavirus/withdrawals.html
 ---
-<!-- New comment -->
 <h1><div class="nav-header">COVID-19</div>Withdrawals and repayments</h1>
 
 The information we’re providing here is current but subject to change as we receive additional guidance and information.
