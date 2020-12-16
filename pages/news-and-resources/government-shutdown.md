@@ -8,7 +8,7 @@ permalink: /news-and-resources/government-shutdown/
 redirect_from:
   - /whatsnew/Content/shutdown.html
   - /shutdown/
-published: false
+published: 
 ---
 
 # Government shutdown
