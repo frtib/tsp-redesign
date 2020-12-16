@@ -29,6 +29,14 @@ section {
         border-bottom: 0.2rem dotted #aeb0b5;
         background-color: #f3f4f6;
         padding: 2rem;
+        padding: 4rem 2rem;
+
+        // fieldset {
+        //   margin-top: 3rem;
+        //   &:first-child {
+        //     margin-top: auto;
+        //   }
+        // }
       }
 
       &.panel-field {

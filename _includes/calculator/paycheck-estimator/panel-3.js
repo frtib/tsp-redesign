@@ -89,7 +89,7 @@ function sumWithholding(op1TradTotal, op2TradTotal) {
   monthTax2 = parseFloat((monthTax2 / maxpay_freq).toFixed(2));
 
   val = parseFloat((val - afterHold).toFixed(2));
-  // console.log ['sumWithholding', val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2];
+  // console.log('sumWithholding', val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2);
   return [val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2];
 }
 
@@ -117,20 +117,10 @@ function sumContributions() {
   var roth_option2 = getContribution('roth','2', grossPay);
   $('#lblAYRrothContrib2').html(CurrencyFormatted(roth_option2));
 
-  var catch_option1Trad = getPosInteger('catch_option1Trad', 0);
-  $('#lblAYRcatchuptradContrib1').html(CurrencyFormatted(catch_option1Trad));
-  var catch_option1Roth = getPosInteger('catch_option1Roth', 0);
-  $('#lblAYRcatchuprothContrib1').html(CurrencyFormatted(catch_option1Roth));
-  var catch_option2Trad = getPosInteger('catch_option2Trad', 0);
-  $('#lblAYRcatchuptradContrib2').html(CurrencyFormatted(catch_option2Trad));
-  var catch_option2Roth = getPosInteger('catch_option2Roth', 0);
-  $('#lblAYRcatchuprothContrib2').html(CurrencyFormatted(catch_option2Roth));
+  var val1 = trad_option1 + roth_option1;
+  var val2 = trad_option2 + roth_option2;
 
-  var val1 = trad_option1 + roth_option1 + catch_option1Trad + catch_option1Roth;
-  var val2 = trad_option2 + roth_option2 + catch_option2Trad + catch_option2Roth;
-
-  return [val1, val2, trad_option1, roth_option1, trad_option2, roth_option2,
-                catch_option1Trad, catch_option1Roth, catch_option2Trad, catch_option2Roth];
+  return [val1, val2, trad_option1, roth_option1, trad_option2, roth_option2];
 }
 
 function getInputID(rs, type, side) {
@@ -147,20 +137,10 @@ function option1Good(submit) {
   var trad_set = getPosInteger(trad_input, -1);
   var roth_input = getInputID(rs, 'roth', 1);
   var roth_set = getPosInteger(roth_input, -1);
-  var catch_trad = getPosInteger('catch_option1Trad', -1);
-  var catch_roth = getPosInteger('catch_option1Roth', -1);
   if ((trad_set + roth_set) <= -2) {
-    console.log(trad_set, roth_set);
     var msg = "Enter either a whole percentage or a fixed dollar amount for traditional and/or Roth contributions for Scenario 1.";
     if ((rs == 'USBRS') || (rs == 'US')) {
       msg = "Enter a whole percentage for traditional and/or Roth contributions for Scenario 1.";
-    }
-    if ((catch_trad > 0) || (catch_roth > 0)) {
-      msg = "You must enter either a whole percentage or a fixed dollar amount for regular traditional "
-                + "and/or Roth contributions in order to make catch-up contributions.";
-      if ((rs == 'USBRS') || (rs == 'US')) {
-        msg = "You must enter a whole percentage for regular traditional and/or Roth contributions in order to make catch-up contributions.";
-      }
     }
     showError(roth_input, msg);
     showError(trad_input, msg);
@@ -171,33 +151,7 @@ function option1Good(submit) {
 
 // can't do catchup without trad or roth
 function option2Good(submit) {
-  if (!submit)  return true;
-  var rs = getRetirementSystem();
-  var trad_input = getInputID(rs, 'trad', 2);
-  var trad_set = getPosInteger(trad_input, -1);
-  var roth_input = getInputID(rs, 'roth', 2);
-  var roth_set = getPosInteger(roth_input, -1);
-  var catch_trad = getPosInteger('catch_option2Trad', -1);
-  var catch_roth = getPosInteger('catch_option2Roth', -1);
-  if ((trad_set + roth_set) <= -2) {
-    var msg = "";
-    if ((catch_trad > 0) || (catch_roth > 0)) {
-      msg = "You must enter either a whole percentage or a fixed dollar amount for regular traditional "
-                + "and/or Roth contributions in order to make catch-up contributions.";
-      if ((rs == 'USBRS') || (rs == 'US')) {
-        msg = "You must enter a whole percentage for regular traditional and/or Roth contributions in order to make catch-up contributions.";
-      }
-      showError(roth_input, msg);
-      showError(trad_input, msg);
-      return false;
-    }
-  }
-  return true;
-}
-
-// get combined contribution amounts
-function combinedContributions(contribs) {
-  return { 'contrib1': contribs[2]+contribs[3], 'contrib2': contribs[4]+contribs[5], 'catch1': contribs[6]+contribs[7], 'catch2': contribs[8]+contribs[9] };
+  return true;  // nothing to check since catchup inputs removed
 }
 
 // test exceeding yearly IRC limits
@@ -208,42 +162,37 @@ function test_limits(submit, amts, contribs) {
 
     var limitRegular = IRC_contribution_limit;
     var limitCatch = IRC_catchup_contribution_limit;
-    var contribTotals = combinedContributions(contribs);
+    var limitTotal = limitRegular;
+    var age50 = getAge50();
+    if (age50 == 'age50Yes') { limitTotal += limitCatch; }
     var msg = '';
     var rs = getRetirementSystem();
 
-    // warn: exceed catchup limit
-    msg = "The combined total of your catch-up contributions exceeds the"
-      + "Internal Revenue Code (IRC) catch-up contribution limit ("
-      + CurrencyFormatted(IRC_catchup_contribution_limit, 'no_cent') + " in " + IRC_limit_year + ").";
-    if ((pay_freq * contribTotals.catch1) > limitCatch) {
-      if ($('#'+'catch_option1Trad').val() != '') { showWarning('catch_option1Trad', msg); }
-      if ($('#'+'catch_option1Roth').val() != '') { showWarning('catch_option1Roth', msg); }
-    }
-    if ((pay_freq * contribTotals.catch2) > limitCatch) {
-      if ($('#'+'catch_option2Trad').val() != '') { showWarning('catch_option2Trad', msg); }
-      if ($('#'+'catch_option2Roth').val() != '') { showWarning('catch_option2Roth', msg); }
-    }
-
     // warn: exceed elective deferral limit
-    msg = "The combined total of your regular employee contributions exceeds the "
-      + "Internal Revenue Code (IRC) elective deferral limit ("
-      + CurrencyFormatted(IRC_contribution_limit, 'no_cent') + " in " + IRC_limit_year + ").";
-    var op1annualTR = pay_freq * contribTotals.contrib1;  // option 1 annual Trad + Roth
-    var op2annualTR = pay_freq * contribTotals.contrib2;  // option 1 annual Trad + Roth
+    msg = "Your regular employee contributions exceed the "
+      + "Internal Revenue Code (IRC) elective deferral ";
+    if (age50 == 'age50Yes') {
+      msg += " and catch-up contribution limits" + " (" + CurrencyFormatted(limitRegular, 'no_cent') + " + "
+        + CurrencyFormatted(limitCatch, 'no_cent');
+    } else {
+      msg += "limit " + " (" + CurrencyFormatted(limitRegular, 'no_cent');
+    }
+    msg += " in " + IRC_limit_year + ").";
+    var op1annualTR = pay_freq * contribs[0];  // option 1 annual Trad + Roth
+    var op2annualTR = pay_freq * contribs[1];  // option 1 annual Trad + Roth
     $('#totalTR1').html(CurrencyFormatted(op1annualTR, 'no_cent'));
     $('#totalTR2').html(CurrencyFormatted(op2annualTR, 'no_cent'));
-    if (op1annualTR > limitRegular) {
+    if (op1annualTR > limitTotal) {
       var trad_input = getInputID(rs, 'trad', 1);
-      var roth_input = getInputID(rs, 'trad', 1);
-      if ($('#'+trad_input).val() != '') { showWarning(trad_input, msg); }
+      var roth_input = getInputID(rs, 'roth', 1);
       if ($('#'+roth_input).val() != '') { showWarning(roth_input, msg); }
+      if ($('#'+trad_input).val() != '') { showWarning(trad_input, msg); }
     }
-    if (op2annualTR > limitRegular) {
+    if (op2annualTR > limitTotal) {
       var trad_input = getInputID(rs, 'trad', 2);
-      var roth_input = getInputID(rs, 'trad', 2);
-      if ($('#'+trad_input).val() != '') { showWarning(trad_input, msg); }
+      var roth_input = getInputID(rs, 'roth', 2);
       if ($('#'+roth_input).val() != '') { showWarning(roth_input, msg); }
+      if ($('#'+trad_input).val() != '') { showWarning(trad_input, msg); }
     }
 
    return true;
@@ -267,19 +216,18 @@ function check_amounts(submit) {
   // assume all is good
   var rc = true;
   var i;
-  var idList = [getInputID(rs, 'trad', 1), getInputID(rs, 'roth', 1), getInputID(rs, 'trad', 2), getInputID(rs, 'roth', 2),
-        'catch_option1Trad', 'catch_option1Roth', 'catch_option2Trad', 'catch_option2Roth'];
+  var idList = [getInputID(rs, 'trad', 1), getInputID(rs, 'roth', 1), getInputID(rs, 'trad', 2), getInputID(rs, 'roth', 2)];
   for (i = 0; i < idList.length; i++) { rc &= inputGood(idList[i], false); }
   sumContributions();
 
   // test for good input
-  rc &= option1Good(submit) & option2Good(submit);
+  rc &= option2Good(submit) & option1Good(submit);
 
   // test for exceed limits
 
   // get totals
   var contribs = sumContributions();
-  var amts = sumWithholding(contribs[2]+contribs[6], contribs[4]+contribs[8]);
+  var amts = sumWithholding(contribs[2], contribs[4]);
 
   // test exceeding yearly IRC limits (warnings first so they can be overwritten by errors)
   // if (!test_limits(submit, amts, contribs)) { rc = false; }
@@ -289,15 +237,12 @@ function check_amounts(submit) {
   var val1 = amts[0] - contribs[0] - amts[5];
   var val2 = amts[0] - contribs[1] - amts[6];
   var msgTradRoth = "The total amount of additional withholding, payroll deductions, contributions, and calculated Federal taxes must be less than your gross pay.";
-  var msgCatch = "The total amount of your contributions and calculated Federal taxes must be less than your gross pay.";
 
   // test grossPay vs. deductions
   var rs = getRetirementSystem();
   if (val1 < 0.0) {
     var trad_input = getInputID(rs, 'trad', 1);
     var roth_input = getInputID(rs, 'roth', 1);
-    if (contribs[7] > 0.0) { showError('catch_option1Roth', msgCatch); }
-    if (contribs[6] > 0.0) { showError('catch_option1Trad', msgCatch); }
     if (contribs[3] > 0.0) { showError(roth_input, msgTradRoth); }
     if (contribs[2] > 0.0) { showError(trad_input, msgTradRoth); }
     rc = false;
@@ -305,8 +250,6 @@ function check_amounts(submit) {
   if (val2 < 0.0) {
     var trad_input = getInputID(rs, 'trad', 2);
     var roth_input = getInputID(rs, 'roth', 2);
-    if (contribs[9] > 0.0) { showError('catch_option2Roth', msgCatch); }
-    if (contribs[8] > 0.0) { showError('catch_option2Trad', msgCatch); }
     if (contribs[5] > 0.0) { showError(roth_input, msgTradRoth); }
     if (contribs[4] > 0.0) { showError(trad_input, msgTradRoth); }
     rc = false;
