@@ -1,5 +1,3 @@
-<!-- comment -->
-
 ---
 layout: page
 title: Account basics
