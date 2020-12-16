@@ -1,7 +1,6 @@
 ---
 title: Catch-up contributions are changing
 permalink: /plan-news/catch-up-contributions-are-changing/
-latest: y
 ---
 
 **{{ page.title }}** &#8212; Starting in January 2021, the process for catch-up contributions will be easier for TSP participants. If you’re turning age 50 or older, you’ll no longer need to make separate catch-up elections to your TSP account to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/catch-up-contributions/).
