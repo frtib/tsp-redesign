@@ -265,16 +265,16 @@
   -  Both
   form_topics:
   -  Withdrawals
-- form_number: TSP-96
-  form_url: "{{ site.withdrawals }}&_form=tsp96"
-  form_name: CARES Act Withdrawal Request
-  form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
-  form_date: Local reproduction
-  form_pages: 0
-  form_audience:
-  -  Both
-  form_topics:
-  -  Withdrawals
+# - form_number: TSP-96
+#   form_url: "{{ site.withdrawals }}&_form=tsp96"
+#   form_name: CARES Act Withdrawal Request
+#   form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
+#   form_date: Local reproduction
+#   form_pages: 0
+#   form_audience:
+#   -  Both
+#   form_topics:
+#   -  Withdrawals
 - form_number: TSP-99
   form_url: "{{ site.withdrawals }}&_form=tsp99"
   form_name: Withdrawal Request for Separated and Beneficiary Participants
