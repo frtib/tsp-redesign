@@ -1,9 +1,9 @@
 {% comment %}
 This content will show at the top of every page. It is intended for a site wide alert.
-- TO TURN IT OFF, move the endcomment to the bottom of this content.
-- TO TURN IT ON, move the endcomment just below this text and alter the content in the section to the alert you want.
-- Search project for "expand-site-alert:" to find pages that can expand the alert onLoad.
-
+To turn it off, move the endcomment to the bottom of this content.
+To activate it, move the endcomment just below this text and alter the content in the section
+to the alert you want.
+{% endcomment %}
 {% assign expand = false %}
 {% if page.expand-site-alert %}{% assign expand = true %}{% endif %}
 <section class="site-banner outage">
@@ -24,5 +24,3 @@ This content will show at the top of every page. It is intended for a site wide 
     </div>
   </div>
 </section>
-
-{% endcomment %}

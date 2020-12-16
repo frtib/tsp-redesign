@@ -26,8 +26,6 @@ Elective Deferral Limits panel (3) for How Much Can I Contribute?.
   rightID="contribution-year" right="<span class='year-choosen'>YYYY</span>" %}
 {% include calculator/resultsRow.html rightID="deferral-limit" right=""
   left="IRS Elective Deferral Limit for <span class='year-choosen'>YYYY</span>" %}
-{% include calculator/resultsRow.html rightID="catchup-limit" right="" outerDivID='catchupLimitRow'
-  left="IRS Catch-Up Limit for <span class='year-choosen'>YYYY</span>" %}
 {% include calculator/resultsRow.html rightID="total-contributed" right=""
   left="How much you will have contributed before your new amount is effective" %}
 {% include calculator/resultsRow.html rightID="amount-available" right=""

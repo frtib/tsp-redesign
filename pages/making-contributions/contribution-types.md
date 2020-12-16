@@ -35,7 +35,7 @@ Your agency or service will continue to deduct your contribution until you do th
 
 For more information, visit [Contribution limits]({{ site.baseurl }}/making-contributions/contribution-limits/).
 
-## Agency/Service automatic (1%) contributions
+## Agency/Service Automatic (1%) Contributions
 
 If you're a FERS or BRS employee, your agency or service will contribute an amount equal to 1% of your basic pay each pay period to your TSP account. These are called Agency/Service Automatic (1%) Contributions and you don’t need to make employee contributions to receive them.
 
@@ -54,7 +54,7 @@ If you leave government service before satisfying the vesting requirement, the A
 
 </div>
 
-## Agency/Service matching contributions
+## Agency/Service Matching Contributions
 
 If you're a FERS or BRS participant, you will receive Agency/Service Matching Contributions from your agency or service based on your regular employee contributions once you're eligible. Unlike Agency/Service Automatic (1%) Contributions, Matching Contributions are not subject to vesting requirements.
 
@@ -74,21 +74,25 @@ The first 3% of pay that you contribute will be matched dollar-for-dollar; the n
 
 Further, your Agency/Service Matching Contributions are based on the total amount of money (traditional and Roth) that you contribute each pay period. All agency/service contributions are deposited into your traditional balance.
 
-## Contributions toward the catch-up limit
-Starting in the year you turn 50, you become eligible to save even more by contributing toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-limits/).
+## Catch-up Contributions
+Starting in the year you turn 50, you may be eligible to make catch-up
+contributions to your TSP account in addition to your regular employee
+contributions.
+
 
 **Here’s what you should know:**
-- Once you exceed the elective deferral or annual addition limit, your contributions will spill over and automatically start counting toward the catch-up limit.
-- Contributions spilling over toward the catch-up limit will qualify for the match on up to 5% of your salary.
-- Separate catch-up elections are no longer required. Your election will carry over each year unless you submit a new election or leave federal service.
-- You may start, stop, or change your contributions at any time.
+- You must already be contributing an amount that will reach the IRS annual
+contribution limit. To see the most current limits, visit [Contribution Limits]({{ site.baseurl }}/making-contributions/contribution-limits/).
+- You may start, change, or stop making catch-up contributions at any time.
+- There are no matching contributions for catch-up contributions.
+- You must make a new election each calendar year—they do not restart
+automatically.
 
+**If you are a uniformed services member and enter a combat zone, your catch-up contributions must be Roth. (The TSP cannot accept traditional tax-exempt contributions toward the catch-up limit.) You also cannot make catch-up contributions from incentive pay, special pay, or bonus pay.**
 
-If you are a uniformed services member and enter a combat zone, your contributions toward the catch-up limit must be Roth. (The TSP cannot accept traditional tax-exempt contributions toward the catch-up limit.) You also cannot contribute toward the catch-up limit from incentive pay, special pay, or bonus pay.
-
-If you are contributing to both a civilian and uniformed services account, the limits apply to the **total** you contribute to both accounts during the year.
-
-To contribute toward the catch-up limit, use [Form TSP-1]({{ site.baseurl }}/forms/tsp-1.pdf), _Election Form_ (or [Form TSP-U-1]({{ site.baseurl }}/forms/tsp-u-1.pdf) for uniformed services), or your agency’s or service’s electronic system (e,g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC Employee Personal Page]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}). You can add any contributions toward the catch-up limit in the same place as your other TSP contributions. Remember, separate catch-up elections are not required.
+To make a catch-up contribution election, use your agency’s or service’s payroll website
+(e.g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC EPP]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}) or complete the Catch-Up Contribution Election, [_Form TSP-1-C_]({{ site.baseurl }}/forms/tsp-1-c.pdf) (or [_TSP-U-1-C_]({{ site.baseurl }}/forms/tsp-u-1-c.pdf)for uniformed services) and submit it to your payroll office. Or call the ThriftLine
+at 1-877-968-3778 and choose option 3 to request a copy.
 
 ## A note for members of the uniformed services
 

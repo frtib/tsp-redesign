@@ -15,21 +15,13 @@ Retirement System panel (1) for Paycheck Estimator.
 {% assign radioLabelList = FERS | append: CSRS | append: USBRS | append: US %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-1.1" id="rs"
-  inputType="radio" radioIDs="FERS, CSRS, USBRS, US"  radioLabels=radioLabelList
-  inputClass="usa-unstyled-list"  onBlur="rsGood(true);"  prompt="Retirement system"
+  inputType="radio" radioIDs="FERS, CSRS, USBRS, US"
+  radioLabels=radioLabelList
+  inputClass="usa-unstyled-list"
+  onBlur="rsGood(true);"
+  prompt="Retirement system"
   explanation=""
 %}
-{% capture explanation_1_2 %}
-Participants turning age 50 or older are eligible for catch-up contributions. We'll take that into account when calculating how much you can contribute.
-{% endcapture %}
-{% include calculator/div-panel-form-field.html
-  fieldID="panel-1.2" id="age50"
-  inputType="radio" radioIDs="age50Yes, age50No" radioLabels="Yes, No"
-  inputClass="usa-unstyled-list"   onBlur="age50Good(false);"
-  prompt='Will you turn age 50 or older in <span id="age50year">this year</span>?'
-  explanation=explanation_1_2
-%}
-
 
 {% include calculator/button-block.html panelID=panelID next=2 %}
 

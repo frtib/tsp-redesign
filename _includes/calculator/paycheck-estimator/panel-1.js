@@ -7,11 +7,10 @@ This is the javascript specific to panel 1.
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
-  return rsGood(forceValue) & age50Good(forceValue);
+  return rsGood(true);
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-  $('#age50year').html(IRC_limit_year);
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
@@ -28,6 +27,7 @@ function getRetirementSystem() {
   if ($('#BP').prop('checked')) { return 'BP'; }
   return '';
 }
+
 function rsShowHide(rs) {
 
   if ((rs == 'FERS') || (rs == 'CSRS')) {
@@ -51,39 +51,8 @@ function rsShowHide(rs) {
   return;
 }
 
-function setPanel3text(rs) {
-  if (rs == 'FERS') {
-    $('#FERS-intro').removeClass('hide');
-    $('#USBRS-intro').addClass('hide');
-    $('#USV-intro').addClass('hide');
-    $('#USV-note').addClass('hide');
-    return;
-  }
-  // if (rs == 'CSRS') { return; }
-  if (rs == 'USBRS') {
-    $('#FERS-intro').addClass('hide');
-    $('#USBRS-intro').removeClass('hide');
-    $('#USV-intro').removeClass('hide');
-    $('#USV-note').removeClass('hide');
-    return;
-  }
-  if (rs == 'US') {
-    $('#FERS-intro').addClass('hide');
-    $('#USBRS-intro').addClass('hide');
-    $('#USV-intro').removeClass('hide');
-    $('#USV-note').removeClass('hide');
-    return;
-  }
-  $('#FERS-intro').addClass('hide');
-  $('#USBRS-intro').addClass('hide');
-  $('#USV-intro').addClass('hide');
-  $('#USV-note').addClass('hide');
-  return;
-}
-
 function rsExit() {
   var rs = getRetirementSystem();
-  setPanel3text(rs);
 
   if (rs == 'FERS') {
     rsShowHide('FERS');
@@ -122,19 +91,6 @@ function rsGood(submit) {
     if (submit) { return showError('rs', "Select your retirement system."); }
   }
   return clearError('rs');
-}
-
-function getAge50() {
-  if ($('#age50Yes').prop('checked')) { return 'age50Yes'; }
-  if ($('#age50No').prop('checked')) { return 'age50No'; }
-  return '';
-}
-function age50Good(submit) {
-  var age50 = getAge50();
-  if (age50 == '') {
-    if (submit) { return showError('age50', "Your response is required."); }
-  }
-  return clearError('age50');
 }
 
 -->
