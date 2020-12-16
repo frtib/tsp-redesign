@@ -12,20 +12,21 @@ permalink: /covid-19/withdrawals-and-repayments/
 redirect_from:
   - /whatsnew/Content/coronavirus/withdrawals.html
 ---
+
 <h1><div class="nav-header">COVID-19</div>Withdrawals and repayments</h1>
 
 The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
 - [Qualified individuals](#qualified-individuals)
-- [CARES Act withdrawal](#cares-act-withdrawal) (Deadline has passed.)
+- [CARES Act withdrawal](#cares-act-withdrawal)
 - [Favorable tax treatment for coronavirus-related withdrawals](#favorable-tax-treatment-for-coronavirus-related-withdrawals)
 - [Repaying a coronavirus-related distribution](#repaying-a-coronavirus-related-distribution)
 
-The CARES Act created special rules for most types of TSP withdrawals made by participants affected by COVID-19. It also allowed us to create a new, temporary withdrawal option that waived the usual in-service withdrawal requirements and allowed all COVID-affected participants to waive tax withholding.
+The CARES Act creates special rules for most types of TSP withdrawals made by participants affected by COVID-19. It also allows us to create a new, temporary withdrawal option that waives the usual in-service withdrawal requirements and allows all COVID-affected participants to waive tax withholding. See below for details.
 
 ## Qualified individuals
 
-To be eligible for the favorable tax treatment described below, you must be a **qualified individual**. You’re a qualified individual if you meet at least one of the following criteria:
+To be eligible for the favorable tax treatment described below or to apply for a TSP CARES Act Withdrawal, you must be a **qualified individual**. You’re a qualified individual if you meet at least one of the following criteria:
 
 - You are or have been diagnosed with the virus SARS–CoV–2 or with coronavirus disease 2019 (COVID–19) by a test approved by the Centers for Disease Control and Prevention (including a test authorized under the Federal Food, Drug, and Cosmetic Act).
 - Your spouse or dependent (as defined in section 152 of the Internal Revenue Code of 1986) is or has been diagnosed with such virus or disease by such a test.
@@ -39,11 +40,11 @@ To be eligible for the favorable tax treatment described below, you must be a **
 
 ## CARES Act withdrawal
 
-The deadline for this type of withdrawal has passed.
+You may make a one-time withdrawal of up to $100,000 from a civilian or uniformed services account. For those still in federal service, the usual requirements that you be at least 59½ years old or certify that you meet specific financial hardship criteria are waived. Though you may request that we withhold money from your withdrawal for federal income tax, we will not automatically do that. This withdrawal is eligible for the favorable tax treatment described below, with all of the same options and restrictions. The deadline for applying for this withdrawal is December 15, 2020. When you apply for this withdrawal, you are self-certifying that you meet one or more of the conditions listed above. To protect your privacy, do NOT send supporting documentation with your application, especially medical information.
 
 ## Favorable tax treatment for coronavirus-related withdrawals
 
-Many TSP participants who meet the definition of a qualified individual can take advantage of the favorable tax provisions of the CARES Act. These provisions can be applied to any TSP withdrawal that you’re eligible for under existing rules. If you’re an eligible civilian federal employee or member of the uniformed services, such withdrawals could include hardship withdrawals and age-based in-service “59½” withdrawals. If you’re separated from federal service or a beneficiary participant, these withdrawals could include single payments and some installment payments.
+Many TSP participants who meet the definition of a qualified individual can take advantage of the favorable tax provisions of the CARES Act. These provisions can be applied to the CARES Act withdrawal described above or to other withdrawals that you’re eligible for under existing rules. If you’re an eligible civilian federal employee or member of the uniformed services, such withdrawals could include hardship withdrawals and age-based in-service “59½” withdrawals. If you’re separated from federal service or a beneficiary participant, these withdrawals could include single payments and some installment payments.
 
 Only **coronavirus-related distributions** are eligible for the favorable tax treatment described here. As defined by the Internal Revenue Service (IRS), a coronavirus-related distribution is “a distribution (withdrawal) that is made from an eligible retirement plan to a qualified individual from January 1, 2020, to December 30, 2020, up to an aggregate limit of $100,000 from all plans and IRAs.” That means $100,000 is the maximum amount across all your retirement plans combined that you can apply these tax advantages to. You must designate your withdrawal(s) as a coronavirus-related distribution when you file your taxes. To do that, you’ll file Form 8915-E, which the IRS is expected to make available before the end of 2020.
 
