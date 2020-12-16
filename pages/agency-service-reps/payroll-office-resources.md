@@ -28,6 +28,11 @@ Checklist and coupon for submitting payments from non SF-224 agencies.
 [Form TSP-2]({{ site.baseurl }}/bulletins/tsp-2.pdf), _Certification of Transfer of Funds and Journal Voucher_   
 Use this form to credit participant accounts.
 
+[Form TSP-2-D]({{ site.baseurl }}/bulletins/tsp-2-d.pdf), _Certification of Redesignation of Records and Journal Voucher_   
+Use this form to request the redesignation of employee contributions from Roth contributions to traditional contributions or vice versa due
+to agency processing error. **Important note:** As of January 1, 2021, agencies should submit catch-up contributions on the same record
+used to submit the equivalent regular contribution.
+
 [Form TSP-2-G]({{ site.baseurl }}/bulletins/tsp-2-g.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_    
 Use this form to credit participant accounts requiring G Fund breakage.
 
@@ -79,6 +84,13 @@ This bulletin discusses the current reports that payroll offices receive and new
 
 [Form TSP-U-2]({{ site.baseurl }}/bulletins/tsp-u-2.pdf), _Certification of Transfer of Funds and Journal Voucher_   
 Use this form to credit participant accounts.
+
+[Form TSP-U-2-D]({{ site.baseurl }}/bulletins/tsp-u-2-d.pdf), _Certification of Redesignation of Records and Journal Voucher_   
+Use this form to request the redesignation of employee contributions from Roth contributions to traditional (tax-deferred or tax-exempt)
+contributions or vice versa due to agency processing error. The record used will depend upon the tax category of the original contribution
+(tax-deferred, tax-exempt, or Roth). Note that Roth contributions toward the catch-up contribution limit cannot be redesignated as taxexempt
+because tax-exempt catch-up contributions are not permitted by law. **Important note:** As of January 1, 2021, services should
+submit catch-up contributions on the same record used to submit the equivalent regular contribution.
 
 [Form TSP-U-2-G]({{ site.baseurl }}/bulletins/tsp-u-2-g.pdf), _Certification of Transfer of Funds and Journal Voucher for Contributions Requiring G Fund Breakage_   
 Use this form to credit participant accounts requiring G Fund breakage.
