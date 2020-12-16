@@ -1,7 +1,8 @@
+# New comment
 - form_number: TSP-1
   form_url: tsp-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your agency's personnel or benefits office.
   form_date: 10/2020
   form_pages: 2
   form_audience:
@@ -12,33 +13,33 @@
 - form_number: TSP-U-1
   form_url: tsp-u-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your service's finance office.
   form_date: 10/2020
   form_audience:
   -  Uniformed Services
   form_topics:
   -  Investments
   -  Contributions
-- form_number: TSP-1-C
-  form_url: tsp-1-c.pdf
-  form_name: Catch-Up Contribution Election
-  form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
-  form_date: 1/2020
-  form_audience:
-  -  Civilian
-  form_topics:
-  -  Investments
-  -  Contributions
-- form_number: TSP-U-1-C
-  form_url: tsp-u-1-c.pdf
-  form_name: Catch-Up Contribution Election
-  form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
-  form_date: 1/2018
-  form_audience:
-  -  Uniformed Services
-  form_topics:
-  -  Contributions
-  -  Investments
+# - form_number: TSP-1-C
+#   form_url: tsp-1-c.pdf
+#   form_name: Catch-Up Contribution Election
+#   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
+#   form_date: 1/2020
+#   form_audience:
+#   -  Civilian
+#   form_topics:
+#   -  Investments
+#   -  Contributions
+# - form_number: TSP-U-1-C
+#   form_url: tsp-u-1-c.pdf
+#   form_name: Catch-Up Contribution Election
+#   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
+#   form_date: 1/2018
+#   form_audience:
+#   -  Uniformed Services
+#   form_topics:
+#   -  Contributions
+#   -  Investments
 - form_number: TSP-3
   form_url: tsp-3.pdf
   form_name: Designation of Beneficiary
@@ -199,7 +200,7 @@
   form_url: tsp-65.pdf
   form_name: Request to Combine Civilian and Uniformed Services TSP Accounts
   form_info: Combine your civilian and uniformed services TSP accounts (if you have both) after separating from either Federal civilian employment or from the uniformed services.
-  form_date: 4/2012
+  form_date: 12/2020
   form_pages: 2
   form_audience:
   -  Both
@@ -265,16 +266,16 @@
   -  Both
   form_topics:
   -  Withdrawals
-- form_number: TSP-96
-  form_url: "{{ site.withdrawals }}&_form=tsp96"
-  form_name: CARES Act Withdrawal Request
-  form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
-  form_date: Local reproduction
-  form_pages: 0
-  form_audience:
-  -  Both
-  form_topics:
-  -  Withdrawals
+# - form_number: TSP-96
+#  form_url: "{{ site.withdrawals }}&_form=tsp96"
+#  form_name: CARES Act Withdrawal Request
+#  form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
+#  form_date: Local reproduction
+#  form_pages: 0
+#  form_audience:
+#  -  Both
+#  form_topics:
+#  -  Withdrawals
 - form_number: TSP-99
   form_url: "{{ site.withdrawals }}&_form=tsp99"
   form_name: Withdrawal Request for Separated and Beneficiary Participants
