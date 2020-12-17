@@ -4,5 +4,181 @@
 {% capture title %}Award ({{awardNum}} of {{maxAwards}}) <span id="{{awardNum}}AwardStatus">in progress</span>{% endcapture %}
 
 {% include calculator/accordion-start.html expanded=true divID=divID icon='' title=title inList=true %}
-My award is {{ awardNum }}
+
+{% comment %}
+The repeatable award blocks are unique input blocks and I could not use the reuseable calculator input components for all of them.
+  -dav 2020/12/15
+{% endcomment %}
+
+<div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin">default text</div>
+
+<div class="panel-form-field">
+  <div class="usa-input-error">
+    <label for="{{awardNum}}awardAccount" class="usa-input-error-label">Select account to which this award applies:</label>
+    <span class="usa-input-error-message" id="{{awardNum}}awardAccount-message" role="alert">You must select an account from the drop-down list.</span>
+    <select id="{{awardNum}}awardAccount" name="{{awardNum}}awardAccount" onclick="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');">
+        <option value="Select">Select One</option>
+        <option value="part,xxxxxxxxx0123,Civ">John Doe, Civ xxxxxxxxx0123</option>
+        <option value="pay,xxxxxxxxx0123,Civ">Jane Doe, Civ xxxxxxxxx0123</option>
+    </select>
+  </div>
+</div>
+
+<!-- DAV, Wrap this fieldset around radio buttons AND %/$ inputs -->
+<div class="panel-form-field">
+  <fieldset class="usa-fieldset-inputs usa-sans">
+    <legend>Type of award:</legend>
+    <ul class="usa-unstyled-list">
+      <li>
+        <input type="radio" checked="" id="{{awardNum}}awardTypeFixed" name="{{awardNum}}awardType" value="Fixed" onblur="pickAwardType('F', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickAwardType('F', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <label for="{{awardNum}}awardTypeFixed" id="fixedDollar">Fixed dollar amount</label>
+        <!-- DAV, label ID is important!! More info below. -->
+      </li>
+      <li>
+        <input type="radio" id="{{awardNum}}awardTypePercent" name="{{awardNum}}awardType" value="Percentage" onblur="pickAwardType('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickAwardType('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <label for="{{awardNum}}awardTypePercent" id="percentageBalance">Percentage of account balance</label>
+      </li>
+    </ul>
+
+    <!-- HIDE/SHOW $ / % input BASED ON RADIO BUTTON SELECTION -->
+    <!-- DAV, the labels on the $ / % inputs have no labels. The aria-labelledby attribute links to the appropriate radio button label ID. -->
+
+    <!-- $ input -->
+    <div class="usa-input-error">
+      <label class="usa-input-error-label usa-sr-only" for="{{awardNum}}fixedAmount">Fixed dollar amount:</label>
+      <span class="usa-input-error-message" id="{{awardNum}}fixedAmount-message" role="alert">Enter a fixed dollar amount.</span>
+      <span data-format="$" class="input-symbol-left">
+      <input aria-labelledby="fixedDollar" type="number" id="{{awardNum}}fixedAmount" name="{{awardNum}}fixedAmount" maxlength="11" value="" onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
+      </span>
+    </div>
+
+    <!-- % input -->
+    <div class="usa-input-error">
+      <label class="usa-input-error-label usa-sr-only" for="{{awardNum}}percentage">Annual percentage rate:</label>
+      <span class="usa-input-error-message" id="{{awardNum}}percentage-message" role="alert">Percentage is required.</span>
+      <span data-format="%" class="input-symbol-right">
+      <input aria-labelledby="percentageBalance" type="number" id="{{awardNum}}percentage" name="{{awardNum}}percentage" maxlength="5" value="" onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
+      </span>
+    </div>
+  </fieldset>
+</div><!-- END div.panel-form-field -->
+
+
+<div class="panel-form-field">
+<!-- WITH ERROR -->
+  <div class="usa-input-error">
+  <fieldset class="usa-fieldset-inputs usa-sans">
+  <legend class="usa-input-error-label" for="adjustmentCalc">Specify the adjustment calculation for the award:</legend>
+  <span class="usa-input-error-message" id="adjustmentCalc-message" role="alert">Indicate how the earnings are to be calculated.</span>
+    <ul class="usa-unstyled-list">
+      <li>
+      <!-- DAV, the name and ID were the same for each input, which is not allowed for radio buttons. I created a new name and made the ID = value. -->
+        <input type="radio" id="{{awardNum}}earningsNo" name="adjustmentCalc" value="{{awardNum}}earningsNo" onblur="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <label for="{{awardNum}}earningsNo" id="fixedDollar">No earnings</label>
+      </li>
+      <li>
+        <input type="radio" id="{{awardNum}}earningsYes" name="adjustmentCalc" value="{{awardNum}}earningsYes" onblur="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" checked="checked" />
+        <label for="{{awardNum}}earningsYes">Earnings (show options)</label>
+      </li>
+    </ul>
+  </fieldset>
+  </div><!-- END div.usa-input-error -->
+</div><!-- END div.panel-form-field -->
+
+
+
+<div class="panel-form-field">
+
+<fieldset class="usa-fieldset-inputs usa-sans">
+  <legend for="{{awardNum}}earnings">Earnings options</legend>
+    <ul class="usa-unstyled-list">
+      <li>
+        <input type="radio" id="{{awardNum}}earningsLosses" name="{{awardNum}}earnings" value="Earnings and Losses" onblur="pickEarnings('L', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('L', '{{awardNum}}'); buildString(0, '{{awardNum}}');" checked="" />
+        <label for="{{awardNum}}earningsLosses">Earnings and Losses</label>
+      </li>
+      <li>
+        <input type="radio" id="{{awardNum}}earningsPercent" name="{{awardNum}}earnings" value="Earnings APR" onblur="pickEarnings('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <label for="{{awardNum}}earningsPercent" id="earnings-apr">Earnings at annual percentage rate</label>
+      </li>
+
+      <li>
+        <input type="radio" id="{{awardNum}}earningsPerdiem" name="{{awardNum}}earnings" value="Earnings Per Diem" onblur="pickEarnings('D', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('D', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <label for="{{awardNum}}earningsPerdiem" id="earnings-perdiem">Earnings at per diem dollar rate</label>
+      </li>
+    </ul>
+
+      <!-- Entitlement date radio buttons -->
+      <fieldset class="usa-fieldset-inputs usa-sans">
+        <legend for="{{awardNum}}earnings">Specify the entitlement date:</legend>
+          <ul class="usa-unstyled-list">
+            <li>
+              <input type="radio" id="{{awardNum}}paymentDate2Order" name="{{awardNum}}paymentDate2" value="As of date of order" onblur="pickPaymentDate(2, 'O', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickPaymentDate(2, 'O', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+              <label for="{{awardNum}}paymentDate2Order">As of the effective date of the court order</label>
+            </li>
+            <li>
+              <input type="radio" id="{{awardNum}}paymentDate2Entitlement" name="{{awardNum}}paymentDate2" value="Entitlement Date" onblur="pickPaymentDate(2, 'E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickPaymentDate(2, 'E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" checked="checked" />
+              <label for="{{awardNum}}paymentDate2Entitlement">As of the following specified date:</label>
+            </li>
+          </ul>
+
+          <!-- Entitlement date input + date picker -->
+          <div class="usa-input-error">
+          <!-- DAV, I'm using a label (and not using aria-labelledby) on this option because the calendar UI is not apparent -->
+          <label class="usa-input-error-label" for="{{awardNum}}paymentDate2EntitlementDate" aria-details="">Entitlement date</label>
+          <span class="usa-input-error-message" id="{{awardNum}}paymentDate2EntitlementDate-error-message" role="alert">Entitlement date is required.</span>
+          <input id="{{awardNum}}paymentDate2EntitlementDate" name="{{awardNum}}paymentDate2EntitlementDate" class="hasDatepicker flatpickr-input" type="hidden" onblur="DIEMSdateGood(true);" onchange="DIEMSdateGood(true);" value="" min="0" max="10000000" step="0.01" />
+          <input aria-labelledby="entitlement-date" class="hasDatepicker form-control input active" tabindex="0" type="text" readonly="readonly" placeholder="Enter date" />
+          </div><!-- END div.usa-input-error -->
+        </fieldset>
+
+        <!-- % input -->
+        <div class="usa-input-error">
+        <label class="usa-input-error-label usa-sr-only" for="{{awardNum}}earningsPercentRate">Annual percentage rate:</label>
+        <span class="usa-input-error-message" id="{{awardNum}}earningsPercentRate-message" role="alert">Annual percentage rate is required.</span>
+          <span data-format="%" class="input-symbol-right">
+          <input aria-labelledby="earnings-apr" type="number" id="{{awardNum}}earningsPercentRate" name="{{awardNum}}earningsPercentRate" maxlength="11" value="" onchange="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" onblur="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+          </span> per annum
+        </div>
+
+        <!-- $ input -->
+        <div class="usa-input-error">
+        <label class="usa-input-error-label usa-sr-only" for="{{awardNum}}earningsPerdiemRate">Per diem dollar rate:</label>
+        <span class="usa-input-error-message" id="{{awardNum}}earningsPerdiemRate-message" role="alert">Enter a dollar amount greater than $0.01.</span>
+          <span data-format="$" class="input-symbol-left">
+          <input aria-labelledby="earnings-perdiem" type="number" id="{{awardNum}}earningsPercentRate" name="{{awardNum}}earningsPercentRate" maxlength="10" value="" onchange="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" onblur="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+          </span>  per day
+        </div>
+
+    </fieldset>
+
+  <!-- Percentage outstanding balance calculation radio buttons -->
+  <div class="panel-form-field">
+    <fieldset class="usa-fieldset-inputs usa-sans">
+      <legend for="{{awardNum}}earnings">Outstanding Loan Balances:</legend>
+        <ul class="usa-unstyled-list">
+          <li>
+            <input type="radio" id="{{awardNum}}osLoanIncluded" name="{{awardNum}}osLoan" value="Included" onblur="pickOSloans('I', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickOSloans('I', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+            <label for="{{awardNum}}osLoanIncluded">should be included when calculating the payee's award amount</label>
+          </li>
+          <li>
+            <input type="radio" id="{{awardNum}}osLoanExcluded" name="{{awardNum}}osLoan" value="Excluded" onblur="pickOSloans('E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickOSloans('E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+            <label for="{{awardNum}}osLoanExcluded">should be excluded when calculating the payee's award amount</label>
+          </li>
+        </ul>
+    </fieldset>
+  </div>
+
+</div><!-- END div.panel-form-field -->
+<!-- DELETE AWARD BUTTON -->
+<ul class="buttons justify-end">
+  <li>
+  <button class="usa-button-secondary delete" href="javascript:void(0);" onclick="showPanel(6); return false;">Delete award</button>
+  </li>
+</ul>
+
+
+
+
+
+
 {% include calculator/accordion-end.html inList=true %}

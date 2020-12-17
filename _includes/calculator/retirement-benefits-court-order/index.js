@@ -25,7 +25,7 @@ function setValues(flag) {
     $('#relationshipSpouse').click();
     $('#receiveBoth').click();
     $('#partfullname').val('Sherlock Holmes');
-    $('#payfullname').val('Jane Watson');
+    $('#payfullname').val('Joan Watson');
 
     processPanel(2,0,3,0);
   }

@@ -4,7 +4,7 @@ Awards panel (7) for RBCO.
 {% assign panelID = include.panelID | default: 7 %}
 {% assign hide = 'display: block;' %}
 {% if include.hide == 1 %} {% assign hide = 'display: none;' %} {% endif %}
-{% assign maxAwards = 6 %}
+{% assign maxAwards = 2 %}
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
 
 {% include calculator/div-panel-form-field.html
@@ -16,7 +16,7 @@ Awards panel (7) for RBCO.
 %}
 
 {% for awardNum in (1..maxAwards) %}
-<ul class="usa-accordion icons">
+<ul class="usa-accordion-bordered award {% if awardNum == 2 %}complete{% endif %}">
 {% include calculator/retirement-benefits-court-order/award-section.html awardNum=awardNum maxAwards=maxAwards %}
 </ul>
 {% endfor %}

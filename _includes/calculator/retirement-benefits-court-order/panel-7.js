@@ -5,79 +5,87 @@ This is the javascript specific to panel 2.
 {% assign panelName = include.panelName | default: 'panel-' | append: panelID %}
 <script type="text/javascript">
 <!--
+var maxAwards = 6;
+
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
   return true;
 };
-
 panelEnter[{{ panelID }}] = function(panel) {
-    return true;
+  // for (var i = 1; i <= maxAwards; i++) { buildString(0, '' + i); }
+  buildAccountSelect(0);
+  return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
 }
 
 // my functions
-function getHaveDependent() {
-  if ($('#haveDependentYes').prop('checked')) { return 'Yes'; }
-  if ($('#haveDependentNo').prop('checked')) { return 'No'; }
-  return '';
+// put all the accounts in drop down. We are only called when a number has changed and there is no error
+function getpartciv(role) { if ($('#'+role+'civcb').prop('checked')) {console.log('getciv', 'Y', role); return 'Y'; } console.log('getciv', 'N', role); return '';}
+function getpartus(role) { if ($('#'+role+'usvcb').prop('checked')) {console.log('getus', 'Y', role); return 'Y'; } console.log('getus', 'N', role); return '';}
+function getpartBPA(role) { if ($('#'+role+'BPAcb').prop('checked')) {console.log('getbpa', 'Y', role); return 'Y'; } console.log('getbpa', 'N', role); return '';}
+function addToDropDown(dd, value, str) {
+  console.log('addToDropDown', {dd}, {value}, {str});
+  var newOption = $('<option value="' + value + '" >' + str + '</option>');
+  dd.append(newOption);
 }
-function haveDependentGood(submit) {
-  var haveDependent = getHaveDependent();
-  $('#haveDependentAYR').html(haveDependent);
-
-  if (haveDependent == 'Yes') {
-    $('#has-a-dependent').removeClass('hide');
-    $('#dependentAYR-row').removeClass('hide');
-    $('#dependentAgeAYR-row').removeClass('hide');
-    return clearError('haveDependent');
+function buildAccountSelect(submit) {
+  for (var i = 1; i <= maxAwards; i++) { buildAccountSelectX(submit, i); }
+  return true;
+}
+function buildAccountSelectX(submit, awX) {
+  var awardAccountDrop = $("#" + awX + "awardAccount");
+  if (awardAccountDrop.length <= 0) { return;}
+  console.log('buildAccountSelect', submit, awX, "#" + awX + "awardAccount");
+  var value = awardAccountDrop.val();
+  awardAccountDrop.empty();
+  addToDropDown(awardAccountDrop, 'Select', 'Select One', '');
+  // var newOption = $('<option value="Select" >Select One</option>');
+  // awardAccountDrop.append(newOption);
+  var partName = $.trim($('#partfullname').val());
+  var payName = $.trim($('#payfullname').val());
+  buildAccountSelectAddAccounts(submit, 'part', partName, awardAccountDrop);
+  buildAccountSelectAddAccounts(submit, 'pay', payName, awardAccountDrop);
+  // awardAccountDrop.val('Select');
+  // awardAccountDrop.trigger("chosen:updated");
+  awardAccountDrop.val(value);
+  awardAccountDrop.trigger("chosen:updated");
+  return;
+}
+function buildAccountSelectAddAccounts(submit, role, name, dd) {
+  var acct;
+  var value;
+  var str;
+  var usePayee = $('#receiveBoth').prop('checked') && $('#payeePartYes').prop('checked');
+  if ((role == 'part') || (usePayee)) {
+    if (getpartciv(role) == 'Y') {
+      acct = $.trim($('#'+role+'civacctNum').prop('placeholder'));
+      value = role + ',' + acct + ',Civ';
+      str = name + ', Civ '+ acct;
+      addToDropDown(dd, value, str);
+    }
+    if (getpartus(role) == 'Y') {
+      acct = $.trim($('#'+role+'usvacctNum').prop('placeholder'));
+      value = role + ',' + acct + ',US';
+      str = name + ', US '+ acct;
+      addToDropDown(dd, value, str);
+    }
+    if (getpartBPA(role) == 'Y') {
+      acct = $.trim($('#'+role+'BPAacctNum').prop('placeholder'));
+      value = role + ',' + acct + ',BPA';
+      str = name + ', BPA ' + acct;
+      addToDropDown(dd, value, str);
+    }
   }
-
-  $('#has-a-dependent').addClass('hide');
-  $('#dependentAYR-row').addClass('hide');
-  $('#dependentAgeAYR-row').addClass('hide');
-
-  if (haveDependent == 'No') { return clearError('haveDependent'); }
-
-  if (submit) { return showError('haveDependent', "Dependent information is required."); }
-  return clearError('haveDependent');
 }
 
-function getDependent() {
-  if ($('#dependentSpouse').prop('checked')) { return 'Spouse'; }
-  if ($('#dependentOther').prop('checked')) { return 'Other'; }
-  return '';
+function buildStrings(submit) {
+  for (var aw = 1; aw <= maxAwards; aw++) { buildString(submit, aw); }
 }
-function dependentGood(submit) {
-  var dependent = getDependent();
-  $('#dependentAYR').html(dependent);
-  if (getHaveDependent() != 'Yes') { return clearError('dependent'); }
-
-  if (dependent == '') { if (submit) { return showError('dependent', "Dependent information is required."); } }
-
-  return clearError('dependent');
+function buildString(submit, aw) {
+  console.log('buildString called', submit, aw);
 }
-
-function dependentAgeGood(submit) {
-  if (getHaveDependent() != 'Yes') { return clearError('dependent'); }
-  if (!submit) {
-    if ($("#dependentAge").val() == '') { return clearError('dependentAge'); }
-  }
-  var dependentAge = getPosInteger('dependentAge', -1);
-  if (dependentAge > 99) { dependentAge = 99; }
-  if (dependentAge > 0) {
-    $('#dependentAge').val(dependentAge);
-    $('#dependentAgeAYR').html(dependentAge);
-  }
-
-  if (dependentAge < 0) {
-    return showError('dependentAge', "Your joint annuitant's current age is required.");
-  }
-  //$('#lblAYRgrossPay').html(CurrencyFormatted(grossPay));
-  return clearError('dependentAge');
-}
-
 
 -->
 </script>

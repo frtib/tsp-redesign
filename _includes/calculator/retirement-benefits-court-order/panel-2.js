@@ -169,7 +169,6 @@ function setPartyNames(flag) {
   $('#QDROretainer option[value=Payee]').text(payName + ' retained RBS');
   $('#petitioner option[value=part]').text(partName + ' is Petitioner');
   $('#petitioner option[value=pay]').text(payName + ' is Petitioner');
-
   $('#partfullname-label').addClass('hide');
   $('#partfullname-glabel').addClass('hide');
   $('#payfullname-label').addClass('hide');
@@ -178,7 +177,6 @@ function setPartyNames(flag) {
   $('#payfullname-div').addClass('hide');
   $('#paySSN-outer-div').addClass('hide');
   $('#payAccountTypeDiv').addClass('hide');
-
 
   if (flag == 'Both') {
     $('#partfullname-label').removeClass('hide');
