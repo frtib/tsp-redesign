@@ -52,7 +52,7 @@ You must create a user ID to log in securely to My Account and manage your Thrif
 
 <div class="steps" markdown="1">
 1. Go to secure.tsp.gov to access My Account.
-2. Select the link, **Recover user ID.**
+2. Select the link, **Recover user ID.**   
 3. Enter your TSP account number.
   \- OR -   
   Change the selection to enter your Social Security number.
