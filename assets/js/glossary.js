@@ -423,6 +423,11 @@ var glossaryTerms = [
       'A general term describing a variety of financial instruments, including stocks and bonds.'
   },
   {
+    term: 'Security challenge questions',
+    definition:
+      'Questions and answers you select when you set up online access in My Account. The answers to your challenge questions will help verify your identity when you request certain account transactions. You must remember your answers exactly as you typed them.'
+  },
+  {
     term: 'Separate Account',
     definition:
       'A segregated account for the purpose of holding the invested assets of the Trust.'
