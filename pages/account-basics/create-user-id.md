@@ -20,7 +20,7 @@ You must create a user ID to log in securely to My Account and manage your Thrif
 
 <div class="usa-grid how-to">
 <div class="usa-width-one-whole" markdown="1">
-![Image of secure.tsp.gov login page]({{ site.baseurl }}/assets/img/create-user-id/create-user-id.gif)
+![Animation of participant creating their user ID.]({{ site.baseurl }}/assets/img/create-user-id/create-user-id.gif)
 
 <div class="steps" markdown="1">
 
@@ -48,7 +48,7 @@ You must create a user ID to log in securely to My Account and manage your Thrif
 
 <div class="usa-grid how-to">
 <div class="usa-width-one-whole" markdown="1">
-![Image of form on login page with two input fields: "TSP Account Number" and "Password".]({{ site.baseurl }}/assets/img/create-user-id/recover-user-id.gif)
+![Animation of participant recovering their user ID.]({{ site.baseurl }}/assets/img/create-user-id/recover-user-id.gif)
 
 <div class="steps" markdown="1">
 1. Go to secure.tsp.gov to access My Account.
