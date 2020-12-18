@@ -12,16 +12,10 @@ redirect_from:
 
 # Government shutdown
 
-## Loans during a lapse in appropriations
+## TSP operations during a lapse in appropriations (government shutdown)
 
-As a result of the recent partial government shutdown, we made changes to provide assistance to affected TSP participants. In the event your agency is affected by a lapse in appropriations, read the fact sheet [_Frequently Asked Questions About TSP Loans During a Lapse in Appropriations_]({{ site.baseurl }}/publications/tspfs13.pdf) for details on how to take a loan, what to do if a lapse in appropriations lasts long enough to affect your loan payments, and other questions you may have about taking or having a loan while you are on shutdown furlough. The fact sheet also explains what happens with your loan payments when a lapse in appropriations ends.
+The TSP will continue its normal daily operations during the current lapse in appropriations. If you currently have a TSP loan, note that if the lapse in appropriations is short enough that you don’t miss a paycheck, then you do not need to take any action or submit any documentation at this time. If the lapse in appropriations lasts long enough that you miss a paycheck, this may change. You always have the option of sending a TSP loan payment directly to the TSP.  If you do so, use the [Loan Coupon]({{ site.baseurl }}/forms/tsp-26/).
 
-## Making loan payments after the Government shutdown
+We will provide more instruction if the lapse in appropriations continues. You can check this announcement page for updates.
 
-Due to limitations of employing agency/service payroll systems, some payroll offices may not be able to deduct loan payments from back pay. **If your loan payments haven’t been taken out of back pay, you should submit your loan payments directly to the TSP using the [Loan Payment Coupon]({{ site.baseurl }}/forms/tsp-26/).** You can always check the status of your loan by logging into [My Account]({{ site.myaccount }}), selecting &#8220;TSP Loans,&#8221; and then selecting &#8220;Are my payments up to date?&#8220; Or you can call the ThriftLine at <span class="nobr">1-877-968-3778</span> and speak to a Participant Service Representative.
-
-## Government shutdown and loan payments
-
-The TSP allows for the suspension of loan payments when you go into nonpay status to prevent your loan from going into default. Normally, we require documentation from your agency or service. However, the **TSP does not need documentation of your furlough at this time.** If your loan payments were up to date prior to the furlough, missing one or two payments will not cause your loan to be in default. You can check the status of your loan by logging into My Account, selecting &#8220;TSP Loans,&#8221; and then selecting &#8220;Are my payments up to date?&#8221; Or you can call the ThriftLine at <span class="nobr">1-877-968-3778</span> and speak to a Participant Service Representative.
-
-As long as retroactive pay is approved, all missed loan payments will be submitted and posted to your loan. We will provide more information as the furlough continues or as events change.
+You can read our fact sheet [_Frequently Asked Questions About TSP Loans During a Lapse in Appropriations_]({{ site.baseurl }}/publications/tspfs13.pdf) about what to do if you are on shutdown furlough and have an existing TSP loan or are considering taking a TSP loan during the lapse in appropriations.
