@@ -64,10 +64,10 @@ payroll offices must use to submit adjustments.
 
 ## Reports payroll offices receive
 
-[Agency Guide For Report Descriptions And Data Record Formats]({{ site.baseurl }}/bulletins/New-TSP-Agency-Guide_EDTS_Civilian.pdf) (Version 5.30)   
+[Agency Guide For Report Descriptions And Data Record Formats]({{ site.baseurl }}/bulletins/tsp-edts-agency-guide-civilian.pdf) (Version 5.30)   
 This document provides information for reports selected by the Board to be included in the Electronic Transmission System.
 
-[Error Codes and Messages Keyed to Record Types]({{ site.baseurl }}/bulletins/Error-Codes-Messages.pdf)   
+[Error Codes and Messages Keyed to Record Types]({{ site.baseurl }}/bulletins/error-codes-and-messages.pdf)   
 Use this document to better understand the meaning of error codes and messages returned by the Electronic Transmission System.
 
 [Bulletin 11-8]({{ site.baseurl }}/bulletins/11-8.pdf), _Thrift Savings Plan Payroll Office Reports_   
@@ -116,10 +116,10 @@ Use this form to submit tax-deferred and tax-exempt records for recharacterizati
 
 ## Reports payroll offices receive
 
-[Uniformed Services Guide For Report Descriptions And Data Record Formats]({{ site.baseurl }}/bulletins/New-TSP-Agency-Guide_EDTS_Uniserv.pdf) (Version 4.00)   
+[Uniformed Services Guide For Report Descriptions And Data Record Formats]({{ site.baseurl }}/bulletins/tsp-edts-agency-guide-uniform.pdf) (Version 4.00)   
 This document provides information for those reports selected by the Board to be included in the Electronic Transmission System.
 
-[Error Codes and Messages Keyed to Record Types]({{ site.baseurl }}/bulletins/Error-Codes-Messages.pdf)   
+[Error Codes and Messages Keyed to Record Types]({{ site.baseurl }}/bulletins/error-codes-and-messages.pdf)   
 Use this document to better understand the meaning of error codes and messages returned by the Electronic Transmission System.
 
 [Bulletin 17-U-2]({{ site.baseurl }}/bulletins/17-u-2/), _2017 Thrift Savings Plan Payroll Office Reports for the Blended Retirement System_   
