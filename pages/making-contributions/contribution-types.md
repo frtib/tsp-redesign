@@ -90,9 +90,7 @@ automatically.
 
 **If you are a uniformed services member and enter a combat zone, your catch-up contributions must be Roth. (The TSP cannot accept traditional tax-exempt contributions toward the catch-up limit.) You also cannot make catch-up contributions from incentive pay, special pay, or bonus pay.**
 
-To make a catch-up contribution election, use your agency’s or service’s payroll website
-(e.g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC EPP]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}) or complete the Catch-Up Contribution Election, [_Form TSP-1-C_]({{ site.baseurl }}/forms/tsp-1-c.pdf) (or [_TSP-U-1-C_]({{ site.baseurl }}/forms/tsp-u-1-c.pdf)for uniformed services) and submit it to your payroll office. Or call the ThriftLine
-at 1-877-968-3778 and choose option 3 to request a copy.
+To make a catch-up contribution election, use your agency’s or service’s payroll website (e.g., [Employee Express]({{ site.baseurl }}/exit/?idx=7){:rel="nofollow"}, EBIS, [LiteBlue]({{ site.baseurl }}/exit/?idx=8){:rel="nofollow"}, [myPay]({{ site.baseurl }}/exit/?idx=6){:rel="nofollow"}, or [NFC EPP]({{ site.baseurl }}/exit/?idx=9){:rel="nofollow"}) or complete [Form TSP-1]({{ site.baseurl }}/forms/tsp-1.pdf), _Election Form_ (or [TSP-U-1]({{ site.baseurl }}/forms/tsp-u-1.pdf) for uniformed services) and submit it to your payroll office. Or call the ThriftLine at <span class="nobr">1-877-968-3778</span> and choose option 3 to request a copy.
 
 ## A note for members of the uniformed services
 
