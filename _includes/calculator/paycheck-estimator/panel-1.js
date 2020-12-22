@@ -29,17 +29,12 @@ function getRetirementSystem() {
   return '';
 }
 function rsShowHide(rs) {
-
   if ((rs == 'FERS') || (rs == 'CSRS')) {
     hidePaySchedule(false);
-    $('#agencyFootnote').removeClass('hide');
-    $('#serviceFootnote').addClass('hide');
   } else {
     hidePaySchedule(true);
-    $('#agencyFootnote').addClass('hide');
-    $('#serviceFootnote').removeClass('hide');
   }
-  if ((rs == 'FERS') || (rs == 'URBRS')) {
+  if ((rs == 'FERS') || (rs == 'USBRS')) {
     $('#partContrib').removeClass('hide');
     $('#autoContrib').removeClass('hide');
     $('#matchContrib').removeClass('hide');
@@ -48,6 +43,8 @@ function rsShowHide(rs) {
     $('#autoContrib').addClass('hide');
     $('#matchContrib').addClass('hide');
   }
+  if (rs == 'FERS') { $('#agencyFootnote').removeClass('hide'); } else { $('#agencyFootnote').addClass('hide'); }
+  if (rs == 'USBRS') { $('#serviceFootnote').removeClass('hide'); } else { $('#serviceFootnote').addClass('hide'); }
   return;
 }
 
