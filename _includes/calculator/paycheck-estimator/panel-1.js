@@ -43,8 +43,16 @@ function rsShowHide(rs) {
     $('#autoContrib').addClass('hide');
     $('#matchContrib').addClass('hide');
   }
-  if (rs == 'FERS') { $('#agencyFootnote').removeClass('hide'); } else { $('#agencyFootnote').addClass('hide'); }
-  if (rs == 'USBRS') { $('#serviceFootnote').removeClass('hide'); } else { $('#serviceFootnote').addClass('hide'); }
+  if (rs == 'FERS') {
+    $('#agencyFootnote').removeClass('hide');
+    $('#orgText1').html('Agency');
+    $('#orgText2').html('Agency');
+  } else { $('#agencyFootnote').addClass('hide'); }
+  if (rs == 'USBRS') {
+    $('#serviceFootnote').removeClass('hide');
+    $('#orgText1').html('Service');
+    $('#orgText2').html('Service');
+  } else { $('#serviceFootnote').addClass('hide'); }
   return;
 }
 
