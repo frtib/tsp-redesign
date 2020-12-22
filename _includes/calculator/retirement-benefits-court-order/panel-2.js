@@ -11,10 +11,12 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
+  getPrimeSettingsPath();
   return panel2Good(false);
 }
 panelExit[{{ panelID }}] = function(panel) {
-    return true;
+  testPrimeSettingsPath();
+  return true;
 }
 
 // too many interconnecitons
@@ -23,8 +25,79 @@ function panel2Good(submit) {
     & partfullnameGood(submit) & payfullnameGood(submit);
 }
 
+// highwater
+var cachePath = [];
+cachePath["highwater"] = getHighwater();
+cachePath["payeePartYes"] = null;
+cachePath["payeePartNo"] = null;
+cachePath["relationshiSpouse"] = null;
+cachePath["relationshiDependant"] = null;
+cachePath["receiveOne"] = null;
+cachePath["receiveTwo"] = null;
+cachePath["PayeePanel"] = 0;
+cachePath["PayeePanelState"] = null;
+cachePath["PayeePanelError"] = null;
+function getPrimeSettingsPath() {
+  console.log('called get');
+  cachePath["highwater"] = getHighwater();
+  cachePath["payeePartYes"] = $('#payeePartYes').prop('checked');
+  cachePath["payeePartNo"] = $('#payeePartNo').prop('checked');
+  cachePath["relationshiSpouse"] = $('#relationshipSpouse').prop('checked');
+  cachePath["relationshiDependant"] = $('#relationshipDependant').prop('checked');
+  cachePath["receiveOne"] = $('#receiveOne').prop('checked');
+  cachePath["receiveTwo"] = $('#receiveTwo').prop('checked');
+  cachePath["PayeePanel"] = getIDbyName('{{panelName}}');
+  cachePath["PayeePanelState"] = getProgressState(cachePath["PayeePanel"]);
+  cachePath["PayeePanelError"] = getProgressStateError(cachePath["PayeePanel"]);
+}
+// did user change something important
+function anyChangesPath() {
+  console.log('in any changes');
+  if (cachePath["payeePartYes"] != $('#payeePartYes').prop('checked')) { return true; }
+  if (cachePath["payeePartNo"] != $('#payeePartNo').prop('checked')) { return true; }
+  if (cachePath["receiveOne"] != $('#receiveOne').prop('checked')) { return true; }
+  if (cachePath["receiveTwo"] != $('#receiveTwo').prop('checked')) { return true; }
+  if (cachePath["relationshiSpouse"] != $('#relationshipSpouse').prop('checked')) { return true; }
+  // if (cachePath["relationshiDependant"] != $('#relationshipDependant').attr('checked')) { return true; }
+  console.log('any changes false');
+  return false;
+}
+// set error if we changed something while all was good, return true if we set error
+function testPrimeSettingsPath() {
+console.log($('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), 'in test');
+  if (($('#payeePartNo').prop('checked')) && ($('#relationshipDependant').prop('checked'))) {
+    // this setting overrides any other consideration - do not advance!
+    setHighwater(2);
+    setProgress(2);
+console.log($('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), '1 leaving test true');
+    return true;
+  }
+  if (cachePath["PayeePanelError"]) { console.log('2 leaving test false');
+return false; } // somebody else did it
+  if (cachePath["PayeePanelState"] != '-done') { console.log('3 leaving test false');
+return false; } // somebody else's problem
+  if (anyChangesPath() == false) {
+    // nothing changed
+    // unsetProgressStateError(cachePath["PayeePanel"]);
+    setHighwater(cachePath["highwater"]);
+    setProgress(2);
+console.log('4 leaving test false');
+    return false;
+  }
+  // xxx something changed and Payee panel cares about it.
+  // something changed and we care about it.
+  // setProgressStateError(cachePath["PayeePanel"]);
+  // we need to recheck Payee page
+  // setHighwater(cachePath["PayeePanel"]);
+  setHighwater(2);
+  setProgress(2);
+console.log('5 leaving test true');
+  return true;
+}
+
 // my functions
 function getPayeePart() {
+  testPrimeSettingsPath();
   if ($('#payeePartYes').prop('checked')) { return 'Yes'; }
   if ($('#payeePartNo').prop('checked')) { return 'No'; }
   return '';
@@ -52,6 +125,7 @@ console.log('getPayeePart ', submit, payeePart);
 }
 
 function getRelationship() {
+  testPrimeSettingsPath();
   if ($('#relationshipSpouse').prop('checked')) { return 'Spouse'; }
   if ($('#relationshipDependent').prop('checked')) { return 'Dependent'; }
   if ($('#relationshipOther').prop('checked')) { return 'Other'; }
@@ -95,6 +169,7 @@ function relationshipGood(submit) {
 }
 
 function getReceive() {
+  testPrimeSettingsPath();
   if ($('#receiveOne').prop('checked')) { return 'One'; }
   if ($('#receiveBoth').prop('checked')) { return 'Both'; }
   return '';

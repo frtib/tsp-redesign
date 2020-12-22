@@ -19,7 +19,7 @@ Scenario panel (2) for RBCO.
 
 {% include calculator/div-panel-form-field.html  outerDivID="partyRelationship"
   fieldID="panel-2.2" id="relationship"
-  inputType="radio" radioIDs="relationshipSpouse, relationshipDependent, relationshipOther"
+  inputType="radio" radioIDs="relationshipSpouse, relationshipDependant, relationshipOther"
   radioLabels="Current or former spouse, Child or dependent, Other"
   inputClass="usa-unstyled-list"   onBlur="panel2Good(false);"
   prompt="Select the parties' relationship to one another"
