@@ -436,7 +436,7 @@ section.comparison.paycheck {
       }
 
       table {
-        width: 110%;
+        // width: 110%;
       }
 
       td,
@@ -458,7 +458,8 @@ section.comparison.paycheck {
     &.paycheck {
       table {
         .w {
-          width: 32rem;
+          width: auto;
+          max-width: 30rem;
         }
 
         tr.emphasis {

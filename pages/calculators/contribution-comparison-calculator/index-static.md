@@ -4,13 +4,9 @@ title: STATIC CCC
 styles:
 sidenav: calculators
 scripts:
-#  - /assets/js/calculator/javascriptTaxTable.js
-#  - /assets/js/highcharts/highcharts.js
-#  - /assets/js/highcharts/exporting.js
-#  - /assets/js/highcharts/data.js
-#  - /assets/js/responsive-comparison-table.js
-  #- /assets/js/ajaxFetch.js
-  #- /assets/js/side-scroll-funds.js
+#- /assets/js/ajaxFetch.js
+#- /assets/js/side-scroll-funds.js
+  - /assets/js/responsive-comparison-table.js
 permalink: /calculators/contribution-comparison-calculator-static/
 calculator-name: contribution-comparison-calculator
 progress-steps: [Introduction,Retirement profile,Results]
@@ -23,6 +19,73 @@ redirect_from:
 - [STATIC CCC]({{ site.baseurl }}/calculators/contribution-comparison-calculator-static/)
 
 # Contribution comparison calculator
+
+<code>STEP 3: RESULTS</code>
+
+<section id="panel-3" class="calculator-panel contribution-comparison-calculator" style="">
+  <section id="comparison-section" class="calculator-panel comparison contribution-comparison-calculator">
+
+    <h2>TSP Contributions Per Paycheck</h2>
+
+    <ul class="table-header-buttons">
+      <li class="bg-blue active">
+      <button type="button">Traditional</button>
+      </li>
+      <li class="bg-blue">
+      <button type="button">Roth</button>
+      </li>
+    </ul>
+
+    <table>
+    <thead>
+    <tr>
+    <th class="hide w"></th>
+    <th class="bg-blue default" scope="col">Traditional</th>
+    <th class="bg-blue" scope="col">Roth</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <th colspan="3" class="compare-two" scope="colgroup">
+    <div class="flex space-between"><span>Effect on your paycheck</span> <a href="#" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
+    </th>
+    </tr>
+
+    <tr>
+    <th scope="row">Contribution percentage</th>
+    <td class="default"><span id="contribPercent1">19.0%</span></td>
+    <td><span id="contribPercent2">19.0%</span></td>
+    </tr>
+
+    <tr>
+    <th scope="row">Your contribution per check</th>
+    <td class="default"><span id="contribCheck1">$730.77</span></td>
+    <td><span id="contribCheck2">$730.77</span></td>
+    </tr>
+
+    <tr>
+    <th scope="row">Your contributions per year</th>
+    <td class="default"><span id="contribYear1">$19,000.00</span></td>
+    <td><span id="contribYear2">$19,000.00</span></td>
+    </tr>
+
+    <tr>
+    <th scope="row">Your net pay decrease per paycheck</th>
+    <td class="default"><span id="grossPaycheck1">$657.69</span></td>
+    <td><span id="grossPaycheck2">$730.77</span></td>
+    </tr>
+
+    <tr>
+    <th scope="row">Your net pay decrease per year</th>
+    <td class="default"><span id="grossYear1">$17,100.00</span></td>
+    <td><span id="grossYear2">$19,000.00</span></td>
+    </tr>
+
+    </tbody>
+    </table>
+  </section>
+</section>
 
 <code>PANEL 2: RETIREMENT PROFILE</code>
 
@@ -238,71 +301,4 @@ for your income needs and protect your longevity risk.</p>
 </li>
 </span>
 </ul></nav>
-</section>
-
-<code>STEP 3: RESULTS</code>
-
-<section id="panel-3" class="calculator-panel contribution-comparison-calculator" style="">
-  <section id="comparison-section" class="calculator-panel comparison contribution-comparison-calculator">
-
-    <h2>TSP Contributions Per Paycheck</h2>
-
-    <ul class="table-header-buttons">
-      <li class="bg-blue active">
-      <button type="button">Traditional</button>
-      </li>
-      <li class="bg-blue">
-      <button type="button">Roth</button>
-      </li>
-    </ul>
-
-    <table>
-    <thead>
-    <tr>
-    <th class="hide w"></th>
-    <th class="bg-blue default" scope="col">Traditional</th>
-    <th class="bg-blue" scope="col">Roth</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <tr>
-    <th colspan="3" class="compare-two" scope="colgroup">
-    <div class="flex space-between"><span>Effect on your paycheck</span> <a href="#" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
-    </th>
-    </tr>
-
-    <tr>
-    <th scope="row">Contribution percentage</th>
-    <td class="default"><span id="contribPercent1">19.0%</span></td>
-    <td><span id="contribPercent2">19.0%</span></td>
-    </tr>
-
-    <tr>
-    <th scope="row">Your contribution per check</th>
-    <td class="default"><span id="contribCheck1">$730.77</span></td>
-    <td><span id="contribCheck2">$730.77</span></td>
-    </tr>
-
-    <tr>
-    <th scope="row">Your contributions per year</th>
-    <td class="default"><span id="contribYear1">$19,000.00</span></td>
-    <td><span id="contribYear2">$19,000.00</span></td>
-    </tr>
-
-    <tr>
-    <th scope="row">Your net pay decrease per paycheck</th>
-    <td class="default"><span id="grossPaycheck1">$657.69</span></td>
-    <td><span id="grossPaycheck2">$730.77</span></td>
-    </tr>
-
-    <tr>
-    <th scope="row">Your net pay decrease per year</th>
-    <td class="default"><span id="grossYear1">$17,100.00</span></td>
-    <td><span id="grossYear2">$19,000.00</span></td>
-    </tr>
-
-    </tbody>
-    </table>
-  </section>
 </section>

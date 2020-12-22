@@ -4,6 +4,7 @@ title: STATIC Paycheck estimator
 styles:
 sidenav: calculators
 scripts:
+  - /assets/js/responsive-comparison-table.js
 permalink: /calculators/paycheck-estimator/index-static/
 # calculator-name: paycheck-estimator
 progress-steps: [Retirement system,Paycheck information,Contribution election,Results]

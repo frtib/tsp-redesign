@@ -31,7 +31,7 @@ $( "ul.table-header-buttons" ).on( "click", "li", function() {
 });
 
 // Initialize the media query
-  var mediaQuery = window.matchMedia('(min-width: 640px)');
+  var mediaQuery = window.matchMedia('(min-width: 600px)');
 
 
   // Add a listen event for comparing SIX items
