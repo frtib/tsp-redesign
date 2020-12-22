@@ -57,8 +57,10 @@ Results panel (4) for paycheck esitomator.
       </th>
     </tr>
 {% include {{tableRow}} trID="partContrib" title="Total Amount of Your Contribution(s)" rowID="totalContributions" %}
-{% include {{tableRow}} trID="autoContrib" title="Agency Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}
-{% include {{tableRow}} trID="matchContrib" title="Agency Matching Contribution<sup>1</sup>" rowID="agencyMatchingContributions" %}
+{% include {{tableRow}} trID="autoContrib"
+    title="<span id='orgText1'>Agency</span> Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}
+{% include {{tableRow}} trID="matchContrib"
+    title="<span id='orgText2'>Agency</span> Matching Contribution<sup>1</sup>" rowID="agencyMatchingContributions" %}
 {% include {{tableRow}} trClass="emphasis" title="Total Contributions Increase Your TSP Account By" rowID="TSPIncrease" %}
   </tbody>
 </table>
