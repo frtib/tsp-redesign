@@ -12,7 +12,7 @@ function initValues(def) {
 
 function setValues(flag) {
   if (flag == 1) {
-    setValues(1);
+    setValues(4);
     showPanel(1);
   }
   if (flag == 2) {
