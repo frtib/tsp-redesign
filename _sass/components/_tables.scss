@@ -426,7 +426,8 @@ section.comparison.paycheck {
       border: 0;
       background: none;
     }
-    @media (min-width: $medium-screen) {
+    // @media (min-width: $medium-screen) {
+    @media (min-width: 640px) {
       ul {
         &.funds-individual,
         &.funds-lifecycle,
