@@ -56,9 +56,9 @@ Results panel (4) for paycheck esitomator.
     </tr>
 {% include {{tableRow}} trID="partContrib" title="Total amount of your contribution(s)" rowID="totalContributions" %}
 {% include {{tableRow}} trID="autoContrib"
-    title="<span id='orgText1'>Agency</span> Automatic (1%) Contribution<sup>1</sup>" rowID="agencyAutomatic" %}
+    title="<span id='orgText1'>Agency</span> Automatic (1%) Contribution<sup><a href='#footnote'>1</a></sup>" rowID="agencyAutomatic" %}
 {% include {{tableRow}} trID="matchContrib"
-    title="<span id='orgText2'>Agency</span> Matching Contribution<sup>1</sup>" rowID="agencyMatchingContributions" %}
+    title="<span id='orgText2'>Agency</span> Matching Contribution<sup><a href='#footnote'>1</a></sup>" rowID="agencyMatchingContributions" %}
 {% include {{tableRow}} trClass="emphasis" title="Total contributions increase your TSP account by" rowID="TSPIncrease" %}
   </tbody>
 </table>
@@ -117,7 +117,6 @@ Results panel (4) for paycheck esitomator.
 <div id="show-data-footnote" class="usa-width-one-whole"></div>
 {% include calculator/accordion-end.html  inList=true %}
 </ul>
-
 <a name="footnote"></a>
 <ol id="agencyFootnote" class="footnotes">
   <li>All agency contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions.</li>

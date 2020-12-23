@@ -17,7 +17,7 @@ function setValues(flag) {
   }
   if (flag == 2) {
     console.log('selecting options');
-    $('#CSRS').click();
+    $('#USBRS').click();
     $('#age50Yes').click();
     processPanel(1,0,2,0);
   }
