@@ -3,6 +3,8 @@ This is the javascript specific to panel 2.
 {% endcomment %}
 {% assign panelID = include.panelID | default: 2 %}
 {% assign panelName = include.panelName | default: 'panel-' | append: panelID %}
+{% assign payeePanel = 'panel-4' %}
+<!-- payeePanel {{payeePanel}} -->
 <script type="text/javascript">
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
@@ -52,7 +54,7 @@ function getPrimeSettingsPath() {
 }
 // did user change something important
 function anyChangesPath() {
-  console.log('in any changes');
+  console.log('in any changes+');
   if (cachePath["payeePartYes"] != $('#payeePartYes').prop('checked')) { return true; }
   if (cachePath["payeePartNo"] != $('#payeePartNo').prop('checked')) { return true; }
   if (cachePath["receiveOne"] != $('#receiveOne').prop('checked')) { return true; }
