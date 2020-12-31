@@ -64,7 +64,7 @@ The list of forms you can submit online may change at any time, so be sure to ch
 The temporary loan and withdrawal options for TSP participants affected by COVID-19 are now available. These options are authorized by the Coronavirus Aid, Relief, and Economic Security (CARES) Act. This law also provides favorable tax treatment for other types of withdrawals you’re currently eligible for. **Both the loan and withdrawal options are available to you only if you can certify that you meet certain CARES Act criteria and TSP eligibility rules**.
 
 - [Find out more about these temporary loan options]({{ site.baseurl }}/covid-19/loans/)
-- [Find out more about temporary withdrawal options]({{ site.baseurl }}/covid-19/withdrawals/)
+- [Find out more about temporary withdrawal options]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/)
 
 ## Payments you make to the TSP by check may take longer to process
 Because of public health precautions being taken at our processing facilities, payments made by check will most likely take longer to appear in your TSP account. These include payments to make up missed loan payments, submit additional loan payments, or to roll over payments from IRAs or other employer plans. We appreciate your patience.
