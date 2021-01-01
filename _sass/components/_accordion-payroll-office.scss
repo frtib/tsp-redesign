@@ -1,0 +1,65 @@
+$color-agency-green: #a6b685;
+$color-service-blue: #92b5cb;
+
+section.payroll-resources {
+  .usa-accordion {
+    li {
+      .usa-accordion-button {
+        // background-color: #ffffff;
+        color: #222223;
+        font-weight: 700;
+        line-height: 3rem;
+        font-size: 2rem;
+        border: none;
+
+        &[aria-expanded="true"] {
+          background-color: #ffffff;
+
+          &.agency,
+          &.service {
+            &:after {
+              content: '';
+              border-bottom: 5px solid $color-agency-green;
+              margin-top: 1rem;
+              display: block;
+            }
+          }
+          // END .agency
+          &.service {
+            &:after {
+              border-bottom: 5px solid $color-service-blue;
+            }
+          }
+          // END .service
+        }
+      }
+
+      .usa-accordion-content {
+        background-color: #ffffff;
+        border: none;
+        padding-top: 2.2rem;
+
+        h2 {
+          font-family: $sans;
+          font-weight: $light;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+// END section.payroll-resources
+@media screen and (min-width: $large-screen) {
+  section.payroll-resources {
+    .usa-accordion {
+      li {
+        .usa-accordion-button {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $medium-screen) {
+
+}
