@@ -5,7 +5,7 @@ layout: home
 class: homepage
 scripts:
 #  - /assets/js/sessionstorage-modal.js
-expand-site-alert: true
+expand-site-alert: false
 ## alert: show-alert: are for a homepage-only alert. See code in header--extended that will execute if true.
 alert:
   show-alert: false
