@@ -1,7 +1,7 @@
 - form_number: TSP-1
   form_url: tsp-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your agency's personnel or benefits office.
   form_date: 10/2020
   form_pages: 2
   form_audience:
@@ -12,33 +12,33 @@
 - form_number: TSP-U-1
   form_url: tsp-u-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your service's finance office.
   form_date: 10/2020
   form_audience:
   -  Uniformed Services
   form_topics:
   -  Investments
   -  Contributions
-- form_number: TSP-1-C
-  form_url: tsp-1-c.pdf
-  form_name: Catch-Up Contribution Election
-  form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
-  form_date: 1/2020
-  form_audience:
-  -  Civilian
-  form_topics:
-  -  Investments
-  -  Contributions
-- form_number: TSP-U-1-C
-  form_url: tsp-u-1-c.pdf
-  form_name: Catch-Up Contribution Election
-  form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
-  form_date: 1/2018
-  form_audience:
-  -  Uniformed Services
-  form_topics:
-  -  Contributions
-  -  Investments
+# - form_number: TSP-1-C
+#   form_url: tsp-1-c.pdf
+#   form_name: Catch-Up Contribution Election
+#   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
+#   form_date: 1/2020
+#   form_audience:
+#   -  Civilian
+#   form_topics:
+#   -  Investments
+#   -  Contributions
+# - form_number: TSP-U-1-C
+#   form_url: tsp-u-1-c.pdf
+#   form_name: Catch-Up Contribution Election
+#   form_info: Start, stop, or change catch-up contributions to the TSP. Only for participants age 50 or older.
+#   form_date: 1/2018
+#   form_audience:
+#   -  Uniformed Services
+#   form_topics:
+#   -  Contributions
+#   -  Investments
 - form_number: TSP-3
   form_url: tsp-3.pdf
   form_name: Designation of Beneficiary
@@ -178,8 +178,8 @@
 - form_number: TSP-60
   form_url: tsp-60.pdf
   form_name: Request for a Transfer Into the TSP
-  form_info: Request to have an amount transferred or rolled over into the traditional balance of your TSP account from an IRA or other eligible plan. Also use this form to [repay a coronavirus-related distribution to your traditional balance under the CARES Act]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/#repaying-a-coronavirus-related-distribution).
-  form_date: 11/2020
+  form_info: Request to have an amount transferred or rolled over into the TSP from an IRA or other eligible plan.
+  form_date: 10/2012
   form_pages: 4
   form_audience:
   -  Both
@@ -188,8 +188,8 @@
 - form_number: TSP-60-R
   form_url: tsp-60-r.pdf
   form_name: Request for a Roth Transfer Into the TSP
-  form_info: Request a transfer of Roth money from an applicable retirement plan into the Roth balance of your Thrift Savings Plan (TSP) account. Also use this form to [repay a coronavirus-related distribution to your Roth balance under the CARES Act]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/#repaying-a-coronavirus-related-distribution).
-  form_date: 11/2020
+  form_info: Request a transfer of Roth money from an applicable retirement plan into the Roth balance of your Thrift Savings Plan (TSP) account.
+  form_date: 10/2012
   form_pages: 4
   form_audience:
   -  Both

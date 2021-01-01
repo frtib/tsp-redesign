@@ -10,7 +10,7 @@
 - publication_url: tspfs07.pdf
   publication_name: Annual Limit on Elective Deferrals
   publication_info: Explains the annual IRS elective deferral limit. It also explains the effect of contributing to more than one plan if the IRS limit is exceeded.
-  publication_date: 12/2019
+  publication_date: 12/2020
   publication_type:
   - Fact Sheet
   publication_topics:
@@ -90,7 +90,7 @@
 - publication_url: tspfs08.pdf
   publication_name: TSP Benefits that Apply to Military Members Who Return to Federal Civilian Service
   publication_info: Explains the legislation that allows members of the uniformed services to make up contributions when they return to Federal civilian service.
-  publication_date: 10/2020
+  publication_date: 1/2021
   publication_pages: 5 pages
   publication_type:
   - Fact Sheet
@@ -108,9 +108,9 @@
   publication_topics:
   - Investments
 - publication_url: tspfs12.pdf
-  publication_name: Catch-Up Contributions
+  publication_name: Contributions Toward the Catch-Up Limit
   publication_info: Explains catch-up contribution rules for participants who are age 50 or older.
-  publication_date: 9/2019
+  publication_date: 1/2021
   publication_pages: 2 pages
   publication_type:
   - Fact Sheet
@@ -360,7 +360,7 @@
 - publication_url: tsp-536.pdf
   publication_name: "Tax Information: Payments From Your TSP Account"
   publication_info: Provides tax information about the various disbursements civilian, uniformed services, and beneficiary participants can make from the TSP.
-  publication_date: 10/2020
+  publication_date: 1/2021
   publication_pages: 8 pages
   publication_type:
   - Tax Notice
