@@ -1,8 +1,8 @@
 - form_number: TSP-1
   form_url: tsp-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your agency's personnel or benefits office.
-  form_date: 10/2020
+  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_date: 1/2021
   form_pages: 2
   form_audience:
   -  Civilian
@@ -12,8 +12,8 @@
 - form_number: TSP-U-1
   form_url: tsp-u-1.pdf
   form_name: Election Form
-  form_info: Start, stop, or change the amount of your contributions (including contributions toward the catch-up limit if you're turning 50 or older). Return the completed form to your service's finance office.
-  form_date: 10/2020
+  form_info: Start, stop, or change the amount of your contributions to the Thrift Savings Plan (TSP). Return the completed form to your personnel or benefits office.
+  form_date: 1/2021
   form_audience:
   -  Uniformed Services
   form_topics:
@@ -166,20 +166,20 @@
   -  Both
   form_topics:
   -  Loans
-- form_number: TSP-46
-  form_url: tsp-46.pdf
-  form_name: CARES ACT Loan Suspension Request
-  form_info: Request a suspension of your TSP loan payments for the rest of calendar year 2020. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136).
-  form_date: Local Reproduction
-  form_audience:
-  -  Both
-  form_topics:
-  -  Loans
+# - form_number: TSP-46
+#   form_url: tsp-46.pdf
+#   form_name: CARES ACT Loan Suspension Request
+#   form_info: Request a suspension of your TSP loan payments for the rest of calendar year 2020. Only for participants who self-certify that they are affected by COVID-19 as defined in the CARES Act (P.L. 116-136). **Forms we receive after 11:59 PM on November 30 will not be accepted.**
+#   form_date: Local Reproduction
+#   form_audience:
+#   -  Both
+#   form_topics:
+#   -  Loans
 - form_number: TSP-60
   form_url: tsp-60.pdf
   form_name: Request for a Transfer Into the TSP
-  form_info: Request to have an amount transferred or rolled over into the TSP from an IRA or other eligible plan.
-  form_date: 10/2012
+  form_info: Request to have an amount transferred or rolled over into the traditional balance of your TSP account from an IRA or other eligible plan. Also use this form to [repay a coronavirus-related distribution to your traditional balance under the CARES Act]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/#repaying-a-coronavirus-related-distribution).
+  form_date: 11/2020
   form_pages: 4
   form_audience:
   -  Both
@@ -188,8 +188,8 @@
 - form_number: TSP-60-R
   form_url: tsp-60-r.pdf
   form_name: Request for a Roth Transfer Into the TSP
-  form_info: Request a transfer of Roth money from an applicable retirement plan into the Roth balance of your Thrift Savings Plan (TSP) account.
-  form_date: 10/2012
+  form_info: Request a transfer of Roth money from an applicable retirement plan into the Roth balance of your Thrift Savings Plan (TSP) account. Also use this form to [repay a coronavirus-related distribution to your Roth balance under the CARES Act]({{ site.baseurl }}/covid-19/withdrawals-and-repayments/#repaying-a-coronavirus-related-distribution).
+  form_date: 11/2020
   form_pages: 4
   form_audience:
   -  Both
@@ -199,7 +199,7 @@
   form_url: tsp-65.pdf
   form_name: Request to Combine Civilian and Uniformed Services TSP Accounts
   form_info: Combine your civilian and uniformed services TSP accounts (if you have both) after separating from either Federal civilian employment or from the uniformed services.
-  form_date: 4/2012
+  form_date: 12/2020
   form_pages: 2
   form_audience:
   -  Both
@@ -265,16 +265,16 @@
   -  Both
   form_topics:
   -  Withdrawals
-- form_number: TSP-96
-  form_url: "{{ site.withdrawals }}&_form=tsp96"
-  form_name: CARES Act Withdrawal Request
-  form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
-  form_date: Local reproduction
-  form_pages: 0
-  form_audience:
-  -  Both
-  form_topics:
-  -  Withdrawals
+# - form_number: TSP-96
+#   form_url: "{{ site.withdrawals }}&_form=tsp96"
+#   form_name: CARES Act Withdrawal Request
+#   form_info: Apply online for a withdrawal of up to $100,000. **Only for participants affected by COVID-19** as defined in the CARES Act (P.L. 116-136).
+#   form_date: Local reproduction
+#   form_pages: 0
+#   form_audience:
+#   -  Both
+#   form_topics:
+#   -  Withdrawals
 - form_number: TSP-99
   form_url: "{{ site.withdrawals }}&_form=tsp99"
   form_name: Withdrawal Request for Separated and Beneficiary Participants

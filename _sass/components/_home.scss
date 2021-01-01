@@ -116,6 +116,7 @@ section {
     }
   }
 }
+
 // SECTION: OUR FUNDS
 
 #home-our-funds {
@@ -131,36 +132,44 @@ section {
   }
 
   .usa-grid {
-    padding-top: 4rem;
+    // padding-top: 4rem;
+    padding: 1.5rem;
   }
 
-  .usa-tabs {
+  .usa-tabs li {
     // _accoridion-usa-tabs overrides
-
-    li {
-      margin-right: 0;
-    }
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    vertical-align: top;
 
     .usa-accordion-button {
       width: 100%;
       display: block;
       text-align: center;
-      font-size: 2rem;
-      background-color: #ffffff;
-      color: $color-primary-darker;
-      margin-bottom: 1rem;
-      padding: 1.5rem 2rem;
+      font-size: 2.3rem;
+      background-color: transparent;
+      margin-bottom: 0;
+      background-image: none;
+      padding: 0;
+
+      div {
+        padding: 1.5rem 2rem;
+        background-color: #ffffff;
+        color: $color-primary-darker;
+        margin: 0;
+      }
 
       &[aria-expanded="true"] {
-        background-color: $color-primary-darker;
-        color: $color-white;
-        line-height: 1;
+        div {
+          background-color: $color-primary-darker;
+          color: $color-white;
+        }
 
         &:after {
           content: '';
           position: relative;
-          left: -7.5rem;
-          top: 5.7rem;
+          left: 0;
+          top: 1.5rem;
           width: 0;
           height: 0;
           border-left: 20px solid transparent;
@@ -170,6 +179,7 @@ section {
           border-top-style: solid;
           border-top-color: #323a45;
           clear: both;
+          margin: 0;
         }
       }
     }
@@ -184,52 +194,38 @@ section {
         padding: 3rem 0;
       }
     }
-  }
-}
-@media only screen and (min-width: $large-screen) {
-  #home-our-funds {
-    background-color: #f1f1f1;
 
-    h2 {
-      background-color: #fff;
-      color: #323a45;
-      padding: 4rem 0;
-      margin: 0;
-      font-size: 4rem;
-      text-align: center;
-    }
+    // LEVEL 2: L FUNDS
+    .lifecycle-funds > li {
+      display: block;
+      border-bottom: 1px solid #afafaf;
 
-    .usa-grid {
-      padding-top: 4rem;
-    }
-
-    .usa-tabs {
-      // _accoridion-usa-tabs overrides
-
-      li {
-        margin-right: 0;
+      &:last-child {
+        border-bottom: none;
       }
 
       .usa-accordion-button {
-        width: 49%;
-        display: inline-block;
-        border: none;
         text-align: center;
-        font-size: 2rem;
-        background-color: #ffffff;
-        color: $color-primary-darker;
-        margin-bottom: 1rem;
+
+        div {
+          padding: 1.5rem 0;
+          background-color: transparent;
+          color: $color-primary;
+        }
+
+        span.fund-name {
+            display: block;
+            color: $color-base;
+            font-weight: $bold;
+          }
 
         &[aria-expanded="true"] {
-          background-color: $color-primary-darker;
-          color: $color-white;
-          line-height: 1;
-
           &:after {
             content: '';
+            text-align: center;
             position: relative;
-            // left: -45px;
-            // top: 57px;
+            left: 0;
+            top: 1.6rem;
             width: 0;
             height: 0;
             border-left: 20px solid transparent;
@@ -237,47 +233,87 @@ section {
             border-bottom: none;
             border-top-width: 20px;
             border-top-style: solid;
-            border-top-color: #323a45;
+            border-top-color: $color-primary;
             clear: both;
+            margin: 0;
+          }
+        }
+      } // END .usa-accordion-button
+      .usa-accordion-content {
+
+        padding: 1rem;
+        p {
+          font-size: 2.3rem;
+          padding: 0;
+          &:nth-child(2) {
+            line-height: 2.2;
           }
         }
       }
-      // LEVEL 2: L FUNDS
-      .lifecycle-funds {
-        li {
-          display: block;
-          border-bottom: 1px solid #afafaf;
+    }
+    // end .lifecycle-funds
+  }
+  // END .usa-tabs
+}
+@media only screen and (min-width: $large-screen) {
+  #home-our-funds {
+    .usa-grid {
+      padding-top: 4rem;
+    }
 
-          &:last-child {
-            border-bottom: none;
-          }
-        }
+    .usa-tabs > li {
+      // _accoridion-usa-tabs overrides
+        margin-right: 0;
+        margin-bottom: 1rem;
 
         .usa-accordion-button {
-          position: relative;
-          text-align: left;
-          width: 100%;
-          background-color: transparent;
-          font-size: 3rem;
-          padding-left: 0;
-          line-height: 7rem;
-
-          .secondary {
-            color: #046b99;
-          }
+          display: inline-block;
+          width: 49%;
+          border: none;
+          margin-bottom: 1rem;
 
           &[aria-expanded="true"] {
-            background-color: inherit;
-            color: inherit;
-            line-height: 7rem;
+            &:after {
+              content: '';
+              position: relative;
+            }
+          }
+        }
+
+      // LEVEL 2: L FUNDS
+      .lifecycle-funds > li {
+        .usa-accordion-button {
+          text-align: left;
+          width: 100%;
+          font-size: 3rem;
+          line-height: 7rem;
+
+          &[aria-expanded="true"] {
+            &:after {
+              content: none;
+            }
           }
 
-          &[aria-expanded="true"]::after {
-            content: none;
+          span.fund-name {
+            display: inline-flex;
+            line-height: 1.2;
+            &:after {
+              content: '';
+              border-left: 3px solid $color-base;
+              margin-left: 1rem;
+              margin: 0 .2rem 0 1rem;
+
+            }
+          }
+        }
+        .usa-accordion-content {
+          padding: 4.5rem 2rem 1.5rem 2rem;
+          p {
+            font-size: 3rem;
+            padding: 0;
           }
         }
       }
-      // end .lifecycle-funds
     }
     // end .usa-tabs
   }

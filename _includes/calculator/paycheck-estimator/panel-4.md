@@ -9,7 +9,7 @@ Results panel (4) for paycheck esitomator.
 <section id="panel-{{ panelID }}" class="calculator-panel paycheck" style="{{ hide }}" markdown="1">
 <section id="comparison-section" class="calculator-panel comparison paycheck" markdown="1">
 
-<h2>TSP contributions per paycheck</h2>
+<h2>TSP Contributions Per Paycheck</h2>
 
 <ul class="table-header-buttons">
   <li class="bg-blue active">
@@ -39,13 +39,15 @@ Results panel (4) for paycheck esitomator.
       </th>
     </tr>
 {% include {{tableRow}} title="Gross pay per paycheck" rowID="grosspay" %}
-{% include {{tableRow}} title="Your traditional (pre-tax) contribution" rowID="trad" %}
-{% include {{tableRow}} title="Your Roth (after-tax) contribution" rowID="roth" %}
-{% include {{tableRow}} title="Federal income taxes" rowID="federalTaxes" %}
-{% include {{tableRow}} title="Additional federal tax withholding" rowID="addlFedTax" %}
-{% include {{tableRow}} title="Other taxes and payroll deductions" rowID="otherTaxDeductions" %}
-{% include {{tableRow}} title="Total amount deducted from your pay" rowID="totalDeduct" %}
-{% include {{tableRow}} trClass="emphasis" title="Net paycheck" rowID="netPay" %}
+{% include {{tableRow}} title="Your Traditional (Pre-Tax) Contribution" rowID="trad" %}
+{% include {{tableRow}} title="Your Roth (After-Tax) Contribution" rowID="roth" %}
+{% include {{tableRow}} title="Your Traditional Catch-Up Contribution" rowID="tradCatchup" %}
+{% include {{tableRow}} title="Your Roth Catch-Up Contribution" rowID="rothCatchup" %}
+{% include {{tableRow}} title="Federal Income Taxes" rowID="federalTaxes" %}
+{% include {{tableRow}} title="Additional Federal Tax Withholding" rowID="addlFedTax" %}
+{% include {{tableRow}} title="Other Taxes and Payroll Deductions" rowID="otherTaxDeductions" %}
+{% include {{tableRow}} title="Total Amount Deducted From Your Pay" rowID="totalDeduct" %}
+{% include {{tableRow}} trClass="emphasis" title="Net Paycheck" rowID="netPay" %}
     <tr>
       <th colspan="3" class="compare-two" scope="colgroup">
         <div class="flex space-between">
@@ -68,7 +70,7 @@ Results panel (4) for paycheck esitomator.
 <ul class="usa-accordion icons">
 <!-- PROJECTED GROWTH -->
 {% include calculator/accordion-start.html expanded=true divID='projected-growth'
-    icon='far fa-chart-line' title='Projected growth of your account' inList=true %}
+    icon='far fa-chart-line' title='Projected Growth of Your Account' inList=true %}
   <div id="resultSelectorDiv"><p>The results below show how much your account will grow over time based on an expected annual rate of return of <span id="annual-rate">--</span>.</p>
 <fieldset class="usa-fieldset-inputs projected-growth">
 <legend class="">Show growth as:</legend>
@@ -119,7 +121,7 @@ Results panel (4) for paycheck esitomator.
 </ul>
 <a name="footnote"></a>
 <ol id="agencyFootnote" class="footnotes">
-  <li>All agency contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions.</li>
+  <li>All agency contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions. There are no <span data-term="Agency Matching Contributions" class="js-glossary-toggle term term-end">Agency Matching Contributions</span> of <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>.</li>
 </ol>
 <ol id="serviceFootnote" class="footnotes">
   <li>All service contributions are deposited into the traditional balance of your TSP account regardless of whether you have chosen to make traditional or Roth employee contributions. There are no <span data-term="Service Matching Contributions" class="js-glossary-toggle term term-end">Service Matching Contributions</span> of <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>. Most members are not eligible for matching contributions until they have served two years. All service contributions stop after a member has served 26 years. Check with your service regarding eligibility for service contributions.</li>

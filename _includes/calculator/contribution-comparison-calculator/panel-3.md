@@ -35,11 +35,11 @@ Results panel (3) for Contribution Comparison Calculator.
         <div class="flex space-between"><span>Effect on your paycheck</span> <a href="#profile" onClick="showPanel(2);">Adjust <i class="fal fa-sliders-v"></i></a></div>
       </th>
     </tr>
+{% include {{tableRow}} title="Gross pay per paycheck" rowID="grossPaycheck" %}
+{% include {{tableRow}} title="Gross pay per year" rowID="grossYear" %}
 {% include {{tableRow}} title="Contribution percentage" rowID="contribPercent" %}
 {% include {{tableRow}} title="Your contribution per check" rowID="contribCheck" %}
 {% include {{tableRow}} title="Your contributions per year" rowID="contribYear" %}
-{% include {{tableRow}} title="Your net pay decrease per paycheck" rowID="grossPaycheck" %}
-{% include {{tableRow}} title="Your net pay decrease per year" rowID="grossYear" %}
   </tbody>
 </table>
 

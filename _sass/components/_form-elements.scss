@@ -1,13 +1,9 @@
-// LEGEND
-// legend {
-//   &.radio {
-//     font-size: 1.7rem;
-//     font-weight: $normal;
-//     line-height: 3;
-//     margin-top: 3rem;
-//     // Give legend appearance of label
+// section.search-results {
+//   &.inline {
+//     padding: 0 28rem 0 0;
 //   }
 // }
+
 
 // SEARCH FORM ELEMENTS
 section.inline-search {
@@ -132,7 +128,6 @@ input {
 }
 
 div.usa-input-error {
-  margin-top: 0;
   input {
     border: 3px solid $color-error;
     // &:focus {
