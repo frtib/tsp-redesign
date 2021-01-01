@@ -428,7 +428,8 @@ section.comparison.paycheck {
       border: 0;
       background: none;
     }
-    @media (min-width: $medium-screen) {
+    // @media (min-width: $medium-screen) {
+    @media (min-width: 640px) {
       ul {
         &.funds-individual,
         &.funds-lifecycle,
@@ -438,7 +439,7 @@ section.comparison.paycheck {
       }
 
       table {
-        width: 110%;
+        // width: 110%;
       }
 
       td,
@@ -460,7 +461,8 @@ section.comparison.paycheck {
     &.paycheck {
       table {
         .w {
-          width: 32rem;
+          width: auto;
+          max-width: 30rem;
         }
 
         tr.emphasis {

@@ -112,6 +112,16 @@ function cccContributionsGood(submit) {
   $('#cccContributions-panel3').html(cccContributions + '%');
   return clearError('cccContributions');
 }
+function setLimitText() {
+  var limit = CurrencyFormatted(IRC_contribution_limit, 'no_cent');
+  if (getAge50() == 'age50Yes') {
+    limit += " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'no_cent');
+  }
+  $('#irc-contribution-limit').html(limit);
+  $('#irc-limit-year').html(IRC_limit_year);
+  // $('#age50year').html(IRC_limit_year);
+  return false;
+}
 // check salary, contribution %, then check combination.  i.e. bad input means dont check combination
 function checkContributionAmount(submit) {
   $('#current-annual').html("--");

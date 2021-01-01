@@ -22,14 +22,26 @@ var acting_year = constrainYear(determineActingYear());
 // console.log('acting year is ' + acting_year);
 
 // assume most recent tax table
-// IRS Pub. 15-T, Page 6, LEFT, Single.  2020 Percentage Method Tables for Automated Payroll Systems
-var taxtableS = [ [3800.00, 0.00, 0.0], [13675.00, 0.10, 0.0], [43925.00, 0.12, 987.5],
-                [89325.00, 0.22, 4617.5], [167100.00, 0.24, 14605.5], [211150.00, 0.32, 33271.5],
-                [522200.00, 0.35, 47367.5], [-1, 0.37, 156235.0] ];
-// IRS Pub. 15-T, Page 6, LEFT, Married.  2020 Percentage Method Tables for Automated Payroll Systems
-var taxtableM = [ [11900.00, 0.00, 0.0], [31650.00, 0.10, 0.0], [92150.00, 0.12, 1975.0],
-                [182950.00, 0.22, 9235.0], [338500.00, 0.24, 29211.0], [426600.00, 0.32, 66543.0],
-                [633950.0, 0.35, 94735.0], [-1, 0.37, 167307.50] ];
+// IRS Pub. 15-T, Page 6, LEFT, Single.  2021 Percentage Method Tables for Automated Payroll Systems
+var taxtableS = [ [3950.00, 0.00, 0.0], [13900.00, 0.10, 0.0], [44475.00, 0.12, 995.00],
+                [90325.00, 0.22, 4664.00], [168875.00, 0.24, 14751.00], [213375.00, 0.32, 33603.00],
+                [527550.00, 0.35, 47843.00], [-1, 0.37, 157804.25] ];
+// IRS Pub. 15-T, Page 6, LEFT, Married.  2021 Percentage Method Tables for Automated Payroll Systems
+var taxtableM = [ [12200.00, 0.00, 0.0], [32100.00, 0.10, 0.0], [93250.00, 0.12, 1990.0],
+                [184950.00, 0.22, 9328.0], [342050.00, 0.24, 29502.0], [431050.00, 0.32, 67206.0],
+                [640500.0, 0.35, 95686.0], [-1, 0.37, 168993.5] ];
+
+if (acting_year == 2020) {
+  // 2020 tax values
+  // IRS Pub. 15-T, Page 6, LEFT, Single.  2020 Percentage Method Tables for Automated Payroll Systems
+  taxtableS = [ [3800.00, 0.00, 0.0], [13500.00, 0.10, 0.0], [43275.00, 0.12, 970.0],
+                [88000.00, 0.22, 4543.0], [164525.00, 0.24, 14382.5], [207900.00, 0.32, 32748.5],
+                [514100.00, 0.35, 46628.5], [-1, 0.37, 153798.5] ];
+  // IRS Pub. 15-T, Page 6, LEFT, Married.  2020 Percentage Method Tables for Automated Payroll Systems
+  taxtableM = [ [11800.00, 0.00, 0.0], [31200.00, 0.10, 0.0], [90750.00, 0.12, 1940.0],
+                [180200.00, 0.22, 9086.0], [333250.00, 0.24, 28765.0], [420000.00, 0.32, 65497.0],
+                [624150.0, 0.35, 93257.0], [-1, 0.37, 164709.50] ];
+}
 
 if (acting_year == 2019) {
   // 2019 tax values

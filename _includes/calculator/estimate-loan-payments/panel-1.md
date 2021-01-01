@@ -16,12 +16,7 @@ The Loan Calculator estimates loan payments based on the amount you want to borr
   inputClass="usa-unstyled-list"
   onBlur="employmentCategoryGood(true);"
   prompt="Select your employment category:"
-  explanation="
-
-  People often use this calculator to figure out a new dollar amount they should contribute to reach the IRS limit without going over. But when you change how much you’re contributing, it can take 1-2 pay periods for your agency or service to process the new amount. During that time, the TSP will still receive the amount you’re contributing now.
-
-  Enter an estimate of how much you’ll contribute before any changes take effect. If you are uncertain, check with your personnel or finance office.
-  "
+  explanation=""
 %}
 
 {% include calculator/div-panel-form-field.html
@@ -107,23 +102,6 @@ You may have **only one general purpose loan and one residential loan** outstand
 </ul>
 </fieldset>
 </div>
-<!-- Explain this -->
-<ul class="usa-accordion explain-this">
-<li>
-<button class="usa-accordion-button"
-aria-expanded="false"
-aria-controls="panel-1.4">
-Explain this
-</button>
-<div id="panel-1.4" class="usa-accordion-content" markdown="1">
-
-People often use this calculator to figure out a new dollar amount they should contribute to reach the IRS limit without going over. But when you change how much you’re contributing, it can take 1-2 pay periods for your agency or service to process the new amount. During that time, the TSP will still receive the amount you’re contributing now.
-
-Enter an estimate of how much you’ll contribute before any changes take effect. If you are uncertain, check with your personnel or finance office.
-
-</div>
-</li>
-</ul>
 </div>
 {% capture pay_schedule_explanation %}
 This will depend on how often you are paid (biweekly or monthly, for example). If you are uncertain, check with your personnel or finance office.

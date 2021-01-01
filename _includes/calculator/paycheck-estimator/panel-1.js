@@ -11,6 +11,7 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
+  // $('#age50year').html(IRC_limit_year);
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
@@ -29,17 +30,12 @@ function getRetirementSystem() {
 }
 
 function rsShowHide(rs) {
-
   if ((rs == 'FERS') || (rs == 'CSRS')) {
     hidePaySchedule(false);
-    $('#agencyFootnote').removeClass('hide');
-    $('#serviceFootnote').addClass('hide');
   } else {
     hidePaySchedule(true);
-    $('#agencyFootnote').addClass('hide');
-    $('#serviceFootnote').removeClass('hide');
   }
-  if ((rs == 'FERS') || (rs == 'URBRS')) {
+  if ((rs == 'FERS') || (rs == 'USBRS')) {
     $('#partContrib').removeClass('hide');
     $('#autoContrib').removeClass('hide');
     $('#matchContrib').removeClass('hide');
@@ -48,6 +44,16 @@ function rsShowHide(rs) {
     $('#autoContrib').addClass('hide');
     $('#matchContrib').addClass('hide');
   }
+  if (rs == 'FERS') {
+    $('#agencyFootnote').removeClass('hide');
+    $('#orgText1').html('Agency');
+    $('#orgText2').html('Agency');
+  } else { $('#agencyFootnote').addClass('hide'); }
+  if (rs == 'USBRS') {
+    $('#serviceFootnote').removeClass('hide');
+    $('#orgText1').html('Service');
+    $('#orgText2').html('Service');
+  } else { $('#serviceFootnote').addClass('hide'); }
   return;
 }
 
