@@ -89,7 +89,7 @@ At any time beginning in the year you turn 50, you have the opportunity to **mak
   What to know
   </div>
   <div class="usa-width-two-thirds" markdown="1">
-  Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving.
+  Eligible participants no longer need to make two separate elections each year to contribute toward the [catch-up limit]({{ site.baseurl }}/making-contributions/contribution-types/#contributions-toward-the-catch-up-limit). Instead, your contributions will automatically count toward the IRS catch-up limit if you meet the elective deferral or annual addition limit and keep saving.
 
   If you’re eligible for an agency or service match, contributions spilling over toward the catch-up limit will qualify for the match on up to 5% of your salary. Your election will carry over each year unless you submit a new one.
 

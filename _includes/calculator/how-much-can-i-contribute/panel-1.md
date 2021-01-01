@@ -38,7 +38,7 @@ Participants turning age 50 or older are eligible for catch-up contributions. We
 
 {% capture myNote %}
 This calculator is especially important for FERS employees and members of the
-uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/forms/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
+uniformed services covered by the Blended Retirement System (BRS). Read the fact sheet [_Annual Limit on Elective Deferrals_]({{ site.baseurl }}/publications/tspfs07.pdf) to find out what happens if you exceed the elective deferral limit.<br /><br />
 The dollar amount determined by using this calculator distributes your employee/member contributions over the entire year (or remainder of the year), and thus allows you to receive the maximum Agency or Service Matching Contributions.
 
 {% endcapture %}
