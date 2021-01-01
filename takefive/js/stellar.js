@@ -1,8 +1,10 @@
+// JavaScript Document
+
 /*!
  * Stellar.js v0.6.2
  * http://markdalgleish.com/projects/stellar.js
- *
- * Copyright 2014, Mark Dalgleish
+ * 
+ * Copyright 2013, Mark Dalgleish
  * This content is released under the MIT license
  * http://markdalgleish.mit-license.org
  */
@@ -20,7 +22,7 @@
 			responsive: false,
 			parallaxBackgrounds: true,
 			parallaxElements: true,
-			hideDistantElements: true,
+			hideDistantElements: false,
 			hideElement: function($elem) { $elem.hide(); },
 			showElement: function($elem) { $elem.show(); }
 		},

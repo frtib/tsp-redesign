@@ -15,11 +15,8 @@ Retirement System panel (1) for Paycheck Estimator.
 {% assign radioLabelList = FERS | append: CSRS | append: USBRS | append: US %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-1.1" id="rs"
-  inputType="radio" radioIDs="FERS, CSRS, USBRS, US"
-  radioLabels=radioLabelList
-  inputClass="usa-unstyled-list"
-  onBlur="rsGood(true);"
-  prompt="Retirement system"
+  inputType="radio" radioIDs="FERS, CSRS, USBRS, US"  radioLabels=radioLabelList
+  inputClass="usa-unstyled-list"  onBlur="rsGood(true);"  prompt="Retirement system"
   explanation=""
 %}
 {% capture explanation_1_2 %}

@@ -8,11 +8,7 @@ scripts:
   - /assets/js/highcharts/exporting.js
   - /assets/js/highcharts/export-data.js
   - /assets/js/highcharts/data.js
-  - /assets/js/calculator/calculator.js
   - /assets/js/calculator/lifecycle.js
-  - /assets/js/fund-details.js
-document-ready:
-  - initFundTab();
 ---
 {% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}
 {% if sidenav %}
@@ -102,8 +98,9 @@ document-ready:
 <section id="fund-tabs">
 <ul class="usa-accordion usa-tabs">
     <li>
-        <button id='summary' onClick="fundTabClicked(this, '{{site.title}}');"
-             class="usa-accordion-button" aria-expanded="true" aria-controls="a1">Summary</button>
+        <button class="usa-accordion-button" aria-expanded="true" aria-controls="a1">
+          Summary
+    </button>
         <div id="a1" class="usa-accordion-content">
           <div class="usa-grid-full">
             <div class="usa-width-one-half fund-summary-details">
@@ -156,8 +153,9 @@ document-ready:
         </div>
     </li>
     <li>
-        <button id="performance"  onClick="fundTabClicked(this, '{{site.title}}');"
-            class="usa-accordion-button" aria-expanded="false" aria-controls="a2">Performance &amp; risks</button>
+        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a2">
+      Performance &amp; risks
+    </button>
         <div id="a2" class="usa-accordion-content">
           <div class="usa-grid-full">
             <div class="usa-width-one-whole">
@@ -169,15 +167,17 @@ document-ready:
         </div>
     </li>
     <li>
-        <button id="composition" onClick="fundTabClicked(this, '{{site.title}}');"
-            class="usa-accordion-button" aria-expanded="false" aria-controls="a3">Composition</button>
+        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a3">
+      Composition
+    </button>
         <div id="a3" class="usa-accordion-content">
 {% include components/fund-composition.html %}
         </div>
     </li>
     <li>
-        <button id="fees"  onClick="fundTabClicked(this, '{{site.title}}');"
-             class="usa-accordion-button" aria-expanded="false" aria-controls="a4">Fees &amp; more info</button>
+        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a4">
+      Fees &amp; more info
+    </button>
         <div id="a4" class="usa-accordion-content">
           <div class="usa-grid-full">
             <div class="usa-width-one-half">

@@ -6,7 +6,6 @@
 <head>
   {% include meta.html %}
   {% comment %}{% include styles.html %}{% endcomment %}
-  {% include components/seo.html %}
   {% include components/styles.html %}
   {% include components/iconfonts.html %}
   {% if site.google_analytics_ua or site.dap_agency %}
@@ -33,7 +32,6 @@
 </head>
 
 <body class="{{ layout.class }} {{ page.class }}">
-  <input type="hidden" id="pageTitle" value="{{page.title}}">
   <!-- Google Tag Manager (noscript) -->
   <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLDLTMR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
   <!-- End Google Tag Manager (noscript) -->

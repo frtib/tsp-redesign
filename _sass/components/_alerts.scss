@@ -26,7 +26,7 @@
 
     > :first-child {
       margin-top: 0;
-      min-height: 5.5rem;
+      min-height: 6rem;
     }
   }
 
@@ -60,7 +60,6 @@
 .usa-alert-info {
   background-image: url($baseurl + '/assets/img/icons/info.svg');
   border-top-color: #323A45;
-  background-position-y: 1.5rem;
 
   &.cc {
     background-image: none;

@@ -148,8 +148,8 @@ news-and-resources:
         href: /news-and-resources/plan-news/
       - text: Newsletters
         href: /news-and-resources/newsletters/
-      # - text: Government shutdown
-      #   href: /news-and-resources/government-shutdown/
+      - text: Government shutdown
+        href: /news-and-resources/government-shutdown/
   - text: FAQs
     href: /faq/
   - text: Videos and resources

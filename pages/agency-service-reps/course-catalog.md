@@ -30,16 +30,16 @@ published: true
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
-<!-- TSP Investment Funds -->
+<!-- TSP Investments and Funds -->
 <div class="grid-container">
-  <div class="course">TSP Investment Funds</div>
+  <div class="course">TSP Investments and Funds</div>
   <div class="description">This webinar provides an overview of the TSP investment funds. The agenda for this webinar includes; Investing to Meet Retirement Goals, the TSP Core Funds, the TSP Lifecycle Funds, and other TSP fund considerations.</div>
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
 <!-- TSP Loans -->
 <div class="grid-container">
-  <div class="course">TSP Loans</div>
+  <div class="course">TSP Loans </div>
   <div class="description">This webinar provides an overview of the TSP loan program. The agenda includes the types of TSP loans; general purpose and residential, loan amounts, costs of a TSP loan and other TSP loan considerations.</div>
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
@@ -65,38 +65,31 @@ published: true
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
-<!-- TSP to Retirement and Beyond Part I -->
+<!-- TSP to Retirement and Beyond (Part 1 and Part 2) -->
 <div class="grid-container">
-  <div class="course">TSP to Retirement and Beyond Part I</div>
-  <div class="description">This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives. Part I includes a discussion on estimating future income needs, assessing the impact of long-term risks, deciding when to retire, and prioritizing retirement savings goals.</div>
-  <div class="duration">75 minutes each</div>
-  <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
-</div>
-<!-- TSP to Retirement and Beyond Part II -->
-<div class="grid-container">
-  <div class="course">TSP to Retirement and Beyond Part II</div>
-  <div class="description">Part II consists of a discussion of the risks faced by new retirees. We will discuss the concept of a systematic strategy and how it is applied throughout retirement and cover scenarios that illustrate issues participants face during the drawdown process. These presentations may be requested together or individually.</div>
+  <div class="course">TSP to Retirement and Beyond (Part 1 and Part 2)</div>
+  <div class="description">This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives. Part 1 includes a discussion on estimating future income needs, assessing the impact of long-term risks, deciding when to retire, and prioritizing retirement savings goals. Part 2 consists of a discussion of the risks faced by new retirees. We will discuss the concept of a systematic strategy and how it is applied throughout retirement and cover scenarios that illustrate issues participants face during the drawdown process. These presentations may be requested together or individually.</div>
   <div class="duration">75 minutes each</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
 <!-- TSP COURSES -->
-<!-- TSP Early to Mid-Career Training -->
+<!-- EMC Training -->
 <div class="grid-container">
-  <div class="course">TSP Early to Mid-Career Training</div>
+  <div class="course">EMC Training</div>
   <div class="description">This course focuses on what your early and mid-career employees and service members can do to take full advantage of the TSP. Participants will learn how TSP contributions work, the difference between traditional and Roth contributions, and how to manage their accounts throughout their careers.</div>
   <div class="duration">2.5 hours</div>
   <div class="format"><span data-term="tsp course" class="js-glossary-toggle term term-end course">tsp course</span></div>
 </div>
-<!-- TSP Pre-Separation Training -->
+<!-- Pre-Separation Training -->
 <div class="grid-container">
-  <div class="course">TSP Pre-Separation Training</div>
+  <div class="course">Pre-Separation Training</div>
   <div class="description">This course is designed to give late-career employees and service members the tools they need to make smart decisions with their TSP savings as they prepare to retire. The agenda includes the TSP withdrawal options and death benefits, and provides several retirement scenarios to get attendees thinking about how to best turn their savings into income.</div>
   <div class="duration">2.5 hours</div>
   <div class="format"><span data-term="tsp course" class="js-glossary-toggle term term-end course">tsp course</span></div>
 </div>
-<!-- TSP A to Z -->
+<!-- A-Z Training -->
 <div class="grid-container">
-  <div class="course">TSP A to Z</div>
+  <div class="course">A-Z Training</div>
   <div class="description">This course covers every aspect of TSP participation, and would be beneficial for a mixed group covering every stage of professional life. Topics include the benefits of savings, traditional vs. Roth contributions, investments, loans, and post-separation withdrawals.</div>
   <div class="duration">4 hours</div>
   <div class="format"><span data-term="tsp course" class="js-glossary-toggle term term-end course">tsp course</span></div>

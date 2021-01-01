@@ -1,6 +1,7 @@
 ---
 title: High call volume on the ThriftLine
 permalink: /plan-news/high-call-volume/
+latest: y
 ---
 
 **{{ page.title }}** &#8212; We are currently experiencing high call volume and longer-than-normal wait times for speaking to a TSP representative on the <span data-term="ThriftLine" class="js-glossary-toggle term term-end">ThriftLine</span>.
