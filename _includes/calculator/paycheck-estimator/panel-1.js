@@ -7,10 +7,11 @@ This is the javascript specific to panel 1.
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
 panelGood[{{ panelID }}] = function(forceValue) {
-  return rsGood(true);
+  return rsGood(forceValue) & age50Good(forceValue);
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
+  // $('#age50year').html(IRC_limit_year);
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
@@ -27,19 +28,13 @@ function getRetirementSystem() {
   if ($('#BP').prop('checked')) { return 'BP'; }
   return '';
 }
-
 function rsShowHide(rs) {
-
   if ((rs == 'FERS') || (rs == 'CSRS')) {
     hidePaySchedule(false);
-    $('#agencyFootnote').removeClass('hide');
-    $('#serviceFootnote').addClass('hide');
   } else {
     hidePaySchedule(true);
-    $('#agencyFootnote').addClass('hide');
-    $('#serviceFootnote').removeClass('hide');
   }
-  if ((rs == 'FERS') || (rs == 'URBRS')) {
+  if ((rs == 'FERS') || (rs == 'USBRS')) {
     $('#partContrib').removeClass('hide');
     $('#autoContrib').removeClass('hide');
     $('#matchContrib').removeClass('hide');
@@ -48,11 +43,52 @@ function rsShowHide(rs) {
     $('#autoContrib').addClass('hide');
     $('#matchContrib').addClass('hide');
   }
+  if (rs == 'FERS') {
+    $('#agencyFootnote').removeClass('hide');
+    $('#orgText1').html('Agency');
+    $('#orgText2').html('Agency');
+  } else { $('#agencyFootnote').addClass('hide'); }
+  if (rs == 'USBRS') {
+    $('#serviceFootnote').removeClass('hide');
+    $('#orgText1').html('Service');
+    $('#orgText2').html('Service');
+  } else { $('#serviceFootnote').addClass('hide'); }
+  return;
+}
+
+function setPanel3text(rs) {
+  if (rs == 'FERS') {
+    $('#FERS-intro').removeClass('hide');
+    $('#USBRS-intro').addClass('hide');
+    $('#USV-intro').addClass('hide');
+    $('#USV-note').addClass('hide');
+    return;
+  }
+  // if (rs == 'CSRS') { return; }
+  if (rs == 'USBRS') {
+    $('#FERS-intro').addClass('hide');
+    $('#USBRS-intro').removeClass('hide');
+    $('#USV-intro').removeClass('hide');
+    $('#USV-note').removeClass('hide');
+    return;
+  }
+  if (rs == 'US') {
+    $('#FERS-intro').addClass('hide');
+    $('#USBRS-intro').addClass('hide');
+    $('#USV-intro').removeClass('hide');
+    $('#USV-note').removeClass('hide');
+    return;
+  }
+  $('#FERS-intro').addClass('hide');
+  $('#USBRS-intro').addClass('hide');
+  $('#USV-intro').addClass('hide');
+  $('#USV-note').addClass('hide');
   return;
 }
 
 function rsExit() {
   var rs = getRetirementSystem();
+  setPanel3text(rs);
 
   if (rs == 'FERS') {
     rsShowHide('FERS');
@@ -91,6 +127,19 @@ function rsGood(submit) {
     if (submit) { return showError('rs', "Select your retirement system."); }
   }
   return clearError('rs');
+}
+
+function getAge50() {
+  if ($('#age50Yes').prop('checked')) { return 'age50Yes'; }
+  if ($('#age50No').prop('checked')) { return 'age50No'; }
+  return '';
+}
+function age50Good(submit) {
+  var age50 = getAge50();
+  if (age50 == '') {
+    if (submit) { return showError('age50', "Your response is required."); }
+  }
+  return clearError('age50');
 }
 
 -->

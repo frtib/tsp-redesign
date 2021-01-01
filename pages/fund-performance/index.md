@@ -12,7 +12,7 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/rates-of-returns.js
-expand-site-alert: true
+expand-site-alert: false
 bottom-scripts:
 document-ready:
   - getRatesOfReturn('rates-of-return');
@@ -27,7 +27,6 @@ redirect_from:
   - /InvestmentFunds/FundPerformance/annualReturns.html
   - /returns/
 ---
-
 {% assign chartName = 'rates-of-return' %}
 
 <div class="usa-grid centered">
@@ -36,18 +35,7 @@ redirect_from:
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
 </div>
 </div>
-<!-- TABLE -->
-<section id="{{chartName}}-section" class="rates-of-return-table">
 
-  <div class="table-scroll-buttons">
-    <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-    <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-  </div><!-- END div.table-scroll-buttons -->
-
-  <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
-</section>
-<!-- CHARTS -->
-<section class="rates-of-return-charts">
 <div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
 <div class="usa-width-one-whole">
 
@@ -66,4 +54,18 @@ redirect_from:
 
 </div>
 </div> <!-- end div#{{chartName}}-div -->
+
+<section id="{{chartName}}-section" class="rates-of-return-table">
+
+<div class="table-scroll-buttons">
+  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+</div><!-- END div.table-scroll-buttons -->
+
+<div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
+
+<!-- </div>  -->
+<!-- END div.usa-width-one-whole -->
+<!-- </div>  -->
+<!-- END div.usa-grid-full -->

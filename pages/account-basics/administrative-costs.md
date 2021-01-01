@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Administrative costs
+layout: page
 permalink: /account-basics/administrative-costs/
 sidenav: manage-your-plan
 styles:

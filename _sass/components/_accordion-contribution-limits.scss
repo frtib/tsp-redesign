@@ -6,6 +6,7 @@
 .contribution-limits.usa-tabs.usa-accordion {
   li {
     background-color: inherit;
+
     &:last-child {
         margin-right: 0;
       }
@@ -19,6 +20,8 @@
     border: 1px solid #333;
     margin-bottom: 1rem;
     padding: 2.5rem 2rem;
+
+
     span {
       display:block;
       margin-bottom: 1rem;
@@ -67,6 +70,10 @@
   .contribution-limits.usa-tabs.usa-accordion {
     .usa-accordion-button {
       width: 20rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: top;
     }
   }
 }

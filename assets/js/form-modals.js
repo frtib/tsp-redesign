@@ -2,8 +2,8 @@
 /* href$ = The $ operator means 'ends with' */
 
 function addFormModals() {
-  $('a[href$="tsp-1.pdf"').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tsp01');
-  $('a[href$="tsp-u-1.pdf"').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tspu01');
+  $('a[href$="tsp-1.pdf"]').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tsp01');
+  $('a[href$="tsp-u-1.pdf"]').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tspu01');
   $('a[href$="tsp-3.pdf"]').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tsp03');
   $('a[href$="tsp09"]').attr('data-toggle', 'modal').attr('data-target', '#tsp09');
   $('a[href$="tsp-15.pdf"]').not('.form').attr('data-toggle', 'modal').attr('data-target', '#tsp15');

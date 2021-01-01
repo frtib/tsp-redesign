@@ -11,7 +11,7 @@ Adds a magnifying glass icon which can be clicked and setups a search box with a
 {% assign affiliatePlaceholder = include.affiliatePlaceholder | default: 0 %}
 
 <div id="subscribe" class="flex header-line">
-  <button type="button" class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
+  <button class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
   <!-- Animated search bar -->
   <form accept-charset="UTF-8" action="{{action}}" id="{{searchID}}" method="get" class="animated-search">
     <div>

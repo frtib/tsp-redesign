@@ -1,24 +1,4 @@
 a {
-  &::after {
-    font-family: $font-awesome;
-    padding-left: 0.4rem;
-    font-style: normal;
-    font-weight: $light;
-
-  }
-  &.learn-more {
-      &::after {
-        content: '\f062';
-        display: inline-block;
-        transform: rotate(45deg);
-        padding-left: 1rem;
-        font-size: 1.1em;
-        color: $color-base;
-        // width: 1.8rem;
-        // height: 2.8rem;
-        // margin: 0 0 0 1.4rem;
-      }
-  }
   &.publication,
   &.form {
     &:after {

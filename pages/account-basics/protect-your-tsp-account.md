@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Protect your TSP account
+title: Account basics
 sidenav: manage-your-plan
 styles:
 scripts:
@@ -12,7 +12,7 @@ permalink: /account-basics/protect-your-tsp-account/
 
 Protecting your TSP account is our top priority, and it’s a responsibility that we share with you as a TSP participant. While we create a secure connection to tsp.gov and give you control over your account settings, we strongly encourage you to take steps to protect your data when you’re online.
 
-You can learn more about how to protect yourself on the internet, how to recognize scams that attempt to steal your information, and more about [online security from the Federal Trade Commission]({{ site.baseurl }}/exit/?idx=304){:rel="nofollow"}.
+You can learn more about how to protect yourself on the internet, how to recognize scams that attempt to steal your information, and more about [online security from the Federal Trade Commission]({{ site.baseurl }}/exit/?idx=210){:rel="nofollow"}.
 
 If you’re concerned that your personal information or TSP account has been compromised, [contact us]({{ site.baseurl }}/contact/) immediately.
 
