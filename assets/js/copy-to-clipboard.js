@@ -41,15 +41,6 @@ function inputToClipboard(element) {
   // $temp.remove();
 }
 
-function inputToClipboardParm(element, inputThis) {
-  console.log('inputToClipboardParm ', inputThis, window.location);
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($('#'+element).val()).select();
-  document.execCommand("copy");
-  // $temp.remove();
-}
-
 // ref: https://codepen.io/shaikmaqsood/pen/XmydxJ
 
 // Using outFunc() with copyToClipboard(element)
@@ -59,8 +50,3 @@ function outFunc(element) {
 }
 
 // ref: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2
-
-// header--extended share button
-$('#shareModal').on('show.bs.modal', function (e) {
-  $('#fullURL').val(window.location.href);
-});

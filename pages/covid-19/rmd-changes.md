@@ -17,7 +17,7 @@ redirect_from:
 
 The information we’re providing here is current but subject to change as we receive additional guidance and information.
 
-The changes to the required minimum distribution (RMD) rules described here apply to all TSP participants who are subject to RMDs. You do not have to certify that you meet the criteria described in the CARES Act or elsewhere on our website.
+The changes to the required minimum distribution (RMD) rules described here apply to all TSP participants who are subject to RMDs. You do not have to certify that meet the criteria described in the CARES Act or elsewhere on our website.
 
 - [Temporary changes to required minimum distributions](#temporary-changes-to-required-minimum-distributions)
 - [Questions and answers about RMD changes](#questions-and-answers-about-rmd-changes)

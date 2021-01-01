@@ -95,7 +95,6 @@ section.charts {
 // SCROLL LEFT & RIGHT table buttons
 div.table-scroll-buttons {
   margin-top: 3rem;
-  margin: 3rem 0 .7rem 0;
   text-align: center;
 
   @media only screen and (max-width: #{$large-screen}) {
@@ -110,7 +109,6 @@ section {
 
   &.rates-of-return-table,
   &.share-price-table {
-    padding-bottom: 4rem;
     // Width for "sticky" left-column header
     .column-width {
       width: 9em;

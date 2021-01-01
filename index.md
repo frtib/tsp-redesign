@@ -5,8 +5,8 @@ layout: home
 class: homepage
 scripts:
 #  - /assets/js/sessionstorage-modal.js
-expand-site-alert: true
-## alert: show-alert: are for a homepage-only alert. See code in header--extended that will execute if true.
+expand-site-alert: false
+## alert: show-alert: are for a homepage-only alert. See code in _incluces/components/header--extended that will execute if true.
 alert:
   show-alert: false
 #  icon:
@@ -115,7 +115,7 @@ Whether you're new to the federal government or preparing to retire, we're here 
 <!-- Lifecycle funds -->
 <li>
 <button class="usa-accordion-button" aria-expanded="true" aria-controls="lifecycle">
-<div>Lifecycle funds</div>
+Lifecycle funds
 </button>
 <div id="lifecycle" class="usa-accordion-content" markdown="1">
 
@@ -123,32 +123,25 @@ The [Lifecycle (L)]({{ site.baseurl }}/funds-lifecycle/) Funds are made of each 
 
 <ul class="usa-accordion lifecycle-funds">
 <li>
-<button class="usa-accordion-button" aria-expanded="false" aria-controls="l2065">
-<div>
-<span class="fund-name" markdown="1">
-L 2065 Lifecycle Fund
-</span>
-Is this fund for me?
-</div>
+<button class="usa-accordion-button"
+aria-expanded="false"
+aria-controls="l2065" markdown="1">
+**L 2065 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2065" class="usa-accordion-content" markdown="1">
 
 Consider if you plan to begin withdrawing from your TSP account after 2062 or you were born after 1999.
 
 [Learn more]({{ site.baseurl }}/funds-lifecycle/l-2065/){:.learn-more}
+
 </div>
 </li>
 
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2060">
-<div>
-<span class="fund-name" markdown="1">
-**L 2060 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2060" markdown="1">
+**L 2060 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2060" class="usa-accordion-content" markdown="1">
 
@@ -162,13 +155,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2058 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2055">
-<div>
-<span class="fund-name" markdown="1">
-**L 2055 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2055" markdown="1">
+**L 2055 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2055" class="usa-accordion-content" markdown="1">
 
@@ -182,13 +170,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2053 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2050">
-<div>
-<span class="fund-name" markdown="1">
-**L 2050 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2050" markdown="1">
+**L 2050 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2050" class="usa-accordion-content" markdown="1">
 
@@ -202,13 +185,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2048 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2045">
-<div>
-<span class="fund-name" markdown="1">
-**L 2045 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2045" markdown="1">
+**L 2045 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2045" class="usa-accordion-content" markdown="1">
 
@@ -222,13 +200,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2043 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2040">
-<div>
-<span class="fund-name" markdown="1">
-**L 2040 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2040" markdown="1">
+**L 2040 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2040" class="usa-accordion-content" markdown="1">
 Consider if you plan to begin withdrawing from your TSP account between 2038 and 2042 or you were born between 1975 and 1979.
@@ -240,13 +213,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2038 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2035">
-<div>
-<span class="fund-name" markdown="1">
-**L 2035 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2035" markdown="1">
+**L 2035 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2035" class="usa-accordion-content" markdown="1">
 
@@ -260,13 +228,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2033 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2030">
-<div>
-<span class="fund-name" markdown="1">
-**L 2030 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2030" markdown="1">
+**L 2030 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2030" class="usa-accordion-content" markdown="1">
 
@@ -280,13 +243,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2028 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="l2025">
-<div>
-<span class="fund-name" markdown="1">
-**L 2025 Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="l2025" markdown="1">
+**L 2025 Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="l2025" class="usa-accordion-content" markdown="1">
 
@@ -300,13 +258,8 @@ Consider if you plan to begin withdrawing from your TSP account between 2021 and
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="lincome">
-<div>
-<span class="fund-name" markdown="1">
-**Income Lifecycle Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="lincome" markdown="1">
+**Income Lifecycle Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="lincome" class="usa-accordion-content" markdown="1">
 
@@ -322,7 +275,7 @@ Consider if you are already withdrawing money from your account or you were born
 <!-- Individual funds -->
 <li>
 <button class="usa-accordion-button" aria-expanded="false" aria-controls="a2">
-<div>Individual funds</div>
+Individual funds
 </button>
 <div id="a2" class="usa-accordion-content" markdown="1">
 
@@ -332,13 +285,8 @@ We have a selection of [individual funds]({{ site.baseurl }}/funds-individual/) 
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="i1">
-<div>
-<span class="fund-name" markdown="1">
-**G Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="i1" markdown="1">
+**G Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="i1" class="usa-accordion-content" markdown="1">
 
@@ -352,13 +300,8 @@ A fund containing government securities that are specially issued to the TSP.
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="i2">
-<div>
-<span class="fund-name" markdown="1">
-**F Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="i2" markdown="1">
+**F Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="i2" class="usa-accordion-content" markdown="1">
 
@@ -371,13 +314,8 @@ A fund containing government, corporate, and asset-backed bonds.
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="i3">
-<div>
-<span class="fund-name" markdown="1">
-**C Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="i3" markdown="1">
+**C Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="i3" class="usa-accordion-content" markdown="1">
 
@@ -391,13 +329,8 @@ A fund containing stocks of large and medium-sized U.S. companies.
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="i4">
-<div>
-<span class="fund-name" markdown="1">
-**S Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="i4" markdown="1">
+**S Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
 <div id="i4" class="usa-accordion-content" markdown="1">
 
@@ -410,19 +343,14 @@ A fund containing stocks of small to medium-sized U.S. companies.
 <li>
 <button class="usa-accordion-button"
 aria-expanded="false"
-aria-controls="i5">
-<div>
-<span class="fund-name" markdown="1">
-**I Fund**
-</span>
-Is this fund for me?
-</div>
+aria-controls="i5" markdown="1">
+**I Fund** | <span class="secondary">Is this fund for me?</span>
 </button>
-<div id="i5" class="usa-accordion-content usa-learn-more" markdown="1">
+<div id="i5" class="usa-accordion-content" markdown="1">
 
 A fund containing international stocks from more than 20 developed countries.
 
-[Learn more]({{ site.baseurl }}/funds-individual/i-fund/){:.usa-learn-more}
+[Learn more]({{ site.baseurl }}/funds-individual/i-fund/){:.learn-more}
 
 </div>
 </li>

@@ -15,6 +15,6 @@ The TSP releases quarterly newsletters to participants to keep them updated with
 
 Below you will find an archive of these newsletters throughout the years.
 
-<button type="button" class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
+<button class="usa-button-big" onclick="window.location.href = '{{ site.baseurl }}/exit/?idx=4';">Subscribe</button>
 
 {% include newsletter/newsletter-list.html %}

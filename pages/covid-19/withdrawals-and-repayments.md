@@ -15,7 +15,7 @@ redirect_from:
 <h1><div class="nav-header">COVID-19</div>Withdrawals and repayments</h1>
 
 - [Qualified individuals](#qualified-individuals)
-- [Coronavirus-related distributions](#coronavirus-related-distributions)
+- [Coronavirus-related distributions](#coronavirus-related distributions)
 - [Favorable tax treatment for coronavirus-related withdrawals](#favorable-tax-treatment-for-coronavirus-related-withdrawals)
 - [Repaying a coronavirus-related distribution](#repaying-a-coronavirus-related-distribution)
 
