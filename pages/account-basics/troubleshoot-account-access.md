@@ -4,8 +4,10 @@ title: Troubleshoot account access
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/troubleshoot-login-errors/
-redirect_from: /sitehelp/
+permalink: /account-basics/troubleshoot-account-access/
+redirect_from:
+  - /sitehelp/
+  - /account-basics/troubleshoot-login-errors/
 
 ---
 # Troubleshoot account access
