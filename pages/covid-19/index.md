@@ -19,8 +19,6 @@ redirect_from:
 
 Updated **January 5, 2021**.
 
-You can check this page for **up-to-date details about TSP operations and temporary changes** we’re making to support you during this time. The information we’re providing here is current but subject to change as we receive additional guidance and information.
-
 **Plan news and reminders related to <span class="nobr">COVID-19</span>**
 
 The Coronavirus Aid, Relief, and Economic Security (CARES) Act included several important provisions for TSP participants:
