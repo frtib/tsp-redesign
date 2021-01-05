@@ -167,8 +167,8 @@ news-and-resources:
         href: /covid-19/rmd-changes/
       - text: Withdrawals and repayments
         href: /covid-19/withdrawals-and-repayments/
-      - text: Loans
-        href: /covid-19/loans/
+      # - text: Loans
+      #   href: /covid-19/loans/
   - text: Catch-up contributions
     href: /catch-up/
 

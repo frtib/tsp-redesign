@@ -11,6 +11,7 @@ permalink: /covid-19/loans/
 # Jekyll redirects https://github.com/jekyll/jekyll-redirect-from
 redirect_from:
   - /whatsnew/Content/coronavirus/loans.html
+publish: false
 ---
 
 <h1><div class="nav-header">COVID-19</div>Loans</h1>
