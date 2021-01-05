@@ -21,7 +21,7 @@ The process for catch-up contributions is now easier for TSP participants. If yo
 
 ## Here’s how it will work
 
-- If you’re turning 50 or older and exceed the IRS elective deferral (or annual addition) limit, then your contributions will automatically start counting toward the IRS catch-up limit. Just add any contributions toward the catch-up limit in the same place as your other TSP [contributions]({{ site.baseurl }}/making-contributions/start-change-stop-contributions/).
+- If you’re turning 50 or older and exceed the IRS elective deferral (or annual addition) limit, then your contributions will automatically start counting toward the IRS catch-up limit. **Just add any contributions toward the catch-up limit in the same place as your other TSP [contributions]({{ site.baseurl }}/making-contributions/start-change-stop-contributions/).**
 
 - Your election will carry over each year unless you submit a new one. For instructions on changing your contribution amount, see [Start, change, or stop contributions]({{ site.baseurl }}/making-contributions/start-change-stop-contributions/).
 
@@ -34,10 +34,6 @@ The process for catch-up contributions is now easier for TSP participants. If yo
 If you are a uniformed services member and enter a combat zone, your contributions toward the catch-up limit must be Roth. (The TSP cannot accept traditional tax-exempt contributions toward the catch-up limit.) You also cannot contribute toward the catch-up limit from incentive pay, special pay, or bonus pay.
 
 If you are contributing to both a civilian and uniformed services account, the limits apply to the total you contribute to both accounts during the year.
-
-## Dates of upcoming webinars and trainings
-
-We will continue to update this page as the dates of upcoming webinars and trainings are coming soon.
 
 1. For Blended Retirement System (BRS) participants: If you have reached the annual addition limit, your contributions toward catch-up will not be matched. (The IRS does not allow participants who have reached the annual addition limit to receive any more matching for the year.)
 {:.footnotes #footnotes}
