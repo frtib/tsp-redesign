@@ -12,17 +12,14 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 
 <div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin">default text</div>
 
-<div class="panel-form-field">
-  <div class="usa-input-error">
-    <label for="{{awardNum}}awardAccount" class="usa-input-error-label">Select account to which this award applies:</label>
-    <span class="usa-input-error-message" id="{{awardNum}}awardAccount-message" role="alert">You must select an account from the drop-down list.</span>
-    <select id="{{awardNum}}awardAccount" name="{{awardNum}}awardAccount" onclick="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');">
-        <option value="Select">Select One</option>
-        <option value="part,xxxxxxxxx0123,Civ">John Doe, Civ xxxxxxxxx0123</option>
-        <option value="pay,xxxxxxxxx0123,Civ">Jane Doe, Civ xxxxxxxxx0123</option>
-    </select>
-  </div>
-</div>
+{% capture id %}{{awardNum}}awardAccount{% endcapture %}
+{% capture onBlur %}buildString(0, '{{awardNum}}');{% endcapture %}
+{% include calculator/div-panel-form-field.html
+  fieldID="panel-as.01" id=id inputType="selectList" inputClass=""
+  radioIDs="Select,part,pay" radioLabels="Select One,Party 1,Party 2"
+  onBlur=onBlur prompt="Select account to which this award applies:"
+  explanation=""
+%}
 
 <!-- DAV, Wrap this fieldset around radio buttons AND %/$ inputs -->
 <div class="panel-form-field">
