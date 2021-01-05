@@ -16,11 +16,59 @@ panelSure[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-    return true;
-}
-panelExit[{{ panelID }}] = function(panel) {
+  getPrimeSettingsPart();
   return true;
 }
+panelExit[{{ panelID }}] = function(panel) {
+  testPrimeSettingsPart();
+  return true;
+}
+
+var cachePart = [];
+cachePart["highwater"] = getHighwater();
+cachePart["partcivilian"] = null;
+cachePart["partuniformed"] = null;
+cachePart["partBPA"] = null;
+cachePart["AwardPanel"] = 7;
+cachePart["AwardPanelState"] = null;
+cachePart["AwardPanelError"] = null;
+function getPrimeSettingsPart() {
+  cachePart["highwater"] = getHighwater();
+  cachePart["partcivilian"] = $('#partcivilian').prop('checked');
+  cachePart["partuniformed"] = $('#partuniformed').prop('checked');
+  cachePart["partBPA"] = $('#partBPA').prop('checked');
+  // cachePart["AwardPanel"] = getIDbyName('Award');
+  cachePart["AwardPanelState"] = getProgressState(cachePart["AwardPanel"]);
+  cachePart["AwardPanelError"] = getProgressStateError(cachePart["AwardPanel"]);
+}
+// did user change something important
+function anyChangesPart() {
+  if (cachePart["partcivilian"] != ($('#partcivilian').prop('checked'))) { return true; }
+  if (cachePart["partuniformed"] != ($('#partuniformed').prop('checked'))) { return true; }
+  if (cachePart["partBPA"] != ($('#partBPA').prop('checked'))) { return true; }
+  return false;
+}
+// set error if we changed something while all was good, return true if we set error
+function testPrimeSettingsPart() {
+  if (cachePart["AwardPanelError"]) { return false; }
+  // somebody else did it
+  if (cachePart["AwardPanelState"] != '-done') { return false; }
+  // somebody else's problem
+  if (anyChangesPart() == false) {
+    // nothing changed
+    // unsetProgressStateError(cachePart["AwardPanel"]);
+    setHighwater(cachePart["highwater"]);
+    setProgress(3);
+    return false;
+  }
+  // something changed and Awards panel cares about it.
+  // setProgressStateError(cachePart["AwardPanel"]);
+  // we need to recheck Awards page
+  setHighwater(cachePart["AwardPanel"]);
+  setProgress(3);
+  return true;
+}
+
 
 // my functions
 function acctNumGood(submit, prefix, acct) {
@@ -42,9 +90,10 @@ console.log('#'+id+'-div');
   return clearError(id);
 }
 function accountNumbersGood(submit, prefix) {
-  var civCB = $('#'+prefix+'civcb').prop('checked');
-  var usvCB = $('#'+prefix+'usvcb').prop('checked');
-  var BPACB = $('#'+prefix+'BPAcb').prop('checked');
+  if (prefix == 'part') { testPrimeSettingsPart(); } else { testPrimeSettingsPay(); }
+  var civCB = $('#'+prefix+'civilian').prop('checked');
+  var usvCB = $('#'+prefix+'uniformed').prop('checked');
+  var BPACB = $('#'+prefix+'BPA').prop('checked');
   if (civCB || usvCB || BPACB) { clearError(prefix+'-account-numbers'); }  // at least one cb is on
   dualAccountChecked(submit, prefix, civCB && usvCB);
 

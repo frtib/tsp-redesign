@@ -3,8 +3,6 @@ This is the javascript specific to panel 2.
 {% endcomment %}
 {% assign panelID = include.panelID | default: 2 %}
 {% assign panelName = include.panelName | default: 'panel-' | append: panelID %}
-{% assign payeePanel = 'panel-4' %}
-<!-- payeePanel {{payeePanel}} -->
 <script type="text/javascript">
 <!--
 panelNames['{{ panelName}}'] = {{ panelID }};
@@ -36,7 +34,7 @@ cachePath["relationshiSpouse"] = null;
 cachePath["relationshiDependant"] = null;
 cachePath["receiveOne"] = null;
 cachePath["receiveTwo"] = null;
-cachePath["PayeePanel"] = 0;
+cachePath["PayeePanel"] = 4;
 cachePath["PayeePanelState"] = null;
 cachePath["PayeePanelError"] = null;
 function getPrimeSettingsPath() {
@@ -48,13 +46,14 @@ function getPrimeSettingsPath() {
   cachePath["relationshiDependant"] = $('#relationshipDependant').prop('checked');
   cachePath["receiveOne"] = $('#receiveOne').prop('checked');
   cachePath["receiveTwo"] = $('#receiveTwo').prop('checked');
-  cachePath["PayeePanel"] = getIDbyName('{{panelName}}');
+  // cachePath["PayeePanel"] = getIDbyName('{{payeePanel}}');
   cachePath["PayeePanelState"] = getProgressState(cachePath["PayeePanel"]);
   cachePath["PayeePanelError"] = getProgressStateError(cachePath["PayeePanel"]);
+  console.log({cachePath}, )
 }
 // did user change something important
 function anyChangesPath() {
-  console.log('in any changes+');
+  console.log('in any changes+',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
   if (cachePath["payeePartYes"] != $('#payeePartYes').prop('checked')) { return true; }
   if (cachePath["payeePartNo"] != $('#payeePartNo').prop('checked')) { return true; }
   if (cachePath["receiveOne"] != $('#receiveOne').prop('checked')) { return true; }
@@ -66,7 +65,8 @@ function anyChangesPath() {
 }
 // set error if we changed something while all was good, return true if we set error
 function testPrimeSettingsPath() {
-console.log($('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), 'in test');
+console.log("\n\ntest Prime ", $('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'),
+  'in test',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
   if (($('#payeePartNo').prop('checked')) && ($('#relationshipDependant').prop('checked'))) {
     // this setting overrides any other consideration - do not advance!
     setHighwater(2);

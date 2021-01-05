@@ -22,9 +22,9 @@ panelExit[{{ panelID }}] = function(panel) {
 
 // my functions
 // put all the accounts in drop down. We are only called when a number has changed and there is no error
-function getpartciv(role) { if ($('#'+role+'civcb').prop('checked')) {console.log('getciv', 'Y', role); return 'Y'; } console.log('getciv', 'N', role); return '';}
-function getpartus(role) { if ($('#'+role+'usvcb').prop('checked')) {console.log('getus', 'Y', role); return 'Y'; } console.log('getus', 'N', role); return '';}
-function getpartBPA(role) { if ($('#'+role+'BPAcb').prop('checked')) {console.log('getbpa', 'Y', role); return 'Y'; } console.log('getbpa', 'N', role); return '';}
+function getpartciv(role) { if ($('#'+role+'civilian').prop('checked')) {console.log('getciv', 'Y', role); return 'Y'; } console.log('getciv', 'N', role); return '';}
+function getpartus(role) { if ($('#'+role+'uniformed').prop('checked')) {console.log('getus', 'Y', role); return 'Y'; } console.log('getus', 'N', role); return '';}
+function getpartBPA(role) { if ($('#'+role+'BPA').prop('checked')) {console.log('getbpa', 'Y', role); return 'Y'; } console.log('getbpa', 'N', role); return '';}
 function addToDropDown(dd, value, str) {
   console.log('addToDropDown', {dd}, {value}, {str});
   var newOption = $('<option value="' + value + '" >' + str + '</option>');

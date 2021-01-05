@@ -41,7 +41,7 @@ function setValues(flag) {
     $('#partfpostal').val('NW1 6XE');
     $('#partfcountrylist').val('GB');
     $('#partphoneNum').val('+44 20 7224 3688');
-    $('#partcivcb').click();
+    $('#partcivilian').click();
     $('#partcivacctNum').attr('data-store', '1111111111111');
     $('#partcivacctNum').val('1111111111111');
     $('#partBPAacctNum').attr('data-store', '3333333333333');
@@ -64,7 +64,7 @@ function setValues(flag) {
     $('#paySSN').val('123456789');
     $('#payBPAacctNum').attr('data-store', '4444444444444');
     $('#payBPAacctNum').val('4444444444444');
-    $('#payusvcb').click();
+    $('#payuniformed').click();
     $('#payusvacctNum').attr('data-store', '2222222222222');
     $('#payusvacctNum').val('2222222222222');
     setPlaceholder('#payusvacctNum', 13);
