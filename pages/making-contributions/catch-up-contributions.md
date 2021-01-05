@@ -13,7 +13,7 @@ redirect_from:
 
 <h1><div class="nav-header">Catch-up contributions</div>Latest information</h1>
 
-Updated **January 1, 2021**.
+Updated **January 5, 2021**.
 
 ## Changes to catch-up contributions
 
