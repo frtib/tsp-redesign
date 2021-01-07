@@ -108,10 +108,10 @@ function calculateResults() {
   }
 
   // fill table
-  $('#grossPaycheck1').html(CurrencyFormatted(paycheckReductionTraditional, 'cent'));
-  $('#grossPaycheck2').html(CurrencyFormatted(paycheckReductionRoth, 'cent'));
-  $('#grossYear1').html(CurrencyFormatted(paycheckReductionTraditional * payFrequency, 'cent'));
-  $('#grossYear2').html(CurrencyFormatted(paycheckReductionRoth * payFrequency, 'cent'));
+  $('#grossPaycheck1').html(CurrencyFormatted(-paycheckReductionTraditional, 'cent'));
+  $('#grossPaycheck2').html(CurrencyFormatted(-paycheckReductionRoth, 'cent'));
+  $('#grossYear1').html(CurrencyFormatted(-paycheckReductionTraditional * payFrequency, 'cent'));
+  $('#grossYear2').html(CurrencyFormatted(-paycheckReductionRoth * payFrequency, 'cent'));
   $('#contribPercent1').html(cccContributions.toFixed(1) + '%');
   $('#contribPercent2').html(rothContributionPercent.toFixed(1) + '%');
   $('#contribCheck1').html(CurrencyFormatted(contributionsTraditionalPerCheck, 'cent'));
