@@ -13,27 +13,24 @@ function initValues(def) {
 
 function setValues(flag) {
   if (flag == 1) {
-    processPanel(1,0,2,0);
-    $('#cccYearsUntilRetirement').val(23);
-    $('#cccYearsInRetirement').val(34);
-    $('#cccSalary').val(57693);
-    $('#cccInterestRate').val(2.74698);
-    $('#cccContributions').val(15.0);
-    $('#cccTaxRateNow').val(32.56987);
-    $('#cccTaxRateLater').val(12.34568);
-    $('#paySchedule').val('Monthly');
-    processPanel(2,0,3,0);
+    setValues(3);
+    showPanel(1);
   }
   if (flag == 2) {
     processPanel(1,0,2,0);
+  }
+  if (flag == 3) {
+    setValues(2);
     $('#cccYearsUntilRetirement').val(23);
+    $('#age50Yes').click();
     $('#cccYearsInRetirement').val(34);
     $('#cccSalary').val(100000);
     $('#cccInterestRate').val(2.74698);
-    $('#cccContributions').val(40.0);
+    $('#cccContributions').val(20.0);
     $('#cccTaxRateNow').val(32.56987);
     $('#cccTaxRateLater').val(12.34568);
     $('#paySchedule').val('Monthly');
+    $('#cccEqualContribution').click();
     processPanel(2,0,3,0);
   }
 }
