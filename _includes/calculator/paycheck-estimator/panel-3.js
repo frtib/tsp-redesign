@@ -160,8 +160,8 @@ function test_limits(submit, amts, contribs) {
     // 17,000
     var pay_freq = get_pay_freq(getPaySchedule());
 
-    var limitRegular = IRC_contribution_limit;
-    var limitCatch = IRC_catchup_contribution_limit;
+    var limitRegular = IRC_current_contribution_limit;
+    var limitCatch = IRC_current_catchup_contribution_limit;
     var limitTotal = limitRegular;
     var age50 = getAge50();
     if (age50 == 'age50Yes') { limitTotal += limitCatch; }
@@ -177,7 +177,7 @@ function test_limits(submit, amts, contribs) {
     } else {
       msg += "limit " + " (" + CurrencyFormatted(limitRegular, 'no_cent');
     }
-    msg += " in " + IRC_limit_year + ").";
+    msg += " in " + IRC_current_year + ").";
     var op1annualTR = pay_freq * contribs[0];  // option 1 annual Trad + Roth
     var op2annualTR = pay_freq * contribs[1];  // option 1 annual Trad + Roth
     $('#totalTR1').html(CurrencyFormatted(op1annualTR, 'no_cent'));

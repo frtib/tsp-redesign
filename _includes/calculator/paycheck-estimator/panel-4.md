@@ -68,7 +68,7 @@ Results panel (4) for paycheck esitomator.
 <ul class="usa-accordion icons">
 <!-- PROJECTED GROWTH -->
 {% include calculator/accordion-start.html expanded=true divID='projected-growth'
-    icon='far fa-chart-line' title='Projected growth of your account' inList=true %}
+    icon='far fa-chart-line' title='Projected growth of a single contribution' inList=true %}
   <div id="resultSelectorDiv"><p>The results below show how much your account will grow over time based on an expected annual rate of return of <span id="annual-rate">--</span>.</p>
 <fieldset class="usa-fieldset-inputs projected-growth">
 <legend class="">Show growth as:</legend>

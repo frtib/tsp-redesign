@@ -199,9 +199,11 @@ function calculateResults() {
    var totalDeducted2 = beforeDeduction + afterDeduction + additionalWithholding + monthTax2 + total_contrib2;
    var netPay1 = grossPay - totalDeducted1;
    var netPay2 = grossPay - totalDeducted2;
+   /* moved down below to make global
    var EMPauto = 0.0;
    var EMPmatch1 = 0.0;
    var EMPmatch2 = 0.0;
+   */
    if (rs == 'FERS') {
      EMPauto = grossPay * 0.01;
      EMPmatch1 = FERSmatching(grossPay, match_contrib1);
@@ -356,6 +358,9 @@ colors[3] = colorAgency;
 colors[4] = colorRoth;
 colors[5] = colorTrad;
 
+var EMPauto = 0.0;
+var EMPmatch1 = 0.0;
+var EMPmatch2 = 0.0;
 var trad1Contributionplot = [];
 var trad1Growthplot = [];
 var roth1Contributionplot = [];
@@ -455,6 +460,7 @@ function makeChart(chartMax, year) {
                 symbolPadding: 3,
                 // title: { text: 'Contribution type', style: { fontStyle: 'italic' } },
                 title: { text: 'Contribution type', style: { fontStyle: 'bold' } },
+                reversed: true,
                 shadow: false
             },
             tooltip: {
@@ -522,6 +528,12 @@ function makeChart(chartMax, year) {
             }, {
                 name: 'Traditional**', stack: stack2, color: colorTrad, showInLegend: false,
                         data: [totalTrad2]
+            }, {
+                name: $('#orgText1').html(), stack: stack1, color: colorAgency,
+                        data: [EMPauto + EMPmatch1]
+            }, {
+                name: $('#orgText2').html(), stack: stack2, color: colorAgency, showInLegend: false,
+                        data: [EMPauto + EMPmatch2]
             }
 /*            , {
               dataLabels: { verticalAlign: 'top', x: 0, y: 3, crop: false, color: '#666666', style: { fontWeight: 'bold', fontSize: '11pt' } },

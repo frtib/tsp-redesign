@@ -11,7 +11,7 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-  // $('#age50year').html(IRC_limit_year);
+  // $('#age50year').html(IRC_current_year);
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {

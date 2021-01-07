@@ -68,6 +68,9 @@ if (acting_year == 2018) {
 }
 
 // default tax values
+var IRC_current_year = constrainYear(new Date().getFullYear());
+var IRC_current_contribution_limit = taxValues[IRC_current_year]['contribution_limit'];
+var IRC_current_catchup_contribution_limit = taxValues[IRC_current_year]['catchup_limit'];
 var IRC_limit_year = acting_year;
 var IRC_acting_year = acting_year;
 var IRC_contribution_limit = taxValues[acting_year]['contribution_limit'];
