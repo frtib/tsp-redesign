@@ -460,7 +460,7 @@ function makeChart(chartMax, year) {
                 symbolPadding: 3,
                 // title: { text: 'Contribution type', style: { fontStyle: 'italic' } },
                 title: { text: 'Contribution type', style: { fontStyle: 'bold' } },
-                reversed: true,
+                // reversed: true,
                 shadow: false
             },
             tooltip: {
