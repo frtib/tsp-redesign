@@ -35,7 +35,7 @@ function reviewYearChange() {
   $('#age50').prop('checked', false);
 }
 function setDropdownDefault() {
-  var defaultYear = constrainYear(determineActingYear());
+  var defaultYear = IRC_acting_year; 
   buildDropdown(defaultYear);
   reviewYearChange();
 }

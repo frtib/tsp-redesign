@@ -81,12 +81,15 @@ function sumWithholding(op1TradTotal, op2TradTotal) {
   var val = grossPay - addHold - beforeHold;
   var val1 = val - op1TradTotal;
   var val2 = val - op2TradTotal;
-  var monthTax1 = annualTax(val1 * maxpay_freq - fedAllowances * withholding_allowance_rate, taxtableS);
-console.log(val1 * maxpay_freq - fedAllowances * withholding_allowance_rate, {fedAllowances}, {withholding_allowance_rate}, $('#taxStatus').val());
-  if ($('#taxStatus').val() == "M") { monthTax1 = annualTax(val1 * maxpay_freq, taxtableM); }
+  var taxable1 = val1 * maxpay_freq - fedAllowances * withholding_allowance_rate;
+  var taxable2 = val2 * maxpay_freq - fedAllowances * withholding_allowance_rate;
+  var taxStatus = getTaxStatus();
+  var monthTax1 = annualTax(taxable1, taxtableS);
+  //console.log({taxable1}, {fedAllowances}, {withholding_allowance_rate}, $('#taxStatus').val());
+  if (taxStatus == "M") { monthTax1 = annualTax(taxable1, taxtableM); }
   monthTax1 = parseFloat((monthTax1 / maxpay_freq).toFixed(2));
-  var monthTax2 = annualTax(val2 * maxpay_freq - fedAllowances * withholding_allowance_rate, taxtableS);
-  if ($('#taxStatus').val() == "M") { monthTax2 = annualTax(val2 * maxpay_freq, taxtableM); }
+  var monthTax2 = annualTax(taxable2, taxtableS);
+  if (taxStatus == "M") { monthTax2 = annualTax(taxable2, taxtableM); }
   monthTax2 = parseFloat((monthTax2 / maxpay_freq).toFixed(2));
 
   val = parseFloat((val - afterHold).toFixed(2));

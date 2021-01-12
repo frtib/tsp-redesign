@@ -71,7 +71,7 @@ var IRC_contribution_limit = taxValues[IRC_limit_year]['contribution_limit'];
 var IRC_catchup_contribution_limit = taxValues[IRC_limit_year]['catchup_limit'];
 var withholding_allowance_rate = taxValues[IRC_limit_year]['withholding_allowance'];
 var annual_addition = taxValues[IRC_limit_year]['annual_addition'];
-console.log({IRC_limit_year}, {IRC_acting_year}, {IRC_contribution_limit}, {IRC_catchup_contribution_limit}, {withholding_allowance_rate});
+//console.log({IRC_limit_year}, {IRC_acting_year}, {IRC_contribution_limit}, {IRC_catchup_contribution_limit}, {withholding_allowance_rate});
 
 function constrainYear(year) {
   if (year < taxMinYear) { year = taxMinYear; }
