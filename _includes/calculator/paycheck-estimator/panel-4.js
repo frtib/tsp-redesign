@@ -509,10 +509,10 @@ function makeChart(chartMax, year) {
             },
             series: [{
                 // name: '<b>Contribution Type</b>', stack: stack1, color: 'white', data: [0] }, {
-                name: 'Roth Growth', stack: stack1, color:  colorGrowthRoth,
+                name: 'Roth growth', stack: stack1, color:  colorGrowthRoth,
                         data: [parseFloat(roth1Growth[year])-parseFloat(roth1Contribution[year])]
             }, {
-                name: 'Roth Growth', stack: stack2, color:  colorGrowthRoth, showInLegend: false,
+                name: 'Roth growth', stack: stack2, color:  colorGrowthRoth, showInLegend: false,
                         data: [parseFloat(roth2Growth[year])-parseFloat(roth2Contribution[year])]
             }, {
                 name: 'Roth**', stack: stack1, color: colorRoth,
@@ -521,10 +521,10 @@ function makeChart(chartMax, year) {
                 name: 'Roth**', stack: stack2, color: colorRoth, showInLegend: false,
                         data: [parseFloat(roth2Contribution[year])]
             }, {
-                name: 'Traditional Growth', stack: stack1, color: colorGrowthTrad,
+                name: 'Traditional growth', stack: stack1, color: colorGrowthTrad,
                         data: [parseFloat(trad1Growth[year])-parseFloat(trad1Contribution[year])]
             }, {
-                name: 'Traditional Growth', stack: stack2, color: colorGrowthTrad, showInLegend: false,
+                name: 'Traditional growth', stack: stack2, color: colorGrowthTrad, showInLegend: false,
                         data: [parseFloat(trad2Growth[year])-parseFloat(trad2Contribution[year])]
             }, {
                 name: 'Traditional**', stack: stack1, color: colorTrad,
@@ -533,7 +533,7 @@ function makeChart(chartMax, year) {
                 name: 'Traditional**', stack: stack2, color: colorTrad, showInLegend: false,
                         data: [totalTrad2]
             }, {
-                name: $('#orgText1').html(), stack: stack1, color: colorAgency, showInLegend: showMatchInLegend,
+                name: $('#orgText1').html()+' contributions', stack: stack1, color: colorAgency, showInLegend: showMatchInLegend,
                         data: [EMPauto + EMPmatch1]
             }, {
                 name: $('#orgText2').html(), stack: stack2, color: colorAgency, showInLegend: false,
