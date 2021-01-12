@@ -110,6 +110,9 @@ function clearArrays() {
 
   totalTrad1 = 0.0;
   totalTrad2 = 0.0;
+  EMPauto = 0.0;
+  EMPmatch1 = 0.0;
+  EMPmatch2 = 0.0;
 }
 function initArrayYear(newColumn, oldColumn) {
   // set starting value for new column (year) in arrays, i.e. copy last years value,
@@ -308,7 +311,6 @@ function calculateResults() {
   // $.each(growthbar12.series[0].data, function(i, point){ console.log(point); point.series.legendItem.element.onmouseover = null; });
 
   // $('#option12year').val(39).trigger('change');
-  doZoom();
   showData(0);
   setGraph();
 }
@@ -410,6 +412,8 @@ function makeChart(chartMax, year) {
 
   if (year < 1) { year = 1; }
   if (year > 40) { year = 40; }
+  var showMatchInLegend = false;
+  if (EMPauto > 0.0) { showMatchInLegend = true; }
 
   return  new Highcharts.Chart({
             credits: { enabled: false },
@@ -529,7 +533,7 @@ function makeChart(chartMax, year) {
                 name: 'Traditional**', stack: stack2, color: colorTrad, showInLegend: false,
                         data: [totalTrad2]
             }, {
-                name: $('#orgText1').html(), stack: stack1, color: colorAgency,
+                name: $('#orgText1').html(), stack: stack1, color: colorAgency, showInLegend: showMatchInLegend,
                         data: [EMPauto + EMPmatch1]
             }, {
                 name: $('#orgText2').html(), stack: stack2, color: colorAgency, showInLegend: false,
@@ -586,69 +590,29 @@ function check_labels() {
 
 }
 
-function doZoom() {
-  $('#unzoomedSpan').addClass("hidden");
-  $('#zoomTextImg').addClass("hidden");
-  $('#zoomedSpan').removeClass("hidden");
-
-  if ($('#option12year').val() >= 40) {
-    $('#zoomedSpan').addClass("hidden");
-  }
-}
-function unZoom() {
-  $('#unzoomedSpan').removeClass("hidden");
-  $('#zoomTextImg').removeClass("hidden");
-  $('#zoomedSpan').addClass("hidden");
-}
-
-
-$('#option12zoom').click(function() {
+function drawGraph() {
   var newyear = $('#option12year').val();
   var newMax = goodMax(newyear);
-
-  if ($('#unzoomedSpan').hasClass("hidden")) {
-    unZoom();
-    newMax = goodMax(40);
-  } else {
-    doZoom();
-    newMax = goodMax(newyear);
-  }
-
   growthbar12.destroy();
   growthbar12 = makeChart(newMax, newyear);
   lastMax = newMax;
   $('#option12year').val(newyear);
   check_labels();
-});
+}
 
 $('#option12year').change(function() {
   var newyear = this.value;
   var zone = newyear;
   zone = Math.floor((zone-1)/10) * 10 + 10;
-zone = 40;
-  var newMax = goodMax(zone);
+  zone = 40;
+  // var newMax = goodMax(zone);
+  var newMax = goodMax(newyear);
 
-  // lastMax = newMax;
-  // decide if I need to remake the chart or not
-  if (lastMax != newMax) {
-    growthbar12.destroy();
-    growthbar12 = makeChart(newMax, newyear);
-    lastMax = newMax;
-  } else {
-    growthbar12.series[5].setData([parseFloat(trad1Growth[newyear])-parseFloat(trad1Contribution[newyear])]);
-    growthbar12.series[6].setData([parseFloat(trad2Growth[newyear])-parseFloat(trad2Contribution[newyear])]);
-    growthbar12.series[1].setData([parseFloat(roth1Growth[newyear])-parseFloat(roth1Contribution[newyear])]);
-    growthbar12.series[2].setData([parseFloat(roth2Growth[newyear])-parseFloat(roth2Contribution[newyear])]);
-  }
-  unZoom();
-  // if ($('#option12year').val() >= 40) { doZoom(); }
+  growthbar12.destroy();
+  growthbar12 = makeChart(newMax, newyear);
+  lastMax = newMax;
   check_labels();
 });
-
-// // The next two functions make sure the graph gets initialized correctly, even when the browser is slow
-// window.onload = function() { // this will be run when the whole page is loaded
-//   setTimeout(setGraph, 3000);
-// };
 
 function setGraph() {
    //finish doing things - make sure graph is ready before setting init value

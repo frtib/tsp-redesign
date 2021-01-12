@@ -100,10 +100,6 @@ Results panel (4) for paycheck esitomator.
 {% endfor %}
   </select>
   years
-  <span id="option12zoom">
-    <a id="unzoomedSpan" class="zoom-link">Zoom Graph </a><i id="zoomTextImg" class="fal fa-search" ></i>
-    <span id="zoomedSpan" class="zoomed hidden">Zoomed</span>
-  </span>
 </div>
 <!-- DONALD:  This is the end of the zoom feature -->
   <div id="chartResult"></div>
