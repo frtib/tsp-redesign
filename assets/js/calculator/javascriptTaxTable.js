@@ -5,7 +5,8 @@ function round_cents(num) {
 
 var taxMinYear = 2018;
 var taxMaxYear = 2021;
-var IRC_acting_year = taxMaxYear;
+
+var IRC_limit_year = constrainYear(new Date().getFullYear());
 
 var taxValues = {
     2021: { contribution_limit: 19500.00, catchup_limit: 6500.00,
@@ -18,9 +19,6 @@ var taxValues = {
       withholding_allowance: 4150.00, annual_addition: 56000 }
 }
 
-var acting_year = constrainYear(determineActingYear());
-// console.log('acting year is ' + acting_year);
-
 // assume most recent tax table
 // IRS Pub. 15-T, Page 6, LEFT, Single.  2021 Percentage Method Tables for Automated Payroll Systems
 var taxtableS = [ [3950.00, 0.00, 0.0], [13900.00, 0.10, 0.0], [44475.00, 0.12, 995.00],
@@ -31,7 +29,7 @@ var taxtableM = [ [12200.00, 0.00, 0.0], [32100.00, 0.10, 0.0], [93250.00, 0.12,
                 [184950.00, 0.22, 9328.0], [342050.00, 0.24, 29502.0], [431050.00, 0.32, 67206.0],
                 [640500.0, 0.35, 95686.0], [-1, 0.37, 168993.5] ];
 
-if (acting_year == 2020) {
+if (IRC_limit_year == 2020) {
   // 2020 tax values
   // IRS Pub. 15-T, Page 6, LEFT, Single.  2020 Percentage Method Tables for Automated Payroll Systems
   taxtableS = [ [3800.00, 0.00, 0.0], [13500.00, 0.10, 0.0], [43275.00, 0.12, 970.0],
@@ -43,7 +41,7 @@ if (acting_year == 2020) {
                 [624150.0, 0.35, 93257.0], [-1, 0.37, 164709.50] ];
 }
 
-if (acting_year == 2019) {
+if (IRC_limit_year == 2019) {
   // 2019 tax values
   // IRS Pub. 15, Table 7(a) SINGLE person, ANNUAL Payroll Period
   taxtableS = [ [3800.00, 0.00, 0.0], [13500.00, 0.10, 0.0], [43275.00, 0.12, 970.0],
@@ -55,7 +53,7 @@ if (acting_year == 2019) {
                 [624150.0, 0.35, 93257.0], [-1, 0.37, 164709.50] ];
 }
 
-if (acting_year == 2018) {
+if (IRC_limit_year == 2018) {
   // 2018 tax table
   // IRS Pub. 15, Table 7(a) SINGLE person, ANNUAL Payroll Period
   taxtableS = [ [3700.00, 0.00, 0.0], [13225.00, 0.10, 0.0], [42400.00, 0.12, 952.5],
@@ -68,13 +66,12 @@ if (acting_year == 2018) {
 }
 
 // default tax values
-var IRC_limit_year = acting_year;
-var IRC_acting_year = acting_year;
-var IRC_contribution_limit = taxValues[acting_year]['contribution_limit'];
-var IRC_catchup_contribution_limit = taxValues[acting_year]['catchup_limit'];
-var withholding_allowance_rate = taxValues[acting_year]['withholding_allowance'];
-var annual_addition = taxValues[acting_year]['annual_addition'];
-// console.log(IRC_limit_year, IRC_acting_year, IRC_contribution_limit, IRC_catchup_contribution_limit, withholding_allowance_rate);
+var IRC_acting_year = constrainYear(determineActingYear());
+var IRC_contribution_limit = taxValues[IRC_limit_year]['contribution_limit'];
+var IRC_catchup_contribution_limit = taxValues[IRC_limit_year]['catchup_limit'];
+var withholding_allowance_rate = taxValues[IRC_limit_year]['withholding_allowance'];
+var annual_addition = taxValues[IRC_limit_year]['annual_addition'];
+//console.log({IRC_limit_year}, {IRC_acting_year}, {IRC_contribution_limit}, {IRC_catchup_contribution_limit}, {withholding_allowance_rate});
 
 function constrainYear(year) {
   if (year < taxMinYear) { year = taxMinYear; }

@@ -68,7 +68,7 @@ Results panel (4) for paycheck esitomator.
 <ul class="usa-accordion icons">
 <!-- PROJECTED GROWTH -->
 {% include calculator/accordion-start.html expanded=true divID='projected-growth'
-    icon='far fa-chart-line' title='Projected growth of your account' inList=true %}
+    icon='far fa-chart-line' title='Projected growth of a single contribution' inList=true %}
   <div id="resultSelectorDiv"><p>The results below show how much your account will grow over time based on an expected annual rate of return of <span id="annual-rate">--</span>.</p>
 <fieldset class="usa-fieldset-inputs projected-growth">
 <legend class="">Show growth as:</legend>
@@ -100,10 +100,6 @@ Results panel (4) for paycheck esitomator.
 {% endfor %}
   </select>
   years
-  <span id="option12zoom">
-    <a id="unzoomedSpan" class="zoom-link">Zoom Graph </a><i id="zoomTextImg" class="fal fa-search" ></i>
-    <span id="zoomedSpan" class="zoomed hidden">Zoomed</span>
-  </span>
 </div>
 <!-- DONALD:  This is the end of the zoom feature -->
   <div id="chartResult"></div>

@@ -142,7 +142,7 @@ function checkContributionAmount(submit) {
     if (age50) { msg += " and catch-up contribution limits "; } else { msg += " limit "; }
     msg += " (" + CurrencyFormatted(IRC_contribution_limit, 'cent');
     if (age50) { msg += " + " + CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'); }
-    msg += " in " + IRC_acting_year + ").";
+    msg += " in " + IRC_limit_year + ").";
     showError('cccContributions', msg);
     // showError('cccSalary', msg);
     return false;
