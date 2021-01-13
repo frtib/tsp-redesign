@@ -239,9 +239,9 @@ urlList[304] = 'https://www.consumer.ftc.gov/topics/online-security';
 urlList[305] = 'https://www.federalregister.gov/documents/2020/08/24/2020-18271/privacy-act-of-1974-system-of-records';
 urlList[306] = 'https://www.federalregister.gov/documents/2020/08/28/2020-18944/privacy-act-of-1974-system-of-records';
 urlList[307] = 'https://www.federalregister.gov/documents/2010/06/17/2010-14583/employee-contribution-elections-and-contribution-allocations';
-urlList[308] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/28721dd';
+urlList[308] = '';
 // April 2020 newsletter
-urlList[309] = '';
+urlList[309] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/28721dd';
 // July 2020 newsletter
 urlList[310] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22';
 // October 2020 newsletter
