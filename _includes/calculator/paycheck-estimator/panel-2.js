@@ -86,7 +86,7 @@ function saveWorkseetTotals(idx) {
 
 function setAnnualGrossPay() {
   $('#annualGrossPay').html("");
-  var pay_freq = get_pay_freq($('#paySchedule').val());
+  var pay_freq = get_pay_freq(getPaySchedule());
   var monthly = getPosInteger('grossPay', -1);
   if (monthly < 0) { return false; }
   if (pay_freq < 5) { return false; }

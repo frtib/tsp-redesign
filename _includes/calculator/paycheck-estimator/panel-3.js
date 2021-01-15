@@ -75,7 +75,7 @@ function sumWithholding(op1TradTotal, op2TradTotal) {
   var beforeHold = getPosInteger('beforeDeduction', 0);
   var afterHold = getPosInteger('afterDeduction', 0);
   var fedAllowances = getPosInteger('fedAllowances', 0);
-  var paySchedule = $('#paySchedule').val();
+  var paySchedule = getPaySchedule();
   var maxpay_freq = get_pay_freq(paySchedule);
 
   var val = grossPay - addHold - beforeHold;
@@ -85,12 +85,13 @@ function sumWithholding(op1TradTotal, op2TradTotal) {
   var taxable2 = val2 * maxpay_freq - fedAllowances * withholding_allowance_rate;
   var taxStatus = getTaxStatus();
   var monthTax1 = annualTax(taxable1, taxtableS);
-  //console.log({taxable1}, {fedAllowances}, {withholding_allowance_rate}, $('#taxStatus').val());
   if (taxStatus == "M") { monthTax1 = annualTax(taxable1, taxtableM); }
   monthTax1 = parseFloat((monthTax1 / maxpay_freq).toFixed(2));
   var monthTax2 = annualTax(taxable2, taxtableS);
   if (taxStatus == "M") { monthTax2 = annualTax(taxable2, taxtableM); }
   monthTax2 = parseFloat((monthTax2 / maxpay_freq).toFixed(2));
+  // console.log({taxable1}, {taxable2}, {fedAllowances}, {withholding_allowance_rate}, {fedAllowances}, {taxStatus},
+  //  {monthTax1}, monthTax1*maxpay_freq, {monthTax2}, monthTax2*maxpay_freq, paySchedule, maxpay_freq);
 
   val = parseFloat((val - afterHold).toFixed(2));
   // console.log('sumWithholding', val, grossPay, addHold, beforeHold, afterHold, monthTax1, monthTax2);

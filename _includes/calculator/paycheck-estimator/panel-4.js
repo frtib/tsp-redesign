@@ -164,8 +164,7 @@ function calculateResults() {
   // values used in calculation loop below
   if (true) {
     var rs = getRetirementSystem();
-    var paySchedule = getPaySchedule();
-    var maxpay_freq = get_pay_freq(paySchedule);
+    var maxpay_freq = get_pay_freq(getPaySchedule());
     var annualReturn = getPosFloat('annualReturn', 0.0);
     var fedAllowances = getPosInteger('fedAllowances', 0);
     var netPay = grossPay - beforeDeduction;

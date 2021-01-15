@@ -77,6 +77,32 @@ function setValues(flag) {
     $('#catch_option1Roth').val(30);
     processPanel(3,0,3,0);
   }
+  if (flag == 9) {
+    console.log('x selecting options');
+    $('#CSRS').click();
+    $('#age50No').click();
+    processPanel(1,0,2,0);
+
+    $('#grossPay').val(5000);
+    $('#paySchedule').val('Monthly');
+    $('#taxStatusMarried').click();
+    $('#fedAllowances').val(0);
+    $('#additionalWithholding').val(0);
+    $('#beforeDeduction').val(0);
+    $('#afterDeduction').val(0);
+
+    $('#trad_option1_p').click();
+    $('#trad_option2_p').click();
+    $('#roth_option1_p').click();
+    $('#roth_option2_p').click();
+    $('#trad_option1Amount').val(1);
+    $('#trad_option1Percent').val(1);
+    $('#trad_option2Percent').val(0);
+    $('#roth_option1Percent').val(0);
+    $('#roth_option2Percent').val(0);
+    $('#annualReturn').val(0.0);
+    processPanel(3,0,4,0);
+  }
 }
 
 $(document).ready(function() {
