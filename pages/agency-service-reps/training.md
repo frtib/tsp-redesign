@@ -437,7 +437,7 @@ aria-controls="training">
 Benefits specialist and educator training
 </button>
 <div id="training" class="usa-accordion-content" markdown="1">
-**In light of the evolving situation concerning the coronavirus (COVID-19), the Federal Retirement Thrift Investment Board will be following the guidelines put forth by the CDC and OPM and canceling all in-person TSP training courses until further notice. As the TSP 101 and the Payroll Operations and Error Corrections courses are detailed and lengthy, these courses will be rescheduled upon notice that operations have resumed as normal.**
+**Due to the coronavirus (COVID-19) pandemic, the Federal Retirement Thrift Investment Board has canceled all in-person TSP training courses and will not be scheduling in-person events until further notice.**
 
 **Of course, this was unforeseen and we apologize for any inconvenience this may cause. If you have any questions, please feel free to email agyhelp@frtib.gov.**
 
