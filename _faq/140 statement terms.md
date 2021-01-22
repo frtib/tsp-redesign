@@ -13,7 +13,7 @@ Here are a few terms you might come across when looking at your TSP statements:
 
 **Excess Deferrals**&#8212;A contribution that exceeds the [elective deferral limit]({{ site.baseurl }}/making-contributions/contribution-limits/) in a particular year.
 
-**Forfeitures**&#8212;FERS employees who leave federal service before they are [vested]({{ site.baseurl }}/making-contributions/contribution-types/#a-few-words-about-vesting) in the TSP forfeit the Agency Automatic (1%) Contributions and earnings on those contributions. If a forfeiture occurs because of agency payroll error, the affected participant is entitled to have those forfeited funds restored to his or her TSP account.
+**Forfeitures**&#8212;FERS and BRS employees who leave federal service before they are [vested]({{ site.baseurl }}/making-contributions/contribution-types/#a-few-words-about-vesting) in the TSP forfeit the Agency/Service Automatic (1%) Contributions and earnings on those contributions. If a forfeiture occurs because of agency payroll error, the affected participant is entitled to have those forfeited funds restored to his or her TSP account.
 
 **In-Service Withdrawals**&#8212;If you’re an active federal employee or a member of the uniformed services, you can make two types of in-service withdrawals from your TSP account: financial hardship and age-based. Read more about making [In-Service Withdrawals]({{ site.baseurl }}/in-service-withdrawal-basics/in-service-withdrawal-types-and-terms/).  
 
