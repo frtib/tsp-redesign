@@ -27,7 +27,7 @@ You can check this page for **up-to-date details about TSP operations and tempor
 - [CARES Act information](#cares-act-information)
 - [Submitting certain forms online](#submitting-certain-forms-online)
 - [Temporary acceptance of PIV and CAC signatures on TSP forms](#pivcac)
-- [Restriction to be lifted on starting and restarting installment payments based on life expectancy](#restriction)
+- [Restriction lifted on starting and restarting installment payments based on life expectancy](#restriction)
 - [Payments you make to the TSP by check may take longer to process](#payments-you-make-to-the-tsp-by-check-may-take-longer-to-process)
 - [How to update your mailing address](#how-to-update-your-mailing-address)
 - [USPS temporarily suspends service to several countries](#usps-temporarily-suspends-service-to-several-countries)
@@ -87,7 +87,7 @@ The list of forms you can submit online may change at any time, so be sure to ch
 {:#pivcac}
 We will temporarily accept certain digital signatures on TSP forms in order to support participants in physical distancing measures during the COVID-19 pandemic. To be eligible, you must use your unexpired U.S. federal personal identity verification (PIV) credentials or common access card (CAC) to sign your form before you submit it to us.
 
-## Restriction to be lifted on starting and restarting installment payments based on life expectancy
+## Restriction lifted on starting and restarting installment payments based on life expectancy
 {:#restriction}
 The FRTIB has permanently changed the rule that prevents you from starting installment payments based on life expectancy if you have previously received installment payments.   
 [Find out more information about installment payments]({{ site.baseurl }}/living-in-retirement/changing-your-withdrawal-request/)
