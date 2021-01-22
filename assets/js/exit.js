@@ -105,7 +105,7 @@ urlList[163] = 'https://www.youtube.com/watch?v=5z-KXHZAF-U'; // Cost of taking 
 urlList[164] = 'https://www.youtube.com/watch?v=XnlQZa7g_d4'; // How the TSP fits into FERS
 urlList[165] = 'https://twitter.com/tsp4gov';
 urlList[166] = 'https://www.irs.gov/individuals/tax-withholding-estimator';
-urlList[167] = 'https://www.usps.com/international/mail-shipping-services.htm#readmore';
+urlList[167] = 'https://about.usps.com/newsroom/service-alerts/international/welcome.htm';
 urlList[168] = 'https://www.gao.gov/assets/600/592832.pdf';
 urlList[169] = 'https://www.idmanagement.gov/wp-content/uploads/sites/1171/uploads/FICAM_Roadmap_and_Implem_Guid.pdf';
 urlList[170] = '';
