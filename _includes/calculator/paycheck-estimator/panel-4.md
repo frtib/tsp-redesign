@@ -95,9 +95,9 @@ Results panel (4) for paycheck esitomator.
 <div class="balanceAfter" id="balanceAfter">
   <label for="option12year">Growth of a single contribution after</label>
   <select id="option12year">
-{% for i in (1..40) %}
+  {% for i in (1..40) %}
     <option value="{{i}}">{{i}}</option>
-{% endfor %}
+  {% endfor %}
   </select>
   years
 </div>
