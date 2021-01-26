@@ -12,6 +12,11 @@ span {
 }
 
 section.calculator-panel {
+  &.paycheck {
+    div.balanceAfter {
+      display: block;
+    }
+  }
   &.contribution-election {
     div.usa-input-warning:not(.usa-input-error) {
       width: 113%;
@@ -178,6 +183,26 @@ section {
               text-align: center;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: $medium-screen) {
+
+  section.calculator-panel {
+    &.paycheck {
+      div.balanceAfter {
+        display: flex;
+        padding: 0 2rem;
+        align-items: baseline;
+
+        select {
+          width: max-content;
+          padding-right: 3.5rem;
+          margin: 0 1rem;
         }
       }
     }
