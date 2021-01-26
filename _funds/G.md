@@ -36,7 +36,7 @@ summary_details:
     other_expense:  .000
     benchmark_index: Not applicable
     asset_manager: Not applicable
-composition_update: December 31, 2018
+composition_update: December 31, 2019
 composition:
   - [Short-term U.S. Treasury securities, 100.0]
 top_ten_update: 12/31/2019
