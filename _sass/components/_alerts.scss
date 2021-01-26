@@ -36,11 +36,42 @@
   h5 {
     font-size: 2.5rem;
   }
+
+  &.usa-alert-warning {
+    // background-image: url($baseurl + '/assets/img/icons/alert-circle.svg');
+    border-top-color: #000000;
+
+    &.holiday,
+    &.outage {
+      .usa-alert-body {
+        > :first-child {
+          min-height: auto; // Override line 29 for h3
+        }
+
+        p {
+          max-width: none;
+        }
+      }
+    }
+
+    &.outage {
+      background-image: url($baseurl + '/assets/img/icons/power-button-off.svg');
+      background-size: auto 30px;
+    }
+
+    .usa-alert-body {
+      padding-left: 5rem;
+    }
+  }
+  // END &.usa-alert-warning
 }
+// END .usa-alert
+
 .usa-alert-paragraph {
   width: auto;
   max-width: 66ch;
 }
+
 .usa-alert--success,
 .usa-alert-success {
   border-top-color: $color-green;
@@ -71,15 +102,6 @@
       font-size: 3.5rem;
     }
   }
-
-  .usa-alert-body {
-    padding-left: 5rem;
-  }
-}
-
-.usa-alert-warning {
-  // background-image: url($baseurl + '/assets/img/icons/alert-circle.svg');
-  border-top-color: #000000;
 
   .usa-alert-body {
     padding-left: 5rem;
