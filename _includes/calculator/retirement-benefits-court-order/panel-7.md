@@ -23,6 +23,6 @@ Awards panel (7) for RBCO.
 {% capture bonusButton2 %}
 <button type="button" class="usa-button-secondary build" onclick="activateAward();" markdown="1">Build another award</button>
 {% endcapture %}
-{% include calculator/button-block.html panelID=panelID prev=6 bonusButton2=bonusButton2 submit=8 %}
+{% include calculator/button-block.html panelID=panelID prev=6 bonusButton2=bonusButton2 showResults=8 %}
 
 </section>
