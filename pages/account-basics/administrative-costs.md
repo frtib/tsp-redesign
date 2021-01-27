@@ -44,14 +44,13 @@ in case we want to removed leading zeros
 {% assign fmt_avg_net_expense = avg_net_expense | times: 10 %}
 {% assign fmt_avg_net_expense_percent = avg_net_expense %}
 {% assign net_expense_year = sorted.first.summary_details.as_of_year %}
-__For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
+__For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }} for every $1,000 invested.__
 
-Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio* of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
+Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
 
-\*_Other expenses are fees paid to the investment manager._
-
-<!-- DIRTY Responsive pricing table HTML -->
-
+{% comment %}
+DIRTY Responsive pricing table HTML
+{% endcomment %}
 
 <section class="comparison" markdown="1">
 
