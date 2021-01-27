@@ -1,6 +1,6 @@
 // Responsive comparison table JS
 
-// account-basics/administrative-costs/
+// account-basics/administrative-and-investment-expenses/
 $( "ul.funds-lifecycle" ).on( "click", "li", function() {
   var pos = $(this).index()+2;
   $("table.l tr").find('td').hide();

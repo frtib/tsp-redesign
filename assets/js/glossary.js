@@ -199,6 +199,11 @@ var glossaryTerms = [
       'Generally refers to bonds and similar investments (considered debt instruments) that pay a fixed amount of interest.'
   },
   {
+    term: 'Forfeitures',
+    definition:
+      "Forfeitures—FERS and BRS employees who leave federal service before they are <a href='{{ site.baseurl }}/making-contributions/contribution-types/#a-few-words-about-vesting'>vested</a> in the TSP forfeit the Agency/Service Automatic (1%) Contributions and earnings on those contributions."
+  },
+  {
     term: 'Full Withdrawal',
     definition:
       "A post-separation withdrawal of a participant's entire TSP account through an annuity, a single payment, or monthly payments (or a combination of these three options)."
