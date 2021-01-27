@@ -194,7 +194,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
   </tbody>
 </table>
 
-The returns for the TSP funds represent net earnings after the deduction of administrative expenses and, in the cases of the F, C, S, I, and L Funds, after deduction of trading costs and investment management fees as of January 31, 2019. Additional information about the TSP funds; their related indexes; and their respective monthly, annual, and 10-year returns can be found in the TSP Fund Information sheets or by visiting [Fund Performance]({{ site.baseurl }}/fund-performance/).
+The returns for the TSP funds represent net earnings after the deduction of administrative expenses and, in the cases of the F, C, S, I, and L Funds, after deduction of trading costs and investment management fees. Additional information about the TSP funds; their related indexes; and their respective monthly, annual, and 10-year returns can be found in the TSP Fund Information sheets or by visiting [Fund Performance]({{ site.baseurl }}/fund-performance/).
 
 **Additional information about the TSP core funds:** The Government Securities Investment (G) Fund contains government securities; the Fixed Income Index
 Investment (F) Fund contains government, corporate, and asset-backed bonds; the Common Stock Index Investment (C) Fund contains stocks of large and mediumsized U.S. companies; the Small Capitalization Stock Index Investment (S) Fund contains stocks of small to medium-sized U.S. companies; and the International Stock Index Investment (I) Fund contains stocks from more than 20 developed countries.
