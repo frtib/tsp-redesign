@@ -36,7 +36,7 @@ summary_details:
     other_expense:  .001
     benchmark_index: S&P 500 Index  | spglobal.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2018
+composition_update: December 31, 2019
 composition:
   - [Information Technology, 23.2]
   - [Health Care, 14.2]

@@ -36,7 +36,7 @@ summary_details:
     other_expense:  .004
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2018
+composition_update: December 31, 2019
 composition:
   - [Government/Government-Related, 41.5]
   - [Asset-Backed Securities, 29.6]
@@ -49,7 +49,7 @@ top_ten_text: |
   The F Fund tracks the Bloomberg Barclays U.S. Aggregate Bond Index,
   a broadly diversified index of the U.S. bond market.
 
-  On December 31, 2018, the index included 10,252 notes and bonds.
+  On December 31, 2019, the index included 10,252 notes and bonds.
 
   Because the U.S. Aggregate contains such a large number of securities,
   it is not feasible for the F Fund to invest in each security in the index.
