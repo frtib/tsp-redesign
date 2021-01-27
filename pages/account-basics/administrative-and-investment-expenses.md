@@ -37,11 +37,12 @@ In addition to our administrative expenses, we also have **investment expenses**
 
 To meet our net administrative expenses and our investment expenses, we make small reductions to our funds’ earnings. All TSP participants in a given fund pay the same percentage of their investment in the fund to help us meet our expenses. This percentage is called an **expense ratio**. An expense ratio is the result of dividing a fund’s expenses by the average dollar amount held in the fund.
 
-**Example:** In the first table below, you’ll see that the total expense ratio for the F Fund in 2020 was 0.060%. Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
+<!-- DAV, we need a variable for the F Fund total expense ratio in the Example below, right after {{ net_expense_year }} -->
+**Example:** In the first table below, you’ll see that the total expense ratio for the F Fund in {{ net_expense_year }} was 0.060%. Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
 
 You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
 
-This first table shows, for each of the TSP individual funds, the 2020 gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
+This first table shows, for each of the TSP individual funds, the {{ net_expense_year }} gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
 
 {% include components/get_sorted_fund_list funds='Individual' reverse=false %}
 {% assign avg_net_expense = 0.0 %}
@@ -94,6 +95,9 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
   <tbody>
     <!-- Gross Administrative Expense Ratio -->
     <tr>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Gross Administrative Expense Ratio</th>
+    </tr>
+    <tr>
       <th scope="row">Gross Administrative Expense Ratio</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
@@ -102,6 +106,9 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       {% endfor %}
     </tr>
     <!-- Net Administrative Expense Ratio -->
+    <tr>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Net Administrative Expense Ratio</th>
+    </tr>
     <tr>
       <th scope="row">Net Administrative Expense Ratio</th>
       {% for fund in sorted %}
@@ -112,6 +119,9 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
     </tr>
     <!-- Investment Expense Ratio -->
     <tr>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Investment Expense Ratio</th>
+    </tr>
+    <tr>
       <th scope="row">Investment Expense Ratio</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
@@ -120,6 +130,9 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       {% endfor %}
     </tr>
     <!-- Total Expense Ratio (Net Admin + Investment) -->
+    <tr>
+      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Total Expense Ratio (Net Admin + Investment)</th>
+    </tr>
     <tr>
       <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
       {% for fund in sorted %}
@@ -207,5 +220,5 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
 
 </section>
 
-1. {: #foot_1} These L Funds became available in 2020, so a full year of expense data is not yet available.
+1. {: #foot_1} These L Funds became available in {{ net_expense_year }}, so a full year of expense data is not yet available.
 {:.footnotes}
