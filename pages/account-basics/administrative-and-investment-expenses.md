@@ -9,8 +9,8 @@ scripts:
   - /assets/js/responsive-comparison-table.js
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
-  - groupFundAnnualReturns('Lfunds');
   - groupFundAnnualReturns('Index');
+  - groupFundAnnualReturns('Lfunds');
 redirect_from:
   - /account-basics/administrative-costs/
   - /InvestmentFunds/FundsOverview/expenses.html
@@ -58,11 +58,11 @@ in case we want to removed leading zeros
 {% assign fmt_avg_net_expense = avg_net_expense | times: 10 %}
 {% assign fmt_avg_net_expense_percent = avg_net_expense %}
 {% assign net_expense_year = sorted.first.summary_details.as_of_year %}
-__For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
+<!-- __For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
 
 Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio* of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
 
-\*_Other expenses are fees paid to the investment manager._
+\*_Other expenses are fees paid to the investment manager._ -->
 
 <!-- DIRTY Responsive pricing table HTML -->
 
@@ -92,45 +92,40 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
   </thead>
 
   <tbody>
+    <!-- Gross Administrative Expense Ratio -->
     <tr>
-      <th class="sep-individual" scope="colgroup">Rates of return <span id="index-as-of">as of M/D/YYYY</span></th>
-    </tr>
-    {% for r in rows %}
-    {% assign c = r | split: '|' %}
-        <tr>
-          <th scope="row">{{ c[1] }}</th>
-          {% for fund in sorted %}
-            <td{% if forloop.index == 3 %} class="default"{% endif %} id='ret-{{c[0]}}-{{ fund.Fund_name | downcase | replace: " ", "-" }}'>-</td>
-          {% endfor %}
-        </tr>
-    {% endfor %}
-    <tr>
-      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses<sup markdown="1">[1](#foot_1)</sup></th>
-    </tr>
-    <tr>
-      <th scope="row">Gross</th>
+      <th scope="row">Gross Administrative Expense Ratio</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.gross_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
+    <!-- Net Administrative Expense Ratio -->
     <tr>
-      <th scope="row">Net<sup>1</sup></th>
+      <th scope="row">Net Administrative Expense Ratio</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.net_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
+    <!-- Investment Expense Ratio -->
     <tr>
-      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses<sup markdown="1">[2](#foot_2)</sup></th>
-    </tr>
-    <tr>
-      <th scope="row"></th>
+      <th scope="row">Investment Expense Ratio</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
+        </td>
+      {% endfor %}
+    </tr>
+    <!-- Total Expense Ratio (Net Admin + Investment) -->
+    <tr>
+      <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
+      {% for fund in sorted %}
+        <td{% if forloop.index == 3 %} class="default"{% endif %}>
+        <!-- DAV, this is my attempt at Liquid math. It didn't work. -->
+         {% include components/expense_string.html value="Sum of Net + Investment ratios" percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
