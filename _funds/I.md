@@ -30,10 +30,10 @@ inception_date: 5/1/2001
 summary_update: 12/31/2019
 summary_details:
     assets: $54.3 billion
-    as_of_year: 2019
-    gross_expense:  .052
-    net_expense:    .042
-    other_expense:  .007
+    as_of_year: 2020
+    gross_expense:  .059
+    net_expense:    .049
+    other_expense:  .006
     benchmark_index: MSCI EAFE Index | msci.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2019

@@ -30,10 +30,10 @@ inception_date: 1/29/1988
 summary_update: 12/31/2019
 summary_details:
     assets: $226.9 billion
-    as_of_year: 2019
-    gross_expense:  .052
-    net_expense:    .042
-    other_expense:  .001
+    as_of_year: 2020
+    gross_expense:  .059
+    net_expense:    .049
+    other_expense:  .002
     benchmark_index: S&P 500 Index  | spglobal.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2019
