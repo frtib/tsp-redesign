@@ -30,10 +30,10 @@ inception_date: 1/29/1988
 summary_update: 12/31/2019
 summary_details:
     assets: $33.5 billion
-    as_of_year: 2019
-    gross_expense:  .052
-    net_expense:    .042
-    other_expense:  .004
+    as_of_year: 2020
+    gross_expense:  .058
+    net_expense:    .048
+    other_expense:  .012
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2019

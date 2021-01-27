@@ -30,9 +30,9 @@ inception_date: 4/1/1987
 summary_update: 12/31/2019
 summary_details:
     assets: $243.8 billion
-    as_of_year: 2019
-    gross_expense:  .053
-    net_expense:    .043
+    as_of_year: 2020
+    gross_expense:  .059
+    net_expense:    .049
     other_expense:  .000
     benchmark_index: Not applicable
     asset_manager: Not applicable
