@@ -118,7 +118,7 @@ DIRTY Responsive pricing table HTML
       <th scope="row"></th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
-         {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
+         {% include components/expense_string.html value=fund.summary_details.investment_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
@@ -187,7 +187,7 @@ DIRTY Responsive pricing table HTML
       <th scope="row"></th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
-         {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
+         {% include components/expense_string.html value=fund.summary_details.investment_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>

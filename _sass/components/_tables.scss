@@ -515,46 +515,46 @@ section.comparison {
       }
     } // END table
 
-
-  }
-  // @media (min-width: $medium-screen) {
-  @media (min-width: 640px) {
-    ul {
-      &.funds-individual,
-      &.funds-lifecycle {
-        display: none;
-      }
-    }
-
-    table {
-      // width: 110%;
-    }
-
-    th {
-      text-align: center;
-    }
-    td,
-    th {
-      display: table-cell !important;
-    }
-
-    table {
-      tbody {
-        th {
-          text-align: left; // colspan row
-          display: table-cell;
+    @media (min-width: 640px) {
+      ul {
+        &.funds-individual,
+        &.funds-lifecycle {
+          display: none;
         }
       }
-    }
 
-    td+td,
-    th+th {
-      width: auto;
-    }
+      table {
+        // td {
+        //   text-align: right;
+        // }
+      }
 
-    col.column-width {
-      width: auto
+      th,
+      td {
+        display: table-cell !important;
+        text-align: center;
+      }
+
+      table {
+        tbody {
+          th {
+            text-align: left; // colspan row
+            display: table-cell;
+          }
+        }
+      }
+
+      td+td,
+      th+th {
+        width: auto;
+      }
+
+      col.column-width {
+        width: auto
+      }
     }
+    // END @media
   }
-  // END @media
+  // END &.expenses
 }
+// END section.comparison
