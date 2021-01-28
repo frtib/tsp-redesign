@@ -114,6 +114,11 @@ scripts:
               <p><b>Other expenses</b><br>
                 {% include components/expense_string.html value=page.summary_details.other_expense as_of=page.summary_details.as_of_year %}
               </p>
+              <p><b>Total expense ratio</b><br>
+                {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.other_expense %}
+                {% if page.summary_details.other_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+                {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
+              </p>
 {% if page.Fund_type == 'Individual' %}
                 <p><b>Benchmark index</b><br>
                   {{ page.summary_details.benchmark_index }}
