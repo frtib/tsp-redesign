@@ -66,18 +66,12 @@ in case we want to removed leading zeros
 
 You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
 
-This first table shows, for each of the TSP individual funds, the {{ net_expense_year }} gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
+This first table shows, for each of the TSP individual funds, the **{{ net_expense_year }}** gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
 
-<!-- __For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
-
-Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio* of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
-
-\*_Other expenses are fees paid to the investment manager._ -->
-
-<!-- DIRTY Responsive pricing table HTML -->
+{% comment %} DIRTY Responsive pricing table HTML {% endcomment %}
 
 
-<section class="comparison" markdown="1">
+<section class="comparison expenses" markdown="1">
 
 ## Individual funds
 {% include components/get_sorted_fund_list funds='Individual' reverse=false %}
@@ -94,7 +88,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
 <col class="column-width">
   <thead>
     <tr>
-      <th class="hide"></th>
+      <!-- <th class="hide"></th> -->
       {% for fund in sorted %}
         <th class="bg-blue{% if forloop.index == 3 %} default{% endif %}">{{ fund.Fund_name }}</th>
       {% endfor %}
@@ -107,7 +101,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Gross Administrative Expense Ratio</th>
     </tr>
     <tr>
-      <th scope="row">Gross Administrative Expense Ratio</th>
+      <!-- <th scope="row">Gross Administrative Expense Ratio</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.gross_expense percentOnly=true %}
@@ -119,7 +113,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Net Administrative Expense Ratio</th>
     </tr>
     <tr>
-      <th scope="row">Net Administrative Expense Ratio</th>
+      <!-- <th scope="row">Net Administrative Expense Ratio</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.net_expense percentOnly=true %}
@@ -131,7 +125,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Investment Expense Ratio</th>
     </tr>
     <tr>
-      <th scope="row">Investment Expense Ratio</th>
+      <!-- <th scope="row">Investment Expense Ratio</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
@@ -143,7 +137,7 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
       <th class="sep-individual" scope="colgroup">Total Expense Ratio (Net Admin + Investment)</th>
     </tr>
     <tr>
-      <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
+      <!-- <th scope="row">Total Expense Ratio (Net Admin + Investment)</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
         {% assign total_expense = fund.summary_details.net_expense | plus: fund.summary_details.other_expense %}
@@ -159,84 +153,83 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
 
 ## Lifecycle funds
 {% include components/get_sorted_fund_list funds='lifecycle' reverse=false %}
-{% assign rowString = "YTD|YTD, 1YR|1-year, 3YR|3-year, 5YR|5-year, 10YR|10-year, Life|Life" %}
-{% assign rows = rowString | split: ', ' %}
+
+{% capture foot_1 %}<sup markdown="1">[1](#foot_1)</sup>{% endcapture %}
+{% capture foot_2 %}<sup markdown="1">[2](#foot_2)</sup>{% endcapture %}
 
 <ul class="funds-lifecycle">
 {% for fund in sorted %}
+  {% assign cur_fund = fund.Fund_name %}
+  {% if fund.summary_details.gross_expense == "-" %}
+  {% assign cur_fund = cur_fund | append: foot_1 | markdown %}{% endif %}
+
   <li{% if forloop.index == 3 %} class="active"{% endif %}>
-    <button type="button">{{ fund.Fund_name }}</button>
+    <!-- <button type="button">{{ fund.Fund_name }}</button> -->
+    <button type="button">{{ cur_fund }}</button>
   </li>
 {% endfor %}
 </ul>
 
-{% capture foot_1 %}<sup markdown="1">[1](#foot_1)</sup>{% endcapture %}
-{% capture foot_2 %}<sup markdown="1">[2](#foot_2)</sup>{% endcapture %}
+
 <table class="l">
 <col class="column-width">
   <thead>
     <tr>
-      <th class="hide"></th>
+      <!-- <th class="hide"></th> -->
       {% for fund in sorted %}
         {% assign cur_fund = fund.Fund_name %}
-        {% if fund.summary_details.gross_expense == "-" %}{% assign cur_fund = cur_fund | append: foot_1 | markdown %}{% endif %}
-        <th class="{% if forloop.index == 3 %} default{% endif %}">{{ cur_fund }}</th>
+        {% if fund.summary_details.gross_expense == "-" %}
+        {% assign cur_fund = cur_fund | append: foot_1 | markdown %}{% endif %}
+
+        <th class="{% if forloop.index == 3 %} default
+        {% endif %}">
+        {{ cur_fund }}</th>
       {% endfor %}
     </tr>
   </thead>
   <tbody>
-
-{% comment %}
+  <!-- Gross Administrative Expense Ratio -->
     <tr>
-      <th class="sep" scope="colgroup">Rates of return <span id="l-fund-as-of">as of M/D/YYYY</span></th>
-    </tr>
-{% for r in rows %}
-{% assign c = r | split: '|' %}
-    <tr>
-      <th scope="row">{{ c[1] }}</th>
-      {% for fund in sorted %}
-        <td{% if forloop.index == 3 %} class="default"{% endif %} id='ret-{{c[0]}}-{{ fund.Fund_name | downcase | replace: " ", "-" }}'>-</td>
-      {% endfor %}
-    </tr>
-{% endfor %}
-{% endcomment %}
-    <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses{{foot_1}}</th>
+      <th class="sep" scope="colgroup">Gross Administrative Expense Ratio</th>
     </tr>
     <tr>
-      <th scope="row">Gross</th>
+      <!-- <th scope="row">Gross</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.gross_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
+    <!-- Net Administrative Expense Ratio -->
     <tr>
-      <th scope="row">Net{{foot_1}}</th>
+      <th class="sep" scope="colgroup">Net Administrative Expense Ratio</th>
+    </tr>
+    <tr>
+      <!-- <th scope="row">Net{{foot_1}}</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.net_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
+    <!-- Investment Expense Ratio -->
     <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses{{foot_2}}</th>
+      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Investment Expense Ratio</th>
     </tr>
     <tr>
-      <th scope="row"></th>
+      <!-- <th scope="row"></th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
-
     <!-- Total Expense Ratio (Net Admin + Investment) -->
     <tr>
-      <th class="sep-individual" scope="colgroup">Total Expense Ratio (Net Admin + Investment)</th>
+      <th class="sep" scope="colgroup">Total Expense Ratio (Net Admin + Investment)</th>
     </tr>
     <tr>
-      <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
+      <!-- <th scope="row">Total Expense Ratio (Net Admin + Investment)</th> -->
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
         {% assign total_expense = fund.summary_details.net_expense | plus: fund.summary_details.other_expense %}

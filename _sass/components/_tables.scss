@@ -347,140 +347,214 @@ section.comparison.paycheck {
       // END &.table-header-buttons
     }
     // END ul
-    table {
-      border-collapse: collapse;
-      table-layout: fixed;
-      width: 100%;
-      margin-top: 0;
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 0;
 
-      th,
-      td {
-        height: 53px;
-        border: 1px solid #DDD;
-        padding: 1rem;
-        empty-cells: show;
-        // text-align: left;
+    th,
+    td {
+      height: 53px;
+      border: 1px solid #DDD;
+      padding: 1rem;
+      empty-cells: show;
+      // text-align: left;
+    }
+
+    th {
+      // background:#F5F5F5;
+      // display:none;
+      // text-align: left;
+    }
+
+    td,
+    th+th {
+      // th+th omits the first <th> following a <tr>
+      // targets the column headers in thead
+      text-align: center;
+      display: none;
+    }
+
+    td {
+      text-align: right;
+      &.default {
+        display: table-cell;
       }
+    }
 
+    thead {
       th {
-        // background:#F5F5F5;
-        // display:none;
-        // text-align: left;
+        border-top: 3px solid #0097CF;
+        padding: 10px 0;
       }
+    }
 
-      td,
-      th+th {
-        // th+th omits the first <th> following a <tr>
-        // targets the column headers in thead
-        text-align: center;
+    sup {
+      padding-left: 0.3rem;
+    }
+  }
+  // END table
+  .bg-purple {
+    border-top: 3px solid #A32362;
+  }
+
+  .compare-two,
+  .sep,
+  .sep-individual {
+    background: #F5F5F5;
+    font-weight: bold;
+  }
+
+  .txt-l {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .txt-top {
+    position: relative;
+    top: -9px;
+    left: -2px;
+  }
+
+  .tick {
+    font-size: 18px;
+    color: #2CA01C;
+  }
+
+  .hide {
+    border: 0;
+    background: none;
+  }
+  // @media (min-width: $medium-screen) {
+  @media (min-width: 640px) {
+    ul {
+      &.funds-individual,
+      &.funds-lifecycle,
+      &.table-header-buttons {
         display: none;
       }
+    }
 
-      td {
-        text-align: right;
-        &.default {
-          display: table-cell;
+    table {
+      // width: 110%;
+    }
+
+    td,
+    th {
+      display: table-cell !important;
+    }
+
+    td+td,
+    th+th {
+      width: auto;
+    }
+
+    col.column-width {
+      width: 9rem;
+    }
+  }
+  // END @media
+
+  &.contribution-comparison-calculator,
+  &.paycheck {
+    table {
+      .w {
+        width: auto;
+        max-width: 30rem;
+      }
+
+      tr.emphasis {
+        td+td {
+          font-size: 3rem;
         }
+        td {
+          font-size: 3rem;
+        }
+      }
+
+      td+td {
+        // Omits the first <td> following a <tr>; every <td> that follows a <td>
+        text-align: right;
+        padding-right: 1rem;
+        // display:none;
+      }
+    }
+    // end table
+  }
+  // end &.paycheck, &.contribution-comparison-calculator
+}
+// end section.comparison
+
+section.comparison {
+  &.expenses {
+
+    table {
+
+      td,
+      th {
+        // targets the column headers in thead
+        text-align: center;
+        // display: none;
       }
 
       thead {
         th {
-          border-top: 3px solid #0097CF;
-          padding: 10px 0;
-        }
-      }
-
-      sup {
-        padding-left: 0.3rem;
-      }
-    }
-    // END table
-    .bg-purple {
-      border-top: 3px solid #A32362;
-    }
-
-    .compare-two,
-    .sep,
-    .sep-individual {
-      background: #F5F5F5;
-      font-weight: bold;
-    }
-
-    .txt-l {
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .txt-top {
-      position: relative;
-      top: -9px;
-      left: -2px;
-    }
-
-    .tick {
-      font-size: 18px;
-      color: #2CA01C;
-    }
-
-    .hide {
-      border: 0;
-      background: none;
-    }
-    // @media (min-width: $medium-screen) {
-    @media (min-width: 640px) {
-      ul {
-        &.funds-individual,
-        &.funds-lifecycle,
-        &.table-header-buttons {
+          // targets the column headers in thead
+          text-align: center;
           display: none;
         }
       }
 
-      table {
-        // width: 110%;
-      }
-
-      td,
-      th {
-        display: table-cell !important;
-      }
-
-      td+td,
-      th+th {
-        width: auto;
-      }
-
-      col.column-width {
-        width: 9rem;
-      }
-    }
-
-    &.contribution-comparison-calculator,
-    &.paycheck {
-      table {
-        .w {
-          width: auto;
-          max-width: 30rem;
-        }
-
-        tr.emphasis {
-          td+td {
-            font-size: 3rem;
-          }
-          td {
-            font-size: 3rem;
-          }
-        }
-
-        td+td {
-          // Omits the first <td> following a <tr>; every <td> that follows a <td>
-          text-align: right;
-          padding-right: 1rem;
-          // display:none;
+      tbody {
+        th {
+          // target = colspan expense type
+          display: table-cell !important;
+          text-align: left;
         }
       }
-      // end table
-    }
-    // end &.paycheck, &.contribution-comparison-calculator
+    } // END table
+
+
   }
-  // end section.comparison
+  // @media (min-width: $medium-screen) {
+  @media (min-width: 640px) {
+    ul {
+      &.funds-individual,
+      &.funds-lifecycle {
+        display: none;
+      }
+    }
+
+    table {
+      // width: 110%;
+    }
+
+    th {
+      text-align: center;
+    }
+    td,
+    th {
+      display: table-cell !important;
+    }
+
+    table {
+      tbody {
+        th {
+          text-align: left; // colspan row
+          display: table-cell;
+        }
+      }
+    }
+
+    td+td,
+    th+th {
+      width: auto;
+    }
+
+    col.column-width {
+      width: auto
+    }
+  }
+  // END @media
+}
