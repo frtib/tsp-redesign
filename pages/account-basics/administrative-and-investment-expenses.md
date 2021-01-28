@@ -37,16 +37,11 @@ In addition to our administrative expenses, we also have **investment expenses**
 
 To meet our net administrative expenses and our investment expenses, we make small reductions to our funds’ earnings. All TSP participants in a given fund pay the same percentage of their investment in the fund to help us meet our expenses. This percentage is called an **expense ratio**. An expense ratio is the result of dividing a fund’s expenses by the average dollar amount held in the fund.
 
-<!-- DAV, we need a variable for the F Fund total expense ratio in the Example below, right after {{ net_expense_year }} -->
-**Example:** In the first table below, you’ll see that the total expense ratio for the F Fund in {{ net_expense_year }} was 0.060%. Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
-
-You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
-
-This first table shows, for each of the TSP individual funds, the {{ net_expense_year }} gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
-
+{% comment %}Initialize computed values{% endcomment %}
 {% include components/get_sorted_fund_list funds='Individual' reverse=false %}
 {% assign avg_net_expense = 0.0 %}
 {% for fund in sorted %}
+{% if fund.Fund_name == "F Fund" %}{% assign one_fund = fund %}{% endif %}
 {% assign net_expense_year = fund.summary_details.as_of_year %}
 {% assign avg_net_expense = avg_net_expense | plus: fund.summary_details.net_expense %}
 {% endfor %}
@@ -59,6 +54,20 @@ in case we want to removed leading zeros
 {% assign fmt_avg_net_expense = avg_net_expense | times: 10 %}
 {% assign fmt_avg_net_expense_percent = avg_net_expense %}
 {% assign net_expense_year = sorted.first.summary_details.as_of_year %}
+
+<!-- DAV, we need a variable for the F Fund total expense ratio in the Example below, right after {{ net_expense_year }} -->
+{% comment %}one_fund is set in the assignments above.  change that to change which fund is the example {% endcomment %}
+{% assign total_expense = one_fund.summary_details.net_expense | plus: one_fund.summary_details.other_expense %}
+{% if one_fund.summary_details.other_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+{% capture total_expense_fmt %}{% include components/expense_string.html value=total_expense percentOnly=true %}{% endcapture %}
+{% assign total_expense_fmt = total_expense_fmt | strip_newlines %}
+
+**Example:** In the first table below, you’ll see that the total expense ratio for the {{one_fund.Fund_name}} in {{ net_expense_year }} was {{ total_expense_fmt }}. Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
+
+You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
+
+This first table shows, for each of the TSP individual funds, the {{ net_expense_year }} gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
+
 <!-- __For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
 
 Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio* of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
@@ -131,14 +140,15 @@ Expense ratios may also be expressed in basis points. One basis point is 1/100th
     </tr>
     <!-- Total Expense Ratio (Net Admin + Investment) -->
     <tr>
-      <th class="sep-individual" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Total Expense Ratio (Net Admin + Investment)</th>
+      <th class="sep-individual" scope="colgroup">Total Expense Ratio (Net Admin + Investment)</th>
     </tr>
     <tr>
       <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
-        <!-- DAV, this is my attempt at Liquid math. It didn't work. -->
-         {% include components/expense_string.html value="Sum of Net + Investment ratios" percentOnly=true %}
+        {% assign total_expense = fund.summary_details.net_expense | plus: fund.summary_details.other_expense %}
+        {% if fund.summary_details.other_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+        {% include components/expense_string.html value=total_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
@@ -160,18 +170,23 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
 {% endfor %}
 </ul>
 
+{% capture foot_1 %}<sup markdown="1">[1](#foot_1)</sup>{% endcapture %}
+{% capture foot_2 %}<sup markdown="1">[2](#foot_2)</sup>{% endcapture %}
 <table class="l">
 <col class="column-width">
   <thead>
     <tr>
       <th class="hide"></th>
       {% for fund in sorted %}
-        <th class="{% if forloop.index == 3 %} default{% endif %}">{{ fund.Fund_name }}</th>
+        {% assign cur_fund = fund.Fund_name %}
+        {% if fund.summary_details.gross_expense == "-" %}{% assign cur_fund = cur_fund | append: foot_1 | markdown %}{% endif %}
+        <th class="{% if forloop.index == 3 %} default{% endif %}">{{ cur_fund }}</th>
       {% endfor %}
     </tr>
   </thead>
   <tbody>
 
+{% comment %}
     <tr>
       <th class="sep" scope="colgroup">Rates of return <span id="l-fund-as-of">as of M/D/YYYY</span></th>
     </tr>
@@ -184,8 +199,9 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
       {% endfor %}
     </tr>
 {% endfor %}
+{% endcomment %}
     <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses<sup markdown="1">[1](#foot_1)</sup></th>
+      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Administrative expenses{{foot_1}}</th>
     </tr>
     <tr>
       <th scope="row">Gross</th>
@@ -196,7 +212,7 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
       {% endfor %}
     </tr>
     <tr>
-      <th scope="row">Net<sup>1</sup></th>
+      <th scope="row">Net{{foot_1}}</th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.net_expense percentOnly=true %}
@@ -204,13 +220,28 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
       {% endfor %}
     </tr>
     <tr>
-      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses<sup markdown="1">[2](#foot_2)</sup></th>
+      <th class="sep" scope="colgroup">{{ sorted.first.summary_details.as_of_year }} Other expenses{{foot_2}}</th>
     </tr>
     <tr>
       <th scope="row"></th>
       {% for fund in sorted %}
         <td{% if forloop.index == 3 %} class="default"{% endif %}>
          {% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}
+        </td>
+      {% endfor %}
+    </tr>
+
+    <!-- Total Expense Ratio (Net Admin + Investment) -->
+    <tr>
+      <th class="sep-individual" scope="colgroup">Total Expense Ratio (Net Admin + Investment)</th>
+    </tr>
+    <tr>
+      <th scope="row">Total Expense Ratio (Net Admin + Investment)</th>
+      {% for fund in sorted %}
+        <td{% if forloop.index == 3 %} class="default"{% endif %}>
+        {% assign total_expense = fund.summary_details.net_expense | plus: fund.summary_details.other_expense %}
+        {% if fund.summary_details.other_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+        {% include components/expense_string.html value=total_expense percentOnly=true %}
         </td>
       {% endfor %}
     </tr>
