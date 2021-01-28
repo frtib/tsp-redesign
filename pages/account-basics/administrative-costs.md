@@ -1,7 +1,7 @@
 ---
 title: Administrative costs
 layout: page
-permalink: /account-basics/administrative-and-investment-expenses/
+permalink: /account-basics/administrative-costs/
 sidenav: manage-your-plan
 styles:
 scripts:
@@ -12,37 +12,23 @@ document-ready:
   - groupFundAnnualReturns('Lfunds');
   - groupFundAnnualReturns('Index');
 redirect_from:
-  - /account-basics/administrative-costs/
   - /InvestmentFunds/FundsOverview/expenses.html
   - /expenses/
   - /PlanParticipation/BeneficiaryParticipants/administrativeExpenses.html
 publish: false
 ---
 
-# Administrative and investment expenses
+# Administrative costs
 
-All retirement investment vehicles, including the TSP, charge fees in order to meet their expenses. While this cost is only one of several factors you should consider when making investment decisions, the cumulative effect of fees and expenses can substantially reduce the growth of your investments. We encourage you to visit the [Department of Labor’s webpage about retirement plan fees]({{ site.baseurl }}/exit/?idx=170).
+Our expenses are the costs of administering your TSP. The **gross** expenses include
 
-We break our expenses into administrative expenses and investment expenses.
+* the costs of operating and maintaining our recordkeeping system,
+* the cost of providing participant services, and
+* the printing and mailing of notices, statements, and publications.
 
-The TSP’s **gross administrative expenses** include
-- the costs of operating and maintaining our recordkeeping system,
-- the cost of providing participant services, and
-- the printing and mailing of notices, statements, and publications.
+These expenses are paid by the forfeitures of Agency/Service Automatic (1%) Contributions of FERS and BRS participants who leave federal service before they are vested, other forfeitures, and loan fees. Because these amounts are not sufficient to cover all of the TSP's expenses, you share in the remainder of the costs.
 
-These expenses are first paid by <span data-term="forfeitures" class="js-glossary-toggle term term-end">forfeitures</span> and [loan fees]({{ site.baseurl }}/loan-basics/loan-types-and-terms/). **Net administrative expenses** are what’s left over after we’ve used up those forfeitures and fees:
-
-gross administrative expenses – forfeitures and fees = net administrative expenses
-
-In addition to our administrative expenses, we also have **investment expenses**, which are the fees we pay to our investment managers.
-
-To meet our net administrative expenses and our investment expenses, we make small reductions to our funds’ earnings. All TSP participants in a given fund pay the same percentage of their investment in the fund to help us meet our expenses. This percentage is called an **expense ratio**. An expense ratio is the result of dividing a fund’s expenses by the average dollar amount held in the fund.
-
-**Example:** In the first table below, you’ll see that the total expense ratio for the F Fund in 2020 was 0.060%.  Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
-
-You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
-
-This first table shows, for each of the TSP individual funds, the 2020 gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
+**Net** expenses represent the amount that your investment returns were reduced by TSP administrative expenses.
 
 {% include components/get_sorted_fund_list funds='Individual' reverse=false %}
 {% assign avg_net_expense = 0.0 %}
@@ -59,18 +45,15 @@ in case we want to removed leading zeros
 {% assign fmt_avg_net_expense = avg_net_expense | times: 10 %}
 {% assign fmt_avg_net_expense_percent = avg_net_expense %}
 {% assign net_expense_year = sorted.first.summary_details.as_of_year %}
-__For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }}* for every $1,000 invested.__
+__For {{ net_expense_year }}, the average net expense for participants was ${{ fmt_avg_net_expense }} for every $1,000 invested.__
 
-Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio* of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
+Expense ratios may also be expressed in basis points. One basis point is 1/100th of one percent, or 0.01%. Therefore, the {{ net_expense_year }} net expense ratio of {{ fmt_avg_net_expense_percent }}% is {{ avg_net_expense | times: 100 | round: 1 }} basis points. Expressed either way, this means that expenses charged to your account in {{ net_expense_year }} were approximately {{ avg_net_expense | times: 1000 | round }} cents per $1,000 of investment.
 
-\*_Other expenses are fees paid to the investment manager._
-
-<!-- DIRTY Responsive pricing table HTML -->
-
+{% comment %}
+DIRTY Responsive pricing table HTML
+{% endcomment %}
 
 <section class="comparison" markdown="1">
-
-The next table shows the same information for each of the TSP’s Lifecycle (L) Funds. Because each of the L Funds is made up entirely of varying amounts of the G, F, C, S, and I Funds, the expense ratios shown here reflect the expenses of the underlying funds in each L Fund. The L Funds don’t have separate expenses.
 
 ## Lifecycle funds
 {% include components/get_sorted_fund_list funds='lifecycle' reverse=false %}
@@ -211,7 +194,7 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
   </tbody>
 </table>
 
-The returns for the TSP funds represent net earnings after the deduction of administrative expenses and, in the cases of the F, C, S, I, and L Funds, after deduction of trading costs and investment management fees as of January 31, 2019. Additional information about the TSP funds; their related indexes; and their respective monthly, annual, and 10-year returns can be found in the TSP Fund Information sheets or by visiting [Fund Performance]({{ site.baseurl }}/fund-performance/).
+The returns for the TSP funds represent net earnings after the deduction of administrative expenses and, in the cases of the F, C, S, I, and L Funds, after deduction of trading costs and investment management fees. Additional information about the TSP funds; their related indexes; and their respective monthly, annual, and 10-year returns can be found in the TSP Fund Information sheets or by visiting [Fund Performance]({{ site.baseurl }}/fund-performance/).
 
 **Additional information about the TSP core funds:** The Government Securities Investment (G) Fund contains government securities; the Fixed Income Index
 Investment (F) Fund contains government, corporate, and asset-backed bonds; the Common Stock Index Investment (C) Fund contains stocks of large and mediumsized U.S. companies; the Small Capitalization Stock Index Investment (S) Fund contains stocks of small to medium-sized U.S. companies; and the International Stock Index Investment (I) Fund contains stocks from more than 20 developed countries.

@@ -1,5 +1,5 @@
 ---
-title: Administrative costs
+title: Administrative and investment expenses
 layout: page
 permalink: /account-basics/administrative-and-investment-expenses/
 sidenav: manage-your-plan
