@@ -201,7 +201,7 @@ var glossaryTerms = [
   {
     term: 'Forfeitures',
     definition:
-      "Forfeitures—FERS and BRS employees who leave federal service before they are <a href='/making-contributions/contribution-types/#a-few-words-about-vesting'>vested</a> in the TSP forfeit the Agency/Service Automatic (1%) Contributions and earnings on those contributions."
+      "Forfeitures—FERS and BRS employees who leave federal service before they are <a data-term='Vesting'>vested</a> in the TSP forfeit the Agency/Service Automatic (1%) Contributions and earnings on those contributions."
   },
   {
     term: 'Full Withdrawal',
