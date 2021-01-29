@@ -154,7 +154,7 @@
           </th>
       {% for fund in sorted %}
         <td class="fund-content hide col{{ forloop.index }}">
-          <p class="numeric">{% include components/expense_string.html value=fund.summary_details.other_expense percentOnly=true %}</p>
+          <p class="numeric">{% include components/expense_string.html value=fund.summary_details.investment_expense percentOnly=true %}</p>
         </td>
       {% endfor %}
       </tr>

@@ -33,7 +33,7 @@ summary_details:
     as_of_year: 2020
     gross_expense:  .058
     net_expense:    .048
-    other_expense:  .012
+    investment_expense:  .012
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2019

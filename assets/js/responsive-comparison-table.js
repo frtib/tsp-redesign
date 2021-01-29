@@ -1,21 +1,21 @@
 // Responsive comparison table JS
 
-// account-basics/administrative-costs/
-$( "ul.funds-lifecycle" ).on( "click", "li", function() {
-  var pos = $(this).index()+2;
-  $("table.l tr").find('td').hide();
-  $('table.l td:nth-child('+pos+')').css('display','table-cell');
-  $("table.l tr").find('th:not(:eq(0))').hide();
-  $('ul.funds-lifecycle li').removeClass('active');
-  $(this).addClass('active');
-});
-
+// account-basics/administrative-and-investment-expenses/
 $( "ul.funds-individual" ).on( "click", "li", function() {
-  var pos = $(this).index()+2;
+  var pos = $(this).index()+1;
   $("table.i tr").find('td').hide();
   $('table.i td:nth-child('+pos+')').css('display','table-cell');
   $("table.i tr").find('th:not(:eq(0))').hide();
   $('ul.funds-individual li').removeClass('active');
+  $(this).addClass('active');
+});
+
+$( "ul.funds-lifecycle" ).on( "click", "li", function() {
+  var pos = $(this).index()+1;
+  $("table.l tr").find('td').hide();
+  $('table.l td:nth-child('+pos+')').css('display','table-cell');
+  $("table.l tr").find('th:not(:eq(0))').hide();
+  $('ul.funds-lifecycle li').removeClass('active');
   $(this).addClass('active');
 });
 
@@ -40,14 +40,15 @@ $( "ul.table-header-buttons" ).on( "click", "li", function() {
   // Function to do react to the media query
   function fundComparison(mediaQuery) {
     if (mediaQuery.matches) {
-      $('.sep').attr('colspan',11);
+      $('.sep-individual').attr('colspan',5);
     } else {
-      $('.sep').attr('colspan',2);
+      $('.sep-individual').attr('colspan',1);
     }
+
     if (mediaQuery.matches) {
-      $('.sep-individual').attr('colspan',6);
+      $('.sep').attr('colspan',10);
     } else {
-      $('.sep-individual').attr('colspan',2);
+      $('.sep').attr('colspan',1);
     }
   }
 

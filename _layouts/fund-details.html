@@ -108,11 +108,16 @@ scripts:
                 <p><b>Assets</b><br>
                 {{ page.summary_details.assets }}
               </p>
-              <p><b>Net administrative expenses</b><br>
+              <p><b>Net administrative expense ratio</b><br>
                 {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
               </p>
-              <p><b>Other expenses</b><br>
-                {% include components/expense_string.html value=page.summary_details.other_expense as_of=page.summary_details.as_of_year %}
+              <p><b>Investment expense ratio</b><br>
+                {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
+              </p>
+              <p><b>Total expense ratio</b><br>
+                {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
+                {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+                {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
               </p>
 {% if page.Fund_type == 'Individual' %}
                 <p><b>Benchmark index</b><br>
@@ -186,7 +191,7 @@ scripts:
                 {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
               </p>
               <p><b>Other expenses<sup>2</sup></b><br>
-                {% include components/expense_string.html value=page.summary_details.other_expense as_of=page.summary_details.as_of_year %}
+                {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
               </p>
               <ol class="footnotes">
                 <li>{% include components/expense_string.html value=page.summary_details.net_expense alt_value=page.summary_details.alt_net_expense explain=true %}</li>

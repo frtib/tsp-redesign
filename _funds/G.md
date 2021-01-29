@@ -33,7 +33,7 @@ summary_details:
     as_of_year: 2020
     gross_expense:  .059
     net_expense:    .049
-    other_expense:  .000
+    investment_expense:  .000
     benchmark_index: Not applicable
     asset_manager: Not applicable
 composition_update: December 31, 2019

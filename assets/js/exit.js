@@ -108,7 +108,7 @@ urlList[166] = 'https://www.irs.gov/individuals/tax-withholding-estimator';
 urlList[167] = 'https://about.usps.com/newsroom/service-alerts/international/welcome.htm';
 urlList[168] = 'https://www.gao.gov/assets/600/592832.pdf';
 urlList[169] = 'https://www.idmanagement.gov/wp-content/uploads/sites/1171/uploads/FICAM_Roadmap_and_Implem_Guid.pdf';
-urlList[170] = '';
+urlList[170] = 'https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/understanding-your-retirement-plan-fees';
 urlList[171] = '';
 urlList[188] = 'https://www.federalregister.gov/documents/2020/07/17/2020-15468/privacy-act-of-1974-system-of-records'; // pages 43654-43679
 // TSP to Retirement and Beyond Part I
