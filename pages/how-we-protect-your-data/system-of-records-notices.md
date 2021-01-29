@@ -123,7 +123,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a2" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43655 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180)
+  **Federal Register** [85 FR 43654, 43655 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-2, Personnel Security Investigation Files.
 
@@ -232,7 +232,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a5" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43658 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180)
+  **Federal Register** [85 FR 43654, 43658 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-5, Employee Payroll, Leave, and Attendance Records.
 
@@ -329,7 +329,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a7" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43660 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180)
+  **Federal Register** [85 FR 43654, 43660 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-7, Contractor and Consultant Records
 
@@ -418,7 +418,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a9" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43662 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180)
+  **Federal Register** [85 FR 43654, 43662 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170)
 
   **SYSTEM NAME AND NUMBER:** FRTIB-9, Emergency Notification Files.
 
@@ -515,7 +515,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a12" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43664 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43664 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-12, Debt Collection Records.
 
@@ -693,7 +693,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a14" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43666 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43666 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-14, Legal Case Files.
 
@@ -779,7 +779,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a15" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43669 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43669 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-15, Internal Investigations of Harassment and Hostile Work Environment Allegations.
 
@@ -858,7 +858,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a16" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43671 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43671 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-16, Congressional Correspondence Files.
 
@@ -935,7 +935,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a17" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43673 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43673 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-17, Telework and Alternative Work Schedule Records.
 
@@ -1015,7 +1015,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a18" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43675 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43675 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-18, Reasonable Accommodation Records.
 
@@ -1099,7 +1099,7 @@ FRTIB is required to publish a SORN anytime it creates, substantially modifies, 
   </button>
   <div id="a19" class="usa-accordion-content" markdown="1">
 
-  **Federal Register** [85 FR 43654, 43677 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=180).
+  **Federal Register** [85 FR 43654, 43677 (July 21, 2020)]({{ site.baseurl }}/exit/?idx=170).
 
   **SYSTEM NAME AND NUMBER:** FRTIB-19, Freedom of Information Act Records.
 
