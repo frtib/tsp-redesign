@@ -1,0 +1,22 @@
+div.net-admin-expenses {
+
+  width: 66ch;
+
+  table {
+
+      margin: 0 auto;
+      text-align: right;
+      font-style: italic;
+
+      td {
+        border: 0;
+      }
+      tr:nth-child(2) {
+        td {
+          border-bottom: 1px solid black;
+        }
+      }
+
+  }
+
+}

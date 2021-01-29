@@ -20,18 +20,31 @@ redirect_from:
 
 # Administrative and investment expenses
 
-All retirement investment vehicles, including the TSP, charge fees in order to meet their expenses. While this cost is only one of several factors you should consider when making investment decisions, the cumulative effect of fees and expenses can substantially reduce the growth of your investments. We encourage you to visit the [Department of Labor’s webpage about retirement plan fees]({{ site.baseurl }}/exit/?idx=170).
+All retirement investment vehicles, including the TSP, charge fees in order to meet their expenses. While this cost is only one of several factors you should consider when making investment decisions, the cumulative effect of fees and expenses can substantially reduce the growth of your investments. We encourage you to visit the [Department of Labor’s webpage about retirement plan fees](<{{ site.baseurl }}/exit/?idx=170>).
 
 We break our expenses into administrative expenses and investment expenses.
 
 The TSP’s **gross administrative expenses** include
-- the costs of operating and maintaining our recordkeeping system,
-- the cost of providing participant services, and
-- the printing and mailing of notices, statements, and publications.
 
-These expenses are first paid by <span data-term="forfeitures" class="js-glossary-toggle term term-end">forfeitures</span> and [loan fees]({{ site.baseurl }}/loan-basics/loan-types-and-terms/). **Net administrative expenses** are what’s left over after we’ve used up those forfeitures and fees:
+-   the costs of operating and maintaining our recordkeeping system,
+-   the cost of providing participant services, and
+-   the printing and mailing of notices, statements, and publications.
 
-gross administrative expenses – forfeitures and fees = net administrative expenses
+These expenses are first paid by <span data-term="forfeitures" class="js-glossary-toggle term term-end">forfeitures</span> and [loan fees](<{{ site.baseurl }}/loan-basics/loan-types-and-terms/>). **Net administrative expenses** are what’s left over after we’ve used up those forfeitures and fees:
+
+<div class="net-admin-expenses">
+  <table>
+    <tr>
+      <td>gross administrative expenses</td>
+    </tr>
+    <tr>
+      <td>&#8211; forfeitures and fees</td>
+    </tr>
+    <tr>
+      <td>= net administrative expenses</td>
+    </tr>
+  </table>
+</div>
 
 In addition to our administrative expenses, we also have **investment expenses**, which are the fees we pay to our investment managers.
 
@@ -64,7 +77,7 @@ in case we want to removed leading zeros
 
 **Example:** In the first table below, you’ll see that the total expense ratio for the {{one_fund.Fund_name}} in {{ net_expense_year }} was {{ total_expense_fmt }}. Another way of saying that is that TSP participants’ investments in the F Fund were reduced by 60 cents for every $1,000 invested. A participant with $1,000 invested in the F Fund paid 60 cents toward the fund’s expenses; a participant with $100,000 invested paid $60. Everyone pays the same percentage. So the larger your share of the fund, the larger your share of the expenses.
 
-You can quickly convert the expense ratios in the tables below to dollar of cost per $1,000 of money invested by moving the decimal point one space to the right.
+You can quickly convert the expense ratios in the tables below to cost-per-$1,000-invested by moving the decimal point one space to the right. (0.060% converts to $0.60, or 60 cents.)
 
 This first table shows, for each of the TSP individual funds, the **{{ net_expense_year }}** gross administrative expense ratio, the net administrative expense ratio, and the investment expense ratio. It then adds the net administrative expense ratio to the investment expense ratio to show you the total expense ratio. This is how much the fund’s earnings were reduced to allow us to meet our expenses.
 
@@ -74,6 +87,7 @@ This first table shows, for each of the TSP individual funds, the **{{ net_expen
 {% include components/get_sorted_fund_list funds='Individual' reverse=false %}
 
 <!-- Individual funds -->
+
 <ul class="funds-individual">
 {% for fund in sorted %}
   <li{% if forloop.index == 3 %} class="active"{% endif %}>
@@ -145,6 +159,7 @@ This first table shows, for each of the TSP individual funds, the **{{ net_expen
 The next table shows the same information for each of the TSP’s Lifecycle (L) Funds. Because each of the L Funds is made up entirely of varying amounts of the G, F, C, S, and I Funds, the expense ratios shown here reflect the expenses of the underlying funds in each L Fund. The L Funds don’t have separate expenses.
 
 <!-- Lifecycle funds -->
+
 {% include components/get_sorted_fund_list funds='lifecycle' reverse=false %}
 
 {% capture foot_1 %}<sup markdown="1">[1](#foot_1)</sup>{% endcapture %}
@@ -156,8 +171,9 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
   {% if fund.summary_details.gross_expense == "-" %}
   {% assign cur_fund = cur_fund | append: foot_1 | markdown %}{% endif %}
 
-  <li{% if forloop.index == 3 %} class="active"{% endif %}>
+  &lt;li{% if forloop.index == 3 %} class="active"{% endif %}>
     <button type="button">{{ cur_fund }}</button>
+
   </li>
 {% endfor %}
 </ul>
@@ -176,6 +192,7 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
         {{ cur_fund }}</th>
       {% endfor %}
     </tr>
+
   </thead>
   <tbody>
   <!-- Gross administrative expense ratio -->
@@ -229,5 +246,5 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
 
 </section>
 
-1. {: #foot_1} These L Funds became available in {{ net_expense_year }}, so a full year of expense data is not yet available.
-{:.footnotes}
+1.  {: #foot_1} These L Funds became available in {{ net_expense_year }}, so a full year of expense data is not yet available.
+    {:.footnotes}
