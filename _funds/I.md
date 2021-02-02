@@ -33,7 +33,7 @@ summary_details:
     as_of_year: 2020
     gross_expense:  .059
     net_expense:    .049
-    other_expense:  .006
+    investment_expense:  .006
     benchmark_index: MSCI EAFE Index | msci.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2019
