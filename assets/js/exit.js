@@ -74,9 +74,14 @@ urlList[66] = 'https://www.federalregister.gov/documents/2003/05/08/03-11416/pri
 urlList[67] = 'https://www.federalregister.gov/documents/2015/10/23/2015-26940/privacy-act-of-1974-notice-of-an-updated-system-of-records';
 urlList[68] = 'https://www.irs.gov/newsroom/tax-relief-in-disaster-situations';
 urlList[69] = 'https://www.federalregister.gov/documents/2018/12/11/2018-26697/privacy-act-of-1974-system-of-records';
-urlList[70] = 'http://www.cvent.com/d/hnq8zb';
-urlList[71] = 'http://www.cvent.com/d/xnq8z7';
-urlList[72] = 'http://www.cvent.com/d/1nq8zh';
+urlList[70] = 'https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/understanding-your-retirement-plan-fees';
+urlList[71] = '';
+urlList[72] = '';
+urlList[73] = '';
+urlList[74] = '';
+urlList[75] = '';
+urlList[76] = '';
+urlList[77] = '';
 urlList[127] = 'https://www.consumer.ftc.gov/topics/privacy-identity-online-security';
 urlList[128] = 'https://www.federalregister.gov/documents/2019/08/21/2019-18034/privacy-act-of-1974-system-of-records';
 urlList[129] = 'https://www.youtube.com/user/TSP4gov/feed?activity_view=1';
