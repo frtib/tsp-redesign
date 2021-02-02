@@ -1,7 +1,7 @@
 {% assign awardNum = include.awardNum | default: 0 %}
 {% assign maxAwards = include.maxAwards | default: 10 %}
 {% assign divID = awardNum | append: 'awardULheader' %}
-{% capture title %}Award ({{awardNum}} of {{maxAwards}}) <span id="{{awardNum}}AwardStatus">in progress</span>{% endcapture %}
+{% capture title %}<span id="{{awardNum}}AwardNumbering">Award ({{awardNum}} of {{maxAwards}})</span> <span id="{{awardNum}}AwardStatus">in progress</span>{% endcapture %}
 
 {% include calculator/accordion-start.html expanded=true divID=divID icon='' title=title inList=true %}
 
@@ -84,12 +84,13 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     </ul>
 
     <!-- Entitlement date input + date picker -->
-    <div id="{{awardNum}}paymentDate1EntitlementDate-div" class="">
-      <!-- DAV, I'm using a label (and not using aria-labelledby) on this option because the calendar UI is not apparent -->
-      <label class="" id="{{awardNum}}paymentDate1EntitlementDate-label" for="{{awardNum}}paymentDate1EntitlementDate" aria-details="">Entitlement date</label>
-      <span class="" id="{{awardNum}}paymentDate1EntitlementDate-error-message" role="alert"></span>
-      <input id="{{awardNum}}paymentDate1EntitlementDate" name="{{awardNum}}paymentDate1EntitlementDate" class="hasDatepicker flatpickr-input" type="hidden" onblur="DIEMSdateGood(true);" onchange="DIEMSdateGood(true);" value="" min="0" max="10000000" step="0.01" />
-      <input aria-labelledby="entitlement-date1" class="hasDatepicker form-control input active" tabindex="0" type="text" readonly="readonly" placeholder="Enter date" />
+    <div id="aw{{awardNum}}paymentDate1EntitlementDate-div" class="">
+    <!-- DAV, I'm using a label (and not using aria-labelledby) on this option because the calendar UI is not apparent -->
+    <label id="aw{{awardNum}}paymentDate1EntitlementDate-label" class="" for="aw{{awardNum}}paymentDate1EntitlementDate" aria-details="">Entitlement date</label>
+    <span class="" id="aw{{awardNum}}paymentDate1EntitlementDate-error-message" role="alert"></span>
+    <input id="aw{{awardNum}}paymentDate1EntitlementDate" name="aw{{awardNum}}paymentDate1EntitlementDate"
+      onblur="buildString(0, '{{awardNum}}');" onchange="buildString(0, '{{awardNum}}');"
+      class="hasDatepicker flatpickr-input" type="text" placeholder="Enter date" />
     </div><!-- END paymentDate1EntitlementDate -->
 </fieldset>
 </div><!-- END div.panel-form-field -->
@@ -171,12 +172,13 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     </ul>
 
     <!-- Entitlement date input + date picker -->
-    <div id="{{awardNum}}paymentDate2EntitlementDate-div" class="">
+    <div id="aw{{awardNum}}paymentDate2EntitlementDate-div" class="">
     <!-- DAV, I'm using a label (and not using aria-labelledby) on this option because the calendar UI is not apparent -->
-    <label id="{{awardNum}}paymentDate2EntitlementDate-label" class="" for="{{awardNum}}paymentDate2EntitlementDate" aria-details="">Entitlement date</label>
-    <span class="" id="{{awardNum}}paymentDate2EntitlementDate-error-message" role="alert"></span>
-    <input id="{{awardNum}}paymentDate2EntitlementDate" name="{{awardNum}}paymentDate2EntitlementDate" class="hasDatepicker flatpickr-input" type="hidden" onblur="DIEMSdateGood(true);" onchange="DIEMSdateGood(true);" value="" min="0" max="10000000" step="0.01" />
-    <input aria-labelledby="{{awardNum}}entitlement-date2" class="hasDatepicker form-control input active" tabindex="0" type="text" readonly="readonly" placeholder="Enter date" />
+    <label id="aw{{awardNum}}paymentDate2EntitlementDate-label" class="" for="aw{{awardNum}}paymentDate2EntitlementDate" aria-details="">Entitlement date</label>
+    <span class="" id="aw{{awardNum}}paymentDate2EntitlementDate-error-message" role="alert"></span>
+    <input id="aw{{awardNum}}paymentDate2EntitlementDate" name="aw{{awardNum}}paymentDate2EntitlementDate"
+      onblur="buildString(0, '{{awardNum}}');" onchange="buildString(0, '{{awardNum}}');"
+      class="hasDatepicker flatpickr-input" type="text" placeholder="Enter date" />
     </div><!-- END paymentDate2EntitlementDate -->
 </fieldset>
 </div><!-- END div.panel-form-field -->
@@ -205,9 +207,10 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 </span><!-- {{awardNum}}hideB -->
 </span><!-- {{awardNum}}hideA -->
 <!-- DELETE AWARD BUTTON -->
-<ul class="buttons justify-end">
+<ul id="{{awardNum}}deleteButtonDiv" class="buttons justify-end {% if awardNum == 1 %}disabled{% endif %}">
   <li>
-  <button class="usa-button-secondary delete" href="javascript:void(0);" onclick="showPanel(6); return false;">Delete award</button>
+  <button  id="{{awardNum}}deleteButton" class="usa-button-secondary delete" href="javascript:void(0);"  {% if awardNum == 1 %}disabled{% endif %}
+    onclick="removeAward({{awardNum}}, false, {{awardNum}});">Delete award</button>
   </li>
 </ul>
 

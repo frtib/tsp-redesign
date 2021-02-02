@@ -21,12 +21,47 @@ panelGood[{{ panelID }}] = function(forceValue) {
   return flag;
 };
 panelEnter[{{ panelID }}] = function(panel) {
+  initAwardDateFields();
   for (var i = 1; i <= maxAwards; i++) { buildString(0, '' + i); }
   buildAccountSelect(0);
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
     return true;
+}
+
+var dateFieldsInited = false;
+var date1 = [];
+var date2 = [];
+
+function initAwardDateFields() {
+  //if (date1[1] == null) { console.log('already init'); return; }
+  if (dateFieldsInited) { return; }
+  setAwardNumbering();
+  dateFieldsInited = true;
+  console.log('init of date fields');
+  for (var i = 1; i <= maxAwards; i++) {
+    date1[i] = flatpickr("#aw"+i+"paymentDate1EntitlementDate", {
+      // mode: "range",
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+      defaultDate: new Date(),
+//      minDate: "06/02/2003",
+//      maxDate: "today",
+      onChange: function(dObj, dStr) { clearError('dateRange'); }
+    });
+    date2[i] = flatpickr("#aw"+i+"paymentDate2EntitlementDate", {
+      // mode: "range",
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+      defaultDate: new Date(),
+//      minDate: "06/02/2003",
+//      maxDate: "today",
+      onChange: function(dObj, dStr) { clearError('dateRange'); }
+    });
+  }
 }
 
 function awardsGood(flag) {
@@ -234,7 +269,7 @@ function buildString(submit, id) {
       $('#'+id+'hideC').removeClass('hide');
     }
     if ($('#'+id+'paymentDate' + setID + 'Entitlement').prop('checked')) {
-      var paymentDateEntitlementDate = ($('#'+id+'paymentDate' + setID + 'EntitlementDate')).val();
+      var paymentDateEntitlementDate = ($('#aw'+id+'paymentDate' + setID + 'EntitlementDate')).val();
       if (paymentDateEntitlementDate == '') { paymentDateEntitlementDate = 'xx/xx/xx'; }
       xferdate = ' as of ' + paymentDateEntitlementDate;
       $('#'+id+'hideC').removeClass('hide');
@@ -319,11 +354,11 @@ function clearAward(id) {
 
   $('#'+id+'paymentDate1AsOf').prop('checked', false);
   $('#'+id+'paymentDate1Order').prop('checked', false);
-  $('#'+id+'paymentDate1Entitlement').prop('checked', false);
-  $('#'+id+'paymentDate1EntitlementDate').val('');
-  $('#'+id+'paymentDate1EntitlementDate-div').addClass('hide');
-  clearError(id+'paymentDate1');
-  clearError(id+'paymentDate1EntitlementDate');
+  $('#aw'+id+'paymentDate1Entitlement').prop('checked', false);
+  $('#aw'+id+'paymentDate1EntitlementDate').val('');
+  $('#aw'+id+'paymentDate1EntitlementDate-div').addClass('hide');
+  clearError('aw'+id+'paymentDate1');
+  clearError('aw'+id+'paymentDate1EntitlementDate');
 
   pickEarnings('N', id);
   $('#'+id+'earningsYes').prop('checked', false);
@@ -338,10 +373,10 @@ function clearAward(id) {
   clearError(id+'earningsPerdiemRate');
 
   $('#'+id+'paymentDate2Order').prop('checked', false);
-  $('#'+id+'paymentDate2Entitlement').prop('checked', false);
-  $('#'+id+'paymentDate2EntitlementDate').val('');
-  clearError(id+'paymentDate2');
-  clearError(id+'paymentDate2EntitlementDate');
+  $('#aw'+id+'paymentDate2Entitlement').prop('checked', false);
+  $('#aw'+id+'paymentDate2EntitlementDate').val('');
+  clearError('aw'+id+'paymentDate2');
+  clearError('aw'+id+'paymentDate2EntitlementDate');
 
   $('#'+id+'osLoanIncluded').prop('checked', false);
   $('#'+id+'osLoanExcluded').prop('checked', false);
@@ -369,8 +404,8 @@ function setAwardBase(id, show, awardType, fixed, percentage, entitlement, entit
   $('#'+id+'percentage').val(percentage);
   pickPaymentDate(1, entitlement, id);
   pickPaymentDate(2, entitlement, id);
-  $('#'+id+'paymentDate1EntitlementDate').val(entitlement1Date);
-  $('#'+id+'paymentDate2EntitlementDate').val(entitlement2Date);
+  $('#aw'+id+'paymentDate1EntitlementDate').val(entitlement1Date);
+  $('#aw'+id+'paymentDate2EntitlementDate').val(entitlement2Date);
   pickEarnings(earnings, id);
   $('#'+id+'earningsPercentRate').val(earningsPercentRate);
   $('#'+id+'earningsPerdiemRate').val(earningsPerdiemRate);
@@ -464,9 +499,9 @@ function copyAward(i, j) {
   if($('#'+j+'paymentDate1AsOf').prop('checked')) { pickPaymentDate(1, 'P', i); }
   if($('#'+j+'paymentDate1Order').prop('checked')) { pickPaymentDate(1, 'O', i); }
   if($('#'+j+'paymentDate1Entitlement').prop('checked')) { pickPaymentDate(1, 'E', i); }
-  $('#'+i+'paymentDate1EntitlementDate').val($('#'+j+'paymentDate1EntitlementDate').val());
+  $('#aw'+i+'paymentDate1EntitlementDate').val($('#aw'+j+'paymentDate1EntitlementDate').val());
   clearError(i+'paymentDate1');
-  clearError(i+'paymentDate1EntitlementDate');
+  clearError('aw'+i+'paymentDate1EntitlementDate');
 
   if($('#'+j+'earningsNo').prop('checked')) { pickEarnings('N', i); }
   if($('#'+j+'earningsYes').prop('checked')) { pickEarnings('Y', i); }
@@ -480,10 +515,10 @@ function copyAward(i, j) {
   clearError(i+'earningsPerdiemRate');
 
   if($('#'+j+'paymentDate2Order').prop('checked')) { pickPaymentDate(2, 'O', i); }
-  if($('#'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
-  $('#'+i+'paymentDate2EntitlementDate').val($('#'+j+'paymentDate2EntitlementDate').val());
+  if($('#aw'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
+  $('#aw'+i+'paymentDate2EntitlementDate').val($('#aw'+j+'paymentDate2EntitlementDate').val());
   clearError(i+'paymentDate2');
-  clearError(i+'paymentDate2EntitlementDate');
+  clearError('aw'+i+'paymentDate2EntitlementDate');
 
   if($('#'+j+'osLoanIncluded').prop('checked')) { pickOSloans('I', i); }
   if($('#'+j+'osLoanExcluded').prop('checked')) { pickOSloans('E', i); }
@@ -517,7 +552,7 @@ console.log('pickAwardType', {flag}, {id});
     $('#'+id+'osLoans-div').removeClass('hide');
   } else {
     clearError(id+'percentage');
-    clearError(id+'paymentDate2EntitlementDate');
+    clearError('aw'+id+'paymentDate2EntitlementDate');
   }
   if (flag == 'F') {
     $('#'+id+'awardTypeFixed').prop('checked', true);
@@ -528,7 +563,7 @@ console.log('pickAwardType', {flag}, {id});
     $('#'+id+'osLoans-div').addClass('hide');
   } else {
     clearError(id+'fixedAmount');
-    clearError(id+'paymentDate1EntitlementDate');
+    clearError('aw'+id+'paymentDate1EntitlementDate');
   }
   // return awardTypeGood(0, id);
   return true;
@@ -571,11 +606,11 @@ function percentageGood(submit, id) {
 }
 
 function showHidePaymentDate(idx, id) {
-  var field = '#'+id+'paymentDate' + idx + 'Entitlement';
-  if ($(field).prop('checked')) {
-    $(field +'Date-div').removeClass('hide');
+  var field = ''+id+'paymentDate' + idx + 'Entitlement';
+  if ($('#'+field).prop('checked')) {
+    $('#aw'+field +'Date-div').removeClass('hide');
   } else {
-    $(field +'Date-div').addClass('hide');
+    $('#aw'+field +'Date-div').addClass('hide');
   }
   return true;
 }
@@ -762,8 +797,8 @@ function osLoansGood(submit, id) {
 }
 
 function paymentDateGood(submit, id) {
-  if (!($('#'+id+'paymentDate1Entitlement').prop('checked'))) { clearError(id+'paymentDate1EntitlementDate'); }
-  if (!($('#'+id+'paymentDate2Entitlement').prop('checked'))) { clearError(id+'paymentDate2EntitlementDate'); }
+  if (!($('#aw'+id+'paymentDate1Entitlement').prop('checked'))) { clearError('aw'+id+'paymentDate1EntitlementDate'); }
+  if (!($('#aw'+id+'paymentDate2Entitlement').prop('checked'))) { clearError('aw'+id+'paymentDate2EntitlementDate'); }
 
   var setID = 0;
   if ($('#'+id+'awardTypeFixed').prop('checked')) { setID = 2; clearError(id+'paymentDate2'); }
@@ -807,11 +842,11 @@ function paymentDateEntitlementGood(setID, submit, id) {
 }
 
 function paymentDateEntitlementDateGood(setID, submit, id) {
-  var paymentDateEntitlementDate = $.trim($('#'+id+'paymentDate' + setID + 'EntitlementDate').val());
+  var paymentDateEntitlementDate = $.trim($('#aw'+id+'paymentDate' + setID + 'EntitlementDate').val());
   $('#'+id+'lblAYRpaymentDateEntitlementDate').html(paymentDateEntitlementDate);
-  if (paymentDateEntitlementDate.length > 0) { return clearError(id+'paymentDate' + setID + 'EntitlementDate'); }
-  if (submit) { return showError(id+'paymentDate' + setID + 'EntitlementDate', 'Entitlement date is required.'); }
-  clearError(id+'paymentDate' + setID + 'EntitlementDate');
+  if (paymentDateEntitlementDate.length > 0) { return clearError('aw'+id+'paymentDate' + setID + 'EntitlementDate'); }
+  if (submit) { return showError('aw'+id+'paymentDate' + setID + 'EntitlementDate', 'Entitlement date is required.'); }
+  clearError('aw'+id+'paymentDate' + setID + 'EntitlementDate');
   return false;
 }
 
@@ -829,21 +864,40 @@ function awardTextGood(id) {
 
    return buildString(1, id);
 }
+function disableBuildAnotherButton() {
+  console.log('DAV disable build another button');
+  $('#buildAnotherButton').prop('disabled',true);
+}
+function enableBuildAnotherButton() {
+  console.log('DAV enable build another button');
+  $('#buildAnotherButton').prop('disabled',false);
+}
+function disableDeleteButton1() {
+  console.log('DAV disable delete button 1');
+  $('#1deleteButtonDiv').addClass('disabled');
+  $('#1deleteButton').prop('disabled',true);
+}
+function enableDeleteButton1() {
+  $('#1deleteButtonDiv').removeClass('disabled');
+  $('#1deleteButton').prop('disabled',false);
+}
 function activateAward() {
+console.log('activateAward');
   var i;
-  for (i = 1; i <= 6; i++) {
+  for (i = 1; i <= maxAwards; i++) {
     if ( $('#' + i + 'awardActive').val() != 1) {
         activateAwardDiv(i);
         return true;
     }
   }
   // showError('awards', 'at max awards');
-  do_alert('maximumAwards');
+  // do_alert('maximumAwards');
+  confirm('maximumAwards');
   return false;
 }
-function deactivateAward() {
+function deactivateAwardXX() {
   var i;
-  for (i = 6; i >= 1; i--) {
+  for (i = maxAwards; i >= 1; i--) {
     if ( $('#' + i + 'awardActive').val() == 1) {
         deactivateAwardDiv(i, i);
         return true;
@@ -853,52 +907,29 @@ function deactivateAward() {
   return false;
 }
 function activateAwardDiv(id) {
-if (id == 6) {
-   $('#activateAwardImg').addClass('hide');
-   $('#maxAwardImg').removeClass('hide');
-} else {
-   $('#activateAwardImg').removeClass('hide');
-   $('#maxAwardImg').addClass('hide');
-}
-if (id == 1) {
-   $('#1deactivateAwardImg').addClass('hide');
-   $('#minAwardImg').addClass('hide');
-} else {
-   $('#1deactivateAwardImg').removeClass('hide');
-   $('#minAwardImg').addClass('hide');
-}
-clearError('awards');
-   $('#' + id + 'awardActive').val(1);
-   $('#' + id + 'awardActiveDiv').removeClass('hide');
-$('#' + id + 'awardActiveDiv').removeClass("a11yAccordionHideArea");
-//awardsGood(true);  // Dav
-setAwardNumbering();
-return true;
+console.log('activateAwardDiv', id);
+  if (id > maxAwards) { disableBuildAnotherButton(); return false; }
+  $('#'+id+'awardActiveDiv').removeClass('hide');
+  $('#'+id+'awardActive').val(1);
+  if (id > 1) { enableDeleteButton1(); }
+  if (id >= maxAwards) {
+    // at max awards
+    console.log('at max awards');
+    disableBuildAnotherButton();
+  }
+  clearError('awards');
+  setAwardNumbering();
+  return true;
 }
 function deactivateAwardDiv(id, start) {
-if (id == 2) {
-   $('#1deactivateAwardImg').addClass('hide');
-   $('#minAwardImg').removeClass('hide');
-} else {
-   $('#1deactivateAwardImg').removeClass('hide');
-   $('#minAwardImg').addClass('hide');
-}
-if (start != 6) {
-   $('#activateAwardImg').removeClass('hide');
-   $('#maxAwardImg').addClass('hide');
-} else {
-   $('#activateAwardImg').addClass('hide');
-   $('#maxAwardImg').removeClass('hide');
-}
-clearError('awards');
-   $('#' + id + 'awardActive').val(0);
-   $('#' + id + 'awardActiveDiv').addClass('hide');
-$('#' + id + 'awardActiveDiv').addClass("a11yAccordionHideArea");
-clearAward(id);
-//copyAward(id, id+1);
-//awardsGood(true);  // Dav
-setAwardNumbering();
-return true;
+console.log('DAV deactivateAwardDiv', id, start);
+  enableBuildAnotherButton();
+  clearError('awards');
+  $('#' + id + 'awardActive').val(0);
+  $('#' + id + 'awardActiveDiv').addClass('hide');
+  clearAward(id);
+  setAwardNumbering();
+  return true;
 }
 function setAwardText(txt, id) {
     // $('#'+idAward).val(tmp);
@@ -916,7 +947,7 @@ function setAwardText(txt, id) {
 // function setAwardNumbering(id, maxid) {
 function setAwardNumbering() {
   var i;
-  var j = 6;
+  var j = maxAwards;
   for (i = j; i >= 1; i--) {
     if ($('#' + i + 'awardActive').val() == 0) {
       j--;
@@ -966,9 +997,11 @@ function removeConfirm(id) {
 }
 
 function removeAward(id, force, start) {
+console.log('removeAward', id, force, start);
    if($('#' + id + 'awardActive').val() == 0) { return false; }  // dont remove if inactive
+console.log('in removeAward', id, force, start);
 
-   if (id == 6) {
+   if (id == maxAwards) {
      // removing end of list
      if (force || removeConfirm(id)) { return deactivateAwardDiv(id, start); }
      return false;
@@ -977,7 +1010,8 @@ function removeAward(id, force, start) {
    if($('#' + (id+1) + 'awardActive').val() == 0) {
      if (id == 1) {
         // showError('awards', 'You must have at least one award.');
-        do_alert('minimumAwards');
+        // do_alert('minimumAwards');
+        confirm('minimumAwards');
         return false;
      }
      // removing last active one

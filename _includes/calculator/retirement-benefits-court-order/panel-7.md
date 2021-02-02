@@ -17,11 +17,12 @@ Awards panel (7) for RBCO.
 
 {% for awardNum in (1..maxAwards) %}
 <ul id="{{awardNum}}awardActiveDiv" class="usa-accordion-bordered award {% if awardNum >= 2 %}hide{% endif %}">
+<input id="{{awardNum}}awardActive" type="hidden" value="{% if awardNum >= 2 %}0{% else %}1{% endif %}">
 {% include calculator/retirement-benefits-court-order/award-section.html awardNum=awardNum maxAwards=maxAwards %}
 </ul>
 {% endfor %}
 {% capture bonusButton2 %}
-<button type="button" class="usa-button-secondary build" onclick="activateAward();" markdown="1">Build another award</button>
+<button id="buildAnotherButton" type="button" class="usa-button-secondary build" onclick="activateAward();" markdown="1">Build another award</button>
 {% endcapture %}
 {% include calculator/button-block.html panelID=panelID prev=6 bonusButton2=bonusButton2 showResults=8 %}
 

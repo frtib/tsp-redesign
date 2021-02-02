@@ -4,6 +4,8 @@ title: Retirement benefits court order
 sidenav: manage-life-changes
 styles:
 scripts:
+  - /assets/js/flatpickr/flatpickr.js
+  - /assets/js/flatpickr/date-range.js
   - /assets/js/calculator/javascriptTaxTable.js
   - /assets/js/calculator/calculator.js
   - /assets/js/calculator/placeholder.js
