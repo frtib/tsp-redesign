@@ -20,7 +20,7 @@ redirect_from:
 
 # Administrative and investment expenses
 
-All retirement investment vehicles, including the TSP, charge fees in order to meet their expenses. While this cost is only one of several factors you should consider when making investment decisions, the cumulative effect of fees and expenses can substantially reduce the growth of your investments. We encourage you to visit the [Department of Labor’s webpage about retirement plan fees](<{{ site.baseurl }}/exit/?idx=170>).
+All retirement investment vehicles, including the TSP, charge fees in order to meet their expenses. While this cost is only one of several factors you should consider when making investment decisions, the cumulative effect of fees and expenses can substantially reduce the growth of your investments. We encourage you to visit the [Department of Labor’s webpage about retirement plan fees]({{ site.baseurl }}/exit/?idx=70).
 
 We break our expenses into administrative expenses and investment expenses.
 
