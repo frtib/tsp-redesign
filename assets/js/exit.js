@@ -108,130 +108,98 @@ urlList[166] = 'https://www.irs.gov/individuals/tax-withholding-estimator';
 urlList[167] = 'https://about.usps.com/newsroom/service-alerts/international/welcome.htm';
 urlList[168] = 'https://www.gao.gov/assets/600/592832.pdf';
 urlList[169] = 'https://www.idmanagement.gov/wp-content/uploads/sites/1171/uploads/FICAM_Roadmap_and_Implem_Guid.pdf';
-urlList[170] = 'https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/understanding-your-retirement-plan-fees';
-urlList[171] = '';
-urlList[188] = 'https://www.federalregister.gov/documents/2020/07/17/2020-15468/privacy-act-of-1974-system-of-records'; // pages 43654-43679
+urlList[170] = 'https://www.federalregister.gov/documents/2020/07/17/2020-15468/privacy-act-of-1974-system-of-records'; // pages 43654-43679
+// TSP Early to Mid-Career Training
+urlList[171] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8211d9bf27ad4cfbc969bd599131095c';
+urlList[172] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea828c7c4163ad78f4368fe27ce55ad90';
+urlList[173] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e2ece02772fafabd6c86826273775799b';
+urlList[174] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee11da5f634c598275e0c7b9eda616537';
+urlList[175] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efdd5e8efebfe233a630d7fbf465768e5';
+urlList[176] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e79c22c41f8240d8db3361c02cb91fb6c';
+urlList[177] = '';
+urlList[178] = '';
+urlList[179] = '';
+urlList[180] = '';
+urlList[181] = '';
+urlList[182] = '';
+urlList[183] = '';
+urlList[184] = '';
+urlList[185] = '';
+urlList[186] = '';
+urlList[187] = '';
 // TSP to Retirement and Beyond Part I
-urlList[189] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4db2e868e10685a6a7507d584578f46d';
-urlList[190] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e9f3fe96f562021a3290c5335cbf5c631';
-urlList[191] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e78b8efab986979e11eaff07df9b2b1f5';
+urlList[188] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eff9cc6262d66c6c3ddd3f6fd0796acbc';
+urlList[189] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e14c011ad9081411684b7f0534bacae06';
+urlList[190] = '';
+urlList[191] = '';
 urlList[192] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e29d42e4c373cc11709e01e5edf2f5874';
 urlList[193] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e81480e63d52c038dcf23b39e3612c584';
 urlList[194] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=edff6f5335afa1ab87d3791e8bdec5d6f';
 // TSP to Retirement and Beyond Part II
-urlList[195] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e212e9a8f3a2cf64f1e86e568ed8f3de5';
-urlList[196] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7bac3b91898eff8078f7d87bf0d1e556';
-urlList[197] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea51d5de19419e7beb5ec2c24f268efb6';
+urlList[195] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7fce2f440aef117aba17d5b490b5b497';
+urlList[196] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea5a82ff219af868cdbf317f9de280dff';
+urlList[197] = '';
 urlList[198] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e43d6d2622586fd63856f6b45a5ee9213';
 urlList[199] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eeb0e12ec7063082064a605cc0b34a87d';
 urlList[200] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7f08f1d477c3698c074ec3ab205c8b81';
 // TSP Pre-Separation Training
-urlList[201] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e41c34dc05eb9b9003e36ba8a2f73bde2';
-urlList[202] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e29ea3ac549ef863cb6bfd5555218a052';
-urlList[203] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e3309cbffddbe1965c7ebd5660ad8bb35';
-urlList[204] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea57e43494160b3f553c95fa042e465d3';
+urlList[201] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed9df05403050dd42a75b4b819db1e445';
+urlList[202] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e80414a7e4efb4ab5c87e13b64df8399a';
+urlList[203] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e5436b4f6541ac044684ab0e87d02eed9';
+urlList[204] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e46861667bacd47d710447d87babc9ace';
 urlList[205] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e60b6507e2d668d89bc34d8ff807bef6d';
 urlList[206] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ecf2180c68e08d65ab6b839d03bdcaa15';
 urlList[207] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e5f7ef5869ca7674661eec0de69b9c5ad';
 urlList[208] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e43544b0a559520b4b9a80ae1c6ec715d';
 urlList[209] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea2956a8120d34587888f4abe79efaa9c';
 urlList[210] = '';
-// ASR Training: TSP Investment Funds
-urlList[211] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e3ee5126de161543b7744984fe40926ba';
-urlList[212] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e03243f7682f0a9df4130774add46860f';
-urlList[213] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e13a59f6612a211412c75e84816790cba';
-urlList[214] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7392d0ec483a9fd63270718ac8b0ea12';
-urlList[215] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8cdba27f37c4da445d1192d6c2320bf8';
-urlList[216] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea6020026faeeabccfbc2713c7a1ff620';
-urlList[217] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efb433a33b9c08675cac1af83c05f44f9 ';
-urlList[218] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e41e0dd0944d09259eb5c9ba8c86c72ee';
-urlList[219] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee117e010b0e6bfe37e13732ebebc8f62';
-urlList[220] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e689949347b2f3ab1b5f7b5156c92a1d2';
-urlList[221] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e47d690ec59098e8c83370363112c0127';
-// ASR Training: Intro to TSP
-urlList[222] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e26011060097706b0ff0ef307b36e2db2';
-urlList[223] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ece2a42339aa414d336c7300704a1f1e8';
-urlList[224] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e07c241f1ec5cec56a884375ed8b180c7';
-urlList[225] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8cac230db64abc4772389d3bb63a5745';
+// Intro to TSP
+urlList[222] = '';
+urlList[223] = '';
+urlList[224] = '';
+urlList[225] = '';
 urlList[226] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e95a4b8aaf11b2407080f9405914f3104';
 urlList[227] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8489636ca804c741096d46a49839e43b';
 urlList[228] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eccd396a580f44a92305c42940f55a377';
 urlList[229] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efe49a21577a556fc4b699fcb8afc9942';
 urlList[230] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee061cd234b01dc2ede99b070847c902d';
-// ASR Training: TSP post-service withdrawals
-urlList[231] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e1acdef0af72a3b0aca8449c54d0f6a25';
-urlList[232] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eb597b5381814eb6fb93aff15ac53e341';
-urlList[233] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4ea5f32aac59c2aa918dcee8a51514aa';
-urlList[234] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e555c6d114e9906597a931d1661bf1e4f';
-urlList[235] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eae597d97a58b3c664688f55bdf68b244';
-urlList[236] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eb153d9bae05ded5160b7de31c812a211';
-urlList[237] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e29473ff46ef926c522cfd5e7986a076c';
-urlList[238] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e9587cb82ed2e51a3aa0196752b87127f';
-urlList[239] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efb1d9aef83b94367a3a6701536afbbc9';
-urlList[240] = '';
-// ASR Training: TSP In-service withdrawals
-urlList[241] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e99d787c4c62f077ee4904d4c5e665fcc';
-urlList[242] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eebd578ed682af45c399272592135466e';
-urlList[243] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e443d15c041aec428a8d2d72842636048';
-urlList[244] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e454236bc1b931f717ae078c11907cd33';
+urlList[231] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e0a2dda8b01745fa56ba295b13dea6dac';
+urlList[232] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e912c240b7e4a0c4edf0e78be1ab6a702';
+urlList[233] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e02876e8e81163acce36f0f65816b3bbc';
+urlList[234] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e10da42f0823dccc88257499e59fc98b7';
+// TSP In-service withdrawals
+urlList[241] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e443d15c041aec428a8d2d72842636048';
+urlList[242] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e454236bc1b931f717ae078c11907cd33';
+urlList[243] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=edd841ecf140d6ab64875021459d2c8cf';
+urlList[244] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4390de5040b9e0fea0c7bda7e59662d5';
 urlList[245] = '';
 urlList[246] = '';
 urlList[247] = '';
 urlList[248] = '';
 urlList[249] = '';
 urlList[250] = '';
-// ASR Training: TSP A to Z
-urlList[251] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4b1e07e12643c1740a0daa68ec4283c6';
-urlList[252] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed5e112ea167ed2eaee298e77352180f9';
-urlList[253] = '';
-urlList[254] = '';
-urlList[255] = '';
-// ASR Training: Death Benefits
-urlList[256] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e5e7c9024868c62b046e352460e073d0f';
-urlList[257] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e5bae0fa50fb819551c748e1542b1746a';
-urlList[258] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e0b2a9a00f5d44473fdda63f357ed9e16';
-urlList[259] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e250a3b800b27d4417f0e29932ef0343b';
-urlList[260] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8c3f3ccf2c5b779de923140c2545b609';
-urlList[261] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee519bfdaa0d18122fb4c9464b42ced24';
-urlList[262] = '';
-urlList[263] = '';
-urlList[264] = '';
-// ASR Training: TSP Loans
-urlList[265] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8267fafe201fb6ad284c62e52264c1c6';
-urlList[266] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8a49604190234de95125fd7dde7a404a';
-urlList[267] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4cd097eba979ef19427e3b7f3c2ef5c2';
-urlList[268] = '';
-urlList[269] = '';
-urlList[270] = '';
-// ASR Training: TSP Early to Mid-Career Training
-urlList[271] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e3f1fe4859af7c1b16406cb1a291a4128';
-urlList[272] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e334ae9ca38a0091de5eec1e9a7c6ba39';
-urlList[273] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e2ece02772fafabd6c86826273775799b';
-urlList[274] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee11da5f634c598275e0c7b9eda616537';
-urlList[275] = '';
 // TSP Contributions
-urlList[276] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e2ee56cf2f4b531e263127b19ea568479';
-urlList[277] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e3f14e304c0ba9541c8bd134e8ad698b4';
-urlList[278] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e74bb6520db6e4a364ed0ddea9a9428fa';
-urlList[279] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e144b93f9abf88a7b257ecf75d1089d68';
+urlList[276] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e1b87c5743ec8492bd71038cc439d39a0';
+urlList[277] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e14118634c8e758d33b1ddb93ddf98410';
+urlList[278] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7cc3167bb9f58beb6cc136f8cbad2477';
+urlList[279] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eab684c7d557fcacb5ae034149898bb78';
 urlList[280] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e0e4ff6908e59aa76d9de036903a44238';
 urlList[281] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee8ac689963181b288d42b13be9421c5d';
 urlList[282] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ef388d5705b4a7fec753a7c1bf626e3d9';
 urlList[283] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e851df76941b013a4f637a8be70efce64';
-urlList[284] = '';
-urlList[285] = '';
-// ASR Training: New to the TSP (or ready for a refresher)? Ask away.
-urlList[286] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e33bac104c1b3836b7c8bf2d907b682cf';
-urlList[287] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e0dd4474d05b710aa192b2957ddb33017';
+urlList[284] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4b6b2541c909d5230f4d5bde870face6';
+urlList[285] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea8f52029a639277269e1598b61d51724';
+// New to the TSP (or ready for a refresher)? Ask away.
+urlList[286] = '';
+urlList[287] = '';
 urlList[288] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ebc46d87015a246b5fae263645cd57c6b';
 urlList[289] = '';
 urlList[290] = '';
-// ASR Training: 2020: What has changed at the TSP?
-urlList[248] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8e0bdb098697fc42d16b0f40fbdd5c4e';
-urlList[249] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eb2cb5a3b7334dbc1c46b6be24ffc277a';
-urlList[250] = '';
-urlList[300] = '';
-// END ASR Training courses
+urlList[291] = '';
+urlList[292] = '';
+urlList[293] = '';
+urlList[294] = '';
+// END New to the TSP
 urlList[301] = 'https://www.dol.gov/agencies/ebsa/laws-and-regulations/laws/pension-protection-act/investing-and-diversification';
 urlList[302] = 'https://americasavesweek.org/';
 urlList[303] = 'https://militarysaves.org/';
@@ -248,6 +216,58 @@ urlList[310] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22
 urlList[311] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2a73529';
 // January 2021 newsletter
 urlList[312] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2b66fd7';
+// TSP Investment Funds
+urlList[401] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea6020026faeeabccfbc2713c7a1ff620';
+urlList[402] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efb433a33b9c08675cac1af83c05f44f9';
+urlList[403] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e41e0dd0944d09259eb5c9ba8c86c72ee';
+urlList[404] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee117e010b0e6bfe37e13732ebebc8f62';
+urlList[405] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e689949347b2f3ab1b5f7b5156c92a1d2';
+urlList[406] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e47d690ec59098e8c83370363112c0127';
+urlList[407] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e81300c749f64f6d4015cba7616ba2e61';
+urlList[408] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e1c7688fee20df57c71a383a0bde601fa';
+urlList[409] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4dec3a00e1e07bbd2687f3fc5e07c579';
+urlList[410] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e31fbe5e31d6d212428aebb4cd57bbc53';
+urlList[411] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea7e688517523ebcb87680e322d8092ec';
+urlList[412] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=edbdd606f33f3d35af830a52e0db0f193';
+urlList[413] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eca09445810f853a7d5d9f98ed4650e47';
+urlList[414] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ef851a42bbf824ffef40e8801533f43a7';
+urlList[415] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e537a30d7124722510c0c5a3be6492d48';
+urlList[416] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e3b9305d0f0dae7915a39043d9316ec09';
+urlList[417] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8f53b9c3753ff642b205267a308f5f0f';
+// TSP Loans
+urlList[501] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4cd097eba979ef19427e3b7f3c2ef5c2';
+urlList[502] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e87cdb0f46e29b7ec8c428b94bf3c81f3';
+urlList[503] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e5b602ad5f19d79d84e5e63d989cbaad6';
+// TSP In-service withdrawals
+urlList[601] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e443d15c041aec428a8d2d72842636048';
+urlList[602] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e454236bc1b931f717ae078c11907cd33';
+urlList[603] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=edd841ecf140d6ab64875021459d2c8cf';
+urlList[604] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e4390de5040b9e0fea0c7bda7e59662d5';
+// TSP A to Z
+urlList[701] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed5e112ea167ed2eaee298e77352180f9';
+urlList[702] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e6a11c83fd98a85cd2955daee3e332d4e';
+urlList[703] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed9c9d8f784e35f3c5c607cd12fea5dc6';
+urlList[704] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eb7f9f14033d1857e7511488be6b0e351';
+// TSP post-service withdrawals
+urlList[801] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eae597d97a58b3c664688f55bdf68b244';
+urlList[802] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eb153d9bae05ded5160b7de31c812a211';
+urlList[803] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e29473ff46ef926c522cfd5e7986a076c';
+urlList[804] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e9587cb82ed2e51a3aa0196752b87127f';
+urlList[805] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efb1d9aef83b94367a3a6701536afbbc9';
+urlList[806] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=edeb0865899f7b30c16d2889889980540';
+urlList[807] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8860385d8c0621eab9a6bdaedd7d1573';
+urlList[808] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea83e37330a5acd601b9f722149625eb4';
+urlList[809] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ef46486f51ffcdefad6e34dea05bbad9b';
+urlList[810] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eea6cc552102c92f527f724d572053a2e';
+// Death Benefits
+urlList[901] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e8c3f3ccf2c5b779de923140c2545b609';
+urlList[902] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ee519bfdaa0d18122fb4c9464b42ced24';
+urlList[903] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e990d6b5e164543499f6a43cfa21ea044';
+urlList[904] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e77439cfa3fe817cbc21b3181c931d2ef';
+urlList[905] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e6133e6347e56cbecc56203b43786aca3';
+urlList[906] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e693c94ad57e2117b6606024917dde126';
+
+
 
 function getIdx() {
   var idx = getQueryString('idx');
@@ -274,7 +294,7 @@ function updateExitPage() {
   if (url != '') {
       // build the url redirect here
       // content="#;..." sets the time delay
-      output = '<a href="'+url+'">please use this link</a><meta http-equiv="refresh" content="5;URL='+url+'">';
+      output = '<a href="'+url+'">please use this link</a><meta http-equiv="refresh" content="0;URL='+url+'">';
   }
   $('#offsiteLink').html(output);
 }
