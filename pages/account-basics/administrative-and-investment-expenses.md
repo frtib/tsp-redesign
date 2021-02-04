@@ -129,9 +129,9 @@ This first table shows, for each of the TSP individual funds, the **{{ net_expen
         </td>
       {% endfor %}
     </tr>
-    <!-- Investmemt expense ratio -->
+    <!-- Investment expense ratio -->
     <tr>
-      <th class="sep-individual" scope="colgroup">Investmemt expense ratio</th>
+      <th class="sep-individual" scope="colgroup">Investment expense ratio</th>
     </tr>
     <tr>
       {% for fund in sorted %}
@@ -217,9 +217,9 @@ The next table shows the same information for each of the TSP’s Lifecycle (L) 
         </td>
       {% endfor %}
     </tr>
-    <!-- Investmemt expense ratio -->
+    <!-- Investment expense ratio -->
     <tr>
-      <th class="sep" scope="colgroup">Investmemt expense ratio</th>
+      <th class="sep" scope="colgroup">Investment expense ratio</th>
     </tr>
     <tr>
       {% for fund in sorted %}
