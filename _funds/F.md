@@ -27,7 +27,7 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 1/29/1988
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
     assets: $33.5 billion
     as_of_year: 2020
@@ -36,12 +36,12 @@ summary_details:
     investment_expense:  .012
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
   - [Government/Government-Related, 41.5]
   - [Asset-Backed Securities, 29.6]
   - [Credit, 29.0]
-top_ten_update:
+top_ten_update: 12/31/2020
 top_ten_holdings:
   - namex: ignored because of top_ten_text
     abbrx: XXXX

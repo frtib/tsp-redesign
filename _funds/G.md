@@ -27,7 +27,7 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 4/1/1987
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
     assets: $243.8 billion
     as_of_year: 2020
@@ -36,10 +36,10 @@ summary_details:
     investment_expense:  .000
     benchmark_index: Not applicable
     asset_manager: Not applicable
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
   - [Short-term U.S. Treasury securities, 100.0]
-top_ten_update: 12/31/2019
+top_ten_update: 12/31/2020
 top_ten_holdings:
 - namex: ignored because of top_ten_text
   abbrx: XXXX

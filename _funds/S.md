@@ -27,7 +27,7 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 5/1/2001
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
     assets: $74.1 billion
     as_of_year: 2020
@@ -36,7 +36,7 @@ summary_details:
     investment_expense:  .019
     benchmark_index: Dow Jones U.S. Completion Total Stock Market Index | spglobal.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
   - [Information Technology, 17.8]
   - [Financials, 17.6]
@@ -49,7 +49,7 @@ composition:
   - [Consumer Staples, 2.7]
   - [Utilities, 2.7]
   - [Energy, 2.5]
-top_ten_update: 12/31/2019
+top_ten_update: 12/31/2020
 top_ten_holdings:
   - name: Tesla Motors Inc.
     abbr: TSLA

@@ -75,7 +75,7 @@ scripts:
   <caption id="aar_caption">Average annual returns</caption>
   <thead>
   <tr>
-    <th>2020 YTD</th>
+    <th>2021 YTD</th>
     <th>1 Yr</th>
     <th>3 Yrs</th>
     <th>5 Yrs</th>
@@ -187,11 +187,16 @@ scripts:
           <div class="usa-grid-full">
             <div class="usa-width-one-half">
               <h3>Fees {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
-              <p><b>Net administrative expenses<sup>1</sup></b><br>
+              <p><b>Net administrative expense ratio<sup>1</sup></b><br>
                 {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
               </p>
-              <p><b>Other expenses<sup>2</sup></b><br>
+              <p><b>Investment expense ratio</b><br>
                 {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
+              </p>
+              <p><b>Total expense ratio<sup>2</sup></b><br>
+                {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
+                {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+                {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
               </p>
               <ol class="footnotes">
                 <li>{% include components/expense_string.html value=page.summary_details.net_expense alt_value=page.summary_details.alt_net_expense explain=true %}</li>

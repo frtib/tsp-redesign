@@ -27,7 +27,7 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 1/29/1988
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
     assets: $226.9 billion
     as_of_year: 2020
@@ -36,7 +36,7 @@ summary_details:
     investment_expense:  .002
     benchmark_index: S&P 500 Index  | spglobal.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
   - [Information Technology, 23.2]
   - [Health Care, 14.2]
@@ -49,7 +49,7 @@ composition:
   - [Utilities, 3.3]
   - [Real Estate, 2.9]
   - [Materials, 2.7]
-top_ten_update: 12/31/2019
+top_ten_update: 12/31/2020
 top_ten_holdings:
   - name: Apple, Inc.
     abbr: AAPL
