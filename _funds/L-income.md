@@ -30,7 +30,7 @@ avg_annual_returns:
 inception_date: 8/1/2005
 summary_update: 12/31/2020
 summary_details:
-  assets: $136.5 billion
+  assets: $30.1 billion
   as_of_year: 2020
   gross_expense:  .057
   net_expense:    .047

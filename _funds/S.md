@@ -29,7 +29,7 @@ avg_annual_returns:
 inception_date: 5/1/2001
 summary_update: 12/31/2020
 summary_details:
-    assets: $74.1 billion
+    assets: $92.4 billion
     as_of_year: 2020
     gross_expense:  .058
     net_expense:    .049
@@ -38,39 +38,39 @@ summary_details:
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
 composition_update: December 31, 2020
 composition:
-  - [Information Technology, 17.8]
-  - [Financials, 17.6]
-  - [Health Care, 13.6]
-  - [Industrials, 13.6]
-  - [Consumer Discretionary, 11.3]
-  - [Real Estate, 9.4]
-  - [Communication Services, 4.8]
-  - [Materials, 4.0]
+  - [Information Technology, 25.0]
+  - [Health Care, 16.1]
+  - [Industrials, 13.0]
+  - [Financials, 12.9]
+  - [Consumer Discretionary, 11.0]
+  - [Real Estate, 6.5]
+  - [Communication Services, 5.6]
+  - [Materials, 3.5]
   - [Consumer Staples, 2.7]
-  - [Utilities, 2.7]
-  - [Energy, 2.5]
+  - [Utilities, 2.0]
+  - [Energy, 1.5]
 top_ten_update: 12/31/2020
 top_ten_holdings:
-  - name: Tesla Motors Inc.
-    abbr: TSLA
-  - name: Blackstone Group, Inc. Class A
-    abbr: BX
-  - name: Lululemon Athletica, Inc.
-    abbr: LULU
-  - name: Workday, Inc. Class A
-    abbr: WDAY
-  - name: Splunk, Inc.
-    abbr: SPLK
-  - name: Palo Alto Networks, Inc.
-    abbr: PANW
-  - name: CoStar Group, Inc.
-    abbr: CSGP
   - name: Square, Inc. Class A
     abbr: SQ
-  - name: Dexcom, Inc.
-    abbr: DXCM
-  - name: Liberty Broadband Corp. Series C
-    abbr: LBRDK
+  - name: Uber Technologies, Inc.
+    abbr: UBER
+  - name: Zoom Video Communications Inc Class A
+    abbr: ZM
+  - name: Twilio Inc Class A
+    abbr: TWLO
+  - name: Snap Inc Class A
+    abbr: SNAP
+  - name: NXP Semiconductors NV
+    abbr: NXPI
+  - name: Blackstone Group, Inc. Class A
+    abbr: BX
+  - name: Workday, Inc. Class A
+    abbr: WDAY
+  - name: DocuSign, Inc.
+    abbr: DOCU
+  - name: Lululemon Athletica, Inc.
+    abbr: LULU
 additional_info: |
   The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
 

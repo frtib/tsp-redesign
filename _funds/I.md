@@ -29,7 +29,7 @@ avg_annual_returns:
 inception_date: 5/1/2001
 summary_update: 12/31/2020
 summary_details:
-    assets: $54.3 billion
+    assets: $58.9 billion
     as_of_year: 2020
     gross_expense:  .059
     net_expense:    .049
@@ -67,20 +67,20 @@ top_ten_holdings:
     abbr: RHHBF
   - name: Novartis AG
     abbr: NVSEF
+  - name: ASML Holding NV
+    abbr: ASML
+  - name: LVMH
+    abbr: LVMH
   - name: Toyota Motor Corporation
     abbr: TOYOF
-  - name: HSBC Holdings PLC
-    abbr: HBCYF
-  - name: SAP
+  - name: Unilever PLC
+    abbr: UL
+  - name: AIA Group LTD
+    abbr: AAGIY
+  - name: SAP SE
     abbr: SAP
-  - name: Total S.A.
-    abbr: TTFNF
   - name: AstraZeneca PLC
     abbr: AZN
-  - name: LVMH
-    abbr: LVMUY
-  - name: BP PLC
-    abbr: BPAQF
 additional_info: |
   By law, the <span class="nobr">I Fund</span> must be invested in a portfolio designed to track the performance of an index of common stocks representing international stock markets outside of the United States. The Federal Retirement Thrift Investment Board has chosen as its benchmark the MSCI EAFE (Europe, Australasia, Far East) Index, which tracks the overall performance of the major companies and industries in the European, Australian, and Asian stock markets.
 

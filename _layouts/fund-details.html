@@ -108,12 +108,6 @@ scripts:
                 <p><b>Assets</b><br>
                 {{ page.summary_details.assets }}
               </p>
-              <p><b>Net administrative expense ratio</b><br>
-                {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
-              </p>
-              <p><b>Investment expense ratio</b><br>
-                {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
-              </p>
               <p><b>Total expense ratio</b><br>
                 {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
                 {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
