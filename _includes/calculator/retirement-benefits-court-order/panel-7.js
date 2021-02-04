@@ -389,6 +389,12 @@ function clearAward(id) {
   // setAwardText('Award ' + id, id);
   setAwardText('', id);
   // activateAwardDiv(i);
+  $('#'+id+'hideA').addClass('hide');
+  $('#'+id+'hideB').addClass('hide');
+  $('#'+id+'hideC').addClass('hide');
+  $('#'+id+'earnings-div').addClass('hide');
+  $('#'+id+'hideE').addClass('hide');
+  $('#'+id+'hideF').addClass('hide');
 }
 
 function setAwardBase(id, show, awardType, fixed, percentage, entitlement, entitlement1Date, entitlement2Date,
@@ -499,12 +505,12 @@ function copyAward(i, j) {
   if($('#'+j+'paymentDate1AsOf').prop('checked')) { pickPaymentDate(1, 'P', i); }
   if($('#'+j+'paymentDate1Order').prop('checked')) { pickPaymentDate(1, 'O', i); }
   if($('#'+j+'paymentDate1Entitlement').prop('checked')) { pickPaymentDate(1, 'E', i); }
-  $('#aw'+i+'paymentDate1EntitlementDate').val($('#aw'+j+'paymentDate1EntitlementDate').val());
+  $('#aw'+i+'paymentDate1EntitlementDate').flatpickr.setDate($('#aw'+j+'paymentDate1EntitlementDate').val());
   clearError(i+'paymentDate1');
   clearError('aw'+i+'paymentDate1EntitlementDate');
 
-  if($('#'+j+'earningsNo').prop('checked')) { pickEarnings('N', i); }
-  if($('#'+j+'earningsYes').prop('checked')) { pickEarnings('Y', i); }
+  if($('#'+j+'earningsNo').prop('checked')) { console.log(j, 'earningsNO'); pickEarnings('N', i); }
+  if($('#'+j+'earningsYes').prop('checked')) { console.log(j, 'earningsYes'); pickEarnings('Y', i); }
   if($('#'+j+'earningsPercent').prop('checked')) { pickEarnings('P', i); }
   if($('#'+j+'earningsLosses').prop('checked')) { pickEarnings('L', i); }
   if($('#'+j+'earningsPerdiem').prop('checked')) { pickEarnings('D', i); }
@@ -516,7 +522,8 @@ function copyAward(i, j) {
 
   if($('#'+j+'paymentDate2Order').prop('checked')) { pickPaymentDate(2, 'O', i); }
   if($('#aw'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
-  $('#aw'+i+'paymentDate2EntitlementDate').val($('#aw'+j+'paymentDate2EntitlementDate').val());
+  $('#aw'+i+'paymentDate2EntitlementDate').flatpickr().setDate($('#aw'+j+'paymentDate2EntitlementDate').val());
+console.log('date is ', $('#aw'+j+'paymentDate2EntitlementDate').val());
   clearError(i+'paymentDate2');
   clearError('aw'+i+'paymentDate2EntitlementDate');
 
@@ -706,7 +713,8 @@ function pickEarnings(flag, id) {
     $('#'+id+'earningsPerdiemRate-div').addClass('hide');
     $('#'+id+'earnings-div').addClass('hide');
     $('#'+id+'paymentDate2-div').addClass('hide');
-  } else {
+  }
+  if (flag == 'Y') {
     // $('#'+id+'earningsNo').prop('checked', false);
     $('#'+id+'earningsYes').prop('checked', true);
     $('#'+id+'earnings-div').removeClass('hide');
