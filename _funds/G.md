@@ -27,26 +27,26 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 4/1/1987
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
-    assets: $243.8 billion
+    assets: $267.2 billion
     as_of_year: 2020
     gross_expense:  .059
     net_expense:    .049
     investment_expense:  .000
     benchmark_index: Not applicable
     asset_manager: Not applicable
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
   - [Short-term U.S. Treasury securities, 100.0]
-top_ten_update: 12/31/2019
+top_ten_update: 12/31/2020
 top_ten_holdings:
 - namex: ignored because of top_ten_text
   abbrx: XXXX
 top_ten_text: |
   The G Fund rate is calculated by the U.S.
   Treasury as the weighted average yield of
-  approximately 136 U.S. Treasury securities
+  approximately 153 U.S. Treasury securities
   on the last day of the previous month.
 additional_info: |
   The G Fund is invested in short-term U.S. Treasury securities specially issued to the TSP. Payment of principal and interest is guaranteed by the U.S. government. Thus, there is no “credit risk.”

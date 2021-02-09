@@ -27,29 +27,29 @@ avg_annual_returns:
     ten_yr: "-"
     lifetime: "-"
 inception_date: 1/29/1988
-summary_update: 12/31/2019
+summary_update: 12/31/2020
 summary_details:
-    assets: $226.9 billion
+    assets: $251.5 billion
     as_of_year: 2020
     gross_expense:  .052
     net_expense:    .049
     investment_expense:  .002
     benchmark_index: S&P 500 Index  | spglobal.com
     asset_manager: BlackRock Institutional Trust <br />Company, N.A.
-composition_update: December 31, 2019
+composition_update: December 31, 2020
 composition:
-  - [Information Technology, 23.2]
-  - [Health Care, 14.2]
-  - [Financials, 13.0]
-  - [Communications Services, 10.4]
-  - [Consumer Discretionary, 9.8]
-  - [Industrials, 9.1]
-  - [Consumer Staples, 7.2]
-  - [Energy, 4.4]
-  - [Utilities, 3.3]
-  - [Real Estate, 2.9]
-  - [Materials, 2.7]
-top_ten_update: 12/31/2019
+  - [Information Technology, 27.6]
+  - [Health Care, 13.5]
+  - [Consumer Discretionary, 12.7]
+  - [Communications Services, 10.8]
+  - [Financials, 10.4]
+  - [Industrials, 8.4]
+  - [Consumer Staples, 6.5]
+  - [Utilities, 2.8]
+  - [Materials, 2.6]
+  - [Real Estate, 2.4]
+  - [Energy, 2.3]
+top_ten_update: 12/31/2020
 top_ten_holdings:
   - name: Apple, Inc.
     abbr: AAPL
@@ -59,18 +59,18 @@ top_ten_holdings:
     abbr: AMZN
   - name: Facebook, Inc. Class A
     abbr: FB
+  - name: Tesla, Inc.
+    abbr: TSLA
+  - name: Alphabet, Inc. Class A
+    abbr: GOOGL
+  - name: Alphabet, Inc. Class C
+    abbr: GOOG
   - name: Berkshire Hathaway, Inc. Class B
     abbr: BRK.B  
-  - name: JPMorgan Chase & Company
-    abbr: JPM
-  - name: Alphabet, Inc. Class A
-    abbr: GOOG
-  - name: Alphabet, Inc. Class C
-    abbr: GOOGL
   - name: Johnson & Johnson
     abbr: JNJ
-  - name: Visa, Inc. Class A
-    abbr: V
+  - name: JPMorgan Chase & Company
+    abbr: JPM
 additional_info: |
   By law, the <span class="nobr">C Fund</span> must be invested in a portfolio designed to replicate the performance of an index of stocks representing the U.S. stock markets. The Federal Retirement Thrift Investment Board has chosen as its benchmark the Standard & Poor’s 500 Stock Index, which tracks the performance of major U.S. companies and industries.
 
