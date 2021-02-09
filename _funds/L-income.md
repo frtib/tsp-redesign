@@ -42,7 +42,7 @@ top_ten_holdings:
 additional_info: |
   The L Income Fund is designed to produce current income if you are already receiving money from your TSP account through monthly payments or if you plan to withdraw or to begin withdrawing from your account next year. The asset allocations are based on the investment consultant’s assumptions regarding future investment returns, inflation, economic growth, and interest rates. We review these assumptions at least annually to determine whether changes to the allocations are warranted.
 
-  Remember, however, that expected risk and return are based on assumptions about future economic conditions and investment performance. There is no guaranteed rate of return for any period, either short-term or long-term. For the fund’s historical returns, visit [Share Price History]({{ site.baseurl }}/fund-performance/share-price-history/). Past performance does not guarantee future results.
+  Remember, however, that expected risk and return are based on assumptions about future economic conditions and investment performance. There is no guaranteed rate of return for any period, either short-term or long-term. For the fund’s historical returns, visit <a href="/fund-performance/share-price-history/">Share price history</a>. Past performance does not guarantee future results.
 risks: |
   When you invest in the L Funds, you are subject to the investment risks associated with the G, F, C, S, and I funds. Your account is not guaranteed against loss. The L Funds can have periods of gain and loss, just as the individual TSP funds do.
 risk_level: low
