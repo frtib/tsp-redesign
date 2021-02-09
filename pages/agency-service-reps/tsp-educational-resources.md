@@ -21,7 +21,7 @@ The Federal Retirement Thrift Investment Board (FRTIB) offers a variety of TSP t
 - [Benefits specialist and educator training]( {{ site.baseurl }}#specialistTraining) – These sessions cover advanced topics for human resources personnel, service financial specialists, and payroll personnel, and are offered periodically throughout the year. They are suspended until further notice.
 - [Training for your agency or service]({{ site.baseurl }}#agencyServiceTraining) – By request, we occasionally conduct trainings and webinars to meet your agency or service’s specific needs. Employees should register for the prescheduled webinars and courses first. If the preset schedule doesn't meet your agency’s or service’s needs, follow the procedures in this section below.
 
-Due to the coronavirus (COVID-19) pandemic, the Federal Retirement Thrift Investment Board has canceled all in-person TSP training courses and will not be scheduling in-person events until further notice.
+**Due to the coronavirus (COVID-19) pandemic, the Federal Retirement Thrift Investment Board has canceled all in-person TSP training courses and will not be scheduling in-person events until further notice.**
 
 ## Who we train
 We provide training for all TSP participants and beneficiaries including federal employees under the Federal Employees’ Retirement System (FERS), Civil Service Retirement System (CSRS), Foreign Service Pension System (FSPS), Foreign Service Retirement and Disability Service (FSRDS), and members of the uniformed services, including the Ready Reserve, Public Health Service Commissioned Corps and the National Oceanic and Atmospheric Administration (NOAA) Commissioned Officer Corps.
@@ -35,7 +35,7 @@ We never charge a training fee for live or virtual events. In-person training, w
 <section id="tspSchedule">
 <button
 class="usa-accordion-button"
-aria-expanded="true"
+aria-expanded="false"
 aria-controls="webinars">
 TSP webinars and courses
 </button>
@@ -163,10 +163,10 @@ Agency or service representatives attempting to schedule a training event should
   Overseas agencies or services, including those located in a United States terriroty, are assigned to the Washington DC Metro Area region.
 </div>
 </div>
+1. This process is only for agency and service representatives, not for individuals looking to attend one of the FRTIB’s <span class="nobr">[regularly scheduled]({{ site.baseurl }}#tspSchedule)</span> webinars.
+{:.footnotes #footnotes}
 
 4. Provide your liaison with as many details as possible to help us schedule your training event.   
-   1. This process is only for agency and service representatives, not for individuals looking to attend one of the FRTIB’s <span class="nobr">[regularly scheduled]({{ site.baseurl }}#tspSchedule)</span> webinars.
-   {:.footnotes #footnotes}
 5. Please call 202-942-1450 or email your region’s liaison with any questions you have about scheduling training.   
 6. A TSP Training and Liaison Specialist will confirm your request by email or phone.
 {:start="4"}
