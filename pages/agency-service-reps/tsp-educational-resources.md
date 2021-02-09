@@ -18,7 +18,7 @@ Thank you for your interest in TSP education.
 The Federal Retirement Thrift Investment Board (FRTIB) offers a variety of TSP training opportunities. Review the information below to learn which TSP training will be best for you and your employees.
 
 - [TSP webinars and courses]({{ site.baseurl }}#tspSchedule) – TSP webinars are offered year-round and are open to all federal and uniformed service members. We encourage you to share the TSP webinar calendar with your employees. Advanced registration is required.
-- [Benefits specialist and educator training]( {{ site.baseurl }}#specialistTraining) – These sessions cover advanced topics for human resources personnel, service financial specialists, and payroll personnel, and are offered periodically throughout the year. They are suspended until further notice.
+- [Benefits specialist and educator training]( {{ site.baseurl }}#specialistTraining) – These sessions cover advanced topics for human resources personnel, service financial specialists, and payroll personnel, and are offered periodically throughout the year. **They are suspended until further notice.**
 - [Training for your agency or service]({{ site.baseurl }}#agencyServiceTraining) – By request, we occasionally conduct trainings and webinars to meet your agency or service’s specific needs. Employees should register for the prescheduled webinars and courses first. If the preset schedule doesn't meet your agency’s or service’s needs, follow the procedures in this section below.
 
 **Due to the coronavirus (COVID-19) pandemic, the Federal Retirement Thrift Investment Board has canceled all in-person TSP training courses and will not be scheduling in-person events until further notice.**
