@@ -18,11 +18,14 @@ var singleFundData = function(fund) {
       function (data) {
           var rc = data.split("|");
           var year = '--';
-          if (rc.length > 2) { year = rc[2].split(' ')[1]; }
+          if (rc.length > 2) {
+            $('#aar_caption').html("Average annual returns (as of "+rc[2]+")");
+            year = rc[2].split(' ')[1];
+          }
           var values = rc[0].split(", ");
           // console.log('values length is ', {values});
           if (values.length == 7) {
-            $('#aar_caption').html("Average annual returns (as of December "+rc[1]+")");
+            if (rc[1] != '-') { $('#aar_caption').html("Average annual returns (as of December "+rc[1]+")"); }
             if (values[1] != '-') { $('#aar_year').html(year); $('#aar_ytd').html(values[1]+'%'); }
             if (values[2] != '-') { $('#aar_1yr').html(values[2]+'%'); }
             if (values[3] != '-') { $('#aar_3yr').html(values[3]+'%'); }
