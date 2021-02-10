@@ -19,4 +19,5 @@ redirect_from:
   - /PlanningTools/Calculators/retirementCalculator.html
   - /retirementcalc/
   - /monthlypaycalc/
+  - /MonthlyEstimate/
 ---
