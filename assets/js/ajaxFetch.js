@@ -17,11 +17,16 @@ var singleFundData = function(fund) {
     serverCall.done(
       function (data) {
           var rc = data.split("|");
+          var year = '--';
+          if (rc.length > 2) {
+            $('#aar_caption').html("Average annual returns (as of "+rc[2]+")");
+            year = rc[2].split(' ')[1];
+          }
           var values = rc[0].split(", ");
-          // console.log('values length is ', values.length);
+          // console.log('values length is ', {values});
           if (values.length == 7) {
-            $('#aar_caption').html("Average annual returns (as of December "+rc[1]+")");
-            if (values[1] != '-') { $('#aar_ytd').html(values[1]+'%'); }
+            if (rc[1] != '-') { $('#aar_caption').html("Average annual returns (as of December "+rc[1]+")"); }
+            if (values[1] != '-') { $('#aar_year').html(year); $('#aar_ytd').html(values[1]+'%'); }
             if (values[2] != '-') { $('#aar_1yr').html(values[2]+'%'); }
             if (values[3] != '-') { $('#aar_3yr').html(values[3]+'%'); }
             if (values[4] != '-') { $('#aar_5yr').html(values[4]+'%'); }
@@ -46,6 +51,7 @@ var singleFundData = function(fund) {
           $('#aar_3yr').html('unavailable');
           $('#aar_5yr').html('unavailable');
           $('#aar_10yr').html('unavailable');
+          $('#aar_year').html('--');
           // $('#aar_incep').html(values[6]);
       }
     );
@@ -161,8 +167,8 @@ var groupFundAnnualReturns = function(setName) {
 }
 
 function growth100Tooltip(me) {
-  // console.log(me);
-  var rc = tooltipHeader(getMonthYearName(me.x+1000000000));
+  // var rc = tooltipHeader(getMonthYearName(me.x+1000000000));
+  var rc = tooltipHeader(getMonthYearName(me.x));
   rc = '';
   var points = me.points;
   for (var i = 0; i < points.length; i++) {
@@ -172,10 +178,22 @@ function growth100Tooltip(me) {
     rc += tooltipLegendRow(lColor, lColor, lName, '', '$' + points[i].y.toFixed(2));
   }
   rc = tooltipRowGroup(rc);
-  rc = tooltipHeader(getMonthYearName(me.x+1000000000))+rc;
+  var header = me.x.replace('(', '');
+  // console.log({me}, {header});
+  rc = tooltipHeader(header)+rc;
   rc = tooltipDiv('growth-100-tooltip', rc);
   // console.log(rc);
   return rc;
+}
+function resetGrowthCategories(chart) {
+  var categories = [];
+  var data = chart.series[0].points;
+  data = chart.data.rawColumns[0];
+  for (var i = 1; i < data.length; i++) {
+    categories.push(data[i].replace('(', '').replace(')',''));
+  }
+  chart.xAxis[0].setCategories(categories);
+  chart.redraw();
 }
 function getGrowthLifetime(fund) {
   var colorIndexFund = 'lf';
@@ -190,10 +208,12 @@ function getGrowthLifetime(fund) {
 
   // console.log('https://secure.tsp.gov/components/CORS/getFundGrowthInflation2.html?fund='+fund);
 
-  Highcharts.chart('growthLifetime', {
+  var growthLifetimeChart = null;
+  growthLifetimeChart = new Highcharts.chart('growthLifetime', {
     credits: { enabled: false },
     chart: {
       type: 'line',
+      zoomType: 'x',
       styledMode: true
     },
     title: {
@@ -201,8 +221,11 @@ function getGrowthLifetime(fund) {
       text: 'Growth of $100 since Inception'
     },
     data: {
-      csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflation2.html?fund='+fund
+      dateFormat: "YYYY/mm/dd",
+      csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflation3.html?fund='+fund,
+      complete: function() { resetGrowthCategories(growthLifetimeChart); }
     },
+    exporting: { csv: { dateFormat: '%Y %m' } },
     // series: [{ colorIndex: colorIndexFund }, { colorIndex: colorIndexValues }, { colorIndex: colorIndexInfl }, { colorIndex: colorIndexValues }],
     series: [{ colorIndex: colorIndexFund }, { colorIndex: colorIndexInfl }],
     yAxis: {
@@ -212,6 +235,14 @@ function getGrowthLifetime(fund) {
         }
       },
       title: { text: '' }
+    },
+    xAxis: {
+    // type: "datetime",
+      labels: {
+        padding: 25,
+        formatter: function() { return this.value.substr(0,3) + ' ' + this.value.split(' ')[1]; }  // include month on axis
+        // formatter: function() { return this.value.split(' ')[1]; }  // dont include month on axis
+      }
     },
     tooltip: {
       formatter: function () {
