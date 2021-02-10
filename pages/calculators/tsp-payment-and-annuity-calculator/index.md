@@ -19,5 +19,6 @@ redirect_from:
   - /PlanningTools/Calculators/retirementCalculator.html
   - /retirementcalc/
   - /monthlypaycalc/
-  - /MonthlyEstimate/
+  - /MonthlyEstimate/ # Short URL on Annual Statements
+  - /monthlyestimate/
 ---
