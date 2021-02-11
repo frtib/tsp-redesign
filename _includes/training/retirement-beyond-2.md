@@ -12,7 +12,7 @@ Part II consists of a discussion of the risks faced by new retirees. We will dis
 
 ### February 22, 2021
 
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=200){:rel="nofollow"}
+- 1:00 p.m. — **Class full** [Session details]({{ site.baseurl }}/exit/?idx=200){:rel="nofollow"}
 
 ### March 30, 2021
 

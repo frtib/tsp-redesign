@@ -6,7 +6,7 @@ Part I includes a discussion on estimating future income needs, assessing the im
 
 ### February 2, 2021
 
-- 10:30 a.m. — [Register]({{ site.baseurl }}/exit/?idx=192){:rel="nofollow"}
+- 10:30 a.m. — **Class full** [Session details]({{ site.baseurl }}/exit/?idx=192){:rel="nofollow"}
 
 ### February 10, 2021
 
@@ -18,8 +18,8 @@ Part I includes a discussion on estimating future income needs, assessing the im
 
 ### March 30, 2021
 
-- 10:30 a.m. — [Register]({{ site.baseurl }}/exit/?idx=188){:rel="nofollow"}
+- 10:30 a.m. — **Class full** [Session details]({{ site.baseurl }}/exit/?idx=188){:rel="nofollow"}
 
 ### April 28, 2021
 
-- 10:30 a.m. — [Register]({{ site.baseurl }}/exit/?idx=189){:rel="nofollow"}
+- 10:30 a.m. — **Class full** [Session details]({{ site.baseurl }}/exit/?idx=189){:rel="nofollow"}
