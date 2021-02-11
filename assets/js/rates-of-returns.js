@@ -42,6 +42,7 @@ var doAjaxRetrieveRoR = function(divName, url) {
 }
 
 function buildSideScrollTableRoR(chartName, data) {
+  var default_RoR_open_row_line = '2020'; // which year row to open on page load
   var i, j, colClass, row;
   var lines = data.split("\n");
   // prep header row
@@ -83,6 +84,7 @@ function buildSideScrollTableRoR(chartName, data) {
         if (lastLineType == 'm') {
           xClass = 'monthly-returns hide';
           val = 'year_'+yearName+'_months';
+          if (yearName == default_RoR_open_row_line) { xClass = 'monthly-returns'; }
         }
         // yearName from previous loop
         bodyHTML += sideScrollWrapper('  ', 'tbody', val, xClass, tmpRows, true);
@@ -102,8 +104,10 @@ function buildSideScrollTableRoR(chartName, data) {
       YTD = ' YTD';
     }
     if (lineType == 'y') {
+      var labelClass = '';
+      if (yearName == default_RoR_open_row_line) { labelClass = 'class="bounce"'; }
       var id = "year_"+yearName;
-      val = '<label id="'+id+'_label" for="'+id+'">'+yearName+YTD+'</label>';
+      val = '<label id="'+id+'_label" for="'+id+'" ' + labelClass + ' >'+yearName+YTD+'</label>';
       val += '<input type="checkbox" id="'+id+'" onClick="toggleTableMonths(\''+id+'\')">';
       col[0] = Date.UTC(col[0].substr(0, 4), 0);
       annualData.unshift(col.join(","));
