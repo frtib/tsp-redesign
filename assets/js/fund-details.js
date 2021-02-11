@@ -1,5 +1,5 @@
 function initFundTab() {
-  var tabs = [ 'summary', 'performance', 'composition', 'fees'];
+  var tabs = [ 'summary', 'performance-and-risks', 'composition', 'fees'];
   var tab = getQueryString('tab');
   if (typeof tab === 'undefined') { tab = 'summary'; }
   if (tabs.includes(tab)) {
