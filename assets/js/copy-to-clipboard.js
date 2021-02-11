@@ -50,3 +50,8 @@ function outFunc(element) {
 }
 
 // ref: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2
+
+// header--extended share button
+$('#shareModal').on('show.bs.modal', function (e) {
+  $('#fullURL').val(window.location.href);
+});
