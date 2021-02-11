@@ -221,6 +221,8 @@ urlList[310] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/296aa22
 urlList[311] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2a73529';
 // January 2021 newsletter
 urlList[312] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2b66fd7';
+// February 2021 Executive Director Letter
+urlList[313] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2bf8ec3';
 // TSP Investment Funds
 urlList[401] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea6020026faeeabccfbc2713c7a1ff620';
 urlList[402] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efb433a33b9c08675cac1af83c05f44f9';
