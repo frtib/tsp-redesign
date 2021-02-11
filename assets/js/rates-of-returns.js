@@ -42,7 +42,7 @@ var doAjaxRetrieveRoR = function(divName, url) {
 }
 
 function buildSideScrollTableRoR(chartName, data) {
-  var default_RoR_open_row_line = '2020'; // which year row to open on page load
+  var default_RoR_open_row_line = '2021'; // which year row to open on page load
   var i, j, colClass, row;
   var lines = data.split("\n");
   // prep header row
