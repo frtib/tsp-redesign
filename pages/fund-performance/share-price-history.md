@@ -18,6 +18,7 @@ expand-site-alert: false
 document-ready:
   - getSharePricesRaw('dynamic-share-price');  
   - sideScrollControls('dynamic-share-price');
+  - getSecureAlerts('secure-alerts', 'today');
 redirect_from:
   - /InvestmentFunds/FundPerformance/
   - /prices/
@@ -26,6 +27,8 @@ redirect_from:
 <div class="usa-grid centered" markdown="1">
 <div class="usa-width-one-whole" markdown="1">
 # Share price history
+
+<span id="secure-alerts"></span>
 
 To understand how the TSP calculates rates of return for any given period of time and determines compound annual returns, read the Fact Sheet [_Calculating Periodic Returns and Compound Annual Returns_]({{ site.baseurl }}/publications/oc05-16w.pdf).
 

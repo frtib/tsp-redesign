@@ -14,6 +14,7 @@ document-ready:
   - // getLoanRate();
   - // getAnnuityRate();
   - getLoanAndAnnuityRate();
+  - getSecureAlerts('secure-alerts', 'today');
 redirect_from:
   - /whatsnew/
   - /rates/
@@ -22,6 +23,8 @@ redirect_from:
 # News and resources
 
 {% include next-outage.html %}
+
+<span id="secure-alerts"></span>
 
 <section class="key-rates">
 <div class="usa-grid">
