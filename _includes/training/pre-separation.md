@@ -2,7 +2,7 @@
 
 This course is designed to give late-career employees and service members the tools they need to make smart decisions with their TSP savings as they prepare to retire. The agenda includes the TSP withdrawal options and death benefits, and provides several retirement scenarios to get attendees thinking about how to best turn their savings into income.
 
-### February 17, 2021
+#### February 17, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=207){:rel="nofollow"}
 
