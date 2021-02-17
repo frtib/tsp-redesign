@@ -1,9 +1,5 @@
 ## TSP Early to Mid-Career
 
-### February 12, 2021
-
-- 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=173){:rel="nofollow"}
-
 ### February 25, 2021
 
 - 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=174){:rel="nofollow"}

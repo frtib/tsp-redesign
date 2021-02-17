@@ -2,14 +2,6 @@
 
 This webinar provides an overview of the TSP contribution rules. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-### February 3, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=280){:rel="nofollow"}
-
-### February 12, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=281){:rel="nofollow"}
-
 ### February 18, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=282){:rel="nofollow"}
