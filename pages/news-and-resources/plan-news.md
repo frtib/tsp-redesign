@@ -13,7 +13,7 @@ permalink: /news-and-resources/plan-news/
 document-ready:
 # To test outage messages, change 'today' to a specific date.
 # getSecureAlerts('ID of container div', 'YYYYMMDD')
-  - getSecureAlerts('secure-alerts', 'today');
+  - getSecureAlerts('secure-alerts', '20210214');
 redirect_from:
   - /ParticipantSupport/Content/notifications.html
   - /plan-news/

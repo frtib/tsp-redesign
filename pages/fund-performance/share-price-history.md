@@ -20,7 +20,7 @@ document-ready:
   - sideScrollControls('dynamic-share-price');
 # To test outage messages, change 'today' to a specific date.
 # getSecureAlerts('ID of container div', 'YYYYMMDD')
-  - getSecureAlerts('secure-alerts', 'today');
+  - getSecureAlerts('secure-alerts', '20210214');
 redirect_from:
   - /InvestmentFunds/FundPerformance/
   - /prices/
