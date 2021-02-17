@@ -5,6 +5,8 @@ a {
     padding-left: 0.4rem;
     font-style: normal;
     font-weight: $light;
+    display: inline-block;
+    text-decoration: none;
 
   }
   &.learn-more {
@@ -36,9 +38,19 @@ a {
   &.external-link {
     &:after {
       font-family: $font-awesome;
-      content: "\f14c";
+      content: "\f08e";
+      padding-left: 0.25em;
+      font-style: normal;
+      display: inline-block;
+    }
+  }
+  &.new-tab {
+    &:after {
+      font-family: $font-awesome;
+      content: "\f2d2";
       padding-left: 0.4rem;
       font-style: normal;
+      display: inline-block;
     }
   }
   &.download {
@@ -53,6 +65,17 @@ a {
       color: $color-gray;
     }
   }
+    &.file-download {
+      &:after {
+        font-family: $font-awesome;
+        content: "\f339";
+        padding-left: 0.4rem;
+        font-style: normal;
+        font-weight: $light;
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
 
   &.pdf {
     &:after {
