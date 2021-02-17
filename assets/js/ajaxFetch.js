@@ -664,6 +664,27 @@ function deleteEmptyPoints(chartName) {
   // deletedAlready[chartName] = 1;
 }
 
+var getSecureAlerts = function(spanName, alertDate) {
+  // alerts stored in db
+  var scriptName = 'alert_message.html';
+  var testDate = '';
+  if (alertDate != 'today') { testDate = 'testDate='+alertDate; }
+  if (alertDate == 'showall') { testDate = 'showall=1'; }
+  var url = getDownloadString(scriptName, testDate);
+  // console.log(url);
+  var serverCall = $.get(url);
+    serverCall.done(
+      function (data) {
+        // console.log('success', data);
+        $('#'+spanName).html(data);
+      }
+    );
+    serverCall.fail(
+      function (jqXHR, textStatus, errorThrown) {
+        // do nothing
+      }
+    );
+}
 
 var getAnnuityRates = function(spanName) {
   // fund comparison data
