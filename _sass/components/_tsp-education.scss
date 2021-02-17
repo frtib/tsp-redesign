@@ -1,0 +1,74 @@
+.regional {
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative; // so :before can be positioned to left
+
+      &:before {
+        font-family: $font-awesome;
+        content: '\f45c';
+        font-weight: $bold;
+        position: absolute;
+        margin-left: -2.2rem;
+      }
+
+      &.northwest {
+        &:before {
+          color: #1fc0e9;
+        }
+      }
+
+      &.southwest {
+        &:before {
+          color: #e31e3f;
+        }
+      }
+
+      &.dc-metro {
+        &:before {
+          color: #268642;
+        }
+      }
+
+      &.northeast {
+        &:before {
+          color: #0b71b7;
+        }
+      }
+
+      &.southeast {
+        &:before {
+          color: #fbb71d;
+        }
+      }
+    }
+  }
+}
+
+section {
+  &#agencyServiceTraining,
+  &#tspSchedule,
+  &#specialistTraining {
+
+    h4 {
+      font-family: $sans;
+    }
+    img {
+      padding: 2rem 0;
+    }
+  }
+  &#tspSchedule {
+    h3 {
+      margin-top: 5rem;
+      &:first-of-type {
+        margin-top: 1.5em;
+        margin-top: initial;
+      }
+    }
+    ul {
+      padding-left: 2rem;
+    }
+  }
+}
