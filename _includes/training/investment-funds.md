@@ -1,12 +1,6 @@
 ### [TSP Investment Funds]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-investment-funds){:target="\_blank" .external-link}
 
-#### February 6, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=401){:rel="nofollow"}
-
-#### February 8, 2021 (Uniformed Services focused)
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=402){:rel="nofollow"}
+This webinar provides an overview of the TSP investment funds. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
 #### February 18, 2021
 
