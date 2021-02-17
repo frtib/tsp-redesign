@@ -24,7 +24,7 @@ redirect_from:
 
 {% include next-outage.html %}
 
-<span id="secure-alerts"></span>
+<div id="secure-alerts"></div>
 
 <section class="key-rates">
 <div class="usa-grid">

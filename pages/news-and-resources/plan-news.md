@@ -23,7 +23,7 @@ redirect_from:
 
 {% include next-outage.html %}
 
-<span id="secure-alerts"></span>
+<div id="secure-alerts"></div>
 
 <section class="subscribe-or-search" markdown="1">
 {% include /search/search-bar.html  onChange="searchInline('plan-news', planNewsCallback);" searchName="plan-news" %}
