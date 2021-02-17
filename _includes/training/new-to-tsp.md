@@ -1,4 +1,4 @@
-## New to the TSP (or ready for a refresher)? Ask away.
+### [New to the TSP (or ready for a refresher)? Ask away.]({{ site.baseurl }}/agency-service-reps/course-catalog/#new-to-the-tsp){:target="\_blank" .external-link}
 
 Bring your questions about managing your account, changing your investments or contribution amounts, managing life changes, how our funds work, or how to use your savings.  In this webinar, our TSP Training and Liaison Specialists will focus solely on answering your individual questions.
 
