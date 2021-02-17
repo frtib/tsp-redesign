@@ -11,6 +11,8 @@ scripts:
 permalink: /news-and-resources/plan-news/
 # Jekyll redirects https://github.com/jekyll/jekyll-redirect-from
 document-ready:
+# To test outage messages, change 'today' to a specific date.
+# getSecureAlerts('ID of container div', 'YYYYMMDD')
   - getSecureAlerts('secure-alerts', 'today');
 redirect_from:
   - /ParticipantSupport/Content/notifications.html
