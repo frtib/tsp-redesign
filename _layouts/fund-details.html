@@ -8,7 +8,11 @@ scripts:
   - /assets/js/highcharts/exporting.js
   - /assets/js/highcharts/export-data.js
   - /assets/js/highcharts/data.js
+  - /assets/js/calculator/calculator.js
   - /assets/js/calculator/lifecycle.js
+  - /assets/js/fund-details.js
+document-ready:
+  - initFundTab();
 ---
 {% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}
 {% if sidenav %}
@@ -98,111 +102,107 @@ scripts:
 <section id="fund-tabs">
 <ul class="usa-accordion usa-tabs">
     <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="a1">
-          Summary
-    </button>
-        <div id="a1" class="usa-accordion-content">
-          <div class="usa-grid-full">
-            <div class="usa-width-one-half fund-summary-details">
-              <h3 id="details">Details {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
-                <p><b>Assets</b><br>
-                {{ page.summary_details.assets }}
-              </p>
-              <p><b>Total expense ratio</b><br>
-                {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
-                {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
-                {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
-              </p>
-{% if page.Fund_type == 'Individual' %}
-                <p><b>Benchmark index</b><br>
-                  {{ page.summary_details.benchmark_index }}
-                </p>
-                <p><b>Asset manager</b><br>
-                {{ page.summary_details.asset_manager }}
-              </p>
-{% endif %}
-              <p><b>Inception date</b><br>
-              {{ page.inception_date }}
+      <button id='summary' onClick="fundTabClicked(this, '{{site.title}}');"
+           class="usa-accordion-button" aria-expanded="true" aria-controls="a1">Summary</button>
+      <div id="a1" class="usa-accordion-content">
+        <div class="usa-grid-full">
+          <div class="usa-width-one-half fund-summary-details">
+            <h3 id="details">Details {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
+              <p><b>Assets</b><br>
+              {{ page.summary_details.assets }}
             </p>
-            </div>
-            <div class="usa-width-one-half fund-summary-top-ten">
-{% if page.Fund_type == 'L' or page.Fund_type == 'Retired' %}
-              <h3>Allocation target</h3>
-              <div id="pie-lfund" class="hc-summary-pie-box">
-                <img src="/assets/img/icons/pie-chart.svg" />
-              </div>
-              <div id="pie-tooltip" class="l-fund-summary-tooltip"></div>
-{% else %}
-              <h3>Top ten holdings {% if page.top_ten_update %}<span class="as-of-date">As of {{ page.top_ten_update }}</span>{% endif %}</h3>
-              {% if page.top_ten_text %}
-              {{ page.top_ten_text | markdownify }}
-              {% else %}
-              <ol>
-              {% for item in page.top_ten_holdings %}
-              <li>
-                  <span class="holdings-abbr">{{ item.abbr }}</span>
-                  {{ item.name }}
-              </li>
-              {% endfor %}
-            </ol>
-            {% endif %}
+            <p><b>Total expense ratio</b><br>
+              {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
+              {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+              {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
+            </p>
+{% if page.Fund_type == 'Individual' %}
+              <p><b>Benchmark index</b><br>
+                {{ page.summary_details.benchmark_index }}
+              </p>
+              <p><b>Asset manager</b><br>
+              {{ page.summary_details.asset_manager }}
+            </p>
 {% endif %}
+            <p><b>Inception date</b><br>
+            {{ page.inception_date }}
+          </p>
+          </div>
+          <div class="usa-width-one-half fund-summary-top-ten">
+{% if page.Fund_type == 'L' or page.Fund_type == 'Retired' %}
+            <h3>Allocation target</h3>
+            <div id="pie-lfund" class="hc-summary-pie-box">
+              <img src="/assets/img/icons/pie-chart.svg" />
             </div>
+            <div id="pie-tooltip" class="l-fund-summary-tooltip"></div>
+{% else %}
+            <h3>Top ten holdings {% if page.top_ten_update %}<span class="as-of-date">As of {{ page.top_ten_update }}</span>{% endif %}</h3>
+            {% if page.top_ten_text %}
+            {{ page.top_ten_text | markdownify }}
+            {% else %}
+            <ol>
+            {% for item in page.top_ten_holdings %}
+            <li>
+                <span class="holdings-abbr">{{ item.abbr }}</span>
+                {{ item.name }}
+            </li>
+            {% endfor %}
+          </ol>
+          {% endif %}
+{% endif %}
           </div>
         </div>
+      </div>
     </li>
     <li>
-        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a2">
-      Performance &amp; risks
-    </button>
-        <div id="a2" class="usa-accordion-content">
-          <div class="usa-grid-full">
-            <div class="usa-width-one-whole">
-              <div id="annualReturnsColumn" class="hc-annual-returns-bar"></div>
-              <div id="annualReturnsTable" class="hc-annual-returns-table"></div>
-              <div id="growthLifetime" class="hc-growth-lifetime"></div>
-            </div>
+      <button id="performance-and-risks"  onClick="fundTabClicked(this, '{{site.title}}');"
+          class="usa-accordion-button" aria-expanded="false" aria-controls="a2">Performance &amp; risks</button>
+      <div id="a2" class="usa-accordion-content">
+        <div class="usa-grid-full">
+          <div class="usa-width-one-whole">
+            <div id="annualReturnsColumn" class="hc-annual-returns-bar"></div>
+            <div id="annualReturnsTable" class="hc-annual-returns-table"></div>
+            <div id="growthLifetime" class="hc-growth-lifetime"></div>
           </div>
         </div>
+      </div>
     </li>
     <li>
-        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a3">
-      Composition
-    </button>
-        <div id="a3" class="usa-accordion-content">
+      <button id="composition" onClick="fundTabClicked(this, '{{site.title}}');"
+          class="usa-accordion-button" aria-expanded="false" aria-controls="a3">Composition</button>
+      <div id="a3" class="usa-accordion-content">
 {% include components/fund-composition.html %}
-        </div>
+      </div>
     </li>
     <li>
-        <button class="usa-accordion-button" aria-expanded="false" aria-controls="a4">
-      Fees &amp; more info
-    </button>
-        <div id="a4" class="usa-accordion-content">
-          <div class="usa-grid-full">
-            <div class="usa-width-one-half">
-              <h3>Fees {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
-              <p><b>Net administrative expense ratio<sup>1</sup></b><br>
-                {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
-              </p>
-              <p><b>Investment expense ratio</b><br>
-                {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
-              </p>
-              <p><b>Total expense ratio<sup>2</sup></b><br>
-                {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
-                {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
-                {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
-              </p>
-              <ol class="footnotes">
-                <li>{% include components/expense_string.html value=page.summary_details.net_expense alt_value=page.summary_details.alt_net_expense explain=true %}</li>
-                <li>Fees paid to the investment manager.</li>
-              </ol>
-            </div>
-            <div class="usa-width-one-half">
-              <h3>Additional information </h3>
-              {{ page.additional_info | markdownify }}
-            </div>
+      <button id="fees"  onClick="fundTabClicked(this, '{{site.title}}');"
+           class="usa-accordion-button" aria-expanded="false" aria-controls="a4">Fees &amp; more info</button>
+      <div id="a4" class="usa-accordion-content">
+        <div class="usa-grid-full">
+          <div class="usa-width-one-half">
+            <h3>Fees {% if page.summary_update %}<span class="as-of-date">As of {{ page.summary_update }}</span>{% endif %}</h3>
+            <p><b>Net administrative expense ratio<sup>1</sup></b><br>
+              {% include components/expense_string.html value=page.summary_details.net_expense as_of=page.summary_details.as_of_year %}
+            </p>
+            <p><b>Investment expense ratio</b><br>
+              {% include components/expense_string.html value=page.summary_details.investment_expense as_of=page.summary_details.as_of_year %}
+            </p>
+            <p><b>Total expense ratio<sup>2</sup></b><br>
+              {% assign total_expense = page.summary_details.net_expense | plus: page.summary_details.investment_expense %}
+              {% if page.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
+              {% include components/expense_string.html value=total_expense as_of=page.summary_details.as_of_year %}
+            </p>
+            <ol class="footnotes">
+              <li>{% include components/expense_string.html value=page.summary_details.net_expense alt_value=page.summary_details.alt_net_expense explain=true %}</li>
+              <li>Fees paid to the investment manager.</li>
+            </ol>
+          </div>
+          <div class="usa-width-one-half">
+            <h3>Additional information </h3>
+            {{ page.additional_info | markdownify }}
           </div>
         </div>
+      </div>
     </li>
 </ul>
 </section>

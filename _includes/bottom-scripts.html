@@ -27,11 +27,14 @@ Autoloads calculator panel js files.
   {% include {{ indexJS }}  maxPanels=maxPanels %}
 {% endif %}
 
-{% if page.document-ready %}
+{% if page.document-ready or layout.document-ready %}
 <script type="text/javascript">
 <!--
 $(document).ready(function() {
   {% for item in page.document-ready %}
+    {{ item }}
+  {% endfor %}
+  {% for item in layout.document-ready %}
     {{ item }}
   {% endfor %}
 });
