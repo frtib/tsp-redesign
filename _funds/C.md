@@ -31,7 +31,7 @@ summary_update: 12/31/2020
 summary_details:
     assets: $251.5 billion
     as_of_year: 2020
-    gross_expense:  .052
+    gross_expense:  .059
     net_expense:    .049
     investment_expense:  .002
     benchmark_index: S&P 500 Index  | spglobal.com
