@@ -147,16 +147,15 @@
         </td>
       {% endfor %}
       </tr>
-      <!-- Expense -->
+      <!-- Total expense ratio -->
       <tr>
         <th scope="row">
-          Expense
+          <span class="expense-ratio">Total expense ratio</span>
           </th>
       {% for fund in sorted %}
         <td class="fund-content hide col{{ forloop.index }}">
           {% assign total_expense = fund.summary_details.net_expense | plus: fund.summary_details.investment_expense %}
           {% if fund.summary_details.investment_expense == "-" %}{% assign total_expense = "-" %}{% endif %}
-          {% include components/expense_string.html value=total_expense percentOnly=true %}
           <p class="numeric">{% include components/expense_string.html value=total_expense percentOnly=true %}</p>
         </td>
       {% endfor %}
