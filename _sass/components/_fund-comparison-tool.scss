@@ -28,6 +28,12 @@
   }
   tbody th {
     border-left: none;
+
+    span.expense-ratio { // Limit width of "Total expense ratio" table row header.
+      display: inline-block;
+      max-width: 8ch;
+      font-size: inherit;
+    }
   }
   tbody tr {
     &:last-child {
