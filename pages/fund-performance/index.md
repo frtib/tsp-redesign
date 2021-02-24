@@ -36,25 +36,6 @@ redirect_from:
 </div>
 </div>
 
-<div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
-<div class="usa-width-one-whole">
-
-  <ul class="usa-accordion">
-    <li>
-      <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
-      <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-    </li>
-  </ul>
-  <ul class="usa-accordion">
-    <li>
-      <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
-      <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-    </li>
-  </ul>
-
-</div>
-</div> <!-- end div#{{chartName}}-div -->
-
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
 <div class="table-scroll-buttons">
@@ -65,7 +46,23 @@ redirect_from:
 <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 
-<!-- </div>  -->
-<!-- END div.usa-width-one-whole -->
-<!-- </div>  -->
-<!-- END div.usa-grid-full -->
+<!-- DONALD add spacing here -->
+
+<div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
+  <div class="usa-width-one-whole">
+
+    <ul class="usa-accordion">
+      <li>
+        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
+        <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+      </li>
+    </ul>
+    <ul class="usa-accordion">
+      <li>
+        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
+        <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+      </li>
+    </ul>
+
+  </div>
+</div> <!-- end div#{{chartName}}-div -->

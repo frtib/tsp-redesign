@@ -1,13 +1,21 @@
 
-function getRatesOfReturn(chart) {
-  var funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
+function getRetiredRatesOfReturn(chart) {
+  var funds = ['Retired', 'Lifetime', 'Inception'];
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
   // console.log(url);
-  doAjaxRetrieveRoR(chart, url);
+  doAjaxRetrieveRoR(chart, url, false, false);
   return false;
 }
 
-var doAjaxRetrieveRoR = function(divName, url) {
+function getRatesOfReturn(chart) {
+  var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
+  // console.log(url);
+  doAjaxRetrieveRoR(chart, url, true, true);
+  return false;
+}
+
+var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
   $('#'+divName+'-message').html('Calling server for data...');
   // console.log('url ', url);
   var serverCall = $.get(url);
@@ -22,7 +30,7 @@ var doAjaxRetrieveRoR = function(divName, url) {
       // fundHighchart(divName+'-annual', data, 'Annual Returns', false);
       // fundHighchart(divName+'-monthly', data, 'Monthly Returns', false);
       // buildSideScrollTableRoR will split data rows and call highcharts
-      $('#'+divName+'-table').html(buildSideScrollTableRoR(divName, data));
+      $('#'+divName+'-table').html(buildSideScrollTableRoR(divName, data, doAnnualChart, doMonthlyChart));
       syncCheckboxes(divName+'-annual');
       syncCheckboxes(divName+'-monthly');
       chartResize(divName+'-annual');
@@ -41,7 +49,7 @@ var doAjaxRetrieveRoR = function(divName, url) {
   );
 }
 
-function buildSideScrollTableRoR(chartName, data) {
+function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart) {
   var default_RoR_open_row_line = '2021'; // which year row to open on page load
   var i, j, colClass, row;
   var lines = data.split("\n");
@@ -68,15 +76,19 @@ function buildSideScrollTableRoR(chartName, data) {
   var yearName = '';
   var tmpRows = "";
   var row;
-  var YTD = "Last 12 months";
+  var YTD = "";
   var val;
+  var valueLine = true;
   // highcharts likes low to high, we want table high to low
   for (j = lines.length-1; j >= 0; j--) {
+    valueLine = true;
     if (lines[j].trim() == '') { continue; }
+    // console.log(lines[j]);
     row = '';
     var col = lines[j].split(",");
     lineType = col.shift();
     val = '';
+    if (lineType == 'y12') { YTD = "Last 12 months"; }
 
     if (lineType != lastLineType) {
       if (tmpRows != '') {
@@ -113,10 +125,13 @@ function buildSideScrollTableRoR(chartName, data) {
       annualData.unshift(col.join(","));
       YTD = '';
     }
+    if (lineType == 'retired') { val = 'Retired'; valueLine = false; }
+    if (lineType == 'inception') { val = 'Inception'; valueLine = false; }
+    if (lineType == 'life') { val = 'Lifetime'; }
     row = sideScrollTH('', '', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
-      val = fundYvalueFormat(parseFloat(col[i].trim()));
+      if (valueLine) { val = fundYvalueFormat(parseFloat(col[i].trim())); } else { val = col[i].trim(); }
       if (col[i].trim() == '') {
         colClass = "empty-table-cell "+colClass;
         val = '';
@@ -137,8 +152,8 @@ function buildSideScrollTableRoR(chartName, data) {
   annualData.unshift(header);
   monthlyData.unshift(header.replace("Year","Month"));
   // console.log(annualData);
-  fundHighchart(chartName+'-annual', annualData.join("\n"), '', true);
-  fundHighchart(chartName+'-monthly', monthlyData.join("\n"), '', true);
+  if (doAnnualChart)  { fundHighchart(chartName+'-annual', annualData.join("\n"), '', true); }
+  if (doMonthlyChart) { fundHighchart(chartName+'-monthly', monthlyData.join("\n"), '', true); }
   return table;
 }
 

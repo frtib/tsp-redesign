@@ -624,7 +624,9 @@ function checkAnnualReturnsGroup() {
   $('#InvFunds').prop('checked', flag);
 }
 function chartResize(chartName) {
-  setInterval(function() { $('#'+chartName).highcharts().reflow(); }, 100);
+  if ($('#'+chartName).length <= 0) { return; };
+  var chart = $('#' + chartName).highcharts();
+  if (chart) { setInterval(function() { chart.reflow(); }, 100); }
   return false;
 }
 

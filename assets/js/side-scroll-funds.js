@@ -151,8 +151,9 @@ function syncCheckboxes(chartName) {
 }
 
 function redraw(chartName) {
-    var chart = $('#' + chartName).highcharts();
-    chart.redraw();
+  if ($('#'+chartName).length <= 0) { return; };
+  var chart = $('#' + chartName).highcharts();
+  if (chart) { chart.redraw(); }
 }
 
 
@@ -179,6 +180,7 @@ function syncFundCheckboxGroups() {
 }
 
 function getSeriesID(name, chartName) {
+  if ($('#'+chartName).length <= 0) { return; };
   var chart = $('#'+chartName).highcharts();
   if (chart == null) { return; }
   var series = chart.series;
@@ -202,6 +204,7 @@ function borderClass(fund) {
 
 function setSeriesVisibility(chart, idx, val) {
   if (idx < 0) { return false; }
+  if ($('#'+chart).length <= 0) { return false; };
   var chart = $('#'+chart).highcharts();
   if (chart == null) { return; }
   var series = chart.series;
