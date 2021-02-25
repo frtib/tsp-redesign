@@ -9,6 +9,7 @@ function getRetiredRatesOfReturn(chart) {
 
 function getRatesOfReturn(chart) {
   var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
+  funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
   var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, true, true);

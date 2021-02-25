@@ -680,7 +680,6 @@ var getSecureAlerts = function(spanName, alertDate) {
   }
   var url = getDownloadString(scriptName, testDate);
   // console.log(url);
-console.log({paramDate}, {testDate}, {url});
 
   var serverCall = $.get(url);
     serverCall.done(
