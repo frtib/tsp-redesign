@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lifecycle funds
+title: Retired funds
 styles:
 sidenav: fund-options
 scripts:
-permalink: /funds-retired/
+permalink: /funds-lifecycle/funds-retired/
 scripts:
     - /assets/js/jquery.min.js
     - /assets/js/calculator/calculator.js
@@ -25,9 +25,9 @@ redirect_from:
   - /InvestmentFunds/RetiredFundsL2010/annualReturnsL2020.html
 ---
 
-# Retired Lifecycle (L) Funds
+# Retired funds
 
-In this section, you can view the average annual returns history of L Funds that reached their target date and were retired. When an L Fund reaches its target date, it goes out of existence and any money in it becomes part of the [L Income Fund]({{ site.baseurl }}/funds-lifecycle/l-income/), which generally keeps the same target allocation.
+View the average annual returns history of L Funds that reached their target date and were retired. When an L Fund reaches its target date, it goes out of existence and any money in it becomes part of the [L Income Fund]({{ site.baseurl }}/funds-lifecycle/l-income/), which generally keeps the same target allocation.
 
 {% assign chartName = 'retired-rates' %}
 
