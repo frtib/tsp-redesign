@@ -36,33 +36,33 @@ redirect_from:
 </div>
 </div>
 
+<!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
-
-<div class="table-scroll-buttons">
-  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-</div><!-- END div.table-scroll-buttons -->
-
-<div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
+  <div class="table-scroll-buttons">
+    <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+    <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+  </div><!-- END div.table-scroll-buttons -->
+  <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 
-<!-- DONALD add spacing here -->
+<!-- CHARTS -->
+<section class="rates-of-return-charts">
+  <div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
+    <div class="usa-width-one-whole">
 
-<div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
-  <div class="usa-width-one-whole">
+      <ul class="usa-accordion">
+        <li>
+          <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
+          <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+        </li>
+      </ul>
+      <ul class="usa-accordion">
+        <li>
+          <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
+          <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
+        </li>
+      </ul>
 
-    <ul class="usa-accordion">
-      <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-annual">Annual Returns</button>
-        <div id="{{ chartName }}-annual" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-      </li>
-    </ul>
-    <ul class="usa-accordion">
-      <li>
-        <button class="usa-accordion-button" aria-expanded="true" aria-controls="{{ chartName }}-monthly">Monthly Returns</button>
-        <div id="{{ chartName }}-monthly" class="usa-accordion-content hc-annual-returns-all" aria-hidden="false">Fetching data, please wait.</div>
-      </li>
-    </ul>
-
-  </div>
-</div> <!-- end div#{{chartName}}-div -->
+    </div>
+  </div> <!-- end div#{{chartName}}-div -->
+</section>
