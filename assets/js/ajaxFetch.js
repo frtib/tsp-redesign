@@ -672,8 +672,16 @@ var getSecureAlerts = function(spanName, alertDate) {
   var testDate = '';
   if (alertDate != 'today') { testDate = 'testDate='+alertDate; }
   if (alertDate == 'showall') { testDate = 'showall=1'; }
+  var paramDate = getQueryString('testDate');
+  // paramDate = paramDate.replace(/\D/g,'');
+  if (paramDate) {
+    paramDate = paramDate.replace(/\D/g, '');
+    if (paramDate != '') { testDate = 'testDate='+paramDate.replace(/\D/g, ''); }
+  }
   var url = getDownloadString(scriptName, testDate);
   // console.log(url);
+console.log({paramDate}, {testDate}, {url});
+
   var serverCall = $.get(url);
     serverCall.done(
       function (data) {

@@ -125,9 +125,9 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
       annualData.unshift(col.join(","));
       YTD = '';
     }
-    if (lineType == 'retired') { val = 'Retired'; valueLine = false; }
-    if (lineType == 'inception') { val = 'Inception'; valueLine = false; }
-    if (lineType == 'life') { val = 'Lifetime'; }
+    if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
+    if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
+    if (lineType == 'life') { val = 'Annualized lifetime return'; }
     row = sideScrollTH('', '', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;

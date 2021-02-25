@@ -222,11 +222,11 @@ fund-options:
         href: /funds-individual/i-fund/
   - text: Retired funds
     href: /funds-retired/
-    subnav:
-      - text: L 2010
-        href: /funds-retired/l-2010/
-      - text: L 2020
-        href: /funds-retired/l-2020/
+#    subnav:
+#      - text: L 2010
+#        href: /funds-retired/l-2010/
+#      - text: L 2020
+#        href: /funds-retired/l-2020/
 
 use-your-savings:
   - text: Loan basics
