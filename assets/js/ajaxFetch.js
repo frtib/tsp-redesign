@@ -624,7 +624,9 @@ function checkAnnualReturnsGroup() {
   $('#InvFunds').prop('checked', flag);
 }
 function chartResize(chartName) {
-  setInterval(function() { $('#'+chartName).highcharts().reflow(); }, 100);
+  if ($('#'+chartName).length <= 0) { return; };
+  var chart = $('#' + chartName).highcharts();
+  if (chart) { setInterval(function() { chart.reflow(); }, 100); }
   return false;
 }
 
@@ -670,8 +672,15 @@ var getSecureAlerts = function(spanName, alertDate) {
   var testDate = '';
   if (alertDate != 'today') { testDate = 'testDate='+alertDate; }
   if (alertDate == 'showall') { testDate = 'showall=1'; }
+  var paramDate = getQueryString('testDate');
+  // paramDate = paramDate.replace(/\D/g,'');
+  if (paramDate) {
+    paramDate = paramDate.replace(/\D/g, '');
+    if (paramDate != '') { testDate = 'testDate='+paramDate.replace(/\D/g, ''); }
+  }
   var url = getDownloadString(scriptName, testDate);
   // console.log(url);
+
   var serverCall = $.get(url);
     serverCall.done(
       function (data) {
