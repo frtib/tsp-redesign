@@ -4,6 +4,9 @@ title: About us
 permalink: /about-us/
 redirect_from:
   - /PlanParticipation/AboutTheTSP/
+  - /about/
+  - /About/
+  
 ---
 
 # About us
