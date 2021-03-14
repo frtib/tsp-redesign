@@ -17,7 +17,6 @@ panelGood[{{ panelID }}] = function(forceValue) {
       flag = false;
     }
   }
-  console.log('leaving panelGood ', {flag});
   return flag;
 };
 panelEnter[{{ panelID }}] = function(panel) {
@@ -39,7 +38,6 @@ function initAwardDateFields() {
   if (dateFieldsInited) { return; }
   setAwardNumbering();
   dateFieldsInited = true;
-  console.log('init of date fields');
   for (var i = 1; i <= maxAwards; i++) {
     date1[i] = flatpickr("#aw"+i+"paymentDate1EntitlementDate", {
       // mode: "range",
@@ -78,19 +76,9 @@ function awardsGood(flag) {
 
 // my functions
 // put all the accounts in drop down. We are only called when a number has changed and there is no error
-function getpartciv(role) { if ($('#'+role+'civilian').prop('checked')) {console.log('getciv', 'Y', role); return 'Y'; } console.log('getciv', 'N', role); return '';}
-function getpartus(role) { if ($('#'+role+'uniformed').prop('checked')) {console.log('getus', 'Y', role); return 'Y'; } console.log('getus', 'N', role); return '';}
-function getpartBPA(role) { if ($('#'+role+'BPA').prop('checked')) {console.log('getbpa', 'Y', role); return 'Y'; } console.log('getbpa', 'N', role); return '';}
 function addToDropDown(dd, value, str) {
-  console.log('addToDropDown', {dd}, {value}, {str});
   var newOption = $('<option value="' + value + '" >' + str + '</option>');
   dd.append(newOption);
-}
-function getAcctNum(field, syntax) {
-  if (syntax == 'F') { return ''; }
-  var acct = $.trim($('#'+field+'civacctNum').prop('placeholder'));  // syntax == 'P'
-  if (syntax == 'A') { acct = $.trim($('#'+field+'civacctNum').prop('data-store')); }
-  return " (" + acct + ")";
 }
 
 function buildAccountSelect(submit) {
@@ -100,7 +88,6 @@ function buildAccountSelect(submit) {
 function buildAccountSelectX(submit, awX) {
   var awardAccountDrop = $("#" + awX + "awardAccount");
   if (awardAccountDrop.length <= 0) { return;}
-  console.log('buildAccountSelect', submit, awX, "#" + awX + "awardAccount");
   var value = awardAccountDrop.val();
   awardAccountDrop.empty();
   addToDropDown(awardAccountDrop, 'Select', 'Select One', '');
@@ -121,23 +108,22 @@ function buildAccountSelectAddAccounts(submit, role, name, dd) {
   var value;
   var str;
   var usePayee = $('#receiveBoth').prop('checked') && $('#payeePartYes').prop('checked');
+  var acctType = 'Dual';
   if ((role == 'part') || (usePayee)) {
-    if (getpartciv(role) == 'Y') {
-      acct = $.trim($('#'+role+'civacctNum').prop('placeholder'));
-      value = role + ',' + acct + ',Civ';
-      str = name + ', Civ '+ acct;
+    if (isCivilian(role) || isUniformed(role)) {
+      if (!isCivilian(role)) { acctType = 'US'; }
+      if (!isUniformed(role)) { acctType = 'Civ'; }
+      acct = 'xxx';
+      acct = getAcctNumber(role, acctType, 'P', false);
+      value = role + ',' + acct + ',' + acctType;
+      str = name + ', ' + acctType + ', '+ acct;
       addToDropDown(dd, value, str);
     }
-    if (getpartus(role) == 'Y') {
-      acct = $.trim($('#'+role+'usvacctNum').prop('placeholder'));
-      value = role + ',' + acct + ',US';
-      str = name + ', US '+ acct;
-      addToDropDown(dd, value, str);
-    }
-    if (getpartBPA(role) == 'Y') {
-      acct = $.trim($('#'+role+'BPAacctNum').prop('placeholder'));
+    if (isBPA(role)) {
+      acct = 'xxx';
+      acct = getAcctNumber(role, 'BPA', 'P', false);
       value = role + ',' + acct + ',BPA';
-      str = name + ', BPA ' + acct;
+      str = name + ', BPA, ' + acct;
       addToDropDown(dd, value, str);
     }
   }
@@ -174,9 +160,9 @@ function buildString(submit, id) {
     if (accountArr[2] == 'BPA1') { acctStr += 'BPAciv'; }
     if (accountArr[2] == 'BPA2') { acctStr += 'BPAus'; }
     // var accountNum = ' (' + accountArr[1] + ')';
-    var accountNum = getAcctNum(acctStr, showAccountNumbers);
-    if (showAccountNumbers == 'F') { accountNum = ''; }
     var accountType = accountArr[2];
+    var accountNum = getAcctNumber(accountArr[0], accountType, showAccountNumbers, true);
+    if (showAccountNumbers == 'F') { accountNum = ''; }
 
     clearError(idAward);
     clearError('awards');
@@ -278,9 +264,9 @@ function buildString(submit, id) {
     if (fixedFlag) {
       includeEarningsGood(submit, id, false);
       // $('#' + id + 'osLoans-div').removeClass('hide');
-      if (noEarningsFlag) { xferdate = ''; } else { if (paymentDateGood(submit, id) == false) { rc = false; console.log('false 5'); } }
+      if (noEarningsFlag) { xferdate = ''; } else { if (paymentDateGood(submit, id) == false) { rc = false; } }
       // exit early, this fixed is simpler
-      if (earningsGood(submit, id) == false) { rc = false; console.log('false 6'); }
+      if (earningsGood(submit, id) == false) { rc = false; }
       return returnBuildString(rc, id, idAward, amount, xferdate, account, earn, osLoans);
     }
 
@@ -291,7 +277,7 @@ function buildString(submit, id) {
       osLoans = ". Any outstanding loan balance should be excluded when calculating the payee's award";
     }
 
-    if (paymentDateGood(submit, id) == false) { rc = false; console.log('false 7'); }
+    if (paymentDateGood(submit, id) == false) { rc = false; }
     if ($('#'+id+'paymentDate' + setID + 'AsOf').prop('checked')) {
       xferdate = ' as of the payment date';
       // don't include earnings in one special case
@@ -302,7 +288,7 @@ function buildString(submit, id) {
         osLoans = '';
         $('#' + id + 'osLoans-div').addClass('hide');
       } else {
-        if (osLoansGood(submit, id) == false) { rc = false; console.log('false 8'); }
+        if (osLoansGood(submit, id) == false) { rc = false; }
         $('#' + id + 'osLoans-div').removeClass('hide');
       }
       return returnBuildString(rc, id, idAward, amount, xferdate, account, earn, osLoans);
@@ -311,8 +297,8 @@ function buildString(submit, id) {
       $('#' + id + 'osLoans-div').removeClass('hide');
     }
 
-    if (earningsGood(submit, id) == false) { rc = false; console.log('false 9'); }
-    if (osLoansGood(submit, id) == false) { rc = false; console.log('false 10'); }
+    if (earningsGood(submit, id) == false) { rc = false; }
+    if (osLoansGood(submit, id) == false) { rc = false; }
 
     return returnBuildString(rc, id, idAward, amount, xferdate, account, earn, osLoans);
 }
@@ -329,7 +315,7 @@ function returnBuildString(rc, id, idAward, amount, xferdate, account, earn, osL
     var tmp = '' + amount + account + xferdate + earn + osLoans;
     if (tmp.length > 0) { tmp += '.'; }
     setAwardText(tmp, id);
-    //console.log('rBS ' +idAward + ' ' + rc+' '+tmp);
+    // console.log('rBS ' +idAward + ' ' + rc+' '+tmp);
 
     // allowContinue(rc, 7);
     if (rc) { setAwardGood(id); awardsGood(rc); return true; }
@@ -360,7 +346,7 @@ function clearAward(id) {
   clearError('aw'+id+'paymentDate1');
   clearError('aw'+id+'paymentDate1EntitlementDate');
 
-  pickEarnings('N', id);
+  // pickEarnings('N', id);
   $('#'+id+'earningsYes').prop('checked', false);
   $('#'+id+'earningsPercent').prop('checked', false);
   $('#'+id+'earningsPercentRate').val('');
@@ -373,7 +359,7 @@ function clearAward(id) {
   clearError(id+'earningsPerdiemRate');
 
   $('#'+id+'paymentDate2Order').prop('checked', false);
-  $('#aw'+id+'paymentDate2Entitlement').prop('checked', false);
+  $('#'+id+'paymentDate2Entitlement').prop('checked', false);
   $('#aw'+id+'paymentDate2EntitlementDate').val('');
   clearError('aw'+id+'paymentDate2');
   clearError('aw'+id+'paymentDate2EntitlementDate');
@@ -384,8 +370,8 @@ function clearAward(id) {
 
   setAwardBad(id);
   showAwardPanel(id, 1);
-  $('#'+id+'awardTypeFixed').prop('checked', 'true');
-  pickAwardType('F', id);
+  // $('#'+id+'awardTypeFixed').prop('checked', 'true');
+  // pickAwardType('F', id);
   // setAwardText('Award ' + id, id);
   setAwardText('', id);
   // activateAwardDiv(i);
@@ -486,8 +472,8 @@ function setAwardVal(id, show, accountIdx, awardType, fixed, percentage, entitle
 function copyAward(i, j) {
   if (i < 1) { return; }
   if (j < 1) { return; }
-  if (i > 6) { return; }
-  if (j > 6) { return; }
+  if (i > maxAwards) { return; }
+  if (j > maxAwards) { return; }
   clearError(i+'award');
   var openFlag = awardAccordionIsOpen(j);
 
@@ -505,12 +491,13 @@ function copyAward(i, j) {
   if($('#'+j+'paymentDate1AsOf').prop('checked')) { pickPaymentDate(1, 'P', i); }
   if($('#'+j+'paymentDate1Order').prop('checked')) { pickPaymentDate(1, 'O', i); }
   if($('#'+j+'paymentDate1Entitlement').prop('checked')) { pickPaymentDate(1, 'E', i); }
-  $('#aw'+i+'paymentDate1EntitlementDate').flatpickr.setDate($('#aw'+j+'paymentDate1EntitlementDate').val());
+  // $('#aw'+i+'paymentDate1EntitlementDate').flatpickr.setDate($('#aw'+j+'paymentDate1EntitlementDate').val());
+  $('#aw'+i+'paymentDate1EntitlementDate').val($('#aw'+j+'paymentDate1EntitlementDate').val());
   clearError(i+'paymentDate1');
   clearError('aw'+i+'paymentDate1EntitlementDate');
 
-  if($('#'+j+'earningsNo').prop('checked')) { console.log(j, 'earningsNO'); pickEarnings('N', i); }
-  if($('#'+j+'earningsYes').prop('checked')) { console.log(j, 'earningsYes'); pickEarnings('Y', i); }
+  if($('#'+j+'earningsNo').prop('checked')) { pickEarnings('N', i); }
+  if($('#'+j+'earningsYes').prop('checked')) { pickEarnings('Y', i); }
   if($('#'+j+'earningsPercent').prop('checked')) { pickEarnings('P', i); }
   if($('#'+j+'earningsLosses').prop('checked')) { pickEarnings('L', i); }
   if($('#'+j+'earningsPerdiem').prop('checked')) { pickEarnings('D', i); }
@@ -521,7 +508,7 @@ function copyAward(i, j) {
   clearError(i+'earningsPerdiemRate');
 
   if($('#'+j+'paymentDate2Order').prop('checked')) { pickPaymentDate(2, 'O', i); }
-  if($('#aw'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
+  if($('#'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
   $('#aw'+i+'paymentDate2EntitlementDate').flatpickr().setDate($('#aw'+j+'paymentDate2EntitlementDate').val());
 console.log('date is ', $('#aw'+j+'paymentDate2EntitlementDate').val());
   clearError(i+'paymentDate2');
@@ -540,7 +527,6 @@ console.log('date is ', $('#aw'+j+'paymentDate2EntitlementDate').val());
 function awardAccountGood(submit, id) {
   var awardAccount = $('#'+id+'awardAccount').val();
   $('#lblAYRawardAccount').html(awardAccount);
-  console.log('awardaccount', {submit}, {id}, {awardAccount});
   if (awardAccount == 'Select') {
     if (submit == 0) { return false; }
     return showError(id+'awardAccount', "Select an account from the drop-down list.");
@@ -549,7 +535,6 @@ function awardAccountGood(submit, id) {
 }
 
 function pickAwardType(flag, id) {
-console.log('pickAwardType', {flag}, {id});
   if (flag == 'P') {
     $('#'+id+'awardTypePercent').prop('checked', true);
     $('#'+id+'fixedAmount-div').addClass('hide');
@@ -639,7 +624,6 @@ console.log('pickPaymentDate', {idx}, {flag}, {id});
 }
 
 function includeEarningsGood(submit, id, hide) {
-  console.log('includeEarningsGood', {submit}, {id}, {hide});
   clearError(id+'earnings');
   if (hide) {
     $('#' + id + 'includeEarnings-div').addClass('hide');
@@ -705,7 +689,6 @@ function earningsPercentRateGood(submit, id) {
 }
 
 function pickEarnings(flag, id) {
-  console.log('pickEarnings ', {flag}, {id});
   if (flag == 'N') {
     // $('#'+id+'earningsYes').prop('checked', false);
     $('#'+id+'earningsNo').prop('checked', true);
@@ -872,16 +855,9 @@ function awardTextGood(id) {
 
    return buildString(1, id);
 }
-function disableBuildAnotherButton() {
-  console.log('DAV disable build another button');
-  $('#buildAnotherButton').prop('disabled',true);
-}
-function enableBuildAnotherButton() {
-  console.log('DAV enable build another button');
-  $('#buildAnotherButton').prop('disabled',false);
-}
+function disableBuildAnotherButton() { $('#buildAnotherButton').prop('disabled',true); }
+function enableBuildAnotherButton() { $('#buildAnotherButton').prop('disabled',false); }
 function disableDeleteButton1() {
-  console.log('DAV disable delete button 1');
   $('#1deleteButtonDiv').addClass('disabled');
   $('#1deleteButton').prop('disabled',true);
 }
@@ -890,7 +866,6 @@ function enableDeleteButton1() {
   $('#1deleteButton').prop('disabled',false);
 }
 function activateAward() {
-console.log('activateAward');
   var i;
   for (i = 1; i <= maxAwards; i++) {
     if ( $('#' + i + 'awardActive').val() != 1) {
@@ -915,14 +890,12 @@ function deactivateAwardXX() {
   return false;
 }
 function activateAwardDiv(id) {
-console.log('activateAwardDiv', id);
   if (id > maxAwards) { disableBuildAnotherButton(); return false; }
   $('#'+id+'awardActiveDiv').removeClass('hide');
   $('#'+id+'awardActive').val(1);
   if (id > 1) { enableDeleteButton1(); }
   if (id >= maxAwards) {
     // at max awards
-    console.log('at max awards');
     disableBuildAnotherButton();
   }
   clearError('awards');
@@ -930,7 +903,6 @@ console.log('activateAwardDiv', id);
   return true;
 }
 function deactivateAwardDiv(id, start) {
-console.log('DAV deactivateAwardDiv', id, start);
   enableBuildAnotherButton();
   clearError('awards');
   $('#' + id + 'awardActive').val(0);

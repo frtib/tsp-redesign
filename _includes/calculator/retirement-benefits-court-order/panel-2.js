@@ -38,7 +38,7 @@ cachePath["PayeePanel"] = 4;
 cachePath["PayeePanelState"] = null;
 cachePath["PayeePanelError"] = null;
 function getPrimeSettingsPath() {
-  console.log('called get');
+  // console.log('called get');
   cachePath["highwater"] = getHighwater();
   cachePath["payeePartYes"] = $('#payeePartYes').prop('checked');
   cachePath["payeePartNo"] = $('#payeePartNo').prop('checked');
@@ -49,41 +49,38 @@ function getPrimeSettingsPath() {
   // cachePath["PayeePanel"] = getIDbyName('{{payeePanel}}');
   cachePath["PayeePanelState"] = getProgressState(cachePath["PayeePanel"]);
   cachePath["PayeePanelError"] = getProgressStateError(cachePath["PayeePanel"]);
-  console.log({cachePath}, )
+  // console.log({cachePath}, )
 }
 // did user change something important
 function anyChangesPath() {
-  console.log('in any changes+',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
+  // console.log('in any changes+',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
   if (cachePath["payeePartYes"] != $('#payeePartYes').prop('checked')) { return true; }
   if (cachePath["payeePartNo"] != $('#payeePartNo').prop('checked')) { return true; }
   if (cachePath["receiveOne"] != $('#receiveOne').prop('checked')) { return true; }
   if (cachePath["receiveTwo"] != $('#receiveTwo').prop('checked')) { return true; }
   if (cachePath["relationshiSpouse"] != $('#relationshipSpouse').prop('checked')) { return true; }
   // if (cachePath["relationshiDependant"] != $('#relationshipDependant').attr('checked')) { return true; }
-  console.log('any changes false');
+  // console.log('any changes false');
   return false;
 }
 // set error if we changed something while all was good, return true if we set error
 function testPrimeSettingsPath() {
-console.log("\n\ntest Prime ", $('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'),
-  'in test',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
+  // console.log("\n\ntest Prime ", $('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), 'in test',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
   if (($('#payeePartNo').prop('checked')) && ($('#relationshipDependant').prop('checked'))) {
     // this setting overrides any other consideration - do not advance!
     setHighwater(2);
     setProgress(2);
-console.log($('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), '1 leaving test true');
+    // console.log($('#payeePartNo').prop('checked'), $('#relationshipDependant').prop('checked'), '1 leaving test true');
     return true;
   }
-  if (cachePath["PayeePanelError"]) { console.log('2 leaving test false');
-return false; } // somebody else did it
-  if (cachePath["PayeePanelState"] != '-done') { console.log('3 leaving test false');
-return false; } // somebody else's problem
+  if (cachePath["PayeePanelError"]) { return false } // console.log('2 leaving test false'); return false; } // somebody else did it
+  if (cachePath["PayeePanelState"] != '-done') { return false; } // console.log('3 leaving test false'); return false; } // somebody else's problem
   if (anyChangesPath() == false) {
     // nothing changed
     // unsetProgressStateError(cachePath["PayeePanel"]);
     setHighwater(cachePath["highwater"]);
     setProgress(2);
-console.log('4 leaving test false');
+    // console.log('4 leaving test false');
     return false;
   }
   // xxx something changed and Payee panel cares about it.
@@ -93,7 +90,7 @@ console.log('4 leaving test false');
   // setHighwater(cachePath["PayeePanel"]);
   setHighwater(2);
   setProgress(2);
-console.log('5 leaving test true');
+  // console.log('5 leaving test true');
   return true;
 }
 
@@ -106,7 +103,7 @@ function getPayeePart() {
 }
 function payeePartGood(submit) {
   var payeePart = getPayeePart();
-console.log('getPayeePart ', submit, payeePart);
+  // console.log('getPayeePart ', submit, payeePart);
   if (payeePart == '') {
     $('#partyRelationship').addClass('hide');
     $('#howDivided').addClass('hide');

@@ -101,7 +101,7 @@ function setProgressState(step, state) {
 }
 
 function getProgressState(step) {
-console.log($('#progressStep'+step));
+  // console.log($('#progressStep'+step));
   if ($('#progressStep'+step).hasClass('progstep-done')) { return progressDone; }
   if ($('#progressStep'+step).hasClass('progstep-active')) { return progressActive; }
   return '';

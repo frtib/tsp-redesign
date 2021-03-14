@@ -10,14 +10,14 @@ panelGood[{{ panelID }}] = function(forceValue) {
   var role = 'pay';
   var acctFlag = true;
   if ((getPayeePart() == 'Yes') && (getReceive() == 'Both')) { acctFlag = accountNumbersGood(forceValue, role); }
-console.log(' panel good ', acctFlag , addressGood(0, 0, role) , SSNGood(0, 0, role));
+  // console.log(' panel good ', acctFlag , addressGood(0, 0, role) , SSNGood(0, 0, role));
   return  acctFlag & addressGood(0, 0, role) & SSNGood(0, 0, role);
 };
 panelSure[{{ panelID }}] = function(forceValue) {
   var role = 'pay';
   var acctFlag = true;
   if ((getPayeePart() == 'Yes') && (getReceive() == 'Both')) { acctFlag = accountNumbersGood(forceValue, role); }
-console.log(' panel sure ', acctFlag , addressGood(0, forceValue, role) , SSNGood(0, forceValue, role));
+  // console.log(' panel sure ', acctFlag , addressGood(0, forceValue, role) , SSNGood(0, forceValue, role));
   return acctFlag & addressGood(0, forceValue, role) & SSNGood(0, forceValue, role);
 };
 

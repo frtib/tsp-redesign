@@ -29,14 +29,14 @@ panelSure[{{ panelID }}] = function(forceValue) {
 function getpetitioner() { return $('#petitioner').val(); }
 function petitionerGood(submit) {
   var petitioner = getpetitioner();
-console.log('petitionerGood |', petitioner, '|');
+  // console.log('petitionerGood |', petitioner, '|');
 
   if (petitioner == 'Select') {
-    console.log('error petitionerGood |', petitioner, '|');
+    // console.log('error petitionerGood |', petitioner, '|');
     if (submit) { return showError('petitioner', "Select petitioner."); }
   }
 
-  console.log('clear petitionerGood |', petitioner, '|');
+  // console.log('clear petitionerGood |', petitioner, '|');
   $('#petitionerGood-panel3').html(petitioner);
   return clearError('petitioner');
 }

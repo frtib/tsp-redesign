@@ -91,14 +91,14 @@ function checkAT(submit, warn, prefix) {
 function getQDROretainer() { return $('#QDROretainer').val(); }
 function QDROretainerGood(submit) {
   var QDROretainer = getQDROretainer();
-console.log('QDROretainerGood |', QDROretainer, '|');
+  // console.log('QDROretainerGood |', QDROretainer, '|');
 
   if (QDROretainer == 'Select') {
-    console.log('error QDROretainerGood |', QDROretainer, '|');
+    // console.log('error QDROretainerGood |', QDROretainer, '|');
     if (submit) { return showError('QDROretainer', "Select one."); }
   }
 
-  console.log('clear QDROretainerGood |', QDROretainer, '|');
+  // console.log('clear QDROretainerGood |', QDROretainer, '|');
   $('#QDROretainerGood-panel3').html(QDROretainer);
   return clearError('QDROretainer');
 }

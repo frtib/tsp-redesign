@@ -104,7 +104,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       <li>
       <!-- DAV, the name and ID were the same for each input, which is not allowed for radio buttons. I created a new name and made the ID = value. -->
         <input type="radio" id="{{awardNum}}earningsNo" name="includeEarnings" value="No Earnings" onblur="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
-        <label for="{{awardNum}}earningsNo" id="fixedDollar">No earnings</label>
+        <label for="{{awardNum}}earningsNo">No earnings</label>
       </li>
       <li>
         <input type="radio" id="{{awardNum}}earningsYes" name="includeEarnings" value="Yes Earnings" onblur="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
@@ -210,7 +210,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 <ul id="{{awardNum}}deleteButtonDiv" class="buttons justify-end {% if awardNum == 1 %}disabled{% endif %}">
   <li>
   <button  id="{{awardNum}}deleteButton" class="usa-button-secondary delete" href="javascript:void(0);"  {% if awardNum == 1 %}disabled{% endif %}
-    onclick="removeAward({{awardNum}}, false, {{awardNum}});">Delete award</button>
+    onclick="removeAward({{awardNum}}, false, {{awardNum}}); buildStrings();">Delete award</button>
   </li>
 </ul>
 

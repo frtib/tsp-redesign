@@ -42,11 +42,20 @@ function setValues(flag) {
     $('#partfcountrylist').val('GB');
     $('#partphoneNum').val('+44 20 7224 3688');
     $('#partcivilian').click();
-    $('#partcivacctNum').attr('data-store', '1111111111111');
-    $('#partcivacctNum').val('1111111111111');
+//    $('#partcivacctNum').attr('data-store', '1111111111111');
+//    $('#partcivacctNum').val('1111111111111');
+    $('#partuniformed').click();
+//    $('#partusvacctNum').attr('data-store', '5555555555555');
+//    $('#partusvacctNum').val('5555555555555');
+    $('#partacctNum').attr('data-store', '5555555555555');
+    $('#partacctNum').val('5555555555555');
+    $('#partBPA').click();
     $('#partBPAacctNum').attr('data-store', '3333333333333');
     $('#partBPAacctNum').val('3333333333333');
-    setPlaceholder('#partcivacctNum', 13);
+    // setPlaceholder('#partcivacctNum', 13);
+    // setPlaceholder('#partusvacctNum', 13);
+    setPlaceholder('#partacctNum', 13);
+    setPlaceholder('#partBPAacctNum', 13);
     processPanel(3,0,4,0);
   }
   if (flag == 5) {
@@ -62,12 +71,21 @@ function setValues(flag) {
     $('#payfcountrylist').val('GB');
     $('#payphoneNum').val('+44 20 7224 3688');
     $('#paySSN').val('123456789');
+    $('#paycivilian').click();
+//    $('#paycivacctNum').attr('data-store', '6666666666666');
+//    $('#paycivacctNum').val('6666666666666');
+    $('#payBPA').click();
     $('#payBPAacctNum').attr('data-store', '4444444444444');
     $('#payBPAacctNum').val('4444444444444');
     $('#payuniformed').click();
-    $('#payusvacctNum').attr('data-store', '2222222222222');
-    $('#payusvacctNum').val('2222222222222');
-    setPlaceholder('#payusvacctNum', 13);
+//    $('#payusvacctNum').attr('data-store', '2222222222222');
+//    $('#payusvacctNum').val('2222222222222');
+    $('#payacctNum').attr('data-store', '2222222222222');
+    $('#payacctNum').val('2222222222222');
+    // setPlaceholder('#paycivacctNum', 13);
+    // setPlaceholder('#payusvacctNum', 13);
+    setPlaceholder('#payacctNum', 13);
+    setPlaceholder('#payBPAacctNum', 13);
     processPanel(4,0,5,0);
   }
   if (flag == 6) {
@@ -125,10 +143,12 @@ function setValues(flag) {
 }
 
 function setAccountPanelPlaceholders(prefix) {
-  accountNumberTSP(prefix+"civacctNum");
-  setPlaceholder('#'+prefix+"civacctNum", 13);
-  accountNumberTSP(prefix+"usvacctNum");
-  setPlaceholder('#'+prefix+"usvacctNum", 13);
+  // accountNumberTSP(prefix+"civacctNum");
+  // setPlaceholder('#'+prefix+"civacctNum", 13);
+  // accountNumberTSP(prefix+"usvacctNum");
+  // setPlaceholder('#'+prefix+"usvacctNum", 13);
+  accountNumberTSP(prefix+"acctNum");
+  setPlaceholder('#'+prefix+"acctNum", 13);
   accountNumberTSP(prefix+"BPAacctNum");
   setPlaceholder('#'+prefix+"BPAacctNum", 13);
 }

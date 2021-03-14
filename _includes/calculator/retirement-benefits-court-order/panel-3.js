@@ -71,17 +71,13 @@ function testPrimeSettingsPart() {
 
 
 // my functions
-function acctNumGood(submit, prefix, acct) {
-console.log('acct num good ', submit, prefix, acct);
-  var cb = prefix + acct + 'cb';
+function acctNumGood(submit, prefix, acct, showFlag) {
   var id = prefix + acct + 'acctNum';
   var val = $('#'+id).val();
   // acct just has numbers
   // val = val.replace(/\D/g,'');
   $('#'+id).val(val);
-  // test cb
-console.log('#'+id+'-div');
-  if ($('#'+cb).prop('checked')) { $('#'+id+'-div').removeClass('hide'); }
+  if (showFlag) { $('#'+id+'-div').removeClass('hide'); }
     else { $('#'+id+'-div').addClass('hide'); return clearError(id); }
   // test acct
   if (val.length != 13) {
@@ -89,53 +85,56 @@ console.log('#'+id+'-div');
   }
   return clearError(id);
 }
+function isCivilian(role) { return ($('#'+role+'civilian').prop('checked')); }
+function isUniformed(role) { return ($('#'+role+'uniformed').prop('checked')); }
+function isBPA(role) { return ($('#'+role+'BPA').prop('checked')); }
+function getAcctNumber(role, BPA, redact, paren) {
+  if (redact == 'F') { return ''; } // Full redact
+  var acctType = '';
+  if (BPA == 'BPA') { acctType = 'BPA'; }
+  // if (BPA == 'BPA1') { acctType = 'BPA'; }
+  // if (BPA == 'BPA2') { acctType = 'BPA'; }
+  var acct = '';
+  var field = '#'+role+acctType+'acctNum';
+  // console.log('getAcctNumber', {role}, {BPA}, {redact}, {field}, {paren});
+  if (redact == 'A') { acct = $.trim($(field).attr('data-store')); }  // show All
+  if (redact == 'P') { acct = $.trim($(field).val()); }  // Partial redact
+  if (paren) { return " (" + acct + ")"; }
+  return acct;
+}
 function accountNumbersGood(submit, prefix) {
   if (prefix == 'part') { testPrimeSettingsPart(); } else { testPrimeSettingsPay(); }
-  var civCB = $('#'+prefix+'civilian').prop('checked');
-  var usvCB = $('#'+prefix+'uniformed').prop('checked');
-  var BPACB = $('#'+prefix+'BPA').prop('checked');
+  var civCB = isCivilian(prefix);
+  var usvCB = isUniformed(prefix);
+  var BPACB = isBPA(prefix);
   if (civCB || usvCB || BPACB) { clearError(prefix+'-account-numbers'); }  // at least one cb is on
+  var label = 'Account number';
+  if (civCB) { label = 'Civilian account number'; }
+  if (usvCB) { label = 'Uniformed Services account number'; }
+  if (civCB && usvCB) { label = 'Civilian and Uniformed Services account number'; }
+  $('#'+prefix+'acctNum-label').html(label);
   dualAccountChecked(submit, prefix, civCB && usvCB);
 
-  var BPA = acctNumGood(submit, prefix, 'BPA');
-  var usv = acctNumGood(submit, prefix, 'usv');
-  var civ = acctNumGood(submit, prefix, 'civ');
-  if (!(civ && usv && BPA)) { return false; }
+  var BPA = acctNumGood(submit, prefix, 'BPA', BPACB);
+  var both = acctNumGood(submit, prefix, '', civCB || usvCB);
+  if (!(both && BPA)) { return false; }
   if (submit) {
     if (!(civCB || usvCB || BPACB)) { return showError(prefix+'-account-numbers', 'Select at least one account type.'); }
   }
 
   return clearError(prefix+'-account-numbers');
 }
-function lastAcctNumChange(prefix, field) {
-  $('#'+prefix+'LastAcctChanged').val(prefix+field);
-}
+
 // both civ and usv checked?
 function dualAccountChecked(submit, prefix, flag) {
-  var civAcct = '#' + prefix + 'civacctNum';
-  var usvAcct = '#' + prefix + 'usvacctNum';
-  var note1 = '#' + prefix + '-dual-accounts1';
-  var note2 = '#' + prefix + '-dual-accounts2';
+  var acct = '#' + prefix + 'acctNum';
+  var note = '#' + prefix + '-dual-account-info-box';
   if (flag) {
-    $(note1).removeClass('hide');
-    $(note2).removeClass('hide');
+    $(note).removeClass('hide');
     // $(usvAcct).prop("disabled", true);
-    var lastAcct = '#' + $('#'+prefix+'LastAcctChanged').val();
-    if (lastAcct == civAcct) {
-      $(usvAcct).val($(civAcct).val());
-      $(usvAcct).attr('data-store', $(civAcct).val());
-      // $(usvAcct).attr('data-store', $(civAcct).attr('data-store').toString());
-      setPlaceholder(usvAcct, 13);
-    } else {
-      $(civAcct).val($(usvAcct).val());
-      $(civAcct).attr('data-store', $(usvAcct).val());
-      // $(civAcct).attr('data-store', $(usvAcct).attr('data-store').toString());
-      setPlaceholder(civAcct, 13);
-    }
+    setPlaceholder(acct, 13);
   } else {
-    $(note1).addClass('hide');
-    $(note2).addClass('hide');
-    // $(usvAcct).prop("disabled", false);
+    $(note).addClass('hide');
   }
   return flag;
 }
@@ -208,7 +207,6 @@ function addressGood(submit, writein, role) {
   // for AYR $('#lblAYR'+role+'Address').html(getAddressString(role));
   $('#lblAYR'+role+'license').html($('#'+role+'license').val());
   // alert('#lblAYR'+role+'Address' + ' | ' + getAddressString(role));
-console.log('fa checked ', role, $('#'+role+'foreignAddress').prop('checked'));
   if ($('#'+role+'foreignAddress').prop('checked')) {
    clearError(role+'street1'); clearError(role+'city');
    clearError(role+'state'); clearError(role+'zip');
