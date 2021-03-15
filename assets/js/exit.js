@@ -223,6 +223,8 @@ urlList[311] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2a73529
 urlList[312] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2b66fd7';
 // February 2021 Executive Director Letter
 urlList[313] = 'https://content.govdelivery.com/accounts/USTSP/bulletins/2bf8ec3';
+// Accenture Federal Services Link for bulletin 21-1
+urlList[314] = 'https://www.accenture.com/us-en/industries/afs-index';
 // TSP Investment Funds
 urlList[401] = '';
 urlList[402] = '';
