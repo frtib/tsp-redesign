@@ -258,6 +258,30 @@ Additionally, we have developed instructions for submitting a [Privacy Act reque
 </div>
 </div>
 </li>
+<!-- MEDIA INQUIRIES -->
+<li>
+    <button class="usa-accordion-button"
+      aria-expanded="false"
+      aria-controls="a7">
+      Media inquiries
+    </button>
+<div id="a7" class="usa-accordion-content">
+
+<div class="usa-grid-full">
+<div class="usa-width-two-thirds" markdown="1">
+
+Media inquiries can be sent to:
+
+</div>
+<div class="usa-width-one-third" markdown="1">
+
+**Office of External Affairs**  
+[PressInquiries@frtib.gov](mailto:PressInquiries@frtib.gov)
+
+</div>
+</div>
+</div>
+</li>
 </ul>
 
 
