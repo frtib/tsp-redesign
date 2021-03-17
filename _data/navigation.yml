@@ -12,14 +12,16 @@
 primary:
   - text: Manage your plan
     links:
-    - text: Account basics
-      href: /account-basics/
+    - text: TSP basics
+      href: /tsp-basics/
     - text: Making contributions
       href: /making-contributions/
+    - text: Access your account
+      href: /access-your-account/
     - text: Forms and resources
       href: /forms/
     - text: Frequently asked questions
-      href: /faq/
+      href: /frequently-asked-questions/
   - text: Learn about fund options
     links:
     - text: How to invest
@@ -105,25 +107,17 @@ calculators:
         href: /calculators/estimate-loan-payments/
 
 manage-your-plan:
-  - text: Account basics
-    href: /account-basics/
+  - text: TSP basics
+    href: /tsp-basics/
     subnav:
-      - text: Access your account
-        href: /account-basics/access-your-account/
       - text: How the TSP fits into your retirement
-        href: /account-basics/how-tsp-fits/
+        href: /tsp-basics/how-tsp-fits/
       - text: Move money into the TSP
-        href: /account-basics/move-money-into-tsp/
-      - text: Protect your TSP account
-        href: /account-basics/protect-your-tsp-account/
-      - text: Troubleshoot account access
-        href: /account-basics/troubleshoot-account-access/
-      - text: Update your address
-        href: /account-basics/update-your-address/
+        href: /tsp-basics/move-money-into-tsp/
       - text: Administrative and investment expenses
-        href: /account-basics/administrative-and-investment-expenses/
+        href: /tsp-basics/administrative-and-investment-expenses/
       - text: Designating beneficiaries
-        href: /account-basics/designating-beneficiaries/
+        href: /tsp-basics/designating-beneficiaries/
   - text: Making contributions
     href: /making-contributions/
     subnav:
@@ -143,6 +137,33 @@ manage-your-plan:
         href: /making-contributions/automatic-enrollment-refunds/
       - text: Excess deferrals refunds
         href: /making-contributions/excess-deferrals-refunds/
+  - text: Access your account
+    href: /access-your-account/
+    subnav:
+    - text: Before your first login
+      href: /access-your-account/before-your-first-login/
+    - text: Protect your TSP account
+      href: /access-your-account/protect-your-tsp-account/
+    - text: Request your account information
+      href: /access-your-account/request-your-account-information/
+    - text: Create your user ID
+      href: /access-your-account/create-your-user-id/
+    - text: Recover your user ID
+      href: /access-your-account/recover-your-user-id/
+    - text: Reset your TSP password
+      href: /access-your-account/reset-your-tsp-password/
+    - text: Validate your contact information
+      href: /access-your-account/validate-your-contact-information/
+    - text: Receive one-time security codes
+      href: /access-your-account/receive-one-time-security-codes/
+    - text: Update your mailing address
+      href: /access-your-account/update-your-address/
+    - text: Troubleshoot your TSP account
+      href: /access-your-account/troubleshoot-account-access/
+  - text: Forms and resources
+    href: /forms/
+  - text: Frequently asked questions
+    href: /frequently-asked-questions/
 
 news-and-resources:
   - text: News and resources
@@ -154,8 +175,6 @@ news-and-resources:
         href: /news-and-resources/newsletters/
       - text: Government shutdown
         href: /news-and-resources/government-shutdown/
-  - text: FAQs
-    href: /faq/
   - text: Videos and resources
     href: /videos-and-resources/
   - text: Forms and resources

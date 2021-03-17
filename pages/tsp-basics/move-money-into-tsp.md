@@ -4,7 +4,9 @@ title: Move money into the TSP
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/move-money-into-tsp/
+permalink: /tsp-basics/move-money-into-tsp/
+redirect_from:
+  - /account-basics/move-money-into-tsp/
 ---
 
 # Move money into the TSP

@@ -4,9 +4,11 @@ title: How the TSP fits into your retirement
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/how-tsp-fits/
+permalink: /tsp-basics/how-tsp-fits/
 document-ready:
   - addFormModals();
+redirect_from:
+  - /account-basics/how-tsp-fits/
 ---
 
 # How the TSP fits into your retirement

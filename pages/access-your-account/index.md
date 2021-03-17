@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Account basics
+title: Access your account
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/access-your-account/
+permalink: /access-your-account/
 redirect_from:
   - /troubleshooting/
+  - /account-basics/access-your-account/
 ---
 
 # Access your account

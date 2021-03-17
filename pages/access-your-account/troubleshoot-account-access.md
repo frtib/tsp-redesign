@@ -4,12 +4,14 @@ title: Troubleshoot account access
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/troubleshoot-account-access/
+permalink: /access-your-account/troubleshoot-account-access/
 redirect_from:
   - /sitehelp/
   - /account-basics/troubleshoot-login-errors/
+  - /account-basics/troubleshoot-account-access/
 
 ---
+
 # Troubleshoot account access
 
 ## 3 most common TSP account problems and solutions

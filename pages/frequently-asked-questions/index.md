@@ -1,13 +1,15 @@
 ---
 layout: page
 title: Frequently asked questions
-sidenav: news-and-resources
+sidenav: manage-your-plan
 styles:
 scripts:
   - /assets/js/query-string.js
-permalink: /faq/
+permalink: /frequently-asked-questions/
 document-ready:
   - openAnchor();
+redirect_from:
+  - /faq/
 ---
 
 # Frequently asked questions

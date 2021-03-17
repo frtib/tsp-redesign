@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Account basics
+title: Protect your TSP account
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/protect-your-tsp-account/
+permalink: /access-your-account/protect-your-tsp-account/
+redirect_from:
+  - /account-basics/protect-your-tsp-account/
 ---
 
 
