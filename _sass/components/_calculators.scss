@@ -312,46 +312,46 @@ div.results-grid-frame {
 } // end @media $small-screen
 
 // DONALD:  lost RBCO styles
-section.calculator-panel ul.usa-accordion-bordered.award {
-  margin-top: 2rem; }
-  section.calculator-panel ul.usa-accordion-bordered.award li {
-    background-color: transparent; }
-    section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-button {
-      background-color: #dce4ef; }
-    section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content {
-      background-color: #ffffff;
-      border-bottom: 3px solid #dce4ef;
-      border-left: 3px solid #dce4ef;
-      border-right: 3px solid #dce4ef;
-      padding: 3rem 2rem 1rem; }
-      section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content .award-body {
-        border: 2px dashed #5b616b;
-        padding: 1.5rem;
-        font-family: "Merriweather";
-        font-size: 1.4rem;
-        text-indent: 2em; }
-      section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content ul.buttons {
-        margin: 0;
-        margin-top: 1rem; }
-      section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete {
-        margin-right: 0;
-        box-shadow: none;
-        color: #222223; }
-        section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete:after {
-          font-size: 2rem;
-          color: #323a45;
-          transition: 0.3s; }
-        section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete:hover:after {
-          color: #cd2026; }
-  section.calculator-panel ul.usa-accordion-bordered.award .panel-form-field {
-    background-color: inherit; }
-    section.calculator-panel ul.usa-accordion-bordered.award .panel-form-field:last-child {
-      border-bottom: none; }
-  section.calculator-panel ul.usa-accordion-bordered.award.complete li {
-    background-color: transparent; }
-    section.calculator-panel ul.usa-accordion-bordered.award.complete li .usa-accordion-button {
-      background-color: #e7f4e4; }
-    section.calculator-panel ul.usa-accordion-bordered.award.complete li .usa-accordion-content {
-      border-bottom: 3px solid #e7f4e4;
-      border-left: 3px solid #e7f4e4;
-      border-right: 3px solid #e7f4e4; }
+// section.calculator-panel ul.usa-accordion-bordered.award {
+//   margin-top: 2rem; }
+//   section.calculator-panel ul.usa-accordion-bordered.award li {
+//     background-color: transparent; }
+//     section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-button {
+//       background-color: #dce4ef; }
+//     section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content {
+//       background-color: #ffffff;
+//       border-bottom: 3px solid #dce4ef;
+//       border-left: 3px solid #dce4ef;
+//       border-right: 3px solid #dce4ef;
+//       padding: 3rem 2rem 1rem; }
+//       section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content .award-body {
+//         border: 2px dashed #5b616b;
+//         padding: 1.5rem;
+//         font-family: "Merriweather";
+//         font-size: 1.4rem;
+//         text-indent: 2em; }
+//       section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content ul.buttons {
+//         margin: 0;
+//         margin-top: 1rem; }
+//       section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete {
+//         margin-right: 0;
+//         box-shadow: none;
+//         color: #222223; }
+//         section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete:after {
+//           font-size: 2rem;
+//           color: #323a45;
+//           transition: 0.3s; }
+//         section.calculator-panel ul.usa-accordion-bordered.award li .usa-accordion-content button.delete:hover:after {
+//           color: #cd2026; }
+//   section.calculator-panel ul.usa-accordion-bordered.award .panel-form-field {
+//     background-color: inherit; }
+//     section.calculator-panel ul.usa-accordion-bordered.award .panel-form-field:last-child {
+//       border-bottom: none; }
+//   section.calculator-panel ul.usa-accordion-bordered.award.complete li {
+//     background-color: transparent; }
+//     section.calculator-panel ul.usa-accordion-bordered.award.complete li .usa-accordion-button {
+//       background-color: #e7f4e4; }
+//     section.calculator-panel ul.usa-accordion-bordered.award.complete li .usa-accordion-content {
+//       border-bottom: 3px solid #e7f4e4;
+//       border-left: 3px solid #e7f4e4;
+//       border-right: 3px solid #e7f4e4; }

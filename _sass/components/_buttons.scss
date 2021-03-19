@@ -12,31 +12,52 @@ button {
   &:after {
     font-family: $font-awesome;
     font-weight: $light;
-    margin-right: 0.7rem;
+    padding-right: 0.7rem;
     line-height: 1;
   }
 
   &:after {
-    // margin-left: : 0.7rem;
+    padding-left: 0.7rem;
+  }
+
+  &.build {
+    &:after {
+      content: "\f5ff";
+      font-weight: $bold;
+    }
   }
 
   &.calculate {
     &:after {
-      font-family: $font-awesome;
       content: "\f1ec";
-      font-weight: $light;
-      padding-left: 0.5rem;
     }
   }
 
   &.clear {
     &:after {
-      font-family: $font-awesome;
       content: "\f55a";
-      font-weight: $light;
-      padding-left: 0.5rem;
     }
   }
+// 'Delete award' button, panel 7, RBCO
+  // &.delete {
+  //   margin-right: 0;
+  //   box-shadow: none;
+  //   color: $color-base;
+  //
+  //   &:after {
+  //     font-size: 2rem;
+  //     color: $color-gray-dark;
+  //     transition: 0.3s;
+  //     content: "\f1f8";
+  //     font-weight: $bold;
+  //   }
+  //
+  //   &:hover:after {
+  //     box-shadow: inherit;
+  //     color: $color-error;
+  //   }
+  // }
+
 
   &.download {
     &:before {
@@ -62,26 +83,29 @@ button {
 
   &.save {
     &:after {
-      font-family: $font-awesome;
       content: "\f0c7";
-      font-weight: $light;
-      padding-left: 0.5rem;
+    }
+  }
+
+  &.pdf {
+    &:after {
+      content: "\f1c1";
     }
   }
 
   &.print {
     &:after {
-      font-family: $font-awesome;
       content: "\f02f";
-      font-weight: $light;
-      padding-left: 0.5rem;
     }
   }
   &.write-in {
     background-color: #f9c642;
+    &:after {
+      content: "\f305";
+    }
   }
   &.attention {
     background-color: #f9c642;
-    color: #222223;
+    color: $color-base;
   }
 }

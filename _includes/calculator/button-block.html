@@ -17,7 +17,7 @@ Generates a list of buttons.  The box around them and the ul should be done by t
 {% assign bonusButton2 = include.bonusButton2 | default: 0 %}
 {% assign bonusButton3 = include.bonusButton3 | default: 0 %}
 
-<nav><ul class="navigation-buttons">
+<nav role="navigation"><ul class="navigation-buttons">
 {% if showPDF != 0 %}
 <input type="submit" name="PDF" value="Show Blank PDF">
 {% include calculator/button.html text='Download' title='Blank PDF form opens in a new window.'
@@ -26,9 +26,13 @@ Generates a list of buttons.  The box around them and the ul should be done by t
 
 {% if bonusButton1 != 0 %}{{ bonusButton1}}{% endif %}
 
+    {% comment %}
+    DAV,
+    The buttons on Step 1 do not use the standard ul.navigation-buttons HTML.
+    {% endcomment %}
 {% if getStarted != 0 %}
 {% capture click %}processPanel({{ panelID }}, 0, {{ getStarted }}, 0); return false;{% endcapture %}
-{% include calculator/button.html text='Get started' onClick=click xtraClass2='primary' inList=1 %}
+{% include calculator/button.html text='Nope. See comment in button-block.html' onClick=click xtraClass2='primary usa-button-big' inList=1 %}
 {% endif %}
 
 {% if start != 0 %}

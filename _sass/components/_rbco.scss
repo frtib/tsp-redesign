@@ -9,6 +9,8 @@ ul.usa-accordion {
 }
 // end TEMPORARY STYLES
 
+
+
 section {
   &.calculator-panel {
 
@@ -25,18 +27,74 @@ section {
       }
     }
 
-    button.usa-button {
-      &.attention {
-        color: $color-base;
+    button {
+      .usa-button {
+        &.attention {
+          color: $color-base;
+        }
       }
     }
-  }
 
-  ul.usa-accordion-bordered {
-    &.award {
-      .panel-form-field {
-        background-color: inherit;
+    .usa-button-secondary,
+    button {
+      &.delete {
+        margin-right: 0;
+        box-shadow: none;
+        color: $color-base;
+
+        &:after {
+          font-size: 2rem;
+          color: $color-gray-dark;
+          transition: 0.3s;
+          content: "\f1f8";
+          font-weight: $bold;
+        }
+
+        &:hover:after {
+          box-shadow: inherit;
+          color: $color-error;
+        }
       }
+    }
+
+
+    ul.usa-accordion-bordered {
+      &.award {
+        .panel-form-field {
+          background-color: inherit;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        div.usa-accordion-content {
+          ul.buttons {
+            margin: 0;
+            margin-top: 1rem;
+            display: flex;
+            list-style-type: none;
+            max-width: none;
+            margin: 2rem 0;
+            padding: 0;
+          }
+        }
+
+        &.complete {
+          li {
+            background-color: transparent;
+
+            .usa-accordion-button {
+              background-color: #e7f4e4;
+            }
+
+            .usa-accordion-content {
+              border-bottom: 3px solid #e7f4e4;
+              border-left: 3px solid #e7f4e4;
+              border-right: 3px solid #e7f4e4;
+            }
+          }
+        }
+      } //END &.award
     }
   }
   // END .calculator-panel

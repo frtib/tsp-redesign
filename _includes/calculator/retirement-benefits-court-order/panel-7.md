@@ -22,7 +22,13 @@ Awards panel (7) for RBCO.
 </ul>
 {% endfor %}
 {% capture bonusButton2 %}
+
+{% comment %}
+DAV, I added missing <li> tags around the 'Build another award' button to correct layout irregularity.
+{% endcomment %}
+<li>
 <button id="buildAnotherButton" type="button" class="usa-button-secondary build" onclick="activateAward();" markdown="1">Build another award</button>
+</li>
 {% endcapture %}
 {% include calculator/button-block.html panelID=panelID prev=6 bonusButton2=bonusButton2 showResults=8 %}
 
