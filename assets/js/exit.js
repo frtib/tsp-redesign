@@ -135,17 +135,17 @@ urlList[187] = '';
 // TSP to Retirement and Beyond Part I
 urlList[188] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eff9cc6262d66c6c3ddd3f6fd0796acbc';
 urlList[189] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e14c011ad9081411684b7f0534bacae06';
-urlList[190] = '';
+urlList[190] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=efdcfa7b3e72724d3cd212ac657d942b7';
 urlList[191] = '';
-urlList[192] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e29d42e4c373cc11709e01e5edf2f5874';
-urlList[193] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e81480e63d52c038dcf23b39e3612c584';
+urlList[192] = '';
+urlList[193] = '';
 urlList[194] = '';
 // TSP to Retirement and Beyond Part II
 urlList[195] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e7fce2f440aef117aba17d5b490b5b497';
 urlList[196] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ea5a82ff219af868cdbf317f9de280dff';
 urlList[197] = '';
-urlList[198] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e43d6d2622586fd63856f6b45a5ee9213';
-urlList[199] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=eeb0e12ec7063082064a605cc0b34a87d';
+urlList[198] = '';
+urlList[199] = '';
 urlList[200] = '';
 // TSP Pre-Separation Training
 urlList[201] = '';
@@ -303,7 +303,7 @@ function updateExitPage() {
   if (url != '') {
       // build the url redirect here
       // content="#;..." sets the time delay
-      output = '<a href="'+url+'">please use this link</a><meta http-equiv="refresh" content="0;URL='+url+'">';
+      output = '<a href="'+url+'">please use this link</a><meta http-equiv="refresh" content="5;URL='+url+'">';
   }
   $('#offsiteLink').html(output);
 }

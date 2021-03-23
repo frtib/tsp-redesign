@@ -4,8 +4,8 @@ Part II consists of a discussion of the risks faced by new retirees. We will dis
 
 #### March 30, 2021
 
-- 1:00 p.m. — [Class is full]({{ site.baseurl }}/exit/?idx=195){:rel="nofollow"}
+- 1:00 p.m. — [**Class is full**]({{ site.baseurl }}/exit/?idx=195){:rel="nofollow"}
 
 #### April 28, 2021
 
-- 1:00 p.m. — [Class is full]({{ site.baseurl }}/exit/?idx=196){:rel="nofollow"}
+- 1:00 p.m. — [**Class is full**]({{ site.baseurl }}/exit/?idx=196){:rel="nofollow"}

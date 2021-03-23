@@ -81,6 +81,7 @@ To learn more about TSP webinars, please contact us at **webinars@frtib.gov.**
 {% include training/in-service-wd.md %}
 {% include training/post-service-wd.md %}
 {% include training/death-benefits.md %}
+{% include training/retirement-beyond-1-and-2.md %}
 {% include training/retirement-beyond-1.md %}
 {% include training/retirement-beyond-2.md %}
 {% include training/new-to-tsp.md %}
