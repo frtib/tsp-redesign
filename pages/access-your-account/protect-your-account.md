@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Protect your TSP account
+title: Protect your account
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/protect-your-tsp-account/
+permalink: /access-your-account/protect-your-account/
 redirect_from:
   - /account-basics/protect-your-tsp-account/
 ---
 
 
-# Protect your TSP account
+# {{ page.title }}
 
 Protecting your TSP account is our top priority, and it’s a responsibility that we share with you as a TSP participant. While we create a secure connection to tsp.gov and give you control over your account settings, we strongly encourage you to take steps to protect your data when you’re online.
 

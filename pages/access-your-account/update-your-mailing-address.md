@@ -4,11 +4,11 @@ title: Update your mailing address
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/update-your-address/
+permalink: /access-your-account/update-your-mailing-address/
 redirect_from:
   - /account-basics/update-your-address/
 ---
-# Update your mailing address
+# {{ page.title }}
 
 Keeping your addresss up to date with us is important. How you change your address with us depends on whether or not you still work for the federal government.
 

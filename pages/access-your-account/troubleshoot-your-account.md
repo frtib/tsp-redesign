@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Troubleshoot your TSP account
+title: Troubleshoot your account
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/troubleshoot-your-tsp-account/
+permalink: /access-your-account/troubleshoot-your-account/
 redirect_from:
   - /sitehelp/
   - /account-basics/troubleshoot-login-errors/

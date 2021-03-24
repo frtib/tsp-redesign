@@ -15,14 +15,14 @@ redirect_from:
 Once your account has been established, we’ll mail you a welcome letter containing your account number and instructions on how to access your account online and by phone.
 Browse these topics for details on how to set up and manage your TSP account:
 
-- [Set up account access]({{ site.baseurl }}/access-your-account/before-your-first-login/)
+- [Set up account access]({{ site.baseurl }}/access-your-account/set-up-account-access/)
 - [Create your user ID]({{ site.baseurl }}/access-your-account/create-your-user-id/)
 - [Request your account information]({{ site.baseurl }}/access-your-account/request-your-account-information/)
-- [Protect your account]({{ site.baseurl }}/access-your-account/protect-your-tsp-account/)
+- [Protect your account]({{ site.baseurl }}/access-your-account/protect-your-account/)
 - [Validate your contact information]({{ site.baseurl }}/access-your-account/validate-your-contact-information/)
 - [Receive one-time security codes]({{ site.baseurl }}/access-your-account/receive-one-time-security-codes/)
-- [Update your mailing address]({{ site.baseurl }}/access-your-account/update-your-address/)
-- [Troubleshoot your account]({{ site.baseurl }}/access-your-account/troubleshoot-your-tsp-account/)
+- [Update your mailing address]({{ site.baseurl }}/access-your-account/update-your-mailing-address/)
+- [Troubleshoot your account]({{ site.baseurl }}/access-your-account/troubleshoot-your-account/)
 
 {% comment %}
 ## What you'll need to gain access to your TSP account
