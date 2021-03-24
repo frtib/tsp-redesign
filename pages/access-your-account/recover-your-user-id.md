@@ -6,6 +6,7 @@ styles:
 scripts:
 permalink: /access-your-account/recover-your-user-id/
 redirect_from:
+publish: false
 ---
 
 # {{ page.title }}

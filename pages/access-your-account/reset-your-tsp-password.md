@@ -6,6 +6,7 @@ styles:
 scripts:
 permalink: /access-your-account/reset-your-tsp-password/
 redirect_from:
+publish: false
 ---
 
 # {{ page.title }}
