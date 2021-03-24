@@ -2,15 +2,6 @@
 
 This webinar provides an introduction to the Thrift Savings Plan for new employees and service members. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-#### February 24, 2021
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=229){:rel="nofollow"}
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=230){:rel="nofollow"}
-
-#### March 9, 2021
-
-- 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=231){:rel="nofollow"}
-
 #### March 26, 2021
 
 - 10:00 a.m. - [Register]({{ site.baseurl }}/exit/?idx=232){:rel="nofollow"}

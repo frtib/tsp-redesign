@@ -2,23 +2,6 @@
 
 This webinar provides an overview of the TSP investment funds. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
 
-#### February 18, 2021
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=403){:rel="nofollow"}
-
-#### February 19, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=404){:rel="nofollow"}
-
-#### February 26, 2021
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=405){:rel="nofollow"}
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=406){:rel="nofollow"}
-
-#### March 16, 2021
-
-- 1:00 p.m. – [Register]({{ site.baseurl }}/exit/?idx=407){:rel="nofollow"}
-
 #### March 31, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=408){:rel="nofollow"}
