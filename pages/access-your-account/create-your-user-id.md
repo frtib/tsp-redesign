@@ -13,9 +13,9 @@ redirect_from:
 
 # {{ page.title }}
 
-You must create a user ID to log in securely to My Account and manage your Thrift Savings Plan (TSP) account online. If you previously created a user ID and can’t remember it, you may be able to follow prompts to recover your user ID online.
+You must create a user ID to log in securely to My Account. If you previously created a user ID and can’t remember it, you may be able to [recover your user ID online]({{ site.baseurl }}/access-your-account/request-your-account-information/).
 
-**Note**: You need your **TSP account number** and **web password** to create your user ID.
+You need your **TSP account number** and **web password** to create your user ID.
 
 ## Create user ID
 
@@ -25,18 +25,17 @@ You must create a user ID to log in securely to My Account and manage your Thrif
 
 <div class="steps" markdown="1">
 
-1. Go to secure.tsp.gov to access My Account
+1. Go to secure.tsp.gov to access My Account.
 2. Select the link, **Create user ID.**
 3. Enter your TSP account number and web password to log in.
-   1. You’ll need to complete two-step authentication if you have a validated phone number on your account.
-   {:.alpha}
-4. Enter a user ID of your choice in the “User ID” box.
-5. Enter your user ID again in the “Confirm User ID” box.
-6. Select the **Submit** button.
-   1. You may need to answer your security challenge questions if you set those up in My Account before.
-   {:.alpha}
+4. You’ll need to complete two-step authentication if you have a validated phone number on your account.
+5. Enter a user ID of your choice in the “User ID” box.
+6. Enter your user ID again in the “Confirm User ID” box.
+7. Select the **Submit** button.
 
-**You now have access to your account.** From now on, you’ll use your user ID and web password to log in to My Account on secure.tsp.gov. If you forget your user ID, you can recover it online by selecting the link, [**Recover user ID**](#recover-user-id) on the My Account login page.
+You may need to answer your security challenge questions if you set those up in My Account before.
+
+**You now have access to your account.** From now on, you’ll use your user ID and web password to log in to My Account on secure.tsp.gov.
 
 **If you have both a civilian and uniformed services account,** your new user ID will apply to both accounts.
 </div>
