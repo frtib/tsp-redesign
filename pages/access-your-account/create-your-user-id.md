@@ -24,7 +24,6 @@ You need your **TSP account number** and **web password** to create your user ID
 ![Animation of participant creating their user ID.]({{ site.baseurl }}/assets/img/create-user-id/create-user-id.gif)
 
 <div class="steps" markdown="1">
-
 1. Go to secure.tsp.gov to access My Account.
 2. Select the link, **Create user ID.**
 3. Enter your TSP account number and web password to log in.
@@ -39,7 +38,22 @@ You may need to answer your security challenge questions if you set those up in 
 
 **If you have both a civilian and uniformed services account,** your new user ID will apply to both accounts.
 </div>
-
 </div>
 </div>
 <!-- END div.usa-grid how-to -->
+<div class="usa-alert  usa-alert-info usa-alert-paragraph">
+<div class="usa-alert-body" markdown="1">
+### Supported browsers
+{:.usa-alert-heading}
+
+TSP web pages are best viewed with one of the following browsers:
+{:.usa-alert-text}
+
+- Chrome
+- Firefox
+- Safari
+- Internet Explorer 11 (compatibility view disabled)
+
+**Note**: For all browsers listed above, we recommend using the current version with auto update enabled.
+</div>
+</div>
