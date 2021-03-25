@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Troubleshoot your account
+title: Troubleshoot account access
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/troubleshoot-your-account/
+permalink: /access-your-account/troubleshoot-account-access/
 redirect_from:
   - /sitehelp/
   - /account-basics/troubleshoot-login-errors/
@@ -14,12 +14,12 @@ redirect_from:
 
 # {{ page.title }}
 
-You can resolve most common account access problems by [requesting your account information]({{ site.baseurl }}/access-your-account/request-your-account-information/), updating your [validated contact information]({{ site.baseurl }}/access-your-account/validate-your-contact-information/), or changing the way you receive [your one-time security codes]({{ site.baseurl }}/access-your-account/receive-one-time-security-codes/) for login.
+You can resolve most common account access problems by [requesting your account information]({{ site.baseurl }}/access-your-account/request-your-tsp-account-information/), updating your [validated contact information]({{ site.baseurl }}/access-your-account/validate-your-contact-information/), or changing the way you receive [your one-time security codes]({{ site.baseurl }}/access-your-account/receive-one-time-security-codes/) for login.
 
 If you encounter a different issue and can’t find the information you need here, you can [call the ThriftLine]({{ site.baseurl }}/contact/) and speak to a TSP representative for help.
 
 ## Financial aggregators, apps, or services on other websites
-If you give your account credentials to a third-party application, you may receive a verification code each time that application attempts to retrieve information from your TSP account. Providing your TSP account credentials to a third-party application [may put your account security at risk]({{ site.baseurl }}/access-your-account/protect-your-account/).
+If you give your account credentials to a third-party application, you may receive a verification code each time that application attempts to retrieve information from your TSP account. Providing your TSP account credentials to a third-party application [may put your account security at risk]({{ site.baseurl }}/access-your-account/protect-your-tsp-account/).
 
 We recommend that you only log in to My Account through [secure.tsp.gov]({{ site.myaccount }}). The TSP cannot endorse any information or advice from third-party applications or services.
 

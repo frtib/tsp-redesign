@@ -17,12 +17,12 @@ Browse these topics for details on how to set up and manage your TSP account:
 
 - [Set up account access]({{ site.baseurl }}/access-your-account/set-up-account-access/)
 - [Create your user ID]({{ site.baseurl }}/access-your-account/create-your-user-id/)
-- [Request your account information]({{ site.baseurl }}/access-your-account/request-your-account-information/)
-- [Protect your account]({{ site.baseurl }}/access-your-account/protect-your-account/)
+- [Request your TSP account information]({{ site.baseurl }}/access-your-account/request-your-tsp-account-information/)
+- [Protect your TSP account]({{ site.baseurl }}/access-your-account/protect-your-tsp-account/)
 - [Validate your contact information]({{ site.baseurl }}/access-your-account/validate-your-contact-information/)
 - [Receive one-time security codes]({{ site.baseurl }}/access-your-account/receive-one-time-security-codes/)
 - [Update your mailing address]({{ site.baseurl }}/access-your-account/update-your-mailing-address/)
-- [Troubleshoot your account]({{ site.baseurl }}/access-your-account/troubleshoot-your-account/)
+- [Troubleshoot account access]({{ site.baseurl }}/access-your-account/troubleshoot-account-access/)
 
 {% comment %}
 ## What you'll need to gain access to your TSP account

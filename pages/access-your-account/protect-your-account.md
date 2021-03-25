@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Protect your account
+title: Protect your TSP account
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/protect-your-account/
+permalink: /access-your-account/protect-your-tsp-account/
 redirect_from:
   - /account-basics/protect-your-tsp-account/
 ---
@@ -44,11 +44,26 @@ It usually takes up to 2 business days to remove the hold from your account afte
 ## Other ways to help prevent fraud
 Take these steps to help further protect your TSP account:
 
+### Make sure your contact methods are secure.
+Your account is only as secure as your login credentials and validated contact methods. Make sure you enable any additional security features, such as passcodes and two-step authentication, on your devices and for all online accounts.
+
+### Check for a secure website connection
+Before you submit data or attempt to log in to your account on tsp.gov, make sure you’re on the right website. In your browser’s address bar, look for a lock icon, a green bar, or &#8220;https://&#8221; at the beginning of the URL for tsp.gov.
+
+### Close your browser after you log out
+When you’re finished accessing your TSP account, clear your browser’s memory of your sensitive account information by closing the browser window.
+
+### Block access to your account
+You have the option to block all online access, ThriftLine access, or both to your TSP account. Make this request online through your My Account profile settings, by calling the ThriftLine and speaking to a Participant Service Representative, or by submitting a written request. Your written request must include your name, account number, date of birth, signature, and the date you signed the letter. Access to your account will remain blocked until you submit a written request to remove the block.
+
+{% comment %}
+{% endcomment %}
 - **Make sure your contact methods are secure.**   
   Your account is only as secure as your login credentials and validated contact methods. Make sure you enable any additional security features, such as passcodes and two-step authentication, on your devices and for all online accounts.
 - **Check for a secure website connection—** Before you submit data or attempt to log in to your account on tsp.gov, make sure you’re on the right website. In your browser’s address bar, look for a lock icon, a green bar, or &#8220;https://&#8221; at the beginning of the URL for tsp.gov.
 - **Close your browser after you log out—** When you’re finished accessing your TSP account, clear your browser’s memory of your sensitive account information by closing the browser window.
 - **Block access to your account—** You have the option to block all online access, ThriftLine access, or both to your TSP account. Make this request online through your My Account profile settings, by calling the ThriftLine and speaking to a Participant Service Representative, or by submitting a written request. Your written request must include your name, account number, date of birth, signature, and the date you signed the letter. Access to your account will remain blocked until you submit a written request to remove the block.
+
 
 ## Be cautious with software and mobile applications
 You may encounter software or mobile applications that reference the Thrift Savings Plan and prompt you for your TSP account credentials. **The TSP does not support these applications.** We cannot endorse any information or advice you may receive from third-party software or applications. Providing your TSP account credentials to third-party software or applications may jeopardize your account security.

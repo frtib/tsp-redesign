@@ -13,7 +13,7 @@ redirect_from:
 
 # {{ page.title }}
 
-You must create a user ID to log in securely to My Account. If you previously created a user ID and can’t remember it, you may be able to [recover your user ID online]({{ site.baseurl }}/access-your-account/request-your-account-information/).
+You must create a user ID to log in securely to My Account. If you previously created a user ID and can’t remember it, you may be able to [recover your user ID online]({{ site.baseurl }}/access-your-account/request-your-tsp-account-information/).
 
 You need your **TSP account number** and **web password** to create your user ID.
 

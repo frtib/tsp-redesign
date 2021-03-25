@@ -10,7 +10,7 @@ redirect_from:
 
 # {{ page.title }}
 
-You can manage your TSP account online in My Account and by phone through the ThriftLine. If you don’t have the account information you need to gain access, you can [request your account information]({{ site.baseurl }}/access-your-account/request-your-account-information/) again.
+You can manage your TSP account online in My Account and by phone through the ThriftLine. If you don’t have the account information you need to gain access, you can [request your account information]({{ site.baseurl }}/access-your-account/request-your-tsp-account-information/) again.
 
 ## Set up online access in My Account
 

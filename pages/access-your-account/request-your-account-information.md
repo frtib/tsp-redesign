@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Request your account information
+title: Request your TSP account information
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /access-your-account/request-your-account-information/
+permalink: /access-your-account/request-your-tsp-account-information/
 redirect_from:
 ---
 

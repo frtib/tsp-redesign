@@ -144,18 +144,18 @@ manage-your-plan:
       href: /access-your-account/set-up-account-access/
     - text: Create your user ID
       href: /access-your-account/create-your-user-id/
-    - text: Request your account information
-      href: /access-your-account/request-your-account-information/
-    - text: Protect your account
-      href: /access-your-account/protect-your-account/
+    - text: Request your TSP account information
+      href: /access-your-account/request-your-tsp-account-information/
+    - text: Protect your TSP account
+      href: /access-your-account/protect-your-tsp-account/
     - text: Validate your contact information
       href: /access-your-account/validate-your-contact-information/
     - text: Receive one-time security codes
       href: /access-your-account/receive-one-time-security-codes/
     - text: Update your mailing address
       href: /access-your-account/update-your-mailing-address/
-    - text: Troubleshoot your account
-      href: /access-your-account/troubleshoot-your-account/
+    - text: Troubleshoot account access
+      href: /access-your-account/troubleshoot-account-access/
 #    - text: Recover your user ID
 #      href: /access-your-account/recover-your-user-id/
 #    - text: Reset your TSP password
