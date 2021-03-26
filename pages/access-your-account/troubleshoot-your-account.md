@@ -39,7 +39,7 @@ TSP web pages are best viewed with one of the following browsers:
 - Safari
 - Internet Explorer 11 (compatibility view disabled)
 
-**Note**: For all browsers listed above, we recommend using the current version with auto update enabled.
+**Note:** For all browsers listed above, we recommend using the current version with auto update enabled.
 </div>
 </div>
 

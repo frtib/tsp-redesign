@@ -13,6 +13,7 @@ redirect_from:
 # Access your account
 
 Once your account has been established, we’ll mail you a welcome letter containing your account number and instructions on how to access your account online and by phone.
+
 Browse these topics for details on how to set up and manage your TSP account:
 
 - [Set up account access]({{ site.baseurl }}/access-your-account/set-up-account-access/)

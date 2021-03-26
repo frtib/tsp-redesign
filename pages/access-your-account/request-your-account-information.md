@@ -75,13 +75,10 @@ You may be able to [reset your password]({{ site.password_reset }}){:target="\_b
   <div id="reset-password" class="usa-accordion-content">
   <div class="usa-grid how-to">
   <div class="usa-width-one-whole" markdown="1">
-  << Image TBD >>
-
   <div class="steps" markdown="1">
-
   1. Go to secure.tsp.gov to access My Account.
   2. Select the link, **Reset password**.
-  3. Enter your user ID.
+  3. Enter your user ID.   
     \- OR -   
     Change the selection to enter your TSP account number.
   4. Select the **Submit** button.
