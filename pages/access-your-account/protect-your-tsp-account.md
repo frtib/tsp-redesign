@@ -58,7 +58,7 @@ All TSP participants must use two-step authentication to log in to My Account. T
 
 
 ## Learn to identify real TSP communications
-### How we contact you
+### We may communicate with you in several different ways:
 
 + **By mail**&#8212;We will most often contact you by mail, so you should make sure we have your correct mailing address. Read any TSP mail promptly and carefully. Take caution if you receive an account notice you weren’t expecting or a letter that asks you to &#8220;verify your account number&#8221; or other account information. Notify us immediately if you receive a letter that seems suspicious.
 + **By email**&#8212;We may send you an email to confirm a transaction that you completed or a change you made to your account information. We also periodically send educational outreach emails such as the [_Thrift Savings Planner_ newsletter]({{ site.baseurl }}/news-and-resources/newsletters/) to the email address you provide in your My Account profile settings. We will never include your sensitive information in an email, and we will never ask you to send us sensitive information by email.
@@ -69,7 +69,7 @@ We **will not contact you about investment opportunities** or authorize third pa
 If you’re not sure whether correspondence or phone calls claiming to be from the TSP are authentic, **do not provide any personal or financial information**. Contact us directly if you have questions or if you need to report suspicious activity.
 
 ## How we protect your TSP account
-### Account security features we give you include:
+### We offer you various ways to add layers of security to your account:
 
 - **Secure website connection**&#8212;We keep security certificates up to date for tsp.gov to ensure that your connection to our website is private. Our site uses encryption to protect your information as it travels between your computer and our server.
 
