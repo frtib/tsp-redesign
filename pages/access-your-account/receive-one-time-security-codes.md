@@ -14,6 +14,8 @@ As an extra layer of security on your TSP account, we send a one-time code to yo
 
 ## Tips for receiving and using one-time codes
 
+**If the method you’ve selected to receive your one-time code isn’t working, try a different method.** For example, if you’re unable to receive a text message, try requesting a phone call to receive a voiced code instead.
+
 **If your one-time code doesn’t arrive until after the expiration period**, you won’t be able to use the code and will need to receive a new code. Depending on your transaction, you may see a link on the code entry webpage to “Receive new code,” or you may need to begin your request again.
 
 **When using your phone, make sure you’re in a good service area.** Phone carrier network disruptions and a poor cellular connection are the most common reasons that a text message or phone call arrives late. If you continue to have trouble receiving codes, contact your carrier about any delivery issues. You may need to enable the ability to receive short code messages.
