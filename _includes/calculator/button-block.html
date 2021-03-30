@@ -7,7 +7,7 @@ This is for a navagation button block.
 
 {% assign inList = 1 %}
 {% assign getStarted = include.getStarted | default: 0 %}
-{% assign buttonStack = include.buttonStack | default: getStarted %}
+{% assign buttonStack = include.buttonStack | default: 0 %}
 {% if buttonStack != 0 %}{% assign inList = 0 %}{% endif %}
 {% assign start = include.start | default: 0 %}
 {% assign showPDF = include.showPDF | default: 0 %}
