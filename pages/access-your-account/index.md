@@ -12,7 +12,7 @@ redirect_from:
   - /troubleshooting/
 ---
 
-# Access your account
+# {{ page.title }}
 
 Once your account has been established, we’ll mail you a welcome letter containing your account number and instructions on how to access your account online and by phone.
 
