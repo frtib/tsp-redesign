@@ -7,6 +7,7 @@ scripts:
 permalink: /access-your-account/update-your-mailing-address/
 redirect_from:
   - /account-basics/update-your-address/
+  - /addresschange/
 document-ready:
   - addFormModals();
 ---

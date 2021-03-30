@@ -7,7 +7,6 @@ scripts:
 permalink: /access-your-account/troubleshoot-account-access/
 redirect_from:
   - /sitehelp/
-  - /account-basics/troubleshoot-login-errors/
   - /account-basics/troubleshoot-account-access/
 
 ---
