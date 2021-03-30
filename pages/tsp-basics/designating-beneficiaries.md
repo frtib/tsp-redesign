@@ -4,9 +4,10 @@ title: Designating beneficiaries
 sidenav: manage-your-plan
 styles:
 scripts:
-permalink: /account-basics/designating-beneficiaries/
+permalink: /tsp-basics/designating-beneficiaries/
 redirect_from:
   - /PlanParticipation/AccountManagement/beneficiaries.html
+  - /account-basics/designating-beneficiaries/
 ---
 
 # Designating beneficiaries

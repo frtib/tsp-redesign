@@ -1,7 +1,7 @@
 ---
 title: Administrative and investment expenses
 layout: page
-permalink: /account-basics/administrative-and-investment-expenses/
+permalink: /tsp-basics/administrative-and-investment-expenses/
 sidenav: manage-your-plan
 styles:
 scripts:
@@ -13,6 +13,7 @@ document-ready:
   - groupFundAnnualReturns('Lfunds');
 redirect_from:
   - /account-basics/administrative-costs/
+  - /account-basics/administrative-and-investment-expenses/
   - /InvestmentFunds/FundsOverview/expenses.html
   - /expenses/
   - /PlanParticipation/BeneficiaryParticipants/administrativeExpenses.html

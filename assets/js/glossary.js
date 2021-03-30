@@ -488,7 +488,7 @@ var glossaryTerms = [
   {
     term: 'ThriftLine',
     definition:
-      'The TSP&#8217;s automated voice response system. It provides general news about the TSP and allows participants to access certain information and perform some transactions over the telephone. You can also use the ThriftLine to contact participant service representatives at the TSP. To access your account through the ThriftLine, you will need your TSP account number and ThriftLine PIN.'
+      'The TSP&#8217;s automated voice response system. It provides general news about the TSP and allows participants to access certain information and perform some transactions <a href="/contact/">over the telephone</a>. You can also use the ThriftLine to contact participant service representatives at the TSP. To access your account through the ThriftLine, you will need your TSP account number and ThriftLine PIN.'
   },
   {
     term: 'Time Horizon',
