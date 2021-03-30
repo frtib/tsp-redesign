@@ -75,21 +75,21 @@ To learn more about TSP webinars, please contact us at **webinars@frtib.gov.**
 
 ## Webinars
 {% include training/intro-to-tsp.md %}
+{% include training/new-to-tsp.md %}
 {% include training/contributions.md %}
+{% include training/death-benefits.md %}
+{% include training/in-service-wd.md %}
 {% include training/investment-funds.md %}
 {% include training/loans.md %}
-{% include training/in-service-wd.md %}
 {% include training/post-service-wd.md %}
-{% include training/death-benefits.md %}
 {% include training/retirement-beyond-1.md %}
 {% include training/retirement-beyond-2.md %}
-{% include training/new-to-tsp.md %}
 
 ## Courses
+{% include training/a-to-z.md %}
 {% include training/early-to-mid-career.md %}
 {% include training/pre-separation.md %}
-{% include training/a-to-z.md %}
-
+{% include training/retirement-beyond-1-and-2.md %}
 
 ### TSP webinar privacy notice
 
