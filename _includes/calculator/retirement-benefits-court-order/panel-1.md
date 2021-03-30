@@ -32,14 +32,6 @@ For more information, please read the TSP publication [_Court Orders and Powers 
 {% capture bonusButton3 %}
 <button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
 {% endcapture %}
-{% include calculator/button-block.html panelID=panelID getStarted=2 %}
-
-<nav role="navigation">
-<div class="button-stack">
-<!-- DAV, the 'Get started' button is nested in div.button-stack, not ul.navigation-buttons -->
-<button type="button" class="usa-button-big" href="javascript:void(0);" onclick="processPanel(1,0,2,0); return false;">Get started</button>
-<button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
-</div>
-</nav>
+{% include calculator/button-block.html panelID=panelID getStarted=2 bonusButton3=bonusButton3 %}
 
 </section> <!-- end div#panel -->

@@ -84,8 +84,11 @@ function SSNGood(submit, writein, prefix) {
     // if (writein) { return showWriteIn(prefix+'SSN', 'Enter social security number.'); }
     if (writein) { return showWriteIn(prefix+'SSN', ''); }
     clearWriteIn(prefix+'SSN');
-    if (submit) { console.log('error SSN ' + prefix); return showError(prefix+'SSN', 'Social security number must be 9 characters long.'); }
+    if (submit) { return showError(prefix+'SSN', 'Social security number must be 9 characters long.'); }
   }
+  // $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('data-store'));
+  $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('placeholder'));
+  // $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').val());
 
   clearWriteIn(prefix+'SSN');
   return clearError(prefix+'SSN');

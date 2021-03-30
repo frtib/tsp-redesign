@@ -97,8 +97,8 @@ function buildAccountSelectX(submit, awX) {
   var payName = $.trim($('#payfullname').val());
   buildAccountSelectAddAccounts(submit, 'part', partName, awardAccountDrop);
   buildAccountSelectAddAccounts(submit, 'pay', payName, awardAccountDrop);
-  // awardAccountDrop.val('Select');
-  // awardAccountDrop.trigger("chosen:updated");
+  awardAccountDrop.val('Select');
+  awardAccountDrop.trigger("chosen:updated");
   awardAccountDrop.val(value);
   awardAccountDrop.trigger("chosen:updated");
   return;
@@ -151,6 +151,7 @@ function buildString(submit, id) {
 
     var tmp;
     var accountArr = $('#'+id+'awardAccount' ).val().split(',');
+    // if (accountArr != null) { accountArr = accountArr.split(','); } else { rc = false; accountArr = ['part', '???', '???']; }
     var partname = $('#partfullname').val();
     var payname = $('#payfullname').val();
     if (accountArr[0] == 'pay') { tmp = payname; payname = partname;  partname = tmp; }
@@ -526,8 +527,8 @@ console.log('date is ', $('#aw'+j+'paymentDate2EntitlementDate').val());
 
 function awardAccountGood(submit, id) {
   var awardAccount = $('#'+id+'awardAccount').val();
-  $('#lblAYRawardAccount').html(awardAccount);
-  if (awardAccount == 'Select') {
+  $('#'+id+'awardAccountAYR').html(awardAccount);
+  if ((awardAccount == 'Select') || (awardAccount == null)) {
     if (submit == 0) { return false; }
     return showError(id+'awardAccount', "Select an account from the drop-down list.");
   }
@@ -917,11 +918,11 @@ function setAwardText(txt, id) {
     $('#'+id+'Award'+'text').html(txt);
     // if (txt.includes('???') || (txt.length <= 0)) {
     if ((txt.indexOf('???') >= 0) || (txt.length <= 0)) {
-      $('#lblAYR'+id+'Award'+'text').html('');
-      $('#hide'+id+'Award'+'text').val('');
+      $('#'+id+'Award'+'textAYR').html('');
+      $('#'+id+'Award'+'textHide').val('');
     } else {
-      $('#lblAYR'+id+'Award'+'text').html(id + '. ' + txt);
-      $('#hide'+id+'Award'+'text').val(id + '. ' + txt);
+      $('#'+id+'Award'+'textAYR').html(id + '. ' + txt);
+      $('#'+id+'Award'+'textHide').val(id + '. ' + txt);
     }
 }
 // function setAwardNumbering(id, maxid) {

@@ -70,6 +70,7 @@ function setValues(flag) {
     $('#payfpostal').val('NW1 6XE');
     $('#payfcountrylist').val('GB');
     $('#payphoneNum').val('+44 20 7224 3688');
+    $('#paySSN').attr('data-store', '123456789');
     $('#paySSN').val('123456789');
     $('#paycivilian').click();
 //    $('#paycivacctNum').attr('data-store', '6666666666666');
@@ -86,6 +87,7 @@ function setValues(flag) {
     // setPlaceholder('#payusvacctNum', 13);
     setPlaceholder('#payacctNum', 13);
     setPlaceholder('#payBPAacctNum', 13);
+    setPlaceholder('#paySSN', 9);
     processPanel(4,0,5,0);
   }
   if (flag == 6) {
@@ -138,6 +140,10 @@ function setValues(flag) {
   }
   if (flag == 8) {
     setValues(7);
+    $('#1awardAccount').val('part,xxxxxxxxx5555,Dual');
+    $('#1awardTypeFixed').click();
+    $('#1fixedAmount').val('50');
+    $('#1earningsNo').click();
     processPanel(7,0,8,0);
   }
 }

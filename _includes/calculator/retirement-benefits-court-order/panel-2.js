@@ -103,6 +103,7 @@ function getPayeePart() {
 }
 function payeePartGood(submit) {
   var payeePart = getPayeePart();
+  $('#payeePartAYR').html(payeePart);
   // console.log('getPayeePart ', submit, payeePart);
   if (payeePart == '') {
     $('#partyRelationship').addClass('hide');
@@ -134,7 +135,7 @@ function relationshipGood(submit) {
   var payeePart = getPayeePart();
   if (payeePart == '') { return clearError('relationship'); }
   var relationship = getRelationship();
-  $('#relationshipAYR').html(relationship);
+  $('#relationshipAYR').html('Payee is ' + relationship);
 
   if (relationship == '') {
     $('#howDivided').addClass('hide');
@@ -169,8 +170,8 @@ function relationshipGood(submit) {
 
 function getReceive() {
   testPrimeSettingsPath();
-  if ($('#receiveOne').prop('checked')) { return 'One'; }
-  if ($('#receiveBoth').prop('checked')) { return 'Both'; }
+  if ($('#receiveOne').prop('checked')) { $('#receiveBothAYR').html('No'); return 'One'; }
+  if ($('#receiveBoth').prop('checked')) { $('#receiveBothAYR').html('Yes'); return 'Both'; }
   return '';
 }
 function receiveGood(submit) {
@@ -190,12 +191,12 @@ function receiveGood(submit) {
 function partfullnameGood(submit, role) {
   var name = launderInput('partfullname');
   // set name in various fields
-  return stringGood2(submit, 0, '', 'partfullname', 'Enter the name of the person whose account will be divided pursuant to this court order.');
+  return myStringGood2(submit, 0, '', 'partfullname', 'Enter the name of the person whose account will be divided pursuant to this court order.');
 }
 function payfullnameGood(submit) {
   var name = launderInput('payfullname');
   // set name in various fields
-  return stringGood2(submit, 0, '', 'payfullname', 'Enter the name of the person who is the intended recipient of the court order award.');
+  return myStringGood2(submit, 0, '', 'payfullname', 'Enter the name of the person who is the intended recipient of the court order award.');
   return false;
 }
 

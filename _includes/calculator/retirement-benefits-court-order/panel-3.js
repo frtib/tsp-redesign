@@ -64,7 +64,8 @@ function testPrimeSettingsPart() {
   // something changed and Awards panel cares about it.
   // setProgressStateError(cachePart["AwardPanel"]);
   // we need to recheck Awards page
-  setHighwater(cachePart["AwardPanel"]);
+  // setHighwater(cachePart["AwardPanel"]);
+  setHighwater({{panelID}});
   setProgress(3);
   return true;
 }
@@ -74,11 +75,21 @@ function testPrimeSettingsPart() {
 function acctNumGood(submit, prefix, acct, showFlag) {
   var id = prefix + acct + 'acctNum';
   var val = $('#'+id).val();
+  // $('#'+id+'AYR').html($('#'+id).attr('data-store'));
+  $('#'+id+'AYR').html($('#'+id).val());
+
   // acct just has numbers
   // val = val.replace(/\D/g,'');
   $('#'+id).val(val);
-  if (showFlag) { $('#'+id+'-div').removeClass('hide'); }
-    else { $('#'+id+'-div').addClass('hide'); return clearError(id); }
+  if (showFlag) {
+    $('#'+id+'-div').removeClass('hide');
+    $('#'+id+'AYR-row').removeClass('hide');
+  } else {
+    $('#'+id+'AYR-row').addClass('hide');
+    $('#'+id+'-div').addClass('hide');
+    return clearError(id);
+  }
+console.log('acctnum hide ', showFlag, '#'+id+'-div', $('#'+id+'AYR-row'));
   // test acct
   if (val.length != 13) {
     if (submit) { return showError(id, 'Account number must be 13 characters long.'); }
@@ -151,6 +162,12 @@ function toggleAddress(prefix) {
   return foreign;
 }
 
+function myStringGood2(submit, writein, prefix, id, errorMsg) {
+  var rc = stringGood2(submit, writein, prefix, id, errorMsg);
+  if (rc) { $('#'+prefix+id+'AYR').html( $('#'+prefix+id).val()); }
+  return rc;
+}
+
 function street1Good(submit, writein, role) { launderInput(role+'street1'); return stringGood2(submit, writein, role, 'street1', "Enter street address.");}
 function cityGood(submit, writein, role) { launderInput(role+'city'); return stringGood2(submit, writein, role, 'city', "Enter city.");}
 function stateGood(submit, writein, role) { launderInput(role+'state'); return ddGood2(submit, writein, role, 'state', "Enter state.");}
@@ -176,7 +193,7 @@ function faxNumGood(submit, writein, role) {
   if (submit) { return showError(myID, errorMsg); }
   return clearError(myID);
 }
-function fullnameGood(submit, writein, role) { launderInput(role+'fullname'); return stringGood2(submit, writein, role, 'fullname', "Enter fullname.");}
+function fullnameGood(submit, writein, role) { launderInput(role+'fullname'); return myStringGood2(submit, writein, role, 'fullname', "Enter fullname.");}
 function lawfirmGood(submit, writein, role) { launderInput(role+'lawfirm'); return stringGood2(submit, writein, role, 'lawfirm', "Enter lawfirm.");}
 function jurisdictionGood(submit, writein, role) { launderInput(role+'jurisdiction'); return stringGood2(submit, writein, role, 'jurisdiction', "Enter jurisdiction.");}
 function licenseGood(submit, writein, role) {
