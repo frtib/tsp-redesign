@@ -4,10 +4,6 @@ This two-part presentation is most relevant for employees within 5-10 years of t
 
 Part I includes a discussion on estimating future income needs, assessing the impact of long-term risks, deciding when to retire, and prioritizing retirement savings goals. (75 minutes)
 
-#### March 30, 2021
-
-- 10:30 a.m. — [**Class is full**]({{ site.baseurl }}/exit/?idx=188){:rel="nofollow"}
-
 #### April 28, 2021
 
 - 10:30 a.m. — [**Class is full**]({{ site.baseurl }}/exit/?idx=189){:rel="nofollow"}
