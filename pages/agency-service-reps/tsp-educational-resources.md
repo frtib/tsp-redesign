@@ -148,17 +148,17 @@ Agency or service representatives attempting to schedule a training event should
 <div class="usa-grid regional">
 <div class="usa-width-one-half" markdown="1">
 - {:.northwest}**Northwest**  
-  Training@NWregion@frtib.gov
+  TrainingNWregion@frtib.gov
 - {:.southwest}**Southwest**   
-  Training@SWregion@frtib.gov
+  TrainingSWregion@frtib.gov
 - {:.dc-metro}**Washington DC Metro Area**    
-  Training@DCregion@frtib.gov
+  TrainingDCregion@frtib.gov
 </div>
 <div class="usa-width-one-half" markdown="1">
 - {:.northeast}**Northeast**   
-  Training@NEregion@frtib.gov
+  TrainingNEregion@frtib.gov
 - {:.southeast}**Southeast**   
-  Training@SEregion@frtib.gov
+  TrainingSEregion@frtib.gov
 - {:.dc-metro}**TSP Training Regions:**   
   Overseas agencies or services, including those located in a United States terriroty, are assigned to the Washington DC Metro Area region.
 </div>
