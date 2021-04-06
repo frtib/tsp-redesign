@@ -8,7 +8,9 @@
 {% assign title = include.title | default: 'TITLE' %}
 {% assign xtraClass1 = include.xtraClass1 | default: '' %}
 {% assign inList = include.inList | default: 0 %}
+{% assign betweenStuff = include.betweenStuff | default: '' %}
 
 {% if inList != 0 %}<li>{% endif %}
 <button class="usa-accordion-button {{ xtraClass1 }}" aria-expanded="{{expanded}}" aria-controls="{{divID}}">{{ title }} {{icon}}</button>
+{% if betweenStuff != '' %}<div id="x{{divID}}" class="usa-accordion-content" aria-hidden="false">{{betweenStuff}}</div>{% endif %}
 <div id="{{divID}}" class="usa-accordion-content">

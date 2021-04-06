@@ -2,16 +2,16 @@
 {% assign maxAwards = include.maxAwards | default: 10 %}
 {% assign divID = awardNum | append: 'awardULheader' %}
 {% capture title %}<span id="{{awardNum}}AwardNumbering">Award ({{awardNum}} of {{maxAwards}})</span> <span id="{{awardNum}}AwardStatus">in progress</span>{% endcapture %}
+{% capture betweenStuff %}
+<div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin"></div>
+<input type="hidden" name="hide{{awardNum}}Awardtext" id="hide{{awardNum}}Awardtext" value="">
+{% endcapture %}
 
-{% include calculator/accordion-start.html expanded=true divID=divID icon='' title=title inList=true %}
-
+{% include calculator/accordion-start.html expanded=true divID=divID icon='' title=title betweenStuff=betweenStuff inList=true %}
 {% comment %}
 The repeatable award blocks are unique input blocks and I could not use the reuseable calculator input components for all of them.
   -dav 2020/12/15
 {% endcomment %}
-
-<div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin"></div>
-<input type="hidden" name="hide{{awardNum}}Awardtext" id="hide{{awardNum}}Awardtext" value="">
 {% capture id %}{{awardNum}}awardAccount{% endcapture %}
 {% capture onBlur %}buildString(0, '{{awardNum}}');{% endcapture %}
 {% include calculator/div-panel-form-field.html
@@ -20,7 +20,6 @@ The repeatable award blocks are unique input blocks and I could not use the reus
   onBlur=onBlur prompt="Select account to which this award applies:"
   explanation=""
 %}
-
 <span id="{{awardNum}}hideA" class="hide">
 <!-- DAV, Wrap this fieldset around radio buttons AND %/$ inputs -->
 <div id="{{awardNum}}awardType-div" class="panel-form-field">
