@@ -20,6 +20,7 @@ panelEnter[{{ panelID }}] = function(panel) {
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+  panelGood[{{panelID}}](0);
   testPrimeSettingsPart();
   return true;
 }
@@ -89,7 +90,6 @@ function acctNumGood(submit, prefix, acct, showFlag) {
     $('#'+id+'-div').addClass('hide');
     return clearError(id);
   }
-console.log('acctnum hide ', showFlag, '#'+id+'-div', $('#'+id+'AYR-row'));
   // test acct
   if (val.length != 13) {
     if (submit) { return showError(id, 'Account number must be 13 characters long.'); }
@@ -248,12 +248,9 @@ function addressGood(submit, writein, role) {
   return false;
 }
 
-/*
 function getCityState(role) { var rc = '';
  if ($('#'+role+'foreignAddress').prop('checked')) { rc = $('#'+role+'fcity').val() + ' ' + $('#'+role+'fpostal').val(); } else { var state = $('#'+role+'state').val(); if (state == 'Select') { state = ''; } rc = $('#'+role+'city').val() + ' ' + state + ' ' + $('#'+role+'zip').val(); } return rc.trim();}
 function getAddressString(role) { var rc = '';
  if ($('#'+role+'foreignAddress').prop('checked')) { rc = $('#'+role+'fstreet').val(); rc += '<BR>' + getCityState(role); rc += '<BR>' + $('#'+role+'fcountry').val(); } else { rc = $('#'+role+'street1').val(); rc += '<BR>' + getCityState(role); } return rc.trim();}
-pickAddressType('part');
-*/
 -->
 </script>

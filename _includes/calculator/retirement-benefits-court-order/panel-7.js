@@ -26,6 +26,11 @@ panelEnter[{{ panelID }}] = function(panel) {
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+    panelGood[{{panelID}}](0);
+    for (var i = 1; i <= maxAwards; i++) {
+      if ($('#'+i+'awardActive').val() != 0) { $('#'+i+'AwardtextAYR').removeClass('hide'); }
+        else { $('#'+i+'AwardtextAYR').addClass('hide'); }
+    }
     return true;
 }
 
@@ -110,6 +115,7 @@ function buildAccountSelectAddAccounts(submit, role, name, dd) {
   var usePayee = $('#receiveBoth').prop('checked') && $('#payeePartYes').prop('checked');
   var acctType = 'Dual';
   if ((role == 'part') || (usePayee)) {
+    /*
     if (isCivilian(role) || isUniformed(role)) {
       if (!isCivilian(role)) { acctType = 'US'; }
       if (!isUniformed(role)) { acctType = 'Civ'; }
@@ -117,6 +123,21 @@ function buildAccountSelectAddAccounts(submit, role, name, dd) {
       acct = getAcctNumber(role, acctType, 'P', false);
       value = role + ',' + acct + ',' + acctType;
       str = name + ', ' + acctType + ', '+ acct;
+      addToDropDown(dd, value, str);
+    }
+    */
+    if (isCivilian(role)) {
+      acct = 'xxx';
+      acct = getAcctNumber(role, 'Civ', 'P', false);
+      value = role + ',' + acct + ',Civ';
+      str = name + ', Civ, ' + acct;
+      addToDropDown(dd, value, str);
+    }
+    if (isUniformed(role)) {
+      acct = 'xxx';
+      acct = getAcctNumber(role, 'US', 'P', false);
+      value = role + ',' + acct + ',US';
+      str = name + ', US, ' + acct;
       addToDropDown(dd, value, str);
     }
     if (isBPA(role)) {
@@ -511,7 +532,6 @@ function copyAward(i, j) {
   if($('#'+j+'paymentDate2Order').prop('checked')) { pickPaymentDate(2, 'O', i); }
   if($('#'+j+'paymentDate2Entitlement').prop('checked')) { pickPaymentDate(2, 'E', i); }
   $('#aw'+i+'paymentDate2EntitlementDate').flatpickr().setDate($('#aw'+j+'paymentDate2EntitlementDate').val());
-console.log('date is ', $('#aw'+j+'paymentDate2EntitlementDate').val());
   clearError(i+'paymentDate2');
   clearError('aw'+i+'paymentDate2EntitlementDate');
 
@@ -608,7 +628,6 @@ function showHidePaymentDate(idx, id) {
   return true;
 }
 function pickPaymentDate(idx, flag, id) {
-console.log('pickPaymentDate', {idx}, {flag}, {id});
   if (flag == 'P') {
     $('#'+id+'paymentDate' + idx + 'AsOf').prop('checked', true);
     $('#'+id+'hideF').removeClass('hide');
@@ -919,10 +938,11 @@ function setAwardText(txt, id) {
     // if (txt.includes('???') || (txt.length <= 0)) {
     if ((txt.indexOf('???') >= 0) || (txt.length <= 0)) {
       $('#'+id+'Award'+'textAYR').html('');
-      $('#'+id+'Award'+'textHide').val('');
+      $('#hide'+id+'Award'+'text').val('');
     } else {
-      $('#'+id+'Award'+'textAYR').html(id + '. ' + txt);
-      $('#'+id+'Award'+'textHide').val(id + '. ' + txt);
+      // $('#'+id+'Award'+'textAYR').html(id + '. ' + txt);
+      $('#'+id+'Award'+'textAYR').html(txt);
+      $('#hide'+id+'Award'+'text').val(id + '. ' + txt);
     }
 }
 // function setAwardNumbering(id, maxid) {
@@ -978,9 +998,7 @@ function removeConfirm(id) {
 }
 
 function removeAward(id, force, start) {
-console.log('removeAward', id, force, start);
    if($('#' + id + 'awardActive').val() == 0) { return false; }  // dont remove if inactive
-console.log('in removeAward', id, force, start);
 
    if (id == maxAwards) {
      // removing end of list

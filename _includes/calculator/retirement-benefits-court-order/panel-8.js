@@ -11,19 +11,6 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 
 panelEnter[{{ panelID }}] = function(panel) {
-  // special code for show/hide pay SSN vs accts
-  var receive = getReceive();
-  // SSNGood(0, 1, 'pay');
-  // accountNumbersGood(0, 'pay');
-console.log({receive});
-  if (receive == 'Both') {
-    $('#paySSNAYR-row').addClass('hide');
-  }  else {
-    $('#paySSNAYR-row').removeClass('hide');
-    $('#payacctNumAYR-row').addClass('hide');
-    $('#payBPAacctNumAYR-row').addClass('hide');
-  }
-
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {

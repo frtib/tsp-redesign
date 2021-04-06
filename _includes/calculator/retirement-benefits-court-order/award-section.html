@@ -10,8 +10,8 @@ The repeatable award blocks are unique input blocks and I could not use the reus
   -dav 2020/12/15
 {% endcomment %}
 
-<div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin">default text</div>
-
+<div id="{{awardNum}}Awardtext" class="awardAccordion award-body awardBorder accordion__header edge0 noMargin"></div>
+<input type="hidden" name="hide{{awardNum}}Awardtext" id="hide{{awardNum}}Awardtext" value="">
 {% capture id %}{{awardNum}}awardAccount{% endcapture %}
 {% capture onBlur %}buildString(0, '{{awardNum}}');{% endcapture %}
 {% include calculator/div-panel-form-field.html
@@ -103,11 +103,11 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     <ul class="usa-unstyled-list">
       <li>
       <!-- DAV, the name and ID were the same for each input, which is not allowed for radio buttons. I created a new name and made the ID = value. -->
-        <input type="radio" id="{{awardNum}}earningsNo" name="includeEarnings" value="No Earnings" onblur="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <input type="radio" id="{{awardNum}}earningsNo" name="{{awardNum}}includeEarnings" value="No Earnings" onblur="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('N', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
         <label for="{{awardNum}}earningsNo">No earnings</label>
       </li>
       <li>
-        <input type="radio" id="{{awardNum}}earningsYes" name="includeEarnings" value="Yes Earnings" onblur="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+        <input type="radio" id="{{awardNum}}earningsYes" name="{{awardNum}}includeEarnings" value="Yes Earnings" onblur="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('Y', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
         <label for="{{awardNum}}earningsYes">Earnings (show options)</label>
       </li>
     </ul>

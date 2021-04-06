@@ -34,7 +34,9 @@ This is for a navagation button block.
 
 {% if getStarted != 0 %}
 {% capture click %}processPanel({{ panelID }}, 0, {{ getStarted }}, 0); return false;{% endcapture %}
-{% include calculator/button.html xtraClass1="usa-button-big" text='Get started' onClick=click xtraClass2='primary' inList=inList %}
+{% assign buttonSize = "" %}
+{% if buttonStack != 0 %}{% assign buttonSize = "usa-button-big" %}{% endif %}
+{% include calculator/button.html xtraClass1=buttonSize text='Get started' onClick=click xtraClass2='primary' inList=inList %}
 {% endif %}
 
 {% if start != 0 %}

@@ -16,6 +16,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+    panelGood[{{panelID}}](0);
     return true;
 }
 
@@ -27,31 +28,78 @@ function panelTest(submit, warn) {
   var partAT = true;
   var payAT = true;
   var QDRO = true;
+  var txt = '';
+  var partyFlag = getReceive();
   if ($('#partATLawyerYes').prop('checked')) {
-    $("#AYRpartATnoblock").hide();
-    $("#AYRpartATblock").show();
+    txt = AYRaddressString('partAT');
     partAT = checkAT(submit, warn, 'partAT');
   } else {
-    $("#AYRpartATblock").hide();
-    $("#AYRpartATnoblock").show();
+    if (partyFlag == 'Both') {
+      txt = 'No party 1 attorney indicated.';
+    } else {
+      txt = 'No participant attorney indicated.';
+    }
   }
+  $("#partATAYR").html(txt);
   if ($('#payATLawyerYes').prop('checked')) {
-    $("#AYRpayATnoblock").hide();
-    $("#AYRpayATblock").show();
+    txt = AYRaddressString('payAT');
     payAT = checkAT(submit, warn, 'payAT');
   } else {
-    $("#AYRpayATblock").hide();
-    $("#AYRpayATnoblock").show();
+    if (partyFlag == 'Both') {
+      txt = 'No party 2 attorney indicated.';
+    } else {
+      txt = 'No payee attorney indicated.';
+    }
   }
+  $("#payATAYR").html(txt);
   if ($('#QDROLawyerYes').prop('checked')) {
-    $("#AYRQDROATnoblock").hide();
-    $("#AYRQDROATblock").show();
+    txt = AYRaddressString('QDRO');
     QDRO = QDROretainerGood(submit) & checkAT(submit, warn, 'QDRO');
+    $('#RBCOretainedAYR').html('Yes');
+    $('#RBCOretainedAYR-row').removeClass('hide');
   } else {
-    $("#AYRQDROATblock").hide();
-    $("#AYRQDROATnoblock").show();
+    $('#RBCOretainedAYR').html('No');
+    $('#RBCOretainedAYR-row').addClass('hide');
+    txt = 'No RBS indicated.';
   }
+  $("#QDROAYR").html(txt);
   return (partAT & payAT & QDRO);
+}
+function AYRaddressString(prefix) {
+  var rc = '';
+  var name = $('#'+prefix+'fullname').val();
+  if (name != '') { rc += name + "<BR>\n"; }
+  if (prefix != 'QDRO') {
+    var lawfirm = $('#'+prefix+'lawfirm').val();
+    if (lawfirm != '') { rc += "<strong>Lawfirm</strong>:<BR>\n" + lawfirm + '<BR>\n'; }
+  }
+  if ((prefix != 'QDRO') || ($('#'+prefix+'LawyerYes').prop('checked'))) {
+    var jurisdiction = $('#'+prefix+'jurisdiction').val();
+    if (jurisdiction != '') { rc += "<strong>Jurisdiction</strong>:<BR>\n" + jurisdiction + '<BR>\n'; }
+    var license = $('#'+prefix+'license').val();
+    if (license != '') { rc += "<strong>License</strong>:<BR>\n" + license + '<BR>\n'; }
+  }
+  var addr = getAddressString(prefix);
+  if (addr != '') { rc += "<strong>Address</strong>:<BR>\n" + addr + '<BR>\n'; }
+  var phoneNum = $('#'+prefix+'phoneNum').val();
+  if (phoneNum != '') { rc += phoneNum + " (T)<BR>\n"; }
+  var faxNum = $('#'+prefix+'faxNum').val();
+  if (faxNum != '') { rc += faxNum + " (F)\n"; }
+/*
+<td>
+<!-- DAV, you can either wrap each line in a <div> or add <br> after each line, whichever is easier -->
+  Jack Doe, Esq.<br>
+  <strong>Law Firm</strong>:<br>
+  Doe and Associates LLC<br>
+  <strong>Bar License Number</strong>:<br>
+  DC 123456789<br>
+  <strong>Address:</strong><br>
+  77 K Street NE<br>
+  WASHINGTON DC 20002<br>
+  202-942-1464 (T)
+</td>
+*/
+  return rc;
 }
 function isLawyerGood(submit, prefix) {
   if ($('#'+prefix+'LawyerNo').prop('checked')) {
@@ -80,8 +128,7 @@ function pickLawyer(submit, flag, role) {
 function checkAT(submit, warn, prefix) {
   var QDROflag = false;
   if (prefix == 'QDRO') {
-    var prefix2 = 'QDROis';
-    QDROflag = licenseGood(0, warn, prefix2) & jurisdictionGood(0, warn, prefix2) & isLawyerGood(submit, prefix2);
+    QDROflag = licenseGood(0, warn, prefix) & jurisdictionGood(0, warn, prefix) & isLawyerGood(submit, prefix+'is');
   } else {
     QDROflag = lawfirmGood(0, warn, prefix) & licenseGood(0, warn, prefix) & jurisdictionGood(0, warn, prefix);
   }

@@ -1,0 +1,18 @@
+{% comment %}
+This creates the start of an 'Adjust Your Results' table.
+{% endcomment %}
+{% assign caption = include.caption | default: 'Caption' %}
+{% assign showPanel = include.showPanel | default: 1 %}
+{% assign gotoAnchor = include.gotoAnchor | default: 'top' %}
+{% assign closeTable = include.closeTable | default: false %}
+{% assign tableID = include.tableID | default: '' %}
+{% if tableID != '' %}
+{% assign tableID = 'id="' | append: tableID | append: '"' %}
+{% endif %}
+<table {{tableID}} class="usa-table-borderless awards">
+<caption>{{ caption}} <a href="#{{gotoAnchor}}" onClick="showPanel({{showPanel}});">Change</a></caption>
+<colgroup><col><col></colgroup>
+<tbody>
+<tr><td><ol>
+{% if closeTable %}</ol></td></tr></tbody>
+</table>{% endif %}

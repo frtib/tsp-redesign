@@ -35,6 +35,7 @@ scripts:
   {% if page.progress-steps %}{% include calculator/progressBar.html progressSteps=page.progress-steps %}{% endif %}
   {{ content }}
 
+  {% if page.before-panels %}{{ page.before-panels}}{% endif %}
   {% if page.panel-names %}
     {% comment %}This block auto includes the content of the panels.{% endcomment %}
     {% assign panelNames = page.panel-names %}
@@ -47,4 +48,5 @@ scripts:
       {% assign hide = 1 %}
     {% endfor %}
   {% endif %}
+  {% if page.after-panels %}{{ page.after-panels}}{% endif %}
 </div>

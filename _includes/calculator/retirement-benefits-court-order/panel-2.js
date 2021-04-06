@@ -15,6 +15,7 @@ panelEnter[{{ panelID }}] = function(panel) {
   return panel2Good(false);
 }
 panelExit[{{ panelID }}] = function(panel) {
+  panelGood[{{panelID}}](0);
   testPrimeSettingsPath();
   return true;
 }
@@ -79,7 +80,7 @@ function testPrimeSettingsPath() {
     // nothing changed
     // unsetProgressStateError(cachePath["PayeePanel"]);
     setHighwater(cachePath["highwater"]);
-    setProgress(2);
+    // setProgress(2);
     // console.log('4 leaving test false');
     return false;
   }
@@ -253,13 +254,15 @@ function setPartyNames(flag) {
   $('#paySSN-outer-div').addClass('hide');
   $('#payAccountTypeDiv').addClass('hide');
 
+  var p1 = 'Participant';
+  var p2 = 'Payee';
   if (flag == 'Both') {
+    p1 = 'Party 1';
+    p2 = 'Party 2';
     $('#partfullname-label').removeClass('hide');
     $('#payfullname-label').removeClass('hide');
     $('#partfullname-div').removeClass('hide');
     $('#payfullname-div').removeClass('hide');
-    $('#progressTrack3').html('Party 1');
-    $('#progressTrack4').html('Party 2');
     $('#payAccountTypeDiv').removeClass('hide');
   }
   if (flag == 'One') {
@@ -267,11 +270,15 @@ function setPartyNames(flag) {
     $('#payfullname-glabel').removeClass('hide');
     $('#partfullname-div').removeClass('hide');
     $('#payfullname-div').removeClass('hide');
-    $('#progressTrack3').html('Participant');
-    $('#progressTrack4').html('Payee');
     $('#paySSN-outer-div').removeClass('hide');
     $('#payPanel-H2').html('Contact information');
   }
+  $('#progressTrack3').html(p1);
+  $('#progressTrack4').html(p2);
+  $('#part1AYR').html(p1);
+  $('#part2AYR').html(p1);
+  $('#pay1AYR').html(p2);
+  $('#pay2AYR').html(p2);
 }
 -->
 </script>

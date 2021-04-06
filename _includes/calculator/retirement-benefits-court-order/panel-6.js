@@ -16,6 +16,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+    panelGood[{{panelID}}](0);
     return true;
 }
 panelSure[{{ panelID }}] = function(forceValue) {
@@ -29,22 +30,20 @@ panelSure[{{ panelID }}] = function(forceValue) {
 function getpetitioner() { return $('#petitioner').val(); }
 function petitionerGood(submit) {
   var petitioner = getpetitioner();
-  // console.log('petitionerGood |', petitioner, '|');
 
   if (petitioner == 'Select') {
-    // console.log('error petitionerGood |', petitioner, '|');
     if (submit) { return showError('petitioner', "Select petitioner."); }
   }
 
-  // console.log('clear petitionerGood |', petitioner, '|');
-  $('#petitionerGood-panel3').html(petitioner);
+  // $('#petitionerGood-panel3').html(petitioner);
+  $('#petitionerAYR').html($('#'+petitioner+'fullname').val());
   return clearError('petitioner');
 }
 
-function courtNameGood(submit, writein, role) { launderInput('courtName'); return stringGood2(submit, writein, role, 'courtName', "Enter court name.");}
-function jurisdictionGood(submit, writein, role) { launderInput('jurisdiction'); return stringGood2(submit, writein, role, 'jurisdiction', "Enter jurisdiction.");}
-function caseNumberGood(submit, writein, role) { launderInput('caseNumber'); return stringGood2(submit, writein, role, 'caseNumber', "Enter case number.");}
-function judgeNameGood(submit, writein, role) { launderInput('judgeName'); return stringGood2(submit, writein, role, 'judgeName', "Enter judge name.");}
+function courtNameGood(submit, writein, role) { launderInput('courtName'); return myStringGood2(submit, writein, role, 'courtName', "Enter court name.");}
+function jurisdictionGood(submit, writein, role) { launderInput('jurisdiction'); return myStringGood2(submit, writein, role, 'jurisdiction', "Enter jurisdiction.");}
+function caseNumberGood(submit, writein, role) { launderInput('caseNumber'); return myStringGood2(submit, writein, role, 'caseNumber', "Enter case number.");}
+function judgeNameGood(submit, writein, role) { launderInput('judgeName'); return myStringGood2(submit, writein, role, 'judgeName', "Enter judge name.");}
 
 -->
 </script>

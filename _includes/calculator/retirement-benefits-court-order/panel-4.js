@@ -26,6 +26,17 @@ panelEnter[{{ panelID }}] = function(panel) {
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+    // special code for show/hide pay SSN vs accts
+    var receive = getReceive();
+    // SSNGood(0, 1, 'pay');
+    // accountNumbersGood(0, 'pay');
+    if (receive == 'Both') {
+      $('#paySSNAYR-row').addClass('hide');
+    }  else {
+      $('#paySSNAYR-row').removeClass('hide');
+      $('#payacctNumAYR-row').addClass('hide');
+      $('#payBPAacctNumAYR-row').addClass('hide');
+    }
     testPrimeSettingsPay();
     return true;
 }

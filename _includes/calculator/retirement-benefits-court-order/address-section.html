@@ -1,8 +1,8 @@
-{% assign prefix = include.prefix | default: 'XXX' %}
-{% assign prefixContact = prefix | append: 'ContactDiv' %}
-{% assign addrPanel = prefix | append: 'Panel' %}
-{% assign prefixAD = prefix | append: 'AddressTypeDiv' %}
-{% assign fieldID = prefix | append: '-address-explain' %}
+{% assign myPrefix = include.prefix | default: 'XXX' %}
+{% assign prefixContact = myPrefix | append: 'ContactDiv' %}
+{% assign addrPanel = myPrefix | append: 'Panel' %}
+{% assign prefixAD = myPrefix | append: 'AddressTypeDiv' %}
+{% assign fieldID = myPrefix | append: '-address-explain' %}
 {% assign QDROfields = include.isQDRO | default: false %}
 {% assign attorneyFields = include.isAttorney | default: false %}
 {% assign isNotAtty = true %}
@@ -30,15 +30,15 @@ any notices related to this court order but will not update your address of reco
 {% assign altFormFields = "calculator/retirement-benefits-court-order/address-form-field.html" %}
 
 {% if isNotAtty == false %}
-{% include calculator/retirement-benefits-court-order/attorney-prompt.html prefix=prefix
+{% include calculator/retirement-benefits-court-order/attorney-prompt.html prefix=myPrefix
   attyPrompt=include.attyPrompt legendStr=include.legendStr %}
-<div id="{{prefix}}LawyerPanel" class="hide">
+<div id="{{myPrefix}}LawyerPanel" class="hide">
 {% endif %}
 {% if attorneyFields %}
-    {% include {{altFormFields}} prefix=prefix field='fullname' prompt="Attorney's name:" maxLength=30 %}
-    {% include {{altFormFields}} prefix=prefix field='lawfirm' prompt="Law firm name:" maxLength=38 %}
-    {% include {{altFormFields}} prefix=prefix field='jurisdiction' prompt="Jurisdiction:" maxLength=20 %}
-    {% include {{altFormFields}} prefix=prefix field='license' prompt="License number:" maxLength=20 %}
+    {% include {{altFormFields}} prefix=myPrefix field='fullname' prompt="Attorney's name:" maxLength=30 %}
+    {% include {{altFormFields}} prefix=myPrefix field='lawfirm' prompt="Law firm name:" maxLength=38 %}
+    {% include {{altFormFields}} prefix=myPrefix field='jurisdiction' prompt="Jurisdiction:" maxLength=20 %}
+    {% include {{altFormFields}} prefix=myPrefix field='license' prompt="License number:" maxLength=20 %}
 {% endif %}
 {% if QDROfields %}
 {% include calculator/div-panel-form-field.html
@@ -48,19 +48,19 @@ any notices related to this court order but will not update your address of reco
   inputClass="" onBlur="QDROretainerGood(0);" prompt="Which party retained the Retirement Benefits Specialist?"
   explanation=""  dontOpenOuterDiv=true
 %}
-{% include {{altFormFields}} prefix=prefix field='fullname' prompt="Retirement Benefits Specialist's Name:" maxLength=38 %}
+{% include {{altFormFields}} prefix=myPrefix field='fullname' prompt="Retirement Benefits Specialist's Name:" maxLength=38 %}
 {% endif %}
 
 {% if isNotAtty == true %}
-  <input type="checkbox" id="{{prefix}}foreignAddress" name="{{prefix}}foreignAddress" value="{{prefix}}foreignAddress" onclick="toggleAddress('{{prefix}}');">
-  <label for="{{prefix}}foreignAddress">This is a foreign address:</label>
+  <input type="checkbox" id="{{myPrefix}}foreignAddress" name="{{myPrefix}}foreignAddress" value="{{myPrefix}}foreignAddress" onclick="toggleAddress('{{myPrefix}}');">
+  <label for="{{myPrefix}}foreignAddress">This is a foreign address:</label>
 {% endif %}
 
-    <div id="{{prefix}}-address-domestic" class="">
-      {% include {{altFormFields}} prefix=prefix field='street1' prompt="Street address:" maxLength=38 %}
-      {% include {{altFormFields}} prefix=prefix field='city' prompt="City:" maxLength=38 %}
+    <div id="{{myPrefix}}-address-domestic" class="">
+      {% include {{altFormFields}} prefix=myPrefix field='street1' prompt="Street address:" maxLength=38 %}
+      {% include {{altFormFields}} prefix=myPrefix field='city' prompt="City:" maxLength=38 %}
 {% capture stateDropdown %}
-      <select id="{{prefix}}state" name="{{prefix}}state" onchange="clearError('{{prefix}}state'); clearWarning('{{prefix}}state'); processWarnLastPanel();">
+      <select id="{{myPrefix}}state" name="{{myPrefix}}state" onchange="clearError('{{myPrefix}}state'); clearWarning('{{myPrefix}}state'); processWarnLastPanel();">
           <option value="Select">-Select-</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -127,23 +127,23 @@ any notices related to this court order but will not update your address of reco
           <option value="WY">Wyoming</option>
       </select>
 {% endcapture %}
-      {% include {{altFormFields}} prefix=prefix field='state' prompt="State:" type='userBlock' userBlock=stateDropdown %}
-      {% include {{altFormFields}} prefix=prefix field='zip' prompt="Zip code:" maxLength=10 %}
+      {% include {{altFormFields}} prefix=myPrefix field='state' prompt="State:" type='userBlock' userBlock=stateDropdown %}
+      {% include {{altFormFields}} prefix=myPrefix field='zip' prompt="Zip code:" maxLength=10 %}
     </div><!-- END div.address-domestic -->
 
     <div id="{{prefix}}-address-foreign" class="hide">
       <!-- Street address -->
-      {% include {{altFormFields}} prefix=prefix field='fstreet' prompt="Street address:" maxLength=38 %}
+      {% include {{altFormFields}} prefix=myPrefix field='fstreet' prompt="Street address:" maxLength=38 %}
       <!-- City -->
-      {% include {{altFormFields}} prefix=prefix field='fcity' prompt="City" maxLength=38 %}
+      {% include {{altFormFields}} prefix=myPrefix field='fcity' prompt="City" maxLength=38 %}
       <!-- Postal code -->
-      {% include {{altFormFields}} prefix=prefix field='fpostal' prompt="Postal code:" maxLength=13 %}
+      {% include {{altFormFields}} prefix=myPrefix field='fpostal' prompt="Postal code:" maxLength=13 %}
       <!-- Country -->
-      {% comment %}{% include {{altFormFields}} prefix=prefix field='fcountry' prompt="Country:" maxLength=30 %}
+      {% comment %}{% include {{altFormFields}} prefix=myPrefix field='fcountry' prompt="Country:" maxLength=30 %}
       <p>Or select one from the list below</p>{% endcomment %}
 {% capture fcountryDropdown %}
-      <label for="{{prefix}}fcountrylist" class="usa-sr-only">Country drop-down list:</label>
-      <select id="{{prefix}}fcountrylist" name="{{prefix}}fcountrylist" onchange="pickCountry('{{prefix}}');" onblur="pickCountry('{{prefix}}');">
+      <label for="{{myPrefix}}fcountrylist" class="usa-sr-only">Country drop-down list:</label>
+      <select id="{{myPrefix}}fcountrylist" name="{{myPrefix}}fcountrylist" onchange="pickCountry('{{myPrefix}}');" onblur="pickCountry('{{myPrefix}}');">
           <option value="00">Select</option>
           <option value="01">Other</option>
           <option value="AF">Afghanistan</option>
@@ -393,19 +393,19 @@ any notices related to this court order but will not update your address of reco
           <option value="ZM">Zambia</option>
           <option value="ZW">Zimbabwe</option>
       </select>
-      <div id="{{prefix}}fcountry-div" class="hide">
-        <input id="{{prefix}}fcountry" name="{{prefix}}fcountry" class="format-left" value=""
-          aria-labelledby="{{prefix}}fcountry-label" type="text" maxlength="30"  data-store="" placeholder="Enter other country:"
-          onblur="fcountryGood(0,0,'{{prefix}}'); processWarnLastPanel();" onchange="fcountryGood(0,0,'{{prefix}}'); processWarnLastPanel();">
+      <div id="{{myPrefix}}fcountry-div" class="hide">
+        <input id="{{myPrefix}}fcountry" name="{{myPrefix}}fcountry" class="format-left" value=""
+          aria-labelledby="{{myPrefix}}fcountry-label" type="text" maxlength="30"  data-store="" placeholder="Enter other country:"
+          onblur="fcountryGood(0,0,'{{myPrefix}}'); processWarnLastPanel();" onchange="fcountryGood(0,0,'{{myPrefix}}'); processWarnLastPanel();">
       </div>
 {% endcapture %}
-    {% include {{altFormFields}} prefix=prefix field='fcountrylist' prompt="Country:" type='userBlock' userBlock=fcountryDropdown %}
+    {% include {{altFormFields}} prefix=myPrefix field='fcountrylist' prompt="Country:" type='userBlock' userBlock=fcountryDropdown %}
 
       <!-- Phone number -->
     </div><!-- END div.address-foreign -->
-    {% include {{altFormFields}} prefix=prefix field='phoneNum' prompt="Phone number:" maxLength=16 type='tel' %}
+    {% include {{altFormFields}} prefix=myPrefix field='phoneNum' prompt="Phone number:" maxLength=16 type='tel' %}
 {% if QDROfields or attorneyFields %}
-    {% include {{altFormFields}} prefix=prefix field='faxNum' prompt="Fax number:" maxLength=16 type='tel' %}
+    {% include {{altFormFields}} prefix=myPrefix field='faxNum' prompt="Fax number:" maxLength=16 type='tel' %}
 {% endif %}
 
     {% if QDROfields %}
@@ -414,8 +414,8 @@ any notices related to this court order but will not update your address of reco
         legendStr='Retirement Benefits Specialist is Lawyer?'
         attyPrompt='Is the Retirement Benefits Specialist a licensed attorney?' %}
         <div id="QDROisLawyerPanel" class="hide">
-        {% include {{altFormFields}} prefix=prefix field='jurisdiction' prompt="Jurisdiction:" maxLength=20 %}
-        {% include {{altFormFields}} prefix=prefix field='license' prompt="License number:" maxLength=20 %}
+        {% include {{altFormFields}} prefix=myPrefix field='jurisdiction' prompt="Jurisdiction:" maxLength=20 %}
+        {% include {{altFormFields}} prefix=myPrefix field='license' prompt="License number:" maxLength=20 %}
         </div>
       </div> <!-- end RBCO is lawyer -->
     {% endif %}

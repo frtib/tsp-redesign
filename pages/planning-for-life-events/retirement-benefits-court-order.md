@@ -9,11 +9,12 @@ scripts:
   - /assets/js/calculator/javascriptTaxTable.js
   - /assets/js/calculator/calculator.js
   - /assets/js/calculator/placeholder.js
-# DAV, rbco-address-toggle.js ^^ can be deleted
 permalink: /planning-for-life-events/retirement-benefits-court-order/
 calculator-name: retirement-benefits-court-order
 progress-steps: [Introduction,Scenario,Party 1,Party 2,Attorney,Case,Awards,Summary]
 panel-names: [Introduction,Scenario,Party1,Party2,Attorney,Case,Awards,Summary]
+before-panels: "<form id='generatePDFform' method='post' action='https://secure.tsp.gov/components/CORS/courtOrder/courtOrder.html'>"
+after-panels: "</form>"
 redirect_from:
   - /LifeEvents/personal/spouse/courtOrder.html
 ---

@@ -125,25 +125,33 @@ function setValues(flag) {
     $('#QDROzip').val('10001');
     $('#QDROphoneNum').val('718-135-3000');
     $('#QDROfaxNum').val('718-135-9320');
-    $('#QDROisjurisdiction').val('District 5');
-    $('#QDROislicense').val('NY-0001');
+    $('#QDROjurisdiction').val('District 5');
+    $('#QDROlicense').val('NY-0001');
     processPanel(5,0,6,0);
   }
   if (flag == 7) {
     setValues(6);
     $('#petitioner').val('pay');
-    $('#courtName').val('court name');
-    $('#jurisdiction').val('jurisdiciton');
-    $('#caseNumber').val('case-number');
-    $('#judgeName').val('Judge John Smith, court room 1');
+    $('#courtName').val('7th Circuit Court of Appeals');
+    $('#jurisdiction').val('appellate');
+    $('#caseNumber').val('14-1128');
+    $('#judgeName').val('Judge Richard Posner, court room 1');
     processPanel(6,0,7,0);
   }
   if (flag == 8) {
     setValues(7);
-    $('#1awardAccount').val('part,xxxxxxxxx5555,Dual');
+    $('#1awardAccount').val('part,xxxxxxxxx5555,Civ');
     $('#1awardTypeFixed').click();
     $('#1fixedAmount').val('50');
     $('#1earningsNo').click();
+
+    $('#buildAnotherButton').click();
+    $('#2awardAccount').val('part,xxxxxxxxx5555,US');
+    $('#2awardTypePercent').click();
+    $('#2percentage').val('10.5');
+    $('#2paymentDate1Entitlement').click();
+    $('#2earningsNo').click();
+    $('#2osLoanIncluded').click();
     processPanel(7,0,8,0);
   }
 }
