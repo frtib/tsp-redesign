@@ -141,14 +141,18 @@ This will depend on how often you are paid (biweekly or monthly, for example). I
 %}
 </div>
 {% comment %} -----  %/$ Contribution code below here ------ {% endcomment %}
+{% capture explanation_2_10 %}
+Enter the amount of annual pay that you would like to save.  (If you're age 50 or older,
+include any contributions toward the catch-up limit.)
+{% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.10.r" id="contributionSelector"
   inputType="radio" radioIDs="contributionFixed, contributionPercentage"
   radioLabels="Fixed dollar amount, Percentage"
   inputClass="usa-unstyled-list"
   onBlur="contributionSelectorGood(true);"
-  prompt="Enter the amount of annual pay that you would like to save:"
-  explanation="" xexplanation="Enter the amount or percentage you will add to your savings from each paycheck."
+  prompt=explanation_2_10
+  explanation=""
   dontOpenOuterDiv=true
 %}
 {% include calculator/div-panel-form-field.html
@@ -193,20 +197,6 @@ For more accurate results, decrease the amount of regular employee contributions
   placeholder="" onBlur="annualPayIncreasePercentGood(false);"
   prompt="Enter the percentage of your expected annual pay increase:"
   explanation=""   dontOpenOuterDiv=true
-%}
-{% capture prompt2_12 %}
-Enter the dollar amount that you plan to contribute each year in <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>:
-{% endcapture %}
-{% include calculator/div-panel-form-field.html
-  fieldID="panel-2.12" id="catchupAmount"
-  inputClass=""  dataFormat="$"  dataFormatClass="whole-number"
-  min="1" value="" max="9999" maxLength=4 step="1"
-  placeholder="" onBlur="catchupAmountGood(false);"
-  prompt=prompt2_12
-  explanation="
-  Catch-up contributions (up to <span id='catch-up-limit'>$6,000</span> in <span id='catch-up-year'>2019</span>) are traditional and/or Roth contributions that are made by a participant age 50 or older. You must first exceed the elective deferral limit (<span id='IRC-limit-cc'>$19,000.00</span> in <span id='IRC-limit-year-cc'>2019</span>) to make catch-up contributions.
-  "
-  dontOpenOuterDiv=true
 %}
 </div>{% comment %}End of multi-input block Future contrib{% endcomment %}
 

@@ -34,7 +34,7 @@ function selectedGrowth(id, submit) {
 }
 // my functions
 function contributionsGood(submit) {
-  return ( catchupAmountGood(submit) & annualPayIncreasePercentGood(submit)
+  return ( annualPayIncreasePercentGood(submit)
     & annualPayPercentGood(submit) & annualPayFixedGood(submit) & contributionSelectorGood(submit)
     & payScheduleGood(submit) & annualPayGood(submit) & yearsToContributeGood(submit) );
 }
@@ -168,12 +168,6 @@ function clear_warning_icon() { $('#WarnOpContr').hide(); }
 function show_warning_icon() { $('#WarnOpContr').show(); }
 
 function setLimits() {
-  // in CC note
-  $('#catch-up-limit').html(CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'));
-  $('#catch-up-year').html(IRC_limit_year);
-  $('#IRC-limit-cc').html(CurrencyFormatted(IRC_contribution_limit, 'cent'));
-  $('#IRC-limit-year-cc').html(IRC_limit_year);
-
   // in warning
   $('#IRC-limit').html(CurrencyFormatted(IRC_contribution_limit, 'cent'));
   $('#IRC-limit-year').html(IRC_limit_year);
@@ -184,7 +178,6 @@ function testWarning() {
   if (getPosInteger('yearsToContribute', -1) <= 0) { return; }
 
   var annualPay = getPosInteger('annualPay', -1);
-  if (catchupAmount > 0) { $('#catchupAmount').val(catchupAmount); }
   if ((annualPay < 1) || (annualPay > 1000000)) { return; }
 
   if ($("#annualPayPercent").val() == '') { return; }
@@ -329,7 +322,7 @@ function annualPayFixedGood(submit) {
     if (submit) {
       return showError('annualPayFixed', "Please enter the fixed amount of your annual pay you would like to save.");
     } else {
-      return clearError('annualPayFixed');      
+      return clearError('annualPayFixed');
     }
   }
   if ((annualPayFixed < 1) || (annualPayFixed > 1000000)) {
@@ -381,27 +374,6 @@ function annualPayIncreasePercentGood(submit) {
   $("#annualPayIncreasePercent").val((annualPayIncreasePercent).toFixed(2));
   $('#lblAYRannualPayIncreasePercent').html(annualPayIncreasePercent.toFixed(2)+'%');
   return clearError('annualPayIncreasePercent');
-}
-
-function catchupAmountGood(submit) {
-  var growthSelector = getGrowthSelector();
-  if ((growthSelector == 'balanceOnly') || (growthSelector == '')) { return clearError('catchupAmount'); }
-  if ($('#BP').prop('checked')) { return clearError('catchupAmount'); }
-
-  var catchupAmount = getPosInteger('catchupAmount', 0);
-  if (catchupAmount > 0) { $('#catchupAmount').val(catchupAmount); }
-
-  // if (catchupAmount <= 0) {
-  //   return showError('catchupAmount', "Enter your catch up amount.");
-  // }
-  // if ((catchupAmount < 1) || (catchupAmount > IRC_catchup_contribution_limit)) {
-  if (catchupAmount > IRC_catchup_contribution_limit) {
-    return showError('catchupAmount', "Catch-up contributions cannot exceed "
-      + CurrencyFormatted(IRC_catchup_contribution_limit) + " for " + IRC_limit_year + ".");
-  }
-
-  $('#lblAYRcatchupAmount').html(CurrencyFormatted(catchupAmount));
-  return clearError('catchupAmount');
 }
 
 // test relation to each other
