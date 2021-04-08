@@ -156,6 +156,28 @@ section {
   }
 }
 // END .panel-form-field
+.usa-content {
+  ul {
+    &.navigation-buttons {
+      &.stacked {
+
+        button {
+          width: 80%;
+        }
+
+        li {
+          &:last-child {
+            button {
+              font-size: 2rem;
+              line-height: 1.4;
+              font-weight: $normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .button-stack {
   text-align: center;
@@ -174,6 +196,27 @@ section {
   }
 }
 @media only screen and (max-width: $small-screen) {
+  .usa-content {
+    ul {
+      &.navigation-buttons {
+        &.stacked {
+
+          button {
+            width: 100%;
+          }
+
+          li {
+            &:last-child {
+              button {
+                font-weight: $medium;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .button-stack {
     button {
       width: 100%;

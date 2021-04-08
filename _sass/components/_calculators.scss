@@ -1,8 +1,7 @@
 li.show-equal {
-
   [type=checkbox] + label::before {
-      margin-left: -3rem;
-    }
+    margin-left: -3rem;
+  }
 
   label {
     margin-top: 3rem;
@@ -10,6 +9,7 @@ li.show-equal {
   }
 }
 // VIEW RADIO BUTTONS (Table, Chart, Combined)
+
 div.view {
   ul {
     &.flex {
@@ -20,14 +20,18 @@ div.view {
   }
 }
 // CALCULATOR PANEL
+
 section {
   input.attention {
     background-color: #f9c642;
   }
+
   select.attention {
     background-color: #f9c642;
   }
-  span.attention { // warning label
+
+  span.attention {
+    // warning label
     background-color: #f9c642;
     color: #222223;
   }
@@ -95,100 +99,99 @@ section {
     }
   }
 }
-
 // PROGRESS BAR
 .usa-content {
   ol {
     &:not(.usa-accordion):not(.usa-accordion-bordered) {
       &.progstep,
       &.progtrckr {
-      max-width: none;
+        max-width: none;
       }
     }
   }
 }
-
 // INLINE INPUT FIELDS
 ul.inline-input {
   li {
     display: flex;
     align-items: baseline;
+
     input,
-    input:focus
-     {
+    input:focus {
       width: auto;
-      margin: 0 .7rem;
+      margin: 0 0.7rem;
       // padding: 0;
       min-width: 5rem;
       text-align: center;
     }
   }
-
   // NUMBER FORMAT SYMBOLS ($, %)
-    span[data-format] {
-        // position: relative;
-        // display: inline-flex;
-        width: auto;
-        // max-width: 46rem;
-        &:before,
-        &:after {
-          top: 1rem;
-          left: 1.8rem;
-          // color: #6f707b;
-          // pointer-events: none;
-          // position: absolute;
-          // padding: 1rem 0.7em;
-          margin: 0;
-        }
-        &.input-symbol-left {
-          // &:before {
-          //   content: attr(data-format);
-          //   left: 0;
-          // }
-          input {
-            // margin: 0;
-            // padding: 0;
-            // padding-left: 3rem;
-            text-align: left;
-          }
-        }
-        // &.input-symbol-right {
-        //   &:before {
-        //     content: attr(data-format);
-        //     right: 0;
-        //   }
-        //   input {
-        //     padding-right: 3rem;
-        //   }
-        // }
-    } // end span[data-format]
-}
+  span[data-format] {
+    // position: relative;
+    // display: inline-flex;
+    width: auto;
+    // max-width: 46rem;
+    &:after,
+    &:before {
+      top: 1rem;
+      left: 1.8rem;
+      // color: #6f707b;
+      // pointer-events: none;
+      // position: absolute;
+      // padding: 1rem 0.7em;
+      margin: 0;
+    }
 
+    &.input-symbol-left {
+      // &:before {
+      //   content: attr(data-format);
+      //   left: 0;
+      // }
+      input {
+        // margin: 0;
+        // padding: 0;
+        // padding-left: 3rem;
+        text-align: left;
+      }
+    }
+    // &.input-symbol-right {
+    //   &:before {
+    //     content: attr(data-format);
+    //     right: 0;
+    //   }
+    //   input {
+    //     padding-right: 3rem;
+    //   }
+    // }
+  }
+  // end span[data-format]
+}
 // ZEBRA STRIPING
 div.results-grid-frame {
   border: 1px solid #aeb0b5;
   // border: 1px solid $variable?;
   .usa-grid {
     div {
-    padding: 3rem 1.8rem;
+      padding: 3rem 1.8rem;
     }
   }
+
   > div.usa-grid.results {
     &:nth-of-type(odd) {
-    background-color: #f1f1f1;
-    // background-color: $color-gray-lightest;
+      background-color: #f1f1f1;
+      // background-color: $color-gray-lightest;
     }
   }
 }
-
 // ACCORDIONS
-
 .calculator-panel {
   ul.usa-accordion {
     &.explain-this {
       max-width: 46rem;
+
       li {
         background-color: transparent;
+
         .usa-accordion-button {
           background-color: transparent;
           background-image: none;
@@ -197,6 +200,7 @@ div.results-grid-frame {
           position: relative;
           line-height: 2rem;
           padding: 1.5rem 2rem;
+
           &:after {
             font-family: $font-awesome;
             font-weight: $light;
@@ -204,25 +208,29 @@ div.results-grid-frame {
             content: "\f056";
             float: right;
           }
+
           &[aria-expanded="false"] {
             &:after {
               content: "\f055";
             }
           }
+
           &:hover {
             background-color: #d6d7d9;
           }
-        } // end .usa-accordion-button
+        }
+        // end .usa-accordion-button
+
         .usa-accordion-content {
           background-color: transparent;
-        } // end .usa-accordion-content
+        }
+        // end .usa-accordion-content
       }
     }
   }
-} // end .calculator-panel
-
+}
+// end .calculator-panel
 // BUTTON NAV
-
 .usa-content {
   ul {
     &.navigation-buttons {
@@ -231,16 +239,24 @@ div.results-grid-frame {
       max-width: none;
       margin: 2rem 0;
       padding: 0;
+
+      &.stacked {
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
-
 // RESULTS GRID (move to calculator-specifice .scss file?? )
-
 .usa-grid {
   &.results {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
     // &:last-child {
     //   align-items: stretch;
     // }
@@ -249,7 +265,7 @@ div.results-grid-frame {
     // }
     .usa-width-one-third {
       text-align: right;
-      border-left: .2rem dotted #aeb0b5;
+      border-left: 0.2rem dotted #aeb0b5;
       border-bottom: none;
       font-size: 3rem;
       align-self: stretch;
@@ -264,26 +280,27 @@ div.results-grid-frame {
 .disclaimer {
   color: $color-gray-dark;
 }
-
 @media screen and (max-width: $medium-screen) {
   .usa-grid {
     &.results {
-    display: block;
+      display: block;
+
       .usa-width-two-thirds {
         border-right: none;
         padding-bottom: 0;
       }
+
       .usa-width-one-third {
         text-align: center;
-        border-bottom: .2rem dotted #aeb0b5;
+        border-bottom: 0.2rem dotted #aeb0b5;
         line-height: normal;
+
         span {
           line-height: inherit;
         }
       }
     }
   }
-
 
   div.results-grid-frame {
     > div.usa-grid.results {
@@ -294,9 +311,8 @@ div.results-grid-frame {
       }
     }
   }
-
-} // end @media $medium-screen
-
+}
+// end @media $medium-screen
 @media screen and (max-width: $small-screen) {
   .usa-content {
     ul {
@@ -309,8 +325,8 @@ div.results-grid-frame {
       }
     }
   }
-} // end @media $small-screen
-
+}
+// end @media $small-screen
 // DONALD:  lost RBCO styles
 // section.calculator-panel ul.usa-accordion-bordered.award {
 //   margin-top: 2rem; }

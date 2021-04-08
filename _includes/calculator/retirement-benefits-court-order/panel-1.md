@@ -33,8 +33,8 @@ For more information, please read the TSP publication [_Court Orders and Powers 
 <button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
 {% endcapture %}
 {% include calculator/button-block.html panelID=panelID getStarted=2 buttonStack=1 bonusButton3=bonusButton3 %}
-
-<ul class="navigation-buttons">
+<nav>
+<ul class="navigation-buttons stacked">
   <li>
   <button class="usa-button-big" href="javascript:void(0);" title="" onclick="showPanel(1); return false;">Get started</button>
   </li>
@@ -44,4 +44,5 @@ For more information, please read the TSP publication [_Court Orders and Powers 
   </li>
   </span>
 </ul>
+</nav>
 </section> <!-- end div#panel -->
