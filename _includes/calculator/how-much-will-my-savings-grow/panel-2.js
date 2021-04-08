@@ -170,32 +170,54 @@ function show_warning_icon() { $('#WarnOpContr').show(); }
 function setLimits() {
   // in warning
   $('#IRC-limit').html(CurrencyFormatted(IRC_contribution_limit, 'cent'));
+  $('#IRC-limit-cc').html(CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'));
   $('#IRC-limit-year').html(IRC_limit_year);
   return true;
 }
+function showTestWarning(flag) {
+  if (flag) {
+    $('#contribution-exceeds-maximum').removeClass('hide');
+    return true;
+  }
+  $('#contribution-exceeds-maximum').addClass('hide');
+  return false;
+}
 function testWarning() {
-  if ($('#BP').prop('checked')) { return; }
-  if (getPosInteger('yearsToContribute', -1) <= 0) { return; }
+  if ($('#BP').prop('checked')) { return showTestWarning(false); }
+  if (getPosInteger('yearsToContribute', -1) <= 0) { return showTestWarning(false);; }
 
   var annualPay = getPosInteger('annualPay', -1);
-  if ((annualPay < 1) || (annualPay > 1000000)) { return; }
-
-  if ($("#annualPayPercent").val() == '') { return; }
-  var annualPayPercent = parseInt($("#annualPayPercent").val());
-  if ((annualPayPercent < 0) || (annualPayPercent > 99)) { return; }
-
+  if ((annualPay < 1) || (annualPay > 1000000)) { return showTestWarning(false); }
   // we have good input for the salary fields
-  var contrib = annualPay * (annualPayPercent / 100.0);
-  var maxpcontrib = (100.0 * IRC_contribution_limit) / annualPay;
+
+  var totalLimit = IRC_contribution_limit + IRC_catchup_contribution_limit;
+  var contrib = 0.0;
+  if (getContributionSelector() == 'contributionFixed') {
+    if ($("#annualPayFixed").val() == '') { return showTestWarning(false); }
+    var annualPayFixed = parseInt($("#annualPayFixed").val());
+    if (annualPayFixed <= 0) { return showTestWarning(false); }
+    $('#maximum-fixed-contribution-span').removeClass('hide');
+    $('#maximum-percent-contribution-span').addClass('hide');
+    contrib = annualPayFixed;
+  }
+  if (getContributionSelector() == 'contributionPercentage') {
+    if ($("#annualPayPercent").val() == '') { return showTestWarning(false); }
+    var annualPayPercent = parseInt($("#annualPayPercent").val());
+    if ((annualPayPercent < 0) || (annualPayPercent > 99)) { return showTestWarning(false); }
+    $('#maximum-fixed-contribution-span').addClass('hide');
+    $('#maximum-percent-contribution-span').removeClass('hide');
+    contrib = annualPay * (annualPayPercent / 100.0);
+  }
+  var maxpcontrib = (100.0 * totalLimit) / annualPay;
 
   $('#total-contribution').html(CurrencyFormatted(contrib, 'cent'));
   $('#maximum-percent-contribution').html(maxpcontrib.toFixed(2));
+  $('#maximum-fixed-contribution').html(CurrencyFormatted(totalLimit, 'cent'));
 
-  if ((contrib > IRC_contribution_limit) && (getContributionSelector() == 'contributionPercentage')) {
-    $('#contribution-exceeds-maximum').removeClass('hide');
-  } else {
-    $('#contribution-exceeds-maximum').addClass('hide');
-  }
+console.log({contrib}, {totalLimit}, {annualPay}, {annualPayPercent}, {annualPayFixed});
+  // if ((contrib > IRC_contribution_limit) && (getContributionSelector() == 'contributionPercentage')) {
+  if (contrib > totalLimit) { return showTestWarning(true); }
+  return showTestWarning(false);
 }
 
 function amountToUseGood(submit) {
