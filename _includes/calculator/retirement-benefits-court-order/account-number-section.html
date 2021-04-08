@@ -46,11 +46,6 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
         </div>
-        {% assign infoDivID = prefix | append: "-dual-account-info-box" %}
-        {% include calculator/infoBox.html icon='info' divID=infoDivID class='hide'
-            title="Dual account holders"
-            textBlock="If you have both a civilian and uniformed services account, the account numbers are the same."
-        %}
       </li>
       <li>
         <div id="{{prefix}}BPAacctNum-div" class="hide">
@@ -61,6 +56,11 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
         </div>
+        {% assign infoDivID = prefix | append: "-dual-account-info-box" %}
+        {% include calculator/infoBox.html icon='info' divID=infoDivID class='hide'
+            title="Dual account holders"
+            textBlock="If you have both a civilian and uniformed services account, the account numbers are the same."
+        %}
       </li>
 
     </ul>

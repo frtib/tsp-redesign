@@ -9,19 +9,16 @@ ul.usa-accordion {
 }
 // end TEMPORARY STYLES
 
-
-
 section {
   &.calculator-panel {
-
     input[disabled] {
       cursor: default;
       color: $color-gray;
       font-style: italic;
     }
 
-    input,
-    button.usa-button {
+    button.usa-button,
+    input {
       &.attention {
         background-color: $color-gold-light;
       }
@@ -57,11 +54,27 @@ section {
       }
     }
 
-
     ul.usa-accordion-bordered {
       &.award {
+        margin-top: 2rem;
+
+        li {
+          .usa-accordion-button {
+            background-color: #dce4ef;
+          }
+
+          .usa-accordion-content {
+            background-color: #ffffff;
+            border-bottom: 3px solid #dce4ef;
+            border-left: 3px solid #dce4ef;
+            border-right: 3px solid #dce4ef;
+            padding: 3rem 2rem 1rem;
+          }
+        }
+
         .panel-form-field {
           background-color: inherit;
+
           &:last-child {
             border-bottom: none;
           }
@@ -69,13 +82,20 @@ section {
 
         div.usa-accordion-content {
           ul.buttons {
-            margin: 0;
-            margin-top: 1rem;
+            margin: 1rem 0 0;
             display: flex;
             list-style-type: none;
             max-width: none;
             margin: 2rem 0;
             padding: 0;
+          }
+
+          .award-body {
+            border: 2px dashed $color-gray;
+            padding: 1.5rem;
+            font-family: $serif;
+            font-size: 1.4rem;
+            text-indent: 2em;
           }
         }
 
@@ -94,7 +114,8 @@ section {
             }
           }
         }
-      } //END &.award
+      }
+      //END &.award
     }
   }
   // END .calculator-panel
@@ -102,7 +123,6 @@ section {
 // END section
 
 .panel-form-field {
-
   &.account-types {
     ul {
       &.account-type,
@@ -120,15 +140,15 @@ section {
 
             .dual-accounts {
               max-width: 46rem;
-              padding: .3rem 0;
+              padding: 0.3rem 0;
+
               i {
                 color: $color-gray;
-                margin-right: .7rem;
+                margin-right: 0.7rem;
                 font-size: 2.1rem;
                 line-height: 1.4;
               }
             }
-
           }
         }
       }
