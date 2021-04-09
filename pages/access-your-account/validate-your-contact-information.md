@@ -16,12 +16,11 @@ You must add and validate a phone number and use two-step authentication to acce
 // For the earlier March update, this will still read: “You must add and validate a phone number and use two-step authentication to access your TSP account.”
 // For the 4/17 update, the language will read as it appears in the document.
 // – C. Spurlock
-
+{% endcomment %}
 Depending on your account type, you must validate a phone number or email address and use two-step authentication to access your TSP account.
 
 - **If you have a civilian TSP account**, you must validate your phone number in order to use two-step authentication and log in securely to My Account.
 - **If you have a uniformed services TSP account**, we recommend that you validate a phone number as your primary verification method and use email as backup.
-{% endcomment %}
 
 **If you lose access to your validated contact methods**, [call the ThriftLine]({{ site.baseurl }}/contact/) to speak to a TSP representative. After verifying your identity, the TSP representative will help you add and validate your new contact information.
 
