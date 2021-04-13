@@ -73,7 +73,7 @@ function AYRaddressString(prefix) {
     var lawfirm = $('#'+prefix+'lawfirm').val();
     if (lawfirm != '') { rc += "<strong>Lawfirm</strong>:<BR>\n" + lawfirm + '<BR>\n'; }
   }
-  if ((prefix != 'QDRO') || ($('#'+prefix+'LawyerYes').prop('checked'))) {
+  if ((prefix != 'QDRO') || ($('#'+prefix+'isLawyerYes').prop('checked'))) {
     var jurisdiction = $('#'+prefix+'jurisdiction').val();
     if (jurisdiction != '') { rc += "<strong>Jurisdiction</strong>:<BR>\n" + jurisdiction + '<BR>\n'; }
     var license = $('#'+prefix+'license').val();

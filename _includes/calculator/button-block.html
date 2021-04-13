@@ -8,7 +8,6 @@ This is for a navagation button block.
 {% assign inList = 1 %}
 {% assign getStarted = include.getStarted | default: 0 %}
 {% assign buttonStack = include.buttonStack | default: 0 %}
-{% if buttonStack != 0 %}{% assign inList = 0 %}{% endif %}
 {% assign start = include.start | default: 0 %}
 {% assign showPDF = include.showPDF | default: 0 %}
 {% assign prev = include.prev | default: 0 %}
@@ -23,7 +22,7 @@ This is for a navagation button block.
 {% assign bonusButton3 = include.bonusButton3 | default: 0 %}
 
 <nav role="navigation">
-{% if buttonStack != 0 %}<div class="button-stack">{% else %}<ul class="navigation-buttons">{% endif %}
+<ul class="navigation-buttons {% if buttonStack != 0 %}stacked{% endif %}">
 {% if showPDF != 0 %}
 <input type="submit" name="PDF" value="Show Blank PDF">
 {% include calculator/button.html text='Download' title='Blank PDF form opens in a new window.'
@@ -34,9 +33,9 @@ This is for a navagation button block.
 
 {% if getStarted != 0 %}
 {% capture click %}processPanel({{ panelID }}, 0, {{ getStarted }}, 0); return false;{% endcapture %}
-{% assign buttonSize = "" %}
+{% assign buttonSize = "usa-button" %}
 {% if buttonStack != 0 %}{% assign buttonSize = "usa-button-big" %}{% endif %}
-{% include calculator/button.html xtraClass1=buttonSize text='Get started' onClick=click xtraClass2='primary' inList=inList %}
+{% include calculator/button.html buttonClass=buttonSize text='Get started' onClick=click xtraClass2='primary' inList=inList %}
 {% endif %}
 
 {% if start != 0 %}
@@ -98,4 +97,5 @@ This is for a navagation button block.
   {% capture printAction %}window.print(); return false;{% endcapture %}
   {% include calculator/button.html text='Print report' onClick=printAction xtraClass1='print' inList=inList %}
 {% endif %}
-{% if buttonStack != 0 %}</div>{% else %}</ul>{% endif %}</nav>
+</ul>
+</nav>

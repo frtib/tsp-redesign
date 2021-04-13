@@ -114,6 +114,7 @@ function getAcctNumber(role, BPA, redact, paren) {
   return acct;
 }
 function accountNumbersGood(submit, prefix) {
+console.log('accountNumbersGood(', {submit}, {prefix},')');
   if (prefix == 'part') { testPrimeSettingsPart(); } else { testPrimeSettingsPay(); }
   var civCB = isCivilian(prefix);
   var usvCB = isUniformed(prefix);
@@ -142,8 +143,6 @@ function dualAccountChecked(submit, prefix, flag) {
   var note = '#' + prefix + '-dual-account-info-box';
   if (flag) {
     $(note).removeClass('hide');
-    // $(usvAcct).prop("disabled", true);
-    setPlaceholder(acct, 13);
   } else {
     $(note).addClass('hide');
   }
