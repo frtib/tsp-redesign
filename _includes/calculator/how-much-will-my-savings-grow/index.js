@@ -12,9 +12,16 @@ function initValues(def) {
 
 function setValues(flag) {
   if (flag == 1) {
+    setValues(3);
+    showPanel(1);
+  }
+  if (flag == 2) {
     console.log('selecting options to show maximum contribution exceeded');
     $('#CSRS').click();
     processPanel(1,0,2,0);
+  }
+  if (flag == '2e') {
+    setValues(2);
     $('#futureOnly').click();
     $('#yearsToContribute').val(5);
     $('#annualPay').val(100000);
@@ -24,20 +31,19 @@ function setValues(flag) {
 
     $(document).scrollTop($('#annualPay-div').position().top);
   }
-  if (flag == 2) {
-    setValues(1);
+  if (flag == 3) {
     // set all the fields
     $('#USBRS').click();
     processPanel(1,0,2,0);
     $('#bothGrowth').click();
     $('#yearsServed').val(12);
-    $('#DIEMSdate').val('July 17, 2001');
-    $('#paySchedule').val('Monthly');
+    DIEMS.setDate('July 17, 2001');
     $('#amountToUse').val(320000);
-    $('#contributionFixed').click();
-    $('#annualPayFixed').val(13000);
+    $('#paySchedule').val('Monthly');
+    $('#annualPay').val(32000);
+    $('#yearsToContribute').val(5);
+    $('#annualPayPercent').val(17);
     $('#annualPayIncreasePercent').val(2);
-    $('#catchupAmount').val(375);
     $('#yearsToGo').val(10);
     $('#rateOfReturn').val(2.75);
     processPanel(2,0,3,0);

@@ -93,10 +93,8 @@ Results NAME panel (3) for CALC.
 {% include calculator/AYR-table-row.html prompt="Pay schedule:" rowID='lblAYRpaySchedule' named=true %}
 {% include calculator/AYR-table-row.html
   prompt="Percent salary to save:" rowID='lblAYRannualPayPercent' %}
-{% include calculator/AYR-table-row.html
-  prompt="Expected Percent Salary Increase:" rowID='lblAYRannualPayIncreasePercent' %}
 {% include calculator/AYR-table-row.html closeTable=true
-  prompt="Annual catch-up contributions:" rowID='lblAYRcatchupAmount' %}
+  prompt="Expected Percent Salary Increase:" rowID='lblAYRannualPayIncreasePercent' %}
 
 {% include calculator/AYR-table.html caption="Account growth" showPanel=2 gotoAnchor='time' tableID="accountGrowthAYR" %}
 {% include calculator/AYR-table-row.html

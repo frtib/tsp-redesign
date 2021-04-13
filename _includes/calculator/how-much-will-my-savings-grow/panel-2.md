@@ -141,14 +141,18 @@ This will depend on how often you are paid (biweekly or monthly, for example). I
 %}
 </div>
 {% comment %} -----  %/$ Contribution code below here ------ {% endcomment %}
+{% capture explanation_2_10 %}
+Enter the amount of annual pay that you would like to save.  (If you're age 50 or older,
+include any contributions toward the catch-up limit.)
+{% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.10.r" id="contributionSelector"
   inputType="radio" radioIDs="contributionFixed, contributionPercentage"
   radioLabels="Fixed dollar amount, Percentage"
   inputClass="usa-unstyled-list"
   onBlur="contributionSelectorGood(true);"
-  prompt="Enter the amount of annual pay that you would like to save:"
-  explanation="" xexplanation="Enter the amount or percentage you will add to your savings from each paycheck."
+  prompt=explanation_2_10
+  explanation=""
   dontOpenOuterDiv=true
 %}
 {% include calculator/div-panel-form-field.html
@@ -174,11 +178,15 @@ Internal Revenue Code (IRC) <span data-term="Elective Deferral Limit" class="js-
 {% endcapture %}
 {% capture contribution_exceeds_maximum %}
 <br>Your yearly contribution: <span id="total-contribution">0</span><br><br>
-Maximum whole percentage below limit: <span id="maximum-percent-contribution">0</span>%<br><br>
-The combined total of your regular employee contributions exceeds the Internal Revenue Code (IRC) elective deferral limit (<span id="IRC-limit">$x19,500.00</span> in <span id="IRC-limit-year">x2020</span>).<br><br>
+<span id="maximum-percent-contribution-span" class="hide">Maximum whole percentage below limit: <span id="maximum-percent-contribution">0</span>%<br><br></span>
+<span id="maximum-fixed-contribution-span" class="hide">Maximum fixed amount below limit: <span id="maximum-fixed-contribution">0</span><br><br></span>
+The combined total of your regular employee contributions exceeds the Internal Revenue Code (IRC)
+elective deferral and catch-up contribution limits
+(<span id="IRC-limit">$19,500.00</span> + <span id="IRC-limit-cc">$6,500.00</span>
+in <span id="IRC-limit-year">2020</span>).<br><br>
 If you reach the IRC elective deferral limit before the end of the year, your own contributions will be suspended, and you will miss out on the associated earnings.<br><br>
 <strong>Note:</strong> If you are age 50 or over, you can make catch-up contributions in excess of the elective deferral limit.<br><br>
-For more accurate results, decrease the amount of regular employee contributions you would like to make. You can also enter a dollar amount for catch-up contributions if you are eligible.
+For more accurate results, decrease the amount of regular employee contributions you would like to make.
 {% endcapture %}
 {% include calculator/infoBox.html icon='warning'
     divID="contribution-exceeds-maximum" class="hide"
@@ -193,20 +201,6 @@ For more accurate results, decrease the amount of regular employee contributions
   placeholder="" onBlur="annualPayIncreasePercentGood(false);"
   prompt="Enter the percentage of your expected annual pay increase:"
   explanation=""   dontOpenOuterDiv=true
-%}
-{% capture prompt2_12 %}
-Enter the dollar amount that you plan to contribute each year in <span data-term="Catch-Up Contributions" class="js-glossary-toggle term term-end">catch-up contributions</span>:
-{% endcapture %}
-{% include calculator/div-panel-form-field.html
-  fieldID="panel-2.12" id="catchupAmount"
-  inputClass=""  dataFormat="$"  dataFormatClass="whole-number"
-  min="1" value="" max="9999" maxLength=4 step="1"
-  placeholder="" onBlur="catchupAmountGood(false);"
-  prompt=prompt2_12
-  explanation="
-  Catch-up contributions (up to <span id='catch-up-limit'>$6,000</span> in <span id='catch-up-year'>2019</span>) are traditional and/or Roth contributions that are made by a participant age 50 or older. You must first exceed the elective deferral limit (<span id='IRC-limit-cc'>$19,000.00</span> in <span id='IRC-limit-year-cc'>2019</span>) to make catch-up contributions.
-  "
-  dontOpenOuterDiv=true
 %}
 </div>{% comment %}End of multi-input block Future contrib{% endcomment %}
 

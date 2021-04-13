@@ -34,7 +34,7 @@ function selectedGrowth(id, submit) {
 }
 // my functions
 function contributionsGood(submit) {
-  return ( catchupAmountGood(submit) & annualPayIncreasePercentGood(submit)
+  return ( annualPayIncreasePercentGood(submit)
     & annualPayPercentGood(submit) & annualPayFixedGood(submit) & contributionSelectorGood(submit)
     & payScheduleGood(submit) & annualPayGood(submit) & yearsToContributeGood(submit) );
 }
@@ -168,41 +168,56 @@ function clear_warning_icon() { $('#WarnOpContr').hide(); }
 function show_warning_icon() { $('#WarnOpContr').show(); }
 
 function setLimits() {
-  // in CC note
-  $('#catch-up-limit').html(CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'));
-  $('#catch-up-year').html(IRC_limit_year);
-  $('#IRC-limit-cc').html(CurrencyFormatted(IRC_contribution_limit, 'cent'));
-  $('#IRC-limit-year-cc').html(IRC_limit_year);
-
   // in warning
   $('#IRC-limit').html(CurrencyFormatted(IRC_contribution_limit, 'cent'));
+  $('#IRC-limit-cc').html(CurrencyFormatted(IRC_catchup_contribution_limit, 'cent'));
   $('#IRC-limit-year').html(IRC_limit_year);
   return true;
 }
+function showTestWarning(flag) {
+  if (flag) {
+    $('#contribution-exceeds-maximum').removeClass('hide');
+    return true;
+  }
+  $('#contribution-exceeds-maximum').addClass('hide');
+  return false;
+}
 function testWarning() {
-  if ($('#BP').prop('checked')) { return; }
-  if (getPosInteger('yearsToContribute', -1) <= 0) { return; }
+  if ($('#BP').prop('checked')) { return showTestWarning(false); }
+  if (getPosInteger('yearsToContribute', -1) <= 0) { return showTestWarning(false);; }
 
   var annualPay = getPosInteger('annualPay', -1);
-  if (catchupAmount > 0) { $('#catchupAmount').val(catchupAmount); }
-  if ((annualPay < 1) || (annualPay > 1000000)) { return; }
-
-  if ($("#annualPayPercent").val() == '') { return; }
-  var annualPayPercent = parseInt($("#annualPayPercent").val());
-  if ((annualPayPercent < 0) || (annualPayPercent > 99)) { return; }
-
+  if ((annualPay < 1) || (annualPay > 1000000)) { return showTestWarning(false); }
   // we have good input for the salary fields
-  var contrib = annualPay * (annualPayPercent / 100.0);
-  var maxpcontrib = (100.0 * IRC_contribution_limit) / annualPay;
+
+  var totalLimit = IRC_contribution_limit + IRC_catchup_contribution_limit;
+  var contrib = 0.0;
+  if (getContributionSelector() == 'contributionFixed') {
+    if ($("#annualPayFixed").val() == '') { return showTestWarning(false); }
+    var annualPayFixed = parseInt($("#annualPayFixed").val());
+    if (annualPayFixed <= 0) { return showTestWarning(false); }
+    $('#maximum-fixed-contribution-span').removeClass('hide');
+    $('#maximum-percent-contribution-span').addClass('hide');
+    contrib = annualPayFixed;
+  }
+  if (getContributionSelector() == 'contributionPercentage') {
+    if ($("#annualPayPercent").val() == '') { return showTestWarning(false); }
+    var annualPayPercent = parseInt($("#annualPayPercent").val());
+    if ((annualPayPercent < 0) || (annualPayPercent > 99)) { return showTestWarning(false); }
+    $('#maximum-fixed-contribution-span').addClass('hide');
+    $('#maximum-percent-contribution-span').removeClass('hide');
+    contrib = annualPay * (annualPayPercent / 100.0);
+  }
+  var maxpcontrib = (100.0 * totalLimit) / annualPay;
 
   $('#total-contribution').html(CurrencyFormatted(contrib, 'cent'));
   $('#maximum-percent-contribution').html(maxpcontrib.toFixed(2));
+  $('#maximum-fixed-contribution').html(CurrencyFormatted(totalLimit, 'cent'));
 
-  if ((contrib > IRC_contribution_limit) && (getContributionSelector() == 'contributionPercentage')) {
-    $('#contribution-exceeds-maximum').removeClass('hide');
-  } else {
-    $('#contribution-exceeds-maximum').addClass('hide');
-  }
+console.log({contrib}, {totalLimit}, {annualPay}, {annualPayPercent}, {annualPayFixed});
+  // if ((contrib > IRC_contribution_limit) && (getContributionSelector() == 'contributionPercentage')) {
+  if (contrib > totalLimit) { return showTestWarning(true); }
+  return showTestWarning(false);
 }
 
 function amountToUseGood(submit) {
@@ -329,7 +344,7 @@ function annualPayFixedGood(submit) {
     if (submit) {
       return showError('annualPayFixed', "Please enter the fixed amount of your annual pay you would like to save.");
     } else {
-      return clearError('annualPayFixed');      
+      return clearError('annualPayFixed');
     }
   }
   if ((annualPayFixed < 1) || (annualPayFixed > 1000000)) {
@@ -381,27 +396,6 @@ function annualPayIncreasePercentGood(submit) {
   $("#annualPayIncreasePercent").val((annualPayIncreasePercent).toFixed(2));
   $('#lblAYRannualPayIncreasePercent').html(annualPayIncreasePercent.toFixed(2)+'%');
   return clearError('annualPayIncreasePercent');
-}
-
-function catchupAmountGood(submit) {
-  var growthSelector = getGrowthSelector();
-  if ((growthSelector == 'balanceOnly') || (growthSelector == '')) { return clearError('catchupAmount'); }
-  if ($('#BP').prop('checked')) { return clearError('catchupAmount'); }
-
-  var catchupAmount = getPosInteger('catchupAmount', 0);
-  if (catchupAmount > 0) { $('#catchupAmount').val(catchupAmount); }
-
-  // if (catchupAmount <= 0) {
-  //   return showError('catchupAmount', "Enter your catch up amount.");
-  // }
-  // if ((catchupAmount < 1) || (catchupAmount > IRC_catchup_contribution_limit)) {
-  if (catchupAmount > IRC_catchup_contribution_limit) {
-    return showError('catchupAmount', "Catch-up contributions cannot exceed "
-      + CurrencyFormatted(IRC_catchup_contribution_limit) + " for " + IRC_limit_year + ".");
-  }
-
-  $('#lblAYRcatchupAmount').html(CurrencyFormatted(catchupAmount));
-  return clearError('catchupAmount');
 }
 
 // test relation to each other

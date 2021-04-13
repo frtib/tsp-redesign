@@ -294,7 +294,6 @@ function calculateResults() {
   var annualPayIncreasePercent = getPosFloat('annualPayIncreasePercent', 0.0);
   var yearsToGo = getPosInteger('yearsToGo', 0);
   var yearsServed = getPosInteger('yearsServed', 0);
-  var catchupAmount = getPosInteger('catchupAmount', 0);
   var rateOfReturn = getPosFloat('rateOfReturn', 0.0);
 
   var growthSelector = getGrowthSelector();
@@ -302,7 +301,7 @@ function calculateResults() {
   if (growthSelector == 'futureOnly') { amountToUse = 0; }
   if (growthSelector == 'balanceOnly') { yearsToContribute = 0; }
   // console.log(growthSelector);
-  // console.log(amountToUse,yearsToContribute,matchDelay,DIEMSdate,DIEMSdate2,annualPay,paySchedule,annualPayPercent,annualPayIncreasePercent,yearsToGo,yearsServed,catchupAmount,rateOfReturn);
+  // console.log(amountToUse,yearsToContribute,matchDelay,DIEMSdate,DIEMSdate2,annualPay,paySchedule,annualPayPercent,annualPayIncreasePercent,yearsToGo,yearsServed,rateOfReturn);
 
   // loop control
   var periodLength = get_pay_freq(paySchedule);
@@ -325,11 +324,7 @@ function calculateResults() {
   // annualPayRate = annualPayRate / periodLength;
   var annualPayAmt = 0.0;
   var annualPayIncreaseRate = (annualPayIncreasePercent) / 100.0 + 1.00;
-  // deal with rounding of catchup
-  var catchupPaycheck = parseInt(catchupAmount / periodLength * 100.0) / 100.0;
-  var catchupCatchup = parseInt(100 * parseFloat(catchupAmount - parseFloat(catchupPaycheck) * periodLength).toFixed(2));
 
-  // alert(catchupPaycheck + '  ' + catchupCatchup);
   accountBalance[year] = amountToUse;
   accountGrowth[year] = 0.0;
   contributions[year] = 0.0;
@@ -349,7 +344,7 @@ function calculateResults() {
       if (year <= yearsToContribute) {
         // console.log('1', yearsServed, year, period, yearsToContribute);
         if (rs == 'USBRS') {
-          // console.log('2', year, period, annualPayRate, salary[year]*annualPayRate, parseFloat(salary[year] * USBRSmatch(year+yearsServed, period, annualPayRate).toFixed(2)), catchupPaycheck);
+          // console.log('2', year, period, annualPayRate, salary[year]*annualPayRate, parseFloat(salary[year] * USBRSmatch(year+yearsServed, period, annualPayRate).toFixed(2)));
           annualPayAmt = parseFloat((salary[year] * USBRSmatch(year+yearsServed+matchDelay, period, annualPayRate)).toFixed(2));
         } else {
           if (contributionSelector == 'contributionFixed') {
@@ -358,9 +353,8 @@ function calculateResults() {
             annualPayAmt = parseFloat((salary[year] * annualPayRate).toFixed(2));
           }
         }
-        // console.log('contrib is ' + annualPayAmt + ' and ' + parseFloat(catchupPaycheck));
-        contributions[year] += annualPayAmt + parseFloat(catchupPaycheck);
-        if (period <= catchupCatchup) { contributions[year] += 0.01; }
+        // console.log('contrib is ' + annualPayAmt );
+        contributions[year] += annualPayAmt;
       }
     }
     accountGrowth[year] += parseFloat(((accountBalance[year-1] + accountGrowth[year-1]) * (rateOfReturn / 100.0)).toFixed(2));
