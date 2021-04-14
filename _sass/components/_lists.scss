@@ -32,6 +32,15 @@ span {
   }
 }
 
+ol li,
+ul li {
+  &.marker-bold {
+    &::marker {
+      font-weight: bold;
+    }
+  }
+}
+
 // Background image list
 ul.check, ul.cross, ul.alert {
   list-style-type: none;
