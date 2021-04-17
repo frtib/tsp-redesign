@@ -3,7 +3,7 @@
 ul.usa-accordion {
   &.rbco {
     .usa-accordion-content {
-      padding: 2.5rem 0 0;
+      // padding: 2.5rem 0 0;
     }
   }
 }
@@ -31,7 +31,47 @@ section {
         }
       }
     }
+    // 8. SUMMARY - Adjust your results
+    #adjust-results {
 
+      .usa-grid {
+        &.caption {
+          // border: 1px solid red;
+          font-weight: $bold;
+          margin-bottom: 1.2rem;
+          padding-top: 3rem;
+
+          a {
+            margin-left: 2rem;
+            font-weight: $normal;
+          }
+        }
+
+        &.results {
+          align-items: flex-start;
+          background-color: #fff;
+
+          .usa-width-one-half {
+            padding: 1rem 0 2rem;
+            &:first-child {
+              padding-left: 1.5rem;
+            }
+          }
+
+          .usa-width-one-whole {
+            ol {
+              margin-top: 1rem;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+    // General sibling selector (~) Selects every .usa-grid.caption element that are preceded by a .usa-grid.results element
+    .usa-grid.results ~ .usa-grid.caption {
+      border-top: 1px dotted $color-gray-light;
+    }
+    // END 8. SUMMARY - Adjust your results
     .usa-button-secondary,
     button {
       &.delete {
