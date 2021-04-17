@@ -167,6 +167,17 @@ function setAccountPanelPlaceholders(prefix) {
   setPlaceholder('#'+prefix+"BPAacctNum", 13);
 }
 
+function myInitBeforeUnload() {
+  $(window).on('beforeunload', function() {
+    //console.log( "beforeunload: currentPage=" + currentPage );
+    return "You may lose data if you leave this page.";
+  });
+} // end initBeforeUnload
+function myCancelBeforeUnload() {
+  $(window).off('beforeunload');
+  return true;
+} // end cancelBeforeUnload
+
 $(document).ready(function() {
   setMaxPanels({{ maxPanels }});
   showPanel(1);

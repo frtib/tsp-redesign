@@ -60,7 +60,7 @@ Review the input below. Click “Change” to alter your selections. Click the �
 
 
 {% capture bonusButton2 %}
-<li><button id="generatePDF" class="usa-button primary" markdown="1">Generate PDF</button></li>
+<li><button id="generatePDF" class="usa-button primary" onClick="myGeneratePDFsubmit();" markdown="1">Generate PDF</button></li>
 {% endcapture %}
 {% include calculator/button-block.html panelID=panelID prev=7 print=1  bonusButton2=bonusButton2 %}
 

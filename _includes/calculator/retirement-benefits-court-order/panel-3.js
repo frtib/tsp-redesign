@@ -114,7 +114,7 @@ function getAcctNumber(role, BPA, redact, paren) {
   return acct;
 }
 function accountNumbersGood(submit, prefix) {
-console.log('accountNumbersGood(', {submit}, {prefix},')');
+  // console.log('accountNumbersGood(', {submit}, {prefix},')');
   if (prefix == 'part') { testPrimeSettingsPart(); } else { testPrimeSettingsPay(); }
   var civCB = isCivilian(prefix);
   var usvCB = isUniformed(prefix);

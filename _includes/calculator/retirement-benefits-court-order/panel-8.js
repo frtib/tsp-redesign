@@ -14,6 +14,7 @@ panelEnter[{{ panelID }}] = function(panel) {
     return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+    myInitBeforeUnload();
     return true;
 }
 
@@ -663,6 +664,15 @@ function hideUnchoosenOptions() {
     if ($('#resultSetOther').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
     if ($('#resultSetSpouse').prop('checked')) { $('#resultSetOverview').prop('checked', true)}
   }
+}
+
+function myGeneratePDFsubmit() {
+  myCancelBeforeUnload();
+  // $('#generatePDFform').attr('action', 'https://secure.tsp.gov/components/CORS/courtOrder/courtOrder.html');
+  $('#generatePDFform').submit();
+  setTimeout(function(){myInitBeforeUnload();}, 5000);
+  // myInitBeforeUnload();
+  return false;
 }
 -->
 </script>

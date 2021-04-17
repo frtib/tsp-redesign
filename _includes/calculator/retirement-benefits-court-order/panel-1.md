@@ -13,7 +13,7 @@ The Thrift Savings Plan (TSP) is a defined contribution retirement savings and i
 
 The online wizard cannot be used to draft an RBCO awarding funds to a child or dependent.
 
-Certain TSP account information is available to spouses (and their attorneys) to assist in developing an RBCO. To request this information, please use the [_Request for Participant Account Information_]({{ site.baseurl }}/forms/tsp-92d.pdf).
+Certain TSP account information is available to spouses (and their attorneys) to assist in developing an RBCO. To request this information, please use the [_Request for Participant Account Information_]({{ site.baseurl }}/forms/tsp-92d.pdf){:target="\_blank"}.
 
 Do not use this online court order wizard if you are drafting a court order related to Federal Employees' Retirement System (FERS) or Civilian Service Retirement System (CSRS) annuity benefits. Court orders related to the FERS and CSRS annuity programs, which are administered by the Office of Personnel Management (OPM), should be submitted to the Court Ordered Benefits branch of OPM at the following address: U.S. Office of Personnel Management, Court Ordered Benefits Branch, P.O. Box 17, Washington, DC 20044.
 
@@ -26,12 +26,15 @@ Before getting started, you should gather the following necessary information:
 - Account details (e.g., balance, outstanding loan amounts, etc.) needed to calculate the award amount
 - Necessary court information (e.g., case number, judge's name, etc.)
 
-For more information, please read the TSP publication [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+For more information, please read the TSP publication [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf){:target="\_blank"}.
 
 <!-- THE 'capture bonusButton3' block doesn't seem to do anything. Can we delete? -->
-{% capture bonusButton3 %}
+{% capture bonusButton3a %}
 <button type="button" class="usa-button-secondary usa-button-big" onclick="window.location.href='{{ site.baseurl }}/forms/tsp-92.pdf';" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
 {% endcapture %}
-{% include calculator/button-block.html panelID=panelID getStarted=2 buttonStack=1 bonusButton3=bonusButton3 %}
+{% capture bonusButton3b %}
+<button type="button" class="usa-button-secondary usa-button-big" onclick="window.open('{{ site.baseurl }}/forms/tsp-92.pdf', '_blank');" markdown="1">No thanks, just download Form TSP-92, _TSP Retirement Benefits Court Order Division Package_.</button>
+{% endcapture %}
+{% include calculator/button-block.html panelID=panelID getStarted=2 buttonStack=1 bonusButton3=bonusButton3b %}
 
 </section> <!-- end div#panel -->
