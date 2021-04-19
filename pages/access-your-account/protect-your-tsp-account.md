@@ -20,14 +20,13 @@ If you’re concerned that your personal information or TSP account has been com
 ## 3 actions to take now to prevent fraud
 ### 1. Validate your contact information and confirm that the mailing address on your account is correct.
 
-Go to My Account: Profile Settings to review and update your validated phone and email. You must add and validate a phone number and use two-step authentication to access your TSP account.
+Go to My Account: [Profile Settings]({{ site.profile_settings }}) to review and update your validated phone and email.
 {% comment %}
 // For the earlier March update, this will still read: “You must add and validate a phone number and use two-step authentication to access your TSP account.”
 // For the 4/17 update, the language will read as it appears in the document.
-
+{% endcomment %}
 - **If you have a civilian TSP account,** you must validate your phone number in order to use two-step authentication and log in securely to My Account.
 - **If you have a uniformed services TSP account,** we recommend that you validate a phone number as your primary verification method and use email as backup.
-{% endcomment %}
 
 You can also confirm the mailing address on your account in My Account: [Profile Settings]({{ site.profile_settings }}). Make sure to [update your mailing address]({{ site.baseurl }}/access-your-account/update-your-mailing-address/) if you need to.
 
