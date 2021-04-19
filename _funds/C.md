@@ -35,7 +35,7 @@ summary_details:
     net_expense:    .049
     investment_expense:  .002
     benchmark_index: S&P 500 Index  | spglobal.com
-    asset_manager: BlackRock Institutional Trust <br />Company, N.A.
+    asset_manager: <span>BlackRock Institutional Trust <br />Company, N.A.</span><span>State Street Global Advisors Trust Company (effective 4/19/2021)</span>
 composition_update: December 31, 2020
 composition:
   - [Information Technology, 27.6]
@@ -76,7 +76,7 @@ additional_info: |
 
   The S&P 500 Index is an index of 500 large to medium-sized U.S. companies that are traded in the U.S. stock markets. The index was designed by Standard & Poor’s Corporation (S&P) to provide a representative measure of U.S. stock markets’ performance. The companies in the index represent 157 industries classified into the 11 major sector groups shown in the chart. The stocks in the S&P 500 Index represent approximately 82% of the market value of the U.S. stock markets.
 
-  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">C Fund</span> to BlackRock Institutional Trust Company, N.A. The <span class="nobr">C Fund</span> holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">C Fund</span> is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
+  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">C Fund</span> to BlackRock Institutional Trust Company, N.A., and State Street Global Advisors Trust Company. The <span class="nobr">C Fund</span> holds all the stocks included in the S&P 500 Index in virtually the same weights that they have in the index. The performance of the <span class="nobr">C Fund</span> is evaluated on the basis of how closely its returns match those of the S&P 500 Index.
 risks: |
   Your investment in the <span class="nobr">C Fund</span> is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
