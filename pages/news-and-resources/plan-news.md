@@ -6,6 +6,8 @@ styles:
 scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/forms.js
+# calculator.js required for doc-ready getSecureAlerts
+  - /assets/js/calculator/calculator.js
   - /assets/js/plan-news.js
   - /assets/js/ajax-usa-search-gov.js
 permalink: /news-and-resources/plan-news/
@@ -21,9 +23,6 @@ redirect_from:
 ---
 
 # Plan news
-{:#plan-news}
-
-{% include next-outage.html %}
 
 <div id="secure-alerts"></div>
 
