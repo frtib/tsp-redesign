@@ -15,7 +15,7 @@ document-ready:
   - // getAnnuityRate();
   - getLoanAndAnnuityRate();
 # To test outage messages, change 'today' to a specific date.
-# getSecureAlerts('ID of container div', 'YYYYMMDD')
+# getSecureAlerts('ID of container div', 'YYYYMMDD' or 'today')
   - getSecureAlerts('secure-alerts', 'today');
 redirect_from:
   - /whatsnew/
@@ -23,8 +23,6 @@ redirect_from:
 ---
 
 # News and resources
-
-{% include next-outage.html %}
 
 <div id="secure-alerts"></div>
 
