@@ -92,6 +92,17 @@ section#fund-tabs {
       padding: 1rem 0;
     }
   }
+
+  .fund-summary-details {
+    p > span {
+      display: block;
+      margin-bottom: .3em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 #no_data_yet_message {
