@@ -10,8 +10,8 @@ Fund_type: Individual
 Fund_name: G Fund
 Fund_order: 1
 Fund_subtitle: Government Securities Investment Fund
-Fund_objective: The G Fund's investment objective is to produce a rate of return that is higher than inflation while avoiding exposure to credit (default) risk and market price fluctuations.
-Fund_objective_short: Produce a rate of return higher than inflation while avoiding exposure to credit (default) risk.
+Fund_objective: The G Fund’s investment objective is to ensure preservation of capital and generate returns above those of short-term U.S. Treasury securities.
+Fund_objective_short: Ensure preservation of capital and generate returns above those of short-term U.S. Treasury securities.
 questions:
   - question: Why should I invest in the G Fund?
     answer: The payment of G Fund principal and interest is guaranteed by the U.S. Government. This means that the U.S. Government will always make the required payments.
