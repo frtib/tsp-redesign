@@ -12,6 +12,11 @@ panelGood[{{ panelID }}] = function(forceValue) {
 };
 panelSure[{{ panelID }}] = function(forceValue) {
   var role = 'part';
+  var writein = addressGood(0, forceValue, role);
+  if (!writein) {
+    // leaving with gold inputs
+    showWarningModal(0, 1, 0);
+  }
   return accountNumbersGood(forceValue, role) & addressGood(0, forceValue, role);
 };
 
@@ -23,6 +28,41 @@ panelExit[{{ panelID }}] = function(panel) {
   panelGood[{{panelID}}](0);
   testPrimeSettingsPart();
   return true;
+}
+
+var showSSNwarning = true;
+var showAddressWarning = true;
+var showCourtWarning = true;
+function showWarningModal(ssn, address, court) {
+  console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning});
+  var rc = false;
+  if (ssn && showSSNwarning) {
+    $('#writeinSSN').removeClass('hide');
+    showSSNwarning = false;
+    rc = true;
+  } else {
+    $('#writeinSSN').addClass('hide');
+  }
+  if (address && showAddressWarning) {
+    $('#writeinAddress').removeClass('hide');
+    showAddressWarning = false;
+    rc = true;
+  } else {
+    $('#writeinAddress').addClass('hide');
+  }
+  if (court && showCourtWarning) {
+    $('#writeinCourt').removeClass('hide');
+    showCourtWarning = false;
+    rc = true;
+  } else {
+    $('#writeinCourt').addClass('hide');
+  }
+  console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning}, {rc});
+  if (rc) {
+    $('#write-in').modal('show');
+    return true;
+  }
+  return false;
 }
 
 var cachePart = [];

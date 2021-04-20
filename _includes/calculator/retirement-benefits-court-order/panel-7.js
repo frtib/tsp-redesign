@@ -878,10 +878,14 @@ function awardTextGood(id) {
 function disableBuildAnotherButton() { $('#buildAnotherButton').prop('disabled',true); }
 function enableBuildAnotherButton() { $('#buildAnotherButton').prop('disabled',false); }
 function disableDeleteButton1() {
+  $('#1deleteButtonDiv').addClass('hide');
+  $('#1deleteButton').addClass('hide');
   $('#1deleteButtonDiv').addClass('disabled');
   $('#1deleteButton').prop('disabled',true);
 }
 function enableDeleteButton1() {
+  $('#1deleteButtonDiv').removeClass('hide');
+  $('#1deleteButton').removeClass('hide');
   $('#1deleteButtonDiv').removeClass('disabled');
   $('#1deleteButton').prop('disabled',false);
 }
@@ -923,6 +927,7 @@ function activateAwardDiv(id) {
   return true;
 }
 function deactivateAwardDiv(id, start) {
+  if (id <= 2) { disableDeleteButton1(); }
   enableBuildAnotherButton();
   clearError('awards');
   $('#' + id + 'awardActive').val(0);
@@ -994,7 +999,7 @@ function setAwardBad(id) {
 }
 
 function removeConfirm(id) {
-   return confirm('Are you sure you want to delete Award ' + id + '?');
+   return confirm('Are you sure you want to delete Award ' + id + '?' + '  This cannot be undone.');
 }
 
 function removeAward(id, force, start) {

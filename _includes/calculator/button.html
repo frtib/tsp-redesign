@@ -4,10 +4,11 @@
 {% assign onClick = 'onClick="' | append:include.onClick | append: '"' | default: '' %}
 {% assign xtraClass1 = include.xtraClass1 | default: '' %}
 {% assign xtraClass2 = include.xtraClass2 | default: '' %}
+{% assign xtraAttr = include.xtraAttr | default: '' %}
 {% if include.href %} {% assign href = 'href="' | append:include.href | append: '"' %} {% endif %}
 {% assign inList = include.inList | default: 0 %}
 {% assign buttonClass = include.buttonClass | default: "usa-button" %}
 
 {% if inList != 0 %}<li>{% endif %}
-<button class="{{buttonClass}} {{ xtraClass1 }}" {{ href }} {{ title }} {{ onClick }}>{{ text }}</button>
+<button class="{{buttonClass}} {{ xtraClass1 }}" {{xtraAttr}} {{href}} {{title}} {{onClick}}>{{ text }}</button>
 {% if inList != 0 %}</li>{% endif %}

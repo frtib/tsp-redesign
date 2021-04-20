@@ -124,7 +124,7 @@ function allowContinue(flag, panel) {
   } else {
     $('#continue'+panel+'OK').hide();
     $('#submit'+panel+'OK').hide();
-    $('#continue'+panel+'NotOK').show();
+    // $('#continue'+panel+'NotOK').show();
     $('#submit'+panel+'NotOK').show();
   }
 }

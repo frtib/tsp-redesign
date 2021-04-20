@@ -1,0 +1,14 @@
+{% comment %}
+This creates one double column AYR div row.
+{% endcomment %}
+{% assign prompt = include.prompt | default: 'Caption' %}
+{% assign rowID = include.rowID | default: 'cellname' %}
+{% assign named = include.named | default: false %}
+{% if named %}
+<div class="usa-grid results" id="{{rowID}}-row">
+{% else %}
+<div class="usa-grid results">
+{% endif %}
+  <div class="usa-width-one-half">{{prompt}}</div>
+  <div class="usa-width-one-half" id="{{rowID}}">xxx {{ rowID }}</div>
+</div>

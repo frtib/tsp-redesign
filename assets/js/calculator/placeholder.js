@@ -31,7 +31,7 @@ function setPlaceholder(input, width) {
                 }
                 var placeholder = x + val.slice(-4);
                 placeholder = placeholder.slice(-width);
-                $(input).attr('placeholder', placeholder);
+                $(input).attr('myPlaceholder', placeholder);
                 // $(input).css('color','#BBBCBF');
                 // $(input).val('');
                 $(input).val(placeholder);
@@ -49,7 +49,7 @@ function setAccountPlaceholder(input) {
                 }
                 var placeholder = x + val.slice(-4);
                 placeholder = placeholder.slice(-13);
-                $(input).attr('placeholder', placeholder);
+                $(input).attr('myPlaceholder', placeholder);
                 // $(input).css('color','#BBBCBF');
                 // $(input).val('');
                 $(input).val(placeholder);
@@ -61,7 +61,7 @@ function accountNumberTSP(id) {
                 // var input = $(this);
                 var input = $(jQid);
                 var store = $(jQid).attr('data-store').toString();
-                // $(jQid).attr('placeholder', "");
+                // $(jQid).attr('myPlaceholder', "");
                 $(jQid).css('color','#444444');
                 $(jQid).val(store);
   });
@@ -97,7 +97,7 @@ function setSSNplaceholder(input) {
                 }
                 var placeholder = x + val.slice(-4);
                 placeholder = placeholder.slice(-9);
-                input.attr('placeholder', placeholder);
+                input.attr('myPlaceholder', placeholder);
                 // input.css('color','#BBBCBF');
                 // input.val('');
                 input.val(placeholder);

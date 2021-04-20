@@ -41,7 +41,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
         <div id="{{prefix}}acctNum-div" class="hide">
           <label class="" id="{{prefix}}acctNum-label" for="{{prefix}}acctNum">Civilian and Uniformed Services account number</label>
           <span class="" id="{{prefix}}acctNum-error-message" role="alert"></span>
-          <input id="{{prefix}}acctNum" name="{{prefix}}acctNum" class="format-left" value="" data-store="" placeholder=""
+          <input id="{{prefix}}acctNum" name="{{prefix}}acctNum" class="format-left" value="" data-store="" myPlaceholder=""
             aria-labelledby="{{prefix}}acctNum-label" type="text"
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
@@ -51,7 +51,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
         <div id="{{prefix}}BPAacctNum-div" class="hide">
           <label class="" id="{{prefix}}BPAacctNum-label" for="{{prefix}}BPAacctNum">Beneficiary Participant account number</label>
           <span class="" id="{{prefix}}BPAacctNum-error-message" role="alert"></span>
-          <input id="{{prefix}}BPAacctNum" name="{{prefix}}BPAacctNum" class="format-left" value="" data-store="" placeholder=""
+          <input id="{{prefix}}BPAacctNum" name="{{prefix}}BPAacctNum" class="format-left" value="" data-store="" myPlaceholder=""
             aria-labelledby="{{prefix}}BPAacctNum-label" type="text"
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">

@@ -23,7 +23,7 @@ function setValues(flag) {
     setValues(2);
     $('#payeePartYes').click();
     $('#relationshipSpouse').click();
-    $('#receiveBoth').click();
+    $('#receiveOne').click();
     $('#partfullname').val('Sherlock Holmes');
     $('#payfullname').val('Joan Watson');
 
@@ -187,6 +187,9 @@ $(document).ready(function() {
   setAccountPanelPlaceholders('pay');
   accountNumberTSP("paySSN");
   setPlaceholder("#paySSN", 9);
+
+  // $('a[href$="write-in"]').not('.form').attr('data-toggle', 'modal').attr('data-target', '#write-in');
 });
+
 -->
 </script>

@@ -18,6 +18,13 @@ panelSure[{{ panelID }}] = function(forceValue) {
   var acctFlag = true;
   if ((getPayeePart() == 'Yes') && (getReceive() == 'Both')) { acctFlag = accountNumbersGood(forceValue, role); }
   // console.log(' panel sure ', acctFlag , addressGood(0, forceValue, role) , SSNGood(0, forceValue, role));
+  var writein = addressGood(0, forceValue, role);
+  var ssn = SSNGood(0, forceValue, role);
+  if ((!ssn) || (!writein)) {
+    // leaving with gold inputs
+    showWarningModal(!ssn, !writein, 0);
+  }
+
   return acctFlag & addressGood(0, forceValue, role) & SSNGood(0, forceValue, role);
 };
 
@@ -98,7 +105,7 @@ function SSNGood(submit, writein, prefix) {
     if (submit) { return showError(prefix+'SSN', 'Social security number must be 9 characters long.'); }
   }
   // $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('data-store'));
-  $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('placeholder'));
+  $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('myPlaceholder'));
   // $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').val());
 
   clearWriteIn(prefix+'SSN');

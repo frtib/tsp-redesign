@@ -7,12 +7,15 @@ Awards panel (7) for RBCO.
 {% assign maxAwards = 6 %}
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
 
+{% capture redact_explanation %}
+Most court files may be viewed by the public. Some jurisdictions require that certain personal information be protected from public disclosure. This can be done by redacting, either fully or partially, the personal information in the court order and providing the information in Form TSP-92C, <i>TSP Personal Information Form</i>.
+{% endcapture %}
 {% include calculator/div-panel-form-field.html
   fieldID="panel-2.3" id="showAccountNumbers"  H2="Award builder" anchor="awards"
   inputType="selectList" inputClass="" radioIDs="F,P,A"
   radioLabels="Fully redact all personal information,Partially redact all personal information,Allow all personal information"
   onBlur="buildStrings(0);" prompt="Please select one of the following based on the rules of your jurisdiction:"
-  explanation=pay_schedule_explanation
+  explanation=redact_explanation
 %}
 
 {% for awardNum in (1..maxAwards) %}

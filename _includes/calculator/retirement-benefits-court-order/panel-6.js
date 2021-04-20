@@ -20,6 +20,13 @@ panelExit[{{ panelID }}] = function(panel) {
     return true;
 }
 panelSure[{{ panelID }}] = function(forceValue) {
+  var courtGood = courtNameGood(0, forceValue, '') & jurisdictionGood(0, forceValue, '')
+      & caseNumberGood(0, forceValue, '') & judgeNameGood(0, forceValue, '');
+  if (!courtGood) {
+    // leaving with gold inputs
+    showWarningModal(0, 0, !courtGood);
+  }
+
   return petitionerGood(forceValue) & courtNameGood(0, forceValue, '')
       & jurisdictionGood(0, forceValue, '') & caseNumberGood(0, forceValue, '')
       & judgeNameGood(0, forceValue, '');

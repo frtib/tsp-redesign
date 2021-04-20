@@ -13,7 +13,7 @@ Party 2 panel (4) for RBCO.
     <div id="paySSN-div">
       <label class="" id="paySSN-label" for="paySSN">Social Security or Tax Identification Number:</label>
       <span class="" id="paySSN-error-message" role="alert"></span>
-      <input id="paySSN" name="paySSN" class="format-left" value="" data-store="" placeholder=""
+      <input id="paySSN" name="paySSN" class="format-left" value="" data-store="" myPlaceholder=""
         aria-labelledby="paySSN-label" type="text"  xdisabled xpattern="\d*"
         onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
         onblur="SSNGood(0, 1, 'pay');" onchange="SSNGood(0, 1, 'pay');" maxlength="9">
