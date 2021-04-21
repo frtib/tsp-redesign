@@ -9,7 +9,7 @@ HTML block for one faq item accordion.
 {% assign entryHTML = entry.permalink %}
 {% assign contentDivClass = include.contentDivClass | default: "" %}
 {% if addBlockName != 0 %}<div id="{{announcement_name}}-block" class="announcement-search-block">{% endif %}
-<a name="{{announcement_name}}"></a>
+{% comment %}<a name="{{announcement_name}}"></a>{% endcomment %}
 {% if showHeader != 0 %}
 <div class="flex header-line" markdown="1">
 ## {{announcement_posted | date: '%B %Y'}} news and announcements
