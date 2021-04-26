@@ -27,7 +27,7 @@ redirect_from:
 ![alt text]({{ site.baseurl }}/assets/img/icons/shield.svg)
 
 ### Secure message center
-For account-specific inquiries, log in to My Account, click **Message Center**, and go to the **Messages** tab. We will respond within 24 business hours.
+For account-specific inquiries, log in to [My Account]({{ site.myaccount }}){:target="\_blank"}, click **Message Center**, and go to the **Messages** tab. We will respond within two business days.
 
 <div class="usa-alert usa-alert-info">
   <div class="usa-alert-body">
