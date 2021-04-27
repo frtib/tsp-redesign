@@ -8,8 +8,9 @@ function getRetiredRatesOfReturn(chart) {
 }
 
 function getRatesOfReturn(chart) {
-  var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
-  funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
+  var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
+  funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
+  // funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
   var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, true, true);
@@ -51,7 +52,10 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
 }
 
 function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart) {
+  // console.log('buildSideScrollTableRoR', {chartName}, {data}, {doAnnualChart}, {doMonthlyChart});
   var default_RoR_open_row_line = '2021'; // which year row to open on page load
+  // default_RoR_open_row_line = new Date().getUTCFullYear();
+  var separatorTopMarked = false;  // switches to true when 'separator' row is determined
   var i, j, colClass, row;
   var lines = data.split("\n");
   // prep header row
@@ -90,10 +94,23 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     lineType = col.shift();
     val = '';
     if (lineType == 'y12') { YTD = "Last 12 months"; }
+    if (lineType == 'y36') { YTD = "Last 36 months"; }
+    if (lineType == 'y60') { YTD = "Last 60 months"; }
+    if (lineType == 'y120') { YTD = "Last 120 months"; }
+    if (lineType == 'y12a') { YTD = "Annualized 1 year"; }
+    if (lineType == 'y36a') { YTD = "Annualized 3 years"; }
+    if (lineType == 'y60a') { YTD = "Annualized 5 years"; }
+    if (lineType == 'y120a') { YTD = "Annualized 10 years"; }
 
     if (lineType != lastLineType) {
       if (tmpRows != '') {
         var xClass = 'annual-returns';
+        if (separatorTopMarked == false) {
+          if ((lastLineType == 'y') || (lastLineType == 'y12') || (lastLineType == 'y36') || (lastLineType == 'y60') || (lastLineType == 'y120')) {
+            xClass = 'annual-returns separator-top';
+            separatorTopMarked = true;  // only mark start once
+          }
+        }
         if (lastLineType == 'm') {
           xClass = 'monthly-returns hide';
           val = 'year_'+yearName+'_months';
@@ -112,7 +129,8 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
       col[0] = Date.UTC(col[0].substr(0, 4), col[0].substr(4, 2)-1);
       monthlyData.unshift(col.join(","));
     }
-    if (lineType == 'y12') {
+    if ((lineType == 'y12') || (lineType == 'y36') || (lineType == 'y60') || (lineType == 'y120') ||
+        (lineType == 'y12a') || (lineType == 'y36a') || (lineType == 'y60a') || (lineType == 'y120a')) {
       val = YTD;
       YTD = ' YTD';
     }
