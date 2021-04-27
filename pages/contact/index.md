@@ -27,7 +27,7 @@ redirect_from:
 ![alt text]({{ site.baseurl }}/assets/img/icons/shield.svg)
 
 ### Secure message center
-For account-specific inquiries, log in to [My Account]({{ site.myaccount }}){:target="\_blank"}, click **Message Center**, and go to the **Messages** tab. We will respond within two business days.
+For account-specific inquiries, log in to [My Account]({{ site.myaccount }}){:target="\_blank"}, select **Message Center**, and go to the **Messages** tab. We will respond within two business days.
 
 <div class="usa-alert usa-alert-info">
   <div class="usa-alert-body">
@@ -45,9 +45,11 @@ For account-specific inquiries, log in to [My Account]({{ site.myaccount }}){:ta
 
 ![alt text]({{ site.baseurl }}/assets/img/icons/mail.svg)
 ### General mailing address
-Thrift Savings Plan   
- P.O. Box 385021    
+<p>
+Thrift Savings Plan<br />
+ P.O. Box 385021 <br />
 Birmingham, AL 35238
+</p>
 
 ### General fax number
 1-866-817-5023
