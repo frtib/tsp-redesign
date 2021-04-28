@@ -1,39 +1,41 @@
-<div class="modal fade" id="write-in" role="dialog">
-  <div class="modal-dialog">
+<section class="bootstrap-modals-forms">
+  <div class="modal fade" id="write-in" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Missing information</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Missing information</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div id="writeinSSN">
+            <p><strong>Please provide a Social Security Number</strong></p>
+            Before submitting the court order to the TSP, you must provide the payee's SSN.
+            If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.
+          </div>
+          <div id="writeinAddress">
+            <p><strong>Please provide an address</strong></p>
+            Before submitting the court order to the TSP, you must provide a current mailing address.
+            If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.
+          </div>
+          <div id="writeinCourt">
+            <p><strong>Please provide the case information</strong></p>
+            <p>You can continue using this wizard even if you don't know the case information, but this information is required by the TSP.</p>
+
+            <p>If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.</p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default usa-button" data-dismiss="modal">Close</button>
+        </div>
       </div>
 
-      <div class="modal-body">
-        <div id="writeinSSN">
-          <h4 class="modal-title">Please provide a Social Security Number</h4>
-          Before submitting the court order to the TSP, you must provide the payee's SSN.
-          If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
-          Failure to provide this information with your submission may delay processing of the order.
-        </div>
-        <div id="writeinAddress">
-          <h4 class="modal-title">Please provide an address</h4>
-          Before submitting the court order to the TSP, you must provide a current mailing address.
-          If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
-          Failure to provide this information with your submission may delay processing of the order.
-        </div>
-        // DONALD:  new text.  dont let users see dav text!
-        <div id="writeinCourt">
-          <h4 class="modal-title">Please provide the court detail</h4>
-          Before submitting the court order to the TSP, you must provide the court details.
-          If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
-          Failure to provide this information with your submission may delay processing of the order.
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default usa-button" data-dismiss="modal">Close</button>
-      </div>
     </div>
-
   </div>
-</div>
+</section>

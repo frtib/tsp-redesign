@@ -22,6 +22,7 @@ section.bootstrap-image-modal {
       opacity: 0;
       transition: 0.3s ease;
       background-color: transparent;
+
       &:before {
         font-family: $font-awesome;
         content: "\f00e";
@@ -45,12 +46,15 @@ section.bootstrap-image-modal {
         opacity: 0.7;
       }
     }
+
     figure {
       margin: 0.75rem;
     }
+
     figcaption {
       color: $color-gray-light;
       padding: 0;
+
       span {
         &:before {
           font-family: $font-awesome;
@@ -59,7 +63,8 @@ section.bootstrap-image-modal {
         }
       }
     }
-  } // end .thumbnail-container
+  }
+  // end .thumbnail-container
 
   #myImg {
     border-radius: 5px;
@@ -209,7 +214,9 @@ section.bootstrap-modals-forms {
     }
   }
 
-  .modal-title {
+  .modal-title,
+  .modal-body h5
+   {
     margin: 0;
     font-family: $sans;
     font-size: 2rem;
@@ -217,6 +224,10 @@ section.bootstrap-modals-forms {
   }
 
   .modal-body {
+    h5 {
+      font-size: 1.85rem;
+    }
+
     ul {
       &.decision {
         padding: 1rem 0;
