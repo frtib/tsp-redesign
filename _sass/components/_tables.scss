@@ -264,6 +264,12 @@ section {
             content: "\f056";
           }
         }
+
+        &.separator-top {
+          th, td {
+            border-top: 2px solid #ddd;
+          }
+        }
       }
       // end .annual-returns
     }
