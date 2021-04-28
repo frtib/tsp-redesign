@@ -33,7 +33,6 @@ section {
     }
     // 8. SUMMARY - Adjust your results
     #adjust-results {
-
       .usa-grid {
         &.caption {
           // border: 1px solid red;
@@ -53,6 +52,7 @@ section {
 
           .usa-width-one-half {
             padding: 1rem 0 2rem;
+
             &:first-child {
               padding-left: 1.5rem;
             }
@@ -63,6 +63,10 @@ section {
               margin-top: 1rem;
               margin-bottom: 2rem;
             }
+          }
+
+          &.hide {
+            display: none;
           }
         }
       }
@@ -99,58 +103,79 @@ section {
         margin-top: 2rem;
 
         li {
+
           .usa-accordion-button {
-            background-color: #dce4ef;
+            background-color: $color-gray-cool-light;
+
+            &[aria-expanded="true"] + .usa-accordion-content {
+                border-bottom: none;
+              }
+            &[aria-expanded="false"] + .usa-accordion-content {
+                border-bottom: 3px solid $color-gray-cool-light;
+                padding-bottom: 3rem;
+              }
           }
 
           .usa-accordion-content {
             background-color: #ffffff;
-            border-bottom: 3px solid #dce4ef;
-            border-left: 3px solid #dce4ef;
-            border-right: 3px solid #dce4ef;
-            padding: 3rem 2rem 1rem;
-          }
-        }
+            border: 3px solid $color-gray-cool-light;
+            border-top: none;
+            padding: 0 2rem 1rem;
 
-        .panel-form-field {
-          background-color: inherit;
+            &:first-of-type {
+              padding: 3rem 2rem 1rem;
+            }
+            // Dashed box with award options
+            .award-body {
+              border: 2px dashed $color-gray;
+              padding: 1.5rem;
+              font-family: $serif;
+              font-size: 1.4rem;
+              text-indent: 2em;
+            }
 
-          &:last-child {
-            border-bottom: none;
-          }
-        }
+            ul.buttons {
+              margin: 1rem 0 0;
+              display: flex;
+              list-style-type: none;
+              max-width: none;
+              margin: 2rem 0;
+              padding: 0;
 
-        div.usa-accordion-content {
-          ul.buttons {
-            margin: 1rem 0 0;
-            display: flex;
-            list-style-type: none;
-            max-width: none;
-            margin: 2rem 0;
-            padding: 0;
-          }
+              &.hide {
+                visibility: hidden;
+              }
+            }
 
-          .award-body {
-            border: 2px dashed $color-gray;
-            padding: 1.5rem;
-            font-family: $serif;
-            font-size: 1.4rem;
-            text-indent: 2em;
-          }
-        }
+            .panel-form-field {
+              background-color: inherit;
+            }
+          } // END .usa-accordion-content
+
+          // .usa-accordion-button {
+          //   &[aria-expanded="false"] + .usa-accordion-content {
+          //       border-bottom: 3px solid $color-gray-cool-light;
+          //     }
+          //   }
+        } // END li
 
         &.complete {
           li {
-            background-color: transparent;
-
             .usa-accordion-button {
-              background-color: #e7f4e4;
+              background-color: $color-green-lightest;
+
+              &[aria-expanded="false"] + .usa-accordion-content {
+                  border-bottom: 3px solid $color-green-lightest;
+                }
             }
 
             .usa-accordion-content {
-              border-bottom: 3px solid #e7f4e4;
-              border-left: 3px solid #e7f4e4;
-              border-right: 3px solid #e7f4e4;
+              border: 3px solid $color-green-lightest;
+              border-top: none;
+
+              // &:first-of-type {
+              //   border-bottom: none;
+              // }
             }
           }
         }
@@ -196,11 +221,11 @@ section {
   }
 }
 // END .panel-form-field
+
 .usa-content {
   ul {
     &.navigation-buttons {
       &.stacked {
-
         button {
           width: 80%;
         }
@@ -240,7 +265,6 @@ section {
     ul {
       &.navigation-buttons {
         &.stacked {
-
           button {
             width: 100%;
           }
