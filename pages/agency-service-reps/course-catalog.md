@@ -26,18 +26,6 @@ published: true
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
-<!-- New to the TSP (or ready for a refresher)? Ask Away. -->
-<a name="new-to-the-tsp"></a>
-<div class="grid-container">
-  <div class="course">New to the TSP (or ready for a refresher)? Ask Away.</div>
-  <div class="description" markdown="1">
-  Bring your questions about managing your account, changing your investments or contribution amounts, managing life changes, how our funds work, or how to use your savings. In this webinar, our TSP Training and Liaison Specialists will focus solely on answering your individual questions.
-
-  **DISCLAIMER:** Information in this webinar is not to be construed as legal, medical, tax, investment, or financial advice.
-  </div>
-  <div class="duration">1 hour</div>
-  <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
-</div>
 <!-- TSP Contributions -->
 <a name="tsp-contributions"></a>
 <div class="grid-container">
