@@ -6,10 +6,6 @@ Part I includes a discussion on estimating future income needs, assessing the im
 
 Part II consists of a discussion of the risks faced by new retirees. We will discuss the concept of a systematic strategy and how it is applied throughout retirement and cover scenarios that illustrate issues participants face during the drawdown process. (4 hours with break)
 
-#### April 19, 2021
-
-- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=190){:rel="nofollow"}
-
 #### May 4, 2021
 
 - 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=191){:rel="nofollow"}

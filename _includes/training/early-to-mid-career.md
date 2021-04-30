@@ -1,13 +1,5 @@
 ### [TSP Early to Mid-Career (EMC)]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-early-to-mid-career){:target="\_blank" .external-link}
 
-#### April 7, 2021
-
-- 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=175){:rel="nofollow"}
-
-#### April 14, 2021
-
-- 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=176){:rel="nofollow"}
-
 #### May 6, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=171){:rel="nofollow"}
