@@ -134,7 +134,7 @@ urlList[186] = '';
 urlList[187] = '';
 urlList[188] = '';
 urlList[189] = '';
-// TSP to Retirement and Beyond Parts I and II
+// TSP to Retirement and Beyond
 urlList[190] = '';
 urlList[191] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=e10a00e5c92afb4ac7b82ed00d8b508dc';
 urlList[192] = 'https://tspmeet.webex.com/tspmeet/onstage/g.php?MTID=ed3cf9c1da64bc0805170c351ad8554e5';

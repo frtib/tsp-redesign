@@ -1,4 +1,4 @@
-### [TSP to Retirement and Beyond (Parts I and II)]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-to-retirement-and-beyond){:target="\_blank" .external-link}
+### [TSP to Retirement and Beyond]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-to-retirement-and-beyond){:target="\_blank" .external-link}
 
 This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives.
 

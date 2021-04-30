@@ -87,11 +87,11 @@ published: true
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>
 </div>
 {% comment %}
-<!-- TSP to Retirement and Beyond (Parts I and II) -->
+<!-- TSP to Retirement and Beyond -->
 DELETE AFTER LAST WEBINAR ON 4/28/2021
 <a name="tsp-to-retirement-and-beyond"></a>
 <div class="grid-container">
-  <div class="course">TSP to Retirement and Beyond (Parts I and II)</div>
+  <div class="course">TSP to Retirement and Beyond</div>
   <div class="description" markdown="1">
   This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives.
 
@@ -136,10 +136,10 @@ DELETE AFTER LAST WEBINAR ON 4/28/2021
   <div class="duration">2.5 hours</div>
   <div class="format"><span data-term="tsp course" class="js-glossary-toggle term term-end course">tsp course</span></div>
 </div>
-<!-- TSP to Retirement and Beyond (Parts I and II) -->
+<!-- TSP to Retirement and Beyond -->
 <a name="tsp-to-retirement-and-beyond"></a>
 <div class="grid-container">
-  <div class="course">TSP to Retirement and Beyond (Parts I and II)</div>
+  <div class="course">TSP to Retirement and Beyond</div>
   <div class="description" markdown="1">
   This two-part presentation is most relevant for employees within 5-10 years of their planned retirement. The focus is on determining how much someone needs to save in their TSP account so they can retire at their desired standard of living with a nest egg that will last for the rest of their lives.
 
