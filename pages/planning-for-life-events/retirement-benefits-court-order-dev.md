@@ -1094,9 +1094,9 @@ published: true
         </div><!-- END div.address-foreign -->
     </div><!-- END div.panel-form-field -->
 
-    <!-- TSP Account Type -->
+    <!-- TSP account type -->
     <div class="panel-form-field account-types" >
-      <h2 aria-details="account-type" id="tsp-account-type">TSP Account Type</h2>
+      <h2 aria-details="account-type" id="tsp-account-type">TSP account type</h2>
 
       <!-- Explain this -->
       <ul class="usa-accordion explain-this">
@@ -1854,9 +1854,9 @@ published: true
         </div><!-- END div.address-foreign -->
     </div><!-- END div.panel-form-field -->
 
-    <!-- TSP Account Type -->
+    <!-- TSP account type -->
     <div class="panel-form-field account-types" >
-      <h2 aria-details="account-type">TSP Account Type</h2>
+      <h2 aria-details="account-type">TSP account type</h2>
 
 
       <ul class="usa-accordion explain-this">
@@ -2581,7 +2581,7 @@ published: true
     onchange="caseNumberGood(0, 0);"
     onblur="caseNumberGood(0, 0);">
 
-  <label for="judgeName">Judge's name and court room:</label>
+  <label for="judgeName">Judge's name and courtroom:</label>
   <input
     type="text"
     id="judgeName"

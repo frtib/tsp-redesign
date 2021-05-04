@@ -162,7 +162,10 @@ function showEF(id) {
 // true - good string, false - missing something
 function buildString(submit, id) {
     var accountGood = awardAccountGood(submit, id);
-    if (!accountGood) { return returnBuildString(false, id, '', '', '', '', '', ''); }
+    if (!accountGood) {
+      $('#'+id+'hideA').addClass('hide');
+      return returnBuildString(false, id, '', '', '', '', '', '');
+    }
 
     var idAward = id + 'Award';
     var rc = true;
@@ -200,7 +203,7 @@ function buildString(submit, id) {
     }
 
     var setID = 0;
-    var amount = payname + ' is awarded ??? from ';
+    var amount = payname + ' is awarded ___ from ';
     var percentage = 'xx';  // note this value is used in the entitlement date section
     if (awardTypeGood(submit, id)) {
       if ($('#'+id+'awardTypeFixed').prop('checked')) {
@@ -327,6 +330,7 @@ function buildString(submit, id) {
 
 function buildStrings(submit) {
   for (var aw = 1; aw <= maxAwards; aw++) { buildString(submit, aw); }
+  return false;
 }
 
 function returnBuildString(rc, id, idAward, amount, xferdate, account, earn, osLoans) {
@@ -686,12 +690,12 @@ function earningsPerdiemRateGood(submit, id) {
   var min = 0.01;
   var max = 1000.0;
   var earningsPerdiemRate = getPosFloat(id+'earningsPerdiemRate', -1);
-  $('#'+id+'lblAYRearningsPerdiemRate').html(earningsPerdiemRate);
+  if (earningsPerdiemRate > 0) { $('#'+id+'earningsPerdiemRate').val(parseFloat(earningsPerdiemRate.toFixed(2))); }
   // if ((earningsPerdiemRate >= min) && (earningsPerdiemRate <= max)) { return clearError(id+'earningsPerdiemRate'); }
-  if (earningsPerdiemRate >= min) { return clearError(id+'earningsPerdiemRate'); }
-  if ((submit == 0) && (earningsPerdiemRate < 0)) { return clearError(id+'earningsPerdiemRate'); }
+  if (earningsPerdiemRate >= min) { return clearError(id+'earnings'); }
+  if ((submit == 0) && (earningsPerdiemRate < 0)) { return clearError(id+'earnings'); }
   // return showError(id+'earningsPerdiemRate', "Enter a dollar amount between " + min + " and " + max + ".");
-  return showError(id+'earningsPerdiemRate', "Enter a dollar amount greater than " + CurrencyFormatted(min) + ".");
+  return showError(id+'earnings', "Enter a dollar amount greater than " + CurrencyFormatted(min) + ".");
 }
 
 function earningsPercentGood(submit, id) {

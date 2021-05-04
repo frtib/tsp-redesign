@@ -22,7 +22,7 @@ Scenario panel (2) for RBCO.
   inputType="radio" radioIDs="relationshipSpouse, relationshipDependent, relationshipOther"
   radioLabels="Current or former spouse, Child or dependent, Other"
   inputClass="usa-unstyled-list"   onBlur="panel2Good(false);"
-  prompt="Select the parties' relationship to one another"
+  prompt="Select the parties' relationship to one another:"
   explanation=""
 %}
 

@@ -35,7 +35,7 @@ cachePath["payeePartNo"] = null;
 cachePath["relationshipSpouse"] = null;
 cachePath["relationshipDependent"] = null;
 cachePath["receiveOne"] = null;
-cachePath["receiveTwo"] = null;
+cachePath["receiveBoth"] = null;
 cachePath["PayeePanel"] = 4;
 cachePath["PayeePanelState"] = null;
 cachePath["PayeePanelError"] = null;
@@ -47,7 +47,7 @@ function getPrimeSettingsPath() {
   cachePath["relationshipSpouse"] = $('#relationshipSpouse').prop('checked');
   cachePath["relationshipDependent"] = $('#relationshipDependent').prop('checked');
   cachePath["receiveOne"] = $('#receiveOne').prop('checked');
-  cachePath["receiveTwo"] = $('#receiveTwo').prop('checked');
+  cachePath["receiveBoth"] = $('#receiveBoth').prop('checked');
   // cachePath["PayeePanel"] = getIDbyName('{{payeePanel}}');
   cachePath["PayeePanelState"] = getProgressState(cachePath["PayeePanel"]);
   cachePath["PayeePanelError"] = getProgressStateError(cachePath["PayeePanel"]);
@@ -56,6 +56,7 @@ function getPrimeSettingsPath() {
 // did user change something important
 function anyChangesPath() {
   // console.log('in any changes+',cachePath["PayeePanel"],cachePath["PayeePanelState"],cachePath["PayeePanelError"]);
+  // console.log('anyChangesPath', {cachePath});
   if (cachePath["payeePartYes"] != $('#payeePartYes').prop('checked')) { return true; }
   if (cachePath["payeePartNo"] != $('#payeePartNo').prop('checked')) { return true; }
   if (cachePath["receiveOne"] != $('#receiveOne').prop('checked')) { return true; }
@@ -81,7 +82,7 @@ function testPrimeSettingsPath() {
     // nothing changed
     // unsetProgressStateError(cachePath["PayeePanel"]);
     setHighwater(cachePath["highwater"]);
-    // setProgress(2);
+    setProgress(2);
     // console.log('4 leaving test false');
     return false;
   }
@@ -115,7 +116,7 @@ function payeePartGood(submit) {
     return clearError('payeePart');
   }
   if (payeePart == 'Yes') {
-    $('#relationship-label').html("Select the parties' relationship to one another");
+    $('#relationship-label').html("Select the parties' relationship to one another:");
   }
   if (payeePart == 'No') {
     $('#relationship-label').html("What is the payee's relationship to the TSP participant?");
@@ -137,7 +138,7 @@ function relationshipGood(submit) {
   var payeePart = getPayeePart();
   if (payeePart == '') { return clearError('relationship'); }
   var relationship = getRelationship();
-  $('#relationshipAYR').html('Payee is ' + relationship);
+  $('#relationshipAYR').html('Payee is ' + relationship.toLowerCase());
 
   if (relationship == '') {
     $('#howDivided').addClass('hide');
@@ -147,12 +148,14 @@ function relationshipGood(submit) {
   }
 
   if (relationship == 'Dependent') {
+    $('#howDivided').addClass('hide');
     setNamesInstruction('NoDependent');
     clearError('relationship');
     return showError('relationship', '');
     return false;
   }
   if (relationship == 'Other') {
+    $('#howDivided').addClass('hide');
     setNamesInstruction('NoOther');
     clearError('relationship');
     return showError('relationship', '');
@@ -208,14 +211,17 @@ function setNamesInstruction(flag) {
     return;
   }
   var instruction = '';
+  $('#namesInstruction').removeClass('usa-input-error');
   $('#namesInstruction').removeClass('hide');
   setPartyNames('off');
 
   if (flag == 'NoOther') {
-    instruction = 'A court order can require a payment only to the participant’s current or former spouse or to the participant’s dependents. For more information on RBCOs, please review the TSP publication, <a href="/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.';
+    instruction = 'A court order can require a payment only to the participant’s current or former spouse or to the participant’s dependents. For more information on RBCOs, please review the TSP publication, <a href="{{site.baseurl}}/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.';
+    $('#namesInstruction').addClass('usa-input-error');
   }
   if (flag == 'NoDependent') {
-    instruction = 'The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, <a href="/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.</p>';
+    instruction = 'The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, <a href="{{site.baseurl}}/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.</p>';
+    $('#namesInstruction').addClass('usa-input-error');
   }
   if (flag == 'No') {
     $('#namesInstruction').addClass('hide');

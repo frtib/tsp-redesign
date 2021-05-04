@@ -10,7 +10,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
 {% endcapture %}
 {% include calculator/div-panel-form-field.html
   outerDivID=prefixAD outerDivClass=""
-  fieldID=fieldID inputType="none" H2="TSP Account Type" anchor=prefixAnchor
+  fieldID=fieldID inputType="none" H2="TSP account type" anchor=prefixAnchor
   explanation=explanation  dontCloseOuterDiv=true
 %}
 
@@ -28,7 +28,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
       <li>
         <input type="checkbox" id="{{prefix}}uniformed" name="accountType" value="uniformed"
           onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');">
-        <label for="{{prefix}}uniformed"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(Ready Reserve or Active Duty)</span></label>
+        <label for="{{prefix}}uniformed"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(ready reserve or active duty)</span></label>
       </li>
       <!-- Beneficiary Participant -->
         <li>
@@ -39,7 +39,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
 
       <li>
         <div id="{{prefix}}acctNum-div" class="hide">
-          <label class="" id="{{prefix}}acctNum-label" for="{{prefix}}acctNum">Civilian and Uniformed Services account number</label>
+          <label class="" id="{{prefix}}acctNum-label" for="{{prefix}}acctNum">Civilian and Uniformed Services account number:</label>
           <span class="" id="{{prefix}}acctNum-error-message" role="alert"></span>
           <input id="{{prefix}}acctNum" name="{{prefix}}acctNum" class="format-left" value="" data-store="" myPlaceholder=""
             aria-labelledby="{{prefix}}acctNum-label" type="text"
@@ -49,7 +49,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
       </li>
       <li>
         <div id="{{prefix}}BPAacctNum-div" class="hide">
-          <label class="" id="{{prefix}}BPAacctNum-label" for="{{prefix}}BPAacctNum">Beneficiary Participant account number</label>
+          <label class="" id="{{prefix}}BPAacctNum-label" for="{{prefix}}BPAacctNum">Beneficiary Participant account number:</label>
           <span class="" id="{{prefix}}BPAacctNum-error-message" role="alert"></span>
           <input id="{{prefix}}BPAacctNum" name="{{prefix}}BPAacctNum" class="format-left" value="" data-store="" myPlaceholder=""
             aria-labelledby="{{prefix}}BPAacctNum-label" type="text"

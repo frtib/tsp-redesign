@@ -115,12 +115,12 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 
 <div id="{{awardNum}}earnings-div" class="panel-form-field">
   <fieldset class="usa-fieldset-inputs usa-sans">
-    <legend id="{{awardNum}}earnings-label" for="{{awardNum}}earnings">Earnings options</legend>
+    <legend id="{{awardNum}}earnings-label" for="{{awardNum}}earnings">Earnings options:</legend>
     <span class="" id="{{awardNum}}earnings-error-message" role="alert"></span>
     <ul class="usa-unstyled-list">
       <li>
         <input type="radio" id="{{awardNum}}earningsLosses" name="{{awardNum}}earnings" value="Earnings and Losses" onblur="pickEarnings('L', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('L', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
-        <label for="{{awardNum}}earningsLosses">Earnings and Losses</label>
+        <label for="{{awardNum}}earningsLosses">Earnings and losses</label>
       </li>
       <li>
         <input type="radio" id="{{awardNum}}earningsPercent" name="{{awardNum}}earnings" value="Earnings APR" onblur="pickEarnings('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickEarnings('P', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
@@ -142,12 +142,16 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       </span> per annum
     </div>
 
-    <!-- $ input -->
     <div id="{{awardNum}}earningsPerdiemRate-div" class="hide">
     <label id="{{awardNum}}earningsPerdiemRate-label" class="usa-sr-only" for="{{awardNum}}earningsPerdiemRate">Per diem dollar rate:</label>
     <span class="" id="{{awardNum}}earningsPerdiemRate-message" role="alert"></span>
       <span data-format="$" class="input-symbol-left">
-      <input aria-labelledby="{{awardNum}}earnings-perdiem" type="number" id="{{awardNum}}earningsPerdiemRate" name="{{awardNum}}earningsPerdiemRate" maxlength="10" value="" onchange="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" onblur="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+      <input aria-labelledby="{{awardNum}}earnings-perdiem" type="number" min="0.01" step="0.01"
+        onKeyPress="return positiveOnly(event, 1);"
+        xonkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : (event.charCode >= 46 && event.charCode <= 57)"
+        id="{{awardNum}}earningsPerdiemRate" name="{{awardNum}}earningsPerdiemRate" maxlength="10" value=""
+        onchange="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');"
+        onblur="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
       </span>  per day
     </div>
 
@@ -187,16 +191,16 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 <!-- Percentage outstanding balance calculation radio buttons -->
 <div id="{{awardNum}}osLoans-div" class="panel-form-field">
   <fieldset class="usa-fieldset-inputs usa-sans">
-    <legend id="{{awardNum}}osLoans-label" class="" for="{{awardNum}}osLoans" aria-details="">Outstanding Loan Balances:</legend>
+    <legend id="{{awardNum}}osLoans-label" class="" for="{{awardNum}}osLoans" aria-details="">Outstanding loan balances:</legend>
     <span class="" id="{{awardNum}}osLoans-error-message" role="alert"></span>
     <ul class="usa-unstyled-list">
       <li>
         <input type="radio" id="{{awardNum}}osLoanIncluded" name="{{awardNum}}osLoans" value="Included" onblur="pickOSloans('I', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickOSloans('I', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
-        <label for="{{awardNum}}osLoanIncluded">should be included when calculating the payee's award amount</label>
+        <label for="{{awardNum}}osLoanIncluded">Include when calculating the payee's award amount</label>
       </li>
       <li>
         <input type="radio" id="{{awardNum}}osLoanExcluded" name="{{awardNum}}osLoans" value="Excluded" onblur="pickOSloans('E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" onchange="pickOSloans('E', '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
-        <label for="{{awardNum}}osLoanExcluded">should be excluded when calculating the payee's award amount</label>
+        <label for="{{awardNum}}osLoanExcluded">Exclude when calculating the payee's award amount</label>
       </li>
     </ul>
   </fieldset>
@@ -209,7 +213,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
 <ul id="{{awardNum}}deleteButtonDiv" class="buttons justify-end {% if awardNum == 1 %}disabled{% endif %}">
   <li>
   <button  id="{{awardNum}}deleteButton" class="usa-button-secondary delete" href="javascript:void(0);"  {% if awardNum == 1 %}disabled{% endif %}
-    onclick="removeAward({{awardNum}}, false, {{awardNum}}); buildStrings();">Delete award</button>
+    onclick="removeAward({{awardNum}}, false, {{awardNum}}); buildStrings(0); return false;">Delete award</button>
   </li>
 </ul>
 

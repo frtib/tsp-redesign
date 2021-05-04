@@ -17,7 +17,7 @@ Case panel (6) for RBCO.
   fieldID="panel-petitioner" id="petitioner"  inputType="selectList"
   radioIDs="Select,part,pay"
   radioLabels="Select one,Party 1 is the petitioner,Party 2 is the petitioner"
-  inputClass="" onBlur="petitionerGood(0);" prompt="Select a petitioner from the drop-down list."
+  inputClass="" onBlur="petitionerGood(0);" prompt="Select a petitioner from the drop-down list:"
   explanation=""  dontOpenOuterDiv=true
 %}
 
@@ -25,7 +25,7 @@ Case panel (6) for RBCO.
 {% include {{altFormFields}} prefix="" field='courtName' prompt="Court name:" maxLength=50 %}
 {% include {{altFormFields}} prefix="" field='jurisdiction' prompt="State/jurisdiction:" maxLength=20 %}
 {% include {{altFormFields}} prefix="" field='caseNumber' prompt="Case number:" maxLength=50 %}
-{% include {{altFormFields}} prefix="" field='judgeName' prompt="Judge's name and court room:" maxLength=50 %}
+{% include {{altFormFields}} prefix="" field='judgeName' prompt="Judge's name and courtroom:" maxLength=50 %}
 
 </div>{% comment %}End of multi-input block case information{% endcomment %}
 

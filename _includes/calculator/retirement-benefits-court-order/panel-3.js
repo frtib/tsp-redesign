@@ -164,7 +164,7 @@ function accountNumbersGood(submit, prefix) {
   if (civCB) { label = 'Civilian account number'; }
   if (usvCB) { label = 'Uniformed Services account number'; }
   if (civCB && usvCB) { label = 'Civilian and Uniformed Services account number'; }
-  $('#'+prefix+'acctNum-label').html(label);
+  $('#'+prefix+'acctNum-label').html(label + ':');
   dualAccountChecked(submit, prefix, civCB && usvCB);
 
   var BPA = acctNumGood(submit, prefix, 'BPA', BPACB);

@@ -17,9 +17,9 @@ Review the input below. Click “Change” to alter your selections. Click the �
     icon='fal fa-sliders-v' title='Adjust your results' inList=true %}
 
 {% include calculator/AYR/div.html caption="Court order details" showPanel=2 gotoAnchor='panel2' %}
-{% include calculator/AYR/div-row.html prompt="Are both parties TSP participants?:" rowID='payeePartAYR' %}
+{% include calculator/AYR/div-row.html prompt="Are both parties TSP participants?" rowID='payeePartAYR' %}
 {% include calculator/AYR/div-row.html prompt="Relationship:" rowID='relationshipAYR' %}
-{% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?:" rowID='receiveBothAYR' %}
+{% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?" rowID='receiveBothAYR' %}
 
 {% include calculator/AYR/div.html caption="<span id='part1AYR'>Participant</span> information" showPanel=3 gotoAnchor='panel3' %}
 {% include calculator/AYR/div-row.html prompt="Name:" rowID='partfullnameAYR' %}
@@ -33,8 +33,8 @@ Review the input below. Click “Change” to alter your selections. Click the �
 {% include calculator/AYR/div-row.html prompt="Account number:" rowID='payBPAacctNumAYR' named=true %}
 
 {% include calculator/AYR/div.html caption="Attorney information" showPanel=5 gotoAnchor='panel5' %}
-{% include calculator/AYR/div-row.html prompt="<span id='part2AYR'>Participant</span> attorney" rowID='partATAYR' named=true %}
-{% include calculator/AYR/div-row.html prompt="<span id='pay2AYR'>Payee</span> attorney" rowID='payATAYR' named=true %}
+{% include calculator/AYR/div-row.html prompt="<span id='part2AYR'>Participant</span> attorney:" rowID='partATAYR' named=true %}
+{% include calculator/AYR/div-row.html prompt="<span id='pay2AYR'>Payee</span> attorney:" rowID='payATAYR' named=true %}
 
 {% include calculator/AYR/div.html caption="Retirement Benefits Specialist (RBS)" showPanel=5 gotoAnchor='panel5' %}
 {% include calculator/AYR/div-row.html prompt="RBS retained:" rowID='RBCOretainedAYR' named=true %}

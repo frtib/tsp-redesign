@@ -135,7 +135,7 @@ function setValues(flag) {
     $('#courtName').val('7th Circuit Court of Appeals');
     $('#jurisdiction').val('appellate');
     $('#caseNumber').val('14-1128');
-    $('#judgeName').val('Judge Richard Posner, court room 1');
+    $('#judgeName').val('Judge Richard Posner, courtroom 1');
     processPanel(6,0,7,0);
   }
   if (flag == 8) {

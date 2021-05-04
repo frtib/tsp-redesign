@@ -299,3 +299,14 @@ function mathTrunc(x) {
   if (x > 0) { return Math.floor(x); }
   return Math.ceil(x);
 }
+
+function positiveOnly(event, flag) {
+  var asciiCode = (event.which) ? event.which : event.keyCode;
+  console.log({asciiCode});
+  if (asciiCode > 31 && (asciiCode < 46 || asciiCode > 57)) return false;
+  return true;
+  // if ((asciiCode >= 48) || (asciiCode <= 57)) return true;
+  // if (flag && (asciiCode == 46)) return true;
+  // console.log({asciiCode}, false);
+  return false;
+}
