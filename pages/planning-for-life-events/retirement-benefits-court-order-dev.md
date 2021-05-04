@@ -16,274 +16,6 @@ published: true
 ---
 
 <ul class="usa-accordion rbco">
-<!-- PANEL 8: SUMMARY -->
-<li>
-  <button
-    class="usa-accordion-button"
-    aria-expanded="true"
-    aria-controls="panel-8">
-    Panel 8 – Summary
-  </button>
-  <div id="panel-8" class="usa-accordion-content">
-
-  <p>Review the input below. Click &#8220;Change&#8221; to alter your selections. Click the &#8220;Generate PDF&#8221; button to create the court order.</p>
-
-    <section class="calculator-panel">
-    <ul class="usa-accordion-bordered icons">
-      <!-- ADJUST YOUR RESULTS -->
-      <li>
-        <button
-          class="usa-accordion-button"
-          aria-expanded="true"
-          aria-controls="adjust-results">
-          Adjust your results <i class="fal fa-sliders-v"></i>
-        </button>
-
-        <div id="adjust-results" class="usa-accordion-content text">
-
-<!-- Court order details -->
-  <div class="usa-grid caption">
-    <div class="usa-width-one-whole">Court order details <a href="javascript:void(0)">Change</a></div>
-  </div>
-  <div class="usa-grid results">
-    <div class="usa-width-one-half">Are both parties TSP participants?:</div>
-    <div class="usa-width-one-half">No</div>
-  </div>
-  <div class="usa-grid results">
-    <div class="usa-width-one-half">Relationship:</div>
-    <div class="usa-width-one-half">Payee is spouse</div>
-  </div>
-<!-- Participant information -->
-  <div class="usa-grid caption">
-    <div class="usa-width-one-whole">Participant information <a href="javascript:void(0)">Change</a></div>
-  </div>
-  <div class="usa-grid results">
-    <div class="usa-width-one-half">Name:</div>
-    <div class="usa-width-one-half">John Doe</div>
-  </div>
-  <div class="usa-grid results">
-    <div class="usa-width-one-half">Account number:</div>
-    <div class="usa-width-one-half">xxxxxxxxx1023</div>
-  </div>
-<!-- Payee information -->
-<div class="usa-grid caption">
-  <div class="usa-width-one-whole">Payee information <a href="javascript:void(0)">Change</a></div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Name:</div>
-  <div class="usa-width-one-half">Jane Doe</div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Account number:</div>
-  <div class="usa-width-one-half">This row should not appear if blank.</div>
-</div>
-<!-- Attorney information -->
-<div class="usa-grid caption">
-  <div class="usa-width-one-whole">Attorney information <a href="javascript:void(0)">Change</a></div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Participant attorney:</div>
-  <div class="usa-width-one-half">
-    <div>Leslie Klinger</div>
-    <div class="bold">Lawfirm:</div>
-    <div>Annotate LLC</div>
-    <div class="bold">Jurisdiction:</div>
-    <div>District 36</div>
-    <div class="bold">License:</div>
-    <div>Chicago-0001</div>
-    <div class="bold">Address:</div>
-    <div>1 Solicitor Way</div>
-    <div>Malaibu CA 90265</div>
-    <div>310-123-4567 (T)</div>
-    <div>310-456-7890 (F)</div>
-  </div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Payee attorney:</div>
-  <div class="usa-width-one-half">No payee attorney indicated.</div>
-</div>
-<!-- RBS information -->
-<div class="usa-grid caption">
-  <div class="usa-width-one-whole">Retirement Benefits Specialist (RBS) <a href="javascript:void(0)">Change</a></div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">RBS retained:</div>
-  <div class="usa-width-one-half">No</div>
-</div>
-<!-- Case/Account information -->
-<div class="usa-grid caption">
-  <div class="usa-width-one-whole">Case/Account information <a href="javascript:void(0)">Change</a></div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Petitioner:</div>
-  <div class="usa-width-one-half">John Doe</div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Court:</div>
-  <div class="usa-width-one-half">DC Superior Court</div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Jurisdiction:</div>
-  <div class="usa-width-one-half">Wasington, DC</div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Case number:</div>
-  <div class="usa-width-one-half">14-1128</div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-half">Judge name:</div>
-  <div class="usa-width-one-half">Honorable John Smith, Room 1201</div>
-</div>
-<!-- Awards -->
-<div class="usa-grid caption">
-  <div class="usa-width-one-whole">Award(s) <a href="javascript:void(0)">Change</a></div>
-</div>
-<div class="usa-grid results">
-  <div class="usa-width-one-whole">
-    <ol>
-      <li>Joan Watson is awarded $50.00 from the Civilian TSP account of Sherlock Holmes.</li>
-      <li>Joan Watson is awarded 10.50% of the Uniformed Services TSP account of Sherlock Holmes as of 2021-04-14. Any outstanding loan balance should be included when calculating the payee's award.</li>
-    </ol>
-  </div>
-</div>
-
-{% comment %}
-          <table class="usa-table-borderless">
-            <caption class="">Court order details <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">Are both parties TSP participants?:</th>
-              <td>No</td>
-            </tr>
-            <tr>
-              <th scope="row">Relationship:</th>
-              <td>Payee is spouse</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="usa-table-borderless">
-            <caption>Participant information <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">Name:</th>
-              <td>John Doe</td>
-            </tr>
-            <tr>
-              <th scope="row">Account number:</th>
-              <td>xxxxxxxxx1023</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="usa-table-borderless">
-            <caption>Payee information <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">Name:</th>
-              <td>Jane Doe</td>
-            </tr>
-            <tr>
-              <th scope="row">Account number:</th>
-              <td>This row should not appear if blank.</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="usa-table-borderless attorney-information">
-            <caption>Attorney information <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">Participant attorney:</th>
-              <td>
-              <!-- DAV, you can either wrap each line in a <div> or add <br> after each line, whichever is easier -->
-                Jack Doe, Esq.<br>
-                <strong>Law Firm</strong>:<br>
-                Doe and Associates LLC<br>
-                <strong>Bar License Number</strong>:<br>
-                DC 123456789<br>
-                <strong>Address:</strong><br>
-                77 K Street NE<br>
-                WASHINGTON DC 20002<br>
-                202-942-1464 (T)
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Payee attorney:</th>
-              <td>No payee attorney indicated</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="usa-table-borderless">
-            <caption>Retirement Benefits Specialist (RBS) <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">RBS retained:</th>
-              <td>No</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="usa-table-borderless">
-            <caption>Case/Account information <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <th scope="row">Petitioner:</th>
-              <td>John Doe</td>
-            </tr>
-            <tr>
-              <th scope="row">Court:</th>
-              <td>DC Superior Court</td>
-            </tr>
-            <tr>
-              <th scope="row">Jurisdiction:</th>
-              <td>DC</td>
-            </tr>
-            <tr>
-              <th scope="row">Case number:</th>
-              <td>3210987654321</td>
-            </tr>
-            <tr>
-              <th scope="row">Judge name:</th>
-              <td>Honorable John Smith, Room 1201</td>
-            </tr>
-            </tbody>
-          </table>
-          <!-- AWARDS -->
-          <table class="usa-table-borderless awards">
-            <caption>Awards <a href="javascript:void(0)">Change</a></caption>
-            <colgroup><col><col></colgroup>
-            <tbody>
-            <tr>
-              <td>
-                <ol>
-                  <li>Jane Doe is awarded $25,000.00 from the Civilian TSP account of John Doe.</li>
-                </ol>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-{% endcomment %}
-        </div><!-- END div#adjust-results -->
-      </li>
-    </ul></section>
-
-    <!-- NAVIGATION buttons -->
-    <ul class="navigation-buttons">
-      <li><button class="usa-button " href="javascript:void(0);" onclick="showPanel(2); return false;">Previous</button></li>
-      <li><button class="usa-button pdf" href="javascript:void(0);" onclick="doReport(); return false;">Generate PDF</button></li>
-      <li><button class="usa-button print" href="javascript:void(0);" title="" onclick="window.print(); return false;">Print report</button></li>
-    </ul>
-
-  </div><!-- END div#panel-8 -->
-</li>
 <!-- PANEL 1: INTRODUCTION -->
 <li>
   <button
@@ -331,7 +63,7 @@ published: true
 <li>
   <button
     class="usa-accordion-button"
-    aria-expanded="false"
+    aria-expanded="true"
     aria-controls="panel-2">
     Panel 2 – Scenario
   </button>
@@ -410,6 +142,25 @@ published: true
       </ul>
       </div>
     </fieldset>
+
+    <!-- ALERT: Child or dependent -->
+    <div class="usa-alert usa-alert-error" role="alert">
+      <div class="usa-alert-body">
+        <h3 class="usa-alert-heading">Award restriction</h3>
+        <p class="usa-alert-text" markdown="1">
+          The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+        </p>
+      </div>
+    </div>
+    <!-- ALERT: Other -->
+    <div class="usa-alert usa-alert-error" role="alert">
+      <div class="usa-alert-body">
+        <h3 class="usa-alert-heading">Award restriction</h3>
+        <p class="usa-alert-text" markdown="1">
+          A court order can require a payment only to the participant's current or former spouse or to the participant's dependents. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
+        </p>
+      </div>
+    </div>
   </div>
 
   <code>Are both parties TSP participants? > No > Current or former spouse</code>
@@ -442,18 +193,6 @@ published: true
       maxlength="30"
       size="30">
     </div><!-- END div.usa-input-error -->
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > No > Child or dependent</code>
-  <div class="panel-form-field" markdown="1">
-
-  The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
-  </div><!-- END div.panel-form-field -->
-
-  <code>Are both parties TSP participants? > No > Other</code>
-  <div class="panel-form-field" markdown="1">
-
-  A court order can require a payment only to the participant's current or former spouse or to the participant's dependents. For more information on RBCOs, please review the TSP publication, [_Court Orders and Powers of Attorney_]({{ site.baseurl }}/publications/tspbk11.pdf).
   </div><!-- END div.panel-form-field -->
 
   <code>Are both parties TSP participants? > Yes</code>
@@ -2980,6 +2719,273 @@ published: true
     </section>
 
   </div><!-- END div.usa-accordion-content -->
+</li>
+<!-- PANEL 8: SUMMARY -->
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="panel-8">
+    Panel 8 – Summary
+  </button>
+  <div id="panel-8" class="usa-accordion-content">
+
+  <p>Review the input below. Click &#8220;Change&#8221; to alter your selections. Click the &#8220;Generate PDF&#8221; button to create the court order.</p>
+
+    <section class="calculator-panel">
+    <ul class="usa-accordion-bordered icons">
+      <!-- ADJUST YOUR RESULTS -->
+      <li>
+        <button
+          class="usa-accordion-button"
+          aria-expanded="true"
+          aria-controls="adjust-results">
+          Adjust your results <i class="fal fa-sliders-v"></i>
+        </button>
+
+        <div id="adjust-results" class="usa-accordion-content text">
+  <!-- Court order details -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Court order details <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Are both parties TSP participants?:</div>
+    <div class="usa-width-one-half">No</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Relationship:</div>
+    <div class="usa-width-one-half">Payee is spouse</div>
+  </div>
+  <!-- Participant information -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Participant information <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Name:</div>
+    <div class="usa-width-one-half">John Doe</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Account number:</div>
+    <div class="usa-width-one-half">xxxxxxxxx1023</div>
+  </div>
+  <!-- Payee information -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Payee information <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Name:</div>
+    <div class="usa-width-one-half">Jane Doe</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Account number:</div>
+    <div class="usa-width-one-half">This row should not appear if blank.</div>
+  </div>
+  <!-- Attorney information -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Attorney information <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Participant attorney:</div>
+    <div class="usa-width-one-half">
+      <div>Leslie Klinger</div>
+      <div class="bold">Lawfirm:</div>
+      <div>Annotate LLC</div>
+      <div class="bold">Jurisdiction:</div>
+      <div>District 36</div>
+      <div class="bold">License:</div>
+      <div>Chicago-0001</div>
+      <div class="bold">Address:</div>
+      <div>1 Solicitor Way</div>
+      <div>Malaibu CA 90265</div>
+      <div>310-123-4567 (T)</div>
+      <div>310-456-7890 (F)</div>
+    </div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Payee attorney:</div>
+    <div class="usa-width-one-half">No payee attorney indicated.</div>
+  </div>
+  <!-- RBS information -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Retirement Benefits Specialist (RBS) <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">RBS retained:</div>
+    <div class="usa-width-one-half">No</div>
+  </div>
+  <!-- Case/Account information -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Case/Account information <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Petitioner:</div>
+    <div class="usa-width-one-half">John Doe</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Court:</div>
+    <div class="usa-width-one-half">DC Superior Court</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Jurisdiction:</div>
+    <div class="usa-width-one-half">Wasington, DC</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Case number:</div>
+    <div class="usa-width-one-half">14-1128</div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-half">Judge name:</div>
+    <div class="usa-width-one-half">Honorable John Smith, Room 1201</div>
+  </div>
+  <!-- Awards -->
+  <div class="usa-grid caption">
+    <div class="usa-width-one-whole">Award(s) <a href="javascript:void(0)">Change</a></div>
+  </div>
+  <div class="usa-grid results">
+    <div class="usa-width-one-whole">
+      <ol>
+        <li>Joan Watson is awarded $50.00 from the Civilian TSP account of Sherlock Holmes.</li>
+        <li>Joan Watson is awarded 10.50% of the Uniformed Services TSP account of Sherlock Holmes as of 2021-04-14. Any outstanding loan balance should be included when calculating the payee's award.</li>
+      </ol>
+    </div>
+  </div>
+
+  {% comment %}
+            <table class="usa-table-borderless">
+              <caption class="">Court order details <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">Are both parties TSP participants?:</th>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Relationship:</th>
+                <td>Payee is spouse</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="usa-table-borderless">
+              <caption>Participant information <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">Name:</th>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <th scope="row">Account number:</th>
+                <td>xxxxxxxxx1023</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="usa-table-borderless">
+              <caption>Payee information <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">Name:</th>
+                <td>Jane Doe</td>
+              </tr>
+              <tr>
+                <th scope="row">Account number:</th>
+                <td>This row should not appear if blank.</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="usa-table-borderless attorney-information">
+              <caption>Attorney information <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">Participant attorney:</th>
+                <td>
+                <!-- DAV, you can either wrap each line in a <div> or add <br> after each line, whichever is easier -->
+                  Jack Doe, Esq.<br>
+                  <strong>Law Firm</strong>:<br>
+                  Doe and Associates LLC<br>
+                  <strong>Bar License Number</strong>:<br>
+                  DC 123456789<br>
+                  <strong>Address:</strong><br>
+                  77 K Street NE<br>
+                  WASHINGTON DC 20002<br>
+                  202-942-1464 (T)
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Payee attorney:</th>
+                <td>No payee attorney indicated</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="usa-table-borderless">
+              <caption>Retirement Benefits Specialist (RBS) <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">RBS retained:</th>
+                <td>No</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="usa-table-borderless">
+              <caption>Case/Account information <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">Petitioner:</th>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <th scope="row">Court:</th>
+                <td>DC Superior Court</td>
+              </tr>
+              <tr>
+                <th scope="row">Jurisdiction:</th>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <th scope="row">Case number:</th>
+                <td>3210987654321</td>
+              </tr>
+              <tr>
+                <th scope="row">Judge name:</th>
+                <td>Honorable John Smith, Room 1201</td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- AWARDS -->
+            <table class="usa-table-borderless awards">
+              <caption>Awards <a href="javascript:void(0)">Change</a></caption>
+              <colgroup><col><col></colgroup>
+              <tbody>
+              <tr>
+                <td>
+                  <ol>
+                    <li>Jane Doe is awarded $25,000.00 from the Civilian TSP account of John Doe.</li>
+                  </ol>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+  {% endcomment %}
+          </div><!-- END div#adjust-results -->
+        </li>
+      </ul></section>
+
+      <!-- NAVIGATION buttons -->
+      <ul class="navigation-buttons">
+        <li><button class="usa-button " href="javascript:void(0);" onclick="showPanel(2); return false;">Previous</button></li>
+        <li><button class="usa-button pdf" href="javascript:void(0);" onclick="doReport(); return false;">Generate PDF</button></li>
+        <li><button class="usa-button print" href="javascript:void(0);" title="" onclick="window.print(); return false;">Print report</button></li>
+      </ul>
+
+    </div><!-- END div#panel-8 -->
 </li>
 </ul><!-- END ul.usa-accordion -->
 
