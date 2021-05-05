@@ -45,6 +45,16 @@ redirect_from:
   <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 
+<!-- DAV, This goes away once all returns are As of the most recent month. -->
+<!-- Maybe create a final row, with colspan = total columns, and put the footnote in that.  -->
+<div class="usa-grid centered">
+  <div class="usa-width-one-whole">
+    <ol id="footnotes" class="footnotes">
+      <li>Average annual returns as of December 2020</li>
+    </ol>
+  </div>
+</div>
+
 <!-- CHARTS -->
 <section class="rates-of-return-charts">
   <div class="usa-grid-full usa-layout-docs-main_content" id="{{chartName}}-div">
