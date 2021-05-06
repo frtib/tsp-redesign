@@ -93,14 +93,27 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     var col = lines[j].split(",");
     lineType = col.shift();
     val = '';
+    // MIXED "As of" DATES.
     if (lineType == 'y12') { YTD = "Last 12 months"; }
     if (lineType == 'y36') { YTD = "Last 36 months"; }
     if (lineType == 'y60') { YTD = "Last 60 months"; }
     if (lineType == 'y120') { YTD = "Last 120 months"; }
-    if (lineType == 'y12a') { YTD = "Annualized 1 year"; }
-    if (lineType == 'y36a') { YTD = "Annualized 3 years"; }
-    if (lineType == 'y60a') { YTD = "Annualized 5 years"; }
-    if (lineType == 'y120a') { YTD = "Annualized 10 years"; }
+    if (lineType == 'y12a') { YTD = "1 year <sup><a href='#footnotes'>1</a></sup>"; }
+    if (lineType == 'y36a') { YTD = "3 year <sup><a href='#footnotes'>1</a></sup>"; }
+    if (lineType == 'y60a') { YTD = "5 year <sup><a href='#footnotes'>1</a></sup>"; }
+    if (lineType == 'y120a') { YTD = "10 year <sup><a href='#footnotes'>1</a></sup>"; }
+
+    // DAV – This is the programming for trailing returns data, when it happens.
+    // Basically, the footnote is gone and "Last 12 months" is replaced by "1-year", which are now the same.
+
+    // ALL RETURNS AS OF MOST RECENT MONTH FOR WHICH RETURNS ARE AVAILABLE
+    // if (lineType == 'y36') { YTD = "Last 36 months"; }
+    // if (lineType == 'y60') { YTD = "Last 60 months"; }
+    // if (lineType == 'y120') { YTD = "Last 120 months"; }
+    // if (lineType == 'y12a') { YTD = "1-year"; }
+    // if (lineType == 'y36a') { YTD = "3-year"; }
+    // if (lineType == 'y60a') { YTD = "5-year"; }
+    // if (lineType == 'y120a') { YTD = "10-year"; }
 
     if (lineType != lastLineType) {
       if (tmpRows != '') {
@@ -147,7 +160,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     }
     if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
     if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
-    if (lineType == 'life') { val = 'Annualized lifetime return'; }
+    if (lineType == 'life') { val = 'Since inception <sup><a href="#footnotes">1</a></sup>'; }
     row = sideScrollTH('', '', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
