@@ -106,7 +106,8 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
       if (tmpRows != '') {
         var xClass = 'annual-returns';
         if (separatorTopMarked == false) {
-          if ((lastLineType == 'y') || (lastLineType == 'y12') || (lastLineType == 'y36') || (lastLineType == 'y60') || (lastLineType == 'y120')) {
+          // if ((lastLineType == 'y') || (lastLineType == 'y12') || (lastLineType == 'y36') || (lastLineType == 'y60') || (lastLineType == 'y120')) {
+          if (lastLineType == 'y') {
             xClass = 'annual-returns separator-top';
             separatorTopMarked = true;  // only mark start once
           }
