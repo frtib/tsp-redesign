@@ -23,8 +23,15 @@ Scenario panel (2) for RBCO.
   radioLabels="Current or former spouse, Child or dependent, Other"
   inputClass="usa-unstyled-list"   onBlur="panel2Good(false);"
   prompt="Select the parties' relationship to one another:"
-  explanation=""
+  explanation=""   dontCloseOuterDiv=true
 %}
+  <div class="usa-alert usa-alert-error hide" role="alert"  id="awardRestriction">
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Award restriction</h3>
+      <p class="usa-alert-text" id="awardRestrictionText"></p>
+    </div>
+  </div>
+</div>
 
 {% include calculator/div-panel-form-field.html  outerDivID="howDivided"
   fieldID="panel-2.3" id="receive"

@@ -139,6 +139,7 @@ function relationshipGood(submit) {
   if (payeePart == '') { return clearError('relationship'); }
   var relationship = getRelationship();
   $('#relationshipAYR').html('Payee is ' + relationship.toLowerCase());
+  $('#awardRestriction').addClass('hide');
 
   if (relationship == '') {
     $('#howDivided').addClass('hide');
@@ -205,7 +206,7 @@ function payfullnameGood(submit) {
   return false;
 }
 
-function setNamesInstruction(flag) {
+function setNamesInstructionOld(flag) {
   if (flag == '') {
     $('#partyNames').addClass('hide');
     return;
@@ -239,6 +240,45 @@ function setNamesInstruction(flag) {
   $('#partyNames').removeClass('hide');
   return;
 }
+
+function setNamesInstruction(flag) {
+  $('#namesInstruction').addClass('hide');
+  $('#partyNames').addClass('hide');
+  if (flag == '') { return; }
+
+  if ((flag == 'NoDependent') || (flag == 'NoOther')) {
+    setPartyNames('off');
+    $('#awardRestriction').removeClass('hide');
+    // assume (flag == 'NoDependent') {
+    var awardRestrictionText = 'The online wizard cannot be used to draft a court order awarding funds to a child or dependent. For more information on RBCOs, please review the TSP publication, <a href="{{site.baseurl}}/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.</p>';
+    if (flag == 'NoOther') {
+      awardRestrictionText = 'A court order can require a payment only to the participant’s current or former spouse or to the participant’s dependents. For more information on RBCOs, please review the TSP publication, <a href="{{site.baseurl}}/publications/tspbk11.pdf" class="pdf" target="_blank"><em>Court Orders and Powers of Attorney</em></a>.';
+    }
+    $('#awardRestrictionText').html(awardRestrictionText);
+    return;
+  }
+
+  var instruction = '';
+
+  if (flag == 'No') {
+    setPartyNames('One');
+  }
+  if (flag == 'YesNo') {
+    instruction = 'You have indicated that both parties are TSP participants but that <strong>only one will receive an award</strong> pursuant to this court order. Please provide the following information:';
+    setPartyNames('One');
+    $('#namesInstruction').removeClass('hide');
+  }
+  if (flag == 'YesYes') {
+    instruction = 'You have indicated that both parties are TSP participants and that <strong>both will receive awards</strong> pursuant to this court order. Please provide the following information:';
+    setPartyNames('Both');
+    $('#namesInstruction').removeClass('hide');
+  }
+  $('#namesInstruction').html(instruction);
+  $('#partyNames').removeClass('hide');
+  return;
+}
+
+
 function setPartyNames(flag) {
   var partName = $('#partfullname').val().trim();
   var payName = $('#payfullname').val().trim();
