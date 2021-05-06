@@ -7,7 +7,7 @@ Party 2 panel (4) for RBCO.
 
 <section id="panel-{{ panelID }}" class="calculator-panel" style="{{ hide }}"  markdown="1">
 
-<!-- SOCIAL SECURITY NUMBER -->
+<!-- Social Security number -->
 <div class="panel-form-field" id="paySSN-outer-div">
   <h2 id="payPanel-H2-2">Information for {payee}</h2>
     <div id="paySSN-div">
@@ -23,7 +23,7 @@ Party 2 panel (4) for RBCO.
     <li>
     <button class="usa-accordion-button" aria-expanded="false" aria-controls="paySSN-details">Explain this</button>
     <div id="paySSN-details" class="usa-accordion-content">
-      <p>The payee's Social Security Number (SSN) is required to process the RBCO.<span id="alertName"></span></p>
+      <p>The payee's Social Security number (SSN) is required to process the RBCO.<span id="alertName"></span></p>
       <p>If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record. Failure to provide this information with your submission may delay processing of the order.</p>
     </div>
     </li>

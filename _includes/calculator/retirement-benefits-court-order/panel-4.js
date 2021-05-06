@@ -99,10 +99,10 @@ function SSNGood(submit, writein, prefix) {
   if (receive == 'Both') { clearError(prefix+'SSN'); }
   var val = $('#'+prefix+'SSN').val();
   if (val.length != 9) {
-    // if (writein) { return showWriteIn(prefix+'SSN', 'Enter social security number.'); }
+    // if (writein) { return showWriteIn(prefix+'SSN', 'Enter Social Security number.'); }
     if (writein) { return showWriteIn(prefix+'SSN', ''); }
     clearWriteIn(prefix+'SSN');
-    if (submit) { return showError(prefix+'SSN', 'Social security number must be 9 characters long.'); }
+    if (submit) { return showError(prefix+'SSN', 'Social Security number must be 9 characters long.'); }
   }
   // $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('data-store'));
   $('#'+prefix+'SSN'+'AYR').html($('#'+prefix+'SSN').attr('myPlaceholder'));

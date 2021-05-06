@@ -22,7 +22,7 @@ To be honored by the TSP as a qualifying retirement benefits court order (RBCO),
 Before getting started, you should gather the following necessary information:
 
 - Participant's name, current mailing address, and TSP account number
-- Payee's name, current mailing address, and Social Security Number (SSN)
+- Payee's name, current mailing address, and Social Security number (SSN)
 - Account details (e.g., balance, outstanding loan amounts, etc.) needed to calculate the award amount
 - Necessary court information (e.g., case number, judge's name, etc.)
 
