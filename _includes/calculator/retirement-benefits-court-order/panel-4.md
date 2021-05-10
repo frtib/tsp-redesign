@@ -11,7 +11,7 @@ Party 2 panel (4) for RBCO.
 <div class="panel-form-field" id="paySSN-outer-div">
   <h2 id="payPanel-H2-2">Information for {payee}</h2>
     <div id="paySSN-div">
-      <label class="" id="paySSN-label" for="paySSN">Social Security or Tax Identification Number:</label>
+      <label class="" id="paySSN-label" for="paySSN">Social Security or Tax Identification number:</label>
       <span class="" id="paySSN-error-message" role="alert"></span>
       <input id="paySSN" name="paySSN" class="format-left" value="" data-store="" myPlaceholder=""
         aria-labelledby="paySSN-label" type="text"  xdisabled xpattern="\d*"
