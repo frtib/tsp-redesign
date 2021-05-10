@@ -142,13 +142,13 @@ function setValues(flag) {
     setValues(7);
     $('#1awardAccount').val('part,xxxxxxxxx5555,Civ');
     $('#1awardTypeFixed').click();
-    $('#1fixedAmount').val('50');
+    $('#1fixedAmount').val(50);
     $('#1earningsNo').click();
 
     $('#buildAnotherButton').click();
     $('#2awardAccount').val('part,xxxxxxxxx5555,US');
     $('#2awardTypePercent').click();
-    $('#2percentage').val('10.5');
+    $('#2percentage').val(10.5);
     $('#2paymentDate1Entitlement').click();
     $('#2earningsNo').click();
     $('#2osLoanIncluded').click();

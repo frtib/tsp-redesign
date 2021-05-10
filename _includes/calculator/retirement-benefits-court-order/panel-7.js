@@ -115,33 +115,22 @@ function buildAccountSelectAddAccounts(submit, role, name, dd) {
   var usePayee = $('#receiveBoth').prop('checked') && $('#payeePartYes').prop('checked');
   var acctType = 'Dual';
   if ((role == 'part') || (usePayee)) {
-    /*
-    if (isCivilian(role) || isUniformed(role)) {
-      if (!isCivilian(role)) { acctType = 'US'; }
-      if (!isUniformed(role)) { acctType = 'Civ'; }
-      acct = 'xxx';
-      acct = getAcctNumber(role, acctType, 'P', false);
-      value = role + ',' + acct + ',' + acctType;
-      str = name + ', ' + acctType + ', '+ acct;
-      addToDropDown(dd, value, str);
-    }
-    */
     if (isCivilian(role)) {
-      acct = 'xxx';
+      acct = '__________';
       acct = getAcctNumber(role, 'Civ', 'P', false);
       value = role + ',' + acct + ',Civ';
       str = name + ', Civ, ' + acct;
       addToDropDown(dd, value, str);
     }
     if (isUniformed(role)) {
-      acct = 'xxx';
+      acct = '__________';
       acct = getAcctNumber(role, 'US', 'P', false);
       value = role + ',' + acct + ',US';
       str = name + ', US, ' + acct;
       addToDropDown(dd, value, str);
     }
     if (isBPA(role)) {
-      acct = 'xxx';
+      acct = '__________';
       acct = getAcctNumber(role, 'BPA', 'P', false);
       value = role + ',' + acct + ',BPA';
       str = name + ', BPA, ' + acct;
@@ -192,7 +181,7 @@ function buildString(submit, id) {
     clearError(idAward);
     clearError('awards');
 
-    var account = ' the [xxx] TSP account of ' + partname;
+    var account = ' the [__________] TSP account of ' + partname;
     if (accountGood) {
       // account = ' the [' + $( '#'+id+'awardAccount' ).val() + '] TSP account of ' + partname;
       account = ' the ' + accountTypeString(accountType) + accountNum + ' of ' + partname;
@@ -204,13 +193,14 @@ function buildString(submit, id) {
 
     var setID = 0;
     var amount = payname + ' is awarded ___ from ';
-    var percentage = 'xx';  // note this value is used in the entitlement date section
+    var percentage = '';  // note this value is used in the entitlement date section
     if (awardTypeGood(submit, id)) {
       if ($('#'+id+'awardTypeFixed').prop('checked')) {
         setID = 2;
-        var fixedAmount = 'xx';
-        if (fixedAmountGood(0,id)) { fixedAmount = $.trim($('#'+id+'fixedAmount').val()); }
-        amount = payname + ' is awarded ' + CurrencyFormatted(parseFloat(fixedAmount).toFixed(2)) + ' from ';
+        var fixedAmount = '___';
+        if (fixedAmountGood(0,id)) { fixedAmount = getPosFloat(id+'fixedAmount', -1); }
+        fixedAmount = ((fixedAmount > 0) ? CurrencyFormatted(fixedAmount) : ('$___'));
+        amount = payname + ' is awarded ' + fixedAmount + ' from ';
         fixedFlag = true;
         $('#'+id+'hideB').removeClass('hide');
         showHidePaymentDate(1,id);
@@ -218,9 +208,9 @@ function buildString(submit, id) {
       }
       if ($('#'+id+'awardTypePercent').prop('checked')) {
         setID = 1;
-        // if (percentageGood(0,id)) { percentage = $.trim($('#'+id+'percentage').val()); }
-        if (percentageGood(0,id)) { percentage = getPosFloat(id+'percentage', 'xx'); }
-        amount = payname + ' is awarded ' + parseFloat(percentage).toFixed(2) + '%' + ' of ';
+        if (percentageGood(0,id)) { percentage = getPosFloat(id+'percentage', -1); }
+        percentage = ((percentage > 0) ? (percentage.toFixed(2) + '%') : ('___%'));
+        amount = payname + ' is awarded ' + percentage + ' of ';
         percentFlag = true;
         $('#'+id+'hideB').removeClass('hide');
         showHidePaymentDate(1,id);
@@ -252,23 +242,23 @@ function buildString(submit, id) {
       }
       if ($('#'+id+'earningsPercent').prop('checked')) {
          var earningsPercentRate = $.trim($('#'+id+'earningsPercentRate').val());
-         if (earningsPercentRate == '') { rc = false; earningsPercentRate = 'xx'; } else {
+         if (earningsPercentRate == '') { rc = false; earningsPercentRate = '___'; } else {
             earningsPercentRate = parseFloat(earningsPercentRate).toFixed(2);
             showEF(id);
          }
          if (earningsPercentRateGood(0,id,1)) {
-         } else { rc = false; earningsPercentRate = 'xx'; }
+         } else { rc = false; earningsPercentRate = '___'; }
          earn = ". The payee's entitlement should be adjusted for earnings two business days prior to payment at an annual percentage rate of "
                  + earningsPercentRate + "%";
       }
       if ($('#'+id+'earningsPerdiem').prop('checked')) {
          var earningsPerdiemRate = $.trim($('#'+id+'earningsPerdiemRate').val());
-         if (earningsPerdiemRate == '') { rc = false; earningsPerdiemRate = 'xx'; } else {
+         if (earningsPerdiemRate == '') { rc = false; earningsPerdiemRate = '___'; } else {
             earningsPerdiemRate = parseFloat(earningsPerdiemRate).toFixed(2);
             showEF(id);
          }
          if (earningsPerdiemRateGood(0,id,1)) {
-         } else { rc = false; earningsPerdiemRate = 'xx'; }
+         } else { rc = false; earningsPerdiemRate = '___'; }
          earn = ". The payee's entitlement should be adjusted for earnings two business days prior to payment at a per diem rate of $"
                  + earningsPerdiemRate;
       }
@@ -281,7 +271,7 @@ function buildString(submit, id) {
     }
     if ($('#'+id+'paymentDate' + setID + 'Entitlement').prop('checked')) {
       var paymentDateEntitlementDate = ($('#aw'+id+'paymentDate' + setID + 'EntitlementDate')).val();
-      if (paymentDateEntitlementDate == '') { paymentDateEntitlementDate = 'xx/xx/xx'; }
+      if (paymentDateEntitlementDate == '') { paymentDateEntitlementDate = '__/__/__'; }
       xferdate = ' as of ' + paymentDateEntitlementDate;
       $('#'+id+'hideC').removeClass('hide');
     }
@@ -605,21 +595,26 @@ function awardTypeGood(submit, id) {
 }
 
 function fixedAmountGood(submit, id) {
-  var fixedAmount= $.trim($('#'+id+'fixedAmount').val());
-  $('#'+id+'lblAYRfixedAmount').html(fixedAmount);
-  if (fixedAmount > 0) { includeEarningsGood(submit, id, false); return clearError(id+'fixedAmount'); }
-  if (submit) { return showError(id+'fixedAmount', "Dollar amount is required."); }
-  clearError(id+'fixedAmount');
-  return false;
+  var min = 0.01;
+  var max = 1000.0;
+  var fixedAmount = getPosFloat(id+'fixedAmount', -1);
+  if (fixedAmount > 0) { $('#'+id+'fixedAmount').val(parseFloat(fixedAmount.toFixed(2))); }
+  // if ((fixedAmount >= min) && (fixedAmount <= max)) { return clearError(id+'awardType'); }
+  if (fixedAmount >= min) { return clearError(id+'awardType'); }
+  if ((submit == 0) && (fixedAmount < 0)) { return clearError(id+'awardType'); }
+  // return showError(id+'awardType', "Enter a dollar amount between " + min + " and " + max + ".");
+  return showError(id+'awardType', "Enter a dollar amount greater than " + CurrencyFormatted(min) + ".");
 }
 
 function percentageGood(submit, id) {
-  var percentage= $.trim($('#'+id+'percentage').val());
-  $('#'+id+'lblAYRpercentage').html(percentage);
-  if ((percentage > 0) && (percentage <= 100)) { return clearError(id+'percentage'); }
-  if (submit) { return showError(id+'percentage', "Percentage is required."); }
-  clearError(id+'percentage');
-  return false;
+  var min = 0.01;
+  var max = 100;
+  var percentage = getPosFloat(id+'percentage', -1);
+  if (percentage > 0) { $('#'+id+'percentage').val(parseFloat(percentage.toFixed(2))); }
+  if ((percentage >= min) && (percentage <= max)) { return clearError(id+'awardType'); }
+  // if (percentage >= min) { return clearError(id+'awardType'); }
+  if ((submit == 0) && (percentage < 0)) { return clearError(id+'awardType'); }
+  return showError(id+'awardType', "Enter a percentage rate between " + min + " and " + max + ".");
 }
 
 function showHidePaymentDate(idx, id) {
@@ -683,7 +678,7 @@ function earningsLossesGood(submit, id) {
 function earningsPerdiemGood(submit, id) {
   var earningsPerdiem = $('#'+id+'earningsPerdiem').val();
   $('#'+id+'lblAYRearnings').html(earningsPerdiem);
-  return earningsPerdiemRateGood(submit, id, 0);
+  return earningsPerdiemRateGood(submit, id);
 }
 
 function earningsPerdiemRateGood(submit, id) {
@@ -691,25 +686,28 @@ function earningsPerdiemRateGood(submit, id) {
   var max = 1000.0;
   var earningsPerdiemRate = getPosFloat(id+'earningsPerdiemRate', -1);
   if (earningsPerdiemRate > 0) { $('#'+id+'earningsPerdiemRate').val(parseFloat(earningsPerdiemRate.toFixed(2))); }
-  // if ((earningsPerdiemRate >= min) && (earningsPerdiemRate <= max)) { return clearError(id+'earningsPerdiemRate'); }
+  // if ((earningsPerdiemRate >= min) && (earningsPerdiemRate <= max)) { return clearError(id+'earnings'); }
   if (earningsPerdiemRate >= min) { return clearError(id+'earnings'); }
   if ((submit == 0) && (earningsPerdiemRate < 0)) { return clearError(id+'earnings'); }
-  // return showError(id+'earningsPerdiemRate', "Enter a dollar amount between " + min + " and " + max + ".");
+  // return showError(id+'earnings', "Enter a dollar amount between " + min + " and " + max + ".");
   return showError(id+'earnings', "Enter a dollar amount greater than " + CurrencyFormatted(min) + ".");
 }
 
 function earningsPercentGood(submit, id) {
   var earningsPercent = $('#'+id+'earningsPercent').val();
   $('#'+id+'lblAYRearnings').html(earningsPercent);
-  return earningsPercentRateGood(submit, id, 0);
+  return earningsPercentRateGood(submit, id);
 }
 
 function earningsPercentRateGood(submit, id) {
-  var earningsPercentRate = getPosFloat(id+'earningsPercentRate', 0.0);
-  $('#'+id+'lblAYRearningsPercentRate').html(earningsPercentRate);
-  if ((earningsPercentRate > 0) && (earningsPercentRate <= 100)) { return clearError(id+'earningsPercentRate'); }
-  if ((submit == 0) && (earningsPercentRate <= 0)) { return clearError(id+'earningsPercentRate'); }
-  return showError(id+'earningsPercentRate', "Enter a percentage rate between 1 and 100.");
+  var min = 0.01;
+  var max = 100;
+  var earningsPercentRate = getPosFloat(id+'earningsPercentRate', -1);
+  if (earningsPercentRate > 0) { $('#'+id+'earningsPercentRate').val(parseFloat(earningsPercentRate.toFixed(2))); }
+  if ((earningsPercentRate >= min) && (earningsPercentRate <= max)) { return clearError(id+'earnings'); }
+  // if (earningsPercentRate >= min) { return clearError(id+'earnings'); }
+  if ((submit == 0) && (earningsPercentRate < 0)) { return clearError(id+'earnings'); }
+  return showError(id+'earnings', "Enter a percentage rate between " + min + " and " + max + ".");
 }
 
 function pickEarnings(flag, id) {

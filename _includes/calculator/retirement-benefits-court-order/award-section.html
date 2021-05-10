@@ -46,7 +46,10 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       <label class="usa-sr-only" for="{{awardNum}}fixedAmount">Fixed dollar amount:</label>
       <span class="" id="{{awardNum}}fixedAmount-error-message" role="alert"></span>
       <span data-format="$" class="input-symbol-left">
-      <input aria-labelledby="{{awardNum}}fixedDollar" type="number" id="{{awardNum}}fixedAmount" name="{{awardNum}}fixedAmount" maxlength="11" value="" onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
+      <input aria-labelledby="{{awardNum}}fixedDollar"
+        type="number" min="0" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        id="{{awardNum}}fixedAmount" name="{{awardNum}}fixedAmount" maxlength="11" value=""
+        onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
       </span>
     </div>
 
@@ -55,7 +58,10 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       <label class="usa-sr-only" for="{{awardNum}}percentage">Annual percentage rate:</label>
       <span class="" id="{{awardNum}}percentage-error-message" role="alert"></span>
       <span data-format="%" class="input-symbol-right">
-      <input aria-labelledby="{{awardNum}}percentageBalance" type="number" min="0" max="100" step="0.01" id="{{awardNum}}percentage" name="{{awardNum}}percentage"  value="" onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
+      <input aria-labelledby="{{awardNum}}percentageBalance"
+        type="number" min="0" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        id="{{awardNum}}percentage" name="{{awardNum}}percentage"  value=""
+        onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
       </span>
     </div>
   </fieldset>
@@ -138,7 +144,11 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     <label  id="{{awardNum}}earningsPercentRate-label" class="usa-sr-only" for="{{awardNum}}earningsPercentRate">Annual percentage rate:</label>
     <span class="" id="{{awardNum}}earningsPercentRate-message" role="alert"></span>
       <span data-format="%" class="input-symbol-right">
-      <input aria-labelledby="{{awardNum}}earnings-apr" type="number" id="{{awardNum}}earningsPercentRate" name="{{awardNum}}earningsPercentRate" maxlength="11" value="" onchange="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" onblur="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
+      <input aria-labelledby="{{awardNum}}earnings-apr"
+        type="number" min="0" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        id="{{awardNum}}earningsPercentRate" name="{{awardNum}}earningsPercentRate" maxlength="11" value=""
+        onchange="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');"
+        onblur="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
       </span> per annum
     </div>
 
@@ -146,9 +156,8 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     <label id="{{awardNum}}earningsPerdiemRate-label" class="usa-sr-only" for="{{awardNum}}earningsPerdiemRate">Per diem dollar rate:</label>
     <span class="" id="{{awardNum}}earningsPerdiemRate-message" role="alert"></span>
       <span data-format="$" class="input-symbol-left">
-      <input aria-labelledby="{{awardNum}}earnings-perdiem" type="number" min="0.01" step="0.01"
-        onKeyPress="return positiveOnly(event, 1);"
-        xonkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : (event.charCode >= 46 && event.charCode <= 57)"
+      <input aria-labelledby="{{awardNum}}earnings-perdiem"
+        type="number" min="0" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
         id="{{awardNum}}earningsPerdiemRate" name="{{awardNum}}earningsPerdiemRate" maxlength="10" value=""
         onchange="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');"
         onblur="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />

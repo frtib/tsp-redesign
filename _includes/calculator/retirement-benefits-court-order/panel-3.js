@@ -34,7 +34,7 @@ var showSSNwarning = true;
 var showAddressWarning = true;
 var showCourtWarning = true;
 function showWarningModal(ssn, address, court) {
-  console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning});
+  // console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning});
   var rc = false;
   if (ssn && showSSNwarning) {
     $('#writeinSSN').removeClass('hide');
@@ -57,7 +57,7 @@ function showWarningModal(ssn, address, court) {
   } else {
     $('#writeinCourt').addClass('hide');
   }
-  console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning}, {rc});
+  // console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning}, {rc});
   if (rc) {
     $('#write-in').modal('show');
     return true;
