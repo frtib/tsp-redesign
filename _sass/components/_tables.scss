@@ -95,7 +95,6 @@ section.charts {
 // SCROLL LEFT & RIGHT table buttons
 div.table-scroll-buttons {
   margin: 3rem 0 .7rem 0;
-  padding-left: 2rem;
   width: 100%;
   text-align: left;
   border: 1px solid red;
@@ -103,10 +102,10 @@ div.table-scroll-buttons {
   button {
     position: sticky;
     z-index: 60;
-    left: 1rem;
+    left: 2rem;
 
     &#slideLeft{
-      left: 15.3rem;
+      left: 16.15rem;
     }
   }
 
@@ -166,6 +165,10 @@ section {
       border-left: none;
       vertical-align: middle;
       padding: 1rem 1.5rem;
+
+      &.table-scroll-buttons {
+        border-right: none;
+      }
     }
 
     td {
