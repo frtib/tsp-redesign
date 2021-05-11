@@ -94,9 +94,22 @@ section.charts {
 
 // SCROLL LEFT & RIGHT table buttons
 div.table-scroll-buttons {
-  // margin-top: 3rem;
   margin: 3rem 0 .7rem 0;
-  text-align: center;
+  padding-left: 2rem;
+  width: 100%;
+  text-align: left;
+  border: 1px solid red;
+
+  button {
+    position: sticky;
+    z-index: 60;
+    left: 1rem;
+
+    &#slideLeft{
+      left: 15.3rem;
+    }
+  }
+
 
   @media only screen and (max-width: #{$large-screen}) {
       button {
