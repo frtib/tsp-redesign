@@ -356,19 +356,52 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
 }
 
 
+// Removing function as part of dav-634-RoR-Last-X-years
+// With body { overflow: initial }, top row and left column of RoR table are sticky.
+// Buttons have no effect -- but it reintroduces horizontal scrolling issues for desktop user without a scroll wheel.
+
 function sideScrollControls(chartName) {
   // Side scroll controls for table
   var container = document.getElementById(chartName+"-table");
   var rightBtn = document.querySelector("#slideRight");
   var leftBtn = document.querySelector("#slideLeft");
 
+
+  // My attempt to capture and store the current margin-left value lf rightBtn (var).
+  var rightBtnStyless = getComputedStyle(rightBtn);
+  var rightBtnLeftMargin = rightBtnStyless.getPropertyValue('margin-left');
+  var sumTotal = rightBtnLeftMargin + 150 + 'px';
+  console.log('onLoad right button left-margin: ' + rightBtnLeftMargin);
+  console.log('sumTotal is ' + sumTotal);
+
+  var rightBtnStyles2 = getComputedStyle(rightBtn);
+
+  // window.addEventListener('load', function() {
+  //   console.log(rightBtnLeftMargin);
+  // });
+
   rightBtn.addEventListener("click", function (event) {
-    container.scrollLeft += 150;
+  //  window.scrollLeft += 150;
+    window.scrollBy(150, 0);
+
+    var rightBtnStyles = getComputedStyle(rightBtn);
+    var left = rightBtnStyles.getPropertyValue('marginLeft');
+    // This works, but it keeps replacing 100px with 100px, it doesn't add 100px to existing value.
+    this.style.marginLeft = left + 150 + 'px';
+
+    console.log('rightBtnStyles = ' + rightBtnStyles);
+    console.log('left = ' + left);
+    // this.style.marginLeft = marl+=100 + 'px';
+    // var blah = this.style.marginLeft(parseInt(10)) + 'px';
     event.preventDefault();
   });
 
+
+
+
   leftBtn.addEventListener("click", function (event) {
-    container.scrollLeft -= 150;
+    // window.scrollLeft -= 150;
+    window.scrollBy(-150, 0);
     event.preventDefault();
   });
 
@@ -393,6 +426,8 @@ function sideScrollControls(chartName) {
   // Recheck overflow on the following events
   window.addEventListener('load', function() {
     disableButtons(container);
+    // Add inline style to body tag to enable sticky header and left column simultaneously.
+    document.body.style.overflowX = "initial";
   });
   window.addEventListener('resize', function() {
     disableButtons(container);
