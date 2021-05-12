@@ -145,6 +145,12 @@ section {
   margin: 0 auto;
   scroll-behavior: smooth;
 
+  .fit-content {
+    width: fit-content;
+    display: table; // IE 11
+    margin: 0 auto;
+  }
+
   .empty-table-cell {
     background-color: $color-gray-lightest;
   }

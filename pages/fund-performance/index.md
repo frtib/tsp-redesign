@@ -47,18 +47,21 @@ redirect_from:
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
 
-  <!-- DONALD: this div will get inserted into the table above the header row -->
-  <div id="scrollButtonBlock" class="hide">
-    <tr>
-      <td colspan="21">
-          <div id="scrollButtons" class="table-scroll-buttons">
-            <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-            <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-          </div>
-      </td>
-    </tr>
+  <div class="table-container-auto">
+    <!-- DONALD: this div will get inserted into the table above the header row -->
+    <div id="scrollButtonBlock" class="hide">
+      <tr>
+        <td colspan="21">
+            <div id="scrollButtons" class="table-scroll-buttons">
+              <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+              <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+            </div>
+        </td>
+      </tr>
+    </div>
+
+    <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
   </div>
-  <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 
 <!-- DAV, This goes away once all returns are As of the most recent month. -->
