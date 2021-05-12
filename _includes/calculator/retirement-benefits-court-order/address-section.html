@@ -409,7 +409,7 @@ any notices related to this court order but will not update your address of reco
 {% endif %}
 
     {% if QDROfields %}
-      <div> <!-- begin RBCO is lawyer -->
+      <div  id="QDROisLawyerOuterPanel"> <!-- begin RBCO is lawyer -->
       {% include calculator/retirement-benefits-court-order/attorney-prompt.html prefix='QDROis'
         legendStr='Retirement Benefits Specialist is Lawyer?'
         attyPrompt='Is the Retirement Benefits Specialist a licensed attorney?' %}

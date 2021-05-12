@@ -19,7 +19,7 @@ Review the input below. Click “Change” to alter your selections. Click the �
 {% include calculator/AYR/div.html caption="Court order details" showPanel=2 gotoAnchor='panel2' %}
 {% include calculator/AYR/div-row.html prompt="Are both parties TSP participants?" rowID='payeePartAYR' %}
 {% include calculator/AYR/div-row.html prompt="Relationship:" rowID='relationshipAYR' %}
-{% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?" rowID='receiveBothAYR' %}
+{% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?" rowID='receiveBothAYR' named=true %}
 
 {% include calculator/AYR/div.html caption="<span id='part1AYR'>Participant</span> information" showPanel=3 gotoAnchor='panel3' %}
 {% include calculator/AYR/div-row.html prompt="Name:" rowID='partfullnameAYR' %}

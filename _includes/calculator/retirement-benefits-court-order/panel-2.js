@@ -117,9 +117,11 @@ function payeePartGood(submit) {
   }
   if (payeePart == 'Yes') {
     $('#relationship-label').html("Select the parties' relationship to one another:");
+    $('#receiveBothAYR-row').removeClass('hide');
   }
   if (payeePart == 'No') {
     $('#relationship-label').html("What is the payee's relationship to the TSP participant?");
+    $('#receiveBothAYR-row').addClass('hide');
   }
 
   $('#partyRelationship').removeClass('hide');
@@ -176,7 +178,7 @@ function relationshipGood(submit) {
 
 function getReceive() {
   testPrimeSettingsPath();
-  if ($('#receiveOne').prop('checked')) { $('#receiveBothAYR').html('No'); return 'One'; }
+  if ($('#receiveOne').prop('checked')) {$('#receiveBothAYR').html('No'); return 'One'; }
   if ($('#receiveBoth').prop('checked')) { $('#receiveBothAYR').html('Yes'); return 'Both'; }
   return '';
 }
