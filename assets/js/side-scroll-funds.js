@@ -360,6 +360,11 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
 // With body { overflow: initial }, top row and left column of RoR table are sticky.
 // Buttons have no effect -- but it reintroduces horizontal scrolling issues for desktop user without a scroll wheel.
 
+function containerSlide(amt) {
+  window.scrollBy(amt, 0);
+  event.preventDefault();
+}
+
 function sideScrollControls(chartName) {
   // Side scroll controls for table
   var container = document.getElementById(chartName+"-table");

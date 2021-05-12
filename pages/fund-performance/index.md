@@ -52,8 +52,8 @@ redirect_from:
     <tr>
       <td colspan="21">
           <div id="scrollButtons" class="table-scroll-buttons">
-            <button id="slideRight" class="usa-button-secondary" type="button"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-            <button id="slideLeft" class="usa-button-secondary" type="button">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+            <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+            <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
           </div>
       </td>
     </tr>
