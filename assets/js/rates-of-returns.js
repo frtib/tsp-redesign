@@ -163,7 +163,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
     if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
     if (lineType == 'life') { val = 'Since inception <sup><a href="#footnotes">1</a></sup>'; }
-    row = sideScrollTH('', '', 'row', val, false);
+    row = sideScrollTH('', 'row', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
       if (valueLine) { val = fundYvalueFormat(parseFloat(col[i].trim())); } else { val = col[i].trim(); }
