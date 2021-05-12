@@ -33,6 +33,7 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
       // fundHighchart(divName+'-monthly', data, 'Monthly Returns', false);
       // buildSideScrollTableRoR will split data rows and call highcharts
       $('#'+divName+'-table').html(buildSideScrollTableRoR(divName, data, doAnnualChart, doMonthlyChart));
+      sideScrollControls('rates-of-return');
       syncCheckboxes(divName+'-annual');
       syncCheckboxes(divName+'-monthly');
       chartResize(divName+'-annual');
@@ -71,6 +72,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     headerHTML = headerHTML + sideScrollTH('', 'col', colClass, col[i], false);
   }
   headerHTML = sideScrollWrapper('', 'tr', '', '', headerHTML, false);
+  headerHTML = $("#scrollButtonBlock").html() + headerHTML;
   headerHTML = sideScrollWrapper('  ', 'thead', '', '', headerHTML, true);
   // console.log(headerHTML);
 
@@ -161,7 +163,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
     if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
     if (lineType == 'life') { val = 'Since inception <sup><a href="#footnotes">1</a></sup>'; }
-    row = sideScrollTH('', '', '', val, false);
+    row = sideScrollTH('', '', 'row', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
       if (valueLine) { val = fundYvalueFormat(parseFloat(col[i].trim())); } else { val = col[i].trim(); }

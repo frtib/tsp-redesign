@@ -20,7 +20,7 @@ document-ready:
   # - chartResize('rates-of-return-monthly');
   - indexFundSync('rates-of-return-annual', true);
   - indexFundSync('rates-of-return-monthly', true);
-  - sideScrollControls('rates-of-return');
+  # - sideScrollControls('rates-of-return');
 redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
@@ -34,11 +34,12 @@ redirect_from:
 # Rates of return
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
 
+{% comment %}
 <div id="scrollButtons" class="table-scroll-buttons">
   <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
   <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
 </div><!-- END div.table-scroll-buttons -->
-
+{% endcomment %}
 </div>
 </div>
 
@@ -46,7 +47,17 @@ redirect_from:
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
 
-  <!-- DAV – Can you put "Fetching data,..." in a span and replace that when the table loads, but leave div#scrollButtons? -->
+  <!-- DONALD: this div will get inserted into the table above the header row -->
+  <div id="scrollButtonBlock" class="hide">
+    <tr>
+      <td colspan="21">
+          <div id="scrollButtons" class="table-scroll-buttons">
+            <button id="slideRight" class="usa-button-secondary" type="button"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+            <button id="slideLeft" class="usa-button-secondary" type="button">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+          </div>
+      </td>
+    </tr>
+  </div>
   <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>
 
