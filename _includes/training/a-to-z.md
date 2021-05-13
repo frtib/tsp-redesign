@@ -9,3 +9,11 @@ This course covers every aspect of TSP participation, and would be beneficial fo
 #### June 16, 2021
 
 - 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=701){:rel="nofollow"}
+
+#### July 1, 2021
+
+- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=702){:rel="nofollow"}
+
+#### July 29, 2021
+
+- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=704){:rel="nofollow"}
