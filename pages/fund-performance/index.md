@@ -34,34 +34,29 @@ redirect_from:
 # Rates of return
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
 
-{% comment %}
-<div id="scrollButtons" class="table-scroll-buttons">
-  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-</div><!-- END div.table-scroll-buttons -->
-{% endcomment %}
+
 </div>
 </div>
 
 <!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
-
-  <div class="table-container-auto">
-    <!-- DONALD: this div will get inserted into the table above the header row -->
-    <div id="scrollButtonBlock" class="hide">
-      <tr>
-        <td colspan="21">
-            <div id="scrollButtons" class="table-scroll-buttons">
-              <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-              <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-            </div>
-        </td>
-      </tr>
-    </div>
-
-    <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
+  <!-- Alert style -->
+  <div class="usa-alert  usa-alert-info usa-alert-paragraph">
+  <div class="usa-alert-body">
+    <p class="usa-alert-text" markdown="1" style="text-align: left">
+      Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
+    </p>
   </div>
+  </div>
+  <!-- Scroll buttons style -->
+    <div class="table-side-scroll">
+      <div id="scrollButtons" class="table-scroll-buttons">
+        <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+        <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+      </div>
+      <div id="{{chartName}}-table">Fetching data, please wait.</div>
+    </div>
 </section>
 
 <!-- DAV, This goes away once all returns are As of the most recent month. -->
