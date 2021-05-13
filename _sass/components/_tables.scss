@@ -140,16 +140,12 @@ section {
 .table {
   // parent container
   position: relative;
-  width: 100%;
+  // width: 100%;
+  width: fit-content;
+  display: table;
   z-index: 1;
   margin: 0 auto;
   scroll-behavior: smooth;
-
-  .fit-content {
-    width: fit-content;
-    display: table; // IE 11
-    margin: 0 auto;
-  }
 
   .empty-table-cell {
     background-color: $color-gray-lightest;

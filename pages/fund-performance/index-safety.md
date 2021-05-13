@@ -35,17 +35,25 @@ redirect_from:
 
 
 <!-- RoR TABLE -->
-<section class="rates-of-return-table">
+<section id="rates-of-return-section" class="rates-of-return-table">
 
-
+<!-- Button style -->
+<div id="scrollButtons" class="table-scroll-buttons">
+  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+</div><!-- END div.table-scroll-buttons -->
 
 <!-- DAV – Can you put "Fetching data,..." in a span and replace that when the table loads, but leave div#scrollButtons? -->
 <div class="table-side-scroll">
-  <div class="fit-content">
-    <div id="scrollButtons" class="table-scroll-buttons">
-      <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-      <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-    </div><!-- END div.table-scroll-buttons -->
+    <!-- Alert style -->
+    <div class="usa-alert  usa-alert-info usa-alert-paragraph">
+    <div class="usa-alert-body">
+      <p class="usa-alert-text" markdown="1" style="text-align: left">
+        Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
+      </p>
+    </div>
+    </div>
+
     <table class="rates-of-return-table">
       <colgroup><col class="column-width"></colgroup>
       <thead>
@@ -1119,7 +1127,6 @@ redirect_from:
       </tbody>
     </table>
   </div>
-</div>
 </section>
 
   <div id="{{chartName}}-div" class="usa-grid-full usa-layout-docs-main_content">

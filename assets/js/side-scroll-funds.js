@@ -367,7 +367,9 @@ function containerSlide(amt) {
 
 function sideScrollControls(chartName) {
   // Side scroll controls for table
-  var container = document.getElementById(chartName+"-table");
+  // var container = document.getElementById(chartName+"-table");
+  var container = document.getElementById(chartName+"-section");
+  // var container = window;
   var rightBtn = document.querySelector("#slideRight");
   var leftBtn = document.querySelector("#slideLeft");
 
@@ -402,7 +404,7 @@ function sideScrollControls(chartName) {
 
   // Recheck overflow on the following events
   window.addEventListener('load', function() {
-    disableButtons(container);
+    // disableButtons(container);
     // Add inline style to body tag to enable sticky header and left column simultaneously.
     document.body.style.overflowX = "initial";
   });
