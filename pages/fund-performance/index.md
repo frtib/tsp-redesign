@@ -43,7 +43,7 @@ redirect_from:
 
     <div class="table-side-scroll">
       <!-- Alert style -->
-      <div class="usa-alert  usa-alert-info usa-alert-paragraph">
+      <div id="scrollAlert" class="usa-alert usa-alert-info usa-alert-paragraph">
         <div class="usa-alert-body">
           <p class="usa-alert-text" markdown="1">
             Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.

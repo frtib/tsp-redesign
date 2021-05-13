@@ -371,6 +371,7 @@ function sideScrollControls(chartName) {
   var container = document.getElementById(chartName+"-section");
   var rightBtn = document.querySelector("#slideRight");
   var leftBtn = document.querySelector("#slideLeft");
+  var alertScroll = document.querySelector("#scrollAlert");
 
   rightBtn.addEventListener("click", function (event) {
   //  window.scrollLeft += 150;
@@ -394,10 +395,12 @@ function sideScrollControls(chartName) {
     if (isOverflowing(element)) {
         rightBtn.disabled = false;
         leftBtn.disabled = false;
+        alertScroll.classList.remove("hide");
     }
     else {
         rightBtn.disabled = true;
         leftBtn.disabled = true;
+        alertScroll.classList.add("hide");
     }
   }
 
