@@ -41,16 +41,18 @@ redirect_from:
 <!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
-  <!-- Alert style -->
-  <div class="usa-alert  usa-alert-info usa-alert-paragraph">
-  <div class="usa-alert-body">
-    <p class="usa-alert-text" markdown="1" style="text-align: left">
-      Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
-    </p>
-  </div>
-  </div>
-  <!-- Scroll buttons style -->
+
     <div class="table-side-scroll">
+
+      <!-- Alert style -->
+      <div class="usa-alert  usa-alert-info usa-alert-paragraph">
+        <div class="usa-alert-body">
+          <p class="usa-alert-text" markdown="1">
+            Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
+          </p>
+        </div>
+      </div>
+      <!-- Scroll buttons style -->
       <div id="scrollButtons" class="table-scroll-buttons">
         <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
         <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>

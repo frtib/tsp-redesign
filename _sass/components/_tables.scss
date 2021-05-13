@@ -147,6 +147,16 @@ section {
   margin: 0 auto;
   scroll-behavior: smooth;
 
+  .usa-alert {
+    position: sticky;
+    left: 0;
+    z-index: 60;
+
+    .usa-alert-text {
+      text-align: left;
+    }
+  }
+
   .empty-table-cell {
     background-color: $color-gray-lightest;
   }
