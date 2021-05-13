@@ -369,7 +369,6 @@ function sideScrollControls(chartName) {
   // Side scroll controls for table
   // var container = document.getElementById(chartName+"-table");
   var container = document.getElementById(chartName+"-section");
-  // var container = window;
   var rightBtn = document.querySelector("#slideRight");
   var leftBtn = document.querySelector("#slideLeft");
 

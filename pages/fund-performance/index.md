@@ -41,9 +41,7 @@ redirect_from:
 <!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
-
     <div class="table-side-scroll">
-
       <!-- Alert style -->
       <div class="usa-alert  usa-alert-info usa-alert-paragraph">
         <div class="usa-alert-body">
@@ -54,8 +52,8 @@ redirect_from:
       </div>
       <!-- Scroll buttons style -->
       <div id="scrollButtons" class="table-scroll-buttons">
-        <button id="slideRight" class="usa-button-secondary" type="button" onClick="containerSlide(150);"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-        <button id="slideLeft" class="usa-button-secondary" type="button" onClick="containerSlide(-150);">Scroll right <i class="fal fa-arrow-to-right"></i></button>
+        <button id="slideRight" class="usa-button-secondary" type="button"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+        <button id="slideLeft" class="usa-button-secondary" type="button">Scroll right <i class="fal fa-arrow-to-right"></i></button>
       </div>
       <div id="{{chartName}}-table">Fetching data, please wait.</div>
     </div>

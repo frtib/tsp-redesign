@@ -72,7 +72,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     headerHTML = headerHTML + sideScrollTH('', 'col', colClass, col[i], false);
   }
   headerHTML = sideScrollWrapper('', 'tr', '', '', headerHTML, false);
-  headerHTML = $("#scrollButtonBlock").html() + headerHTML;
+  // headerHTML = $("#scrollButtonBlock").html() + headerHTML;
   headerHTML = sideScrollWrapper('  ', 'thead', '', '', headerHTML, true);
   // console.log(headerHTML);
 
