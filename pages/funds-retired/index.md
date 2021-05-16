@@ -14,7 +14,7 @@ scripts:
 bottom-scripts:
 document-ready:
   - getRetiredRatesOfReturn('retired-rates');
-  - sideScrollControls('retired-rates');
+  # - sideScrollControls('retired-rates', true);
 redirect_from:
   - /InvestmentFunds/RetiredFundsL2010/index.html
   - /InvestmentFunds/RetiredFundsL2010/sharePrice2010.html
@@ -32,11 +32,6 @@ View the average annual returns history of L Funds that reached their target dat
 {% assign chartName = 'retired-rates' %}
 
 <section id="{{chartName}}-section" class="rates-of-return-table">
-
-<div class="table-scroll-buttons">
-  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-</div><!-- END div.table-scroll-buttons -->
-
-<div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
+  {% include side-scroll-elements.html alert=true buttons=true %}
+  <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>

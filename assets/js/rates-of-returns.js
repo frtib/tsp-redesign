@@ -33,11 +33,11 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
       // fundHighchart(divName+'-monthly', data, 'Monthly Returns', false);
       // buildSideScrollTableRoR will split data rows and call highcharts
       $('#'+divName+'-table').html(buildSideScrollTableRoR(divName, data, doAnnualChart, doMonthlyChart));
-      // sideScrollControls('rates-of-return');
       syncCheckboxes(divName+'-annual');
       syncCheckboxes(divName+'-monthly');
       chartResize(divName+'-annual');
       chartResize(divName+'-monthly');
+      sideScrollControls(divName, true);
     }
   );
   serverCall.fail(

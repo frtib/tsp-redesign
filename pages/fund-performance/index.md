@@ -20,7 +20,7 @@ document-ready:
   # - chartResize('rates-of-return-monthly');
   - indexFundSync('rates-of-return-annual', true);
   - indexFundSync('rates-of-return-monthly', true);
-  - sideScrollControls('rates-of-return');
+  # - sideScrollControls('rates-of-return', true);
 redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
@@ -42,19 +42,7 @@ redirect_from:
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
     <div class="table-side-scroll">
-      <!-- Alert style -->
-      <div id="scrollAlert" class="usa-alert usa-alert-info usa-alert-paragraph">
-        <div class="usa-alert-body">
-          <p class="usa-alert-text" markdown="1">
-            Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
-          </p>
-        </div>
-      </div>
-      <!-- Scroll buttons style -->
-      <div id="scrollButtons" class="table-scroll-buttons">
-        <button id="slideRight" class="usa-button-secondary" type="button"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-        <button id="slideLeft" class="usa-button-secondary" type="button">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-      </div>
+      {% include side-scroll-elements.html alert=true buttons=true checkboxMessage=true %}
       <div id="{{chartName}}-table">Fetching data, please wait.</div>
     </div>
 </section>

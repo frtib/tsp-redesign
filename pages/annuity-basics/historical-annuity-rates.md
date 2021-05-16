@@ -23,10 +23,7 @@ redirect_from:
   Export annuity rates to CSV <i class="fal fa-file-export"></i></button>
 </fieldset>
 </form>
-<div class="table-scroll-buttons">
-  <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-  <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-</div><!-- END div.table-view -->
+{% include side-scroll-elements.html alert=true buttons=true %}
 </div>
 
 <!-- STATIC TABLE -->

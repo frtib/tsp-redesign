@@ -753,7 +753,7 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
           }
           $('#'+historicalDiv).html(buildHistoricalAnnuityTable(rates));
           $('.sortableColumn').click(function(e) { toggleSort(this, 0, 0); });
-          sideScrollControls('historical-rates');
+          sideScrollControls('historical-rates', true);
       }
     );
     serverCall.fail(

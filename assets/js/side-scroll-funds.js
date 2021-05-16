@@ -365,7 +365,7 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
 //   event.preventDefault();
 // }
 
-function sideScrollControls(chartName) {
+function sideScrollControls(chartName, executeFlag) {
   // Side scroll controls for table
   // var container = document.getElementById(chartName+"-table");
   var container = document.getElementById(chartName+"-section");
@@ -373,17 +373,14 @@ function sideScrollControls(chartName) {
   var leftBtn = document.querySelector("#slideLeft");
   var alertScroll = document.querySelector("#scrollAlert");
 
-  rightBtn.addEventListener("click", function (event) {
-  //  window.scrollLeft += 150;
-    window.scrollBy(150, 0);
+  function scrollWindow(amt) {
+    //  window.scrollLeft += amt;
+    window.scrollBy(amt, 0);
     event.preventDefault();
-  });
-
-  leftBtn.addEventListener("click", function (event) {
-    // window.scrollLeft -= 150;
-    window.scrollBy(-150, 0);
-    event.preventDefault();
-  });
+  }
+  if (rightBtn) { rightBtn.addEventListener("click", function (event) { scrollWindow(150); }); }
+  if (leftBtn) { leftBtn.addEventListener("click", function (event) { scrollWindow(-150); });
+  }
 
   //check to determine if an overflow is happening
   function isOverflowing(element) {
@@ -393,14 +390,14 @@ function sideScrollControls(chartName) {
   // If no overflow, disable scroll buttons
   function disableButtons(element) {
     if (isOverflowing(element)) {
-        rightBtn.disabled = false;
-        leftBtn.disabled = false;
-        alertScroll.classList.remove("hide");
+        if (rightBtn) { rightBtn.disabled = false; }
+        if (leftBtn) { leftBtn.disabled = false; }
+        if (alertScroll) { alertScroll.classList.remove("hide"); }
     }
     else {
-        rightBtn.disabled = true;
-        leftBtn.disabled = true;
-        alertScroll.classList.add("hide");
+        if (rightBtn) { rightBtn.disabled = true; }
+        if (leftBtn) { leftBtn.disabled = true; }
+        if (alertScroll) { alertScroll.classList.add("hide"); }
     }
   }
 
@@ -416,4 +413,6 @@ function sideScrollControls(chartName) {
   window.addEventListener('click', function() {
     disableButtons(container);
   });
+
+  if (executeFlag) { disableButtons(container); }
 }
