@@ -111,10 +111,22 @@ div.table-scroll-buttons {
 
 
   @media only screen and (max-width: #{$large-screen}) {
-      button {
+    button {
         display: none;
       }
   }
+}
+
+.scroll-alert-container {
+  display: block;
+  margin: 3rem 0 .7rem 0;
+
+  @media only screen and (max-width: #{$large-screen}) {
+    #scrollAlert {
+      display: none;
+    }
+  }
+
 }
 
 

@@ -4,18 +4,20 @@ Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want
 {% endcapture %}{% endif %}
 {% if include.alert %}
   <!-- Alert style -->
-  <div id="scrollAlert" class="usa-alert usa-alert-info usa-alert-paragraph hide">
-    <div class="usa-alert-body">
-      <p class="usa-alert-text" markdown="1">
-        Use the <strong>left</strong> and <strong>right</strong> buttons on your keyboard to scroll sideways. {{cbMessage}}
-      </p>
+  <div class="scroll-alert-container">
+    <div id="scrollAlert" class="usa-alert usa-alert-info keyboard usa-alert-paragraph hidden">
+      <div class="usa-alert-body">
+        <p class="usa-alert-text" markdown="1">
+          Use the <strong><a href="javascript:void(0);" id="slideLeft" class="move-left">left</a></strong> and <strong><a href="javascript:void(0);" id="slideRight" class="move-right">right</a></strong> buttons on your keyboard to scroll sideways. {{cbMessage}}
+        </p>
+      </div>
     </div>
   </div>
 {% endif %}
 {% if include.buttons %}
   <!-- Scroll buttons style -->
-  <div id="scrollButtons" class="table-scroll-buttons">
-    <button id="slideRight" class="usa-button-secondary" type="button" disabled="disabled"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
+  <!-- <div id="scrollButtons" class="table-scroll-buttons">
+    <button id="slideRight" class="usa-button-secondary" type="button" disabled><i class="fal fa-arrow-to-left"></i> Scroll left</button>
     <button id="slideLeft" class="usa-button-secondary" type="button" disabled>Scroll right <i class="fal fa-arrow-to-right"></i></button>
-  </div>
+  </div> -->
 {% endif %}

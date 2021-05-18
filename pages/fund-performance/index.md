@@ -20,7 +20,7 @@ document-ready:
   # - chartResize('rates-of-return-monthly');
   - indexFundSync('rates-of-return-annual', true);
   - indexFundSync('rates-of-return-monthly', true);
-  # - sideScrollControls('rates-of-return', true);
+  - sideScrollControls('rates-of-return', true);
 redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
@@ -47,15 +47,6 @@ redirect_from:
     </div>
 </section>
 
-<!-- DAV, This goes away once all returns are As of the most recent month. -->
-<!-- Maybe create a final row, with colspan = total columns, and put the footnote in that.  -->
-<div class="usa-grid centered">
-  <div class="usa-width-one-whole">
-    <ol id="footnotes" class="footnotes">
-      <li>Average annual returns as of December 2020</li>
-    </ol>
-  </div>
-</div>
 
 <!-- CHARTS -->
 <section class="rates-of-return-charts">
