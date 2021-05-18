@@ -47,7 +47,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       <span class="" id="{{awardNum}}fixedAmount-error-message" role="alert"></span>
       <span data-format="$" class="input-symbol-left">
       <input aria-labelledby="{{awardNum}}fixedDollar"
-        type="number" min="0" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        type="number" min="0.01" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
         id="{{awardNum}}fixedAmount" name="{{awardNum}}fixedAmount" maxlength="11" value=""
         onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
       </span>
@@ -59,7 +59,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
       <span class="" id="{{awardNum}}percentage-error-message" role="alert"></span>
       <span data-format="%" class="input-symbol-right">
       <input aria-labelledby="{{awardNum}}percentageBalance"
-        type="number" min="0" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        type="number" min="0.01" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
         id="{{awardNum}}percentage" name="{{awardNum}}percentage"  value=""
         onchange="buildString(0, '{{awardNum}}');" onblur="buildString(0, '{{awardNum}}');" />
       </span>
@@ -145,7 +145,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     <span class="" id="{{awardNum}}earningsPercentRate-message" role="alert"></span>
       <span data-format="%" class="input-symbol-right">
       <input aria-labelledby="{{awardNum}}earnings-apr"
-        type="number" min="0" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        type="number" min="0.01" max="100" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
         id="{{awardNum}}earningsPercentRate" name="{{awardNum}}earningsPercentRate" maxlength="11" value=""
         onchange="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');"
         onblur="earningsPercentRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />
@@ -157,7 +157,7 @@ The repeatable award blocks are unique input blocks and I could not use the reus
     <span class="" id="{{awardNum}}earningsPerdiemRate-message" role="alert"></span>
       <span data-format="$" class="input-symbol-left">
       <input aria-labelledby="{{awardNum}}earnings-perdiem"
-        type="number" min="0" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
+        type="number" min="0.01" max="9999999999" step="0.01" onKeyPress="return positiveOnly(event, 1, 0);"
         id="{{awardNum}}earningsPerdiemRate" name="{{awardNum}}earningsPerdiemRate" maxlength="10" value=""
         onchange="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');"
         onblur="earningsPerdiemRateGood(0, '{{awardNum}}'); buildString(0, '{{awardNum}}');" />

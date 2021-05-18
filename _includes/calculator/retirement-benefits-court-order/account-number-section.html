@@ -20,19 +20,19 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
     <ul class="usa-unstyled-list account-type">
       <!-- Civilian -->
       <li>
-        <input type="checkbox" id="{{prefix}}civilian" name="accountType" value="civilian"
+        <input type="checkbox" id="{{prefix}}civilian" name="{{prefix}}civilian" value="civilian"
           onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
         <label for="{{prefix}}civilian">Civilian <span class="nobr">(CSRS or FERS)</span></label>
       </li>
       <!-- USV -->
       <li>
-        <input type="checkbox" id="{{prefix}}uniformed" name="accountType" value="uniformed"
+        <input type="checkbox" id="{{prefix}}uniformed" name="{{prefix}}uniformed" value="uniformed"
           onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');">
         <label for="{{prefix}}uniformed"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(ready reserve or active duty)</span></label>
       </li>
       <!-- Beneficiary Participant -->
         <li>
-        <input type="checkbox" id="{{prefix}}BPA" name="accountType" value="BPA"
+        <input type="checkbox" id="{{prefix}}BPA" name="{{prefix}}BPA" value="BPA"
           onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
         <label for="{{prefix}}BPA"><span data-term="Beneficiary Participant" class="js-glossary-toggle term term-end">Beneficiary Participant</span></label>
       </li>

@@ -18,6 +18,7 @@ Party 2 panel (4) for RBCO.
         onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
         onblur="SSNGood(0, 1, 'pay');" onchange="SSNGood(0, 1, 'pay');" maxlength="9">
     </div>
+    <input id="noSSN" name="noSSN" type="hidden" value="1">
     <!-- Explain this -->
     <ul class="usa-accordion explain-this">
     <li>

@@ -301,6 +301,7 @@ function setPartyNames(flag) {
   $('#partfullname-div').addClass('hide');
   $('#payfullname-div').addClass('hide');
   $('#paySSN-outer-div').addClass('hide');
+  $('#noSSN').val(1);
   $('#payAccountTypeDiv').addClass('hide');
 
   var p1 = 'Participant';
@@ -320,6 +321,7 @@ function setPartyNames(flag) {
     $('#partfullname-div').removeClass('hide');
     $('#payfullname-div').removeClass('hide');
     $('#paySSN-outer-div').removeClass('hide');
+    $('#noSSN').val(0);
     $('#payPanel-H2').html('Contact information');
   }
   $('#progressTrack3').html(p1);

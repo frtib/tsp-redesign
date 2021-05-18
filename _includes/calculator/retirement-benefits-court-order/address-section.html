@@ -128,7 +128,10 @@ any notices related to this court order but will not update your address of reco
       </select>
 {% endcapture %}
       {% include {{altFormFields}} prefix=myPrefix field='state' prompt="State:" type='userBlock' userBlock=stateDropdown %}
-      {% include {{altFormFields}} prefix=myPrefix field='zip' prompt="Zip code:" maxLength=10 %}
+{% capture zipKeypress %}
+onKeyPress="return positiveOnly(event, 0, 1);"
+{% endcapture %}
+      {% include {{altFormFields}} prefix=myPrefix field='zip' prompt="Zip code:" maxLength=10 keypress=zipKeypress %}
     </div><!-- END div.address-domestic -->
 
     <div id="{{prefix}}-address-foreign" class="hide">
