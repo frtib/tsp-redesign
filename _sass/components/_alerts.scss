@@ -26,9 +26,9 @@
   &.keyboard {
     margin: 0;
     opacity: 1;
-    transition: visibility 0s linear 0ms, opacity 0.3s;
+    transition: visibility 0s linear 0s, opacity 0.3s;
 
-    max-height: 40rem;;
+    max-height: 40rem;
 
     &:before {
       content: '\f11c';
@@ -37,13 +37,15 @@
     &.hidden {
       // display: block;
       // visibility: hidden;
-      opacity: 0;
-      transition: visibility 0s linear 0.3s, opacity 0.3s;
-
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s;
       padding: 0;
+
+      opacity: 0;
+      transition: visibility 0s linear 0.3s, opacity 0.3s;
+
+
     }
   }
 
