@@ -20,7 +20,7 @@ document-ready:
   # - chartResize('rates-of-return-monthly');
   - indexFundSync('rates-of-return-annual', true);
   - indexFundSync('rates-of-return-monthly', true);
-  - sideScrollControls('rates-of-return', true);
+  # - sideScrollControls('rates-of-return', true);
 redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
@@ -43,7 +43,7 @@ redirect_from:
 <section id="{{chartName}}-section" class="rates-of-return-table">
 
     <div class="table-side-scroll">
-      {% include side-scroll-elements.html alert=true buttons=true checkboxMessage=true %}
+      {% include side-scroll-alert.html checkboxMessage=true %}
       <div id="{{chartName}}-table">Fetching data, please wait.</div>
     </div>
 </section>

@@ -220,6 +220,7 @@ function getGrowthLifetime(fund) {
       align: 'left',
       text: 'Growth of $100 since Inception'
     },
+    subtitle: { align: 'left', text: 'sub title' },
     data: {
       dateFormat: "YYYY/mm/dd",
       csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflation3.html?fund='+fund,

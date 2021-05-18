@@ -32,6 +32,6 @@ View the average annual returns history of L Funds that reached their target dat
 {% assign chartName = 'retired-rates' %}
 
 <section id="{{chartName}}-section" class="rates-of-return-table">
-  {% include side-scroll-elements.html alert=true buttons=true %}
+  {% comment %}{% include side-scroll-alert.html alert=true buttons=true %}{% endcomment %}
   <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
 </section>

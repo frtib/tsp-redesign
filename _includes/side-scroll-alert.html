@@ -2,7 +2,6 @@
 {% if include.checkboxMessage %}{%  capture cbMessage %}
 Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
 {% endcapture %}{% endif %}
-{% if include.alert %}
   <!-- Alert style -->
   <div class="scroll-alert-container">
     <div id="scrollAlert" class="usa-alert usa-alert-info keyboard usa-alert-paragraph hidden">
@@ -13,11 +12,3 @@ Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want
       </div>
     </div>
   </div>
-{% endif %}
-{% if include.buttons %}
-  <!-- Scroll buttons style -->
-  <!-- <div id="scrollButtons" class="table-scroll-buttons">
-    <button id="slideRight" class="usa-button-secondary" type="button" disabled><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-    <button id="slideLeft" class="usa-button-secondary" type="button" disabled>Scroll right <i class="fal fa-arrow-to-right"></i></button>
-  </div> -->
-{% endif %}

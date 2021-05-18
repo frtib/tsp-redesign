@@ -10,6 +10,7 @@ permalink: /annuity-basics/historical-annuity-rates/
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
   - getHistoricalAnnuityRates('current-rate', 'historical-rates-table');
+  # - sideScrollControls('historical-rates', true);
 redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
 ---
@@ -23,13 +24,12 @@ redirect_from:
   Export annuity rates to CSV <i class="fal fa-file-export"></i></button>
 </fieldset>
 </form>
-{% include side-scroll-elements.html alert=true buttons=true %}
 </div>
 
 <!-- STATIC TABLE -->
 <section id="historical-rates-section">
-<div id="historical-rates-table" class="table-side-scroll">
-</div>
+{% include side-scroll-alert.html %}
+<div id="historical-rates-table" class="table-side-scroll"></div>
 </section>
 
 <!-- CONTENT END -->
