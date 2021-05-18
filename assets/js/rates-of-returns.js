@@ -100,10 +100,10 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     if (lineType == 'y36') { YTD = "Last 36 months"; }
     if (lineType == 'y60') { YTD = "Last 60 months"; }
     if (lineType == 'y120') { YTD = "Last 120 months"; }
-    if (lineType == 'y12a') { YTD = "1 year <sup><a href='#footnotes'>1</a></sup>"; }
-    if (lineType == 'y36a') { YTD = "3 year <sup><a href='#footnotes'>1</a></sup>"; }
-    if (lineType == 'y60a') { YTD = "5 year <sup><a href='#footnotes'>1</a></sup>"; }
-    if (lineType == 'y120a') { YTD = "10 year <sup><a href='#footnotes'>1</a></sup>"; }
+    if (lineType == 'y12a') { YTD = "1 year"; }
+    if (lineType == 'y36a') { YTD = "3 year"; }
+    if (lineType == 'y60a') { YTD = "5 year"; }
+    if (lineType == 'y120a') { YTD = "10 year"; }
 
     // DAV – This is the programming for trailing returns data, when it happens.
     // Basically, the footnote is gone and "Last 12 months" is replaced by "1-year", which are now the same.
@@ -162,7 +162,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     }
     if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
     if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
-    if (lineType == 'life') { val = 'Since inception <sup><a href="#footnotes">1</a></sup>'; }
+    if (lineType == 'life') { val = 'Since inception'; }
     row = sideScrollTH('', 'row', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
