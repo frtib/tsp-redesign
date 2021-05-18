@@ -31,7 +31,8 @@ redirect_from:
 
 <div class="usa-grid centered">
 <div class="usa-width-one-whole" markdown="1">
-# Rates of return
+{% capture asOfDate %}<span id="asOfDate" class="as-of-class">(as of December 2020)</span>{% endcapture %}
+# Rates of return {{asOfDate}}
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
 
 
