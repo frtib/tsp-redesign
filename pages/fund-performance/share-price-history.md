@@ -14,6 +14,7 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/share-price-history.js
+  - /assets/js/sessionstorage-modal.js
 expand-site-alert: false
 document-ready:
   - getSharePricesRaw('dynamic-share-price');  

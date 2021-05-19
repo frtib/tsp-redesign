@@ -117,16 +117,31 @@ div.table-scroll-buttons {
   }
 }
 
+// SCROLL LEFT & RIGHT alert
 .scroll-alert-container {
   display: block;
   margin: 3rem 0 .7rem 0;
+
+  a {
+    &.move-left,
+    &.move-right {
+      padding: 0 .3rem;
+    }
+  }
+
+  span { // 'Don't show this message again' checkbox.
+    display: block;
+
+    label {
+      margin-top: 1.6rem;
+    }
+  }
 
   @media only screen and (max-width: #{$large-screen}) {
     #scrollAlert {
       display: none;
     }
   }
-
 }
 
 
