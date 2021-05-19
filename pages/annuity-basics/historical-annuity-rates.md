@@ -9,7 +9,7 @@ scripts:
 permalink: /annuity-basics/historical-annuity-rates/
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
-  - getHistoricalAnnuityRates('current-rate', 'historical-rates-table');
+  - getHistoricalAnnuityRates('current-rate', 'historical-rates');
   # - sideScrollControls('historical-rates', true);
 redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
@@ -28,8 +28,10 @@ redirect_from:
 
 <!-- STATIC TABLE -->
 <section id="historical-rates-section">
-{% include side-scroll-alert.html %}
-<div id="historical-rates-table" class="table-side-scroll"></div>
+<div class="table-side-scroll">
+  {% include side-scroll-alert.html %}
+  <div id="historical-rates-table" class="table-side-scroll"></div>
+</div>
 </section>
 
 <!-- CONTENT END -->

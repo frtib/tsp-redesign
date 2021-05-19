@@ -725,7 +725,7 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
   var scriptName = 'getAnnuityRates.html?numRates=1000';
   var fetchMsg = 'Fetching data, please wait ...';
   $('#'+currentSpan).html(fetchMsg);
-  $('#'+historicalDiv).html(fetchMsg);
+  $('#'+historicalDiv+'-table').html(fetchMsg);
   var serverCall = $.get(siteName + '/' + scriptName);
     serverCall.done(
       function (data) {
@@ -752,9 +752,9 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
             rates['minYear'] = minYear;
             rates['maxYear'] = maxYear;
           }
-          $('#'+historicalDiv).html(buildHistoricalAnnuityTable(rates));
+          $('#'+historicalDiv+'-table').html(buildHistoricalAnnuityTable(rates));
           $('.sortableColumn').click(function(e) { toggleSort(this, 0, 0); });
-          sideScrollControls('historical-rates', true);
+          sideScrollControls(historicalDiv, true);
       }
     );
     serverCall.fail(

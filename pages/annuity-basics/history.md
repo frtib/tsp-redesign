@@ -9,7 +9,7 @@ scripts:
 permalink: /annuity-basics/history/
 bottom-scripts: /assets/js/ajaxFetch.js
 document-ready:
-  - getHistoricalAnnuityRates('current-rate', 'historical-rates-table');
+  - getHistoricalAnnuityRates('current-rate', 'historical-rates');
 redirect_from:
   - /whatsnew/Content/annuityRateIndex.html
 published: false

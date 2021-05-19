@@ -41,7 +41,6 @@ redirect_from:
 
 <!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
-
     <div class="table-side-scroll">
       {% include side-scroll-alert.html checkboxMessage=true %}
       <div id="{{chartName}}-table">Fetching data, please wait.</div>
