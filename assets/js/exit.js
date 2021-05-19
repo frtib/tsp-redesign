@@ -193,7 +193,6 @@ urlList[282] = '';
 urlList[283] = '';
 urlList[284] = '';
 urlList[285] = '';
-// New to the TSP (or ready for a refresher)? Ask away.
 urlList[286] = '';
 urlList[287] = '';
 urlList[288] = '';
@@ -203,7 +202,6 @@ urlList[291] = '';
 urlList[292] = '';
 urlList[293] = '';
 urlList[294] = '';
-// END New to the TSP
 urlList[301] = 'https://www.dol.gov/agencies/ebsa/laws-and-regulations/laws/pension-protection-act/investing-and-diversification';
 urlList[302] = 'https://americasavesweek.org/';
 urlList[303] = 'https://militarysaves.org/';
