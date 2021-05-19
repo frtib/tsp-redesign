@@ -68,8 +68,10 @@ To understand how the TSP calculates rates of return for any given period of tim
 <div class="usa-width-one-whole" markdown="1">
 <!-- TABLE SECTION -->
 <section id="{{chartName}}-section" class="share-price-table">
+<div class="table-side-scroll">
   {% include side-scroll-alert.html checkboxMessage=true %}
   <div id="{{chartName}}-table" class="table-side-scroll"></div>
+</div>
 </section>
 <!-- CHART SECTION -->
 <section class="share-price-charts">
