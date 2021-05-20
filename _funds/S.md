@@ -35,7 +35,7 @@ summary_details:
     net_expense:    .049
     investment_expense:  .019
     benchmark_index: Dow Jones U.S. Completion Total Stock Market Index | spglobal.com
-    asset_manager: BlackRock Institutional Trust <br />Company, N.A.
+    asset_manager: <span>BlackRock Institutional Trust <br />Company, N.A.</span><span>State Street Global Advisors Trust Company (effective 5/17/2021)</span>
 composition_update: December 31, 2020
 composition:
   - [Information Technology, 25.0]
@@ -72,7 +72,7 @@ top_ten_holdings:
   - name: Lululemon Athletica, Inc.
     abbr: LULU
 additional_info: |
-  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
+  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">S Fund</span> to BlackRock Institutional Trust Company, N.A., and State Street Global Advisors Trust Company. The Fund is invested in the Dow Jones U.S. Completion TSM Index, which contains a large number of stocks, including illiquid stocks with low trading volume and stocks with prices lower than $1.00 per share.
 
   Therefore, it is not efficient for the Fund to invest in every stock in the index. The <span class="nobr">S Fund</span> holds the stocks of most of the companies in the index with market values greater than $1 billion. However, a mathematical sampling technique is used to select among the smaller stocks.
 
