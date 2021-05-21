@@ -7,6 +7,30 @@
     display: none;
   }
 
+  section {
+
+    &.site-banner {
+      display: none;
+    }
+
+    &.footer-section {
+      .usa-width-two-thirds {
+        span {
+          &:not(.nobr) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.calculator-panel {
+      div.panel-form-field {
+        background-color: white;
+      }
+    }
+
+  }
+
   header {
     display: block;
 
@@ -45,6 +69,13 @@
   main {
     aside {
       display: none;
+    }
+
+    .usa-width-one-half {
+      float: left;
+      display: block;
+      margin-right: 2.3576520234%;
+      width: 48.8211739883%;
     }
   }
 
@@ -106,7 +137,7 @@
   .usa-content {
     ol,
     ul {
-      &.adjust,
+      // &.adjust,
       &.navigation-buttons {
         display: none;
       }

@@ -17,7 +17,7 @@ calculator layout uses progress steps, others can call either way
 {% if curStep > numSteps %} {% assign curStep = numSteps %} {% endif %}
 
   <!-- PROGRESS BAR START -->
-  <div id="parent">
+  <div id="parent" class="progress-bar">
     <div id="step">
       <ol class="progstep{{ numSteps }} progstep">
 {% for i in (1..numSteps) %}

@@ -36,9 +36,12 @@ section {
       .usa-grid {
         &.caption {
           // border: 1px solid red;
-          font-weight: $bold;
           margin-bottom: 1.2rem;
           padding-top: 3rem;
+
+          h2 {
+            display: inline-flex;
+          }
 
           a {
             margin-left: 2rem;
@@ -52,6 +55,12 @@ section {
 
           .usa-width-one-half {
             padding: 1rem 0 2rem;
+
+            h3 {
+              font-family: $sans;
+              font-size: inherit;
+              margin: 1rem 0 0 0;
+            }
 
             &:first-child {
               padding-left: 1.5rem;
@@ -103,17 +112,17 @@ section {
         margin-top: 2rem;
 
         li {
-
           .usa-accordion-button {
             background-color: $color-gray-cool-light;
 
             &[aria-expanded="true"] + .usa-accordion-content {
-                border-bottom: none;
-              }
+              border-bottom: none;
+            }
+
             &[aria-expanded="false"] + .usa-accordion-content {
-                border-bottom: 3px solid $color-gray-cool-light;
-                padding-bottom: 3rem;
-              }
+              border-bottom: 3px solid $color-gray-cool-light;
+              padding-bottom: 3rem;
+            }
           }
 
           .usa-accordion-content {
@@ -150,14 +159,15 @@ section {
             .panel-form-field {
               background-color: inherit;
             }
-          } // END .usa-accordion-content
-
+          }
+          // END .usa-accordion-content
           // .usa-accordion-button {
           //   &[aria-expanded="false"] + .usa-accordion-content {
           //       border-bottom: 3px solid $color-gray-cool-light;
           //     }
           //   }
-        } // END li
+        }
+        // END li
 
         &.complete {
           li {
@@ -165,14 +175,13 @@ section {
               background-color: $color-green-lightest;
 
               &[aria-expanded="false"] + .usa-accordion-content {
-                  border-bottom: 3px solid $color-green-lightest;
-                }
+                border-bottom: 3px solid $color-green-lightest;
+              }
             }
 
             .usa-accordion-content {
               border: 3px solid $color-green-lightest;
               border-top: none;
-
               // &:first-of-type {
               //   border-bottom: none;
               // }
@@ -291,3 +300,68 @@ section {
     }
   }
 }
+
+@media print {
+  .progress-bar {
+    ol.progstep,
+    ol.progtrckr {
+      li {
+        color: $color-base;
+        font-weight: $normal;
+        border-radius: 0;
+        opacity: .5;
+      }
+    }
+
+    ol.progstep {
+      li {
+        background-color: transparent;
+        outline: 1px solid $color-base;
+
+        &.progstep-active {
+          color: white;
+          font-weight: $bold;
+          background-color: $color-base;
+          outline-width: 2px;
+          opacity: 1;
+        }
+      }
+    }
+
+    ol.progtrckr {
+      li {
+        border-top: none;
+
+        &.progtrckr-active {
+          font-weight: $bold;
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  #panel-8 {
+    > p {
+      display: none;
+    }
+    ul.usa-accordion-bordered.adjust {
+      button.usa-accordion-button {
+        display: none;
+      }
+
+      div.usa-grid.caption {
+        a {
+          display: none;
+        }
+      }
+
+      .usa-accordion-content {
+        border: none;
+      }
+    }
+  }
+}
+
+// END @media print
