@@ -12,6 +12,8 @@ document-ready:
   - getAnnuityRates('annuity-interest-rates');
 redirect_from:
   - /annuity/
+  - /MonthlyEstimate/ # Short URL on Annual Statements
+  - /monthlyestimate/
 ---
 
 # Annuity basics
@@ -27,5 +29,16 @@ Be aware that an annuity is not the same as a TSP installment payment. A TSP ins
 <span id="annuity-interest-rates">
   Fetching the current annuity interest rate from the server...
 </span>
+
+## Monthly annuity estimate on your annual TSP statement
+You may have seen a section on your annual TSP statement called “**Will you be ready for retirement?**” That section displays an estimated dollar amount for your monthly retirement income.
+
+**We use several assumptions to calculate the annuity estimate on your TSP statement:**
+
+- You’re age 63 (or your current age if you’re older).
+- The annuity interest rate index is 1.480% (for estimates on 2020 statements).
+- You purchase a single life annuity with level payments and no additional features.
+
+To explore annuity estimates based on a different type of annuity purchase—or an annuity purchase combined with other withdrawal options—you can use the [TSP payment and annuity calculator]({{ site.baseurl }}/calculators/tsp-payment-and-annuity-calculator/).
 
 <!-- CONTENT END -->
