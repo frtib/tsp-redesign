@@ -21,12 +21,12 @@ Review the input below. Click “Change” to alter your selections. Click the �
 {% include calculator/AYR/div-row.html prompt="Relationship:" rowID='relationshipAYR' %}
 {% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?" rowID='receiveBothAYR' named=true %}
 
-{% include calculator/AYR/div.html caption="<span id='part1AYR'>Participant</span> information" showPanel=3 gotoAnchor='panel3' %}
+{% include calculator/AYR/div.html caption="<span id='part1AYR'>Participant</span> &nbsp;information" showPanel=3 gotoAnchor='panel3' %}
 {% include calculator/AYR/div-row.html prompt="Name:" rowID='partfullnameAYR' %}
 {% include calculator/AYR/div-row.html prompt="Account number:" rowID='partacctNumAYR' named=true %}
 {% include calculator/AYR/div-row.html prompt="Account number:" rowID='partBPAacctNumAYR' named=true %}
 
-{% include calculator/AYR/div.html caption="<span id='pay1AYR'>Payee</span> information" showPanel=4 gotoAnchor='panel4' %}
+{% include calculator/AYR/div.html caption="<span id='pay1AYR'>Payee</span> &nbsp;information" showPanel=4 gotoAnchor='panel4' %}
 {% include calculator/AYR/div-row.html prompt="Name:" rowID='payfullnameAYR' %}
 {% include calculator/AYR/div-row.html prompt="Social Security number:" rowID='paySSNAYR' named=true %}
 {% include calculator/AYR/div-row.html prompt="Account number:" rowID='payacctNumAYR' named=true %}
@@ -63,7 +63,7 @@ Review the input below. Click “Change” to alter your selections. Click the �
 </ul>
 
 {% capture bonusButton2 %}
-<li><button id="generatePDF" class="usa-button primary" onClick="myGeneratePDFsubmit();" markdown="1">Generate PDF</button></li>
+<li><button id="generatePDFmodalButton" class="usa-button primary" onClick="generatePDFmodal(); return false;" markdown="1">Generate PDF</button></li>
 {% endcapture %}
 {% include calculator/button-block.html panelID=panelID prev=7 print=1  bonusButton2=bonusButton2 %}
 

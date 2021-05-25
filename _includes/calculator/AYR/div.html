@@ -7,5 +7,5 @@ This creates the start of an 'Adjust Your Results' div.
 {% assign divID = include.divID | default: '' %}
 {% if divID != '' %}{% assign divID = 'id="' | append: divID | append: '"' %}{% endif %}
 <div {{tableID}} class="usa-grid caption">
-  <div class="usa-width-one-whole">{{caption}}<a href="#{{gotoAnchor}}" onClick="showPanel({{showPanel}});">Change</a></div>
+  <div class="usa-width-one-whole"><h2>{{caption}}</h2><a href="#{{gotoAnchor}}" onClick="showPanel({{showPanel}});">Change</a></div>
 </div>

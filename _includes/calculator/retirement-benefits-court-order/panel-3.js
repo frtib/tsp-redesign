@@ -33,6 +33,7 @@ panelExit[{{ panelID }}] = function(panel) {
 var showSSNwarning = true;
 var showAddressWarning = true;
 var showCourtWarning = true;
+var showQDROinfo = true;
 function showWarningModal(ssn, address, court) {
   // console.log('showWarningModal', {ssn}, {showSSNwarning}, {address}, {showAddressWarning}, {court}, {showCourtWarning});
   var rc = false;
@@ -63,6 +64,22 @@ function showWarningModal(ssn, address, court) {
     return true;
   }
   return false;
+}
+function showQDROModal(qdro) {
+  var rc = false;
+  if (qdro) {
+    // showQDROinfo = false;
+    rc = true;
+  }
+  if (rc) {
+    $('#rbs-info').modal('show');
+    return true;
+  }
+  return false;
+}
+function generatePDFmodal() {
+  $('#generate-pdf').modal('show');
+  return true;
 }
 
 var cachePart = [];

@@ -4,6 +4,7 @@
 {% assign prefixAD = myPrefix | append: 'AddressTypeDiv' %}
 {% assign fieldID = myPrefix | append: '-address-explain' %}
 {% assign QDROfields = include.isQDRO | default: false %}
+{% assign sectionExplain = include.sectionExplain | default: 'yyy' %}
 {% assign attorneyFields = include.isAttorney | default: false %}
 {% assign isNotAtty = true %}
 {% if QDROfields or attorneyFields %}{% assign isNotAtty = false %}{% endif %}
@@ -20,12 +21,12 @@ submission may delay processing of the order.
 any notices related to this court order but will not update your address of record (AOR) with the TSP.
 {% endcapture %}
 {% if isNotAtty == false %}{% assign explanation = "" %}{% endif %}
+{% if QDROfields %}{% assign explanation = include.QDROexplain %}{% endif %}
 {% include calculator/div-panel-form-field.html
   outerDivID=prefixAD outerDivClass=""  id=addrPanel  fieldID=fieldID
   inputType="none" H2="Contact information for 'prefix' (dav see note)" anchor=prefixContact
   explanation=explanation  dontCloseOuterDiv=true
 %}
-
 {% if include.questionBlock %}{{include.questionBlock}}{% endif %}
 {% assign altFormFields = "calculator/retirement-benefits-court-order/address-form-field.html" %}
 

@@ -68,23 +68,23 @@ function panelTest(submit, warn) {
 function AYRaddressString(prefix) {
   var rc = '';
   var name = $('#'+prefix+'fullname').val();
-  if (name != '') { rc += name + "<BR>\n"; }
+  if (name != '') { rc += "<div>" + name + "</div>\n"; }
   if (prefix != 'QDRO') {
     var lawfirm = $('#'+prefix+'lawfirm').val();
-    if (lawfirm != '') { rc += "<strong>Lawfirm</strong>:<BR>\n" + lawfirm + '<BR>\n'; }
+    if (lawfirm != '') { rc += "<h3>Lawfirm:</h3>\n" + "<div>" + lawfirm + '</div>\n'; }
   }
   if ((prefix != 'QDRO') || ($('#'+prefix+'isLawyerYes').prop('checked'))) {
     var jurisdiction = $('#'+prefix+'jurisdiction').val();
-    if (jurisdiction != '') { rc += "<strong>Jurisdiction</strong>:<BR>\n" + jurisdiction + '<BR>\n'; }
+    if (jurisdiction != '') { rc += "<h3>Jurisdiction:</h3>\n" + "<div>" + jurisdiction + '</div>\n'; }
     var license = $('#'+prefix+'license').val();
-    if (license != '') { rc += "<strong>License</strong>:<BR>\n" + license + '<BR>\n'; }
+    if (license != '') { rc += "<h3>License:</h3>\n" + "<div>" + license + '</div>\n'; }
   }
   var addr = getAddressString(prefix);
-  if (addr != '') { rc += "<strong>Address</strong>:<BR>\n" + addr + '<BR>\n'; }
+  if (addr != '') { rc += "<h3>Address:</h3>\n" + "<div>" + addr + '</div>\n'; }
   var phoneNum = $('#'+prefix+'phoneNum').val();
-  if (phoneNum != '') { rc += phoneNum + " (T)<BR>\n"; }
+  if (phoneNum != '') { rc += "<div>" + phoneNum + " (T)</div>\n"; }
   var faxNum = $('#'+prefix+'faxNum').val();
-  if (faxNum != '') { rc += faxNum + " (F)\n"; }
+  if (faxNum != '') { rc += "<div>" + faxNum + " (F)</div>"; }
 /*
 <td>
 <!-- DAV, you can either wrap each line in a <div> or add <br> after each line, whichever is easier -->
@@ -113,6 +113,7 @@ function isLawyerGood(submit, prefix) {
 }
 function pickLawyer(submit, flag, role) {
   if (flag == 'Y') {
+    if (role == 'QDRO') { showQDROModal(true); }
     $('#' + role + 'LawyerPanel').show();
     processWarnLastPanel();
     return clearError(role + 'Lawyer');
