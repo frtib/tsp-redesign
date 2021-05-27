@@ -1,7 +1,7 @@
 
 function getRetiredRatesOfReturn(chart) {
   var funds = ['Retired', 'Lifetime', 'Inception'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);  // DAV fix this!
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, false, false);
   return false;
@@ -11,7 +11,7 @@ function getRatesOfReturn(chart) {
   var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
   funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
   // funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, true, true);
   return false;
