@@ -214,7 +214,7 @@ function testWarning() {
   $('#maximum-percent-contribution').html(maxpcontrib.toFixed(2));
   $('#maximum-fixed-contribution').html(CurrencyFormatted(totalLimit, 'cent'));
 
-console.log({contrib}, {totalLimit}, {annualPay}, {annualPayPercent}, {annualPayFixed});
+  // console.log({contrib}, {totalLimit}, {annualPay}, {annualPayPercent}, {annualPayFixed});
   // if ((contrib > IRC_contribution_limit) && (getContributionSelector() == 'contributionPercentage')) {
   if (contrib > totalLimit) { return showTestWarning(true); }
   return showTestWarning(false);
