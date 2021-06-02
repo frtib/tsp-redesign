@@ -96,26 +96,10 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     lineType = col.shift();
     val = '';
     // MIXED "As of" DATES.
-    if (lineType == 'y12') { YTD = "Last 12 months"; }
-    if (lineType == 'y36') { YTD = "Last 36 months"; }
-    if (lineType == 'y60') { YTD = "Last 60 months"; }
-    if (lineType == 'y120') { YTD = "Last 120 months"; }
-    if (lineType == 'y12a') { YTD = "1 year"; }
-    if (lineType == 'y36a') { YTD = "3 year"; }
-    if (lineType == 'y60a') { YTD = "5 year"; }
-    if (lineType == 'y120a') { YTD = "10 year"; }
-
-    // DAV – This is the programming for trailing returns data, when it happens.
-    // Basically, the footnote is gone and "Last 12 months" is replaced by "1-year", which are now the same.
-
-    // ALL RETURNS AS OF MOST RECENT MONTH FOR WHICH RETURNS ARE AVAILABLE
-    // if (lineType == 'y36') { YTD = "Last 36 months"; }
-    // if (lineType == 'y60') { YTD = "Last 60 months"; }
-    // if (lineType == 'y120') { YTD = "Last 120 months"; }
-    // if (lineType == 'y12a') { YTD = "1-year"; }
-    // if (lineType == 'y36a') { YTD = "3-year"; }
-    // if (lineType == 'y60a') { YTD = "5-year"; }
-    // if (lineType == 'y120a') { YTD = "10-year"; }
+    if (lineType == 'y12') { YTD = "1 year"; }
+    if (lineType == 'y36') { YTD = "3 year"; }
+    if (lineType == 'y60') { YTD = "5 year"; }
+    if (lineType == 'y120') { YTD = "10 year"; }
 
     if (lineType != lastLineType) {
       if (tmpRows != '') {
@@ -145,8 +129,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
       col[0] = Date.UTC(col[0].substr(0, 4), col[0].substr(4, 2)-1);
       monthlyData.unshift(col.join(","));
     }
-    if ((lineType == 'y12') || (lineType == 'y36') || (lineType == 'y60') || (lineType == 'y120') ||
-        (lineType == 'y12a') || (lineType == 'y36a') || (lineType == 'y60a') || (lineType == 'y120a')) {
+    if ((lineType == 'y12') || (lineType == 'y36') || (lineType == 'y60') || (lineType == 'y120')) {
       val = YTD;
       YTD = ' YTD';
     }
