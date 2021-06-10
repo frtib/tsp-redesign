@@ -17,7 +17,6 @@ permalink: /in-service-withdrawal-basics/financial-hardship/
 Having the option of taking an in-service withdrawal from your TSP account can be a lifesaver when you’re facing a financial hardship. But before you do, evaluate your options carefully and know the consequences.
 
 - **It's a permanent withdrawal from your TSP account.** You can’t put the money back. Furthermore, it reduces the amount of money that grows and generates compound earnings.
-- **Agency/Service Matching Contributions are suspended.** FERS and BRS participants will not receive Agency/Service Matching Contributions until you've restarted your own contributions.
 
 ### Tax considerations
 
