@@ -91,8 +91,10 @@ function fundCheckboxClickAction(chartName, cbName) {
 
 function syncCheckboxByName(chartName, cbName) {
   var vis = $('#'+cbName).prop('checked');
+  // var name = cbName.replace('_', ' ');
   var name = cbName.replace('_', ' ');
   var idx = getSeriesID(name, chartName);
+  // console.log({chartName}, {cbName}, {vis}, {name}, {idx});
   setTableCheckbox(cbName,idx,vis);
   setSeriesVisibility(chartName, idx, vis);
   return false;
@@ -184,6 +186,7 @@ function getSeriesID(name, chartName) {
   var chart = $('#'+chartName).highcharts();
   if (chart == null) { return; }
   var series = chart.series;
+  // console.log({chart},{series});
   for (var i = 0; i < series.length; i++) {
     if (series[i].name == name) { return i; }
   }

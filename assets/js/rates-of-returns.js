@@ -64,6 +64,8 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
   var col = header.split(",");
   var lineType = col.shift(); // ignore header[0] (type)
   header = col.join(",");
+header = header.replace(/  /g, ' ');
+// console.log({header});
   var annualData = [];
   var monthlyData = [];
   var headerHTML = sideScrollTH('', 'col', '', col[0], false);  // column 0 is date
