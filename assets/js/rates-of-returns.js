@@ -27,6 +27,9 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
       var lines = data.split("\n");
       var col = lines[0].split(",");
       // for(var i = col.length-1; i > 1; i--) { col[i] = mapServerFundName(col[i]); }
+      if (lines[lines.length-1] == '') { lines.pop(); }
+      var asOfDate = lines.pop();
+      $('#asOfDate').html('(as of '+asOfDate +')');
       lines[0] = col.join(",");
       data = lines.join("\n");
       // fundHighchart(divName+'-annual', data, 'Annual Returns', false);
