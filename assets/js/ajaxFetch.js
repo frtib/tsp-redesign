@@ -12,7 +12,8 @@ var siteName = "https://secure.tsp.gov/components/CORS/";
 
 var singleFundData = function(fund) {
 
-  var scriptName = 'getFundAverageAnnualReturns.html?fund=' + fund;
+  var scriptName = 'getFundAverageAnnualReturnsTMP.html?fund=' + fund;
+  // console.log(siteName + '/' + scriptName);
   var serverCall = $.get(siteName + '/' + scriptName);
     serverCall.done(
       function (data) {
@@ -25,7 +26,7 @@ var singleFundData = function(fund) {
           var values = rc[0].split(", ");
           // console.log('values length is ', {values});
           if (values.length == 7) {
-            if (rc[1] != '-') { $('#aar_caption').html("Average annual returns (as of December "+rc[1]+")"); }
+            if (rc[1] != '-') { $('#aar_caption').html("Average annual returns (as of "+rc[2]+")"); }
             if (values[1] != '-') { $('#aar_year').html(year); $('#aar_ytd').html(values[1]+'%'); }
             if (values[2] != '-') { $('#aar_1yr').html(values[2]+'%'); }
             if (values[3] != '-') { $('#aar_3yr').html(values[3]+'%'); }
@@ -189,6 +190,9 @@ function resetGrowthCategories(chart) {
   var categories = [];
   var data = chart.series[0].points;
   data = chart.data.rawColumns[0];
+  var subTitle = 'As of ' + data[0];
+  chart.setTitle(null, { text: subTitle });
+  // console.log({chart}, {data}, {subTitle});
   for (var i = 1; i < data.length; i++) {
     categories.push(data[i].replace('(', '').replace(')',''));
   }
@@ -220,9 +224,10 @@ function getGrowthLifetime(fund) {
       align: 'left',
       text: 'Growth of $100 since Inception'
     },
+    subtitle: { align: 'left', text: 'sub title' },
     data: {
       dateFormat: "YYYY/mm/dd",
-      csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflation3.html?fund='+fund,
+      csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflationTMP.html?fund='+fund,
       complete: function() { resetGrowthCategories(growthLifetimeChart); }
     },
     exporting: { csv: { dateFormat: '%Y %m' } },
@@ -298,7 +303,7 @@ function getFundIndexAverageAnnualReturns(fund) {
       switchRowsAndColumns: true,
       beforeParse: function (csv) {
         var data = csv.split('|');
-        setTitle(data[1]);
+        setTitle(data[2]);
         if (data[0].includes('data unavailable')) {
           return null;
           // messy quick hack for no data
@@ -309,7 +314,7 @@ function getFundIndexAverageAnnualReturns(fund) {
         buildReturnsTable(data[0]);
         return data[0];
       },
-      csvURL: 'https://secure.tsp.gov/components/CORS/getFundIndexAverageAnnualReturns.html?fund='+fund
+      csvURL: 'https://secure.tsp.gov/components/CORS/getFundIndexAverageAnnualReturnsTMP.html?fund='+fund
     },
     series: [{ colorIndex: colorFund }, { colorIndex: colorIndex }],
     // exporting: { showTable: true },
@@ -334,8 +339,8 @@ function getFundIndexAverageAnnualReturns(fund) {
     }
   });
 }
-function setTitle(year) {
-	barChart.setTitle({text: 'Average Rates of Return' + '   <span class="hc-note">(As of December ' + year + ')</span>'});
+function setTitle(asOfDate) {
+	barChart.setTitle({text: 'Average Rates of Return' + '   <span class="hc-note">(As of ' + asOfDate + ')</span>'});
 }
 function mapServerFundName (f, glossaryFlag) {
   var fund = f.trim().toUpperCase();
@@ -360,18 +365,22 @@ function mapServerFundName (f, glossaryFlag) {
   if (fund == 'INFLATION') { return 'Inflation'; } // I
 
   if (fund == 'TBILL') { return glossaryTermString(fund, glossaryFlag); } // F
-  if (fund == 'LBA') { return glossaryTermString(fund, glossaryFlag); } // F
+  if (fund == 'USAGG') { return glossaryTermString(fund, glossaryFlag); } // F
+  if (fund == 'US AGG') { return glossaryTermString(fund, glossaryFlag); } // F
   if (fund == 'SP500') { return glossaryTermString(fund, glossaryFlag); } // C
-  if (fund == 'W4500') { return glossaryTermString(fund, glossaryFlag); } // S
+  if (fund == 'DJTSM') { return glossaryTermString(fund, glossaryFlag); } // S
+  if (fund == 'DJ TSM') { return glossaryTermString(fund, glossaryFlag); } // S
   if (fund == 'EAFE') { return glossaryTermString(fund, glossaryFlag); } // I
   return '** ' + fund + ' **';
 }
 function glossaryTermString(fund, glossaryFlag) {
   var term = 'undefined';
   if (fund == 'TBILL') { term = '3-Month T-Bill'; } // G
-  if (fund == 'LBA') { term = 'U.S. Aggregate Index'; } // F
+  if (fund == 'USAGG') { term = 'U.S. Aggregate Index'; } // F
+  if (fund == 'US AGG') { term = 'U.S. Aggregate Index'; } // F
   if (fund == 'SP500') { term = 'S&P 500'; } // C
-  if (fund == 'W4500') { term = 'Dow Jones'; } // S
+  if (fund == 'DJTSM') { term = 'Dow Jones'; } // S
+  if (fund == 'DJ TSM') { term = 'Dow Jones'; } // S
   if (fund == 'EAFE') { term = 'EAFE'; } // I
   if (glossaryFlag == 0) { return term; }
   return term;  // disable this for now
@@ -404,11 +413,13 @@ function mapServerFundClassName (f) {
 
   if (fund == 'TBILL') { return 'index-g'; } // G
   if (fund == 'IG') { return 'index-g'; } // G
-  if (fund == 'LBA') { return 'index-f'; } // F
+  if (fund == 'USAGG') { return 'index-f'; } // F
+  if (fund == 'US AGG') { return 'index-f'; } // F
   if (fund == 'IF') { return 'index-f'; } // F
   if (fund == 'SP500') { return 'index-c'; } // C
   if (fund == 'IC') { return 'index-c'; } // C
-  if (fund == 'W4500') { return 'index-s'; } // S
+  if (fund == 'DJTSM') { return 'index-s'; } // S
+  if (fund == 'DJ TSM') { return 'index-s'; } // S
   if (fund == 'IS') { return 'index-s'; } // S
   if (fund == 'EAFE') { return 'index-i'; } // I
   if (fund == 'II') { return 'index-i'; } // I
@@ -418,7 +429,7 @@ function mapServerFundClassName (f) {
   return '** ' + fund + ' **';
 }
 function buildReturnsTable(arr) {
-  var headName = { YTD: 'YTD', '1-yr': '1&nbsp;Yrs', '3-yr': '3&nbsp;Yrs', '5-yr': '5&nbsp;Yrs', '10-yr': '10&nbsp;Yrs', Lifetime: 'Lifetime'};
+  var headName = { YTD: 'YTD', '1-yr': '1&nbsp;yr', '3-yr': '3&nbsp;yr', '5-yr': '5&nbsp;yr', '10-yr': '10&nbsp;yr', Lifetime: 'Lifetime'};
   var i, j;
   var table = '<table>';
   var lines = arr.split("\n");
@@ -724,7 +735,7 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
   var scriptName = 'getAnnuityRates.html?numRates=1000';
   var fetchMsg = 'Fetching data, please wait ...';
   $('#'+currentSpan).html(fetchMsg);
-  $('#'+historicalDiv).html(fetchMsg);
+  $('#'+historicalDiv+'-table').html(fetchMsg);
   var serverCall = $.get(siteName + '/' + scriptName);
     serverCall.done(
       function (data) {
@@ -751,9 +762,9 @@ var getHistoricalAnnuityRates = function(currentSpan, historicalDiv) {
             rates['minYear'] = minYear;
             rates['maxYear'] = maxYear;
           }
-          $('#'+historicalDiv).html(buildHistoricalAnnuityTable(rates));
+          $('#'+historicalDiv+'-table').html(buildHistoricalAnnuityTable(rates));
           $('.sortableColumn').click(function(e) { toggleSort(this, 0, 0); });
-          sideScrollControls('historical-rates');
+          sideScrollControls(historicalDiv, true);
       }
     );
     serverCall.fail(

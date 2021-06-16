@@ -1,16 +1,17 @@
 
 function getRetiredRatesOfReturn(chart) {
   var funds = ['Retired', 'Lifetime', 'Inception'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);  // DAV fix this!
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, false, false);
   return false;
 }
 
 function getRatesOfReturn(chart) {
-  var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
-  funds = ['Lfunds', 'InvFunds', 'IndexFunds'];
-  var url = fundDownloadString('getMonthlyReturnsSummary.html', '', funds);
+  var funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
+  funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception', 'Trailing'];
+  // funds = ['Lfunds', 'InvFunds', 'IndexFunds', 'Lifetime', 'Inception'];
+  var url = fundDownloadString('getMonthlyReturnsSummaryTMP.html', '', funds);
   // console.log(url);
   doAjaxRetrieveRoR(chart, url, true, true);
   return false;
@@ -26,6 +27,9 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
       var lines = data.split("\n");
       var col = lines[0].split(",");
       // for(var i = col.length-1; i > 1; i--) { col[i] = mapServerFundName(col[i]); }
+      if (lines[lines.length-1] == '') { lines.pop(); }
+      var asOfDate = lines.pop();
+      $('#asOfDate').html('(as of '+asOfDate +')');
       lines[0] = col.join(",");
       data = lines.join("\n");
       // fundHighchart(divName+'-annual', data, 'Annual Returns', false);
@@ -36,6 +40,7 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
       syncCheckboxes(divName+'-monthly');
       chartResize(divName+'-annual');
       chartResize(divName+'-monthly');
+      sideScrollControls(divName, true);
     }
   );
   serverCall.fail(
@@ -51,7 +56,10 @@ var doAjaxRetrieveRoR = function(divName, url, doAnnualChart, doMonthlyChart) {
 }
 
 function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart) {
+  // console.log('buildSideScrollTableRoR', {chartName}, {data}, {doAnnualChart}, {doMonthlyChart});
   var default_RoR_open_row_line = '2021'; // which year row to open on page load
+  // default_RoR_open_row_line = new Date().getUTCFullYear();
+  var separatorTopMarked = false;  // switches to true when 'separator' row is determined
   var i, j, colClass, row;
   var lines = data.split("\n");
   // prep header row
@@ -59,6 +67,8 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
   var col = header.split(",");
   var lineType = col.shift(); // ignore header[0] (type)
   header = col.join(",");
+header = header.replace(/  /g, ' ');
+// console.log({header});
   var annualData = [];
   var monthlyData = [];
   var headerHTML = sideScrollTH('', 'col', '', col[0], false);  // column 0 is date
@@ -67,6 +77,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     headerHTML = headerHTML + sideScrollTH('', 'col', colClass, col[i], false);
   }
   headerHTML = sideScrollWrapper('', 'tr', '', '', headerHTML, false);
+  // headerHTML = $("#scrollButtonBlock").html() + headerHTML;
   headerHTML = sideScrollWrapper('  ', 'thead', '', '', headerHTML, true);
   // console.log(headerHTML);
 
@@ -89,11 +100,22 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     var col = lines[j].split(",");
     lineType = col.shift();
     val = '';
-    if (lineType == 'y12') { YTD = "Last 12 months"; }
+    // MIXED "As of" DATES.
+    if (lineType == 'y12') { YTD = "1 year"; }
+    if (lineType == 'y36') { YTD = "3 year"; }
+    if (lineType == 'y60') { YTD = "5 year"; }
+    if (lineType == 'y120') { YTD = "10 year"; }
 
     if (lineType != lastLineType) {
       if (tmpRows != '') {
         var xClass = 'annual-returns';
+        if (separatorTopMarked == false) {
+          // if ((lastLineType == 'y') || (lastLineType == 'y12') || (lastLineType == 'y36') || (lastLineType == 'y60') || (lastLineType == 'y120')) {
+          if (lastLineType == 'y') {
+            xClass = 'annual-returns separator-top';
+            separatorTopMarked = true;  // only mark start once
+          }
+        }
         if (lastLineType == 'm') {
           xClass = 'monthly-returns hide';
           val = 'year_'+yearName+'_months';
@@ -112,7 +134,7 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
       col[0] = Date.UTC(col[0].substr(0, 4), col[0].substr(4, 2)-1);
       monthlyData.unshift(col.join(","));
     }
-    if (lineType == 'y12') {
+    if ((lineType == 'y12') || (lineType == 'y36') || (lineType == 'y60') || (lineType == 'y120')) {
       val = YTD;
       YTD = ' YTD';
     }
@@ -128,8 +150,8 @@ function buildSideScrollTableRoR(chartName, data, doAnnualChart, doMonthlyChart)
     }
     if (lineType == 'retired') { val = 'Retirement date'; valueLine = false; }
     if (lineType == 'inception') { val = 'Inception date'; valueLine = false; }
-    if (lineType == 'life') { val = 'Annualized lifetime return'; }
-    row = sideScrollTH('', '', '', val, false);
+    if (lineType == 'life') { val = 'Since inception'; }
+    row = sideScrollTH('', 'row', '', val, false);
     for (i = 1; i < col.length; i++) {
       colClass = 'col'+i;
       if (valueLine) { val = fundYvalueFormat(parseFloat(col[i].trim())); } else { val = col[i].trim(); }

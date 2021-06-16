@@ -1,0 +1,22 @@
+{% assign cbMessage = '' %}
+{% if include.checkboxMessage %}{%  capture cbMessage %}
+Or, use the [checkboxes above](#fund-checkboxes) to show only the funds you want to see.
+{% endcapture %}{% endif %}
+  <!-- Alert style -->
+  <div class="scroll-alert-container">
+    <div id="scrollAlert" class="usa-alert usa-alert-info keyboard usa-alert-paragraph hidden">
+      <div class="usa-alert-body">
+        <p class="usa-alert-text" markdown="1">
+          Use the <strong><a href="javascript:void(0);" id="slideLeft" class="move-left">left</a></strong> and <strong><a href="javascript:void(0);" id="slideRight" class="move-right">right</a></strong> buttons on your keyboard to scroll sideways. {{cbMessage}}
+          <span>
+            <input
+              id="dontShow"
+              type="checkbox"
+              name="dontShow"
+              onClick="onChange(this);" />
+            <label for="dontShow">Don't show this message again</label>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>

@@ -14,10 +14,11 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/share-price-history.js
+  - /assets/js/sessionstorage-modal.js
 expand-site-alert: false
 document-ready:
   - getSharePricesRaw('dynamic-share-price');  
-  - sideScrollControls('dynamic-share-price');
+  # - sideScrollControls('dynamic-share-price', true);
 # To test outage messages, change 'today' to a specific date.
 # getSecureAlerts('ID of container div', 'YYYYMMDD')
   - getSecureAlerts('secure-alerts', 'today');
@@ -67,11 +68,10 @@ To understand how the TSP calculates rates of return for any given period of tim
 <div class="usa-width-one-whole" markdown="1">
 <!-- TABLE SECTION -->
 <section id="{{chartName}}-section" class="share-price-table">
-  <div class="table-scroll-buttons">
-    <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-    <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-  </div><!-- END div.table-scroll-buttons -->
+<div class="table-side-scroll">
+  {% include side-scroll-alert.html checkboxMessage=true %}
   <div id="{{chartName}}-table" class="table-side-scroll"></div>
+</div>
 </section>
 <!-- CHART SECTION -->
 <section class="share-price-charts">

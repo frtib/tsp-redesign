@@ -91,8 +91,10 @@ function fundCheckboxClickAction(chartName, cbName) {
 
 function syncCheckboxByName(chartName, cbName) {
   var vis = $('#'+cbName).prop('checked');
+  // var name = cbName.replace('_', ' ');
   var name = cbName.replace('_', ' ');
   var idx = getSeriesID(name, chartName);
+  // console.log({chartName}, {cbName}, {vis}, {name}, {idx});
   setTableCheckbox(cbName,idx,vis);
   setSeriesVisibility(chartName, idx, vis);
   return false;
@@ -184,6 +186,7 @@ function getSeriesID(name, chartName) {
   var chart = $('#'+chartName).highcharts();
   if (chart == null) { return; }
   var series = chart.series;
+  // console.log({chart},{series});
   for (var i = 0; i < series.length; i++) {
     if (series[i].name == name) { return i; }
   }
@@ -356,22 +359,29 @@ function sideScrollWrapper(prefix, tag, id, xclass, content, nl) {
 }
 
 
-function sideScrollControls(chartName) {
+// Removing function as part of dav-634-RoR-Last-X-years
+// With body { overflow: initial }, top row and left column of RoR table are sticky.
+// Buttons have no effect -- but it reintroduces horizontal scrolling issues for desktop user without a scroll wheel.
+
+// function containerSlide(amt) {
+//   window.scrollBy(amt, 0);
+//   event.preventDefault();
+// }
+
+function sideScrollControls(chartName, executeFlag) {
   // Side scroll controls for table
-  var container = document.getElementById(chartName+"-table");
-  var rightBtn = document.querySelector("#slideRight");
+  // var container = document.getElementById(chartName+"-table");
+  var container = document.getElementById(chartName+"-section");
   var leftBtn = document.querySelector("#slideLeft");
+  var rightBtn = document.querySelector("#slideRight");
+  var alertScroll = document.querySelector("#scrollAlert");
 
-  rightBtn.addEventListener("click", function (event) {
-    container.scrollLeft += 150;
+  function scrollWindow(amt) {
+    window.scrollBy(amt, 0);
     event.preventDefault();
-  });
-
-  leftBtn.addEventListener("click", function (event) {
-    container.scrollLeft -= 150;
-    event.preventDefault();
-  });
-
+  }
+  if (leftBtn) { leftBtn.addEventListener("click", function (event) { scrollWindow(-150); }); }
+  if (rightBtn) { rightBtn.addEventListener("click", function (event) { scrollWindow(150); }); }
 
   //check to determine if an overflow is happening
   function isOverflowing(element) {
@@ -381,23 +391,29 @@ function sideScrollControls(chartName) {
   // If no overflow, disable scroll buttons
   function disableButtons(element) {
     if (isOverflowing(element)) {
-        rightBtn.disabled = false;
-        leftBtn.disabled = false;
-    }
-    else {
-        rightBtn.disabled = true;
-        leftBtn.disabled = true;
+        if (alertScroll) { alertScroll.classList.remove("hidden"); }
+    } else {
+        if (alertScroll) { alertScroll.classList.add("hidden"); }
     }
   }
 
   // Recheck overflow on the following events
-  window.addEventListener('load', function() {
+/*
+    window.addEventListener('load', function() {
     disableButtons(container);
+    // Add inline style to body tag to enable sticky header and left column simultaneously.
+    document.body.style.overflowX = "initial";
   });
+*/
   window.addEventListener('resize', function() {
     disableButtons(container);
   });
   window.addEventListener('click', function() {
     disableButtons(container);
   });
+
+  if (executeFlag) {
+    disableButtons(container);
+    document.body.style.overflowX = "initial";  // on first call, not load because of ajax
+  }
 }

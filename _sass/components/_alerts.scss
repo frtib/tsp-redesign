@@ -8,8 +8,10 @@
     width: 0;
   }
 
-  &.cc {
+  &.cc,
+  &.keyboard {
     background-image: none;
+    animation: fadeIn ease 3s;
 
     &:before {
       background-color: inherit;
@@ -18,6 +20,32 @@
       padding: 0.7rem 2rem;
       font-size: 3.75rem;
       font-weight: $light;
+    }
+  }
+
+  &.keyboard {
+    margin: 0;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.3s;
+
+    max-height: 40rem;
+
+    &:before {
+      content: '\f11c';
+      padding-top: 25px;
+    }
+    &.hidden {
+      // display: block;
+      // visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      padding: 0;
+
+      opacity: 0;
+      transition: visibility 0s linear 0.3s, opacity 0.3s;
+
+
     }
   }
 
@@ -93,17 +121,6 @@
 .usa-alert-info {
   background-image: url($baseurl + '/assets/img/icons/info.svg');
   border-top-color: #323A45;
-
-  &.cc {
-    background-image: none;
-
-    &:before {
-      font-family: $font-awesome;
-      content: "\f20a";
-      padding: 0.7rem 2rem;
-      font-size: 3.5rem;
-    }
-  }
 
   .usa-alert-body {
     padding-left: 5rem;

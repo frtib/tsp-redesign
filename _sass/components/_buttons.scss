@@ -54,6 +54,19 @@ button {
     }
   }
 
+  // &.move-left {
+  //   &:before {
+  //     content: "\f191";
+  //   }
+  // }
+  //
+  // &.move-right {
+  //   &:after {
+  //     content: "\f191";
+  //     transform: rotate(90deg);
+  //   }
+  // }
+
   &.open {
     &:before {
       content: "\f14c";

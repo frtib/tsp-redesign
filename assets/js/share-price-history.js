@@ -67,7 +67,7 @@ function getSharePricesRaw(chart) {
   var url = sharePriceDownloadString('getSharePricesRaw.html', dateRange[0], dateRange[1], funds);
   url += '&download=0';
   // console.log(url);
-  doAjaxRetrieveRaw(chart, url);
+  doAjaxRetrieveRaw(chart, url, true);
   return false;
 }
 
@@ -127,7 +127,7 @@ function buildSideScrollTableSH(chartName, data) {
   // console.log(table);
   return table;
 }
-var doAjaxRetrieveRaw = function(divName, url) {
+var doAjaxRetrieveRaw = function(divName, url, scrollButtons) {
   $('#'+divName).html('Calling server for data...');
   var serverCall = $.get(url);
   serverCall.done(
@@ -137,6 +137,7 @@ var doAjaxRetrieveRaw = function(divName, url) {
       $('#'+divName+'-table').html(buildSideScrollTableSH(divName, data));
       syncCheckboxes(divName);
       chartResize(divName);
+      if (scrollButtons) { sideScrollControls(divName, true); }
     }
   );
   serverCall.fail(

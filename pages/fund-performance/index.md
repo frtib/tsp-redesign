@@ -12,6 +12,7 @@ scripts:
   - /assets/js/ajaxFetch.js
   - /assets/js/side-scroll-funds.js
   - /assets/js/rates-of-returns.js
+  - /assets/js/sessionstorage-modal.js
 expand-site-alert: false
 bottom-scripts:
 document-ready:
@@ -20,7 +21,7 @@ document-ready:
   # - chartResize('rates-of-return-monthly');
   - indexFundSync('rates-of-return-annual', true);
   - indexFundSync('rates-of-return-monthly', true);
-  - sideScrollControls('rates-of-return');
+  # - sideScrollControls('rates-of-return', true);
 redirect_from:
   - /InvestmentFunds/FundPerformance/returnSummary.html
   - /InvestmentFunds/FundPerformance/monthlyReturns.html
@@ -31,19 +32,22 @@ redirect_from:
 
 <div class="usa-grid centered">
 <div class="usa-width-one-whole" markdown="1">
-# Rates of return
+{% capture asOfDate %}<span id="asOfDate" class="as-of-date"></span>{% endcapture %}
+# Rates of return {{asOfDate}}
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=1 chartName=chartName %}
+
+
 </div>
 </div>
 
 <!-- RoR TABLE -->
 <section id="{{chartName}}-section" class="rates-of-return-table">
-  <div class="table-scroll-buttons">
-    <button id="slideRight" class="slide-right" type="button" class="usa-button-secondary"><i class="fal fa-arrow-to-left"></i> Scroll left</button>
-    <button id="slideLeft" class="slide-left" type="button" class="usa-button-secondary">Scroll right <i class="fal fa-arrow-to-right"></i></button>
-  </div><!-- END div.table-scroll-buttons -->
-  <div id="{{chartName}}-table" class="table-side-scroll">Fetching data, please wait.</div>
+    <div class="table-side-scroll">
+      {% include side-scroll-alert.html checkboxMessage=true %}
+      <div id="{{chartName}}-table">Fetching data, please wait.</div>
+    </div>
 </section>
+
 
 <!-- CHARTS -->
 <section class="rates-of-return-charts">

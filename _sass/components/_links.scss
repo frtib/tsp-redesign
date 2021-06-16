@@ -1,13 +1,34 @@
 
 a {
-  &::after {
+  &::after,
+  &::before {
     font-family: $font-awesome;
-    padding-left: 0.4rem;
     font-style: normal;
     font-weight: $light;
     display: inline-block;
     text-decoration: none;
 
+  }
+
+  &::after {
+    padding-right: 0.4rem;
+  }
+
+  &::before {
+    padding-right: 0.4rem;
+  }
+
+  &.move-left {
+    &:before {
+      content: "\f191";
+    }
+  }
+
+  &.move-right {
+    &:after {
+      content: "\f191";
+      transform: rotate(180deg);
+    }
   }
   &.learn-more {
       &::after {

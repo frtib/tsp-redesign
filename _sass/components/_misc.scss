@@ -43,6 +43,14 @@ html {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .nav-header {
   // Used in COVID-19 section
   font-size: 2.2rem;
