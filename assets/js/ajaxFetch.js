@@ -418,7 +418,7 @@ function mapServerFundClassName (f) {
   return '** ' + fund + ' **';
 }
 function buildReturnsTable(arr) {
-  var headName = { YTD: 'YTD', '1-yr': '1&nbsp;Yrs', '3-yr': '3&nbsp;Yrs', '5-yr': '5&nbsp;Yrs', '10-yr': '10&nbsp;Yrs', Lifetime: 'Lifetime'};
+  var headName = { YTD: 'YTD', '1-yr': '1&nbsp;yr', '3-yr': '3&nbsp;yr', '5-yr': '5&nbsp;yr', '10-yr': '10&nbsp;yr', Lifetime: 'Lifetime'};
   var i, j;
   var table = '<table>';
   var lines = arr.split("\n");
