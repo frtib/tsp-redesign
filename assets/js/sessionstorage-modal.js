@@ -4,9 +4,9 @@ var scrollBox = document.querySelector("#scrollAlert");
 function toggle(on) {
 
   if (on) {
-    scrollBox.style.display = "none";
+    scrollBox.classList.add("none");
   } else {
-    scrollBox.style.display = "block";
+    scrollBox.classList.add("");
   }
 }
 

@@ -110,7 +110,7 @@ div.table-scroll-buttons {
   }
 
 
-  @media only screen and (max-width: #{$large-screen}) {
+  @media only screen and (max-width: $large-screen) {
     button {
         display: none;
       }
@@ -137,7 +137,7 @@ div.table-scroll-buttons {
     }
   }
 
-  @media only screen and (max-width: #{$large-screen}) {
+  @media only screen and (max-width: $large-screen) {
     #scrollAlert {
       display: none;
     }
@@ -204,10 +204,6 @@ section {
       border-left: none;
       vertical-align: middle;
       padding: 1rem 1.5rem;
-
-      &.table-scroll-buttons {
-        border-right: none;
-      }
     }
 
     td {
@@ -334,6 +330,12 @@ section {
     }
   }
   // end table
+
+  // @media only screen and (max-width: $large-screen) {
+  //   border: 1px solid red;
+  //   width: 100%;
+  //   display: initial;
+  // }
 }
 // end .table-side-scroll, .table
 
