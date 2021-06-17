@@ -7,7 +7,6 @@ scripts:
 permalink: /agency-service-reps/tsp-educational-resources/
 redirect_from:
   - /representative/Content/trainingInfo.html
-  - /webinars/
   - /agency-service-reps/training/
 ---
 
@@ -57,7 +56,7 @@ WebEx registration password: TSPweb
 - You will need access to WebEx via any internet connected device to register for and attend TSP webinars.
 - If your agency or service does not allow access to WebEx, please contact the appropriate office at your agency or service for assistance.
 - You can use personal email addresses and devices to register and attend the sessions.
-- After you register, you’ll receive a confirmation email from WebEx with a link to join the webinar or course.
+  - After you register, you’ll receive a confirmation email from WebEx with a link to join the webinar or course.
 - **All scheduled start times are listed in eastern time.**
 - Most webinars are 1 to 1.5 hours. Courses are either 2.5 hours or 4 hours.
 - All dates and topics are subject to change or cancellation. Additional dates and topics may be added.
@@ -66,27 +65,6 @@ WebEx registration password: TSPweb
 
 To learn more about TSP webinars, please contact us at **webinars@frtib.gov.**
 
-<div class="usa-alert usa-alert-info cc usa-alert-paragraph">
-  <div class="usa-alert-body">
-    <h3 class="usa-alert-heading">Closed Captioning</h3>
-    <p class="usa-alert-text">Closed Caption services are available upon request if submitted three business days prior to the event date. Please submit requests to webinars@frtib.gov.</p>
-  </div>
-</div>
-
-## Webinars
-{% include training/intro-to-tsp.md %}
-{% include training/contributions.md %}
-{% include training/death-benefits.md %}
-{% include training/in-service-wd.md %}
-{% include training/investment-funds.md %}
-{% include training/loans.md %}
-{% include training/post-service-wd.md %}
-
-## Courses
-{% include training/a-to-z.md %}
-{% include training/early-to-mid-career.md %}
-{% include training/pre-separation.md %}
-{% include training/retirement-beyond.md %}
 
 ### TSP webinar privacy notice
 

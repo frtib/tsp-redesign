@@ -29,9 +29,18 @@ published: true
 <!-- TSP Contributions -->
 <a name="tsp-contributions"></a>
 <div class="grid-container">
-  <div class="course">TSP Contributions</div>
+  <div class="course">TSP Contributions: Taking Control of Your Future</div>
   <div class="description" markdown="1">
-  This webinar provides an overview of the TSP contribution rules. The discussion includes an in-depth look at federal civilian and uniformed services TSP contributions. The differences between traditional or Roth contributions will also be covered.
+  The future of your TSP account depends on decisions you make today, and your choices will directly affect your retirement income. Join us for this webinar as we detail TSP contribution rules. We’ll take you through the basics and equip you with the information you need to make the best choices for your future.
+
+  By the end of this session you’ll be able to:
+
+  - Determine if your contribution election is right for you.
+  - Understand how to receive the full match if eligible.
+  - Recognize the impact of reaching the contribution limits early.
+  - Determine when you’d like to pay taxes on your TSP contributions.
+  - Locate resources to learn more about the TSP.
+
   </div>
   <div class="duration">1 hour</div>
   <div class="format"><span data-term="webinar" class="js-glossary-toggle term term-end">webinar</span></div>

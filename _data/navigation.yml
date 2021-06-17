@@ -18,6 +18,8 @@ primary:
       href: /making-contributions/
     - text: Access your account
       href: /access-your-account/
+    - text: Online learning
+      href: /online-learning/
     - text: Forms and resources
       href: /forms/
     - text: Frequently asked questions
@@ -160,6 +162,8 @@ manage-your-plan:
 #      href: /access-your-account/recover-your-user-id/
 #    - text: Reset your TSP password
 #      href: /access-your-account/reset-your-tsp-password/
+  - text: Online learning
+    href: /online-learning/
   - text: Forms and resources
     href: /forms/
   - text: Frequently asked questions
