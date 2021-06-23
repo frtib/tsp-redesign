@@ -1,18 +1,16 @@
 ### [TSP Investment Funds]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-investment-funds){:target="\_blank" .external-link}
 
-This webinar provides an overview of the TSP investment funds. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
+This webinar provides an overview of the TSP investment funds. The agenda includes a discussion on investing to meet retirement goals, individual TSP funds (G, F, C, S, and I), TSP Lifecycle (L) Funds, and other TSP fund considerations. This is a 1-hour webinar.
 
-#### May 20, 2021
-
-- 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=401){:rel="nofollow"}
-
-#### June 16, 2021
-
-- 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=402){:rel="nofollow"}
-
-#### June 22, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=403){:rel="nofollow"}
+<ul class="usa-accordion">
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="register-tsp-investment-funds">
+    View schedule and register
+  </button>
+<div id="register-tsp-investment-funds" class="usa-accordion-content" markdown="1">
 
 #### July 8, 2021
 
@@ -22,3 +20,7 @@ This webinar provides an overview of the TSP investment funds. TSP webinars are 
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=405){:rel="nofollow"}
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=406){:rel="nofollow"}
+
+</div>
+</li>
+</ul>

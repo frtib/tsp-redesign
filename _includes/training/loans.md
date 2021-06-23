@@ -1,14 +1,16 @@
 ### [TSP Loans]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-loans){:target="\_blank" .external-link}
 
-This webinar provides an overview of the TSP loan program. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
+This webinar provides an overview of the TSP loan program. The agenda includes the types of TSP loans (general purpose and residential), loan amounts, costs of a TSP loan, and other TSP loan considerations. This is a 1-hour webinar.
 
-#### May 19, 2021
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=501){:rel="nofollow"}
-
-#### May 27, 2021
-
-- 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=502){:rel="nofollow"}
+<ul class="usa-accordion">
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="register-tsp-loans">
+    View schedule and register
+  </button>
+<div id="register-tsp-loans" class="usa-accordion-content" markdown="1">
 
 #### June 24, 2021
 
@@ -17,3 +19,7 @@ This webinar provides an overview of the TSP loan program. TSP webinars are host
 #### July 6, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=504){:rel="nofollow"}
+
+</div>
+</li>
+</ul>

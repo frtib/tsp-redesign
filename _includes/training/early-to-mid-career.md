@@ -1,16 +1,16 @@
 ### [TSP Early to Mid-Career (EMC)]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-early-to-mid-career){:target="\_blank" .external-link}
 
-#### May 25, 2021
+This webinar focuses on what early and mid-career employees and service members can do to take full advantage of the TSP. You’ll learn how TSP contributions work, the difference between traditional and Roth contributions, and how to manage your TSP account throughout your career. This is a 2&frac12;-hour session.
 
-- 9:00 a.m.	— [Register]({{ site.baseurl }}/exit/?idx=172){:rel="nofollow"}
-
-#### June 3, 2021
-
-- 8:00 a.m.	— [Register]({{ site.baseurl }}/exit/?idx=173){:rel="nofollow"}
-
-#### June 17, 2021
-
-- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=174){:rel="nofollow"}
+<ul class="usa-accordion">
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="register-tsp-emc">
+    View schedule and register
+  </button>
+<div id="register-tsp-emc" class="usa-accordion-content" markdown="1">
 
 #### July 6, 2021
 
@@ -23,3 +23,7 @@
 #### July 28, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=176){:rel="nofollow"}
+
+</div>
+</li>
+</ul>

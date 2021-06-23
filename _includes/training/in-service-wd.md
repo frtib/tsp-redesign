@@ -1,10 +1,16 @@
 ### [TSP In-Service Withdrawals]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-in-service-withdrawals){:target="\_blank" .external-link}
 
-This webinar provides an overview of the TSP in-service withdrawal options. TSP webinars are hosted by the FRTIB’s Office of Communications and Education. This is a 1-hour webinar.
+This webinar provides an overview of the TSP in-service withdrawal options. This webinar covers financial hardship in-service withdrawals, age-based in-service withdrawals, and other in-service withdrawal considerations. This is a 1-hour webinar.
 
-#### June 8, 2021
-
-- 10:00 a.m. 	— [Register]({{ site.baseurl }}/exit/?idx=245){:rel="nofollow"}
+<ul class="usa-accordion">
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="register-in-service-withdrawals">
+    View schedule and register
+  </button>
+<div id="register-in-service-withdrawals" class="usa-accordion-content" markdown="1">
 
 #### June 24, 2021
 
@@ -17,3 +23,7 @@ This webinar provides an overview of the TSP in-service withdrawal options. TSP 
 #### July 23, 2021
 
 - 10:00 a.m. 	— [Register]({{ site.baseurl }}/exit/?idx=248){:rel="nofollow"}
+
+</div>
+</li>
+</ul>

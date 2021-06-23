@@ -11,13 +11,6 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
     View schedule and register
   </button>
 <div id="register-intro" class="usa-accordion-content" markdown="1">
-#### May 13, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=223){:rel="nofollow"}
-
-#### June 15, 2021
-
-- 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=224){:rel="nofollow"}
 
 #### July 22, 2021
 
@@ -26,6 +19,7 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
 #### July 30, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=222){:rel="nofollow"}
+
 </div>
 </li>
 </ul>

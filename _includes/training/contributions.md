@@ -21,13 +21,6 @@ This is a 1-hour webinar.
     View schedule and register
   </button>
 <div id="register-contributions" class="usa-accordion-content" markdown="1">
-#### May 13, 2021
-
-- 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=276){:rel="nofollow"}
-
-#### June 3, 2021
-
-- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=280){:rel="nofollow"}
 
 #### June 30, 2021
 
@@ -41,8 +34,8 @@ This is a 1-hour webinar.
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=278){:rel="nofollow"}
 
-Can’t make the times listed? [View a recording of this webinar.]({{ site.baseurl }}){:.download}
-[You can also download a copy of the presentation (811kb PDF).]({{ site.baseurl }}){:.download}
+Can’t make the times listed? [View a recording of this webinar.]({{ site.baseurl }}){:.file-download}
+[You can also download a copy of the presentation (811kb PDF).]({{ site.baseurl }}){:.file-download}
 </div>
 </li>
 </ul>
