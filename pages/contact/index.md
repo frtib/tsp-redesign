@@ -44,16 +44,6 @@ For account-specific inquiries, log in to My Account, click **Message Center**, 
 <div class="usa-width-one-half" markdown="1">
 
 ![alt text]({{ site.baseurl }}/assets/img/icons/mail.svg)
-### General mailing address
-Thrift Savings Plan  
- P.O. Box 385021   
-Birmingham, AL 35238
-
-### General mailing address
-Thrift Savings Plan  
- P.O. Box 385021   
-Birmingham, AL 35238
-
 ### General mailing addresses
 Thrift Savings Plan  
 P.O. Box 385021  
