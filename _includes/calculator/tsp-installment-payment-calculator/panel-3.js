@@ -58,7 +58,7 @@ function calculate() {
   if (isNaN(fmonths)) {
     setPaymentsLength(1000, 1000, periods);
     $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
-    $('#account-depleted').html('--');
+    $('#account-depleted').html('Never');
   } else {
     var fyears = mathTrunc(fmonths/periods);
     fmonths = fmonths - fyears * periods;
