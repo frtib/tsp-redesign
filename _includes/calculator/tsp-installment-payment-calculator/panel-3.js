@@ -40,22 +40,25 @@ function calculate() {
   var periods = choice[2];
   var rateOfReturn = parseFloat($('#rateOfReturn').val());
   var amountToReceive = getPosInteger('amountToReceive', 0);
-  // console.log('calculate ', accountAmount, periods, frequency, rateOfReturn, amountToReceive);
+  // console.log('calculate ', {accountAmount}, {periods}, {frequency}, {rateOfReturn}, {amountToReceive});
 
   var rate = rateOfReturn / 100.0;
   var periodRate = (Math.pow(1.0 + rate, 1.0 / periods) - 1.0); // annualize rate per period
   var rate = periods * periodRate; //annualized rate for year
-  // console.log(numYears, periodRate, rate);
 
   // number of payments in upper table
   $('#deplete-text').html('Will deplete your account in');
-  var fmonths = -1.0 * Math.log(1 - periodRate * accountAmount / (1.0 * amountToReceive));
-  fmonths /= Math.log(1 + periodRate);
-  fmonths = mathTrunc(fmonths) + 1;
+  var fmonths = (1.0 * accountAmount) / amountToReceive;
+  if (rate > 0) {
+    fmonths = -1.0 * Math.log(1 - periodRate * accountAmount / (1.0 * amountToReceive));
+    fmonths /= Math.log(1 + periodRate);
+    fmonths = mathTrunc(fmonths) + 1;
+  }
+  // console.log({numYears}, {periodRate}, {rate}, {fmonths});
   if (isNaN(fmonths)) {
     setPaymentsLength(1000, 1000, periods);
     $('#deplete-text').html('Will never deplete your account. See your <a href="#projected-year-end-balances">projected year-end balances</a> below.');
-    $('#account-depleted').html('--');
+    $('#account-depleted').html('Never');
   } else {
     var fyears = mathTrunc(fmonths/periods);
     fmonths = fmonths - fyears * periods;
@@ -68,7 +71,7 @@ function calculate() {
     payments[year] = curPayment;
     for (var period = 1; period <= periods; period++) {
       if (curBalance > 0.0) {
-        if (curBalance < curPayment) {
+        if (curBalance <= curPayment) {
           yearsTilDepleted = year-1;
           monthsRemainder = period * 12 / periods;
           curBalance = 0.0;
@@ -76,6 +79,7 @@ function calculate() {
         } else {
           curBalance -= curPayment;
           curBalance = parseFloat((curBalance * (1.0 + periodRate)).toFixed(2));
+          // console.log({curBalance}, {year}, {period});
         }
       } else curPayment = 0;
     }
@@ -93,6 +97,7 @@ function calculate() {
 }
 
 function setPaymentsLength(years, months, periods) {
+  //console.log('setPaymentsLength', {years}, {months}, {periods});
   var y = ' years';
   var p = 'payments';
   var footnote = '';
