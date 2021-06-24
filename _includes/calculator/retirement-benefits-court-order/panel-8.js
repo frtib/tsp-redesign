@@ -669,6 +669,7 @@ function hideUnchoosenOptions() {
 function myGeneratePDFsubmit() {
   myCancelBeforeUnload();
   // $('#generatePDFform').attr('action', 'https://secure.tsp.gov/components/CORS/courtOrder/courtOrder.html');
+  // copy non redacted account for post
   $('#generatePDFform').submit();
   setTimeout(function(){myInitBeforeUnload();}, 5000);
   // myInitBeforeUnload();

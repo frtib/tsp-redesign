@@ -35,6 +35,9 @@ panelEnter[{{ panelID }}] = function(panel) {
 panelExit[{{ panelID }}] = function(panel) {
     // special code for show/hide pay SSN vs accts
     var receive = getReceive();
+    $('#payacctNumRAW').val($('#payacctNum').attr('data-store'));
+    $('#payBPAacctNumRAW').val($('#payBPAacctNum').attr('data-store'));
+    $('#paySSNRAW').val($('#paySSN').attr('data-store'));
     // SSNGood(0, 1, 'pay');
     // accountNumbersGood(0, 'pay');
     if (receive == 'Both') {

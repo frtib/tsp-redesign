@@ -45,6 +45,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
             aria-labelledby="{{prefix}}acctNum-label" type="text"
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+          <input id="{{prefix}}acctNumRAW" name="{{prefix}}acctNumRAW" type="hidden" value="">
         </div>
       </li>
       <li>
@@ -55,6 +56,7 @@ An incorrect selection may lead to a delay, incorrect payment or the rejection o
             aria-labelledby="{{prefix}}BPAacctNum-label" type="text"
             onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
             onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+            <input id="{{prefix}}BPAacctNumRAW" name="{{prefix}}BPAacctNumRAW" type="hidden" value="">
         </div>
         {% assign infoDivID = prefix | append: "-dual-account-info-box" %}
         {% include calculator/infoBox.html icon='info' divID=infoDivID class='hide'

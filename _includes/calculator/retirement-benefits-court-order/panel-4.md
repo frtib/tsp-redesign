@@ -17,6 +17,7 @@ Party 2 panel (4) for RBCO.
         aria-labelledby="paySSN-label" type="text"  xdisabled xpattern="\d*"
         onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
         onblur="SSNGood(0, 1, 'pay');" onchange="SSNGood(0, 1, 'pay');" maxlength="9">
+        <input id="paySSNRAW" name="paySSNRAW" type="hidden" value="">
     </div>
     <input id="noSSN" name="noSSN" type="hidden" value="1">
     <!-- Explain this -->

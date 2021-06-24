@@ -25,6 +25,8 @@ panelEnter[{{ panelID }}] = function(panel) {
   return true;
 }
 panelExit[{{ panelID }}] = function(panel) {
+  $('#partacctNumRAW').val($('#partacctNum').attr('data-store'));
+  $('#partBPAacctNumRAW').val($('#partBPAacctNum').attr('data-store'));
   panelGood[{{panelID}}](0);
   testPrimeSettingsPart();
   return true;
