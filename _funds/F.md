@@ -35,7 +35,7 @@ summary_details:
     net_expense:    .048
     investment_expense:  .012
     benchmark_index: Bloomberg Barclays U.S. Aggregate Bond Index | bloombergindices.com
-    asset_manager: BlackRock Institutional Trust <br />Company, N.A.
+    asset_manager: <span>BlackRock Institutional Trust <br />Company, N.A.</span><span>State Street Global Advisors Trust Company (effective 6/21/2021)</span>
 composition_update: December 31, 2020
 composition:
   - [Government/Government-Related, 39.4]
@@ -58,7 +58,7 @@ additional_info: |
 
   The U.S. Aggregate Index consists of high-quality fixed-income securities with maturities of more than one year. Because the U.S. Aggregate Index contains such a large number of securities, it is not feasible for the <span class="nobr">F Fund</span> to invest in each security in the index.
 
-  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">F Fund</span> to BlackRock Institutional Trust Company, N.A. BlackRock selects a large representative sample of the various types of asset-backed, U.S. government, corporate, and foreign government securities included in the overall index. The performance of the <span class="nobr">F Fund</span> is evaluated on the basis of how closely its returns match those of the U.S. Aggregate Index.
+  The FRTIB&#8217;s Executive Director currently allocates the selection, purchase, investment, and management of assets contained in the <span class="nobr">F Fund</span> to BlackRock Institutional Trust Company, N.A., and State Street Global Advisors Trust Company. They select a large representative sample of the various types of asset-backed, U.S. government, corporate, and foreign government securities included in the overall index. The performance of the <span class="nobr">F Fund</span> is evaluated on the basis of how closely its returns match those of the U.S. Aggregate Index.
 risks: |
   Your investment in the C Fund is subject to <span data-term="Market Risk" class="js-glossary-toggle term term-end">market risk</span> because the prices of the stocks in the S&P 500 Index rise and fall.
 
