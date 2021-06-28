@@ -1,15 +1,20 @@
-### [TSP A to Z]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-a-to-z){:target="\_blank" .external-link}
+### TSP A to Z
 
-This course covers every aspect of TSP participation, and would be beneficial for a mixed group covering every stage of professional life. Topics include the benefits of savings, traditional vs. Roth contributions, investments, loans, and post-separation withdrawals.
+This webinar covers every aspect of TSP participation and will benefit participants in any stage of professional life. Topics include the benefits of savings, traditional and Roth contributions, investments, loans, and post-separation withdrawals. This is a 4-hour session with a break.
 
-#### May 20, 2021
+<ul class="usa-accordion">
+<li>
+  <button
+    class="usa-accordion-button"
+    aria-expanded="false"
+    aria-controls="register-tsp-a-to-z">
+    View schedule and register
+  </button>
+<div id="register-tsp-a-to-z" class="usa-accordion-content" markdown="1">
 
-- 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=703){:rel="nofollow"}
-
-#### June 16, 2021
-
-- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=701){:rel="nofollow"}
-
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### July 1, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=702){:rel="nofollow"}
@@ -17,3 +22,19 @@ This course covers every aspect of TSP participation, and would be beneficial fo
 #### July 29, 2021
 
 - 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=704){:rel="nofollow"}
+
+#### August 19, 2021
+
+- 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=701){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
+
+</div>
+</li>
+</ul>
