@@ -13,7 +13,7 @@ redirect_from:
 Our free TSP webinars cover topics for all TSP participants and their beneficiaries. These online learning opportunities are hosted by our Office of Communications and Education.
 
 - [Intro to TSP](#intro-to-tsp)
-- [TSP Contributions](#tsp-contributions)
+- [TSP Contributions: Taking Control of Your Future](#tsp-contributions-taking-control-of-your-future)
 - [TSP Death Benefits](#tsp-death-benefits)
 - [TSP In-Service Withdrawals](#tsp-in-service-withdrawals)
 - [TSP Investment Funds](#tsp-investment-funds)

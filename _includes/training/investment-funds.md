@@ -1,4 +1,4 @@
-### [TSP Investment Funds]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-investment-funds){:target="\_blank" .external-link}
+### TSP Investment Funds
 
 This webinar provides an overview of the TSP investment funds. The agenda includes a discussion on investing to meet retirement goals, individual TSP funds (G, F, C, S, and I), TSP Lifecycle (L) Funds, and other TSP fund considerations. This is a 1-hour webinar.
 

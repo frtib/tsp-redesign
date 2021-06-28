@@ -1,4 +1,4 @@
-### [TSP A to Z]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-a-to-z){:target="\_blank" .external-link}
+### TSP A to Z
 
 This webinar covers every aspect of TSP participation and will benefit participants in any stage of professional life. Topics include the benefits of savings, traditional and Roth contributions, investments, loans, and post-separation withdrawals. This is a 4-hour session with a break.
 

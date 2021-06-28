@@ -1,4 +1,4 @@
-### [TSP Loans]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-loans){:target="\_blank" .external-link}
+### TSP Loans
 
 This webinar provides an overview of the TSP loan program. The agenda includes the types of TSP loans (general purpose and residential), loan amounts, costs of a TSP loan, and other TSP loan considerations. This is a 1-hour webinar.
 

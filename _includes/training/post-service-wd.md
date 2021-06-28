@@ -1,4 +1,4 @@
-### [TSP Post-Service Withdrawals]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-post-service-withdrawals){:target="\_blank" .external-link}
+### TSP Post-Service Withdrawals
 
 This webinar provides an overview of the TSP post-service withdrawal options. The information in this webinar will benefit TSP participants that plan to retire within 10 years and participants that have already separated or retired. The agenda includes discussion of post-service retirement income options: single lump sum withdrawals, installment payments, and the TSP life annuity. This is a 1-hour webinar.
 

@@ -1,4 +1,4 @@
-### [TSP Death Benefits]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-death-benefits){:target="\_blank" .external-link}
+### TSP Death Benefits
 This webinar provides an overview of TSP death benefits. The webinar covers [Form TSP-3]({{ site.baseurl }}/forms/tsp-3.pdf), _Designation of Beneficiary_; beneficiary designations; and the statutory order of precedence. Discussion also includes how to report a participant’s death, payment options for spouse beneficiary participant accounts, and non-spouse beneficiary payments. This is a 1-hour webinar.
 
 <ul class="usa-accordion">

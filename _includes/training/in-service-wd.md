@@ -1,4 +1,4 @@
-### [TSP In-Service Withdrawals]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-in-service-withdrawals){:target="\_blank" .external-link}
+### TSP In-Service Withdrawals
 
 This webinar provides an overview of the TSP in-service withdrawal options. This webinar covers financial hardship in-service withdrawals, age-based in-service withdrawals, and other in-service withdrawal considerations. This is a 1-hour webinar.
 

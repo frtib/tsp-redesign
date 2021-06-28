@@ -1,4 +1,4 @@
-### [TSP Contributions: Taking Control of Your Future]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-contributions){:target="\_blank" .external-link}
+### TSP Contributions: Taking Control of Your Future
 
 The future of your TSP account depends on decisions you make today, and your choices will directly affect your retirement income. Join us for this webinar as we detail TSP contribution rules. We’ll take you through the basics and equip you with the information you need to make the best choices for your future.
 
@@ -20,8 +20,10 @@ This is a 1-hour webinar.
     aria-controls="register-contributions">
     View schedule and register
   </button>
-<div id="register-contributions" class="usa-accordion-content" markdown="1">
+  <div id="register-contributions" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<div class="usa-width-one-half" markdown="1">
 #### June 30, 2021
 
 - 2:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=281){:rel="nofollow"}
@@ -33,9 +35,18 @@ This is a 1-hour webinar.
 #### July 27, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=278){:rel="nofollow"}
+</div>
 
-Can’t make the times listed? [View a recording of this webinar.]({{ site.baseurl }}){:.file-download}
-[You can also download a copy of the presentation (811kb PDF).]({{ site.baseurl }}){:.file-download}
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+Can’t make the times listed? [View a recording of this webinar.]({{ site.baseurl }}/exit/?idx=72){:rel="nofollow"}
+
+<a href="{{ site.baseurl }}/bulletins/presentation-2021-06-15-tsp-contributions.pdf" class="pdf download" download title="811kb PDF">Download a copy of the presentation.</a>
+</div>
+</div> <!-- END usa.grid -->
+
 </div>
 </li>
 </ul>

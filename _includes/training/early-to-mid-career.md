@@ -1,4 +1,4 @@
-### [TSP Early to Mid-Career (EMC)]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-early-to-mid-career){:target="\_blank" .external-link}
+### TSP Early to Mid-Career (EMC)
 
 This webinar focuses on what early and mid-career employees and service members can do to take full advantage of the TSP. You’ll learn how TSP contributions work, the difference between traditional and Roth contributions, and how to manage your TSP account throughout your career. This is a 2&frac12;-hour session.
 

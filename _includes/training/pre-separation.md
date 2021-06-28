@@ -1,4 +1,4 @@
-### [TSP Pre-Separation]({{ site.baseurl }}/agency-service-reps/course-catalog/#tsp-pre-separation){:target="\_blank" .external-link}
+### TSP Pre-Separation
 
 This webinar is designed to give late-career employees and service members the tools they need to make smart decisions with TSP savings while preparing to retire. The agenda includes TSP withdrawal options and death benefits and offers several retirement scenarios to get you thinking about how to best turn your savings into income. This is a 2&frac12;-hour session.
 

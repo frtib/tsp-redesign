@@ -1,4 +1,4 @@
-### [Intro to TSP]({{ site.baseurl }}/agency-service-reps/course-catalog/#intro-to-tsp){:target="\_blank" .external-link}
+### Intro to TSP
 
 This webinar provides an introduction to the Thrift Savings Plan for new employees and service members. The agenda focuses on the basics of TSP account management. Discussion includes types of TSP contributions, differences between traditional and Roth contributions, and a brief overview of TSP investment funds. This is a 1-hour webinar.
 
