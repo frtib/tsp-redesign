@@ -12,6 +12,9 @@ This webinar provides an overview of the TSP in-service withdrawal options. This
   </button>
 <div id="register-in-service-withdrawals" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### July 7, 2021
 
 - 10:00 a.m. 	— [Register]({{ site.baseurl }}/exit/?idx=247){:rel="nofollow"}
@@ -23,6 +26,14 @@ This webinar provides an overview of the TSP in-service withdrawal options. This
 #### August 12, 2021
 
 - 10:00 a.m. 	— [Register]({{ site.baseurl }}/exit/?idx=249){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>

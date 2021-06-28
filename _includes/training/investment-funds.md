@@ -12,6 +12,9 @@ This webinar provides an overview of the TSP investment funds. The agenda includ
   </button>
 <div id="register-tsp-investment-funds" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### July 8, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=404){:rel="nofollow"}
@@ -32,6 +35,14 @@ This webinar provides an overview of the TSP investment funds. The agenda includ
 #### August 24, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=403){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>

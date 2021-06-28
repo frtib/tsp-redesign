@@ -12,6 +12,9 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
   </button>
 <div id="register-intro" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### July 22, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=232){:rel="nofollow"}
@@ -23,6 +26,14 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
 #### August 24, 2021
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=223){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>

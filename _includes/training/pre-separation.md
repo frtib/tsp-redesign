@@ -12,6 +12,9 @@ This webinar is designed to give late-career employees and service members the t
   </button>
 <div id="register-tsp-pre-separation" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### June 30, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=191){:rel="nofollow"}
@@ -39,6 +42,14 @@ This webinar is designed to give late-career employees and service members the t
 #### August 25, 2021
 
 - 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=197){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>

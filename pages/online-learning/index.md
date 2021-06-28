@@ -31,7 +31,7 @@ If you have questions about TSP webinars, please contact us at **webinars@frtib.
 <div class="usa-alert  usa-alert-info usa-alert-paragraph">
 <div class="usa-alert-body">
 <h3 class="usa-alert-heading" style="padding-top: .5rem;">
-WebEx registration password: TSPweb
+Registration password: TSPweb
 </h3>
 <p>Use this password on the WebEx event registration screen for the webinar you select.</p>
 </div>

@@ -12,6 +12,9 @@ This webinar covers every aspect of TSP participation and will benefit participa
   </button>
 <div id="register-tsp-a-to-z" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### July 1, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=702){:rel="nofollow"}
@@ -23,6 +26,14 @@ This webinar covers every aspect of TSP participation and will benefit participa
 #### August 19, 2021
 
 - 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=701){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>

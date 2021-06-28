@@ -11,6 +11,9 @@ This webinar provides an overview of TSP death benefits. The webinar covers [For
   </button>
 <div id="register-death-benefits" class="usa-accordion-content" markdown="1">
 
+<div class="usa-grid">
+<!-- 1/2 -->
+<div class="usa-width-one-half" markdown="1">
 #### June 29, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=902){:rel="nofollow"}
@@ -26,6 +29,14 @@ This webinar provides an overview of TSP death benefits. The webinar covers [For
 #### August 18, 2021
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=901){:rel="nofollow"}
+</div>
+<!-- 2/2 -->
+<div class="usa-width-one-half" markdown="1">
+
+Registration password: **TSPweb**
+
+</div>
+</div> <!-- END usa.grid -->
 
 </div>
 </li>
