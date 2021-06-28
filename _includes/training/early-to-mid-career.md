@@ -24,6 +24,14 @@ This webinar focuses on what early and mid-career employees and service members 
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=176){:rel="nofollow"}
 
+#### August 4, 2021
+
+- 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=172){:rel="nofollow"}
+
+#### August 18, 2021
+
+- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=173){:rel="nofollow"}
+
 </div>
 </li>
 </ul>

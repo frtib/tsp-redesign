@@ -20,6 +20,10 @@ This webinar covers every aspect of TSP participation and will benefit participa
 
 - 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=704){:rel="nofollow"}
 
+#### August 19, 2021
+
+- 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=701){:rel="nofollow"}
+
 </div>
 </li>
 </ul>

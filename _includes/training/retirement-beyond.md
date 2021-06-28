@@ -20,6 +20,18 @@ Part II consists of a discussion of the risks that new retirees face. We discuss
 
 - 11:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=201){:rel="nofollow"}
 
+#### August 3, 2021
+
+- 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=202){:rel="nofollow"}
+
+#### August 17, 2021
+
+- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=203){:rel="nofollow"}
+
+#### August 31, 2021
+
+- 12:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=204){:rel="nofollow"}
+
 </div>
 </li>
 </ul>

@@ -20,6 +20,10 @@ This webinar provides an introduction to the Thrift Savings Plan for new employe
 
 - 10:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=222){:rel="nofollow"}
 
+#### August 24, 2021
+
+- 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=223){:rel="nofollow"}
+
 </div>
 </li>
 </ul>
