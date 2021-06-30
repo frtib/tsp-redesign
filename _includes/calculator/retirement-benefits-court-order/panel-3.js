@@ -27,6 +27,7 @@ panelEnter[{{ panelID }}] = function(panel) {
 panelExit[{{ panelID }}] = function(panel) {
   $('#partacctNumRAW').val($('#partacctNum').attr('data-store'));
   $('#partBPAacctNumRAW').val($('#partBPAacctNum').attr('data-store'));
+  pickCountry('part');
   panelGood[{{panelID}}](0);
   testPrimeSettingsPart();
   return true;
@@ -267,8 +268,11 @@ function fcountryGood(submit, writein, role) { launderInput(role+'fcountry'); re
 function fcountrylistGood(submit, writein, role) { launderInput(role+'fcountrylist'); return ddGood(submit, writein, role, 'fcountrylist', "Enter country.");}
 function pickCountry(role) {
   var choice = $('#'+role+'fcountrylist :selected').text();
-  if (choice == 'Other') { $('#'+role+'fcountry').removeClass('hide'); }
-    else { $('#'+role+'fcountry').addClass('hide'); }
+  if (choice == 'Other') { $('#'+role+'fcountry-div').removeClass('hide'); }
+    else {
+      $('#'+role+'fcountry-div').addClass('hide');
+      $('#'+role+'fcountry').val(choice);
+    }
   // get picked value.
   // if other show, else hide
   return fcountryGood(0, 0, role);
@@ -308,7 +312,13 @@ function addressGood(submit, writein, role) {
 
 function getCityState(role) { var rc = '';
  if ($('#'+role+'foreignAddress').prop('checked')) { rc = $('#'+role+'fcity').val() + ' ' + $('#'+role+'fpostal').val(); } else { var state = $('#'+role+'state').val(); if (state == 'Select') { state = ''; } rc = $('#'+role+'city').val() + ' ' + state + ' ' + $('#'+role+'zip').val(); } return rc.trim();}
+function getFCountry(role) {
+  var rc = $('#'+role+'fcountrylist option:selected').text();
+  if (rc == 'Select') { rc = ''; }
+  if (rc == 'Other') { rc = $('#'+role+'fcountry').val(); }
+  return rc.trim();
+}
 function getAddressString(role) { var rc = '';
- if ($('#'+role+'foreignAddress').prop('checked')) { rc = $('#'+role+'fstreet').val(); rc += '<BR>' + getCityState(role); rc += '<BR>' + $('#'+role+'fcountry').val(); } else { rc = $('#'+role+'street1').val(); rc += '<BR>' + getCityState(role); } return rc.trim();}
+ if ($('#'+role+'foreignAddress').prop('checked')) { rc = $('#'+role+'fstreet').val(); rc += '<BR>' + getCityState(role); rc += '<BR>' + getFCountry(role); } else { rc = $('#'+role+'street1').val(); rc += '<BR>' + getCityState(role); } return rc.trim();}
 -->
 </script>

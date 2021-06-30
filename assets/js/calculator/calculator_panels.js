@@ -130,7 +130,7 @@ function allowContinue(flag, panel) {
 }
 
 function showPanel(num) {
-  // console.log('show panel ' + num);
+  // console.log('show panel ' + num, lastPanel);
   for (var i=1; i<=maxPanels; i++) {
     if (i == num) {
       $('#panel-'+i).show();

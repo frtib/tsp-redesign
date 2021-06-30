@@ -40,7 +40,6 @@ cachePath["PayeePanel"] = 4;
 cachePath["PayeePanelState"] = null;
 cachePath["PayeePanelError"] = null;
 function getPrimeSettingsPath() {
-  // console.log('called get');
   cachePath["highwater"] = getHighwater();
   cachePath["payeePartYes"] = $('#payeePartYes').prop('checked');
   cachePath["payeePartNo"] = $('#payeePartNo').prop('checked');
@@ -99,12 +98,13 @@ function testPrimeSettingsPath() {
 
 // my functions
 function getPayeePart() {
-  testPrimeSettingsPath();
+  // testPrimeSettingsPath();
   if ($('#payeePartYes').prop('checked')) { return 'Yes'; }
   if ($('#payeePartNo').prop('checked')) { return 'No'; }
   return '';
 }
 function payeePartGood(submit) {
+  testPrimeSettingsPath();
   var payeePart = getPayeePart();
   $('#payeePartAYR').html(payeePart);
   // console.log('getPayeePart ', submit, payeePart);
@@ -130,13 +130,14 @@ function payeePartGood(submit) {
 }
 
 function getRelationship() {
-  testPrimeSettingsPath();
+  // testPrimeSettingsPath();
   if ($('#relationshipSpouse').prop('checked')) { return 'Spouse'; }
   if ($('#relationshipDependent').prop('checked')) { return 'Dependent'; }
   if ($('#relationshipOther').prop('checked')) { return 'Other'; }
   return '';
 }
 function relationshipGood(submit) {
+  testPrimeSettingsPath();
   var payeePart = getPayeePart();
   if (payeePart == '') { return clearError('relationship'); }
   var relationship = getRelationship();
@@ -177,12 +178,13 @@ function relationshipGood(submit) {
 }
 
 function getReceive() {
-  testPrimeSettingsPath();
+  // testPrimeSettingsPath();
   if ($('#receiveOne').prop('checked')) {$('#receiveBothAYR').html('No'); return 'One'; }
   if ($('#receiveBoth').prop('checked')) { $('#receiveBothAYR').html('Yes'); return 'Both'; }
   return '';
 }
 function receiveGood(submit) {
+  testPrimeSettingsPath();
   if ((getPayeePart() != 'Yes') || (getRelationship() != 'Spouse')) { return clearError('receive'); }
 
   var receive = getReceive();

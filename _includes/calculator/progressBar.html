@@ -130,7 +130,7 @@ function getHighwater() {
     if ((step <= 0) || (step > {{ numSteps }})) { return -1; }
     while ((progressState[p] == progressDone) || (progressState[p] == progressActive)) { p++; }
     if ((p <= 0) || (p > {{ numSteps }})) { return -1; }
-    return p;
+    return p-1;
 }
 function setProgressStateError(step) {
     if ((step <= 0) || (step > {{ numSteps }})) { return; }

@@ -47,6 +47,7 @@ panelExit[{{ panelID }}] = function(panel) {
       $('#payacctNumAYR-row').addClass('hide');
       $('#payBPAacctNumAYR-row').addClass('hide');
     }
+    pickCountry('pay');
     testPrimeSettingsPay();
     return true;
 }
@@ -98,8 +99,9 @@ function testPrimeSettingsPay() {
 function SSNGood(submit, writein, prefix) {
   var payeePart = getPayeePart();
   var receive = getReceive();
-  if (payeePart == 'Yes') { clearError(prefix+'SSN'); }
-  if (receive == 'Both') { clearError(prefix+'SSN'); }
+  if ((payeePart == 'Yes') && (receive == 'Both')) { return clearError(prefix+'SSN'); }
+  // if (payeePart == 'Yes') { clearError(prefix+'SSN'); }
+  // if (receive == 'Both') { clearError(prefix+'SSN'); }
   var val = $('#'+prefix+'SSN').val();
   if (val.length != 9) {
     // if (writein) { return showWriteIn(prefix+'SSN', 'Enter Social Security number.'); }
