@@ -190,9 +190,7 @@ function resetGrowthCategories(chart) {
   var categories = [];
   var data = chart.series[0].points;
   data = chart.data.rawColumns[0];
-  var subTitle = 'As of ' + data[0];
-  chart.setTitle(null, { text: subTitle });
-  // console.log({chart}, {data}, {subTitle});
+	chart.setTitle({text: 'Growth of $100 since inception' + '   <span class="hc-note">(As of ' + data[0] + ')</span>'});
   for (var i = 1; i < data.length; i++) {
     categories.push(data[i].replace('(', '').replace(')',''));
   }
@@ -222,9 +220,9 @@ function getGrowthLifetime(fund) {
     },
     title: {
       align: 'left',
-      text: 'Growth of $100 since Inception'
+      text: 'Growth of $100 since inception'
     },
-    subtitle: { align: 'left', text: 'sub title' },
+    // subtitle: { align: 'left', text: 'sub title' },
     data: {
       dateFormat: "YYYY/mm/dd",
       csvURL: 'https://secure.tsp.gov/components/CORS/getFundGrowthInflationTMP.html?fund='+fund,
@@ -297,7 +295,7 @@ function getFundIndexAverageAnnualReturns(fund) {
     title: {
       // text: 'Average Rates of Return' + '   <span class="hc-note">(As of December ' + year + ')</span>'
       align: 'left',
-      text: 'Average Rates of Return'
+      text: 'Average rates of return'
     },
     data: {
       switchRowsAndColumns: true,
@@ -340,7 +338,7 @@ function getFundIndexAverageAnnualReturns(fund) {
   });
 }
 function setTitle(asOfDate) {
-	barChart.setTitle({text: 'Average Rates of Return' + '   <span class="hc-note">(As of ' + asOfDate + ')</span>'});
+	barChart.setTitle({text: 'Average rates of return' + '   <span class="hc-note">(As of ' + asOfDate + ')</span>'});
 }
 function mapServerFundName (f, glossaryFlag) {
   var fund = f.trim().toUpperCase();
