@@ -26,7 +26,9 @@ redirect_from:
   - /InvestmentFunds/FundPerformance/
   - /prices/
 ---
+
 {% assign chartName = 'dynamic-share-price' %}
+
 <div class="usa-grid centered" markdown="1">
 <div class="usa-width-one-whole" markdown="1">
 # Share price history
@@ -38,6 +40,7 @@ To understand how the TSP calculates rates of return for any given period of tim
 {% include fund-checkboxes.html Lfunds=1 InvFunds=1 Index=0 chartName=chartName %}
 
 <!-- FORM CONTROLS; date picker, Retrieve and Download buttons -->
+
 <section class="date-range">
   <form class="share-price-date-range duo" action="javascript:void(0);">
     <fieldset>
@@ -58,6 +61,7 @@ To understand how the TSP calculates rates of return for any given period of tim
       <button class="usa-button-secondary" onClick='downloadSharePrices();'>
         Download share prices <i class="fal fa-arrow-alt-to-bottom"></i></button>
     </fieldset>
+
   </form>
 </section>
 
@@ -68,9 +72,9 @@ To understand how the TSP calculates rates of return for any given period of tim
 <div class="usa-width-one-whole" markdown="1">
 <!-- TABLE SECTION -->
 <section id="{{chartName}}-section" class="share-price-table">
-<div class="table-side-scroll">
+<div class="table-side-scroll sticky-header">
   {% include side-scroll-alert.html checkboxMessage=true %}
-  <div id="{{chartName}}-table" class="table-side-scroll"></div>
+  <div id="{{chartName}}-table"></div>
 </div>
 </section>
 <!-- CHART SECTION -->

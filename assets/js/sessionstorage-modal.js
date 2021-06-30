@@ -4,9 +4,7 @@ var scrollBox = document.querySelector("#scrollAlert");
 function toggle(on) {
 
   if (on) {
-    scrollBox.classList.add("none");
-  } else {
-    scrollBox.classList.add("");
+    scrollBox.classList.add("hide");
   }
 }
 
@@ -22,7 +20,7 @@ function onChange(checkbox) {
   const value = checkbox.checked;
   toggle(value);
   // Comment out save() to restore on reload.
-  // save(value);
+  save(value);
 }
 
 const initialValue = load();

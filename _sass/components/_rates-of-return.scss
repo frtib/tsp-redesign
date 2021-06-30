@@ -1,12 +1,30 @@
 // RATES OF RETURN
 
-.usa-content {
-  .as-of-date {
-    font-family: $sans;
-    font-size: 2.5rem;
-    font-weight: $normal;
+
+.table-side-scroll {
+  &.sticky-header {
+    // parent container
+    width: fit-content;
+    display: table;
+    overflow: visible;
+
+    @media only screen and (max-width: $large-screen) {
+      // Side scroll only on mobile
+      width: 100%;
+      display: block;
+      overflow: auto;
+      border: 1px solid red;
+    }
   }
-  
+}
+
+.usa-content {
+  // .as-of-date {
+  //   font-family: $sans;
+  //   font-size: 2.5rem;
+  //   font-weight: $normal;
+  // }
+
   fieldset {
     &.lifecycle-funds,
     &.individual-funds  {

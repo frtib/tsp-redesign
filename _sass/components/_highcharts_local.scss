@@ -1,26 +1,134 @@
-.highcharts-color-g { fill: $color-g-fund; stroke: $color-g-fund; stroke-width: 1px; }
-.highcharts-color-f { fill: $color-f-fund; stroke: $color-f-fund; stroke-width: 1px; }
-.highcharts-color-c { fill: $color-c-fund; stroke: $color-c-fund; stroke-width: 1px; }
-.highcharts-color-s { fill: $color-s-fund; stroke: $color-s-fund; stroke-width: 1px; }
-.highcharts-color-i { fill: $color-i-fund; stroke: $color-i-fund; stroke-width: 1px; }
-.highcharts-color-ig { fill: $color-index-g; stroke: $color-index-g; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-if { fill: $color-index-f; stroke: $color-index-f; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-ic { fill: $color-index-c; stroke: $color-index-c; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-is { fill: $color-index-s; stroke: $color-index-s; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-ii { fill: $color-index-i; stroke: $color-index-i; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-lf { fill: $color-l-fund; stroke: $color-l-fund; stroke-width: 1px; }
-.highcharts-color-il { fill: $color-index-l; stroke: $color-index-l; stroke-width: 1px; stroke-dasharray: 10 10; }
-.highcharts-color-black { fill: $color-black; stroke: $color-black; stroke-width: 1px; }
-.highcharts-color-white { fill: $color-white; stroke: $color-white; stroke-width: 1px; }
-.highcharts-color-red { fill: red; stroke: red; stroke-width: 1px; }
-.highcharts-color-blue { fill: blue; stroke: blue; stroke-width: 1px; }
-.highcharts-color-gray { fill: gray; stroke: gray; stroke-width: 1px; }
+.highcharts-color-g {
+  fill: $color-g-fund;
+  stroke: $color-g-fund;
+  stroke-width: 1px;
+}
 
+.highcharts-color-f {
+  fill: $color-f-fund;
+  stroke: $color-f-fund;
+  stroke-width: 1px;
+}
+
+.highcharts-color-c {
+  fill: $color-c-fund;
+  stroke: $color-c-fund;
+  stroke-width: 1px;
+}
+
+.highcharts-color-s {
+  fill: $color-s-fund;
+  stroke: $color-s-fund;
+  stroke-width: 1px;
+}
+
+.highcharts-color-i {
+  fill: $color-i-fund;
+  stroke: $color-i-fund;
+  stroke-width: 1px;
+}
+
+.highcharts-color-ig {
+  fill: $color-index-g;
+  stroke: $color-index-g;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-if {
+  fill: $color-index-f;
+  stroke: $color-index-f;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-ic {
+  fill: $color-index-c;
+  stroke: $color-index-c;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-is {
+  fill: $color-index-s;
+  stroke: $color-index-s;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-ii {
+  fill: $color-index-i;
+  stroke: $color-index-i;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-lf {
+  fill: $color-l-fund;
+  stroke: $color-l-fund;
+  stroke-width: 1px;
+}
+
+.highcharts-color-il {
+  fill: $color-index-l;
+  stroke: $color-index-l;
+  stroke-width: 1px;
+  stroke-dasharray: 10 10;
+}
+
+.highcharts-color-black {
+  fill: $color-black;
+  stroke: $color-black;
+  stroke-width: 1px;
+}
+
+.highcharts-color-white {
+  fill: $color-white;
+  stroke: $color-white;
+  stroke-width: 1px;
+}
+
+.highcharts-color-red {
+  fill: red;
+  stroke: red;
+  stroke-width: 1px;
+}
+
+.highcharts-color-blue {
+  fill: blue;
+  stroke: blue;
+  stroke-width: 1px;
+}
+
+.highcharts-color-gray {
+  fill: gray;
+  stroke: gray;
+  stroke-width: 1px;
+}
 // used by savings grow calc
-.highcharts-color-secondary { fill: $color-secondary; stroke: $color-secondary; stroke-width: 1px; }
-.highcharts-color-secondary-light { fill: $color-secondary-light; stroke: $color-secondary-light; stroke-width: 1px; }
-.highcharts-color-gold { fill: $color-gold; stroke: $color-gold; stroke-width: 1px; }
-.highcharts-color-gold-lighter { fill: $color-gold-lighter; stroke: $color-gold-lighter; stroke-width: 1px; }
+.highcharts-color-secondary {
+  fill: $color-secondary;
+  stroke: $color-secondary;
+  stroke-width: 1px;
+}
+
+.highcharts-color-secondary-light {
+  fill: $color-secondary-light;
+  stroke: $color-secondary-light;
+  stroke-width: 1px;
+}
+
+.highcharts-color-gold {
+  fill: $color-gold;
+  stroke: $color-gold;
+  stroke-width: 1px;
+}
+
+.highcharts-color-gold-lighter {
+  fill: $color-gold-lighter;
+  stroke: $color-gold-lighter;
+  stroke-width: 1px;
+}
 
 .hc-composition-pie {
   width: 100px;
@@ -29,11 +137,19 @@
   // border-style: solid;
   // border-width: 1px;
   .highcharts-pie-series .highcharts-point {
-  	// stroke: #EDE;
-  	stroke-width: 0px;
+    // stroke: #EDE;
+    stroke-width: 0;
   }
-  .highcharts-color-0 { fill: $color-blue-medium; stroke: $color-blue-medium; }
-  .highcharts-color-1 { fill: $color-gold; stroke: $color-gold; }
+
+  .highcharts-color-0 {
+    fill: $color-blue-medium;
+    stroke: $color-blue-medium;
+  }
+
+  .highcharts-color-1 {
+    fill: $color-gold;
+    stroke: $color-gold;
+  }
 }
 
 .hc-growth-lifetime {
@@ -41,64 +157,97 @@
   height: 400px;
   margin: 0 auto;
 }
-.hc-share-price-chart {
-}
+
+.hc-share-price-chart {}
+
 .hc-annual-returns-all {
   // height: auto;
   // display: block;
   // overflow-x: scroll;
 }
+
 .hc-annual-returns-bar {
   min-width: 310px;
   height: 400px;
   margin: 0 auto;
 }
+// Fund pages > Performance & risks tab > table
+
 .hc-annual-returns-table {
-  .even { background-color: #f2f2f2; }
-  .odd { }
-  .active { font-weight: bold; }
+  th {
+    text-align: center;
+  }
+
+  td {
+    &:not(:first-child) {
+      text-align: right;
+    }
+  }
+  // WHEN DAV UPDATES TABLE CODE, REMOVE LINES 181-185 AND UNCOMMENT THIS
+  // tbody {
+  //   th {
+  //     text-align: left;
+  //   }
+  //
+  //   td {
+  //     text-align: right;
+  //   }
+  // }
+
+  .even {
+    background-color: #f2f2f2;
+  }
+
+  .odd {}
+
+  .active {
+    font-weight: bold;
+  }
+
   .rate-of-return-bar {
     &:before {
       font-family: "Font Awesome 5 Pro";
       content: "\f0c8";
       font-weight: 900;
-      padding-right: .6rem;
+      padding-right: 0.6rem;
       font-size: inherit;
       width: 50%;
-     }
-   }
+    }
+  }
 }
+
 .spann {
   &:before {
     content: "<span ";
-   }
+  }
+
   &:after {
     content: "</span>";
   }
-
 }
+
 .hc-lfund-stacked-area {
   min-width: 310px;
   height: 400px;
   margin: 0 auto;
+
   .highcharts-crosshair-category {
-      stroke-width: 5px;
-      stroke: $neutral-color-100;
-      stroke-opacity: 1.00;
+    stroke-width: 5px;
+    stroke: $neutral-color-100;
+    stroke-opacity: 1.00;
   }
+
   .highcharts-plot-line {
-      fill: none;
-      stroke: $neutral-color-100;
-      stroke-width: 2px;
+    fill: none;
+    stroke: $neutral-color-100;
+    stroke-width: 2px;
   }
-
 }
-
 /* Titles - overrides */
 .highcharts-title {
-    font-family: $font-sans;
-    fill: $neutral-color-100;
-    font-size: 2.8rem;
+  font-family: $font-sans;
+  fill: $neutral-color-100;
+  font-size: 2.8rem;
 }
 
 .hc-note {
@@ -119,6 +268,7 @@
   margin: 0 auto;
   // border: 1px dashed red;
 }
+
 .hc-summary-tooltip {
   // width: 140px;
   // height: 100px;
@@ -139,14 +289,20 @@
     font-family: "Font Awesome 5 Pro";
     content: "\f0c8";
     font-weight: 900;
-    padding-right: .6rem;
+    padding-right: 0.6rem;
     font-size: inherit;
     width: 50%;
-   }
+  }
 }
 
-.before-invest-tooltip, .l-fund-tooltip, .growth-100-tooltip, .rates-of-return-tooltip,
-  .l-fund-summary-tooltip, .dynamic-share-price-tooltip, .savings-grow-tooltip, .paycheck-estimator-tooltip {
+.before-invest-tooltip,
+.dynamic-share-price-tooltip,
+.growth-100-tooltip,
+.l-fund-summary-tooltip,
+.l-fund-tooltip,
+.paycheck-estimator-tooltip,
+.rates-of-return-tooltip,
+.savings-grow-tooltip {
   // background-color: black;
   // color: white;
   .tooltip-title {
@@ -155,23 +311,28 @@
     text-align: center;
     margin-bottom: 3px;
   }
+
   .tooltip-row-group {
     display: table-row-group;
   }
+
   .tooltip-row {
     display: table-row;
   }
+
   .tooltip-left {
     display: table-cell;
     padding-right: 2px;
     text-align: left;
   }
+
   .tooltip-right {
     display: table-cell;
     padding-left: 2px;
     text-align: right;
   }
 }
+
 .l-fund-summary-tooltip {
   margin: auto;
   width: 140px;

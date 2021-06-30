@@ -94,53 +94,14 @@ section.charts {
 
 // SCROLL LEFT & RIGHT table buttons
 div.table-scroll-buttons {
+  // margin-top: 3rem;
   margin: 3rem 0 .7rem 0;
-  width: 100%;
-  text-align: left;
-  border: 1px solid red;
+  text-align: center;
 
-  button {
-    position: sticky;
-    z-index: 60;
-    left: 2rem;
-
-    &#slideLeft{
-      left: 16.15rem;
-    }
-  }
-
-
-  @media only screen and (max-width: $large-screen) {
-    button {
+  @media only screen and (max-width: #{$large-screen}) {
+      button {
         display: none;
       }
-  }
-}
-
-// SCROLL LEFT & RIGHT alert
-.scroll-alert-container {
-  display: block;
-  margin: 3rem 0 .7rem 0;
-
-  a {
-    &.move-left,
-    &.move-right {
-      padding: 0 .3rem;
-    }
-  }
-
-  span { // 'Don't show this message again' checkbox.
-    display: block;
-
-    label {
-      margin-top: 1.6rem;
-    }
-  }
-
-  @media only screen and (max-width: $large-screen) {
-    #scrollAlert {
-      display: none;
-    }
   }
 }
 
@@ -157,7 +118,7 @@ section {
   }
 }
 // end section
-// "STICKY" LEFT-COLUMN HEADER
+// "STICKY" LEFT-COLUMN HEADER: Share price history & Rates of return
 .table-side-scroll {
   overflow: auto;
 }
@@ -171,16 +132,6 @@ section {
   z-index: 1;
   margin: 0 auto;
   scroll-behavior: smooth;
-
-  .usa-alert {
-    position: sticky;
-    left: 2rem;
-    z-index: 60;
-
-    .usa-alert-text {
-      text-align: left;
-    }
-  }
 
   .empty-table-cell {
     background-color: $color-gray-lightest;
@@ -311,12 +262,6 @@ section {
 
           &.bounce:after {
             content: "\f056";
-          }
-        }
-
-        &.separator-top {
-          th, td {
-            border-top: 2px solid #ddd;
           }
         }
       }

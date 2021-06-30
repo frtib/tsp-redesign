@@ -3,6 +3,32 @@ section#fund-tabs {
     border-top: none;
   }
 }
+
+.fund-summary-top-ten {
+  ol {
+    list-style: none;
+    padding: 0;
+
+    li {
+      // display: block;
+      display: flex;
+    }
+  }
+
+  .holdings-abbr {
+    color: $color-primary;
+    font-weight: 800;
+    display: inline-block;
+    margin-right: 2rem;
+    min-width: 4.2rem;
+  }
+
+  li {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 0.25rem 0 1rem;
+  }
+}
+
 .fund-details {
   .as-of-date {
     color: #999;
@@ -96,7 +122,7 @@ section#fund-tabs {
   .fund-summary-details {
     p > span {
       display: block;
-      margin-bottom: .3em;
+      margin-bottom: 0.3em;
 
       &:last-child {
         margin-bottom: 0;
@@ -108,11 +134,9 @@ section#fund-tabs {
 #no_data_yet_message {
   color: $color-green;
 }
-
 @media screen and (min-width: 992px) {
   section#fund-tabs {
     .usa-tabs {
-
       h2,
       h3,
       h4 {
@@ -126,30 +150,36 @@ section#fund-tabs {
         background-color: transparent;
         margin-right: 1rem;
       }
+
       section.fund-tab-composition {
         .hc-composition-pie {
           width: auto;
           // height: auto;
           .highcharts-container {
             text-align: center;
+
             .highcharts-root {
               display: inline-block;
             }
           }
         }
+
         table {
           width: 100%;
           font-size: 1.5rem;
           border: none;
+
           tr {
             border-bottom-width: 1px;
             border-bottom-style: dotted;
           }
+
           tbody {
             tr:last-child {
               border-bottom: none;
             }
           }
+
           td,
           th {
             border: none;
@@ -171,15 +201,17 @@ section#fund-tabs {
             }
           }
         }
-        .sortableColumn { // Composition sortable <th>
+
+        .sortableColumn {
+          // Composition sortable <th>
           background-image: url($baseurl + '/assets/img/icons/arrow-up-circle.svg');
           background-repeat: no-repeat;
-          -webkit-transition: background-color, .2s, box-shadow, .2s, color, .2s;
-          -moz-transition: background-color, .2s, box-shadow, .2s, color, .2s;
-          transition: background-color, .5s, box-shadow, .2s, color, .2s;
+          -webkit-transition: background-color, 0.2s, box-shadow, 0.2s, color, 0.2s;
+          -moz-transition: background-color, 0.2s, box-shadow, 0.2s, color, 0.2s;
+          transition: background-color, 0.5s, box-shadow, 0.2s, color, 0.2s;
           // background-size: .7em;
           background-size: 1.2em;
-          background-position: 0% 50%;
+          background-position: 0 50%;
           background-color: transparent;
           box-shadow: 0 0 0 4px transparent;
           border-bottom: none;
@@ -188,15 +220,19 @@ section#fund-tabs {
           padding-left: 1.3em !important;
           text-decoration: none;
         }
-        .sort-column-asc, .sort-column-desc  {
+
+        .sort-column-asc,
+        .sort-column-desc {
           background-image: url($baseurl + "/assets/img/icons/arrow-down-circle.svg");
           background-repeat: no-repeat;
           color: #339933;
         }
+
         .sort-column-desc {
-          background-image: url($baseurl +  "/assets/img/icons/arrow-up-circle.svg");
+          background-image: url($baseurl + "/assets/img/icons/arrow-up-circle.svg");
         }
-      } // end section.fund-tab-composition
+      }
+      // end section.fund-tab-composition
 
       .usa-accordion-button {
         width: auto;
@@ -245,29 +281,8 @@ section#fund-tabs {
           background-color: $color-gray-lightest;
         }
       }
-    } // end .usa-tabs
-  } // end section#fund-tabs
-
-  .fund-summary-top-ten {
-    ol {
-      list-style: none;
-      padding: 0;
-      li {
-        display: block;
-      }
     }
-
-    .holdings-abbr {
-      color: $color-primary;
-      font-weight: 800;
-      display: inline-block;
-      margin-right: 2rem;
-      width: 4rem;
-    }
-
-    li {
-      border-bottom: 1px solid #dfdfdf;
-      padding: 0.25rem 0 1rem;
-    }
+    // end .usa-tabs
   }
+  // end section#fund-tabs
 }

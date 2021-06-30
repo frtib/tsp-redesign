@@ -27,9 +27,9 @@ redirect_from:
 
 <!-- TABLE -->
 <section id="historical-rates-section">
-<div class="table-side-scroll">
+<div class="table-side-scroll sticky-header">
   {% include side-scroll-alert.html %}
-  <div id="historical-rates-table" class="table-side-scroll"></div>
+  <div id="historical-rates-table"></div>
 </div>
 </section>
 
