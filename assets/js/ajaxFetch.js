@@ -448,10 +448,11 @@ function buildReturnsTable(arr) {
     col = lines[j].split(',');
     table += '<tr>';
     cellClass = 'odd';
-    var fundName = mapServerFundName(col[0].trim(),1);
-    // console.log('fund is ' + col[0].trim());
-    var fund = col[0].trim().toLowerCase();
+    var rawFund = col[0].trim().replace(/ /g, "");
+    var fundName = mapServerFundName(rawFund,1);
+    var fund = rawFund.toLowerCase();
     var fundColor = mapServerFundClassName(fund);
+    // console.log('fund is ' + rawFund, fund, fundColor);
     if ((fund == 'linc') && (j > 1)) { fundColor = mapServerFundClassName('lincx'); }
     table += '<td class="' + cellClass + ' col' + '0' + '">'
         +'<span class="rate-of-return-bar '+fundColor+'"></span>'
