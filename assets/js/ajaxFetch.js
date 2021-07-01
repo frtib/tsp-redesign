@@ -434,13 +434,13 @@ function buildReturnsTable(arr) {
   var cellClass = 'even';
   // header
   var col = lines[0].trim().split(',');
-  table += '<tr><th></th>';
+  table += "<thead>\n<tr><th></th>";
   cellClass = 'even';
   for (i = 1; i < col.length; i++) {
     table += '<th class="' + cellClass + ' col' + i + '">'+headName[col[i].trim()]+'</th>';
     if (cellClass == 'even') { cellClass = 'odd'; } else { cellClass = 'even'; }
   }
-  table += "</tr>\n";
+  table += "</tr>\n</thead>\n<tbody>";
   for (j=1; j < lines.length; j++) {
     if (lines[j].trim() == '') { continue; }
     col = lines[j].split(',');
@@ -452,9 +452,9 @@ function buildReturnsTable(arr) {
     var fundColor = mapServerFundClassName(fund);
     // console.log('fund is ' + rawFund, fund, fundColor);
     if ((fund == 'linc') && (j > 1)) { fundColor = mapServerFundClassName('lincx'); }
-    table += '<td class="' + cellClass + ' col' + '0' + '">'
+    table += '<th class="' + cellClass + ' col' + '0' + '" scope="row">'
         +'<span class="rate-of-return-bar '+fundColor+'"></span>'
-        + fundName +'</td>';
+        + fundName +'</th>';
     if (cellClass == 'even') { cellClass = 'odd'; } else { cellClass = 'even'; }
     for (i = 1; i < col.length; i++) {
       table += '<td class="' + cellClass + ' col' + i + '">'+col[i].trim()+'%</td>';
@@ -463,7 +463,7 @@ function buildReturnsTable(arr) {
     table += "</tr>\n";
   }
 
- table += "\n</table>"
+ table += "</tbody>\n</table>\n"
  // console.log(arr + "\n" + table);
  $('#annualReturnsTable').html(table);
 //  initGlossary();
