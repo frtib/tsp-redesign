@@ -96,6 +96,8 @@ collections:
     output: true
   pia:
     output: true
+  webinars:
+    output: true
 
 defaults:
   -
