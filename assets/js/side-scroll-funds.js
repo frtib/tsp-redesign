@@ -414,6 +414,6 @@ function sideScrollControls(chartName, executeFlag) {
 
   if (executeFlag) {
     disableButtons(container);
-    document.body.style.overflowX = "initial";  // on first call, not load because of ajax
+    document.body.style.overflowX = 'visible';  // on first call, not load because of ajax
   }
 }
