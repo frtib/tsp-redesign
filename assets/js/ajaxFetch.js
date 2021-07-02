@@ -302,7 +302,7 @@ function getFundIndexAverageAnnualReturns(fund) {
       beforeParse: function (csv) {
         var data = csv.split('|');
         setTitle(data[2]);
-        if (data[0].includes('data unavailable')) {
+        if (data[0].indexOf('data unavailable') >= 0) {
           return null;
           // messy quick hack for no data
           var unavailable = data[0].split(/\r?\n/);

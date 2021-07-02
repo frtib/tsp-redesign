@@ -2,7 +2,7 @@ function initFundTab() {
   var tabs = [ 'summary', 'performance-and-risks', 'composition', 'fees'];
   var tab = getQueryString('tab');
   if (typeof tab === 'undefined') { tab = 'summary'; }
-  if (tabs.includes(tab)) {
+  if (tabs.indexOf(tab) >= 0) {
     var open = $('#'+tab).attr('aria-expanded');
     if (open == 'false') {
       $('#'+tab).click();
