@@ -117,8 +117,6 @@ Note: If you have both a civilian account and a uniformed services account, the 
 
 TSP account balances are recalculated at the end of each business day based on daily share prices. As a result, the maximum loan amount may change on a daily basis.
 
-TSP account balances are recalculated at the end of each business day based on daily share prices. As a result, the maximum loan amount may change on a daily basis.
-
 To find out more about the maximum amount available for a loan, use the calculator, [Estimate Loan Payments]({{ site.baseurl }}/calculators/estimate-loan-payments/) , or [contact us]({{ site.baseurl }}/contact/).
 
 ## Loan costs
