@@ -28,6 +28,11 @@ This webinar provides an overview of the TSP investment funds. The agenda includ
 
 - 1:00 p.m. — [Register]({{ site.baseurl }}/exit/?idx=401){:rel="nofollow"}
 
+
+#### August 5, 2021
+
+- 8:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=407){:rel="nofollow"}
+
 #### August 17, 2021
 
 - 9:00 a.m. — [Register]({{ site.baseurl }}/exit/?idx=402){:rel="nofollow"}
