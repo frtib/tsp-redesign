@@ -1,0 +1,35 @@
+{% comment %}Show webinar item on learning page{% endcomment %}
+{% assign item = include.item %}
+{% include webinars/setup.html item=item %}
+### {{item.webinar_title}}
+
+{{item.webinar_description}}
+
+{% assign accordionName = 'register-' | append: name %}
+<ul class="usa-accordion">
+<li>
+<button class="usa-accordion-button" aria-expanded="false" aria-controls="{{accordionName}}">View schedule and register</button>
+<div id="{{accordionName}}" class="usa-accordion-content" markdown="1">
+
+<div class="usa-grid">
+<div class="usa-width-one-half" markdown="1">
+{% for session in item.webinar_sections %}
+#### {{session.date | date: "%b %d, %Y" }}
+
+- {{session.time | date: "%r" }} — [Register]({{ site.baseurl }}/exit/?idx={{session.link}}){:rel="nofollow"}
+{% endfor %}
+</div>
+
+<div class="usa-width-one-half" markdown="1">
+Registration password: **TSPweb**
+
+{% for note in item.webinar_notes %}
+{{note}}
+
+{% endfor %}
+</div>
+</div> <!-- END usa.grid -->
+
+</div>
+</li>
+</ul>

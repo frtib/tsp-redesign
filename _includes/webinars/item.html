@@ -1,0 +1,11 @@
+{% comment %}Show webinar item on course catalog page{% endcomment %}
+{% assign item = include.item %}
+{% include webinars/setup.html item=item %}
+<!-- {{ comment }} -->
+<a name="{{name}}"></a>
+<div class="grid-container">
+  <div class="course">{{item.webinar_title}}</div>
+  <div class="description" markdown="1">
+{{description}}
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{% comment %}common temp vars for all the webinar components{% endcomment %}
+{% assign item = include.item %}
+{% assign comment = item.webinar_title | split: ":" | first %}
+{% assign name = comment | downcase | replace: " ", "-" %}
+{% capture description | markdownify %}{{item.webinar_description}}{% endcapture %}
+{% assign description = description | replace: "{{site.baseurl}}", site.baseurl %}
+{% assign description = description | replace: "{{ site.baseurl }}", site.baseurl %}

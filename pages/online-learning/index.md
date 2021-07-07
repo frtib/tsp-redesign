@@ -12,17 +12,7 @@ redirect_from:
 
 Our free TSP webinars cover topics for all TSP participants and their beneficiaries. These online learning opportunities are hosted by our Office of Communications and Education.
 
-- [Intro to TSP](#intro-to-tsp)
-- [TSP Contributions: Taking Control of Your Future](#tsp-contributions-taking-control-of-your-future)
-- [TSP Death Benefits](#tsp-death-benefits)
-- [TSP In-Service Withdrawals](#tsp-in-service-withdrawals)
-- [TSP Investment Funds](#tsp-investment-funds)
-- [TSP Loans](#tsp-loans)
-- [TSP Post-Service Withdrawals](#tsp-post-service-withdrawals)
-- [TSP A-to-Z](#tsp-a-to-z)
-- [TSP Early to Mid-Career (EMC)](#tsp-early-to-mid-career-emc)
-- [TSP Pre-Separation](#tsp-pre-separation)
-- [TSP to Retirement and Beyond](#tsp-to-retirement-and-beyond)
+{% include webinars/toc.html item=course %}
 
 **If you’re an agency or service representative and want to schedule a training event**, please find instructions on our [TSP educational resources]({{ site.baseurl }}/agency-service-reps/tsp-educational-resources/) page.
 
@@ -66,17 +56,9 @@ Check this page periodically for additional dates and topics if the current line
 
 ## Webinars
 <section class="webinar-list" markdown="1">
-{% include training/intro-to-tsp.md %}
-{% include training/contributions.md %}
-{% include training/death-benefits.md %}
-{% include training/in-service-wd.md %}
-{% include training/investment-funds.md %}
-{% include training/loans.md %}
-{% include training/post-service-wd.md %}
-{% include training/a-to-z.md %}
-{% include training/early-to-mid-career.md %}
-{% include training/pre-separation.md %}
-{% include training/retirement-beyond.md %}
+{% for course in site.data.webinars %}
+{% include webinars/register.html item=course %}
+{% endfor %}
 </section>
 
 ## TSP webinar privacy notice

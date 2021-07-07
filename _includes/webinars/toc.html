@@ -1,0 +1,4 @@
+{% comment %}Show webinar table of contents on learning page{% endcomment %}
+{% for course in site.data.webinars %}
+- [{{course.webinar_title}}](#{{course.webinar_title|downcase|replace: ":", "" | replace: " ", "-"}})
+{% endfor %}
