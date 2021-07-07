@@ -70,37 +70,37 @@ Results NAME panel (3) for CALC.
 {% include calculator/accordion-start.html expanded=true divID='adjust-results'
     icon='fal fa-sliders-v' title='Adjust your results' inList=true %}
 
-{% include calculator/AYR-table.html caption="Retirement System" showPanel=1 gotoAnchor='rs-anchor' %}
-{% include calculator/AYR-table-row.html closeTable=true
-  prompt="Retirement system:" rowID='lblAYRretirementSystem' %}
+{% comment %}
+    {% include calculator/AYR/div.html caption="Court order details" showPanel=2 gotoAnchor='panel2' %}
+    {% include calculator/AYR/div-row.html prompt="Are both parties TSP participants?" rowID='payeePartAYR' %}
+    {% include calculator/AYR/div-row.html prompt="Relationship:" rowID='relationshipAYR' %}
+    {% include calculator/AYR/div-row.html prompt="Are both parties' accounts being divided?" rowID='receiveBothAYR' named=true %}
+{% endcomment %}
 
-{% include calculator/AYR-table.html caption="Type(s) of growth" showPanel=2 gotoAnchor='growthSelector-anchor' tableID="growthAYR" %}
-{% include calculator/AYR-table-row.html prompt="Growth model:" rowID='lblAYRgrowthSelector' closeTable=true %}
+{% include calculator/AYR/div.html caption="Retirement System" showPanel=1 gotoAnchor='rs-anchor' %}
+{% include calculator/AYR/div-row.html prompt="Retirement system:" rowID='lblAYRretirementSystem' %}
 
-{% include calculator/AYR-table.html caption="Your service so far" showPanel=2 gotoAnchor='service' tableID="serviceSoFarAYR" %}
-{% include calculator/AYR-table-row.html prompt="Number of years already served:" rowID='lblAYRyearsServed' %}
-{% include calculator/AYR-table-row.html closeTable=true
-  prompt="DIEMS (Date of Initial Entry into Military Service)" rowID='lblAYRDIEMSdate' %}
+{% include calculator/AYR/div.html caption="Type(s) of growth" showPanel=2 gotoAnchor='growthSelector-anchor' rowID="growthAYR" %}
+{% include calculator/AYR/div-row.html prompt="Growth model:" rowID='lblAYRgrowthSelector' %}
 
-{% include calculator/AYR-table.html caption="Existing account balance" showPanel=2 gotoAnchor='amountToUse-anchor' tableID="balanceAYR" %}
-{% include calculator/AYR-table-row.html closeTable=true
-  prompt="Current account balance" rowID='lblAYRamountToUse' %}
+{% include calculator/AYR/div.html caption="Your service so far" showPanel=2 gotoAnchor='service' named=true rowID="serviceSoFarAYR" %}
+{% include calculator/AYR/div-row.html prompt="Number of years already served:" rowID='lblAYRyearsServed' %}
+{% include calculator/AYR/div-row.html prompt="DIEMS (Date of Initial Entry into Military Service)" rowID='lblAYRDIEMSdate' %}
 
-{% include calculator/AYR-table.html caption="Future contributions" showPanel=2 gotoAnchor='future' tableID="futureAYR" %}
-{% include calculator/AYR-table-row.html
-  prompt="Years to make contributions:" rowID='lblAYRyearsToContribute' %}
-{% include calculator/AYR-table-row.html prompt="Annual pay:" rowID='lblAYRannualPay' %}
-{% include calculator/AYR-table-row.html prompt="Pay schedule:" rowID='lblAYRpaySchedule' named=true %}
-{% include calculator/AYR-table-row.html
+{% include calculator/AYR/div.html caption="Existing account balance" showPanel=2 gotoAnchor='amountToUse-anchor' named=true rowID="balanceAYR" %}
+{% include calculator/AYR/div-row.html prompt="Current account balance" rowID='lblAYRamountToUse' %}
+
+{% include calculator/AYR/div.html caption="Future contributions" showPanel=2 gotoAnchor='future' named=true rowID="futureAYR" %}
+{% include calculator/AYR/div-row.html prompt="Years to make contributions:" rowID='lblAYRyearsToContribute' %}
+{% include calculator/AYR/div-row.html prompt="Annual pay:" rowID='lblAYRannualPay' %}
+{% include calculator/AYR/div-row.html prompt="Pay schedule:" rowID='lblAYRpaySchedule' named=true %}
+{% include calculator/AYR/div-row.html
   prompt="Percent salary to save:" rowID='lblAYRannualPayPercent' %}
-{% include calculator/AYR-table-row.html closeTable=true
-  prompt="Expected Percent Salary Increase:" rowID='lblAYRannualPayIncreasePercent' %}
+{% include calculator/AYR/div-row.html prompt="Expected Percent Salary Increase:" rowID='lblAYRannualPayIncreasePercent' %}
 
-{% include calculator/AYR-table.html caption="Account growth" showPanel=2 gotoAnchor='time' tableID="accountGrowthAYR" %}
-{% include calculator/AYR-table-row.html
-  prompt="Number of years until you start withdrawing:" rowID='lblAYRyearsToGo' %}
-{% include calculator/AYR-table-row.html closeTable=true
-    prompt="Expected annual return:" rowID='lblAYRrateOfReturn' %}
+{% include calculator/AYR/div.html caption="Account growth" showPanel=2 gotoAnchor='time' named=true rowID="accountGrowthAYR" %}
+{% include calculator/AYR/div-row.html prompt="Number of years until you start withdrawing:" rowID='lblAYRyearsToGo' %}
+{% include calculator/AYR/div-row.html prompt="Expected annual return:" rowID='lblAYRrateOfReturn' %}
 
 {% include calculator/accordion-end.html  inList=true %}
 </ul>
