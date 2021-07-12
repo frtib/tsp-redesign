@@ -12,14 +12,22 @@
 <div id="{{accordionName}}" class="usa-accordion-content" markdown="1">
 
 <div class="usa-grid">
-<div class="usa-width-one-half" markdown="1">
-{% for session in item.webinar_sections %}
-#### {{session.date | date: "%b %d, %Y" }}
+<div class="usa-width-one-half">
+{% assign yesterday = site.time | date: "%s" | minus: 864000 | date: "%Y%m%d" %}
+{% for section in item.webinar_sections %}
+{% assign date8 = section.date  | date: "%Y%m%d" %}
+{% if date8 > yesterday %}
+<div class="expire-{{date8}}  fodder" markdown="1">
+#### {{section.date | date: "%b %d, %Y" }}
+{% for session in section.sessions %}
+{% assign timeSec = session.time | date: "%s" | times: 60 | round %}
 
-- {{session.time | date: "%r" }} — [Register]({{ site.baseurl }}/exit/?idx={{session.link}}){:rel="nofollow"}
+- {{section.date | date: "%s" | plus: timeSec | date: "%r" }} — [Register]({{ site.baseurl }}/exit/?idx={{session.link}}){:rel="nofollow"}
 {% endfor %}
 </div>
-
+{% endif %}
+{% endfor %}
+</div>
 <div class="usa-width-one-half" markdown="1">
 Registration password: **TSPweb**
 

@@ -3,6 +3,10 @@ layout: page
 title: Online learning
 sidenav: manage-your-plan
 scripts:
+  - /assets/js/jquery.min.js
+  - /assets/js/online-learning.js
+document-ready:
+  - hideOldSessions();
 permalink: /online-learning/
 redirect_from:
   - /webinars/
