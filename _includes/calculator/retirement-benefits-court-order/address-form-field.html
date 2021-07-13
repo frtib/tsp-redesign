@@ -1,0 +1,22 @@
+{% assign prefix = include.prefix | default: '' %}
+{% assign field = include.field | default: 'field' %}
+{% assign type = include.type | default: 'text' %}
+{% assign autocomplete = '' %}
+{% if type == 'tel' %}{% assign autocomplete = 'autocomplete="tel"' %}{% endif %}
+{% assign keypress = include.keypress | default: '' %}
+{% assign prompt = include.prompt | default: 'What goes in this box?' %}
+{% assign class = include.class | default: '' %}
+{% assign maxLength = include.maxLength | default: 11 %}
+{% capture changeFunction %}{{field}}Good(0,0,'{{prefix}}'); processWarnLastPanel();{% endcapture %}
+
+<div id="{{prefix}}{{field}}-div">
+  <label class="" id="{{prefix}}{{field}}-label" for="{{prefix}}{{field}}">{{prompt}}</label>
+  <span class="" id="{{prefix}}{{field}}-error-message" role="alert"></span>
+{% if type == 'userBlock' %}
+{{include.userBlock}}
+{% else %}
+  <input id="{{prefix}}{{field}}" name="{{prefix}}{{field}}" class="format-left {{class}}" value="" data-store="" placeholder=""
+    aria-labelledby="{{prefix}}{{field}}-label" type="{{type}}" {{keypress}} {{autocomplete}}
+    onblur="{{changeFunction}}" onchange="{{changeFunction}}" maxlength="{{maxLength}}">
+{% endif %}
+</div>

@@ -1,0 +1,106 @@
+<section class="bootstrap-modals-forms">
+  <!-- shared models for write in later -->
+  <div class="modal fade" id="write-in" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Missing information</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div id="writeinSSN">
+            <p><strong>Please provide a Social Security number</strong></p>
+            Before submitting the court order to the TSP, you must provide the payee's SSN.
+            If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.
+          </div>
+          <div id="writeinAddress">
+            <p><strong>Please provide an address</strong></p>
+            Before submitting the court order to the TSP, you must provide a current mailing address.
+            If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.
+          </div>
+          <div id="writeinCourt">
+            <p><strong>Please provide the case information</strong></p>
+            <p>You can continue using this wizard even if you don't know the case information, but this information is required by the TSP.</p>
+
+            <p>If this information does not appear in the body of the court order, it must be submitted to the TSP by the individual or either party's attorney of record.
+            Failure to provide this information with your submission may delay processing of the order.</p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default usa-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- panel 5, click Yes to RBS -->
+  <div class="modal fade" id="rbs-info" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Retirement Benefits Specialist (RBS)</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <p>An RBS (sometimes called a "pension specialist" or a "QDRO specialist" in the private sector) is an individual
+              who has been retained to assist you in preparing your court order for submission to the TSP.</p>
+            <p>Under TSP rules, we require authorization from the individual TSP participant and/or payee to release
+              information relating to TSP records to these individuals. If you or your attorney have retained an RBS
+              and would like to authorize that individual to submit and receive information on your behalf, you should
+              fill out this form and include it with your submission to the TSP.</p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default usa-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- panel 8, generate PDF modal -->
+  <div class="modal fade" id="generate-pdf" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Reminders</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            Before submitting the package to the TSP, check to make sure that:
+            <ul>
+              <li>You have completed all required fields in the TSP Retirement Benefits Court Order Form.</li>
+              <li>The TSP participant and payee have signed and dated the TSP Retirement Benefits Court Order Form and all applicable forms.</li>
+              <li>A judge or authorized court official has completed and signed the TSP Retirement Benefits Court Order Form.</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="navigation-buttons ">
+          <li><button id="generatePDF" class="usa-button primary" onClick="myGeneratePDFsubmit();" markdown="1">Generate PDF</button></li>
+        </ul>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default usa-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

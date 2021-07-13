@@ -1,0 +1,72 @@
+{% assign prefix = include.prefix | default: 'XXX' %}
+{% assign prefixAD = prefix | append: 'AccountTypeDiv' %}
+{% assign prefixAnchor = prefix | append: '-account-numbers-anchor' %}
+{% assign fieldID = prefix | append: 'account-type' %}
+
+{% capture explanation %}
+If you are not sure what type of Thrift Savings Plan account the participant has, please contact the ThriftLine
+at 1-TSP-YOU-FRST (1-877-968-3778).  Release of any information  by the ThriftLine is subject to the Privacy Act.
+An incorrect selection may lead to a delay, incorrect payment or the rejection of your court order.
+{% endcapture %}
+{% include calculator/div-panel-form-field.html
+  outerDivID=prefixAD outerDivClass=""
+  fieldID=fieldID inputType="none" H2="TSP account type" anchor=prefixAnchor
+  explanation=explanation  dontCloseOuterDiv=true
+%}
+
+<div id="{{prefix}}-account-numbers-div" class="">
+  <fieldset class="usa-fieldset-inputs">
+    <legend class="usa-sr-only">Account types to be divided</legend>
+    <ul class="usa-unstyled-list account-type">
+      <!-- Civilian -->
+      <li>
+        <input type="checkbox" id="{{prefix}}civilian" name="{{prefix}}civilian" value="civilian"
+          onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
+        <label for="{{prefix}}civilian">Civilian <span class="nobr">(CSRS or FERS)</span></label>
+      </li>
+      <!-- USV -->
+      <li>
+        <input type="checkbox" id="{{prefix}}uniformed" name="{{prefix}}uniformed" value="uniformed"
+          onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');">
+        <label for="{{prefix}}uniformed"><span data-term="Uniformed Services" class="js-glossary-toggle term term-end">Uniformed Services</span> <span class="nobr regular">(ready reserve or active duty)</span></label>
+      </li>
+      <!-- Beneficiary Participant -->
+        <li>
+        <input type="checkbox" id="{{prefix}}BPA" name="{{prefix}}BPA" value="BPA"
+          onclick="accountNumbersGood(0, '{{prefix}}');" onblur="accountNumbersGood(0, '{{prefix}}');" >
+        <label for="{{prefix}}BPA"><span data-term="Beneficiary Participant" class="js-glossary-toggle term term-end">Beneficiary Participant</span></label>
+      </li>
+
+      <li>
+        <div id="{{prefix}}acctNum-div" class="hide">
+          <label class="" id="{{prefix}}acctNum-label" for="{{prefix}}acctNum">Civilian and Uniformed Services account number:</label>
+          <span class="" id="{{prefix}}acctNum-error-message" role="alert"></span>
+          <input id="{{prefix}}acctNum" name="{{prefix}}acctNum" class="format-left" value="" data-store="" myPlaceholder=""
+            aria-labelledby="{{prefix}}acctNum-label" type="text"
+            onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
+            onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+          <input id="{{prefix}}acctNumRAW" name="{{prefix}}acctNumRAW" type="hidden" value="">
+        </div>
+      </li>
+      <li>
+        <div id="{{prefix}}BPAacctNum-div" class="hide">
+          <label class="" id="{{prefix}}BPAacctNum-label" for="{{prefix}}BPAacctNum">Beneficiary Participant account number:</label>
+          <span class="" id="{{prefix}}BPAacctNum-error-message" role="alert"></span>
+          <input id="{{prefix}}BPAacctNum" name="{{prefix}}BPAacctNum" class="format-left" value="" data-store="" myPlaceholder=""
+            aria-labelledby="{{prefix}}BPAacctNum-label" type="text"
+            onKeyDown="return filterNumeric(event);" onDragStart="return false;" onDrop="return false;"
+            onblur="accountNumbersGood(0, '{{prefix}}');" onchange="accountNumbersGood(0, '{{prefix}}');" maxlength="13">
+            <input id="{{prefix}}BPAacctNumRAW" name="{{prefix}}BPAacctNumRAW" type="hidden" value="">
+        </div>
+        {% assign infoDivID = prefix | append: "-dual-account-info-box" %}
+        {% include calculator/infoBox.html icon='info' divID=infoDivID class='hide'
+            title="Dual account holders"
+            textBlock="If you have both a civilian and uniformed services account, the account numbers are the same."
+        %}
+      </li>
+
+    </ul>
+  </fieldset>
+  <span class="usa-input-error-message" id="{{prefix}}-account-numbers-error-message" role="alert"></span>
+</div>
+</div><!-- END div.panel-form-field -->{% comment %}closes div panel form field at top of this file{% endcomment %}

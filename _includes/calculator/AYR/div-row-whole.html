@@ -1,0 +1,12 @@
+{% comment %}
+This creates an AYR row using full horizontal space, i.e. one column
+{% endcomment %}
+{% assign rowID = include.rowID | default: 'cellname' %}
+{% assign named = include.named | default: false %}
+{% if named %}
+<div class="usa-grid results" id="{{rowID}}-row">
+{% else %}
+<div class="usa-grid results">
+{% endif %}
+  <div class="usa-width-one-whole" id="{{rowID}}"></div>
+</div>
