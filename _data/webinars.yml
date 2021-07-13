@@ -1,24 +1,15 @@
 - webinar_title: Intro to TSP
   webinar_description: "This webinar provides an introduction to the Thrift Savings Plan for new employees and service members. The agenda focuses on the basics of TSP account management. Discussion includes types of TSP contributions, differences between traditional and Roth contributions, and a brief overview of TSP investment funds. This is a 1-hour webinar."
-  webinar_sections: # If onLoad you can loop over (omit) sections that appear in the past before we remove them manually from this file, that would be awesome.
-    # - datetime: 2021/7/22 10:00 # Convert to "July 22, 2021" on web page.
-    - date: 2021/6/22   # fake
+  webinar_sections:
+    - date: 2021-7-22
       sessions:
       - time: 10:00
         link: 232
-    - date: 2021/7/09   # fake
+    - date: 2021-7-30
       sessions:
       - time: 10:00
-        link: 232
-    - date: 2021/7/22 # Convert to "July 22, 2021" on web page.
-      sessions:
-      - time: 10:00 # Can you convert from 24-hour military to 12-hour meridiem time and add "a.m." or "p.m." automatically?
-        link: 232
-    - date: 2021/7/30
-      sessions:
-      - time: 10:00
-        link: 222 # Even better, just the idx number. ALL WebEx registration links are routed through /assets/js/exit.js
-    - date: 2021/8/24
+        link: 222
+    - date: 2021-8-24
       sessions:
       - time: 13:00
         link: 223
@@ -38,23 +29,23 @@
 
   This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/6/30
+    - date: 2021-6-30
       sessions:
       - time: 14:00
         link: 281
-    - date: 2021/7/8
+    - date: 2021-7-8
       sessions:
       - time: 13:00
         link: 277
-    - date: 2021/7/27
+    - date: 2021-7-27
       sessions:
       - time: 10:00
         link: 278
-    - date: 2021/8/5
+    - date: 2021-8-5
       sessions:
       - time: 10:00
         link: 279
-    - date: 2021/8/25
+    - date: 2021-8-25
       sessions:
       - time: 13:00
         link: 280
@@ -62,20 +53,19 @@
     - "Can’t make the times listed? <a href='/exit/?idx=72' rel='nofollow'>View a recording of this webinar.</a>"
     - "<a href='/bulletins/presentation-2021-06-15-tsp-contributions.pdf' class='download' download title='811kb PDF'>Download a copy of the presentation.</a>"
 - webinar_title: TSP Death Benefits
-  # I can't remember if markdown renders correctly from a YML file. Let's see.
   webinar_description: "This webinar provides an overview of TSP death benefits. The webinar covers [Form TSP-3]({{ site.baseurl }}/forms/tsp-3.pdf), _Designation of Beneficiary_; beneficiary designations; and the statutory order of precedence. Discussion also includes how to report a participant’s death, payment options for spouse beneficiary participant accounts, and non-spouse beneficiary payments. This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/6/29
+    - date: 2021-6-29
       sessions:
       - time: 10:00
         link: 902
-      - time: 13:00 # Sometimes two sections are offered on same day, a.m. and p.m.
+      - time: 13:00
         link: 903
-    - date: 2021/7/22
+    - date: 2021-7-22
       sessions:
       - time: 13:00
         link: 904
-    - date: 2021/8/18
+    - date: 2021-8-18
       sessions:
       - time: 10:00
         link: 901
@@ -83,15 +73,15 @@
 - webinar_title: TSP In-Service Withdrawals
   webinar_description: "This webinar provides an overview of the TSP in-service withdrawal options. This webinar covers financial hardship in-service withdrawals, age-based in-service withdrawals, and other in-service withdrawal considerations. This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/7/7
+    - date: 2021-7-7
       sessions:
       - time: 10:00
         link: 247
-    - date: 2021/7/23
+    - date: 2021-7-23
       sessions:
       - time: 10:00
         link: 248
-    - date: 2021/8/12
+    - date: 2021-8-12
       sessions:
       - time: 13:00
         link: 249
@@ -99,26 +89,26 @@
 - webinar_title: TSP Investment Funds
   webinar_description: "This webinar provides an overview of the TSP investment funds. The agenda includes a discussion on investing to meet retirement goals, individual TSP funds (G, F, C, S, and I), TSP Lifecycle (L) Funds, and other TSP fund considerations. This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/7/8
+    - date: 2021-7-8
       sessions:
       - time: 10:00
         link: 404
-    - date: 2021/7/15
+    - date: 2021-7-15
       sessions:
       - time: 10:00
         link: 405
       sessions:
       - time: 13:00
         link: 406
-    - date: 2021/8/3
+    - date: 2021-8-3
       sessions:
       - time: 13:00
         link: 401
-    - date: 2021/8/17
+    - date: 2021-8-17
       sessions:
       - time: 9:00
         link: 402
-    - date: 2021/8/24
+    - date: 2021-8-24
       sessions:
       - time: 10:00
         link: 403
@@ -126,15 +116,15 @@
 - webinar_title: TSP Loans
   webinar_description: "This webinar provides an overview of the TSP loan program. The agenda includes the types of TSP loans (general purpose and residential), loan amounts, costs of a TSP loan, and other TSP loan considerations. This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/7/6
+    - date: 2021-7-6
       sessions:
       - time: 13:00
         link: 504
-    - date: 2021/8/10
+    - date: 2021-8-10
       sessions:
       - time: 10:00
         link: 501
-    - date: 2021/8/31
+    - date: 2021-8-31
       sessions:
       - time: 10:00
         link: 502
@@ -142,26 +132,26 @@
 - webinar_title: TSP Post-Service Withdrawals
   webinar_description: "This webinar provides an overview of the TSP post-service withdrawal options. The information in this webinar will benefit TSP participants that plan to retire within 10 years and participants that have already separated or retired. The agenda includes discussion of post-service retirement income options: single lump sum withdrawals, installment payments, and the TSP life annuity. This is a 1-hour webinar."
   webinar_sections:
-    - date: 2021/7/9
+    - date: 2021-7-9
       sessions:
       - time: 10:00
         link: 808
-    - date: 2021/7/20
+    - date: 2021-7-20
       sessions:
       - time: 10:00
         link: 809
       sessions:
       - time: 13:00
         link: 810
-    - date: 2021/7/28
+    - date: 2021-7-28
       sessions:
       - time: 10:00
         link: 801
-    - date: 2021/8/11
+    - date: 2021-8-11
       sessions:
       - time: 10:00
         link: 802
-    - date: 2021/8/26
+    - date: 2021-8-26
       sessions:
       - time: 13:00
         link: 803
@@ -169,15 +159,15 @@
 - webinar_title: TSP A to Z
   webinar_description: "This webinar covers every aspect of TSP participation and will benefit participants in any stage of professional life. Topics include the benefits of savings, traditional and Roth contributions, investments, loans, and post-separation withdrawals. This is a 4-hour session with a break."
   webinar_sections:
-    - date: 2021/7/1
+    - date: 2021-7-1
       sessions:
       - time: 10:00
         link: 702
-    - date: 2021/7/29
+    - date: 2021-7-29
       sessions:
       - time: 12:00
         link: 704
-    - date: 2021/8/19
+    - date: 2021-8-19
       sessions:
       - time: 11:00
         link: 701
@@ -185,23 +175,23 @@
 - webinar_title: TSP Early to Mid-Career (EMC)
   webinar_description: "This webinar focuses on what early and mid-career employees and service members can do to take full advantage of the TSP. You’ll learn how TSP contributions work, the difference between traditional and Roth contributions, and how to manage your TSP account throughout your career. This is a 2&frac12;-hour session."
   webinar_sections:
-    - date: 2021/7/6
+    - date: 2021-7-6
       sessions:
       - time: 9:00
         link: 171
-    - date: 2021/7/10
+    - date: 2021-7-10
       sessions:
       - time: 10:00
         link: 175
-    - date: 2021/7/28
+    - date: 2021-7-28
       sessions:
       - time: 13:00
         link: 176
-    - date: 2021/8/4
+    - date: 2021-8-4
       sessions:
       - time: 9:00
         link: 172
-    - date: 2021/8/18
+    - date: 2021-8-18
       sessions:
       - time: 13:00
         link: 173
@@ -209,27 +199,27 @@
 - webinar_title: TSP Pre-Separation
   webinar_description: "This webinar is designed to give late-career employees and service members the tools they need to make smart decisions with TSP savings while preparing to retire. The agenda includes TSP withdrawal options and death benefits and offers several retirement scenarios to get you thinking about how to best turn your savings into income. This is a 2&frac12;-hour session."
   webinar_sections:
-    - date: 2021/7/7
+    - date: 2021-7-7
       sessions:
       - time: 13:00
         link: 192
-    - date: 2021/7/17
+    - date: 2021-7-17
       sessions:
       - time: 10:00
         link: 193
-    - date: 2021/7/27
+    - date: 2021-7-27
       sessions:
       - time: 13:00
         link: 194
-    - date: 2021/8/5
+    - date: 2021-8-5
       sessions:
       - time: 13:00
         link: 195
-    - date: 2021/8/10
+    - date: 2021-8-10
       sessions:
       - time: 13:00
         link: 196
-    - date: 2021/8/25
+    - date: 2021-8-25
       sessions:
       - time: 9:00
         link: 197
@@ -239,19 +229,19 @@
   <p>Part I includes a discussion on estimating future income needs, assessing the impact of long-term risks, deciding when to retire, and prioritizing retirement savings goals.</p>
   <p>Part II consists of a discussion of the risks that new retirees face. We discuss the concept of a systematic strategy and how to apply it throughout retirement. We cover scenarios that illustrate issues participants face during the drawdown process. This is a 4-hour session with a break.</p>"
   webinar_sections:
-    - date: 2021/7/21
+    - date: 2021-7-21
       sessions:
       - time: 11:00
         link: 201
-    - date: 2021/8/3
+    - date: 2021-8-3
       sessions:
       - time: 8:00
         link: 202
-    - date: 2021/8/17
+    - date: 2021-8-17
       sessions:
       - time: 12:00
         link: 203
-    - date: 2021/8/31
+    - date: 2021-8-31
       sessions:
       - time: 12:00
         link: 204
